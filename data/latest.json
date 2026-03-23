@@ -1,6 +1,21 @@
 {
-  "generated_at": "2026-03-23T00:00:00Z",
-  "sources": [],
+  "generated_at": "2026-03-23T14:45:31.753359+00:00",
+  "sources": [
+    {
+      "id": "ebc-finance",
+      "name": "EBC 東森財經",
+      "type": "youtube",
+      "identifier": "UCdJKJ3yGKWRJEMsKBRNJHQw",
+      "active": true
+    },
+    {
+      "id": "yahoo-finance-tw",
+      "name": "Yahoo Finance TW",
+      "type": "youtube",
+      "identifier": "UCrRttqy3g9_xbwxH7tHaEcA",
+      "active": true
+    }
+  ],
   "episodes": [],
   "mentions": []
 }
