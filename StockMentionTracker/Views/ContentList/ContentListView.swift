@@ -1,69 +1,35 @@
 import SwiftUI
 
 struct ContentListView: View {
-    @Environment(AppState.self) private var appState
+    @Environment(AppState.self)    private var appState
     @Environment(DataService.self) private var dataService
 
-    @State private var typeFilter: ContentTypeFilter = .all
     @State private var searchText = ""
 
-    enum ContentTypeFilter: String, CaseIterable {
-        case all = "全部"
-        case youtube = "YouTube"
-        case podcast = "Podcast"
-    }
-
-    private var filteredEpisodes: [EpisodeInfo] {
-        var episodes = dataService.scanResult.episodes.filter {
-            !$0.mentionedStocks.isEmpty && $0.publishedDate >= appState.cutoffDate
-        }
-
-        switch typeFilter {
-        case .all: break
-        case .youtube:
-            episodes = episodes.filter { $0.sourceType == SourceType.youtube.rawValue }
-        case .podcast:
-            episodes = episodes.filter {
-                $0.sourceType == SourceType.applePodcast.rawValue ||
-                $0.sourceType == SourceType.spotify.rawValue
-            }
-        }
-
-        if !searchText.isEmpty {
-            episodes = episodes.filter {
+    private var filteredVideos: [VideoScanned] {
+        @Bindable var appState = appState
+        let cutoff = appState.cutoffDate
+        return dataService.scanResult.videosScanned
+            .filter { !$0.stocksFound.isEmpty && ($0.parsedDate ?? .distantPast) >= cutoff }
+            .filter {
+                searchText.isEmpty ||
                 $0.title.localizedCaseInsensitiveContains(searchText) ||
-                $0.sourceName.localizedCaseInsensitiveContains(searchText)
+                $0.channel.localizedCaseInsensitiveContains(searchText)
             }
-        }
-
-        return episodes.sorted { $0.publishedDate > $1.publishedDate }
-    }
-
-    private func mentions(for episode: EpisodeInfo) -> [MentionInfo] {
-        dataService.scanResult.mentions.filter { $0.episodeId == episode.id }
+            .sorted { ($0.parsedDate ?? .distantPast) > ($1.parsedDate ?? .distantPast) }
     }
 
     var body: some View {
         @Bindable var appState = appState
         return NavigationStack {
             VStack(spacing: 0) {
-                Picker("類型", selection: $typeFilter) {
-                    ForEach(ContentTypeFilter.allCases, id: \.self) {
-                        Text($0.rawValue).tag($0)
-                    }
-                }
-                .pickerStyle(.segmented)
-                .padding(.horizontal)
-                .padding(.top, 8)
-
+                // Date slider
                 HStack(spacing: 10) {
                     Text("最近")
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .font(.caption).foregroundStyle(.secondary)
                     Slider(value: $appState.selectedDays, in: 7...90, step: 1)
                     Text("\(Int(appState.selectedDays)) 天")
                         .font(.caption.monospacedDigit())
-                        .foregroundStyle(.primary)
                         .frame(width: 44, alignment: .trailing)
                 }
                 .padding(.horizontal)
@@ -71,96 +37,95 @@ struct ContentListView: View {
 
                 Divider()
 
-                if filteredEpisodes.isEmpty {
+                if filteredVideos.isEmpty {
                     ContentUnavailableView(
                         "尚無內容",
                         systemImage: "list.bullet.rectangle",
-                        description: Text("掃描結果載入後，已分析的影片會顯示在這裡")
+                        description: Text("此時間範圍內無掃描結果")
                     )
                 } else {
-                    List(filteredEpisodes) { episode in
+                    List(filteredVideos) { video in
                         NavigationLink {
-                            EpisodeDetailView(episode: episode, mentions: mentions(for: episode))
+                            VideoDetailView(
+                                video: video,
+                                stockEntries: stockEntries(for: video)
+                            )
                         } label: {
-                            EpisodeRowView(episode: episode)
+                            VideoRowView(video: video)
                         }
                     }
                     .listStyle(.plain)
                 }
             }
             .navigationTitle("內容清單")
-            .searchable(text: $searchText, prompt: "搜尋標題或節目")
+            .searchable(text: $searchText, prompt: "搜尋標題或頻道")
+        }
+    }
+
+    private func stockEntries(for video: VideoScanned) -> [StockEntry] {
+        dataService.scanResult.stocksRanking.compactMap { stock -> StockEntry? in
+            let ctxs = stock.contexts.filter { $0.video == video.title }
+            guard !ctxs.isEmpty else { return nil }
+            return StockEntry(
+                code: stock.code, name: stock.name,
+                totalMentions: ctxs.count, contexts: ctxs
+            )
         }
     }
 }
 
-// MARK: - Episode Row View
+// MARK: - Video Row
 
-struct EpisodeRowView: View {
-    let episode: EpisodeInfo
+struct VideoRowView: View {
+    let video: VideoScanned
 
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
             HStack(spacing: 6) {
-                HStack(spacing: 4) {
-                    Image(systemName: episode.sourceTypeEnum.icon)
-                        .font(.caption2)
-                    Text(episode.sourceName)
-                        .font(.caption)
-                }
-                .foregroundStyle(sourceColor(for: episode.sourceTypeEnum))
+                Image(systemName: "play.rectangle.fill")
+                    .font(.caption2).foregroundStyle(.red)
+                Text(video.channel)
+                    .font(.caption).foregroundStyle(.red)
                 Spacer()
-                Text(episode.publishedDateText)
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
+                Text(video.dateText)
+                    .font(.caption).foregroundStyle(.secondary)
             }
 
-            Text(episode.title)
+            Text(video.title)
                 .font(.subheadline.weight(.medium))
                 .lineLimit(2)
 
             HStack(spacing: 8) {
                 HStack(spacing: 3) {
                     Image(systemName: "chart.bar.fill").font(.caption2)
-                    Text("\(episode.mentionedStocks.count) 支股票").font(.caption)
+                    Text("\(video.stocksFound.count) 支股票").font(.caption)
                 }
                 .foregroundStyle(Color.accentColor)
 
-                Text(episode.analysisSourceIcon + episode.analysisSourceDisplay)
+                Text(video.analysisSourceIcon + " " + video.analysisSourceDisplay)
                     .font(.caption)
                     .foregroundStyle(.secondary)
-                    .padding(.horizontal, 6)
-                    .padding(.vertical, 2)
+                    .padding(.horizontal, 6).padding(.vertical, 2)
                     .background(.quaternary, in: Capsule())
             }
 
-            if !episode.mentionedStocks.isEmpty {
+            if !video.stocksFound.isEmpty {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 6) {
-                        ForEach(episode.mentionedStocks.prefix(8), id: \.self) { code in
+                        ForEach(video.stocksFound.prefix(8), id: \.self) { code in
                             Text(code)
                                 .font(.caption2)
-                                .padding(.horizontal, 8)
-                                .padding(.vertical, 3)
+                                .padding(.horizontal, 8).padding(.vertical, 3)
                                 .background(.quaternary, in: Capsule())
                         }
-                        if episode.mentionedStocks.count > 8 {
-                            Text("+\(episode.mentionedStocks.count - 8)")
-                                .font(.caption2)
-                                .foregroundStyle(.secondary)
+                        if video.stocksFound.count > 8 {
+                            Text("+\(video.stocksFound.count - 8)")
+                                .font(.caption2).foregroundStyle(.secondary)
                         }
                     }
                 }
             }
         }
         .padding(.vertical, 4)
-    }
-
-    private func sourceColor(for type: SourceType) -> Color {
-        switch type {
-        case .youtube: return .red
-        case .applePodcast: return .purple
-        case .spotify: return .green
-        }
     }
 }

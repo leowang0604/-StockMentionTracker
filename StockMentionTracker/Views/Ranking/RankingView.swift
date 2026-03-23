@@ -1,76 +1,48 @@
 import SwiftUI
 
 struct RankingView: View {
-    @Environment(AppState.self) private var appState
+    @Environment(AppState.self)   private var appState
     @Environment(DataService.self) private var dataService
 
-    @State private var sourceFilter: SourceFilterOption = .all
-    @State private var searchText = ""
+    @State private var searchText     = ""
     @State private var showErrorAlert = false
 
-    enum SourceFilterOption: String, CaseIterable {
-        case all = "全部"
-        case youtube = "YouTube"
-        case podcast = "Podcast"
-    }
-
-    private var filteredMentions: [MentionInfo] {
-        var mentions = dataService.scanResult.mentions.filter {
-            $0.mentionedDate >= appState.cutoffDate
-        }
-        switch sourceFilter {
-        case .all: break
-        case .youtube:
-            mentions = mentions.filter { $0.sourceType == SourceType.youtube.rawValue }
-        case .podcast:
-            mentions = mentions.filter {
-                $0.sourceType == SourceType.applePodcast.rawValue ||
-                $0.sourceType == SourceType.spotify.rawValue
+    // Filtered and date-trimmed stocks
+    private var filteredStocks: [StockEntry] {
+        @Bindable var appState = appState
+        let cutoff = appState.cutoffDate
+        return dataService.scanResult.stocksRanking
+            .compactMap { stock -> StockEntry? in
+                let ctxs = stock.contexts.filter { ($0.parsedDate ?? .distantPast) >= cutoff }
+                guard !ctxs.isEmpty else { return nil }
+                return StockEntry(
+                    code: stock.code, name: stock.name,
+                    totalMentions: ctxs.count, contexts: ctxs
+                )
             }
-        }
-        return mentions
-    }
-
-    private var rankingItems: [StockRankingItem] {
-        let grouped = Dictionary(grouping: filteredMentions) { $0.stockCode }
-        return grouped.compactMap { (code, mentions) -> StockRankingItem? in
-            guard let first = mentions.first else { return nil }
-            let sourceNames = Set(mentions.map { $0.sourceName })
-            let analysisSources = Set(mentions.map { $0.analysisSource })
-            let lastDate = mentions.map { $0.mentionedDate }.max() ?? Date()
-            return StockRankingItem(
-                id: code,
-                stockCode: code,
-                stockName: first.stockName,
-                totalMentions: mentions.count,
-                sourceCount: sourceNames.count,
-                lastMentionedAt: lastDate,
-                analysisSources: analysisSources,
-                mentions: mentions.sorted { $0.mentionedDate > $1.mentionedDate }
-            )
-        }
-        .sorted { $0.totalMentions > $1.totalMentions }
-        .filter {
-            searchText.isEmpty ||
-            $0.stockName.contains(searchText) ||
-            $0.stockCode.contains(searchText)
-        }
+            .sorted { $0.totalMentions > $1.totalMentions }
+            .filter {
+                searchText.isEmpty ||
+                $0.name.contains(searchText) ||
+                $0.code.contains(searchText)
+            }
     }
 
     var body: some View {
-        NavigationStack {
+        @Bindable var appState = appState
+        return NavigationStack {
             VStack(spacing: 0) {
                 filterBar
 
-                if rankingItems.isEmpty {
+                if filteredStocks.isEmpty {
                     emptyState
                 } else {
                     List {
-                        ForEach(Array(rankingItems.enumerated()), id: \.element.id) { index, item in
+                        ForEach(Array(filteredStocks.enumerated()), id: \.element.id) { index, stock in
                             NavigationLink {
-                                StockDetailView(rankingItem: item)
+                                StockDetailView(stock: stock)
                             } label: {
-                                RankingRowView(rank: index + 1, item: item)
+                                RankingRowView(rank: index + 1, stock: stock)
                             }
                         }
                     }
@@ -104,18 +76,11 @@ struct RankingView: View {
         }
     }
 
+    // MARK: - Filter bar
+
     private var filterBar: some View {
         @Bindable var appState = appState
         return VStack(spacing: 0) {
-            Picker("來源類型", selection: $sourceFilter) {
-                ForEach(SourceFilterOption.allCases, id: \.self) { option in
-                    Text(option.rawValue).tag(option)
-                }
-            }
-            .pickerStyle(.segmented)
-            .padding(.horizontal)
-            .padding(.top, 8)
-
             HStack(spacing: 10) {
                 Text("最近")
                     .font(.caption)
@@ -123,15 +88,15 @@ struct RankingView: View {
                 Slider(value: $appState.selectedDays, in: 7...90, step: 1)
                 Text("\(Int(appState.selectedDays)) 天")
                     .font(.caption.monospacedDigit())
-                    .foregroundStyle(.primary)
                     .frame(width: 44, alignment: .trailing)
             }
             .padding(.horizontal)
             .padding(.vertical, 8)
-
             Divider()
         }
     }
+
+    // MARK: - Empty state
 
     private var emptyState: some View {
         ContentUnavailableView {
@@ -153,11 +118,11 @@ struct RankingView: View {
     }
 }
 
-// MARK: - Ranking Row View
+// MARK: - Ranking Row
 
 struct RankingRowView: View {
     let rank: Int
-    let item: StockRankingItem
+    let stock: StockEntry
 
     var body: some View {
         HStack(spacing: 12) {
@@ -168,22 +133,19 @@ struct RankingRowView: View {
 
             VStack(alignment: .leading, spacing: 4) {
                 HStack(spacing: 6) {
-                    Text(item.stockName)
-                        .font(.headline)
-                    Text(item.stockCode)
+                    Text(stock.name).font(.headline)
+                    Text(stock.code)
                         .font(.caption)
                         .foregroundStyle(.secondary)
-                        .padding(.horizontal, 6)
-                        .padding(.vertical, 2)
+                        .padding(.horizontal, 6).padding(.vertical, 2)
                         .background(.quaternary, in: Capsule())
-                    Text(item.analysisSourceIcons)
-                        .font(.caption)
+                    Text(stock.analysisSourceIcons).font(.caption)
                 }
-
                 HStack(spacing: 8) {
-                    Label("\(item.sourceCount) 個來源", systemImage: "antenna.radiowaves.left.and.right")
+                    Label("\(stock.channelCount) 個來源",
+                          systemImage: "antenna.radiowaves.left.and.right")
                     Text("·")
-                    Text(item.lastMentionedText)
+                    Text(stock.lastDateText)
                 }
                 .font(.caption)
                 .foregroundStyle(.secondary)
@@ -192,7 +154,7 @@ struct RankingRowView: View {
             Spacer()
 
             VStack(alignment: .trailing, spacing: 2) {
-                Text("\(item.totalMentions)")
+                Text("\(stock.totalMentions)")
                     .font(.title2.bold().monospacedDigit())
                 Text("次提及")
                     .font(.caption2)

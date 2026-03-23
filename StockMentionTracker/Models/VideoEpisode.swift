@@ -1,67 +1,60 @@
 import Foundation
 
-// MARK: - Episode Info (from latest.json)
+// MARK: - Scanned video / podcast episode (from videos_scanned)
 
-struct EpisodeInfo: Codable, Identifiable {
-    let id: String
+struct VideoScanned: Codable, Identifiable {
+    let videoId: String?
     let title: String
-    let publishedAt: String
-    let sourceType: String
-    let sourceName: String
-    let thumbnailURL: String?
-    let analysisSource: String
-    let mentionedStocks: [String]  // stock codes
+    let channel: String
+    let date: String
+    let stocksFound: [String]
+    let analysisSource: String?
+    let thumbnailUrl: String?
+
+    var id: String { videoId ?? (title + date) }
 
     enum CodingKeys: String, CodingKey {
-        case id, title
-        case publishedAt = "published_at"
-        case sourceType = "source_type"
-        case sourceName = "source_name"
-        case thumbnailURL = "thumbnail_url"
+        case videoId       = "video_id"
+        case title, channel, date
+        case stocksFound   = "stocks_found"
         case analysisSource = "analysis_source"
-        case mentionedStocks = "mentioned_stocks"
+        case thumbnailUrl  = "thumbnail_url"
     }
 
-    var publishedDate: Date {
-        ISO8601DateFormatter().date(from: publishedAt) ?? Date()
+    var parsedDate: Date? {
+        let f = DateFormatter()
+        f.dateFormat = "yyyy-MM-dd"
+        return f.date(from: date)
     }
 
-    var publishedDateText: String {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .medium
-        formatter.timeStyle = .none
-        formatter.locale = Locale(identifier: "zh_TW")
-        return formatter.string(from: publishedDate)
-    }
-
-    var sourceTypeEnum: SourceType {
-        SourceType(rawValue: sourceType) ?? .youtube
+    var dateText: String {
+        guard let d = parsedDate else { return date }
+        let f = DateFormatter()
+        f.dateStyle = .medium
+        f.locale    = Locale(identifier: "zh_TW")
+        return f.string(from: d)
     }
 
     var externalURL: URL? {
-        switch sourceTypeEnum {
-        case .youtube:
-            return URL(string: "https://www.youtube.com/watch?v=\(id)")
-        case .applePodcast:
-            return URL(string: "https://podcasts.apple.com/podcast/id\(id)")
-        case .spotify:
-            return URL(string: "https://open.spotify.com/episode/\(id)")
-        }
+        guard let vid = videoId else { return nil }
+        return URL(string: "https://www.youtube.com/watch?v=\(vid)")
     }
 
     var analysisSourceIcon: String {
         switch analysisSource {
-        case "transcript": return "🎙"
+        case "whisper":             return "🎙"
+        case "captions":            return "📝"
         case "titleAndDescription": return "📄"
-        default: return "📊"
+        default:                    return "📊"
         }
     }
 
     var analysisSourceDisplay: String {
         switch analysisSource {
-        case "transcript": return "字幕/逐字稿"
+        case "whisper":             return "Whisper 逐字稿"
+        case "captions":            return "字幕"
         case "titleAndDescription": return "標題+描述"
-        default: return analysisSource
+        default:                    return analysisSource ?? "未知"
         }
     }
 }

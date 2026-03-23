@@ -1,105 +1,85 @@
 import SwiftUI
 
 struct StockDetailView: View {
-    let rankingItem: StockRankingItem
+    let stock: StockEntry
 
-    @State private var sourceFilter: SourceDetailFilter = .all
-
-    enum SourceDetailFilter: String, CaseIterable {
-        case all = "全部"
-        case youtube = "YouTube"
-        case podcast = "Podcast"
-    }
-
-    private var filteredMentions: [MentionInfo] {
-        switch sourceFilter {
-        case .all:
-            return rankingItem.mentions
-        case .youtube:
-            return rankingItem.mentions.filter { $0.sourceType == SourceType.youtube.rawValue }
-        case .podcast:
-            return rankingItem.mentions.filter {
-                $0.sourceType == SourceType.applePodcast.rawValue ||
-                $0.sourceType == SourceType.spotify.rawValue
-            }
-        }
-    }
+    @State private var expandedIDs = Set<String>()
 
     var body: some View {
         List {
+            // ── Header ────────────────────────────────────────────────────
             Section {
                 HStack {
                     VStack(alignment: .leading, spacing: 4) {
                         HStack(alignment: .firstTextBaseline, spacing: 8) {
-                            Text(rankingItem.stockName)
-                                .font(.title2.bold())
-                            Text(rankingItem.stockCode)
-                                .font(.subheadline)
-                                .foregroundStyle(.secondary)
+                            Text(stock.name).font(.title2.bold())
+                            Text(stock.code)
+                                .font(.subheadline).foregroundStyle(.secondary)
                         }
-                        Text("總提及次數：\(rankingItem.totalMentions) 次")
-                            .font(.subheadline)
-                            .foregroundStyle(.secondary)
-                        Text("涵蓋來源：\(rankingItem.sourceCount) 個")
-                            .font(.caption)
-                            .foregroundStyle(.tertiary)
+                        Text("提及次數：\(stock.totalMentions) 次")
+                            .font(.subheadline).foregroundStyle(.secondary)
+                        Text("涵蓋來源：\(stock.channelCount) 個")
+                            .font(.caption).foregroundStyle(.tertiary)
                     }
                     Spacer()
-                    Text(rankingItem.analysisSourceIcons)
-                        .font(.title2)
+                    Text(stock.analysisSourceIcons).font(.title2)
                 }
                 .padding(.vertical, 4)
             }
 
-            Section {
-                Picker("篩選", selection: $sourceFilter) {
-                    ForEach(SourceDetailFilter.allCases, id: \.self) {
-                        Text($0.rawValue).tag($0)
-                    }
-                }
-                .pickerStyle(.segmented)
-            }
-            .listRowInsets(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
-            .listRowBackground(Color.clear)
-
-            Section("提及紀錄（\(filteredMentions.count) 筆）") {
-                if filteredMentions.isEmpty {
-                    Text("此來源類型無提及紀錄")
+            // ── Mention list ──────────────────────────────────────────────
+            Section("提及紀錄（\(stock.contexts.count) 筆）") {
+                if stock.contexts.isEmpty {
+                    Text("無提及紀錄")
                         .foregroundStyle(.secondary)
                         .frame(maxWidth: .infinity, alignment: .center)
                         .padding()
                 } else {
-                    ForEach(filteredMentions) { mention in
-                        MentionRowView(mention: mention)
+                    ForEach(stock.contexts) { ctx in
+                        ContextRowView(
+                            context: ctx,
+                            isExpanded: expandedIDs.contains(ctx.id),
+                            onToggle: {
+                                withAnimation(.easeInOut(duration: 0.2)) {
+                                    if expandedIDs.contains(ctx.id) {
+                                        expandedIDs.remove(ctx.id)
+                                    } else {
+                                        expandedIDs.insert(ctx.id)
+                                    }
+                                }
+                            }
+                        )
                     }
                 }
             }
         }
-        .navigationTitle(rankingItem.stockName)
+        .navigationTitle(stock.name)
 #if os(iOS)
         .navigationBarTitleDisplayMode(.large)
 #endif
     }
 }
 
-// MARK: - Mention Row View
+// MARK: - Context Row
 
-struct MentionRowView: View {
-    let mention: MentionInfo
-    @State private var isExpanded = false
+struct ContextRowView: View {
+    let context: MentionContext
+    let isExpanded: Bool
+    let onToggle: () -> Void
 
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
+            // Channel + date + analysis source badge
             HStack(spacing: 8) {
-                Image(systemName: sourceIcon)
+                Image(systemName: "play.rectangle.fill")
                     .font(.caption)
-                    .foregroundStyle(sourceColor)
+                    .foregroundStyle(.red)
 
                 VStack(alignment: .leading, spacing: 2) {
-                    Text(mention.sourceName)
+                    Text(context.channel ?? "未知來源")
                         .font(.subheadline.weight(.medium))
                         .lineLimit(1)
-                    Text(mention.dateText)
+                    Text(context.dateText)
                         .font(.caption)
                         .foregroundStyle(.secondary)
                 }
@@ -107,25 +87,24 @@ struct MentionRowView: View {
                 Spacer()
 
                 HStack(spacing: 3) {
-                    Text(mention.analysisSourceIcon)
-                    Text(mention.analysisSourceDisplay)
+                    Text(context.analysisSourceIcon)
+                    Text(context.analysisSourceDisplay)
                         .font(.caption2)
                 }
-                .padding(.horizontal, 7)
-                .padding(.vertical, 3)
-                .background(analysisSourceColor.opacity(0.15), in: Capsule())
-                .foregroundStyle(analysisSourceColor)
+                .padding(.horizontal, 7).padding(.vertical, 3)
+                .background(analysisColor.opacity(0.15), in: Capsule())
+                .foregroundStyle(analysisColor)
             }
 
-            Text(mention.episodeTitle)
+            // Video title
+            Text(context.video)
                 .font(.caption)
                 .foregroundStyle(.secondary)
                 .lineLimit(isExpanded ? nil : 1)
 
-            if !mention.context.isEmpty {
-                Button {
-                    withAnimation(.easeInOut(duration: 0.2)) { isExpanded.toggle() }
-                } label: {
+            // Context text (expandable)
+            if !context.text.isEmpty {
+                Button(action: onToggle) {
                     VStack(alignment: .leading, spacing: 4) {
                         HStack {
                             Text("提及內容")
@@ -136,7 +115,7 @@ struct MentionRowView: View {
                                 .foregroundStyle(.secondary)
                         }
                         if isExpanded {
-                            Text("…\(mention.context)…")
+                            Text("…\(context.text)…")
                                 .font(.caption)
                                 .foregroundStyle(.primary)
                                 .multilineTextAlignment(.leading)
@@ -149,25 +128,11 @@ struct MentionRowView: View {
         .padding(.vertical, 4)
     }
 
-    private var sourceIcon: String {
-        switch mention.sourceType {
-        case SourceType.youtube.rawValue: return "play.rectangle.fill"
-        case SourceType.applePodcast.rawValue: return "mic.fill"
-        case SourceType.spotify.rawValue: return "music.note"
-        default: return "antenna.radiowaves.left.and.right"
+    private var analysisColor: Color {
+        switch context.analysisSource {
+        case "whisper":  return .blue
+        case "captions": return .teal
+        default:         return .gray
         }
-    }
-
-    private var sourceColor: Color {
-        switch mention.sourceType {
-        case SourceType.youtube.rawValue: return .red
-        case SourceType.applePodcast.rawValue: return .purple
-        case SourceType.spotify.rawValue: return .green
-        default: return Color.accentColor
-        }
-    }
-
-    private var analysisSourceColor: Color {
-        mention.analysisSource == "transcript" ? .blue : .gray
     }
 }

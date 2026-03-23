@@ -114,20 +114,30 @@ struct SettingsView: View {
 
             let result = dataService.scanResult
             HStack {
-                Text("掃描頻道")
+                Text("掃描影片/集數")
                     .foregroundStyle(.secondary)
                 Spacer()
-                Text("\(result.sources.count) 個")
+                Text("\(result.videosScanned.count) 支")
                     .font(.caption)
                     .foregroundStyle(.secondary)
             }
             HStack {
-                Text("股票提及")
+                Text("追蹤股票")
                     .foregroundStyle(.secondary)
                 Spacer()
-                Text("\(result.mentions.count) 筆")
+                Text("\(result.stocksRanking.count) 支")
                     .font(.caption)
                     .foregroundStyle(.secondary)
+            }
+            if !result.updatedAt.isEmpty {
+                HStack {
+                    Text("資料更新時間")
+                        .foregroundStyle(.secondary)
+                    Spacer()
+                    Text(result.updatedDateText)
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
             }
 
             Button {
