@@ -35,195 +35,163 @@ USE_WHISPER        = os.environ.get("USE_WHISPER", "true").lower() == "true"
 SPOTIFY_CLIENT_ID  = os.environ.get("SPOTIFY_CLIENT_ID", "")
 SPOTIFY_CLIENT_SECRET = os.environ.get("SPOTIFY_CLIENT_SECRET", "")
 
+# Path to Netscape-format cookies file (set by workflow from YOUTUBE_COOKIES secret)
+COOKIES_FILE = os.environ.get("YOUTUBE_COOKIES_FILE", "")
+
 MAX_ITEMS_PER_SOURCE = int(os.environ.get("MAX_ITEMS", "10"))
 DAYS_BACK            = int(os.environ.get("DAYS_BACK", "7"))
 CONTEXT_CHARS        = 90   # characters of context around each mention
 MAX_CONTEXTS_PER_STOCK = 30 # cap to keep JSON manageable
 
-SOURCES_FILE = Path(__file__).parent / "sources.json"
-OUTPUT_FILE  = Path(__file__).parent.parent / "data" / "latest.json"
+SOURCES_FILE     = Path(__file__).parent / "sources.json"
+OUTPUT_FILE      = Path(__file__).parent.parent / "data" / "latest.json"
+STOCKS_CACHE_FILE = Path(__file__).parent.parent / "data" / "stocks.json"
 
 # ─────────────────────────────────────────────────────────────────────────────
-# Taiwan Stock Dictionary
+# Static aliases: English names, abbreviations, nicknames not in official list
 # ─────────────────────────────────────────────────────────────────────────────
 
-STOCK_DICT: dict[str, str] = {
-    # ── 半導體 / 晶圓代工 ──────────────────────────────────────────────────
-    "台積電": "2330", "台灣積體電路": "2330", "TSMC": "2330", "台積": "2330",
-    "聯電":   "2303", "UMC": "2303",
-    "力積電": "6770", "PSMC": "6770",
-    "世界先進": "5347",
-    "環球晶":  "6488",
-    "合晶":    "6182",
-    "嘉晶":    "3016",
-
-    # ── IC 設計 ────────────────────────────────────────────────────────────
-    "聯發科": "2454", "MediaTek": "2454", "MTK": "2454",
-    "瑞昱":   "2379", "Realtek": "2379",
-    "聯詠":   "3034", "Novatek": "3034",
-    "矽力":   "6415",
-    "信驊":   "5274",
-    "創意":   "3443",
-    "群聯":   "8299", "Phison": "8299",
-    "義隆電": "2458",
-    "原相":   "3227",
-    "神盾":   "6462",
-    "M31":    "6643",
-    "力旺":   "3529",
-    "譜瑞":   "4966",
-    "聯陽":   "3038",
-    "晶心科": "6533",
-    "奕力":   "3598",
-    "敦泰":   "3545",
-
-    # ── OSAT / 封測 ───────────────────────────────────────────────────────
-    "日月光": "3711", "ASE": "3711",
-
-    # ── 面板 ───────────────────────────────────────────────────────────────
-    "友達":   "2409", "AUO": "2409",
-    "群創":   "3481", "Innolux": "3481",
-    "彩晶":   "6116",
-
-    # ── EMS / ODM ─────────────────────────────────────────────────────────
-    "鴻海":   "2317", "富士康": "2317", "Foxconn": "2317", "Hon Hai": "2317",
-    "廣達":   "2382", "Quanta": "2382",
-    "仁寶":   "2324", "Compal": "2324",
-    "緯創":   "3231", "Wistron": "3231",
-    "英業達": "2356", "Inventec": "2356",
-    "和碩":   "4938", "Pegatron": "4938",
-    "鴻準":   "2354",
-
-    # ── 品牌電腦 / 伺服器 ─────────────────────────────────────────────────
-    "華碩":   "2357", "ASUS": "2357",
-    "宏碁":   "2353", "Acer": "2353",
-    "微星":   "2377", "MSI": "2377",
-    "技嘉":   "2376", "GIGABYTE": "2376",
-    "緯穎":   "6669",
-
-    # ── AI 伺服器 / 散熱 ──────────────────────────────────────────────────
-    "奇鋐":   "3017",
-    "雙鴻":   "3324",
-    "建準":   "2421",
-    "超眾":   "6230",
-    "訊凱":   "3088",
-
-    # ── PCB / 載板 ────────────────────────────────────────────────────────
-    "欣興":   "3037",
-    "健鼎":   "3044",
-    "南電":   "8046",
-    "台郡":   "6269",
-    "臻鼎":   "4958",
-    "景碩":   "3189",
-    "燿華":   "2367",
-    "金像電": "2368",
-
-    # ── 被動元件 ──────────────────────────────────────────────────────────
-    "國巨":   "2327", "YAGEO": "2327",
-    "禾伸堂": "3026",
-    "智寶":   "2375",
-
-    # ── 光學 / 鏡頭 ──────────────────────────────────────────────────────
-    "大立光": "3008", "Largan": "3008",
-    "玉晶光": "3406",
-    "亞光":   "3019",
-
-    # ── 記憶體 / 儲存 ─────────────────────────────────────────────────────
-    "威剛":   "3260", "ADATA": "3260",
-    "群聯":   "8299",
-
-    # ── 電源 / 電子零組件 ─────────────────────────────────────────────────
-    "台達電": "2308", "Delta": "2308",
-    "正崴":   "2392",
-    "可成":   "2474",
-    "亞德客": "1590",
-
-    # ── 化工 / 石化 ───────────────────────────────────────────────────────
-    "台塑":   "1301",
-    "南亞":   "1303",
-    "台化":   "1326",
-    "台塑化": "6505",
-
-    # ── 鋼鐵 ──────────────────────────────────────────────────────────────
-    "中鋼":   "2002",
-
-    # ── 金融 ──────────────────────────────────────────────────────────────
-    "國泰金": "2882", "國泰人壽": "2882",
-    "富邦金": "2881", "富邦人壽": "2881",
-    "中信金": "2891",
-    "兆豐金": "2886",
-    "台新金": "2887",
-    "永豐金": "2890",
-    "元大金": "2885",
-    "第一金": "2892",
-    "合庫金": "5880",
-    "玉山金": "2884", "玉山銀行": "2884",
-    "開發金": "2883",
-
-    # ── 電信 ──────────────────────────────────────────────────────────────
-    "中華電": "2412", "中華電信": "2412",
-    "台灣大": "3045", "台灣大哥大": "3045", "台哥大": "3045",
-    "遠傳":   "4904",
-
-    # ── 航運 ──────────────────────────────────────────────────────────────
-    "長榮":   "2603", "長榮海運": "2603",
-    "陽明":   "2609", "陽明海運": "2609",
-    "萬海":   "2615",
-    "長榮航": "2618", "長榮航空": "2618",
-    "華航":   "2610", "中華航空": "2610",
-
-    # ── 汽車 / 零組件 ─────────────────────────────────────────────────────
-    "裕隆":   "2201",
-    "和泰":   "2207",
-
-    # ── 零售 / 通路 ───────────────────────────────────────────────────────
-    "統一超": "2912", "7-ELEVEN": "2912", "統一超商": "2912",
-    "全家":   "5903",
-    "統一":   "1216",
-
-    # ── 建設 ──────────────────────────────────────────────────────────────
-    "遠雄":   "5522",
-    "興富發": "2542",
-
-    # ── ETF ───────────────────────────────────────────────────────────────
-    "台灣50":       "0050", "元大台灣50": "0050",
-    "高股息":       "0056", "元大高股息": "0056",
+ALIASES: dict[str, str] = {
+    # Semiconductors
+    "TSMC": "2330", "台積": "2330", "台灣積體電路": "2330",
+    "UMC": "2303",
+    "PSMC": "6770",
+    "ASE": "3711",
+    # IC Design
+    "MediaTek": "2454", "MTK": "2454",
+    "Realtek": "2379",
+    "Novatek": "3034",
+    "Phison": "8299",
+    # Panel
+    "AUO": "2409",
+    "Innolux": "3481",
+    # EMS / ODM
+    "Foxconn": "2317", "Hon Hai": "2317", "富士康": "2317",
+    "Quanta": "2382",
+    "Compal": "2324",
+    "Wistron": "3231",
+    "Inventec": "2356",
+    "Pegatron": "4938",
+    # Brands
+    "ASUS": "2357",
+    "Acer": "2353",
+    "MSI": "2377",
+    "GIGABYTE": "2376",
+    # Optical
+    "Largan": "3008",
+    # Passive
+    "YAGEO": "2327",
+    # Storage
+    "ADATA": "3260",
+    # Power
+    "Delta": "2308",
+    # Telecom
+    "中華電信": "2412", "台灣大哥大": "3045", "台哥大": "3045",
+    # Shipping
+    "長榮海運": "2603", "陽明海運": "2609", "長榮航空": "2618", "中華航空": "2610",
+    # Retail
+    "7-ELEVEN": "2912", "統一超商": "2912",
+    # Finance
+    "國泰人壽": "2882", "富邦人壽": "2881", "玉山銀行": "2884",
+    # ETF common names
+    "台灣50": "0050", "元大台灣50": "0050",
+    "高股息": "0056", "元大高股息": "0056",
     "國泰永續高股息": "00878",
-    "富邦台50":     "006208",
+    "富邦台50": "006208",
     "中信關鍵半導體": "00891",
-
-    # ── 4 位代號直接辨識（主要大型股）────────────────────────────────────
-    "2330": "2330", "2317": "2317", "2454": "2454",
-    "2303": "2303", "2382": "2382", "3711": "3711",
-    "2409": "2409", "3008": "3008", "2379": "2379",
-    "3034": "3034", "2412": "2412", "2884": "2884",
-    "2882": "2882", "2881": "2881", "2891": "2891",
-    "2308": "2308", "1301": "1301", "2357": "2357",
-    "2353": "2353", "6670": "6670", "3481": "3481",
-    "2603": "2603", "2609": "2609", "6669": "6669",
-    "3017": "3017", "5274": "5274", "6533": "6533",
+    "00919": "00919", "00929": "00929", "00934": "00934",
 }
 
-# Build canonical name map (code → display name)
-CODE_TO_NAME: dict[str, str] = {
-    "2330": "台積電", "2317": "鴻海",   "2454": "聯發科", "2303": "聯電",
-    "2382": "廣達",   "3711": "日月光", "2409": "友達",   "3008": "大立光",
-    "2379": "瑞昱",   "3034": "聯詠",   "2412": "中華電", "2884": "玉山金",
-    "2882": "國泰金", "2881": "富邦金", "2891": "中信金", "1301": "台塑",
-    "1303": "南亞",   "2357": "華碩",   "2353": "宏碁",   "2308": "台達電",
-    "0050": "元大台灣50", "0056": "元大高股息", "00878": "國泰永續高股息",
-    "3481": "群創",   "4938": "和碩",   "2324": "仁寶",   "2356": "英業達",
-    "3231": "緯創",   "6770": "力積電", "5347": "世界先進","3443": "創意",
-    "8299": "群聯",   "6415": "矽力",   "5274": "信驊",   "6669": "緯穎",
-    "3037": "欣興",   "3044": "健鼎",   "8046": "南電",   "2327": "國巨",
-    "2603": "長榮",   "2609": "陽明",   "2615": "萬海",   "2610": "華航",
-    "2002": "中鋼",   "3045": "台灣大", "4904": "遠傳",   "3260": "威剛",
-    "2886": "兆豐金", "2887": "台新金", "2890": "永豐金", "2885": "元大金",
-    "2892": "第一金", "5880": "合庫金", "2883": "開發金",
-    "2201": "裕隆",   "2207": "和泰",   "1216": "統一",   "2912": "統一超",
-    "5903": "全家",   "6505": "台塑化", "2618": "長榮航", "3017": "奇鋐",
-    "3324": "雙鴻",   "6533": "晶心科", "2376": "技嘉",   "2377": "微星",
-    "1590": "亞德客", "2354": "鴻準",   "2474": "可成",   "2392": "正崴",
-}
+# Runtime-populated dicts (filled by load_stock_dict() in main)
+STOCK_DICT:  dict[str, str] = {}
+CODE_TO_NAME: dict[str, str] = {}
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Dynamic stock list — TWSE + TPEx OpenAPI
+# ─────────────────────────────────────────────────────────────────────────────
+
+def fetch_stock_list() -> list[dict]:
+    """
+    從 TWSE（上市）與 TPEx（上櫃）官方 OpenAPI 抓取完整股票清單。
+    每筆格式：{"code": "2330", "name": "台積電", "market": "twse"}
+    失敗時 fallback 讀取快取 data/stocks.json。
+    """
+    TWSE_URL = "https://openapi.twse.com.tw/v1/referenceData/listOfSecurities"
+    TPEX_URL = "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap03_O"
+
+    stocks: list[dict] = []
+
+    def _fetch(url: str, market: str) -> list[dict]:
+        try:
+            resp = requests.get(url, timeout=15, headers={"Accept": "application/json"})
+            resp.raise_for_status()
+            data = resp.json()
+            result = []
+            for item in data:
+                code = (item.get("Code") or item.get("SecuritiesCode") or "").strip()
+                name = (item.get("Name") or item.get("CompanyName") or "").strip()
+                # Keep only numeric codes (exclude warrants, preferred shares, etc.)
+                if code and name and re.match(r"^\d{4,6}$", code):
+                    result.append({"code": code, "name": name, "market": market})
+            print(f"  [stocks] {market}: {len(result)} securities fetched", file=sys.stderr)
+            return result
+        except Exception as e:
+            print(f"  [stocks] {market} fetch error: {e}", file=sys.stderr)
+            return []
+
+    twse = _fetch(TWSE_URL, "twse")
+    tpex = _fetch(TPEX_URL, "tpex")
+    stocks = twse + tpex
+
+    if stocks:
+        # Save to cache
+        STOCKS_CACHE_FILE.parent.mkdir(parents=True, exist_ok=True)
+        with open(STOCKS_CACHE_FILE, "w", encoding="utf-8") as f:
+            json.dump({
+                "updated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S"),
+                "count": len(stocks),
+                "stocks": stocks,
+            }, f, ensure_ascii=False, indent=2)
+        print(f"  [stocks] Saved {len(stocks)} stocks to cache", file=sys.stderr)
+    else:
+        # Fallback to cache
+        print("  [stocks] Falling back to cached stock list", file=sys.stderr)
+        try:
+            with open(STOCKS_CACHE_FILE, encoding="utf-8") as f:
+                stocks = json.load(f).get("stocks", [])
+            print(f"  [stocks] Loaded {len(stocks)} stocks from cache", file=sys.stderr)
+        except Exception as e:
+            print(f"  [stocks] Cache read error: {e}", file=sys.stderr)
+
+    return stocks
+
+
+def build_stock_dict(stocks: list[dict]) -> tuple[dict[str, str], dict[str, str]]:
+    """
+    從股票清單建立：
+    - stock_dict: keyword → code（包含 name、code 本身、aliases）
+    - code_to_name: code → canonical name
+    """
+    code_to_name: dict[str, str] = {}
+    stock_dict:   dict[str, str] = {}
+
+    for s in stocks:
+        code = s["code"]
+        name = s["name"]
+        code_to_name[code] = name
+        # name → code (e.g. "台積電" → "2330")
+        stock_dict[name] = code
+        # code → code (e.g. "2330" → "2330")
+        stock_dict[code] = code
+
+    # Merge aliases (overrides if conflict, aliases take precedence for display)
+    for alias, code in ALIASES.items():
+        stock_dict[alias] = code
+        # If alias is a code that wasn't in the list, add to code_to_name
+        if re.match(r"^\d{4,6}$", alias) and alias not in code_to_name:
+            code_to_name[alias] = alias
+
+    return stock_dict, code_to_name
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Stock Recognition
@@ -392,6 +360,8 @@ def fetch_captions(video_id: str) -> str | None:
                 "quiet": True, "no_warnings": True, "noplaylist": True,
                 "extractor_args": {"youtube": {"player_client": clients}},
             }
+            if COOKIES_FILE and os.path.isfile(COOKIES_FILE):
+                opts["cookiefile"] = COOKIES_FILE
             with yt_dlp.YoutubeDL(opts) as ydl:
                 info = ydl.extract_info(video_url, download=False, process=False)
             if info:
@@ -468,6 +438,8 @@ def download_audio(video_id: str, tmpdir: str) -> str | None:
                 "max_filesize": 150 * 1024 * 1024,
                 "extractor_args": {"youtube": {"player_client": clients}},
             }
+            if COOKIES_FILE and os.path.isfile(COOKIES_FILE):
+                opts["cookiefile"] = COOKIES_FILE
             with yt_dlp.YoutubeDL(opts) as ydl:
                 info = ydl.extract_info(
                     f"https://www.youtube.com/watch?v={video_id}", download=True
@@ -795,6 +767,13 @@ def main() -> None:
         f"USE_WHISPER={USE_WHISPER} | "
         f"DAYS_BACK={DAYS_BACK}"
     )
+
+    # ── Build dynamic stock dictionary ────────────────────────────────────
+    global STOCK_DICT, CODE_TO_NAME
+    print("[scanner] Fetching Taiwan stock list…")
+    stocks = fetch_stock_list()
+    STOCK_DICT, CODE_TO_NAME = build_stock_dict(stocks)
+    print(f"[scanner] Stock dict ready — {len(STOCK_DICT)} keywords, {len(CODE_TO_NAME)} codes")
 
     sources        = load_sources()
     active_sources = [s for s in sources if s.get("active", True)]
