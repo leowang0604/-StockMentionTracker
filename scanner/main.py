@@ -192,17 +192,25 @@ def transcribe_audio_url(audio_url: str) -> str | None:
 # ─────────────────────────────────────────────
 
 def fetch_captions(video_id: str) -> tuple[str | None, str | None]:
-    """用 yt-dlp iOS client 抓 YouTube 字幕，回傳 (text, lang)"""
+    """用 yt-dlp 抓 YouTube 字幕，嘗試多種 player client，回傳 (text, lang)"""
     video_url = f"https://www.youtube.com/watch?v={video_id}"
     preferred = ["zh-TW", "zh-Hant", "zh", "zh-Hans", "en"]
+    info = None
+    for clients in [["ios"], ["tv_embedded"], ["android"], ["mweb"]]:
+        try:
+            opts = {
+                "quiet": True, "no_warnings": True, "noplaylist": True,
+                "extractor_args": {"youtube": {"player_client": clients}},
+            }
+            with yt_dlp.YoutubeDL(opts) as ydl:
+                info = ydl.extract_info(video_url, download=False, process=False)
+            if info:
+                break
+        except Exception:
+            continue
+    if not info:
+        return None, None
     try:
-        opts = {
-            "quiet": True, "no_warnings": True, "noplaylist": True,
-            "extractor_args": {"youtube": {"player_client": ["ios"]}},
-        }
-        with yt_dlp.YoutubeDL(opts) as ydl:
-            info = ydl.extract_info(video_url, download=False, process=False)
-
         all_caps = {}
         all_caps.update(info.get("automatic_captions", {}))
         all_caps.update(info.get("subtitles", {}))
@@ -251,36 +259,90 @@ def _parse_json3(data: bytes) -> str | None:
 
 
 def fetch_channel_videos(channel_id: str, max_results: int = 10) -> list[dict]:
-    """用 yt-dlp 抓頻道最新影片"""
-    channel_url = f"https://www.youtube.com/channel/{channel_id}/videos"
-    opts = {
-        "quiet": True, "no_warnings": True,
-        "flat_playlist": True,
-        "playlist_items": f"1:{max_results}",
-        "extractor_args": {"youtube": {"player_client": ["ios"]}},
-    }
+    """抓頻道最新影片：優先用 YouTube RSS（不需認證），再 fallback 到 yt-dlp"""
+    videos = _fetch_channel_videos_rss(channel_id, max_results)
+    if videos:
+        return videos
+    return _fetch_channel_videos_ytdlp(channel_id, max_results)
+
+
+def _fetch_channel_videos_rss(channel_id: str, max_results: int) -> list[dict]:
+    """用 YouTube RSS feed 取得影片清單（公開，無 bot 限制）"""
+    rss_url = f"https://www.youtube.com/feeds/videos.xml?channel_id={channel_id}"
     try:
-        with yt_dlp.YoutubeDL(opts) as ydl:
-            info = ydl.extract_info(channel_url, download=False)
-            entries = info.get("entries", []) if info else []
-            videos = []
-            for entry in entries:
-                if not entry:
-                    continue
-                video_id = entry.get("id") or entry.get("url", "").split("?v=")[-1]
-                if not video_id or len(video_id) != 11:
-                    continue
-                videos.append({
-                    "id": video_id,
-                    "title": entry.get("title", ""),
-                    "description": entry.get("description", ""),
-                    "published_at": _parse_upload_date(entry.get("upload_date")),
-                    "thumbnail_url": entry.get("thumbnail"),
-                })
-            return videos
+        resp = requests.get(rss_url, timeout=15, headers={"User-Agent": "Mozilla/5.0"})
+        if resp.status_code != 200:
+            return []
+        ns = {
+            "atom": "http://www.w3.org/2005/Atom",
+            "yt": "http://www.youtube.com/xml/schemas/2015",
+            "media": "http://search.yahoo.com/mrss/",
+        }
+        root = ET.fromstring(resp.content)
+        videos = []
+        for entry in root.findall("atom:entry", ns)[:max_results]:
+            video_id = entry.findtext("yt:videoId", namespaces=ns)
+            if not video_id:
+                continue
+            title = entry.findtext("atom:title", namespaces=ns) or ""
+            description = (
+                entry.find("media:group/media:description", ns) or
+                entry.find(".//media:description", ns)
+            )
+            desc_text = re.sub(r"<[^>]+>", "", (description.text or "") if description is not None else "")[:1000]
+            pub_str = entry.findtext("atom:published", namespaces=ns) or ""
+            videos.append({
+                "id": video_id,
+                "title": title,
+                "description": desc_text,
+                "published_at": pub_str or datetime.now(timezone.utc).isoformat(),
+                "thumbnail_url": f"https://i.ytimg.com/vi/{video_id}/mqdefault.jpg",
+            })
+        return videos
     except Exception as e:
-        print(f"  [channel] {channel_id}: {e}", file=sys.stderr)
+        print(f"  [rss] {channel_id}: {e}", file=sys.stderr)
         return []
+
+
+def _fetch_channel_videos_ytdlp(channel_id: str, max_results: int) -> list[dict]:
+    """yt-dlp fallback：嘗試多種 URL 和 player client"""
+    urls_to_try = [
+        f"https://www.youtube.com/channel/{channel_id}/videos",
+        f"https://www.youtube.com/channel/{channel_id}",
+    ]
+    clients_to_try = [["ios"], ["android"], ["mweb"]]
+    for url in urls_to_try:
+        for clients in clients_to_try:
+            opts = {
+                "quiet": True, "no_warnings": True,
+                "flat_playlist": True,
+                "playlist_items": f"1:{max_results}",
+                "extractor_args": {"youtube": {"player_client": clients}},
+            }
+            try:
+                with yt_dlp.YoutubeDL(opts) as ydl:
+                    info = ydl.extract_info(url, download=False)
+                    entries = info.get("entries", []) if info else []
+                    videos = []
+                    for entry in entries:
+                        if not entry:
+                            continue
+                        video_id = entry.get("id") or entry.get("url", "").split("?v=")[-1]
+                        if not video_id or len(video_id) != 11:
+                            continue
+                        videos.append({
+                            "id": video_id,
+                            "title": entry.get("title", ""),
+                            "description": entry.get("description", ""),
+                            "published_at": _parse_upload_date(entry.get("upload_date")),
+                            "thumbnail_url": entry.get("thumbnail"),
+                        })
+                    if videos:
+                        return videos
+            except Exception:
+                continue
+    print(f"  [channel] {channel_id}: all methods failed", file=sys.stderr)
+    return []
 
 
 def transcribe_youtube(video_id: str) -> str | None:
