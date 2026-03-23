@@ -1,21 +1,129 @@
 {
-  "generated_at": "2026-03-23T14:45:31.753359+00:00",
+  "generated_at": "2026-03-23T15:09:28.927790+00:00",
   "sources": [
     {
-      "id": "ebc-finance",
-      "name": "EBC 東森財經",
+      "id": "ebc-finance-tw",
+      "name": "東森財經",
       "type": "youtube",
-      "identifier": "UCdJKJ3yGKWRJEMsKBRNJHQw",
+      "identifier": "UCOXBN7Ew_smH8NjSlu5ohxA",
       "active": true
     },
     {
-      "id": "yahoo-finance-tw",
-      "name": "Yahoo Finance TW",
+      "id": "gooaye-youtube",
+      "name": "股癌 Gooaye",
       "type": "youtube",
-      "identifier": "UCrRttqy3g9_xbwxH7tHaEcA",
+      "identifier": "UC23rnlQU_qE3cec9x709peA",
+      "active": true
+    },
+    {
+      "id": "stock-king-podcast",
+      "name": "股癌",
+      "type": "applePodcast",
+      "identifier": "1500839292",
       "active": true
     }
   ],
-  "episodes": [],
+  "episodes": [
+    {
+      "id": "967f3c90-a910-493a-a15e-826d2f0368ed",
+      "title": "EP646 | 🦙",
+      "published_at": "2026-03-21T07:38:00+00:00",
+      "source_type": "applePodcast",
+      "source_name": "股癌",
+      "thumbnail_url": null,
+      "analysis_source": "titleAndDescription",
+      "mentioned_stocks": []
+    },
+    {
+      "id": "be3e9626-78e1-4ef7-a060-737579556b56",
+      "title": "EP645 | 🎱",
+      "published_at": "2026-03-18T08:00:21+00:00",
+      "source_type": "applePodcast",
+      "source_name": "股癌",
+      "thumbnail_url": null,
+      "analysis_source": "titleAndDescription",
+      "mentioned_stocks": []
+    },
+    {
+      "id": "926abbbf-322b-40cc-bd74-16ef523a4907",
+      "title": "EP644 | 🦇",
+      "published_at": "2026-03-14T07:09:27+00:00",
+      "source_type": "applePodcast",
+      "source_name": "股癌",
+      "thumbnail_url": null,
+      "analysis_source": "titleAndDescription",
+      "mentioned_stocks": []
+    },
+    {
+      "id": "788ff1ea-2513-4be6-8100-e57a4baf9bc3",
+      "title": "EP643 | 🦊",
+      "published_at": "2026-03-11T08:13:08+00:00",
+      "source_type": "applePodcast",
+      "source_name": "股癌",
+      "thumbnail_url": null,
+      "analysis_source": "titleAndDescription",
+      "mentioned_stocks": []
+    },
+    {
+      "id": "54b77e39-53f2-47be-afae-e2f6162a8bb0",
+      "title": "EP642 | 🐧",
+      "published_at": "2026-03-07T08:05:04+00:00",
+      "source_type": "applePodcast",
+      "source_name": "股癌",
+      "thumbnail_url": null,
+      "analysis_source": "titleAndDescription",
+      "mentioned_stocks": []
+    },
+    {
+      "id": "f6983297-4958-47c5-bc3c-990a9687ce2e",
+      "title": "EP641 | 💥",
+      "published_at": "2026-03-04T07:12:48+00:00",
+      "source_type": "applePodcast",
+      "source_name": "股癌",
+      "thumbnail_url": null,
+      "analysis_source": "titleAndDescription",
+      "mentioned_stocks": []
+    },
+    {
+      "id": "360acf81-2bca-4f2f-b2b7-11647b8f10d4",
+      "title": "EP640 | 🐈",
+      "published_at": "2026-02-28T07:47:44+00:00",
+      "source_type": "applePodcast",
+      "source_name": "股癌",
+      "thumbnail_url": null,
+      "analysis_source": "titleAndDescription",
+      "mentioned_stocks": []
+    },
+    {
+      "id": "cf179ea7-36e0-467d-abca-8b10f191d4f3",
+      "title": "EP639 | 🐗",
+      "published_at": "2026-02-25T08:29:59+00:00",
+      "source_type": "applePodcast",
+      "source_name": "股癌",
+      "thumbnail_url": null,
+      "analysis_source": "titleAndDescription",
+      "mentioned_stocks": []
+    },
+    {
+      "id": "a3e323bd-6f41-4cb6-8c7e-4b1106a2e2ad",
+      "title": "EP638 | 🐈‍⬛",
+      "published_at": "2026-02-21T05:38:10+00:00",
+      "source_type": "applePodcast",
+      "source_name": "股癌",
+      "thumbnail_url": null,
+      "analysis_source": "titleAndDescription",
+      "mentioned_stocks": []
+    },
+    {
+      "id": "7ce8b868-cf8f-44ec-8157-b33fd99eaa39",
+      "title": "EP637 | 🦖",
+      "published_at": "2026-02-18T07:46:24+00:00",
+      "source_type": "applePodcast",
+      "source_name": "股癌",
+      "thumbnail_url": null,
+      "analysis_source": "titleAndDescription",
+      "mentioned_stocks": []
+    }
+  ],
   "mentions": []
 }
