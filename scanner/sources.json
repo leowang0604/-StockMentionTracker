@@ -1,17 +1,17 @@
 {
   "sources": [
     {
-      "id": "ebc-finance",
-      "name": "EBC 東森財經",
+      "id": "ebc-finance-tw",
+      "name": "東森財經",
       "type": "youtube",
-      "identifier": "UCdJKJ3yGKWRJEMsKBRNJHQw",
+      "identifier": "UCOXBN7Ew_smH8NjSlu5ohxA",
       "active": true
     },
     {
-      "id": "yahoo-finance-tw",
-      "name": "Yahoo Finance TW",
+      "id": "gooaye-youtube",
+      "name": "股癌 Gooaye",
       "type": "youtube",
-      "identifier": "UCrRttqy3g9_xbwxH7tHaEcA",
+      "identifier": "UC23rnlQU_qE3cec9x709peA",
       "active": true
     },
     {
@@ -19,7 +19,7 @@
       "name": "股癌",
       "type": "applePodcast",
       "identifier": "1500839292",
-      "active": false
+      "active": true
     }
   ]
 }
