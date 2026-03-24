@@ -5,6 +5,19 @@ on:
     # 每天台灣時間 08:00（UTC 00:00）
     - cron: '0 0 * * *'
   workflow_dispatch:
+    inputs:
+      use_whisper:
+        description: '是否啟用 Whisper 轉錄（false = 只掃標題字幕，快速測試）'
+        required: false
+        default: 'true'
+      max_items:
+        description: '每個來源最多掃幾支（測試用可設 2）'
+        required: false
+        default: '10'
+      days_back:
+        description: '往回掃幾天'
+        required: false
+        default: '7'
 
 permissions:
   contents: write
@@ -40,11 +53,11 @@ jobs:
       - name: Run scanner
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
-          USE_WHISPER: ${{ vars.USE_WHISPER || 'true' }}
+          USE_WHISPER: ${{ inputs.use_whisper || vars.USE_WHISPER || 'true' }}
           SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
           SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
-          DAYS_BACK: ${{ vars.DAYS_BACK || '7' }}
-          MAX_ITEMS: ${{ vars.MAX_ITEMS || '10' }}
+          DAYS_BACK: ${{ inputs.days_back || vars.DAYS_BACK || '7' }}
+          MAX_ITEMS: ${{ inputs.max_items || vars.MAX_ITEMS || '10' }}
         run: python scanner/main.py
 
       - name: Commit and push results
