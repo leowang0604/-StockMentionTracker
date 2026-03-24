@@ -347,12 +347,40 @@ def _videos_via_rss(channel_id: str, max_results: int, days_back: int) -> list[d
 
 def fetch_captions(video_id: str) -> str | None:
     """
-    用 yt-dlp 取得 YouTube 字幕（json3 格式），嘗試多種 player client。
-    回傳合併後的純文字，或 None（若無字幕）。
+    取得 YouTube 字幕文字。
+    優先用 youtube-transcript-api（輕量、不易被偵測），
+    失敗再 fallback yt-dlp。
     """
-    video_url = f"https://www.youtube.com/watch?v={video_id}"
     preferred = ["zh-TW", "zh-Hant", "zh", "zh-Hans", "en"]
 
+    # ── 1. youtube-transcript-api ──────────────────────────────────────────
+    try:
+        from youtube_transcript_api import YouTubeTranscriptApi, NoTranscriptFound, TranscriptsDisabled
+        api = YouTubeTranscriptApi()
+        transcript_list = api.list(video_id)
+        transcript = None
+        for lang in preferred:
+            try:
+                transcript = transcript_list.find_transcript([lang])
+                break
+            except Exception:
+                continue
+        if transcript is None:
+            # Try any available transcript
+            try:
+                transcript = next(iter(transcript_list))
+            except StopIteration:
+                pass
+        if transcript:
+            fetched = transcript.fetch()
+            text = " ".join(s.text for s in fetched).replace("\n", " ").strip()
+            if text:
+                return text
+    except Exception:
+        pass
+
+    # ── 2. yt-dlp fallback ─────────────────────────────────────────────────
+    video_url = f"https://www.youtube.com/watch?v={video_id}"
     info = None
     for clients in [["ios"], ["tv_embedded"], ["android"], ["mweb"]]:
         try:
@@ -372,7 +400,6 @@ def fetch_captions(video_id: str) -> str | None:
     if not info:
         return None
 
-    # Manual subtitles first, then auto-captions
     all_caps: dict = {}
     all_caps.update(info.get("subtitles", {}))
     all_caps.update(info.get("automatic_captions", {}))
