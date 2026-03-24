@@ -69,7 +69,11 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/latest.json data/stocks.json 2>/dev/null || true
+          echo "=== data/ contents ==="
+          ls -la data/ 2>/dev/null || echo "(data/ not found)"
+          git add data/latest.json data/stocks.json
+          echo "=== staged diff stat ==="
+          git diff --staged --stat
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
