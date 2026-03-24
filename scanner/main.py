@@ -516,7 +516,7 @@ def download_audio(video_id: str, tmpdir: str) -> str | None:
     for clients in [["ios"], ["tv_embedded"], ["android"], ["mweb"]]:
         try:
             opts = {
-                "format":       "bestaudio[ext=m4a]/bestaudio/best",
+                "format":       "bestaudio/best",
                 "outtmpl":      os.path.join(tmpdir, "%(id)s.%(ext)s"),
                 "quiet":        True,
                 "no_warnings":  True,
