@@ -18,6 +18,10 @@ on:
         description: '往回掃幾天'
         required: false
         default: '7'
+      test_download_only:
+        description: '只測試音訊下載，不跑 Whisper（快速驗證 cookies）'
+        required: false
+        default: 'false'
 
 permissions:
   contents: write
@@ -58,6 +62,7 @@ jobs:
           SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
           DAYS_BACK: ${{ inputs.days_back || vars.DAYS_BACK || '7' }}
           MAX_ITEMS: ${{ inputs.max_items || vars.MAX_ITEMS || '10' }}
+          TEST_DOWNLOAD_ONLY: ${{ inputs.test_download_only || 'false' }}
         run: python scanner/main.py
 
       - name: Commit and push results

@@ -32,6 +32,7 @@ import yt_dlp
 
 YOUTUBE_API_KEY    = os.environ.get("YOUTUBE_API_KEY", "")
 USE_WHISPER        = os.environ.get("USE_WHISPER", "true").lower() == "true"
+TEST_DOWNLOAD_ONLY = os.environ.get("TEST_DOWNLOAD_ONLY", "false").lower() == "true"
 SPOTIFY_CLIENT_ID  = os.environ.get("SPOTIFY_CLIENT_ID", "")
 SPOTIFY_CLIENT_SECRET = os.environ.get("SPOTIFY_CLIENT_SECRET", "")
 
@@ -588,18 +589,22 @@ def process_youtube_video(
         print(f"  ✗ no captions")
 
     # ── Step 2: Whisper ───────────────────────────────────────────────────
-    if text is None and USE_WHISPER:
-        print(f"  ⏳ transcribing with Whisper…")
+    if text is None and (USE_WHISPER or TEST_DOWNLOAD_ONLY):
+        print(f"  ⏳ {'testing audio download' if TEST_DOWNLOAD_ONLY else 'transcribing with Whisper'}…")
         with tempfile.TemporaryDirectory() as tmpdir:
             audio = download_audio(video_id, tmpdir)
             if audio:
-                transcript = transcribe_audio(audio)
-                if transcript:
-                    text            = transcript
-                    analysis_source = "whisper"
-                    print(f"  ✓ whisper ({len(transcript)} chars)")
+                if TEST_DOWNLOAD_ONLY:
+                    size = os.path.getsize(audio) // 1024
+                    print(f"  ✓ download OK ({size} KB) — skipping Whisper (TEST_DOWNLOAD_ONLY)")
                 else:
-                    print(f"  ✗ whisper failed")
+                    transcript = transcribe_audio(audio)
+                    if transcript:
+                        text            = transcript
+                        analysis_source = "whisper"
+                        print(f"  ✓ whisper ({len(transcript)} chars)")
+                    else:
+                        print(f"  ✗ whisper failed")
 
     # ── Step 3: fallback ──────────────────────────────────────────────────
     if text is None:
