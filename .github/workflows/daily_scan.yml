@@ -29,8 +29,13 @@ jobs:
         run: pip install -r scanner/requirements.txt
 
       - name: Write YouTube cookies
-        if: ${{ secrets.YOUTUBE_COOKIES != '' }}
-        run: echo "${{ secrets.YOUTUBE_COOKIES }}" > /tmp/yt_cookies.txt
+        run: |
+          if [ -n "$YT_COOKIES" ]; then
+            echo "$YT_COOKIES" > /tmp/yt_cookies.txt
+            echo "YOUTUBE_COOKIES_FILE=/tmp/yt_cookies.txt" >> $GITHUB_ENV
+          fi
+        env:
+          YT_COOKIES: ${{ secrets.YOUTUBE_COOKIES }}
 
       - name: Run scanner
         env:
@@ -40,7 +45,6 @@ jobs:
           SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
           DAYS_BACK: ${{ vars.DAYS_BACK || '7' }}
           MAX_ITEMS: ${{ vars.MAX_ITEMS || '10' }}
-          YOUTUBE_COOKIES_FILE: ${{ secrets.YOUTUBE_COOKIES != '' && '/tmp/yt_cookies.txt' || '' }}
         run: python scanner/main.py
 
       - name: Commit and push results
