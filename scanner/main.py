@@ -154,7 +154,7 @@ def fetch_stock_list() -> list[dict]:
             }, f, ensure_ascii=False, indent=2)
         print(f"  [stocks] Saved {len(stocks)} stocks to cache", file=sys.stderr)
     else:
-        # Fallback to cache
+        # Fallback 1: local cache
         print("  [stocks] Falling back to cached stock list", file=sys.stderr)
         try:
             with open(STOCKS_CACHE_FILE, encoding="utf-8") as f:
@@ -162,6 +162,64 @@ def fetch_stock_list() -> list[dict]:
             print(f"  [stocks] Loaded {len(stocks)} stocks from cache", file=sys.stderr)
         except Exception as e:
             print(f"  [stocks] Cache read error: {e}", file=sys.stderr)
+
+        # Fallback 2: built-in minimal list (covers top ~100 commonly mentioned stocks)
+        if not stocks:
+            print("  [stocks] Using built-in fallback stock list", file=sys.stderr)
+            stocks = [
+                {"code":"2330","name":"台積電","market":"twse"},{"code":"2317","name":"鴻海","market":"twse"},
+                {"code":"2454","name":"聯發科","market":"twse"},{"code":"2303","name":"聯電","market":"twse"},
+                {"code":"2382","name":"廣達","market":"twse"},{"code":"3711","name":"日月光投控","market":"twse"},
+                {"code":"2409","name":"友達","market":"twse"},{"code":"3008","name":"大立光","market":"twse"},
+                {"code":"2379","name":"瑞昱","market":"twse"},{"code":"3034","name":"聯詠","market":"twse"},
+                {"code":"2412","name":"中華電","market":"twse"},{"code":"2884","name":"玉山金","market":"twse"},
+                {"code":"2882","name":"國泰金","market":"twse"},{"code":"2881","name":"富邦金","market":"twse"},
+                {"code":"2891","name":"中信金","market":"twse"},{"code":"1301","name":"台塑","market":"twse"},
+                {"code":"1303","name":"南亞","market":"twse"},{"code":"2357","name":"華碩","market":"twse"},
+                {"code":"2353","name":"宏碁","market":"twse"},{"code":"2308","name":"台達電","market":"twse"},
+                {"code":"2376","name":"技嘉","market":"twse"},{"code":"2377","name":"微星","market":"twse"},
+                {"code":"3481","name":"群創","market":"twse"},{"code":"4938","name":"和碩","market":"twse"},
+                {"code":"2324","name":"仁寶","market":"twse"},{"code":"2356","name":"英業達","market":"twse"},
+                {"code":"3231","name":"緯創","market":"twse"},{"code":"6770","name":"力積電","market":"twse"},
+                {"code":"5347","name":"世界先進","market":"twse"},{"code":"3443","name":"創意","market":"twse"},
+                {"code":"8299","name":"群聯","market":"twse"},{"code":"6415","name":"矽力-KY","market":"twse"},
+                {"code":"5274","name":"信驊","market":"twse"},{"code":"6669","name":"緯穎","market":"twse"},
+                {"code":"3037","name":"欣興","market":"twse"},{"code":"3044","name":"健鼎","market":"twse"},
+                {"code":"8046","name":"南電","market":"twse"},{"code":"2327","name":"國巨","market":"twse"},
+                {"code":"2603","name":"長榮","market":"twse"},{"code":"2609","name":"陽明","market":"twse"},
+                {"code":"2615","name":"萬海","market":"twse"},{"code":"2610","name":"華航","market":"twse"},
+                {"code":"2618","name":"長榮航","market":"twse"},{"code":"2002","name":"中鋼","market":"twse"},
+                {"code":"3045","name":"台灣大","market":"twse"},{"code":"4904","name":"遠傳","market":"twse"},
+                {"code":"2412","name":"中華電","market":"twse"},{"code":"3260","name":"威剛","market":"twse"},
+                {"code":"2886","name":"兆豐金","market":"twse"},{"code":"2887","name":"台新金","market":"twse"},
+                {"code":"2890","name":"永豐金","market":"twse"},{"code":"2885","name":"元大金","market":"twse"},
+                {"code":"2892","name":"第一金","market":"twse"},{"code":"5880","name":"合庫金","market":"twse"},
+                {"code":"2883","name":"開發金","market":"twse"},{"code":"2201","name":"裕隆","market":"twse"},
+                {"code":"2207","name":"和泰車","market":"twse"},{"code":"1216","name":"統一","market":"twse"},
+                {"code":"2912","name":"統一超","market":"twse"},{"code":"5903","name":"全家","market":"twse"},
+                {"code":"6505","name":"台塑化","market":"twse"},{"code":"3017","name":"奇鋐","market":"twse"},
+                {"code":"3324","name":"雙鴻","market":"twse"},{"code":"6533","name":"晶心科","market":"twse"},
+                {"code":"1326","name":"台化","market":"twse"},{"code":"6488","name":"環球晶","market":"twse"},
+                {"code":"2354","name":"鴻準","market":"twse"},{"code":"2474","name":"可成","market":"twse"},
+                {"code":"1590","name":"亞德客-KY","market":"twse"},{"code":"6182","name":"合晶","market":"twse"},
+                {"code":"3016","name":"嘉晶","market":"twse"},{"code":"2458","name":"義隆","market":"twse"},
+                {"code":"3227","name":"原相","market":"twse"},{"code":"6462","name":"神盾","market":"twse"},
+                {"code":"6643","name":"M31","market":"twse"},{"code":"3529","name":"力旺","market":"twse"},
+                {"code":"4966","name":"譜瑞-KY","market":"twse"},{"code":"3038","name":"全台晶像","market":"twse"},
+                {"code":"3598","name":"奕力","market":"twse"},{"code":"3545","name":"敦泰","market":"twse"},
+                {"code":"6116","name":"彩晶","market":"twse"},{"code":"6269","name":"台郡","market":"twse"},
+                {"code":"4958","name":"臻鼎-KY","market":"twse"},{"code":"3189","name":"景碩","market":"twse"},
+                {"code":"2367","name":"燿華","market":"twse"},{"code":"2368","name":"金像電","market":"twse"},
+                {"code":"3026","name":"禾伸堂","market":"twse"},{"code":"2375","name":"智寶","market":"twse"},
+                {"code":"3406","name":"玉晶光","market":"twse"},{"code":"3019","name":"亞光","market":"twse"},
+                {"code":"2392","name":"正崴","market":"twse"},{"code":"5522","name":"遠雄","market":"twse"},
+                {"code":"2542","name":"興富發","market":"twse"},{"code":"2421","name":"建準","market":"twse"},
+                {"code":"6230","name":"超眾","market":"twse"},{"code":"3088","name":"艾訊","market":"twse"},
+                {"code":"0050","name":"元大台灣50","market":"twse"},{"code":"0056","name":"元大高股息","market":"twse"},
+                {"code":"00878","name":"國泰永續高股息","market":"twse"},{"code":"006208","name":"富邦台50","market":"twse"},
+                {"code":"00891","name":"中信關鍵半導體","market":"twse"},{"code":"00919","name":"群益台灣精選高息","market":"twse"},
+                {"code":"00929","name":"復華台灣科技優息","market":"twse"},{"code":"00934","name":"中信成長高股息","market":"twse"},
+            ]
 
     return stocks
 
