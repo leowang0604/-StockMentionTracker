@@ -1,12 +1,11 @@
 {
-  "updated_at": "2026-03-25T04:50:15",
+  "updated_at": "2026-03-25T05:26:11",
   "stocks_ranking": [
     {
       "code": "2330",
       "name": "台積電",
       "market": "TW",
       "sector": "晶圓代工",
-      "total_mentions": 2,
       "contexts": [
         {
           "video": "【理財達人秀】破月線減碼 台積來回賺？ 抓錯殺飆股 漲價新題材？｜李兆華、楊雲翔 2026.03.24 part5",
@@ -22,14 +21,14 @@
           "text": "天量套牢又來了？台積電長多不變！2026/03/23【老王不只三分鐘】 天量套牢又來而已？台積電長多不變！2026/03/23【老王不只三分鐘】 ☆加入軟體會員：https://reurl.cc/zKq",
           "analysis_source": "titleAndDescription"
         }
-      ]
+      ],
+      "total_mentions": 2
     },
     {
       "code": "MU",
       "name": "Micron",
       "market": "US",
       "sector": "記憶體",
-      "total_mentions": 2,
       "contexts": [
         {
           "video": "EP212 | 台、美股重點一次說，新IG出生，美光財報，光通訊與銅纜後勢，液冷與電網族群後勢，聽眾QA",
@@ -45,14 +44,14 @@
           "text": "蹤了各位  https://www.instagram.com/unclewhereareyou     廣播專區  https://t.me/uncle_stock     - 美光科技(MU)財報解析  - 光通訊與銅纜後勢  - Lumentum OFC 2026 利多解析  - Google 與液冷和電網問題  - 聽眾QA回答  - 馬斯克最新演講內容",
           "analysis_source": "titleAndDescription"
         }
-      ]
+      ],
+      "total_mentions": 2
     },
     {
       "code": "GOOGL",
       "name": "Alphabet",
       "market": "US",
       "sector": "雲端/AI",
-      "total_mentions": 1,
       "contexts": [
         {
           "video": "EP212 | 台、美股重點一次說，新IG出生，美光財報，光通訊與銅纜後勢，液冷與電網族群後勢，聽眾QA",
@@ -61,7 +60,8 @@
           "text": "播專區  https://t.me/uncle_stock     - 美光科技(MU)財報解析  - 光通訊與銅纜後勢  - Lumentum OFC 2026 利多解析  - Google 與液冷和電網問題  - 聽眾QA回答  - 馬斯克最新演講內容        韭菜畢業班總連結 : https://portaly.cc/uncle_stock  －－－－以下為",
           "analysis_source": "titleAndDescription"
         }
-      ]
+      ],
+      "total_mentions": 1
     }
   ],
   "sectors_ranking": [
@@ -178,6 +178,15 @@
       ],
       "analysis_source": "titleAndDescription",
       "thumbnail_url": "https://i.ytimg.com/vi/h8LeRetxETQ/mqdefault.jpg"
+    },
+    {
+      "video_id": "4nTgn6Hms44",
+      "title": "華通還沒結束｜【浦男搜股】EP.265",
+      "channel": "老王愛說笑",
+      "date": "2026-03-25",
+      "stocks_found": [],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/4nTgn6Hms44/mqdefault_live.jpg"
     }
   ]
 }
