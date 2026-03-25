@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-25T06:30:12",
+  "updated_at": "2026-03-25T06:49:44",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -110,10 +110,19 @@
           "analysis_source": "titleAndDescription",
           "sentiment": "bearish",
           "sentiment_score": 0.0
+        },
+        {
+          "video": "EP211 | 台、美股重點一次說，IG被停用中，華通未來主要營收結構，LPU與SRAM和設備廠關係，NVDA GTC大會",
+          "channel": "韭菜畢業班",
+          "date": "2026-03-15",
+          "text": "ck.contact@gmail.com     韭菜畢業班廣播區 ( 以後會放跟股市有關係的所有資訊)  https://t.me/uncle_stock     - NVDA與台積電未來關係  - NVDA GTC大會  - LPU與SRAM和設備廠關係  - 華通未來主要營收結構     全新氣氛值選股軟體 : https://cmy.tw/00ArN8",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "bearish",
+          "sentiment_score": 0.0
         }
       ],
-      "total_mentions": 12,
-      "sentiment_score": 0.4,
+      "total_mentions": 13,
+      "sentiment_score": 0.364,
       "daily": {
         "2026-03-25": {
           "mentions": 1,
@@ -142,6 +151,13 @@
           "bearish": 4,
           "neutral": 0,
           "sentiment_score": 0.2
+        },
+        "2026-03-15": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 1,
+          "neutral": 0,
+          "sentiment_score": 0.0
         }
       }
     },
@@ -394,9 +410,27 @@
           "analysis_source": "titleAndDescription",
           "sentiment": "bearish",
           "sentiment_score": 0.0
+        },
+        {
+          "video": "EP211 | 台、美股重點一次說，IG被停用中，華通未來主要營收結構，LPU與SRAM和設備廠關係，NVDA GTC大會",
+          "channel": "韭菜畢業班",
+          "date": "2026-03-15",
+          "text": "EP211 | 台、美股重點一次說，IG被停用中，華通未來主要營收結構，LPU與SRAM和設備廠關係，NVDA GTC大會 韭菜畢業班 IG目前被停用中，所以找不到是正常的，不是被我封鎖  目前已經在申訴當中，如果有人有認識內部人或是解鎖經驗歡迎寄信給我  unclestock.conta",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "bearish",
+          "sentiment_score": 0.0
+        },
+        {
+          "video": "EP211 | 台、美股重點一次說，IG被停用中，華通未來主要營收結構，LPU與SRAM和設備廠關係，NVDA GTC大會",
+          "channel": "韭菜畢業班",
+          "date": "2026-03-15",
+          "text": "lestock.contact@gmail.com     韭菜畢業班廣播區 ( 以後會放跟股市有關係的所有資訊)  https://t.me/uncle_stock     - NVDA與台積電未來關係  - NVDA GTC大會  - LPU與SRAM和設備廠關係  - 華通未來主要營收結構     全新氣氛值選股軟體 : https://cmy.tw/00Ar",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "bearish",
+          "sentiment_score": 0.0
         }
       ],
-      "total_mentions": 4,
+      "total_mentions": 6,
       "sentiment_score": 0.0,
       "daily": {
         "2026-03-19": {
@@ -407,6 +441,13 @@
           "sentiment_score": 0.0
         },
         "2026-03-18": {
+          "mentions": 2,
+          "bullish": 0,
+          "bearish": 2,
+          "neutral": 0,
+          "sentiment_score": 0.0
+        },
+        "2026-03-15": {
           "mentions": 2,
           "bullish": 0,
           "bearish": 2,
@@ -474,7 +515,7 @@
     {
       "sector": "晶圓代工",
       "market": "TW",
-      "total_mentions": 12,
+      "total_mentions": 13,
       "stock_codes": [
         "2330"
       ]
@@ -498,7 +539,7 @@
     {
       "sector": "AI晶片",
       "market": "US",
-      "total_mentions": 4,
+      "total_mentions": 6,
       "stock_codes": [
         "NVDA"
       ]
@@ -859,6 +900,27 @@
       ],
       "analysis_source": "titleAndDescription",
       "thumbnail_url": "https://i.ytimg.com/vi/e9xYLFJkyM0/mqdefault.jpg"
+    },
+    {
+      "video_id": "926abbbf-322b-40cc-bd74-16ef523a4907",
+      "title": "EP644 | 🦇",
+      "channel": "股癌",
+      "date": "2026-03-14",
+      "stocks_found": [],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": null
+    },
+    {
+      "video_id": "2fe35267-5b1f-44fe-9ee2-a7f68e55e2be",
+      "title": "EP211 | 台、美股重點一次說，IG被停用中，華通未來主要營收結構，LPU與SRAM和設備廠關係，NVDA GTC大會",
+      "channel": "韭菜畢業班",
+      "date": "2026-03-15",
+      "stocks_found": [
+        "2330",
+        "NVDA"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": null
     }
   ]
 }
