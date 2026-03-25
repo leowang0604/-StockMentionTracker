@@ -107,17 +107,82 @@ ALIASES: dict[str, str] = {
 # Sentiment keywords (financial Chinese)
 # ─────────────────────────────────────────────────────────────────────────────
 
-BULLISH_KEYWORDS: set[str] = {
-    "買進", "布局", "強勢", "看好", "利多", "創高", "突破",
-    "籌碼轉強", "外資買超", "逢低買", "上漲", "噴出",
-    "飆漲", "低估", "便宜", "機會", "加碼", "看漲",
+# ── 強看多關鍵字（權重 0.6）────────────────────────────────────────────────────
+BULLISH_STRONG: set[str] = {
+    # 短線交易信號
+    "買進", "布局", "強勢", "利多", "創高", "突破",
+    "籌碼轉強", "外資買超", "逢低買", "上漲", "噴出", "飆漲", "加碼", "看漲",
+    # 產業趨勢看多
+    "產業趨勢向上", "超級循環", "需求爆發", "供不應求",
+    "AI需求不減", "AI商機", "新應用爆發",
+    "訂單滿載", "急單湧入", "出貨暢旺",
+    "毛利率提升", "獲利成長", "EPS創高",
+    "景氣復甦", "景氣回升", "景氣反轉向上",
+    "產業底部確立", "拉貨潮", "超級成長", "爆發性成長", "倍增成長",
+    "獨家供應", "技術領先",
 }
 
-BEARISH_KEYWORDS: set[str] = {
-    "賣出", "獲利了結", "看空", "利空", "回檔", "壓力",
-    "超漲", "籌碼轉弱", "外資賣超", "下跌", "套牢",
-    "風險", "泡沫", "高估", "貴", "減碼", "看跌", "警示",
+# ── 弱看多關鍵字（權重 0.3）────────────────────────────────────────────────────
+BULLISH_MILD: set[str] = {
+    # 短線
+    "看好", "低估", "便宜", "機會",
+    # 產業趨勢中性偏多
+    "景氣回溫中", "庫存健康", "需求穩定", "訂單穩定",
+    "產業整合", "強者恆強", "等待催化劑", "靜待訊號",
+    "趨勢不變", "需求持續成長", "長期趨勢", "結構性成長",
+    "AI趨勢", "長線看好", "轉機股", "產業升級", "訂單能見度高",
+    "客戶拉貨", "市佔率提升", "競爭力提升", "護城河",
+    "本益比低估", "股價落後基本面",
+    "需求回溫", "新客戶導入", "新產品貢獻", "差異化競爭", "新應用打開",
 }
+
+# ── 強看空關鍵字（權重 0.6）────────────────────────────────────────────────────
+BEARISH_STRONG: set[str] = {
+    # 短線交易信號
+    "賣出", "獲利了結", "看空", "利空", "超漲", "籌碼轉弱",
+    "外資賣超", "下跌", "套牢", "泡沫", "高估", "減碼", "看跌",
+    # 產業趨勢看空
+    "產業趨勢向下", "趨勢反轉", "景氣下行",
+    "需求萎縮", "供過於求",
+    "砍單", "客戶砍單",
+    "產業寒冬", "景氣谷底", "景氣衰退",
+    "獲利衰退", "EPS下修",
+    "市佔率流失", "產能過剩",
+    "需求見頂", "高峰已過",
+    "景氣反轉向下",
+}
+
+# ── 弱看空關鍵字（權重 0.3）────────────────────────────────────────────────────
+BEARISH_MILD: set[str] = {
+    # 短線
+    "回檔", "壓力", "風險", "貴", "警示",
+    # 產業趨勢中性偏空
+    "景氣還在底部", "需求還沒起來", "庫存還高", "還需要時間",
+    "短期壓力", "暫時觀望",
+    "需求疲弱", "庫存去化", "庫存調整", "去庫存",
+    "訂單縮減", "毛利率下滑",
+    "競爭加劇", "價格戰", "殺價競爭",
+    "成長趨緩", "客戶去庫存", "終端需求疲弱",
+    "本益比過高", "股價超漲基本面",
+    "需求轉弱", "推貨困難", "替代品威脅", "技術被取代", "失去競爭力",
+}
+
+# ── 前後文配對規則（優先於單一關鍵字，命中時權重 0.6）──────────────────────────
+# 格式：(樞紐詞, [看多搭配詞], [看空搭配詞])
+CONTEXT_PAIRS: list[tuple[str, list[str], list[str]]] = [
+    ("庫存",  ["去化完畢", "落底", "健康"],          ["持續累積", "還高", "嚴重"]),
+    ("循環",  ["向上", "啟動", "開始"],              ["向下", "結束", "反轉"]),
+    ("趨勢",  ["不變", "持續", "看好", "向上"],      ["反轉", "結束", "改變", "向下"]),
+    ("需求",  ["強勁", "成長", "爆發", "回溫"],      ["疲弱", "萎縮", "下滑", "見頂"]),
+    ("訂單",  ["滿載", "能見度高", "急單", "回溫"],  ["縮減", "砍單", "延後", "取消"]),
+    ("景氣",  ["復甦", "回升", "反轉向上"],          ["衰退", "下行", "反轉向下"]),
+    ("毛利率", ["提升", "改善", "擴大"],             ["下滑", "壓縮", "縮小"]),
+    ("EPS",   ["成長", "創高", "上修"],              ["衰退", "下修", "縮水"]),
+]
+
+# 向下相容：供舊版引用
+BULLISH_KEYWORDS = BULLISH_STRONG | BULLISH_MILD
+BEARISH_KEYWORDS = BEARISH_STRONG | BEARISH_MILD
 
 # ─────────────────────────────────────────────────────────────────────────────
 # US Stock built-in dictionary (Chinese/English aliases)
@@ -483,12 +548,44 @@ def analyze_sentiment(text: str) -> tuple[str, float]:
     """
     Returns (label, score) where label is 'bullish'/'bearish'/'neutral'
     and score is 0.0 (bearish) to 1.0 (bullish).
-    Primary: financial keyword counting. Fallback: SnowNLP.
-    """
-    bullish = sum(1 for kw in BULLISH_KEYWORDS if kw in text)
-    bearish = sum(1 for kw in BEARISH_KEYWORDS if kw in text)
 
-    if bullish == 0 and bearish == 0:
+    Scoring:
+    1. Context pairs (pivot + followup in same text) → ±0.6 each
+    2. Strong keywords → ±0.6 each
+    3. Mild keywords → ±0.3 each
+    Final score = bullish_weight / (bullish_weight + bearish_weight)
+    Fallback to SnowNLP when no signals found.
+    """
+    bull_w = 0.0
+    bear_w = 0.0
+
+    # 1. Context pair rules (checked first, highest priority)
+    for pivot, pos_words, neg_words in CONTEXT_PAIRS:
+        if pivot in text:
+            for w in pos_words:
+                if w in text:
+                    bull_w += 0.6
+            for w in neg_words:
+                if w in text:
+                    bear_w += 0.6
+
+    # 2. Strong individual keywords
+    for kw in BULLISH_STRONG:
+        if kw in text:
+            bull_w += 0.6
+    for kw in BEARISH_STRONG:
+        if kw in text:
+            bear_w += 0.6
+
+    # 3. Mild individual keywords
+    for kw in BULLISH_MILD:
+        if kw in text:
+            bull_w += 0.3
+    for kw in BEARISH_MILD:
+        if kw in text:
+            bear_w += 0.3
+
+    if bull_w == 0.0 and bear_w == 0.0:
         try:
             from snownlp import SnowNLP
             score = float(SnowNLP(text[:200]).sentiments)
@@ -500,8 +597,8 @@ def analyze_sentiment(text: str) -> tuple[str, float]:
             pass
         return "neutral", 0.5
 
-    total = bullish + bearish
-    score = round(bullish / total, 3)
+    total_w = bull_w + bear_w
+    score = round(bull_w / total_w, 3)
     if score > 0.5:
         return "bullish", score
     elif score < 0.5:
