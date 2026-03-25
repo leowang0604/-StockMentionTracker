@@ -696,6 +696,16 @@ def build_stock_dict(
     return stock_dict, code_to_name, stock_market, stock_sector
 
 # ─────────────────────────────────────────────────────────────────────────────
+# Ambiguous ticker context requirements
+# For tickers whose symbol is a common word, require at least one of these
+# strings to appear in the surrounding context to count as a real mention.
+# ─────────────────────────────────────────────────────────────────────────────
+
+CONTEXT_REQUIRED: dict[str, list[str]] = {
+    "AI": ["C3", "C3.ai"],  # avoid matching generic "AI" mentions not about C3.ai
+}
+
+# ─────────────────────────────────────────────────────────────────────────────
 # Stock Recognition
 # ─────────────────────────────────────────────────────────────────────────────
 
@@ -729,6 +739,12 @@ def recognize_stocks(text: str) -> list[dict]:
             start = max(0, pos - CONTEXT_CHARS)
             end   = min(len(text), pos + len(keyword) + CONTEXT_CHARS)
             ctx   = text[start:end].replace("\n", " ").strip()
+
+            # Validate ambiguous tickers: require specific co-occurrence in context
+            if code in CONTEXT_REQUIRED:
+                required_terms = CONTEXT_REQUIRED[code]
+                if not any(term in ctx for term in required_terms):
+                    continue
 
             hits.append({
                 "stock_code":   code,
@@ -1092,6 +1108,8 @@ def process_youtube_video(
         "thumbnail_url":  video.get("thumbnail_url"),
     }
 
+    video_url = f"https://www.youtube.com/watch?v={video_id}"
+
     mentions = []
     for h in hits:
         label, score = analyze_sentiment(h["context"])
@@ -1107,6 +1125,7 @@ def process_youtube_video(
             "analysis_source": analysis_source,
             "sentiment":       label,
             "sentiment_score": score,
+            "video_url":       video_url,
         })
 
     return video_entry, mentions
@@ -1393,6 +1412,7 @@ def merge_into_history(
                 "analysis_source": m.get("analysis_source", "titleAndDescription"),
                 "sentiment":       m.get("sentiment", "neutral"),
                 "sentiment_score": m.get("sentiment_score", 0.5),
+                "video_url":       m.get("video_url"),
             })
 
     # Rebuild stocks_ranking with daily aggregation and sentiment_score
