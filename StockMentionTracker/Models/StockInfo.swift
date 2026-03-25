@@ -206,7 +206,8 @@ struct MentionContext: Codable, Identifiable {
         switch sentiment {
         case "bullish": return "看多"
         case "bearish": return "看空"
-        default:        return "中性"
+        case "neutral": return "中性"
+        default:        return ""
         }
     }
 }

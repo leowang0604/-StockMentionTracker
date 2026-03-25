@@ -50,6 +50,9 @@ struct StockDetailView: View {
                             .font(.subheadline).foregroundStyle(.secondary)
                         Text("涵蓋來源：\(stock.channelCount) 個")
                             .font(.caption).foregroundStyle(.tertiary)
+                        if let score = stock.sentimentScore {
+                            SentimentBar(score: score, label: stock.sentimentLabel)
+                        }
                     }
                     Spacer()
                     HStack(spacing: 4) {
@@ -153,6 +156,14 @@ struct ContextRowView: View {
 
                 Spacer()
 
+                if !context.sentimentLabel.isEmpty {
+                    Text(context.sentimentLabel)
+                        .font(.caption2.bold())
+                        .padding(.horizontal, 6).padding(.vertical, 3)
+                        .background(sentimentColor(context).opacity(0.15), in: Capsule())
+                        .foregroundStyle(sentimentColor(context))
+                }
+
                 HStack(spacing: 3) {
                     Image(systemName: context.analysisSourceSymbol)
                     Text(context.analysisSourceDisplay)
@@ -203,4 +214,49 @@ struct ContextRowView: View {
         }
     }
 
+    private func sentimentColor(_ ctx: MentionContext) -> Color {
+        switch ctx.sentiment {
+        case "bullish": return .green
+        case "bearish": return .red
+        default:        return .secondary
+        }
+    }
+}
+
+// MARK: - Sentiment Bar
+
+struct SentimentBar: View {
+    let score: Double
+    let label: String
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            HStack {
+                Text("市場情緒")
+                    .font(.caption).foregroundStyle(.secondary)
+                Spacer()
+                Text(label)
+                    .font(.caption.bold())
+                    .foregroundStyle(barColor)
+                Text(String(format: "%.0f%%", score * 100))
+                    .font(.caption.monospacedDigit())
+                    .foregroundStyle(.secondary)
+            }
+            GeometryReader { geo in
+                ZStack(alignment: .leading) {
+                    Capsule().fill(.quaternary)
+                    Capsule().fill(barColor)
+                        .frame(width: geo.size.width * score)
+                }
+            }
+            .frame(height: 6)
+        }
+        .padding(.top, 4)
+    }
+
+    private var barColor: Color {
+        if score > 0.6 { return .green }
+        if score < 0.4 { return .red }
+        return .secondary
+    }
 }

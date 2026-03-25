@@ -174,6 +174,13 @@ struct RankingRowView: View {
                             .background(.blue.opacity(0.12), in: Capsule())
                             .foregroundStyle(.blue)
                     }
+                    if !stock.sentimentLabel.isEmpty {
+                        Text(stock.sentimentLabel)
+                            .font(.caption2.bold())
+                            .padding(.horizontal, 6).padding(.vertical, 2)
+                            .background(sentimentBadgeColor(stock).opacity(0.15), in: Capsule())
+                            .foregroundStyle(sentimentBadgeColor(stock))
+                    }
                     Label("\(stock.channelCount) 個來源",
                           systemImage: "antenna.radiowaves.left.and.right")
                     Text("·")
@@ -202,6 +209,14 @@ struct RankingRowView: View {
         case 2: return Color(white: 0.7)
         case 3: return .orange
         default: return .secondary
+        }
+    }
+
+    private func sentimentBadgeColor(_ stock: StockEntry) -> Color {
+        switch stock.sentimentColor {
+        case "green": return .green
+        case "red":   return .red
+        default:      return .secondary
         }
     }
 }
