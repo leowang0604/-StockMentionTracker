@@ -103,9 +103,136 @@ ALIASES: dict[str, str] = {
     "00919": "00919", "00929": "00929", "00934": "00934",
 }
 
-# Runtime-populated dicts (filled by load_stock_dict() in main)
-STOCK_DICT:  dict[str, str] = {}
+# ─────────────────────────────────────────────────────────────────────────────
+# US Stock built-in dictionary (Chinese/English aliases)
+# Format: (keyword_list, ticker, display_name, sector)
+# ─────────────────────────────────────────────────────────────────────────────
+
+_US_STOCKS_DATA: list[tuple[list[str], str, str, str]] = [
+    (["輝達", "黃仁勳", "NVIDIA", "Nvidia", "NVDA"],  "NVDA",  "NVIDIA",             "AI晶片"),
+    (["美光", "Micron", "MU"],                         "MU",    "Micron",             "記憶體"),
+    (["AMD", "超微半導體"],                             "AMD",   "AMD",                "AI晶片"),
+    (["蘋果", "Apple", "AAPL"],                        "AAPL",  "Apple",              "消費電子"),
+    (["微軟", "Microsoft", "MSFT", "OpenAI"],          "MSFT",  "Microsoft",          "雲端/AI"),
+    (["谷歌", "Google", "Alphabet", "GOOGL"],          "GOOGL", "Alphabet",           "雲端/AI"),
+    (["亞馬遜", "Amazon", "AMZN"],                     "AMZN",  "Amazon",             "雲端"),
+    (["特斯拉", "Tesla", "TSLA"],                      "TSLA",  "Tesla",              "電動車"),
+    (["台積電ADR", "台積ADR", "TSM"],                  "TSM",   "TSMC ADR",           "晶圓代工"),
+    (["英特爾", "Intel", "INTC"],                      "INTC",  "Intel",              "半導體"),
+    (["高通", "Qualcomm", "QCOM"],                     "QCOM",  "Qualcomm",           "手機晶片"),
+    (["博通", "Broadcom", "AVGO"],                     "AVGO",  "Broadcom",           "AI網路"),
+    (["ARM"],                                          "ARM",   "ARM Holdings",       "晶片架構"),
+    (["Meta", "臉書", "Facebook", "META"],             "META",  "Meta",               "社群媒體"),
+    (["Netflix", "網飛", "NFLX"],                      "NFLX",  "Netflix",            "串流媒體"),
+    (["波音", "Boeing"],                               "BA",    "Boeing",             "航太"),
+    (["摩根大通", "JPMorgan", "JPM"],                  "JPM",   "JPMorgan",           "金融"),
+    (["巴菲特", "波克夏", "Berkshire"],                "BRK.B", "Berkshire",          "金融"),
+    (["輝瑞", "Pfizer", "PFE"],                        "PFE",   "Pfizer",             "生技"),
+    (["埃克森美孚", "ExxonMobil", "XOM"],              "XOM",   "ExxonMobil",         "能源"),
+    (["Salesforce", "CRM"],                            "CRM",   "Salesforce",         "企業軟體"),
+    (["甲骨文", "Oracle", "ORCL"],                     "ORCL",  "Oracle",             "企業軟體"),
+    (["IBM"],                                          "IBM",   "IBM",                "企業軟體"),
+    (["Dell", "戴爾", "DELL"],                         "DELL",  "Dell",               "伺服器"),
+    (["惠普", "HPQ"],                                  "HPQ",   "HP Inc",             "消費電子"),
+    (["思科", "Cisco", "CSCO"],                        "CSCO",  "Cisco",              "網路設備"),
+    (["威騰", "Western Digital", "WDC"],               "WDC",   "Western Digital",    "儲存"),
+    (["希捷", "Seagate", "STX"],                       "STX",   "Seagate",            "儲存"),
+    (["安森美", "ON Semi"],                            "ON",    "ON Semi",            "半導體"),
+    (["德州儀器", "Texas Instruments", "TXN"],         "TXN",   "Texas Instruments",  "半導體"),
+    (["應用材料", "Applied Materials", "AMAT"],        "AMAT",  "Applied Materials",  "半導體設備"),
+    (["科林研發", "Lam Research", "LRCX"],             "LRCX",  "Lam Research",       "半導體設備"),
+    (["科磊", "KLA", "KLAC"],                          "KLAC",  "KLA",                "半導體設備"),
+    (["ASML"],                                         "ASML",  "ASML",               "半導體設備"),
+    (["Palantir", "PLTR"],                             "PLTR",  "Palantir",           "AI軟體"),
+    (["超微電腦", "Super Micro", "SMCI"],              "SMCI",  "Super Micro",        "伺服器"),
+    (["Arista", "ANET"],                               "ANET",  "Arista Networks",    "AI網路"),
+    (["Marvell", "MRVL"],                              "MRVL",  "Marvell",            "AI晶片"),
+    (["Rivian", "RIVN"],                               "RIVN",  "Rivian",             "電動車"),
+    (["美國銀行", "Bank of America", "BAC"],           "BAC",   "Bank of America",    "金融"),
+    (["高盛", "Goldman Sachs"],                        "GS",    "Goldman Sachs",      "金融"),
+    (["Moderna", "莫德納", "MRNA"],                    "MRNA",  "Moderna",            "生技"),
+    (["嬌生", "JNJ"],                                  "JNJ",   "J&J",                "生技"),
+    (["雪佛龍", "Chevron", "CVX"],                     "CVX",   "Chevron",            "能源"),
+    (["洛克希德", "Lockheed Martin", "LMT"],           "LMT",   "Lockheed Martin",    "航太"),
+    (["雷神", "Raytheon", "RTX"],                      "RTX",   "Raytheon",           "航太"),
+    (["Disney", "迪士尼", "DIS"],                      "DIS",   "Disney",             "串流媒體"),
+]
+
+US_KEYWORD_TO_CODE: dict[str, str] = {}
+US_CODE_TO_INFO:    dict[str, dict] = {}
+for _kws, _ticker, _name, _sector in _US_STOCKS_DATA:
+    US_CODE_TO_INFO[_ticker] = {"name": _name, "sector": _sector}
+    for _kw in _kws:
+        US_KEYWORD_TO_CODE[_kw] = _ticker
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Taiwan stock sector mapping (code → sector)
+# ─────────────────────────────────────────────────────────────────────────────
+
+TW_STOCK_SECTORS: dict[str, str] = {
+    # 晶圓代工
+    "2330": "晶圓代工", "2303": "晶圓代工", "6770": "晶圓代工",
+    # IC設計
+    "2454": "IC設計",   "2379": "IC設計",   "3034": "IC設計",
+    "6415": "IC設計",   "3443": "IC設計",   "5274": "IC設計",   "6533": "IC設計",
+    # 組裝代工
+    "2317": "組裝代工", "4938": "組裝代工",
+    # 伺服器
+    "2382": "伺服器",   "3231": "伺服器",   "2356": "伺服器",   "6669": "伺服器",
+    # 電源管理
+    "2308": "電源管理", "2301": "電源管理",
+    # 半導體設備
+    "6187": "半導體設備", "3131": "半導體設備", "3583": "半導體設備",
+    # 記憶體
+    "2408": "記憶體",   "2344": "記憶體",   "2337": "記憶體",
+    # NAND Flash
+    "8299": "NAND Flash", "6286": "NAND Flash",
+    # PCB載板
+    "3037": "PCB載板",  "8046": "PCB載板",  "3189": "PCB載板",
+    # PCB
+    "4958": "PCB",      "3044": "PCB",      "2368": "PCB",      "2367": "PCB",
+    # CCL
+    "2383": "CCL",      "6213": "CCL",
+    # FPC
+    "6153": "FPC",      "6269": "FPC",
+    # 散熱
+    "3324": "散熱",     "3017": "散熱",     "2421": "散熱",     "6230": "散熱",
+    # CPO光通訊
+    "6451": "CPO光通訊", "2345": "CPO光通訊",
+    # 被動元件
+    "2327": "被動元件", "2492": "被動元件", "3026": "被動元件",
+    # 封裝
+    "3711": "封裝",
+    # 面板
+    "2409": "面板",     "3481": "面板",
+    # 金融
+    "2881": "金融", "2882": "金融", "2883": "金融", "2884": "金融",
+    "2885": "金融", "2886": "金融", "2887": "金融", "2890": "金融",
+    "2891": "金融", "2892": "金融", "5880": "金融",
+    # 航運
+    "2609": "航運",     "2603": "航運",     "2615": "航運",
+    # 電動車零件
+    "1536": "電動車",   "3665": "電動車",   "1319": "電動車",
+    # 太陽能
+    "6443": "太陽能",   "6244": "太陽能",
+    # 生技
+    "4180": "生技",     "6547": "生技",     "4174": "生技",
+    # ETF
+    "0050": "ETF",  "0056": "ETF",  "00878": "ETF", "006208": "ETF",
+    "00891": "ETF", "00919": "ETF", "00929": "ETF", "00934": "ETF",
+    # 電信
+    "2412": "電信",     "3045": "電信",     "4904": "電信",
+    # 航空
+    "2618": "航空",     "2610": "航空",
+    # 鋼鐵
+    "2002": "鋼鐵",
+}
+
+# Runtime-populated dicts (filled by build_stock_dict() in main)
+STOCK_DICT:   dict[str, str] = {}
 CODE_TO_NAME: dict[str, str] = {}
+STOCK_MARKET: dict[str, str] = {}  # code → "TW" or "US"
+STOCK_SECTOR: dict[str, str] = {}  # code → sector name
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Dynamic stock list — TWSE + TPEx OpenAPI
@@ -225,32 +352,50 @@ def fetch_stock_list() -> list[dict]:
     return stocks
 
 
-def build_stock_dict(stocks: list[dict]) -> tuple[dict[str, str], dict[str, str]]:
+def build_stock_dict(
+    stocks: list[dict],
+) -> tuple[dict[str, str], dict[str, str], dict[str, str], dict[str, str]]:
     """
-    從股票清單建立：
-    - stock_dict: keyword → code（包含 name、code 本身、aliases）
+    從台股清單 + US built-in dict 建立：
+    - stock_dict:   keyword → code
     - code_to_name: code → canonical name
+    - stock_market: code → "TW" | "US"
+    - stock_sector: code → sector name
     """
     code_to_name: dict[str, str] = {}
     stock_dict:   dict[str, str] = {}
+    stock_market: dict[str, str] = {}
+    stock_sector: dict[str, str] = {}
 
+    # ── Taiwan stocks (TWSE / TPEx) ───────────────────────────────────────
     for s in stocks:
         code = s["code"]
         name = s["name"]
         code_to_name[code] = name
-        # name → code (e.g. "台積電" → "2330")
-        stock_dict[name] = code
-        # code → code (e.g. "2330" → "2330")
-        stock_dict[code] = code
+        stock_dict[name]   = code
+        stock_dict[code]   = code
+        stock_market[code] = "TW"
+        if code in TW_STOCK_SECTORS:
+            stock_sector[code] = TW_STOCK_SECTORS[code]
 
-    # Merge aliases (overrides if conflict, aliases take precedence for display)
+    # ── US stocks (built-in) — added BEFORE aliases so aliases can override ─
+    for kw, ticker in US_KEYWORD_TO_CODE.items():
+        stock_dict[kw] = ticker
+    for ticker, info in US_CODE_TO_INFO.items():
+        if ticker not in code_to_name:
+            code_to_name[ticker] = info["name"]
+        stock_market[ticker] = "US"
+        stock_sector[ticker] = info["sector"]
+
+    # ── Taiwan aliases (override conflicts; TW wins over US for same keyword) ─
     for alias, code in ALIASES.items():
         stock_dict[alias] = code
-        # If alias is a code that wasn't in the list, add to code_to_name
         if re.match(r"^\d{4,6}$", alias) and alias not in code_to_name:
             code_to_name[alias] = alias
+        if code not in stock_market:
+            stock_market[code] = "TW"
 
-    return stock_dict, code_to_name
+    return stock_dict, code_to_name, stock_market, stock_sector
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Stock Recognition
@@ -258,14 +403,25 @@ def build_stock_dict(stocks: list[dict]) -> tuple[dict[str, str], dict[str, str]
 
 def recognize_stocks(text: str) -> list[dict]:
     """
-    掃描文字，找出所有台股提及，回傳含上下文的列表。
-    對同一支股票在相近位置的重複 match 做去重。
+    掃描文字，找出所有台股 / 美股提及，回傳含上下文的列表。
+    英文關鍵字加 word-boundary 避免誤匹配；相近重複 match 去重。
     """
     hits: list[dict] = []
     seen: dict[str, list[int]] = {}  # code → [positions]
 
     for keyword, code in STOCK_DICT.items():
-        for m in re.finditer(re.escape(keyword), text):
+        # Use word boundaries for ASCII-starting keywords (avoids partial matches)
+        if re.match(r"^[A-Za-z]", keyword):
+            pattern = r"(?<![A-Za-z0-9])" + re.escape(keyword) + r"(?![A-Za-z0-9])"
+        else:
+            pattern = re.escape(keyword)
+
+        try:
+            matches = list(re.finditer(pattern, text))
+        except re.error:
+            continue
+
+        for m in matches:
             pos = m.start()
             # Deduplicate: skip if same stock already matched within 40 chars
             if any(abs(pos - p) < 40 for p in seen.get(code, [])):
@@ -277,9 +433,11 @@ def recognize_stocks(text: str) -> list[dict]:
             ctx   = text[start:end].replace("\n", " ").strip()
 
             hits.append({
-                "stock_code": code,
-                "stock_name": CODE_TO_NAME.get(code, keyword),
-                "context": ctx,
+                "stock_code":   code,
+                "stock_name":   CODE_TO_NAME.get(code, keyword),
+                "stock_market": STOCK_MARKET.get(code, "TW"),
+                "stock_sector": STOCK_SECTOR.get(code),
+                "context":      ctx,
             })
 
     return hits
@@ -630,12 +788,14 @@ def process_youtube_video(
 
     mentions = [
         {
-            "stock_code": h["stock_code"],
-            "stock_name": h["stock_name"],
-            "video_title": title,
-            "channel":     source_name,
-            "date":        date,
-            "context":     h["context"],
+            "stock_code":   h["stock_code"],
+            "stock_name":   h["stock_name"],
+            "stock_market": h.get("stock_market", "TW"),
+            "stock_sector": h.get("stock_sector"),
+            "video_title":  title,
+            "channel":      source_name,
+            "date":         date,
+            "context":      h["context"],
             "analysis_source": analysis_source,
         }
         for h in hits
@@ -768,6 +928,8 @@ def process_podcast_episode(
         {
             "stock_code":      h["stock_code"],
             "stock_name":      h["stock_name"],
+            "stock_market":    h.get("stock_market", "TW"),
+            "stock_sector":    h.get("stock_sector"),
             "video_title":     title,
             "channel":         source_name,
             "date":            date,
@@ -859,11 +1021,13 @@ def main() -> None:
     )
 
     # ── Build dynamic stock dictionary ────────────────────────────────────
-    global STOCK_DICT, CODE_TO_NAME
+    global STOCK_DICT, CODE_TO_NAME, STOCK_MARKET, STOCK_SECTOR
     print("[scanner] Fetching Taiwan stock list…")
     stocks = fetch_stock_list()
-    STOCK_DICT, CODE_TO_NAME = build_stock_dict(stocks)
-    print(f"[scanner] Stock dict ready — {len(STOCK_DICT)} keywords, {len(CODE_TO_NAME)} codes")
+    STOCK_DICT, CODE_TO_NAME, STOCK_MARKET, STOCK_SECTOR = build_stock_dict(stocks)
+    us_count = sum(1 for v in STOCK_MARKET.values() if v == "US")
+    tw_count = sum(1 for v in STOCK_MARKET.values() if v == "TW")
+    print(f"[scanner] Stock dict ready — {len(STOCK_DICT)} keywords | TW: {tw_count}, US: {us_count}")
 
     sources        = load_sources()
     active_sources = [s for s in sources if s.get("active", True)]
@@ -910,26 +1074,52 @@ def main() -> None:
             stocks_map[code] = {
                 "code":           code,
                 "name":           m["stock_name"],
+                "market":         m.get("stock_market", "TW"),
+                "sector":         m.get("stock_sector"),
                 "total_mentions": 0,
                 "contexts":       [],
             }
         stocks_map[code]["total_mentions"] += 1
         if len(stocks_map[code]["contexts"]) < MAX_CONTEXTS_PER_STOCK:
             stocks_map[code]["contexts"].append({
-                "video":   m["video_title"],
-                "channel": m["channel"],
-                "date":    m["date"],
-                "text":    m["context"],
+                "video":           m["video_title"],
+                "channel":         m["channel"],
+                "date":            m["date"],
+                "text":            m["context"],
+                "analysis_source": m.get("analysis_source", "titleAndDescription"),
             })
 
     stocks_ranking = sorted(
         stocks_map.values(), key=lambda x: -x["total_mentions"]
     )
 
+    # ── Build sectors ranking ──────────────────────────────────────────────
+    sectors_map: dict[str, dict] = {}
+    for stock in stocks_ranking:
+        sector = stock.get("sector")
+        if not sector:
+            continue
+        market = stock.get("market", "TW")
+        key = f"{market}_{sector}"
+        if key not in sectors_map:
+            sectors_map[key] = {
+                "sector":         sector,
+                "market":         market,
+                "total_mentions": 0,
+                "stock_codes":    [],
+            }
+        sectors_map[key]["total_mentions"] += stock["total_mentions"]
+        sectors_map[key]["stock_codes"].append(stock["code"])
+
+    sectors_ranking = sorted(
+        sectors_map.values(), key=lambda x: -x["total_mentions"]
+    )
+
     output = {
-        "updated_at":     datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S"),
-        "stocks_ranking": stocks_ranking,
-        "videos_scanned": all_videos,
+        "updated_at":      datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S"),
+        "stocks_ranking":  stocks_ranking,
+        "sectors_ranking": sectors_ranking,
+        "videos_scanned":  all_videos,
     }
 
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)

@@ -1,10 +1,11 @@
 import SwiftUI
 
 struct RankingView: View {
-    @Environment(AppState.self)   private var appState
+    @Environment(AppState.self)    private var appState
     @Environment(DataService.self) private var dataService
 
     @State private var searchText     = ""
+    @State private var marketFilter   = "all"   // "all" | "TW" | "US"
     @State private var showErrorAlert = false
 
     // Filtered and date-trimmed stocks
@@ -17,14 +18,17 @@ struct RankingView: View {
                 guard !ctxs.isEmpty else { return nil }
                 return StockEntry(
                     code: stock.code, name: stock.name,
+                    market: stock.market, sector: stock.sector,
                     totalMentions: ctxs.count, contexts: ctxs
                 )
             }
             .sorted { $0.totalMentions > $1.totalMentions }
-            .filter {
-                searchText.isEmpty ||
-                $0.name.contains(searchText) ||
-                $0.code.contains(searchText)
+            .filter { stock in
+                let matchMarket = marketFilter == "all" || stock.market == marketFilter
+                let matchSearch = searchText.isEmpty ||
+                    stock.name.contains(searchText) ||
+                    stock.code.contains(searchText)
+                return matchMarket && matchSearch
             }
     }
 
@@ -32,6 +36,7 @@ struct RankingView: View {
         @Bindable var appState = appState
         return NavigationStack {
             VStack(spacing: 0) {
+                marketPicker
                 filterBar
 
                 if filteredStocks.isEmpty {
@@ -74,6 +79,20 @@ struct RankingView: View {
                 showErrorAlert = error != nil
             }
         }
+    }
+
+    // MARK: - Market picker
+
+    private var marketPicker: some View {
+        Picker("市場", selection: $marketFilter) {
+            Text("全部").tag("all")
+            Text("🇹🇼 台股").tag("TW")
+            Text("🇺🇸 美股").tag("US")
+        }
+        .pickerStyle(.segmented)
+        .padding(.horizontal)
+        .padding(.top, 8)
+        .padding(.bottom, 4)
     }
 
     // MARK: - Filter bar
@@ -133,6 +152,9 @@ struct RankingRowView: View {
 
             VStack(alignment: .leading, spacing: 4) {
                 HStack(spacing: 6) {
+                    if !stock.marketFlag.isEmpty {
+                        Text(stock.marketFlag).font(.caption)
+                    }
                     Text(stock.name).font(.headline)
                     Text(stock.code)
                         .font(.caption)
@@ -141,7 +163,14 @@ struct RankingRowView: View {
                         .background(.quaternary, in: Capsule())
                     Text(stock.analysisSourceIcons).font(.caption)
                 }
-                HStack(spacing: 8) {
+                HStack(spacing: 6) {
+                    if let sector = stock.sector {
+                        Text(sector)
+                            .font(.caption2)
+                            .padding(.horizontal, 6).padding(.vertical, 2)
+                            .background(.blue.opacity(0.12), in: Capsule())
+                            .foregroundStyle(.blue)
+                    }
                     Label("\(stock.channelCount) 個來源",
                           systemImage: "antenna.radiowaves.left.and.right")
                     Text("·")

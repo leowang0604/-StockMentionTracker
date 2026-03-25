@@ -5,14 +5,16 @@ import Foundation
 struct ScanResult: Codable {
     let updatedAt: String
     let stocksRanking: [StockEntry]
+    let sectorsRanking: [SectorEntry]?
     let videosScanned: [VideoScanned]
 
-    static let empty = ScanResult(updatedAt: "", stocksRanking: [], videosScanned: [])
+    static let empty = ScanResult(updatedAt: "", stocksRanking: [], sectorsRanking: nil, videosScanned: [])
 
     enum CodingKeys: String, CodingKey {
-        case updatedAt     = "updated_at"
-        case stocksRanking = "stocks_ranking"
-        case videosScanned = "videos_scanned"
+        case updatedAt      = "updated_at"
+        case stocksRanking  = "stocks_ranking"
+        case sectorsRanking = "sectors_ranking"
+        case videosScanned  = "videos_scanned"
     }
 
     var updatedDate: Date? {
@@ -32,20 +34,55 @@ struct ScanResult: Codable {
     }
 }
 
+// MARK: - Sector entry (one row in sectors_ranking)
+
+struct SectorEntry: Codable, Identifiable {
+    let sector: String
+    let market: String?
+    let totalMentions: Int
+    let stockCodes: [String]
+
+    var id: String { "\(market ?? "")_\(sector)" }
+
+    enum CodingKeys: String, CodingKey {
+        case sector, market
+        case totalMentions = "total_mentions"
+        case stockCodes    = "stock_codes"
+    }
+
+    var marketFlag: String {
+        switch market {
+        case "US": return "🇺🇸"
+        case "TW": return "🇹🇼"
+        default:   return ""
+        }
+    }
+}
+
 // MARK: - Stock entry (one row in stocks_ranking)
 
 struct StockEntry: Codable, Identifiable {
     let code: String
     let name: String
+    let market: String?   // "TW" or "US"
+    let sector: String?   // e.g. "AI晶片"
     let totalMentions: Int
     let contexts: [MentionContext]
 
     var id: String { code }
 
     enum CodingKeys: String, CodingKey {
-        case code, name
+        case code, name, market, sector
         case totalMentions = "total_mentions"
         case contexts
+    }
+
+    var marketFlag: String {
+        switch market {
+        case "US": return "🇺🇸"
+        case "TW": return "🇹🇼"
+        default:   return ""
+        }
     }
 
     var lastDate: Date? {
@@ -65,10 +102,10 @@ struct StockEntry: Codable, Identifiable {
     }
 
     var analysisSourceIcons: String {
-        let sources = Set(contexts.map(\.analysisSource))
+        let sources = Set(contexts.compactMap(\.analysisSource))
         var s = ""
-        if sources.contains("whisper")            { s += "🎙" }
-        if sources.contains("captions")           { s += "📝" }
+        if sources.contains("whisper")             { s += "🎙" }
+        if sources.contains("captions")            { s += "📝" }
         if sources.contains("titleAndDescription") { s += "📄" }
         return s
     }
@@ -81,7 +118,7 @@ struct MentionContext: Codable, Identifiable {
     let channel: String?
     let date: String
     let text: String
-    let analysisSource: String
+    let analysisSource: String?
 
     var id: String { "\(date)_\(video.prefix(20))_\(text.prefix(10))" }
 
@@ -106,19 +143,19 @@ struct MentionContext: Codable, Identifiable {
 
     var analysisSourceIcon: String {
         switch analysisSource {
-        case "whisper":            return "🎙"
-        case "captions":           return "📝"
+        case "whisper":             return "🎙"
+        case "captions":            return "📝"
         case "titleAndDescription": return "📄"
-        default:                   return "📊"
+        default:                    return "📊"
         }
     }
 
     var analysisSourceDisplay: String {
         switch analysisSource {
-        case "whisper":            return "Whisper 逐字稿"
-        case "captions":           return "字幕"
+        case "whisper":             return "Whisper 逐字稿"
+        case "captions":            return "字幕"
         case "titleAndDescription": return "標題+描述"
-        default:                   return analysisSource
+        default:                    return analysisSource ?? ""
         }
     }
 }

@@ -10,11 +10,21 @@ struct StockDetailView: View {
             // ── Header ────────────────────────────────────────────────────
             Section {
                 HStack {
-                    VStack(alignment: .leading, spacing: 4) {
+                    VStack(alignment: .leading, spacing: 6) {
                         HStack(alignment: .firstTextBaseline, spacing: 8) {
+                            if !stock.marketFlag.isEmpty {
+                                Text(stock.marketFlag)
+                            }
                             Text(stock.name).font(.title2.bold())
                             Text(stock.code)
                                 .font(.subheadline).foregroundStyle(.secondary)
+                        }
+                        if let sector = stock.sector {
+                            Text(sector)
+                                .font(.caption)
+                                .padding(.horizontal, 8).padding(.vertical, 3)
+                                .background(.blue.opacity(0.12), in: Capsule())
+                                .foregroundStyle(.blue)
                         }
                         Text("提及次數：\(stock.totalMentions) 次")
                             .font(.subheadline).foregroundStyle(.secondary)
@@ -135,4 +145,5 @@ struct ContextRowView: View {
         default:         return .gray
         }
     }
+
 }

@@ -11,6 +11,11 @@ struct MainTabView: View {
                     Label("排行榜", systemImage: "chart.bar.fill")
                 }
 
+            SectorRankingView()
+                .tabItem {
+                    Label("族群", systemImage: "square.grid.2x2.fill")
+                }
+
             TrendView()
                 .tabItem {
                     Label("趨勢圖", systemImage: "chart.line.uptrend.xyaxis")
