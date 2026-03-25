@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-25T15:58:50",
+  "updated_at": "2026-03-25T15:59:00",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -587,6 +587,35 @@
           "sentiment_score": 0.0
         }
       }
+    },
+    {
+      "code": "AAPL",
+      "name": "Apple",
+      "market": "US",
+      "sector": "消費電子",
+      "contexts": [
+        {
+          "video": "每年盤勢都不同！【王老先聲】#股票 #主流 ##盤勢",
+          "channel": "老王愛說笑",
+          "date": "2026-03-25",
+          "text": "每年盤勢都不同！【王老先聲】#股票 #主流 ##盤勢 您也可以在以下頻道透過Podcast收聽： Apple Podcast：https://reurl.cc/52DnlR Spotify：https://reurl.cc/xEpqZE ...",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "bearish",
+          "sentiment_score": 0.007,
+          "video_url": "https://www.youtube.com/watch?v=MrkyLoKlKO8"
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.0,
+      "daily": {
+        "2026-03-25": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 1,
+          "neutral": 0,
+          "sentiment_score": 0.0
+        }
+      }
     }
   ],
   "sectors_ranking": [
@@ -662,6 +691,14 @@
       "total_mentions": 1,
       "stock_codes": [
         "TSM"
+      ]
+    },
+    {
+      "sector": "消費電子",
+      "market": "US",
+      "total_mentions": 1,
+      "stock_codes": [
+        "AAPL"
       ]
     }
   ],
@@ -821,6 +858,26 @@
       ],
       "analysis_source": "whisper",
       "thumbnail_url": null
+    },
+    {
+      "video_id": "MrkyLoKlKO8",
+      "title": "每年盤勢都不同！【王老先聲】#股票 #主流 ##盤勢",
+      "channel": "老王愛說笑",
+      "date": "2026-03-25",
+      "stocks_found": [
+        "AAPL"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/MrkyLoKlKO8/mqdefault.jpg"
+    },
+    {
+      "video_id": "KGM3V-HlIzM",
+      "title": "穩懋真的穩嗎？｜【浦男搜股】EP.264",
+      "channel": "老王愛說笑",
+      "date": "2026-03-24",
+      "stocks_found": [],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/KGM3V-HlIzM/mqdefault.jpg"
     }
   ]
 }
