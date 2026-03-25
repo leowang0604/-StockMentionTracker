@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       use_whisper:
-        description: '是否啟用 Whisper 轉錄（false = 只掃標題字幕，快速測試）'
+        description: '是否啟用 Whisper 轉錄 Podcast 音訊（YouTube 永遠不使用）'
         required: false
         default: 'true'
       max_items:

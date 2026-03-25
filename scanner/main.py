@@ -991,17 +991,22 @@ def _get_whisper_model():
     return _whisper_model
 
 
+_BOT_DETECTION_PHRASES = ("Sign in to confirm", "bot", "confirm you're not")
+
 def download_audio(video_id: str, tmpdir: str) -> str | None:
-    """用 yt-dlp 下載 YouTube 最佳音訊到 tmpdir，回傳檔案路徑或 None"""
-    for clients in [["ios"], ["tv_embedded"], ["android"], ["mweb"]]:
+    """用 yt-dlp 下載 YouTube 最佳音訊到 tmpdir，回傳檔案路徑或 None。
+    偵測到 bot 驗證錯誤時立即放棄，不繼續重試。"""
+    for clients in [["ios"], ["tv_embedded"]]:
         try:
             opts = {
-                "format":       "bestaudio/best",
-                "outtmpl":      os.path.join(tmpdir, "%(id)s.%(ext)s"),
-                "quiet":        True,
-                "no_warnings":  True,
-                "noplaylist":   True,
-                "max_filesize": 150 * 1024 * 1024,
+                "format":         "bestaudio/best",
+                "outtmpl":        os.path.join(tmpdir, "%(id)s.%(ext)s"),
+                "quiet":          True,
+                "no_warnings":    True,
+                "noplaylist":     True,
+                "max_filesize":   150 * 1024 * 1024,
+                "socket_timeout": 30,
+                "retries":        2,
                 "extractor_args": {"youtube": {"player_client": clients}},
             }
             if COOKIES_FILE and os.path.isfile(COOKIES_FILE):
@@ -1017,7 +1022,11 @@ def download_audio(video_id: str, tmpdir: str) -> str | None:
             if files:
                 return os.path.join(tmpdir, files[0])
         except Exception as e:
-            print(f"  [audio] {video_id} {clients}: {str(e)[:80]}", file=sys.stderr)
+            err = str(e)
+            print(f"  [audio] {video_id} {clients}: {err[:100]}", file=sys.stderr)
+            if any(phrase in err for phrase in _BOT_DETECTION_PHRASES):
+                print(f"  [audio] bot detection — aborting download", file=sys.stderr)
+                return None
     return None
 
 
@@ -1068,25 +1077,7 @@ def process_youtube_video(
     else:
         print(f"  ✗ no captions")
 
-    # ── Step 2: Whisper ───────────────────────────────────────────────────
-    if text is None and (USE_WHISPER or TEST_DOWNLOAD_ONLY):
-        print(f"  ⏳ {'testing audio download' if TEST_DOWNLOAD_ONLY else 'transcribing with Whisper'}…")
-        with tempfile.TemporaryDirectory() as tmpdir:
-            audio = download_audio(video_id, tmpdir)
-            if audio:
-                if TEST_DOWNLOAD_ONLY:
-                    size = os.path.getsize(audio) // 1024
-                    print(f"  ✓ download OK ({size} KB) — skipping Whisper (TEST_DOWNLOAD_ONLY)")
-                else:
-                    transcript = transcribe_audio(audio)
-                    if transcript:
-                        text            = transcript
-                        analysis_source = "whisper"
-                        print(f"  ✓ whisper ({len(transcript)} chars)")
-                    else:
-                        print(f"  ✗ whisper failed")
-
-    # ── Step 3: fallback ──────────────────────────────────────────────────
+    # ── Step 2: fallback（YouTube 不做音訊下載，避免 bot 偵測）────────────
     if text is None:
         text            = title + " " + video.get("description", "")
         analysis_source = "titleAndDescription"
