@@ -9,6 +9,7 @@ struct TrendView: View {
     @State private var selectedCode:   String? = nil
     @State private var selectedSector: String? = nil
     @State private var searchText              = ""
+    @State private var chartMode     = "mentions" // "mentions" | "sentiment"
 
     // MARK: - Stock mode data
 
@@ -89,6 +90,20 @@ struct TrendView: View {
             .sorted { $0.date < $1.date }
     }
 
+    private var stockSentimentData: [SentimentDataPoint] {
+        guard let daily = selectedStock?.daily else { return [] }
+        let cutoff = appState.cutoffDate
+        let fmt = DateFormatter(); fmt.dateFormat = "yyyy-MM-dd"
+        return daily.compactMap { (dateStr, stats) -> SentimentDataPoint? in
+            guard let date = fmt.date(from: dateStr),
+                  Calendar.current.startOfDay(for: date) >= Calendar.current.startOfDay(for: cutoff),
+                  stats.bullish + stats.bearish > 0
+            else { return nil }
+            return SentimentDataPoint(date: date, score: stats.sentimentScore,
+                                      bullish: stats.bullish, bearish: stats.bearish)
+        }.sorted { $0.date < $1.date }
+    }
+
     // MARK: - Body
 
     var body: some View {
@@ -115,7 +130,12 @@ struct TrendView: View {
                 if mode == "stock" {
                     if let stock = selectedStock {
                         selectedStockHeader(stock: stock)
-                        chartArea(data: stockChartData)
+                        chartModePicker
+                        if chartMode == "mentions" {
+                            chartArea(data: stockChartData)
+                        } else {
+                            sentimentChartArea(data: stockSentimentData)
+                        }
                         chartControls.padding()
                     } else {
                         stockSelector
@@ -177,7 +197,75 @@ struct TrendView: View {
         .background(.bar)
     }
 
+    // MARK: - Chart mode picker
+
+    private var chartModePicker: some View {
+        Picker("圖表", selection: $chartMode) {
+            Text("提及次數").tag("mentions")
+            Text("情緒趨勢").tag("sentiment")
+        }
+        .pickerStyle(.segmented)
+        .padding(.horizontal)
+        .padding(.bottom, 4)
+    }
+
     // MARK: - Chart
+
+    @ViewBuilder
+    private func sentimentChartArea(data: [SentimentDataPoint]) -> some View {
+        let days = Int(appState.selectedDays)
+        if data.isEmpty {
+            ContentUnavailableView(
+                "此時間範圍無情緒資料",
+                systemImage: "chart.line.flattrend.xyaxis",
+                description: Text("需要有看多或看空關鍵字的提及才會產生情緒分數")
+            )
+            .frame(height: 250)
+        } else {
+            Chart(data) { point in
+                // Bar: bullish (green) and bearish (red) stacked
+                BarMark(x: .value("日期", point.date, unit: .day),
+                        y: .value("看多", point.bullish))
+                    .foregroundStyle(.green.opacity(0.6))
+                BarMark(x: .value("日期", point.date, unit: .day),
+                        y: .value("看空", -point.bearish))
+                    .foregroundStyle(.red.opacity(0.6))
+                // Line: sentiment score normalized to -1~1 scale for overlay
+                LineMark(x: .value("日期", point.date, unit: .day),
+                         y: .value("情緒", point.score * 2 - 1))
+                    .foregroundStyle(.orange)
+                    .lineStyle(StrokeStyle(lineWidth: 2))
+                    .symbol(Circle().strokeBorder(lineWidth: 1))
+            }
+            .chartXAxis {
+                AxisMarks(values: .stride(by: .day, count: days > 30 ? 14 : 7)) { _ in
+                    AxisGridLine()
+                    AxisValueLabel(format: .dateTime.month().day())
+                }
+            }
+            .chartYAxis {
+                AxisMarks { value in
+                    AxisGridLine()
+                    AxisValueLabel {
+                        if let v = value.as(Double.self) {
+                            Text(v > 0 ? "看多\(Int(v))" : v < 0 ? "看空\(Int(-v))" : "0")
+                                .font(.caption2)
+                        }
+                    }
+                }
+            }
+            .chartLegend(position: .top, alignment: .trailing) {
+                HStack(spacing: 12) {
+                    Label("看多", systemImage: "square.fill").foregroundStyle(.green)
+                    Label("看空", systemImage: "square.fill").foregroundStyle(.red)
+                    Label("情緒線", systemImage: "line.diagonal").foregroundStyle(.orange)
+                }
+                .font(.caption2)
+            }
+            .frame(height: 250)
+            .padding()
+        }
+    }
 
     @ViewBuilder
     private func chartArea(data: [TrendDataPoint]) -> some View {
@@ -314,4 +402,12 @@ struct TrendDataPoint: Identifiable {
     let id    = UUID()
     let date:  Date
     let count: Int
+}
+
+struct SentimentDataPoint: Identifiable {
+    let id      = UUID()
+    let date:    Date
+    let score:   Double   // 0.0 (bearish) ~ 1.0 (bullish)
+    let bullish: Int
+    let bearish: Int
 }

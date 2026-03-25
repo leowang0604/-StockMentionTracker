@@ -50,6 +50,7 @@ struct StockDetailView: View {
                             .font(.subheadline).foregroundStyle(.secondary)
                         Text("涵蓋來源：\(stock.channelCount) 個")
                             .font(.caption).foregroundStyle(.tertiary)
+                        SentimentCountRow(contexts: stock.contexts)
                         if let score = stock.sentimentScore {
                             SentimentBar(score: score, label: stock.sentimentLabel)
                         }
@@ -219,6 +220,35 @@ struct ContextRowView: View {
         case "bullish": return .green
         case "bearish": return .red
         default:        return .secondary
+        }
+    }
+}
+
+// MARK: - Sentiment Count Row
+
+struct SentimentCountRow: View {
+    let contexts: [MentionContext]
+
+    private var bullish: Int { contexts.filter { $0.sentiment == "bullish" }.count }
+    private var bearish: Int { contexts.filter { $0.sentiment == "bearish" }.count }
+    private var neutral: Int { contexts.filter { $0.sentiment == "neutral" }.count }
+    private var hasData: Bool { bullish + bearish + neutral > 0 }
+
+    var body: some View {
+        if hasData {
+            HStack(spacing: 12) {
+                sentimentChip("看多", count: bullish, color: .green)
+                sentimentChip("看空", count: bearish, color: .red)
+                sentimentChip("中性", count: neutral, color: .secondary)
+            }
+            .font(.caption)
+        }
+    }
+
+    private func sentimentChip(_ label: String, count: Int, color: Color) -> some View {
+        HStack(spacing: 3) {
+            Text(label).foregroundStyle(color)
+            Text("\(count)").foregroundStyle(.primary).monospacedDigit()
         }
     }
 }
