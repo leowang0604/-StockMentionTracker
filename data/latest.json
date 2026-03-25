@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-25T06:25:44",
+  "updated_at": "2026-03-25T06:30:12",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -113,21 +113,21 @@
         }
       ],
       "total_mentions": 12,
-      "sentiment_score": 0.333,
+      "sentiment_score": 0.4,
       "daily": {
         "2026-03-25": {
           "mentions": 1,
           "bullish": 0,
           "bearish": 0,
           "neutral": 1,
-          "sentiment_score": 0.0
+          "sentiment_score": 0.5
         },
         "2026-03-23": {
           "mentions": 1,
           "bullish": 0,
           "bearish": 0,
           "neutral": 1,
-          "sentiment_score": 0.0
+          "sentiment_score": 0.5
         },
         "2026-03-24": {
           "mentions": 5,
@@ -237,7 +237,7 @@
           "bullish": 0,
           "bearish": 0,
           "neutral": 2,
-          "sentiment_score": 0.0
+          "sentiment_score": 0.5
         },
         "2026-03-19": {
           "mentions": 6,
@@ -335,14 +335,14 @@
         }
       ],
       "total_mentions": 8,
-      "sentiment_score": 0.125,
+      "sentiment_score": 0.143,
       "daily": {
         "2026-03-20": {
           "mentions": 2,
           "bullish": 1,
           "bearish": 0,
           "neutral": 1,
-          "sentiment_score": 0.5
+          "sentiment_score": 1.0
         },
         "2026-03-19": {
           "mentions": 6,
@@ -430,14 +430,14 @@
         }
       ],
       "total_mentions": 1,
-      "sentiment_score": 0.0,
+      "sentiment_score": 0.5,
       "daily": {
         "2026-03-22": {
           "mentions": 1,
           "bullish": 0,
           "bearish": 0,
           "neutral": 1,
-          "sentiment_score": 0.0
+          "sentiment_score": 0.5
         }
       }
     },
