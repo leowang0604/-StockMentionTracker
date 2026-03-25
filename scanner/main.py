@@ -1097,13 +1097,16 @@ def merge_into_history(
             sent = ctx.get("sentiment", "neutral")
             daily[d][sent] = daily[d].get(sent, 0) + 1
         for d, stats in daily.items():
-            m = stats["mentions"]
             b = stats["bullish"]
-            stats["sentiment_score"] = round(b / m, 3) if m > 0 else 0.5
+            bear = stats["bearish"]
+            signaled = b + bear
+            stats["sentiment_score"] = round(b / signaled, 3) if signaled > 0 else 0.5
         # Overall sentiment_score
         total = len(ctxs)
         bullish_total = sum(1 for c in ctxs if c.get("sentiment") == "bullish")
-        sentiment_score = round(bullish_total / total, 3) if total > 0 else 0.5
+        bearish_total = sum(1 for c in ctxs if c.get("sentiment") == "bearish")
+        signaled = bullish_total + bearish_total
+        sentiment_score = round(bullish_total / signaled, 3) if signaled > 0 else 0.5
         stocks_ranking.append({
             **info,
             "total_mentions":  total,
