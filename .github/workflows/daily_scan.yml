@@ -50,7 +50,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.cache/huggingface/hub
-          key: whisper-small-int8
+          key: whisper-tiny-int8
 
       - name: Install Whisper (only when USE_WHISPER=true)
         if: ${{ inputs.use_whisper != 'false' }}
