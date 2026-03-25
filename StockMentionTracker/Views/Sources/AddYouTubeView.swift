@@ -42,6 +42,11 @@ struct AddChannelView: View {
                         .textInputAutocapitalization(.never)
                         .keyboardType(.URL)
 #endif
+                        .onChange(of: channelID) { _, raw in
+                            if let parsed = parseIdentifier(from: raw, type: sourceType) {
+                                channelID = parsed
+                            }
+                        }
                 } header: {
                     Text(channelIDLabel)
                 } footer: {
@@ -90,14 +95,44 @@ struct AddChannelView: View {
         }
     }
 
+    // Auto-parse ID from URL
+    private func parseIdentifier(from input: String, type: SourceType) -> String? {
+        guard input.contains("http") else { return nil }
+        switch type {
+        case .applePodcast:
+            // https://podcasts.apple.com/.../id1590806478
+            if let range = input.range(of: #"/id(\d+)"#, options: .regularExpression) {
+                let match = String(input[range])
+                return String(match.dropFirst(3)) // drop "/id"
+            }
+        case .youtube:
+            // https://www.youtube.com/channel/UCxxxxxx or /c/name or /@handle
+            if let range = input.range(of: #"youtube\.com/channel/(UC[^/?&]+)"#, options: .regularExpression) {
+                let match = String(input[range])
+                if let idRange = match.range(of: "UC[^/?&]+", options: .regularExpression) {
+                    return String(match[idRange])
+                }
+            }
+        case .spotify:
+            // https://open.spotify.com/show/xxxxxxxx
+            if let range = input.range(of: #"spotify\.com/show/([^/?&]+)"#, options: .regularExpression) {
+                let match = String(input[range])
+                if let idRange = match.range(of: "[^/]+$", options: .regularExpression) {
+                    return String(match[idRange])
+                }
+            }
+        }
+        return nil
+    }
+
     private var channelIDFooter: String {
         switch sourceType {
         case .youtube:
-            return "在 YouTube 頻道頁面的網址中找到 UC 開頭的 ID。"
+            return "可直接貼上頻道連結，自動提取 UC 開頭的 ID。"
         case .applePodcast:
-            return "在 Apple Podcast 連結中找到數字 ID。"
+            return "可直接貼上 Apple Podcast 連結，自動提取數字 ID。"
         case .spotify:
-            return "在 Spotify 節目頁面的網址中找到 ID。"
+            return "可直接貼上 Spotify 節目連結，自動提取 Show ID。"
         }
     }
 }

@@ -50,10 +50,10 @@ struct SectorEntry: Codable, Identifiable {
         case stockCodes    = "stock_codes"
     }
 
-    var marketFlag: String {
+    var marketLabel: String {
         switch market {
-        case "US": return "🇺🇸"
-        case "TW": return "🇹🇼"
+        case "US": return "US"
+        case "TW": return "TW"
         default:   return ""
         }
     }
@@ -77,10 +77,10 @@ struct StockEntry: Codable, Identifiable {
         case contexts
     }
 
-    var marketFlag: String {
+    var marketLabel: String {
         switch market {
-        case "US": return "🇺🇸"
-        case "TW": return "🇹🇼"
+        case "US": return "US"
+        case "TW": return "TW"
         default:   return ""
         }
     }
@@ -101,13 +101,13 @@ struct StockEntry: Codable, Identifiable {
         Set(contexts.compactMap(\.channel)).count
     }
 
-    var analysisSourceIcons: String {
+    var analysisSourceSymbols: [String] {
         let sources = Set(contexts.compactMap(\.analysisSource))
-        var s = ""
-        if sources.contains("whisper")             { s += "🎙" }
-        if sources.contains("captions")            { s += "📝" }
-        if sources.contains("titleAndDescription") { s += "📄" }
-        return s
+        var result: [String] = []
+        if sources.contains("whisper")             { result.append("waveform") }
+        if sources.contains("captions")            { result.append("captions.bubble") }
+        if sources.contains("titleAndDescription") { result.append("doc.text") }
+        return result
     }
 }
 
@@ -141,12 +141,12 @@ struct MentionContext: Codable, Identifiable {
         return f.string(from: d)
     }
 
-    var analysisSourceIcon: String {
+    var analysisSourceSymbol: String {
         switch analysisSource {
-        case "whisper":             return "🎙"
-        case "captions":            return "📝"
-        case "titleAndDescription": return "📄"
-        default:                    return "📊"
+        case "whisper":             return "waveform"
+        case "captions":            return "captions.bubble"
+        case "titleAndDescription": return "doc.text"
+        default:                    return "chart.bar"
         }
     }
 

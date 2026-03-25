@@ -27,7 +27,7 @@ struct ContentListView: View {
                 HStack(spacing: 10) {
                     Text("最近")
                         .font(.caption).foregroundStyle(.secondary)
-                    Slider(value: $appState.selectedDays, in: 7...90, step: 1)
+                    Slider(value: $appState.selectedDays, in: 1...90, step: 1)
                     Text("\(Int(appState.selectedDays)) 天")
                         .font(.caption.monospacedDigit())
                         .frame(width: 44, alignment: .trailing)
@@ -68,6 +68,7 @@ struct ContentListView: View {
             guard !ctxs.isEmpty else { return nil }
             return StockEntry(
                 code: stock.code, name: stock.name,
+                market: stock.market, sector: stock.sector,
                 totalMentions: ctxs.count, contexts: ctxs
             )
         }
@@ -102,7 +103,7 @@ struct VideoRowView: View {
                 }
                 .foregroundStyle(Color.accentColor)
 
-                Text(video.analysisSourceIcon + " " + video.analysisSourceDisplay)
+                Label(video.analysisSourceDisplay, systemImage: video.analysisSourceSymbol)
                     .font(.caption)
                     .foregroundStyle(.secondary)
                     .padding(.horizontal, 6).padding(.vertical, 2)

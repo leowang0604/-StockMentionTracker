@@ -86,8 +86,8 @@ struct RankingView: View {
     private var marketPicker: some View {
         Picker("市場", selection: $marketFilter) {
             Text("全部").tag("all")
-            Text("🇹🇼 台股").tag("TW")
-            Text("🇺🇸 美股").tag("US")
+            Text("台股").tag("TW")
+            Text("美股").tag("US")
         }
         .pickerStyle(.segmented)
         .padding(.horizontal)
@@ -104,7 +104,7 @@ struct RankingView: View {
                 Text("最近")
                     .font(.caption)
                     .foregroundStyle(.secondary)
-                Slider(value: $appState.selectedDays, in: 7...90, step: 1)
+                Slider(value: $appState.selectedDays, in: 1...90, step: 1)
                 Text("\(Int(appState.selectedDays)) 天")
                     .font(.caption.monospacedDigit())
                     .frame(width: 44, alignment: .trailing)
@@ -152,8 +152,8 @@ struct RankingRowView: View {
 
             VStack(alignment: .leading, spacing: 4) {
                 HStack(spacing: 6) {
-                    if !stock.marketFlag.isEmpty {
-                        Text(stock.marketFlag).font(.caption)
+                    if !stock.marketLabel.isEmpty {
+                        Text(stock.marketLabel).font(.caption)
                     }
                     Text(stock.name).font(.headline)
                     Text(stock.code)
@@ -161,7 +161,9 @@ struct RankingRowView: View {
                         .foregroundStyle(.secondary)
                         .padding(.horizontal, 6).padding(.vertical, 2)
                         .background(.quaternary, in: Capsule())
-                    Text(stock.analysisSourceIcons).font(.caption)
+                    ForEach(stock.analysisSourceSymbols, id: \.self) {
+                        Image(systemName: $0).font(.caption)
+                    }
                 }
                 HStack(spacing: 6) {
                     if let sector = stock.sector {

@@ -20,11 +20,8 @@ struct VideoDetailView: View {
                     Text(video.title).font(.headline)
                     Label(video.dateText, systemImage: "calendar")
                         .font(.caption).foregroundStyle(.secondary)
-                    HStack(spacing: 6) {
-                        Text(video.analysisSourceIcon)
-                        Text("分析方式：\(video.analysisSourceDisplay)")
-                            .font(.caption)
-                    }
+                    Label("分析方式：\(video.analysisSourceDisplay)", systemImage: video.analysisSourceSymbol)
+                        .font(.caption)
                     .padding(.horizontal, 10).padding(.vertical, 5)
                     .background(analysisSourceBG, in: Capsule())
                 }
@@ -103,7 +100,7 @@ private struct VideoStockRow: View {
 
                 VStack(alignment: .leading, spacing: 1) {
                     Text(stock.name).font(.subheadline.weight(.semibold))
-                    Text(context.analysisSourceIcon + " " + context.analysisSourceDisplay)
+                    Label(context.analysisSourceDisplay, systemImage: context.analysisSourceSymbol)
                         .font(.caption2).foregroundStyle(.secondary)
                 }
 

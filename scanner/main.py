@@ -949,6 +949,117 @@ def fetch_spotify_episodes(
 # Main
 # ─────────────────────────────────────────────────────────────────────────────
 
+def load_history() -> dict:
+    """Load existing latest.json for cumulative merging. Returns empty structure if not found."""
+    if OUTPUT_FILE.exists():
+        try:
+            with open(OUTPUT_FILE, encoding="utf-8") as f:
+                data = json.load(f)
+            n_videos = len(data.get("videos_scanned", []))
+            n_stocks = len(data.get("stocks_ranking", []))
+            print(f"[scanner] History loaded: {n_videos} videos, {n_stocks} stocks")
+            return data
+        except Exception as e:
+            print(f"[scanner] Could not load history (starting fresh): {e}", file=sys.stderr)
+    return {"stocks_ranking": [], "sectors_ranking": [], "videos_scanned": []}
+
+
+def get_video_key(video: dict) -> str:
+    """Unique dedup key: prefer video_id, fallback to title+date."""
+    vid = (video.get("video_id") or "").strip()
+    if vid:
+        return vid
+    return f"{video.get('title', '')}_{video.get('date', '')}"
+
+
+def merge_into_history(
+    history: dict,
+    new_videos: list[dict],
+    new_mentions: list[dict],
+) -> dict:
+    """
+    Merge this scan's results into cumulative history.
+    - Skips videos already seen (dedup by video_id or title+date)
+    - Appends new mention contexts to existing stocks
+    - Recalculates total_mentions and sectors_ranking from all data
+    """
+    existing_keys = {get_video_key(v) for v in history["videos_scanned"]}
+
+    actually_new: list[dict] = []
+    for v in new_videos:
+        if get_video_key(v) not in existing_keys:
+            actually_new.append(v)
+
+    skipped = len(new_videos) - len(actually_new)
+    print(f"[scanner] New: {len(actually_new)} videos/episodes (skipped {skipped} duplicates)")
+
+    merged_videos = history["videos_scanned"] + actually_new
+    new_titles    = {v["title"] for v in actually_new}
+
+    # Start from existing stocks
+    merged_stocks: dict[str, dict] = {}
+    for s in history.get("stocks_ranking", []):
+        merged_stocks[s["code"]] = {
+            "code":     s["code"],
+            "name":     s["name"],
+            "market":   s.get("market", "TW"),
+            "sector":   s.get("sector"),
+            "contexts": list(s["contexts"]),
+        }
+
+    # Add contexts from new videos only
+    for m in new_mentions:
+        if m["video_title"] not in new_titles:
+            continue
+        code = m["stock_code"]
+        if code not in merged_stocks:
+            merged_stocks[code] = {
+                "code":     code,
+                "name":     m["stock_name"],
+                "market":   m.get("stock_market", "TW"),
+                "sector":   m.get("stock_sector"),
+                "contexts": [],
+            }
+        if len(merged_stocks[code]["contexts"]) < MAX_CONTEXTS_PER_STOCK:
+            merged_stocks[code]["contexts"].append({
+                "video":           m["video_title"],
+                "channel":         m["channel"],
+                "date":            m["date"],
+                "text":            m["context"],
+                "analysis_source": m.get("analysis_source", "titleAndDescription"),
+            })
+
+    # Rebuild stocks_ranking
+    stocks_ranking = [
+        {**info, "total_mentions": len(info["contexts"])}
+        for info in merged_stocks.values()
+        if info["contexts"]
+    ]
+    stocks_ranking.sort(key=lambda x: -x["total_mentions"])
+
+    # Rebuild sectors_ranking
+    sectors_map: dict[str, dict] = {}
+    for stock in stocks_ranking:
+        sector = stock.get("sector")
+        if not sector:
+            continue
+        market = stock.get("market", "TW")
+        key    = f"{market}_{sector}"
+        if key not in sectors_map:
+            sectors_map[key] = {"sector": sector, "market": market,
+                                "total_mentions": 0, "stock_codes": []}
+        sectors_map[key]["total_mentions"] += stock["total_mentions"]
+        sectors_map[key]["stock_codes"].append(stock["code"])
+    sectors_ranking = sorted(sectors_map.values(), key=lambda x: -x["total_mentions"])
+
+    return {
+        "updated_at":      datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S"),
+        "stocks_ranking":  stocks_ranking,
+        "sectors_ranking": sectors_ranking,
+        "videos_scanned":  merged_videos,
+    }
+
+
 def load_sources() -> list[dict]:
     try:
         with open(SOURCES_FILE, encoding="utf-8") as f:
@@ -1012,61 +1123,10 @@ def main() -> None:
                 all_videos.append(v_entry)
                 all_mentions.extend(mentions)
 
-    # ── Build stocks ranking ───────────────────────────────────────────────
-    stocks_map: dict[str, dict] = {}
-    for m in all_mentions:
-        code = m["stock_code"]
-        if code not in stocks_map:
-            stocks_map[code] = {
-                "code":           code,
-                "name":           m["stock_name"],
-                "market":         m.get("stock_market", "TW"),
-                "sector":         m.get("stock_sector"),
-                "total_mentions": 0,
-                "contexts":       [],
-            }
-        stocks_map[code]["total_mentions"] += 1
-        if len(stocks_map[code]["contexts"]) < MAX_CONTEXTS_PER_STOCK:
-            stocks_map[code]["contexts"].append({
-                "video":           m["video_title"],
-                "channel":         m["channel"],
-                "date":            m["date"],
-                "text":            m["context"],
-                "analysis_source": m.get("analysis_source", "titleAndDescription"),
-            })
-
-    stocks_ranking = sorted(
-        stocks_map.values(), key=lambda x: -x["total_mentions"]
-    )
-
-    # ── Build sectors ranking ──────────────────────────────────────────────
-    sectors_map: dict[str, dict] = {}
-    for stock in stocks_ranking:
-        sector = stock.get("sector")
-        if not sector:
-            continue
-        market = stock.get("market", "TW")
-        key = f"{market}_{sector}"
-        if key not in sectors_map:
-            sectors_map[key] = {
-                "sector":         sector,
-                "market":         market,
-                "total_mentions": 0,
-                "stock_codes":    [],
-            }
-        sectors_map[key]["total_mentions"] += stock["total_mentions"]
-        sectors_map[key]["stock_codes"].append(stock["code"])
-
-    sectors_ranking = sorted(
-        sectors_map.values(), key=lambda x: -x["total_mentions"]
-    )
-
-    output = {
-        "updated_at":      datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S"),
-        "stocks_ranking":  stocks_ranking,
-        "sectors_ranking": sectors_ranking,
-        "videos_scanned":  all_videos,
-    }
+    # ── Merge with cumulative history ─────────────────────────────────────
+    history = load_history()
+    output  = merge_into_history(history, all_videos, all_mentions)
+    stocks_ranking = output["stocks_ranking"]
 
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
@@ -1074,9 +1134,9 @@ def main() -> None:
 
     print(
         f"\n[scanner] ✅ Done — "
-        f"{len(all_videos)} videos/episodes | "
+        f"{len(output['videos_scanned'])} total videos | "
         f"{len(stocks_ranking)} stocks | "
-        f"{len(all_mentions)} total mentions"
+        f"{len(all_mentions)} new mentions this run"
     )
     print(f"[scanner] Output → {OUTPUT_FILE}")
 

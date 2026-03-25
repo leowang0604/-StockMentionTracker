@@ -3,7 +3,26 @@ import SwiftUI
 struct StockDetailView: View {
     let stock: StockEntry
 
+    @Environment(DataService.self) private var dataService
+    @Environment(AppState.self)    private var appState
+
     @State private var expandedIDs = Set<String>()
+
+    private var sectorPeers: [StockEntry] {
+        guard let sector = stock.sector else { return [] }
+        @Bindable var appState = appState
+        let cutoff = appState.cutoffDate
+        return dataService.scanResult.stocksRanking
+            .filter { $0.sector == sector && $0.code != stock.code }
+            .compactMap { s -> StockEntry? in
+                let ctxs = s.contexts.filter { ($0.parsedDate ?? .distantPast) >= cutoff }
+                guard !ctxs.isEmpty else { return nil }
+                return StockEntry(code: s.code, name: s.name,
+                                  market: s.market, sector: s.sector,
+                                  totalMentions: ctxs.count, contexts: ctxs)
+            }
+            .sorted { $0.totalMentions > $1.totalMentions }
+    }
 
     var body: some View {
         List {
@@ -12,8 +31,8 @@ struct StockDetailView: View {
                 HStack {
                     VStack(alignment: .leading, spacing: 6) {
                         HStack(alignment: .firstTextBaseline, spacing: 8) {
-                            if !stock.marketFlag.isEmpty {
-                                Text(stock.marketFlag)
+                            if !stock.marketLabel.isEmpty {
+                                Text(stock.marketLabel)
                             }
                             Text(stock.name).font(.title2.bold())
                             Text(stock.code)
@@ -32,9 +51,46 @@ struct StockDetailView: View {
                             .font(.caption).foregroundStyle(.tertiary)
                     }
                     Spacer()
-                    Text(stock.analysisSourceIcons).font(.title2)
+                    HStack(spacing: 4) {
+                        ForEach(stock.analysisSourceSymbols, id: \.self) {
+                            Image(systemName: $0).font(.title2)
+                        }
+                    }
                 }
                 .padding(.vertical, 4)
+            }
+
+            // ── Sector peers ──────────────────────────────────────────────
+            if !sectorPeers.isEmpty {
+                Section("同族群個股") {
+                    // Current stock (highlighted)
+                    HStack {
+                        Text(stock.name).font(.subheadline.bold())
+                        Text(stock.code).font(.caption).foregroundStyle(.secondary)
+                        Spacer()
+                        Text("\(stock.totalMentions) 次")
+                            .font(.subheadline.bold())
+                            .foregroundStyle(Color.accentColor)
+                    }
+                    .padding(.vertical, 2)
+                    .listRowBackground(Color.accentColor.opacity(0.1))
+
+                    ForEach(Array(sectorPeers.enumerated()), id: \.element.id) { _, peer in
+                        NavigationLink {
+                            StockDetailView(stock: peer)
+                        } label: {
+                            HStack {
+                                Text(peer.name).font(.subheadline)
+                                Text(peer.code).font(.caption).foregroundStyle(.secondary)
+                                Spacer()
+                                Text("\(peer.totalMentions) 次")
+                                    .font(.subheadline)
+                                    .foregroundStyle(.secondary)
+                            }
+                            .padding(.vertical, 2)
+                        }
+                    }
+                }
             }
 
             // ── Mention list ──────────────────────────────────────────────
@@ -97,7 +153,7 @@ struct ContextRowView: View {
                 Spacer()
 
                 HStack(spacing: 3) {
-                    Text(context.analysisSourceIcon)
+                    Image(systemName: context.analysisSourceSymbol)
                     Text(context.analysisSourceDisplay)
                         .font(.caption2)
                 }

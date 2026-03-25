@@ -40,12 +40,12 @@ struct VideoScanned: Codable, Identifiable {
         return URL(string: "https://www.youtube.com/watch?v=\(vid)")
     }
 
-    var analysisSourceIcon: String {
+    var analysisSourceSymbol: String {
         switch analysisSource {
-        case "whisper":             return "🎙"
-        case "captions":            return "📝"
-        case "titleAndDescription": return "📄"
-        default:                    return "📊"
+        case "whisper":             return "waveform"
+        case "captions":            return "captions.bubble"
+        case "titleAndDescription": return "doc.text"
+        default:                    return "chart.bar"
         }
     }
 

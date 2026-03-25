@@ -60,8 +60,8 @@ struct SectorRankingView: View {
             VStack(spacing: 0) {
                 Picker("市場", selection: $marketFilter) {
                     Text("全部").tag("all")
-                    Text("🇹🇼 台股").tag("TW")
-                    Text("🇺🇸 美股").tag("US")
+                    Text("台股").tag("TW")
+                    Text("美股").tag("US")
                 }
                 .pickerStyle(.segmented)
                 .padding(.horizontal)
@@ -108,8 +108,8 @@ struct SectorRowView: View {
 
             VStack(alignment: .leading, spacing: 4) {
                 HStack(spacing: 6) {
-                    if !sector.marketFlag.isEmpty {
-                        Text(sector.marketFlag).font(.caption)
+                    if !sector.marketLabel.isEmpty {
+                        Text(sector.marketLabel).font(.caption)
                     }
                     Text(sector.sector).font(.headline)
                 }
@@ -172,8 +172,8 @@ struct SectorDetailView: View {
                 HStack {
                     VStack(alignment: .leading, spacing: 4) {
                         HStack(spacing: 6) {
-                            if !sector.marketFlag.isEmpty {
-                                Text(sector.marketFlag)
+                            if !sector.marketLabel.isEmpty {
+                                Text(sector.marketLabel)
                             }
                             Text(sector.sector).font(.title2.bold())
                         }
