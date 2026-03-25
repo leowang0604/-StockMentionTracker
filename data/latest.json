@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-25T05:26:11",
+  "updated_at": "2026-03-25T06:16:34",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -22,7 +22,24 @@
           "analysis_source": "titleAndDescription"
         }
       ],
-      "total_mentions": 2
+      "total_mentions": 2,
+      "sentiment_score": 0.0,
+      "daily": {
+        "2026-03-25": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.0
+        },
+        "2026-03-23": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.0
+        }
+      }
     },
     {
       "code": "MU",
@@ -45,7 +62,17 @@
           "analysis_source": "titleAndDescription"
         }
       ],
-      "total_mentions": 2
+      "total_mentions": 2,
+      "sentiment_score": 0.0,
+      "daily": {
+        "2026-03-22": {
+          "mentions": 2,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 2,
+          "sentiment_score": 0.0
+        }
+      }
     },
     {
       "code": "GOOGL",
@@ -61,7 +88,17 @@
           "analysis_source": "titleAndDescription"
         }
       ],
-      "total_mentions": 1
+      "total_mentions": 1,
+      "sentiment_score": 0.0,
+      "daily": {
+        "2026-03-22": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.0
+        }
+      }
     }
   ],
   "sectors_ranking": [
