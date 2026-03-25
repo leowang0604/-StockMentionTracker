@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-25T09:31:47",
+  "updated_at": "2026-03-25T15:10:29",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -24,15 +24,25 @@
           "analysis_source": "titleAndDescription",
           "sentiment": "bearish",
           "sentiment_score": 0.0
+        },
+        {
+          "video": "【理財達人秀】台股一紅吃二黑 台積電台達威？弘塑3500 設備還有伏兵？BBU打底 CPO黑馬擴散？想撿回檔股 2訊號不怕錯？｜李兆華、艾綸、紀緯明、朱家泓2026.03.25【網路獨播版】",
+          "channel": "東森財經",
+          "date": "2026-03-25",
+          "text": "【理財達人秀】台股一紅吃二黑 台積電台達威？弘塑3500 設備還有伏兵？BBU打底 CPO黑馬擴散？想撿回檔股 2訊號不怕錯？｜李兆華、艾綸、紀緯明、朱家泓2026.03.25【網路獨播版】 貼在你身編：台達電漲停B",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "bearish",
+          "sentiment_score": 0.0,
+          "video_url": "https://www.youtube.com/watch?v=n34bRR3Pma4"
         }
       ],
-      "total_mentions": 2,
+      "total_mentions": 3,
       "sentiment_score": 0.0,
       "daily": {
         "2026-03-25": {
-          "mentions": 1,
+          "mentions": 2,
           "bullish": 0,
-          "bearish": 1,
+          "bearish": 2,
           "neutral": 0,
           "sentiment_score": 0.0
         },
@@ -164,6 +174,84 @@
       }
     },
     {
+      "code": "2308",
+      "name": "台達電",
+      "market": "TW",
+      "sector": "電源供應器",
+      "contexts": [
+        {
+          "video": "【理財達人秀】台股彈826 記憶體能撿？太空回後飛 CPO全面擴散？台達電創高 電源低轉強？博通CALL訊 設備+PCB跟大人？｜李兆華、朱家泓、王建文、高憲容2026.03.25【電視完整版】",
+          "channel": "東森財經",
+          "date": "2026-03-25",
+          "text": "【理財達人秀】台股彈826 記憶體能撿？太空回後飛 CPO全面擴散？台達電創高 電源低轉強？博通CALL訊 設備+PCB跟大人？｜李兆華、朱家泓、王建文、高憲容2026.03.25【電視完整版】 貼在你身編：訊芯賺翻倍.眾達飆60%!還有低價伏兵? #C",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": "https://www.youtube.com/watch?v=uXICXk-rWAw"
+        },
+        {
+          "video": "【理財達人秀】台股一紅吃二黑 台積電台達威？弘塑3500 設備還有伏兵？BBU打底 CPO黑馬擴散？想撿回檔股 2訊號不怕錯？｜李兆華、艾綸、紀緯明、朱家泓2026.03.25【網路獨播版】",
+          "channel": "東森財經",
+          "date": "2026-03-25",
+          "text": "二黑 台積電台達威？弘塑3500 設備還有伏兵？BBU打底 CPO黑馬擴散？想撿回檔股 2訊號不怕錯？｜李兆華、艾綸、紀緯明、朱家泓2026.03.25【網路獨播版】 貼在你身編：台達電漲停BBU搶第3根? 低軌道衛星回神? #博通 #CPO #弘塑 #理財達人秀 (00:00) 外資回頭買 反攻號角?中小股回神 ...",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "bearish",
+          "sentiment_score": 0.0,
+          "video_url": "https://www.youtube.com/watch?v=n34bRR3Pma4"
+        }
+      ],
+      "total_mentions": 2,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-03-25": {
+          "mentions": 2,
+          "bullish": 1,
+          "bearish": 1,
+          "neutral": 0,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
+      "code": "AVGO",
+      "name": "Broadcom",
+      "market": "US",
+      "sector": "AI網路",
+      "contexts": [
+        {
+          "video": "【理財達人秀】台股彈826 記憶體能撿？太空回後飛 CPO全面擴散？台達電創高 電源低轉強？博通CALL訊 設備+PCB跟大人？｜李兆華、朱家泓、王建文、高憲容2026.03.25【電視完整版】",
+          "channel": "東森財經",
+          "date": "2026-03-25",
+          "text": "【理財達人秀】台股彈826 記憶體能撿？太空回後飛 CPO全面擴散？台達電創高 電源低轉強？博通CALL訊 設備+PCB跟大人？｜李兆華、朱家泓、王建文、高憲容2026.03.25【電視完整版】 貼在你身編：訊芯賺翻倍.眾達飆60%!還有低價伏兵? #CPO #光寶科 #記憶",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": "https://www.youtube.com/watch?v=uXICXk-rWAw"
+        },
+        {
+          "video": "【理財達人秀】台股一紅吃二黑 台積電台達威？弘塑3500 設備還有伏兵？BBU打底 CPO黑馬擴散？想撿回檔股 2訊號不怕錯？｜李兆華、艾綸、紀緯明、朱家泓2026.03.25【網路獨播版】",
+          "channel": "東森財經",
+          "date": "2026-03-25",
+          "text": "BBU打底 CPO黑馬擴散？想撿回檔股 2訊號不怕錯？｜李兆華、艾綸、紀緯明、朱家泓2026.03.25【網路獨播版】 貼在你身編：台達電漲停BBU搶第3根? 低軌道衛星回神? #博通 #CPO #弘塑 #理財達人秀 (00:00) 外資回頭買 反攻號角?中小股回神 ...",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "bearish",
+          "sentiment_score": 0.0,
+          "video_url": "https://www.youtube.com/watch?v=n34bRR3Pma4"
+        }
+      ],
+      "total_mentions": 2,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-03-25": {
+          "mentions": 2,
+          "bullish": 1,
+          "bearish": 1,
+          "neutral": 0,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
       "code": "LITE",
       "name": "Lumentum",
       "market": "US",
@@ -218,13 +306,42 @@
           "sentiment_score": 1.0
         }
       }
+    },
+    {
+      "code": "2301",
+      "name": "光寶",
+      "market": "TW",
+      "sector": null,
+      "contexts": [
+        {
+          "video": "【理財達人秀】台股彈826 記憶體能撿？太空回後飛 CPO全面擴散？台達電創高 電源低轉強？博通CALL訊 設備+PCB跟大人？｜李兆華、朱家泓、王建文、高憲容2026.03.25【電視完整版】",
+          "channel": "東森財經",
+          "date": "2026-03-25",
+          "text": "源低轉強？博通CALL訊 設備+PCB跟大人？｜李兆華、朱家泓、王建文、高憲容2026.03.25【電視完整版】 貼在你身編：訊芯賺翻倍.眾達飆60%!還有低價伏兵? #CPO #光寶科 #記憶體 #理財達人秀 (00:00) 終戰露曙光?台股大漲826 怎抓下 ...",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "bearish",
+          "sentiment_score": 0.01,
+          "video_url": "https://www.youtube.com/watch?v=uXICXk-rWAw"
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.0,
+      "daily": {
+        "2026-03-25": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 1,
+          "neutral": 0,
+          "sentiment_score": 0.0
+        }
+      }
     }
   ],
   "sectors_ranking": [
     {
       "sector": "晶圓代工",
       "market": "TW",
-      "total_mentions": 2,
+      "total_mentions": 3,
       "stock_codes": [
         "2330"
       ]
@@ -251,6 +368,22 @@
       "total_mentions": 2,
       "stock_codes": [
         "NVDA"
+      ]
+    },
+    {
+      "sector": "電源供應器",
+      "market": "TW",
+      "total_mentions": 2,
+      "stock_codes": [
+        "2308"
+      ]
+    },
+    {
+      "sector": "AI網路",
+      "market": "US",
+      "total_mentions": 2,
+      "stock_codes": [
+        "AVGO"
       ]
     },
     {
@@ -382,6 +515,32 @@
       "stocks_found": [],
       "analysis_source": "titleAndDescription",
       "thumbnail_url": "https://i.ytimg.com/vi/JCosg0XGMfY/mqdefault.jpg"
+    },
+    {
+      "video_id": "uXICXk-rWAw",
+      "title": "【理財達人秀】台股彈826 記憶體能撿？太空回後飛 CPO全面擴散？台達電創高 電源低轉強？博通CALL訊 設備+PCB跟大人？｜李兆華、朱家泓、王建文、高憲容2026.03.25【電視完整版】",
+      "channel": "東森財經",
+      "date": "2026-03-25",
+      "stocks_found": [
+        "AVGO",
+        "2308",
+        "2301"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/uXICXk-rWAw/mqdefault.jpg"
+    },
+    {
+      "video_id": "n34bRR3Pma4",
+      "title": "【理財達人秀】台股一紅吃二黑 台積電台達威？弘塑3500 設備還有伏兵？BBU打底 CPO黑馬擴散？想撿回檔股 2訊號不怕錯？｜李兆華、艾綸、紀緯明、朱家泓2026.03.25【網路獨播版】",
+      "channel": "東森財經",
+      "date": "2026-03-25",
+      "stocks_found": [
+        "AVGO",
+        "2308",
+        "2330"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/n34bRR3Pma4/mqdefault.jpg"
     }
   ]
 }
