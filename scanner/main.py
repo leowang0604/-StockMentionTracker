@@ -172,6 +172,24 @@ _US_STOCKS_DATA: list[tuple[list[str], str, str, str]] = [
     (["洛克希德", "Lockheed Martin", "LMT"],           "LMT",   "Lockheed Martin",    "航太"),
     (["雷神", "Raytheon", "RTX"],                      "RTX",   "Raytheon",           "航太"),
     (["Disney", "迪士尼", "DIS"],                      "DIS",   "Disney",             "串流媒體"),
+    # 光通訊 / CPO
+    (["Lumentum", "流明騰", "LITE"],                   "LITE",  "Lumentum",           "光通訊"),
+    (["Coherent", "COHR"],                             "COHR",  "Coherent",           "光通訊"),
+    (["Fabrinet", "法布瑞", "FN"],                     "FN",    "Fabrinet",           "光通訊"),
+    (["Ciena", "CIEN"],                                "CIEN",  "Ciena",              "光通訊"),
+    (["Viavi", "VIAV"],                                "VIAV",  "Viavi Solutions",    "光通訊"),
+    (["Applied Optoelectronics", "AAOI"],              "AAOI",  "Applied Opto",       "光通訊"),
+    (["II-VI", "IIVI"],                                "IIVI",  "II-VI",              "光通訊"),
+    # 銅纜 / 高速連接
+    (["Amphenol", "安費諾", "APH"],                    "APH",   "Amphenol",           "高速連接"),
+    (["TE Connectivity", "TEL"],                       "TEL",   "TE Connectivity",    "高速連接"),
+    (["Credo Technology", "CRDO"],                     "CRDO",  "Credo Technology",   "高速連接"),
+    (["Astera Labs", "ALAB"],                          "ALAB",  "Astera Labs",        "高速連接"),
+    # 液冷 / 電網
+    (["Vertiv", "VRT"],                                "VRT",   "Vertiv",             "液冷/電網"),
+    (["Eaton", "ETN"],                                 "ETN",   "Eaton",              "液冷/電網"),
+    (["Quanta Services", "PWR"],                       "PWR",   "Quanta Services",    "液冷/電網"),
+    (["GE Vernova", "GEV"],                            "GEV",   "GE Vernova",         "液冷/電網"),
 ]
 
 US_KEYWORD_TO_CODE: dict[str, str] = {}
@@ -215,6 +233,8 @@ TW_STOCK_SECTORS: dict[str, str] = {
     "3324": "散熱",     "3017": "散熱",     "2421": "散熱",     "6230": "散熱",
     # CPO光通訊
     "6451": "CPO光通訊", "2345": "CPO光通訊",
+    "3234": "CPO光通訊", "3081": "CPO光通訊", "6616": "CPO光通訊",
+    "4977": "CPO光通訊", "3706": "CPO光通訊", "6183": "CPO光通訊",
     # 被動元件
     "2327": "被動元件", "2492": "被動元件", "3026": "被動元件",
     # 封裝
