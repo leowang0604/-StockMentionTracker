@@ -42,8 +42,12 @@ jobs:
           cache: 'pip'
           cache-dependency-path: scanner/requirements.txt
 
-      - name: Install dependencies
-        run: pip install -r scanner/requirements.txt
+      - name: Install base dependencies
+        run: pip install "yt-dlp>=2025.1.1" requests "youtube-transcript-api>=1.0.0"
+
+      - name: Install Whisper (only when USE_WHISPER=true)
+        if: ${{ inputs.use_whisper != 'false' }}
+        run: pip install faster-whisper==1.1.1
 
       - name: Write YouTube cookies
         run: |
