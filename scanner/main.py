@@ -1077,7 +1077,25 @@ def process_youtube_video(
     else:
         print(f"  ✗ no captions")
 
-    # ── Step 2: fallback（YouTube 不做音訊下載，避免 bot 偵測）────────────
+    # ── Step 2: Whisper（有 retry 與 bot 偵測限制）────────────────────────
+    if text is None and (USE_WHISPER or TEST_DOWNLOAD_ONLY):
+        print(f"  ⏳ {'testing audio download' if TEST_DOWNLOAD_ONLY else 'transcribing with Whisper'}…")
+        with tempfile.TemporaryDirectory() as tmpdir:
+            audio = download_audio(video_id, tmpdir)
+            if audio:
+                if TEST_DOWNLOAD_ONLY:
+                    size = os.path.getsize(audio) // 1024
+                    print(f"  ✓ download OK ({size} KB) — skipping Whisper (TEST_DOWNLOAD_ONLY)")
+                else:
+                    transcript = transcribe_audio(audio)
+                    if transcript:
+                        text            = transcript
+                        analysis_source = "whisper"
+                        print(f"  ✓ whisper ({len(transcript)} chars)")
+                    else:
+                        print(f"  ✗ whisper failed")
+
+    # ── Step 3: fallback ──────────────────────────────────────────────────
     if text is None:
         text            = title + " " + video.get("description", "")
         analysis_source = "titleAndDescription"
@@ -1543,6 +1561,8 @@ def main() -> None:
         # ── Intermediate git commit so data survives timeout ──────────────
         import subprocess
         try:
+            subprocess.run(["git", "config", "user.email", "github-actions[bot]@users.noreply.github.com"], check=True)
+            subprocess.run(["git", "config", "user.name", "github-actions[bot]"], check=True)
             subprocess.run(["git", "add", str(OUTPUT_FILE)], check=True)
             result = subprocess.run(
                 ["git", "diff", "--staged", "--quiet"],
