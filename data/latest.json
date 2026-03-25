@@ -1,6 +1,387 @@
 {
-  "updated_at": "2026-03-25T09:26:50",
-  "stocks_ranking": [],
-  "sectors_ranking": [],
-  "videos_scanned": []
+  "updated_at": "2026-03-25T09:31:47",
+  "stocks_ranking": [
+    {
+      "code": "2330",
+      "name": "台積電",
+      "market": "TW",
+      "sector": "晶圓代工",
+      "contexts": [
+        {
+          "video": "【理財達人秀】破月線減碼 台積來回賺？ 抓錯殺飆股 漲價新題材？｜李兆華、楊雲翔 2026.03.24 part5",
+          "channel": "東森財經",
+          "date": "2026-03-25",
+          "text": "【理財達人秀】破月線減碼 台積來回賺？ 抓錯殺飆股 漲價新題材？｜李兆華、楊雲翔 2026.03.24 part5 完整版：https://youtu.be/zvL0URJTI-A #川普TACO #電池#PC",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "bearish",
+          "sentiment_score": 0.0
+        },
+        {
+          "video": "EP211 | 台、美股重點一次說，IG被停用中，華通未來主要營收結構，LPU與SRAM和設備廠關係，NVDA GTC大會",
+          "channel": "韭菜畢業班",
+          "date": "2026-03-15",
+          "text": "ck.contact@gmail.com     韭菜畢業班廣播區 ( 以後會放跟股市有關係的所有資訊)  https://t.me/uncle_stock     - NVDA與台積電未來關係  - NVDA GTC大會  - LPU與SRAM和設備廠關係  - 華通未來主要營收結構     全新氣氛值選股軟體 : https://cmy.tw/00ArN8",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "bearish",
+          "sentiment_score": 0.0
+        }
+      ],
+      "total_mentions": 2,
+      "sentiment_score": 0.0,
+      "daily": {
+        "2026-03-25": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 1,
+          "neutral": 0,
+          "sentiment_score": 0.0
+        },
+        "2026-03-15": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 1,
+          "neutral": 0,
+          "sentiment_score": 0.0
+        }
+      }
+    },
+    {
+      "code": "AI",
+      "name": "C3.ai",
+      "market": "US",
+      "sector": "AI軟體",
+      "contexts": [
+        {
+          "video": "【理財達人秀】川普又TACO 漲千點全吐回？ 熱門產業點評 AI股去留！｜李兆華、蔡明翰 2026.03.24 part4",
+          "channel": "東森財經",
+          "date": "2026-03-24",
+          "text": "【理財達人秀】川普又TACO 漲千點全吐回？ 熱門產業點評 AI股去留！｜李兆華、蔡明翰 2026.03.24 part4 完整版：https://youtu.be/zvL0URJTI-A #川普TACO #電池#PCB #理財達人秀本節目與分",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "bearish",
+          "sentiment_score": 0.117
+        },
+        {
+          "video": "EP647 | 🍬",
+          "channel": "股癌",
+          "date": "2026-03-25",
+          "text": "vs 等到髮際線一路向北、K線直接破底 才處理，  難度其實差很多‼️     有時候投資錯過就算了，  但如果毛孔萎縮，那就真的回不去了。     DR CYJ 健髮中心有做 AI 頭皮檢測，  可以從✔️敏感 ✔️髮徑 ✔️髮量 ✔️毛孔 ✔️皮脂 ✔️皮屑等狀況去分析     如果你或另一半最近有稀疏問題/頭皮不舒服，  其實可以去體驗看看。     D",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "bearish",
+          "sentiment_score": 0.0
+        }
+      ],
+      "total_mentions": 2,
+      "sentiment_score": 0.0,
+      "daily": {
+        "2026-03-24": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 1,
+          "neutral": 0,
+          "sentiment_score": 0.0
+        },
+        "2026-03-25": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 1,
+          "neutral": 0,
+          "sentiment_score": 0.0
+        }
+      }
+    },
+    {
+      "code": "MU",
+      "name": "Micron",
+      "market": "US",
+      "sector": "記憶體",
+      "contexts": [
+        {
+          "video": "EP212 | 台、美股重點一次說，新IG出生，美光財報，光通訊與銅纜後勢，液冷與電網族群後勢，聽眾QA",
+          "channel": "韭菜畢業班",
+          "date": "2026-03-22",
+          "text": "EP212 | 台、美股重點一次說，新IG出生，美光財報，光通訊與銅纜後勢，液冷與電網族群後勢，聽眾QA 由於不知道復活IG要多久  小小聲說可以先追蹤了各位  https://www.instagram.com/unclewher",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "bearish",
+          "sentiment_score": 0.002
+        },
+        {
+          "video": "EP212 | 台、美股重點一次說，新IG出生，美光財報，光通訊與銅纜後勢，液冷與電網族群後勢，聽眾QA",
+          "channel": "韭菜畢業班",
+          "date": "2026-03-22",
+          "text": "蹤了各位  https://www.instagram.com/unclewhereareyou     廣播專區  https://t.me/uncle_stock     - 美光科技(MU)財報解析  - 光通訊與銅纜後勢  - Lumentum OFC 2026 利多解析  - Google 與液冷和電網問題  - 聽眾QA回答  - 馬斯克最新演講內容",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0
+        }
+      ],
+      "total_mentions": 2,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-03-22": {
+          "mentions": 2,
+          "bullish": 1,
+          "bearish": 1,
+          "neutral": 0,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
+      "code": "NVDA",
+      "name": "NVIDIA",
+      "market": "US",
+      "sector": "AI晶片",
+      "contexts": [
+        {
+          "video": "EP211 | 台、美股重點一次說，IG被停用中，華通未來主要營收結構，LPU與SRAM和設備廠關係，NVDA GTC大會",
+          "channel": "韭菜畢業班",
+          "date": "2026-03-15",
+          "text": "EP211 | 台、美股重點一次說，IG被停用中，華通未來主要營收結構，LPU與SRAM和設備廠關係，NVDA GTC大會 韭菜畢業班 IG目前被停用中，所以找不到是正常的，不是被我封鎖  目前已經在申訴當中，如果有人有認識內部人或是解鎖經驗歡迎寄信給我  unclestock.conta",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "bearish",
+          "sentiment_score": 0.0
+        },
+        {
+          "video": "EP211 | 台、美股重點一次說，IG被停用中，華通未來主要營收結構，LPU與SRAM和設備廠關係，NVDA GTC大會",
+          "channel": "韭菜畢業班",
+          "date": "2026-03-15",
+          "text": "lestock.contact@gmail.com     韭菜畢業班廣播區 ( 以後會放跟股市有關係的所有資訊)  https://t.me/uncle_stock     - NVDA與台積電未來關係  - NVDA GTC大會  - LPU與SRAM和設備廠關係  - 華通未來主要營收結構     全新氣氛值選股軟體 : https://cmy.tw/00Ar",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "bearish",
+          "sentiment_score": 0.0
+        }
+      ],
+      "total_mentions": 2,
+      "sentiment_score": 0.0,
+      "daily": {
+        "2026-03-15": {
+          "mentions": 2,
+          "bullish": 0,
+          "bearish": 2,
+          "neutral": 0,
+          "sentiment_score": 0.0
+        }
+      }
+    },
+    {
+      "code": "LITE",
+      "name": "Lumentum",
+      "market": "US",
+      "sector": "光通訊",
+      "contexts": [
+        {
+          "video": "EP212 | 台、美股重點一次說，新IG出生，美光財報，光通訊與銅纜後勢，液冷與電網族群後勢，聽眾QA",
+          "channel": "韭菜畢業班",
+          "date": "2026-03-22",
+          "text": "com/unclewhereareyou     廣播專區  https://t.me/uncle_stock     - 美光科技(MU)財報解析  - 光通訊與銅纜後勢  - Lumentum OFC 2026 利多解析  - Google 與液冷和電網問題  - 聽眾QA回答  - 馬斯克最新演講內容        韭菜畢業班總連結 : https://portaly",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 1.0,
+      "daily": {
+        "2026-03-22": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        }
+      }
+    },
+    {
+      "code": "GOOGL",
+      "name": "Alphabet",
+      "market": "US",
+      "sector": "雲端/AI",
+      "contexts": [
+        {
+          "video": "EP212 | 台、美股重點一次說，新IG出生，美光財報，光通訊與銅纜後勢，液冷與電網族群後勢，聽眾QA",
+          "channel": "韭菜畢業班",
+          "date": "2026-03-22",
+          "text": "播專區  https://t.me/uncle_stock     - 美光科技(MU)財報解析  - 光通訊與銅纜後勢  - Lumentum OFC 2026 利多解析  - Google 與液冷和電網問題  - 聽眾QA回答  - 馬斯克最新演講內容        韭菜畢業班總連結 : https://portaly.cc/uncle_stock  －－－－以下為",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 1.0,
+      "daily": {
+        "2026-03-22": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        }
+      }
+    }
+  ],
+  "sectors_ranking": [
+    {
+      "sector": "晶圓代工",
+      "market": "TW",
+      "total_mentions": 2,
+      "stock_codes": [
+        "2330"
+      ]
+    },
+    {
+      "sector": "AI軟體",
+      "market": "US",
+      "total_mentions": 2,
+      "stock_codes": [
+        "AI"
+      ]
+    },
+    {
+      "sector": "記憶體",
+      "market": "US",
+      "total_mentions": 2,
+      "stock_codes": [
+        "MU"
+      ]
+    },
+    {
+      "sector": "AI晶片",
+      "market": "US",
+      "total_mentions": 2,
+      "stock_codes": [
+        "NVDA"
+      ]
+    },
+    {
+      "sector": "光通訊",
+      "market": "US",
+      "total_mentions": 1,
+      "stock_codes": [
+        "LITE"
+      ]
+    },
+    {
+      "sector": "雲端/AI",
+      "market": "US",
+      "total_mentions": 1,
+      "stock_codes": [
+        "GOOGL"
+      ]
+    }
+  ],
+  "videos_scanned": [
+    {
+      "video_id": "2_urTSNVCkI",
+      "title": "【理財達人秀】台股嚇甩磨 PCB主力挺誰？ 越關越買 月線+布林雙賺攻略｜李兆華、權證小哥 2026.03.24 part6",
+      "channel": "東森財經",
+      "date": "2026-03-25",
+      "stocks_found": [],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/2_urTSNVCkI/mqdefault.jpg"
+    },
+    {
+      "video_id": "u526ONh_-rU",
+      "title": "【理財達人秀】破月線減碼 台積來回賺？ 抓錯殺飆股 漲價新題材？｜李兆華、楊雲翔 2026.03.24 part5",
+      "channel": "東森財經",
+      "date": "2026-03-25",
+      "stocks_found": [
+        "2330"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/u526ONh_-rU/mqdefault.jpg"
+    },
+    {
+      "video_id": "XxIiJDdtT3A",
+      "title": "【理財達人秀】川普又TACO 漲千點全吐回？ 熱門產業點評 AI股去留！｜李兆華、蔡明翰 2026.03.24 part4",
+      "channel": "東森財經",
+      "date": "2026-03-24",
+      "stocks_found": [
+        "AI"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/XxIiJDdtT3A/mqdefault.jpg"
+    },
+    {
+      "video_id": "959ffd48-b40a-4709-aad8-239f62ccddee",
+      "title": "EP647 | 🍬",
+      "channel": "股癌",
+      "date": "2026-03-25",
+      "stocks_found": [
+        "AI"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": null
+    },
+    {
+      "video_id": "967f3c90-a910-493a-a15e-826d2f0368ed",
+      "title": "EP646 | 🦙",
+      "channel": "股癌",
+      "date": "2026-03-21",
+      "stocks_found": [],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": null
+    },
+    {
+      "video_id": "be3e9626-78e1-4ef7-a060-737579556b56",
+      "title": "EP645 | 🎱",
+      "channel": "股癌",
+      "date": "2026-03-18",
+      "stocks_found": [],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": null
+    },
+    {
+      "video_id": "c7346e3f-a398-4a77-8c5c-2cffdb846864",
+      "title": "EP212 | 台、美股重點一次說，新IG出生，美光財報，光通訊與銅纜後勢，液冷與電網族群後勢，聽眾QA",
+      "channel": "韭菜畢業班",
+      "date": "2026-03-22",
+      "stocks_found": [
+        "GOOGL",
+        "LITE",
+        "MU"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": null
+    },
+    {
+      "video_id": "2fe35267-5b1f-44fe-9ee2-a7f68e55e2be",
+      "title": "EP211 | 台、美股重點一次說，IG被停用中，華通未來主要營收結構，LPU與SRAM和設備廠關係，NVDA GTC大會",
+      "channel": "韭菜畢業班",
+      "date": "2026-03-15",
+      "stocks_found": [
+        "2330",
+        "NVDA"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": null
+    },
+    {
+      "video_id": "dnx6ygrxWcU",
+      "title": "感謝消防員【王老先聲】第220封快遞",
+      "channel": "老王愛說笑",
+      "date": "2026-03-25",
+      "stocks_found": [],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/dnx6ygrxWcU/mqdefault.jpg"
+    },
+    {
+      "video_id": "4nTgn6Hms44",
+      "title": "華通還沒結束｜【浦男搜股】EP.265",
+      "channel": "老王愛說笑",
+      "date": "2026-03-25",
+      "stocks_found": [],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/4nTgn6Hms44/mqdefault.jpg"
+    },
+    {
+      "video_id": "JCosg0XGMfY",
+      "title": "小心！這事比油價可怕！2026/03/24【老王不只三分鐘】",
+      "channel": "老王愛說笑",
+      "date": "2026-03-24",
+      "stocks_found": [],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/JCosg0XGMfY/mqdefault.jpg"
+    }
+  ]
 }
