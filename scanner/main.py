@@ -1502,8 +1502,11 @@ def main() -> None:
     active_sources = [s for s in sources if s.get("active", True)]
     print(f"[scanner] {len(active_sources)} active sources")
 
-    all_mentions: list[dict] = []
-    all_videos:   list[dict] = []
+    # Load history once before the loop so we can save incrementally
+    history = load_history()
+    OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
+
+    total_new_mentions = 0
 
     for source in active_sources:
         stype = source.get("type", "")
@@ -1511,44 +1514,72 @@ def main() -> None:
         ident = source.get("identifier", "")
         print(f"\n[scanner] ── {sname} ({stype}) ──")
 
+        source_videos:   list[dict] = []
+        source_mentions: list[dict] = []
+
         if stype == "youtube":
             videos = get_channel_videos(ident)
             print(f"  → {len(videos)} videos")
             for video in videos:
                 v_entry, mentions = process_youtube_video(video, sname)
-                all_videos.append(v_entry)
-                all_mentions.extend(mentions)
+                source_videos.append(v_entry)
+                source_mentions.extend(mentions)
 
         elif stype == "applePodcast":
             episodes = fetch_apple_podcast_episodes(ident)
             print(f"  → {len(episodes)} episodes")
             for ep in episodes:
                 v_entry, mentions = process_podcast_episode(ep, source)
-                all_videos.append(v_entry)
-                all_mentions.extend(mentions)
+                source_videos.append(v_entry)
+                source_mentions.extend(mentions)
 
         elif stype == "spotify":
             episodes = fetch_spotify_episodes(ident)
             print(f"  → {len(episodes)} episodes")
             for ep in episodes:
                 v_entry, mentions = process_podcast_episode(ep, source)
-                all_videos.append(v_entry)
-                all_mentions.extend(mentions)
+                source_videos.append(v_entry)
+                source_mentions.extend(mentions)
 
-    # ── Merge with cumulative history ─────────────────────────────────────
-    history = load_history()
-    output  = merge_into_history(history, all_videos, all_mentions)
+        # ── Save after each source ────────────────────────────────────────
+        history = merge_into_history(history, source_videos, source_mentions)
+        total_new_mentions += len(source_mentions)
+        with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+            json.dump(history, f, ensure_ascii=False, indent=2)
+        print(f"  💾 Saved — {len(history['videos_scanned'])} total videos, "
+              f"{len(history['stocks_ranking'])} stocks")
+
+        # ── Intermediate git commit so data survives timeout ──────────────
+        import subprocess
+        try:
+            subprocess.run(["git", "add", str(OUTPUT_FILE)], check=True)
+            result = subprocess.run(
+                ["git", "diff", "--staged", "--quiet"],
+                capture_output=True
+            )
+            if result.returncode != 0:  # staged changes exist
+                subprocess.run(
+                    ["git", "commit", "-m",
+                     f"chore: scan progress after {sname}"],
+                    check=True
+                )
+                subprocess.run(
+                    ["git", "pull", "--rebase", "origin", "main"],
+                    check=True
+                )
+                subprocess.run(["git", "push"], check=True)
+                print(f"  📤 Pushed intermediate results")
+        except Exception as e:
+            print(f"  ⚠️  Intermediate commit failed (non-fatal): {e}")
+
+    output         = history
     stocks_ranking = output["stocks_ranking"]
-
-    OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
-    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-        json.dump(output, f, ensure_ascii=False, indent=2)
 
     print(
         f"\n[scanner] ✅ Done — "
         f"{len(output['videos_scanned'])} total videos | "
         f"{len(stocks_ranking)} stocks | "
-        f"{len(all_mentions)} new mentions this run"
+        f"{total_new_mentions} new mentions this run"
     )
     print(f"[scanner] Output → {OUTPUT_FILE}")
 
