@@ -596,62 +596,8 @@ def fetch_captions(video_id: str) -> str | None:
     except Exception:
         pass
 
-    # ── 2. yt-dlp fallback ─────────────────────────────────────────────────
-    video_url = f"https://www.youtube.com/watch?v={video_id}"
-    info = None
-    for clients in [["ios"], ["tv_embedded"], ["android"], ["mweb"]]:
-        try:
-            opts = {
-                "quiet": True, "no_warnings": True, "noplaylist": True,
-                "extractor_args": {"youtube": {"player_client": clients}},
-            }
-            if COOKIES_FILE and os.path.isfile(COOKIES_FILE):
-                opts["cookiefile"] = COOKIES_FILE
-            with yt_dlp.YoutubeDL(opts) as ydl:
-                info = ydl.extract_info(video_url, download=False, process=False)
-            if info:
-                break
-        except Exception:
-            continue
-
-    if not info:
-        return None
-
-    all_caps: dict = {}
-    all_caps.update(info.get("subtitles", {}))
-    all_caps.update(info.get("automatic_captions", {}))
-    if not all_caps:
-        return None
-
-    caption_url: str | None = None
-    for lang in preferred:
-        if lang in all_caps:
-            j = next((f for f in all_caps[lang] if f.get("ext") == "json3"), None)
-            if j:
-                caption_url = j["url"]
-                break
-    if not caption_url:
-        for formats in all_caps.values():
-            j = next((f for f in formats if f.get("ext") == "json3"), None)
-            if j:
-                caption_url = j["url"]
-                break
-    if not caption_url:
-        return None
-
-    try:
-        req  = urequest.Request(caption_url, headers={"User-Agent": "Mozilla/5.0"})
-        data = urequest.urlopen(req, timeout=15).read()
-        obj  = json.loads(data)
-        text = "".join(
-            seg.get("utf8", "")
-            for event in obj.get("events", [])
-            for seg in event.get("segs", [])
-        ).replace("\n", " ").strip()
-        return text or None
-    except Exception as e:
-        print(f"  [captions] {video_id}: {e}", file=sys.stderr)
-        return None
+    # yt-dlp fallback removed — always blocked by YouTube bot detection on CI
+    return None
 
 # ─────────────────────────────────────────────────────────────────────────────
 # YouTube — audio download + Whisper transcription
