@@ -18,7 +18,8 @@ struct SectorRankingView: View {
                 return (stock.code, StockEntry(
                     code: stock.code, name: stock.name,
                     market: stock.market, sector: stock.sector,
-                    totalMentions: ctxs.count, contexts: ctxs
+                    totalMentions: ctxs.count, contexts: ctxs,
+                    sentimentScore: nil, daily: nil
                 ))
             },
             uniquingKeysWith: { first, _ in first }
@@ -160,7 +161,8 @@ struct SectorDetailView: View {
                 return StockEntry(
                     code: stock.code, name: stock.name,
                     market: stock.market, sector: stock.sector,
-                    totalMentions: ctxs.count, contexts: ctxs
+                    totalMentions: ctxs.count, contexts: ctxs,
+                    sentimentScore: nil, daily: nil
                 )
             }
             .sorted { $0.totalMentions > $1.totalMentions }

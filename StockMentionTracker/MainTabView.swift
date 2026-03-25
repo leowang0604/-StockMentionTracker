@@ -16,6 +16,11 @@ struct MainTabView: View {
                     Label("族群", systemImage: "square.grid.2x2.fill")
                 }
 
+            RadarView()
+                .tabItem {
+                    Label("雷達", systemImage: "dot.radiowaves.left.and.right")
+                }
+
             TrendView()
                 .tabItem {
                     Label("趨勢圖", systemImage: "chart.line.uptrend.xyaxis")

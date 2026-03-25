@@ -43,7 +43,7 @@ jobs:
           cache-dependency-path: scanner/requirements.txt
 
       - name: Install base dependencies
-        run: pip install "yt-dlp>=2025.1.1" requests "youtube-transcript-api>=1.0.0"
+        run: pip install "yt-dlp>=2025.1.1" requests "youtube-transcript-api>=1.0.0" snownlp
 
       - name: Install Whisper (only when USE_WHISPER=true)
         if: ${{ inputs.use_whisper != 'false' }}

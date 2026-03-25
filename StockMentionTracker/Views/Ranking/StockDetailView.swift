@@ -19,7 +19,8 @@ struct StockDetailView: View {
                 guard !ctxs.isEmpty else { return nil }
                 return StockEntry(code: s.code, name: s.name,
                                   market: s.market, sector: s.sector,
-                                  totalMentions: ctxs.count, contexts: ctxs)
+                                  totalMentions: ctxs.count, contexts: ctxs,
+                                  sentimentScore: nil, daily: nil)
             }
             .sorted { $0.totalMentions > $1.totalMentions }
     }

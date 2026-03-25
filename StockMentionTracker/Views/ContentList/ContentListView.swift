@@ -69,7 +69,8 @@ struct ContentListView: View {
             return StockEntry(
                 code: stock.code, name: stock.name,
                 market: stock.market, sector: stock.sector,
-                totalMentions: ctxs.count, contexts: ctxs
+                totalMentions: ctxs.count, contexts: ctxs,
+                sentimentScore: nil, daily: nil
             )
         }
     }

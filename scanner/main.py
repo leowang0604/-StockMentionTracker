@@ -104,6 +104,22 @@ ALIASES: dict[str, str] = {
 }
 
 # ─────────────────────────────────────────────────────────────────────────────
+# Sentiment keywords (financial Chinese)
+# ─────────────────────────────────────────────────────────────────────────────
+
+BULLISH_KEYWORDS: set[str] = {
+    "買進", "布局", "強勢", "看好", "利多", "創高", "突破",
+    "籌碼轉強", "外資買超", "逢低買", "上漲", "噴出",
+    "飆漲", "低估", "便宜", "機會", "加碼", "看漲",
+}
+
+BEARISH_KEYWORDS: set[str] = {
+    "賣出", "獲利了結", "看空", "利空", "回檔", "壓力",
+    "超漲", "籌碼轉弱", "外資賣超", "下跌", "套牢",
+    "風險", "泡沫", "高估", "貴", "減碼", "看跌", "警示",
+}
+
+# ─────────────────────────────────────────────────────────────────────────────
 # US Stock built-in dictionary (Chinese/English aliases)
 # Format: (keyword_list, ticker, display_name, sector)
 # ─────────────────────────────────────────────────────────────────────────────
@@ -442,6 +458,36 @@ def recognize_stocks(text: str) -> list[dict]:
 
     return hits
 
+
+def analyze_sentiment(text: str) -> tuple[str, float]:
+    """
+    Returns (label, score) where label is 'bullish'/'bearish'/'neutral'
+    and score is 0.0 (bearish) to 1.0 (bullish).
+    Primary: financial keyword counting. Fallback: SnowNLP.
+    """
+    bullish = sum(1 for kw in BULLISH_KEYWORDS if kw in text)
+    bearish = sum(1 for kw in BEARISH_KEYWORDS if kw in text)
+
+    if bullish == 0 and bearish == 0:
+        try:
+            from snownlp import SnowNLP
+            score = float(SnowNLP(text[:200]).sentiments)
+            if score > 0.6:
+                return "bullish", round(score, 3)
+            elif score < 0.4:
+                return "bearish", round(score, 3)
+        except Exception:
+            pass
+        return "neutral", 0.5
+
+    total = bullish + bearish
+    score = round(bullish / total, 3)
+    if score > 0.5:
+        return "bullish", score
+    elif score < 0.5:
+        return "bearish", score
+    return "neutral", 0.5
+
 # ─────────────────────────────────────────────────────────────────────────────
 # YouTube — channel video listing
 # ─────────────────────────────────────────────────────────────────────────────
@@ -732,20 +778,22 @@ def process_youtube_video(
         "thumbnail_url":  video.get("thumbnail_url"),
     }
 
-    mentions = [
-        {
-            "stock_code":   h["stock_code"],
-            "stock_name":   h["stock_name"],
-            "stock_market": h.get("stock_market", "TW"),
-            "stock_sector": h.get("stock_sector"),
-            "video_title":  title,
-            "channel":      source_name,
-            "date":         date,
-            "context":      h["context"],
+    mentions = []
+    for h in hits:
+        label, score = analyze_sentiment(h["context"])
+        mentions.append({
+            "stock_code":      h["stock_code"],
+            "stock_name":      h["stock_name"],
+            "stock_market":    h.get("stock_market", "TW"),
+            "stock_sector":    h.get("stock_sector"),
+            "video_title":     title,
+            "channel":         source_name,
+            "date":            date,
+            "context":         h["context"],
             "analysis_source": analysis_source,
-        }
-        for h in hits
-    ]
+            "sentiment":       label,
+            "sentiment_score": score,
+        })
 
     return video_entry, mentions
 
@@ -870,8 +918,10 @@ def process_podcast_episode(
         "thumbnail_url":   None,
     }
 
-    mentions = [
-        {
+    mentions = []
+    for h in hits:
+        label, score = analyze_sentiment(h["context"])
+        mentions.append({
             "stock_code":      h["stock_code"],
             "stock_name":      h["stock_name"],
             "stock_market":    h.get("stock_market", "TW"),
@@ -881,9 +931,9 @@ def process_podcast_episode(
             "date":            date,
             "context":         h["context"],
             "analysis_source": analysis_source,
-        }
-        for h in hits
-    ]
+            "sentiment":       label,
+            "sentiment_score": score,
+        })
 
     return video_entry, mentions
 
@@ -1027,14 +1077,39 @@ def merge_into_history(
                 "date":            m["date"],
                 "text":            m["context"],
                 "analysis_source": m.get("analysis_source", "titleAndDescription"),
+                "sentiment":       m.get("sentiment", "neutral"),
+                "sentiment_score": m.get("sentiment_score", 0.5),
             })
 
-    # Rebuild stocks_ranking
-    stocks_ranking = [
-        {**info, "total_mentions": len(info["contexts"])}
-        for info in merged_stocks.values()
-        if info["contexts"]
-    ]
+    # Rebuild stocks_ranking with daily aggregation and sentiment_score
+    stocks_ranking = []
+    for info in merged_stocks.values():
+        ctxs = info["contexts"]
+        if not ctxs:
+            continue
+        # Daily aggregation
+        daily: dict[str, dict] = {}
+        for ctx in ctxs:
+            d = ctx.get("date", "")[:10]
+            if d not in daily:
+                daily[d] = {"mentions": 0, "bullish": 0, "bearish": 0, "neutral": 0}
+            daily[d]["mentions"] += 1
+            sent = ctx.get("sentiment", "neutral")
+            daily[d][sent] = daily[d].get(sent, 0) + 1
+        for d, stats in daily.items():
+            m = stats["mentions"]
+            b = stats["bullish"]
+            stats["sentiment_score"] = round(b / m, 3) if m > 0 else 0.5
+        # Overall sentiment_score
+        total = len(ctxs)
+        bullish_total = sum(1 for c in ctxs if c.get("sentiment") == "bullish")
+        sentiment_score = round(bullish_total / total, 3) if total > 0 else 0.5
+        stocks_ranking.append({
+            **info,
+            "total_mentions":  total,
+            "sentiment_score": sentiment_score,
+            "daily":           daily,
+        })
     stocks_ranking.sort(key=lambda x: -x["total_mentions"])
 
     # Rebuild sectors_ranking

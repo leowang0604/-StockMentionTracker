@@ -59,6 +59,21 @@ struct SectorEntry: Codable, Identifiable {
     }
 }
 
+// MARK: - Daily stats for a stock (one entry per day)
+
+struct DailyStats: Codable {
+    let mentions: Int
+    let bullish:  Int
+    let bearish:  Int
+    let neutral:  Int
+    let sentimentScore: Double
+
+    enum CodingKeys: String, CodingKey {
+        case mentions, bullish, bearish, neutral
+        case sentimentScore = "sentiment_score"
+    }
+}
+
 // MARK: - Stock entry (one row in stocks_ranking)
 
 struct StockEntry: Codable, Identifiable {
@@ -68,6 +83,8 @@ struct StockEntry: Codable, Identifiable {
     let sector: String?   // e.g. "AI晶片"
     let totalMentions: Int
     let contexts: [MentionContext]
+    let sentimentScore: Double?
+    let daily: [String: DailyStats]?
 
     var id: String { code }
 
@@ -75,6 +92,8 @@ struct StockEntry: Codable, Identifiable {
         case code, name, market, sector
         case totalMentions = "total_mentions"
         case contexts
+        case sentimentScore = "sentiment_score"
+        case daily
     }
 
     var marketLabel: String {
@@ -109,6 +128,20 @@ struct StockEntry: Codable, Identifiable {
         if sources.contains("titleAndDescription") { result.append("doc.text") }
         return result
     }
+
+    var sentimentLabel: String {
+        guard let score = sentimentScore else { return "" }
+        if score > 0.6 { return "看多" }
+        if score < 0.4 { return "看空" }
+        return "中性"
+    }
+
+    var sentimentColor: String {  // return color name as string for use in view
+        guard let score = sentimentScore else { return "gray" }
+        if score > 0.6 { return "green" }
+        if score < 0.4 { return "red" }
+        return "gray"
+    }
 }
 
 // MARK: - Individual mention with context
@@ -119,12 +152,14 @@ struct MentionContext: Codable, Identifiable {
     let date: String
     let text: String
     let analysisSource: String?
+    let sentiment: String?
 
     var id: String { "\(date)_\(video.prefix(20))_\(text.prefix(10))" }
 
     enum CodingKeys: String, CodingKey {
         case video, channel, date, text
         case analysisSource = "analysis_source"
+        case sentiment
     }
 
     var parsedDate: Date? {
@@ -156,6 +191,22 @@ struct MentionContext: Codable, Identifiable {
         case "captions":            return "字幕"
         case "titleAndDescription": return "標題+描述"
         default:                    return analysisSource ?? ""
+        }
+    }
+
+    var sentimentIcon: String {
+        switch sentiment {
+        case "bullish": return "arrow.up.circle.fill"
+        case "bearish": return "arrow.down.circle.fill"
+        default:        return "minus.circle"
+        }
+    }
+
+    var sentimentLabel: String {
+        switch sentiment {
+        case "bullish": return "看多"
+        case "bearish": return "看空"
+        default:        return "中性"
         }
     }
 }
