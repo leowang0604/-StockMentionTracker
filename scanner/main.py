@@ -1382,6 +1382,13 @@ def merge_into_history(
     - Appends new mention contexts to existing stocks
     - Recalculates total_mentions and sectors_ranking from all data
     """
+    # Backfill: neutralise sentiment for any existing titleAndDescription contexts
+    for stock in history.get("stocks_ranking", []):
+        for ctx in stock.get("contexts", []):
+            if ctx.get("analysis_source") == "titleAndDescription":
+                ctx["sentiment"] = "neutral"
+                ctx["sentiment_score"] = 0.5
+
     # Quality ranking: whisper > captions > titleAndDescription
     _quality = {"whisper": 2, "captions": 1, "titleAndDescription": 0}
 
