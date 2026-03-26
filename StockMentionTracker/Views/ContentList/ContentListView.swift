@@ -84,10 +84,12 @@ struct VideoRowView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
             HStack(spacing: 6) {
-                Image(systemName: "play.rectangle.fill")
-                    .font(.caption2).foregroundStyle(.red)
+                Image(systemName: video.sourceIcon)
+                    .font(.caption2)
+                    .foregroundStyle(video.isYouTube ? .red : .purple)
                 Text(video.channel)
-                    .font(.caption).foregroundStyle(.red)
+                    .font(.caption)
+                    .foregroundStyle(video.isYouTube ? .red : .purple)
                 Spacer()
                 Text(video.dateText)
                     .font(.caption).foregroundStyle(.secondary)

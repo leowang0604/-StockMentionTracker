@@ -43,7 +43,7 @@ jobs:
           cache-dependency-path: scanner/requirements.txt
 
       - name: Install base dependencies
-        run: pip install "yt-dlp>=2025.1.1" requests "youtube-transcript-api>=1.0.0" snownlp
+        run: pip install "yt-dlp>=2025.1.1" requests "youtube-transcript-api>=1.0.0" google-generativeai
 
       - name: Cache Whisper model
         if: ${{ inputs.use_whisper != 'false' }}
@@ -91,6 +91,7 @@ jobs:
           USE_WHISPER: ${{ inputs.use_whisper || vars.USE_WHISPER || 'true' }}
           SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
           SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           DAYS_BACK: ${{ inputs.days_back || vars.DAYS_BACK || '7' }}
           MAX_ITEMS: ${{ inputs.max_items || vars.MAX_ITEMS || '5' }}
           TEST_DOWNLOAD_ONLY: ${{ inputs.test_download_only || 'false' }}

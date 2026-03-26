@@ -151,15 +151,19 @@ struct MentionContext: Codable, Identifiable {
     let channel: String?
     let date: String
     let text: String
+    let matchedKeyword: String?
     let analysisSource: String?
     let sentiment: String?
+    let videoURL: String?
 
     var id: String { "\(date)_\(video.prefix(20))_\(text.prefix(10))" }
 
     enum CodingKeys: String, CodingKey {
         case video, channel, date, text
+        case matchedKeyword = "matched_keyword"
         case analysisSource = "analysis_source"
         case sentiment
+        case videoURL = "video_url"
     }
 
     var parsedDate: Date? {

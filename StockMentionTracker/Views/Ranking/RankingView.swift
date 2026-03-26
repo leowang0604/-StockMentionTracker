@@ -205,9 +205,9 @@ struct RankingRowView: View {
 
     private var rankColor: Color {
         switch rank {
-        case 1: return .yellow
-        case 2: return Color(white: 0.7)
-        case 3: return .orange
+        case 1: return Color(red: 1.0, green: 0.84, blue: 0.0)  // 金
+        case 2: return Color(red: 0.75, green: 0.75, blue: 0.80) // 銀
+        case 3: return Color(red: 0.80, green: 0.50, blue: 0.20) // 銅
         default: return .secondary
         }
     }

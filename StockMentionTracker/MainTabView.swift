@@ -6,41 +6,29 @@ struct MainTabView: View {
 
     var body: some View {
         TabView {
-            RankingView()
-                .tabItem {
-                    Label("排行榜", systemImage: "chart.bar.fill")
-                }
-
-            SectorRankingView()
-                .tabItem {
-                    Label("族群", systemImage: "square.grid.2x2.fill")
-                }
-
-            RadarView()
-                .tabItem {
-                    Label("雷達", systemImage: "dot.radiowaves.left.and.right")
-                }
-
-            TrendView()
-                .tabItem {
-                    Label("趨勢圖", systemImage: "chart.line.uptrend.xyaxis")
-                }
-
-            ContentListView()
-                .tabItem {
-                    Label("內容清單", systemImage: "list.bullet.rectangle")
-                }
-
-            ChannelManagementView()
-                .tabItem {
-                    Label("頻道管理", systemImage: "antenna.radiowaves.left.and.right")
-                }
-
-            SettingsView()
-                .tabItem {
-                    Label("設定", systemImage: "gear")
-                }
+            Tab("排行榜", systemImage: "chart.bar.fill") {
+                RankingView()
+            }
+            Tab("族群", systemImage: "square.grid.2x2.fill") {
+                SectorRankingView()
+            }
+            Tab("雷達", systemImage: "dot.radiowaves.left.and.right") {
+                RadarView()
+            }
+            Tab("趨勢圖", systemImage: "chart.line.uptrend.xyaxis") {
+                TrendView()
+            }
+            Tab("內容清單", systemImage: "list.bullet.rectangle") {
+                ContentListView()
+            }
+            Tab("頻道管理", systemImage: "antenna.radiowaves.left.and.right") {
+                ChannelManagementView()
+            }
+            Tab("設定", systemImage: "gear") {
+                SettingsView()
+            }
         }
+        .tabViewStyle(.sidebarAdaptable)
         .overlay(alignment: .bottom) {
             if dataService.isLoading {
                 LoadingBanner()

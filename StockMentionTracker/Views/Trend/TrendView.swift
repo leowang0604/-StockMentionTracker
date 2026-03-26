@@ -5,11 +5,8 @@ struct TrendView: View {
     @Environment(AppState.self)    private var appState
     @Environment(DataService.self) private var dataService
 
-    @State private var mode          = "stock"   // "stock" | "sector"
-    @State private var selectedCode:   String? = nil
-    @State private var selectedSector: String? = nil
-    @State private var searchText              = ""
-    @State private var chartMode     = "mentions" // "mentions" | "sentiment"
+    @State private var mode      = "stock"   // "stock" | "sector"
+    @State private var searchText = ""
 
     // MARK: - Stock mode data
 
@@ -23,18 +20,6 @@ struct TrendView: View {
             }
             .sorted { $0.2 > $1.2 }
             .filter { searchText.isEmpty || $0.1.contains(searchText) || $0.0.contains(searchText) }
-    }
-
-    private var selectedStock: StockEntry? {
-        guard let code = selectedCode else { return nil }
-        return dataService.scanResult.stocksRanking.first { $0.code == code }
-    }
-
-    private var stockChartData: [TrendDataPoint] {
-        guard let stock = selectedStock else { return [] }
-        let cutoff = appState.cutoffDate
-        let filtered = stock.contexts.filter { ($0.parsedDate ?? .distantPast) >= cutoff }
-        return grouped(from: filtered)
     }
 
     // MARK: - Sector mode data
@@ -51,57 +36,11 @@ struct TrendView: View {
             map[key] = (existing.market, existing.count + n)
         }
         return map.map { (k, v) in
-            let sector = String(k.dropFirst(3))   // remove "TW_" or "US_"
+            let sector = String(k.dropFirst(3))
             return (sector, v.market, v.count)
         }
         .sorted { $0.count > $1.count }
         .filter { searchText.isEmpty || $0.sector.contains(searchText) }
-    }
-
-    private var sectorChartData: [TrendDataPoint] {
-        guard let sector = selectedSector else { return [] }
-        let cutoff = appState.cutoffDate
-        let allContexts = dataService.scanResult.stocksRanking
-            .filter { $0.sector == sector }
-            .flatMap { $0.contexts }
-            .filter { ($0.parsedDate ?? .distantPast) >= cutoff }
-        return grouped(from: allContexts)
-    }
-
-    private var selectedSectorTotalMentions: Int {
-        guard let sector = selectedSector else { return 0 }
-        let cutoff = appState.cutoffDate
-        return dataService.scanResult.stocksRanking
-            .filter { $0.sector == sector }
-            .flatMap { $0.contexts }
-            .filter { ($0.parsedDate ?? .distantPast) >= cutoff }
-            .count
-    }
-
-    // MARK: - Helpers
-
-    private func grouped(from contexts: [MentionContext]) -> [TrendDataPoint] {
-        let grouped = Dictionary(grouping: contexts) { ctx -> Date in
-            let d = ctx.parsedDate ?? Date()
-            return Calendar.current.startOfDay(for: d)
-        }
-        return grouped
-            .map { TrendDataPoint(date: $0.key, count: $0.value.count) }
-            .sorted { $0.date < $1.date }
-    }
-
-    private var stockSentimentData: [SentimentDataPoint] {
-        guard let daily = selectedStock?.daily else { return [] }
-        let cutoff = appState.cutoffDate
-        let fmt = DateFormatter(); fmt.dateFormat = "yyyy-MM-dd"
-        return daily.compactMap { (dateStr, stats) -> SentimentDataPoint? in
-            guard let date = fmt.date(from: dateStr),
-                  Calendar.current.startOfDay(for: date) >= Calendar.current.startOfDay(for: cutoff),
-                  stats.bullish + stats.bearish > 0
-            else { return nil }
-            return SentimentDataPoint(date: date, score: stats.sentimentScore,
-                                      bullish: stats.bullish, bearish: stats.bearish)
-        }.sorted { $0.date < $1.date }
     }
 
     // MARK: - Body
@@ -110,7 +49,6 @@ struct TrendView: View {
         @Bindable var appState = appState
         return NavigationStack {
             VStack(spacing: 0) {
-                // Mode picker
                 Picker("模式", selection: $mode) {
                     Text("個股").tag("stock")
                     Text("族群").tag("sector")
@@ -119,193 +57,29 @@ struct TrendView: View {
                 .padding(.horizontal)
                 .padding(.top, 8)
                 .padding(.bottom, 4)
-                .onChange(of: mode) { _, _ in
-                    selectedCode   = nil
-                    selectedSector = nil
-                    searchText     = ""
+                .onChange(of: mode) { _, _ in searchText = "" }
+
+                HStack(spacing: 10) {
+                    Text("最近").font(.caption).foregroundStyle(.secondary)
+                    Slider(value: $appState.selectedDays, in: 1...90, step: 1)
+                    Text("\(Int(appState.selectedDays)) 天")
+                        .font(.caption.monospacedDigit())
+                        .frame(width: 44, alignment: .trailing)
                 }
+                .padding(.horizontal)
+                .padding(.bottom, 8)
 
                 Divider()
 
                 if mode == "stock" {
-                    if let stock = selectedStock {
-                        selectedStockHeader(stock: stock)
-                        chartModePicker
-                        if chartMode == "mentions" {
-                            chartArea(data: stockChartData)
-                        } else {
-                            sentimentChartArea(data: stockSentimentData)
-                        }
-                        chartControls.padding()
-                    } else {
-                        stockSelector
-                    }
+                    stockSelector
                 } else {
-                    if let sector = selectedSector {
-                        selectedSectorHeader(sector: sector)
-                        chartArea(data: sectorChartData)
-                        chartControls.padding()
-                    } else {
-                        sectorSelector
-                    }
+                    sectorSelector
                 }
             }
             .navigationTitle("趨勢圖")
             .searchable(text: $searchText,
                         prompt: mode == "stock" ? "搜尋股票" : "搜尋族群")
-        }
-    }
-
-    // MARK: - Headers
-
-    private func selectedStockHeader(stock: StockEntry) -> some View {
-        @Bindable var appState = appState
-        return HStack {
-            VStack(alignment: .leading, spacing: 2) {
-                HStack(alignment: .firstTextBaseline, spacing: 6) {
-                    Text(stock.name).font(.headline)
-                    Text(stock.code).font(.caption).foregroundStyle(.secondary)
-                }
-                let filtered = stock.contexts.filter {
-                    ($0.parsedDate ?? .distantPast) >= appState.cutoffDate
-                }
-                Text("此區間提及 \(filtered.count) 次")
-                    .font(.caption).foregroundStyle(.secondary)
-            }
-            Spacer()
-            Button("換股票") { selectedCode = nil; searchText = "" }
-                .font(.subheadline).buttonStyle(.bordered).buttonBorderShape(.capsule)
-        }
-        .padding(.horizontal)
-        .padding(.vertical, 12)
-        .background(.bar)
-    }
-
-    private func selectedSectorHeader(sector: String) -> some View {
-        HStack {
-            VStack(alignment: .leading, spacing: 2) {
-                Text(sector).font(.headline)
-                Text("此區間提及 \(selectedSectorTotalMentions) 次")
-                    .font(.caption).foregroundStyle(.secondary)
-            }
-            Spacer()
-            Button("換族群") { selectedSector = nil; searchText = "" }
-                .font(.subheadline).buttonStyle(.bordered).buttonBorderShape(.capsule)
-        }
-        .padding(.horizontal)
-        .padding(.vertical, 12)
-        .background(.bar)
-    }
-
-    // MARK: - Chart mode picker
-
-    private var chartModePicker: some View {
-        Picker("圖表", selection: $chartMode) {
-            Text("提及次數").tag("mentions")
-            Text("情緒趨勢").tag("sentiment")
-        }
-        .pickerStyle(.segmented)
-        .padding(.horizontal)
-        .padding(.bottom, 4)
-    }
-
-    // MARK: - Chart
-
-    @ViewBuilder
-    private func sentimentChartArea(data: [SentimentDataPoint]) -> some View {
-        let days = Int(appState.selectedDays)
-        if data.isEmpty {
-            ContentUnavailableView(
-                "此時間範圍無情緒資料",
-                systemImage: "chart.line.flattrend.xyaxis",
-                description: Text("需要有看多或看空關鍵字的提及才會產生情緒分數")
-            )
-            .frame(height: 250)
-        } else {
-            Chart(data) { point in
-                // Bar: bullish (green) and bearish (red) stacked
-                BarMark(x: .value("日期", point.date, unit: .day),
-                        y: .value("看多", point.bullish))
-                    .foregroundStyle(.green.opacity(0.6))
-                BarMark(x: .value("日期", point.date, unit: .day),
-                        y: .value("看空", -point.bearish))
-                    .foregroundStyle(.red.opacity(0.6))
-                // Line: sentiment score normalized to -1~1 scale for overlay
-                LineMark(x: .value("日期", point.date, unit: .day),
-                         y: .value("情緒", point.score * 2 - 1))
-                    .foregroundStyle(.orange)
-                    .lineStyle(StrokeStyle(lineWidth: 2))
-                    .symbol(Circle().strokeBorder(lineWidth: 1))
-            }
-            .chartXAxis {
-                AxisMarks(values: .stride(by: .day, count: days > 30 ? 14 : 7)) { _ in
-                    AxisGridLine()
-                    AxisValueLabel(format: .dateTime.month().day())
-                }
-            }
-            .chartYAxis {
-                AxisMarks { value in
-                    AxisGridLine()
-                    AxisValueLabel {
-                        if let v = value.as(Double.self) {
-                            Text(v > 0 ? "看多\(Int(v))" : v < 0 ? "看空\(Int(-v))" : "0")
-                                .font(.caption2)
-                        }
-                    }
-                }
-            }
-            .chartLegend(position: .top, alignment: .trailing) {
-                HStack(spacing: 12) {
-                    Label("看多", systemImage: "square.fill").foregroundStyle(.green)
-                    Label("看空", systemImage: "square.fill").foregroundStyle(.red)
-                    Label("情緒線", systemImage: "line.diagonal").foregroundStyle(.orange)
-                }
-                .font(.caption2)
-            }
-            .frame(height: 250)
-            .padding()
-        }
-    }
-
-    @ViewBuilder
-    private func chartArea(data: [TrendDataPoint]) -> some View {
-        let days = Int(appState.selectedDays)
-        if data.isEmpty {
-            ContentUnavailableView(
-                "此時間範圍無資料",
-                systemImage: "chart.line.flattrend.xyaxis",
-                description: Text("請選擇更長的時間範圍")
-            )
-            .frame(height: 250)
-        } else {
-            Chart(data) { point in
-                LineMark(x: .value("日期", point.date), y: .value("次數", point.count))
-                    .foregroundStyle(Color.accentColor)
-                    .symbol(Circle())
-                AreaMark(x: .value("日期", point.date), y: .value("次數", point.count))
-                    .foregroundStyle(Color.accentColor.opacity(0.15))
-            }
-            .chartXAxis {
-                AxisMarks(values: .stride(by: .day, count: days > 30 ? 14 : 7)) { _ in
-                    AxisGridLine()
-                    AxisValueLabel(format: .dateTime.month().day())
-                }
-            }
-            .frame(height: 250)
-            .padding()
-        }
-    }
-
-    // MARK: - Chart controls
-
-    private var chartControls: some View {
-        @Bindable var appState = appState
-        return HStack(spacing: 10) {
-            Text("最近").font(.caption).foregroundStyle(.secondary)
-            Slider(value: $appState.selectedDays, in: 1...90, step: 1)
-            Text("\(Int(appState.selectedDays)) 天")
-                .font(.caption.monospacedDigit())
-                .frame(width: 44, alignment: .trailing)
         }
     }
 
@@ -320,35 +94,20 @@ struct TrendView: View {
                     .padding()
             } else {
                 ForEach(rankedStocks, id: \.code) { stock in
-                    Button {
-                        selectedCode = stock.code
-                        searchText   = ""
-                    } label: {
+                    NavigationLink(destination: StockTrendDetailView(stockCode: stock.code)) {
                         HStack {
-                            VStack(alignment: .leading, spacing: 3) {
-                                HStack(spacing: 6) {
-                                    Text(stock.name).font(.headline)
-                                    Text(stock.code).font(.caption).foregroundStyle(.secondary)
-                                }
-                            }
+                            Text(stock.name).font(.headline)
+                            Text(stock.code).font(.caption).foregroundStyle(.secondary)
                             Spacer()
                             Text("\(stock.count) 次")
                                 .font(.subheadline.monospacedDigit())
                                 .foregroundStyle(.secondary)
-                            Image(systemName: "chevron.right")
-                                .font(.caption).foregroundStyle(.tertiary)
                         }
                     }
-                    .foregroundStyle(.primary)
                 }
             }
         }
         .listStyle(.plain)
-        .overlay(alignment: .top) {
-            Text("選擇股票查看趨勢圖")
-                .font(.subheadline).foregroundStyle(.secondary)
-                .padding(.top, 8)
-        }
     }
 
     // MARK: - Sector selector
@@ -362,41 +121,278 @@ struct TrendView: View {
                     .padding()
             } else {
                 ForEach(rankedSectors, id: \.sector) { item in
-                    Button {
-                        selectedSector = item.sector
-                        searchText     = ""
-                    } label: {
+                    NavigationLink(destination: SectorTrendDetailView(sector: item.sector)) {
                         HStack {
-                            HStack(spacing: 6) {
-                                if !item.market.isEmpty {
-                                    Text(item.market)
-                                        .font(.caption2)
-                                        .padding(.horizontal, 5).padding(.vertical, 2)
-                                        .background(.quaternary, in: Capsule())
-                                        .foregroundStyle(.secondary)
-                                }
-                                Text(item.sector).font(.headline)
+                            if !item.market.isEmpty {
+                                Text(item.market)
+                                    .font(.caption2)
+                                    .padding(.horizontal, 5).padding(.vertical, 2)
+                                    .background(.quaternary, in: Capsule())
+                                    .foregroundStyle(.secondary)
                             }
+                            Text(item.sector).font(.headline)
                             Spacer()
                             Text("\(item.count) 次")
                                 .font(.subheadline.monospacedDigit())
                                 .foregroundStyle(.secondary)
-                            Image(systemName: "chevron.right")
-                                .font(.caption).foregroundStyle(.tertiary)
                         }
                     }
-                    .foregroundStyle(.primary)
                 }
             }
         }
         .listStyle(.plain)
-        .overlay(alignment: .top) {
-            Text("選擇族群查看趨勢圖")
-                .font(.subheadline).foregroundStyle(.secondary)
-                .padding(.top, 8)
-        }
     }
 }
+
+// MARK: - Stock Trend Detail
+
+struct StockTrendDetailView: View {
+    @Environment(AppState.self)    private var appState
+    @Environment(DataService.self) private var dataService
+
+    let stockCode: String
+    @State private var chartMode = "mentions"
+
+    private var stock: StockEntry? {
+        dataService.scanResult.stocksRanking.first { $0.code == stockCode }
+    }
+
+    private var chartData: [TrendDataPoint] {
+        guard let stock else { return [] }
+        let cutoff = appState.cutoffDate
+        let filtered = stock.contexts.filter { ($0.parsedDate ?? .distantPast) >= cutoff }
+        return grouped(from: filtered)
+    }
+
+    private var sentimentData: [SentimentDataPoint] {
+        guard let daily = stock?.daily else { return [] }
+        let cutoff = appState.cutoffDate
+        let fmt = DateFormatter(); fmt.dateFormat = "yyyy-MM-dd"
+        return daily.compactMap { (dateStr, stats) -> SentimentDataPoint? in
+            guard let date = fmt.date(from: dateStr),
+                  Calendar.current.startOfDay(for: date) >= Calendar.current.startOfDay(for: cutoff),
+                  stats.bullish + stats.bearish > 0
+            else { return nil }
+            return SentimentDataPoint(date: date, score: stats.sentimentScore,
+                                      bullish: stats.bullish, bearish: stats.bearish)
+        }.sorted { $0.date < $1.date }
+    }
+
+    var body: some View {
+        @Bindable var appState = appState
+        guard let stock else { return AnyView(Text("找不到股票")) }
+        let cutoff = appState.cutoffDate
+        let mentions = stock.contexts.filter { ($0.parsedDate ?? .distantPast) >= cutoff }.count
+
+        return AnyView(
+            VStack(spacing: 0) {
+                HStack(spacing: 10) {
+                    Text("最近").font(.caption).foregroundStyle(.secondary)
+                    Slider(value: $appState.selectedDays, in: 1...90, step: 1)
+                    Text("\(Int(appState.selectedDays)) 天")
+                        .font(.caption.monospacedDigit())
+                        .frame(width: 44, alignment: .trailing)
+                }
+                .padding(.horizontal)
+                .padding(.top, 8)
+                .padding(.bottom, 4)
+
+                HStack {
+                    Text("此區間提及 \(mentions) 次")
+                        .font(.subheadline).foregroundStyle(.secondary)
+                    Spacer()
+                }
+                .padding(.horizontal)
+                .padding(.bottom, 4)
+
+                Picker("圖表", selection: $chartMode) {
+                    Text("提及次數").tag("mentions")
+                    Text("情緒趨勢").tag("sentiment")
+                }
+                .pickerStyle(.segmented)
+                .padding(.horizontal)
+                .padding(.bottom, 4)
+
+                Divider()
+
+                if chartMode == "mentions" {
+                    mentionsChart
+                } else {
+                    sentimentChart
+                }
+
+                Spacer()
+            }
+            .navigationTitle("\(stock.name)  \(stock.code)")
+            .navigationBarTitleDisplayMode(.inline)
+        )
+    }
+
+    private var mentionsChart: some View {
+        let days = Int(appState.selectedDays)
+        return Group {
+            if chartData.isEmpty {
+                ContentUnavailableView("此時間範圍無資料",
+                    systemImage: "chart.line.flattrend.xyaxis",
+                    description: Text("請選擇更長的時間範圍"))
+                .frame(height: 250)
+            } else {
+                let maxCount = chartData.map(\.count).max() ?? 1
+                Chart(chartData) { point in
+                    LineMark(x: .value("日期", point.date), y: .value("次數", point.count))
+                        .foregroundStyle(Color.accentColor)
+                        .symbol(Circle())
+                    AreaMark(x: .value("日期", point.date), y: .value("次數", point.count))
+                        .foregroundStyle(LinearGradient(
+                            colors: [Color.accentColor.opacity(0.5), Color.accentColor.opacity(0.05)],
+                            startPoint: .top, endPoint: .bottom))
+                }
+                .chartYScale(domain: 0...(maxCount + 1))
+                .chartXAxis {
+                    AxisMarks(values: .stride(by: .day, count: days > 30 ? 14 : 7)) { _ in
+                        AxisGridLine()
+                        AxisValueLabel(format: .dateTime.month().day())
+                    }
+                }
+                .frame(height: 250)
+                .padding()
+            }
+        }
+    }
+
+    private var sentimentChart: some View {
+        let days = Int(appState.selectedDays)
+        return Group {
+            if sentimentData.count < 3 {
+                ContentUnavailableView("資料點不足",
+                    systemImage: "chart.line.flattrend.xyaxis",
+                    description: Text("需要至少 3 天以上的情緒資料才能顯示趨勢，請等待更多掃描累積"))
+                .frame(height: 250)
+            } else {
+                Chart(sentimentData) { point in
+                    BarMark(x: .value("日期", point.date, unit: .day),
+                            y: .value("看多", point.bullish),
+                            stacking: .unstacked)
+                        .foregroundStyle(.green.opacity(0.7))
+                    BarMark(x: .value("日期", point.date, unit: .day),
+                            y: .value("看空", point.bearish),
+                            stacking: .unstacked)
+                        .foregroundStyle(.red.opacity(0.5))
+                }
+                .chartXAxis {
+                    AxisMarks(values: .stride(by: .day, count: days > 30 ? 14 : 7)) { _ in
+                        AxisGridLine()
+                        AxisValueLabel(format: .dateTime.month().day())
+                    }
+                }
+                .chartForegroundStyleScale(["看多": Color.green.opacity(0.7), "看空": Color.red.opacity(0.5)])
+                .frame(height: 250)
+                .padding()
+            }
+        }
+    }
+
+    private func grouped(from contexts: [MentionContext]) -> [TrendDataPoint] {
+        let grouped = Dictionary(grouping: contexts) { ctx -> Date in
+            let d = ctx.parsedDate ?? Date()
+            return Calendar.current.startOfDay(for: d)
+        }
+        return grouped
+            .map { TrendDataPoint(date: $0.key, count: $0.value.count) }
+            .sorted { $0.date < $1.date }
+    }
+}
+
+// MARK: - Sector Trend Detail
+
+struct SectorTrendDetailView: View {
+    @Environment(AppState.self)    private var appState
+    @Environment(DataService.self) private var dataService
+
+    let sector: String
+
+    private var chartData: [TrendDataPoint] {
+        let cutoff = appState.cutoffDate
+        let allContexts = dataService.scanResult.stocksRanking
+            .filter { $0.sector == sector }
+            .flatMap { $0.contexts }
+            .filter { ($0.parsedDate ?? .distantPast) >= cutoff }
+        let grouped = Dictionary(grouping: allContexts) { ctx -> Date in
+            Calendar.current.startOfDay(for: ctx.parsedDate ?? Date())
+        }
+        return grouped
+            .map { TrendDataPoint(date: $0.key, count: $0.value.count) }
+            .sorted { $0.date < $1.date }
+    }
+
+    private var totalMentions: Int {
+        let cutoff = appState.cutoffDate
+        return dataService.scanResult.stocksRanking
+            .filter { $0.sector == sector }
+            .flatMap { $0.contexts }
+            .filter { ($0.parsedDate ?? .distantPast) >= cutoff }
+            .count
+    }
+
+    var body: some View {
+        @Bindable var appState = appState
+        let days = Int(appState.selectedDays)
+
+        VStack(spacing: 0) {
+            HStack(spacing: 10) {
+                Text("最近").font(.caption).foregroundStyle(.secondary)
+                Slider(value: $appState.selectedDays, in: 1...90, step: 1)
+                Text("\(Int(appState.selectedDays)) 天")
+                    .font(.caption.monospacedDigit())
+                    .frame(width: 44, alignment: .trailing)
+            }
+            .padding(.horizontal)
+            .padding(.top, 8)
+            .padding(.bottom, 4)
+
+            HStack {
+                Text("此區間提及 \(totalMentions) 次")
+                    .font(.subheadline).foregroundStyle(.secondary)
+                Spacer()
+            }
+            .padding(.horizontal)
+            .padding(.bottom, 4)
+
+            Divider()
+
+            if chartData.isEmpty {
+                ContentUnavailableView("此時間範圍無資料",
+                    systemImage: "chart.line.flattrend.xyaxis",
+                    description: Text("請選擇更長的時間範圍"))
+                .frame(height: 250)
+            } else {
+                Chart(chartData) { point in
+                    LineMark(x: .value("日期", point.date), y: .value("次數", point.count))
+                        .foregroundStyle(Color.accentColor)
+                        .symbol(Circle())
+                    AreaMark(x: .value("日期", point.date), y: .value("次數", point.count))
+                        .foregroundStyle(LinearGradient(
+                            colors: [Color.accentColor.opacity(0.5), Color.accentColor.opacity(0.05)],
+                            startPoint: .top, endPoint: .bottom))
+                }
+                .chartXAxis {
+                    AxisMarks(values: .stride(by: .day, count: days > 30 ? 14 : 7)) { _ in
+                        AxisGridLine()
+                        AxisValueLabel(format: .dateTime.month().day())
+                    }
+                }
+                .frame(height: 250)
+                .padding()
+            }
+
+            Spacer()
+        }
+        .navigationTitle(sector)
+        .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+// MARK: - Data Models
 
 struct TrendDataPoint: Identifiable {
     let id    = UUID()
@@ -407,7 +403,7 @@ struct TrendDataPoint: Identifiable {
 struct SentimentDataPoint: Identifiable {
     let id      = UUID()
     let date:    Date
-    let score:   Double   // 0.0 (bearish) ~ 1.0 (bullish)
+    let score:   Double
     let bullish: Int
     let bearish: Int
 }

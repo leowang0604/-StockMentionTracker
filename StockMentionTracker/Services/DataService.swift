@@ -44,6 +44,12 @@ class DataService {
         isLoading = false
     }
 
+    func clearCache() {
+        try? FileManager.default.removeItem(at: cacheURL)
+        scanResult = .empty
+        lastFetched = nil
+    }
+
     private func loadFromCache() {
         guard let data = try? Data(contentsOf: cacheURL),
               let result = try? JSONDecoder().decode(ScanResult.self, from: data) else { return }

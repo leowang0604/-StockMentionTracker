@@ -57,7 +57,8 @@ struct SectorRankingView: View {
     }
 
     var body: some View {
-        NavigationStack {
+        @Bindable var appState = appState
+        return NavigationStack {
             VStack(spacing: 0) {
                 Picker("市場", selection: $marketFilter) {
                     Text("全部").tag("all")
@@ -66,7 +67,18 @@ struct SectorRankingView: View {
                 }
                 .pickerStyle(.segmented)
                 .padding(.horizontal)
-                .padding(.vertical, 8)
+                .padding(.top, 8)
+                .padding(.bottom, 4)
+
+                HStack(spacing: 10) {
+                    Text("最近").font(.caption).foregroundStyle(.secondary)
+                    Slider(value: $appState.selectedDays, in: 1...90, step: 1)
+                    Text("\(Int(appState.selectedDays)) 天")
+                        .font(.caption.monospacedDigit())
+                        .frame(width: 44, alignment: .trailing)
+                }
+                .padding(.horizontal)
+                .padding(.bottom, 8)
 
                 Divider()
 
@@ -74,7 +86,7 @@ struct SectorRankingView: View {
                     ContentUnavailableView {
                         Label("尚無族群資料", systemImage: "square.grid.2x2")
                     } description: {
-                        Text("需要掃描結果含有族群分類資訊")
+                        Text("點選右上角重新整理以載入最新掃描結果")
                     }
                 } else {
                     List {
@@ -134,9 +146,9 @@ struct SectorRowView: View {
 
     private var rankColor: Color {
         switch rank {
-        case 1: return .yellow
-        case 2: return Color(white: 0.7)
-        case 3: return .orange
+        case 1: return Color(red: 1.0, green: 0.84, blue: 0.0)
+        case 2: return Color(red: 0.75, green: 0.75, blue: 0.80)
+        case 3: return Color(red: 0.80, green: 0.50, blue: 0.20)
         default: return .secondary
         }
     }

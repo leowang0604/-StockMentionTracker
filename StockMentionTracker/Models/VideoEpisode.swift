@@ -35,9 +35,23 @@ struct VideoScanned: Codable, Identifiable {
         return f.string(from: d)
     }
 
+    // YouTube video IDs are exactly 11 chars (alphanumeric + - _)
+    var isYouTube: Bool {
+        guard let vid = videoId else { return false }
+        return vid.count == 11 && vid.allSatisfy({ $0.isLetter || $0.isNumber || $0 == "-" || $0 == "_" })
+    }
+
     var externalURL: URL? {
-        guard let vid = videoId else { return nil }
+        guard let vid = videoId, isYouTube else { return nil }
         return URL(string: "https://www.youtube.com/watch?v=\(vid)")
+    }
+
+    var sourceIcon: String {
+        isYouTube ? "play.rectangle.fill" : "mic.fill"
+    }
+
+    var sourceIconColor: String {
+        isYouTube ? "red" : "purple"
     }
 
     var analysisSourceSymbol: String {

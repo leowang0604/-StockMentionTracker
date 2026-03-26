@@ -22,7 +22,7 @@ struct OnboardingView: View {
                     Text("Stock Mention Tracker")
                         .font(.largeTitle.bold())
 
-                    Text("追蹤 YouTube 財經頻道與 Podcast 中的台股提及")
+                    Text("追蹤 YouTube 財經頻道與 Podcast 中的台股與美股提及")
                         .font(.subheadline)
                         .foregroundStyle(.secondary)
                         .multilineTextAlignment(.center)

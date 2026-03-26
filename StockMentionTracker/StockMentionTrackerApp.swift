@@ -27,6 +27,17 @@ struct RootView: View {
                     .task {
                         await dataService.fetchLatest(from: appState.dataURL)
                     }
+                    .onReceive(NotificationCenter.default.publisher(
+                        for: UIApplication.willEnterForegroundNotification
+                    )) { _ in
+                        guard appState.hasDataURL else { return }
+                        let stale = dataService.lastFetched.map {
+                            Date().timeIntervalSince($0) > 1800  // 30 minutes
+                        } ?? true
+                        if stale {
+                            Task { await dataService.fetchLatest(from: appState.dataURL) }
+                        }
+                    }
             } else {
                 OnboardingView()
             }

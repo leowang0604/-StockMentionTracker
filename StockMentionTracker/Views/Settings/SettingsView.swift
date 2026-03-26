@@ -7,6 +7,7 @@ struct SettingsView: View {
     @State private var dataURLInput = ""
     @State private var githubRepoInput = ""
     @State private var githubPATInput = ""
+    @State private var geminiAPIKeyInput = ""
     @State private var showingClearAlert = false
 
     var body: some View {
@@ -14,6 +15,7 @@ struct SettingsView: View {
             Form {
                 dataURLSection
                 githubSection
+                geminiSection
                 dataInfoSection
                 dangerZoneSection
             }
@@ -22,6 +24,7 @@ struct SettingsView: View {
                 dataURLInput = appState.dataURL
                 githubRepoInput = appState.githubRepo
                 githubPATInput = appState.githubPAT
+                geminiAPIKeyInput = appState.geminiAPIKey
             }
         }
     }
@@ -39,11 +42,14 @@ struct SettingsView: View {
                     .keyboardType(.URL)
 #endif
 
+                let urlChanged = dataURLInput != appState.dataURL
                 Button("儲存") {
                     appState.dataURL = dataURLInput
                 }
                 .buttonStyle(.bordered)
                 .font(.caption)
+                .disabled(!urlChanged)
+                .tint(urlChanged ? .accentColor : .secondary)
             }
             .padding(.vertical, 4)
         } header: {
@@ -82,18 +88,55 @@ struct SettingsView: View {
 #endif
                 }
 
+                let githubChanged = githubRepoInput != appState.githubRepo || githubPATInput != appState.githubPAT
                 Button("儲存 GitHub 設定") {
                     appState.githubRepo = githubRepoInput
                     appState.githubPAT = githubPATInput
                 }
                 .buttonStyle(.bordered)
                 .font(.caption)
+                .disabled(!githubChanged)
+                .tint(githubChanged ? .accentColor : .secondary)
             }
             .padding(.vertical, 4)
         } header: {
             Text("GitHub 設定（頻道管理）")
         } footer: {
             Text("需要有 repo 寫入權限的 PAT，用於在「頻道管理」頁面新增/刪除掃描頻道。")
+        }
+    }
+
+    // MARK: - Gemini Section
+
+    private var geminiSection: some View {
+        Section {
+            VStack(alignment: .leading, spacing: 8) {
+                SecureField("AIzaSy...", text: $geminiAPIKeyInput)
+                    .font(.caption.monospaced())
+                    .autocorrectionDisabled()
+#if os(iOS)
+                    .textInputAutocapitalization(.never)
+#endif
+
+                HStack(spacing: 12) {
+                    let keyChanged = geminiAPIKeyInput != appState.geminiAPIKey
+                    Button("儲存") {
+                        appState.geminiAPIKey = geminiAPIKeyInput
+                    }
+                    .buttonStyle(.bordered)
+                    .font(.caption)
+                    .disabled(!keyChanged)
+                    .tint(keyChanged ? .accentColor : .secondary)
+
+                    Link("如何申請？", destination: URL(string: "https://aistudio.google.com")!)
+                        .font(.caption)
+                }
+            }
+            .padding(.vertical, 4)
+        } header: {
+            Text("情緒分析設定")
+        } footer: {
+            Text("填入 Gemini API Key 可提升情緒分析準確度，不填則使用內建關鍵字規則。")
         }
     }
 
@@ -183,8 +226,6 @@ struct SettingsView: View {
     }
 
     private func clearCache() {
-        let caches = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first!
-        let cacheFile = caches.appendingPathComponent("latest_scan.json")
-        try? FileManager.default.removeItem(at: cacheFile)
+        dataService.clearCache()
     }
 }

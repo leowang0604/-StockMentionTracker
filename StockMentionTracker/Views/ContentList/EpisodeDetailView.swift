@@ -12,8 +12,8 @@ struct VideoDetailView: View {
             Section {
                 VStack(alignment: .leading, spacing: 12) {
                     HStack(spacing: 6) {
-                        Image(systemName: "play.rectangle.fill")
-                            .foregroundStyle(.red)
+                        Image(systemName: video.sourceIcon)
+                            .foregroundStyle(video.isYouTube ? .red : .purple)
                         Text(video.channel)
                             .font(.subheadline).foregroundStyle(.secondary)
                     }

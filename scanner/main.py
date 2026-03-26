@@ -35,6 +35,7 @@ USE_WHISPER        = os.environ.get("USE_WHISPER", "true").lower() == "true"
 TEST_DOWNLOAD_ONLY = os.environ.get("TEST_DOWNLOAD_ONLY", "false").lower() == "true"
 SPOTIFY_CLIENT_ID  = os.environ.get("SPOTIFY_CLIENT_ID", "")
 SPOTIFY_CLIENT_SECRET = os.environ.get("SPOTIFY_CLIENT_SECRET", "")
+GEMINI_API_KEY     = os.environ.get("GEMINI_API_KEY", "")
 
 # Path to Netscape-format cookies file (set by workflow from YOUTUBE_COOKIES secret)
 COOKIES_FILE = os.environ.get("YOUTUBE_COOKIES_FILE", "")
@@ -759,18 +760,8 @@ def recognize_stocks(text: str) -> list[dict]:
     return hits
 
 
-def analyze_sentiment(text: str) -> tuple[str, float]:
-    """
-    Returns (label, score) where label is 'bullish'/'bearish'/'neutral'
-    and score is 0.0 (bearish) to 1.0 (bullish).
-
-    Scoring:
-    1. Context pairs (pivot + followup in same text) → ±0.6 each
-    2. Strong keywords → ±0.6 each
-    3. Mild keywords → ±0.3 each
-    Final score = bullish_weight / (bullish_weight + bearish_weight)
-    Fallback to SnowNLP when no signals found.
-    """
+def _keyword_sentiment(text: str) -> tuple[str, float]:
+    """內建關鍵字規則情緒分析（fallback）"""
     bull_w = 0.0
     bear_w = 0.0
 
@@ -810,6 +801,82 @@ def analyze_sentiment(text: str) -> tuple[str, float]:
     elif score < 0.5:
         return "bearish", score
     return "neutral", 0.5
+
+
+# Gemini client (lazy-initialized)
+_gemini_model = None
+
+def _get_gemini_model():
+    global _gemini_model
+    if _gemini_model is not None:
+        return _gemini_model
+    try:
+        import google.generativeai as genai
+        genai.configure(api_key=GEMINI_API_KEY)
+        _gemini_model = genai.GenerativeModel("gemini-1.5-flash")
+        return _gemini_model
+    except Exception as e:
+        print(f"  [gemini] init failed: {e}", file=sys.stderr)
+        return None
+
+
+def analyze_sentiment_batch_gemini(items: list[dict]) -> list[tuple[str, float]]:
+    """
+    items: list of {"stock": stock_name, "context": mention_text}
+    Returns list of (label, score) in the same order.
+    Falls back to keyword rules on any error.
+    """
+    if not GEMINI_API_KEY or not items:
+        return [_keyword_sentiment(it["context"]) for it in items]
+
+    model = _get_gemini_model()
+    if model is None:
+        return [_keyword_sentiment(it["context"]) for it in items]
+
+    # Build prompt
+    lines = []
+    for i, it in enumerate(items):
+        lines.append(f"{i+1}. 股票：{it['stock']}，提及內容：{it['context']}")
+    prompt = (
+        "你是台灣股市情緒分析專家。針對以下每條提及內容，判斷對該股票的情緒。\n"
+        "只回傳 JSON 陣列，格式為 [{\"label\": \"bullish\"|\"bearish\"|\"neutral\", \"score\": 0.0~1.0}, ...]，"
+        "score 代表看多程度（1.0=極度看多，0.0=極度看空，0.5=中性），數量與輸入相同，不要有多餘文字。\n\n"
+        + "\n".join(lines)
+    )
+
+    try:
+        response = model.generate_content(prompt)
+        text = response.text.strip()
+        # Strip markdown code fences if present
+        if text.startswith("```"):
+            text = re.sub(r"^```[a-z]*\n?", "", text)
+            text = re.sub(r"\n?```$", "", text)
+        parsed = json.loads(text)
+        results = []
+        for item in parsed:
+            label = item.get("label", "neutral")
+            score = float(item.get("score", 0.5))
+            score = max(0.0, min(1.0, round(score, 3)))
+            if label not in ("bullish", "bearish", "neutral"):
+                label = "neutral"
+            results.append((label, score))
+        if len(results) == len(items):
+            return results
+    except Exception as e:
+        print(f"  [gemini] batch analysis failed: {e}", file=sys.stderr)
+
+    return [_keyword_sentiment(it["context"]) for it in items]
+
+
+def analyze_sentiment(text: str) -> tuple[str, float]:
+    """
+    Single-context sentiment analysis.
+    Uses Gemini if API key is set, otherwise keyword rules.
+    """
+    if GEMINI_API_KEY:
+        results = analyze_sentiment_batch_gemini([{"stock": "", "context": text}])
+        return results[0]
+    return _keyword_sentiment(text)
 
 # ─────────────────────────────────────────────────────────────────────────────
 # YouTube — channel video listing
@@ -1112,12 +1179,17 @@ def process_youtube_video(
 
     video_url = f"https://www.youtube.com/watch?v={video_id}"
 
+    # Batch sentiment analysis for non-titleAndDescription sources
+    if analysis_source == "titleAndDescription" or not hits:
+        sentiments = [("neutral", 0.5)] * len(hits)
+    elif GEMINI_API_KEY:
+        batch_items = [{"stock": h["stock_name"], "context": h["context"]} for h in hits]
+        sentiments = analyze_sentiment_batch_gemini(batch_items)
+    else:
+        sentiments = [_keyword_sentiment(h["context"]) for h in hits]
+
     mentions = []
-    for h in hits:
-        if analysis_source == "titleAndDescription":
-            label, score = "neutral", 0.5
-        else:
-            label, score = analyze_sentiment(h["context"])
+    for h, (label, score) in zip(hits, sentiments):
         mentions.append({
             "stock_code":      h["stock_code"],
             "stock_name":      h["stock_name"],
@@ -1257,12 +1329,17 @@ def process_podcast_episode(
         "thumbnail_url":   None,
     }
 
+    # Batch sentiment analysis for non-titleAndDescription sources
+    if analysis_source == "titleAndDescription" or not hits:
+        sentiments = [("neutral", 0.5)] * len(hits)
+    elif GEMINI_API_KEY:
+        batch_items = [{"stock": h["stock_name"], "context": h["context"]} for h in hits]
+        sentiments = analyze_sentiment_batch_gemini(batch_items)
+    else:
+        sentiments = [_keyword_sentiment(h["context"]) for h in hits]
+
     mentions = []
-    for h in hits:
-        if analysis_source == "titleAndDescription":
-            label, score = "neutral", 0.5
-        else:
-            label, score = analyze_sentiment(h["context"])
+    for h, (label, score) in zip(hits, sentiments):
         mentions.append({
             "stock_code":      h["stock_code"],
             "stock_name":      h["stock_name"],

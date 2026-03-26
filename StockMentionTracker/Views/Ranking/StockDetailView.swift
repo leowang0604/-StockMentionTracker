@@ -109,6 +109,7 @@ struct StockDetailView: View {
                     ForEach(stock.contexts) { ctx in
                         ContextRowView(
                             context: ctx,
+                            highlightTerms: ([stock.name, stock.code] + [ctx.matchedKeyword]).compactMap { $0 }.filter { !$0.isEmpty },
                             isExpanded: expandedIDs.contains(ctx.id),
                             onToggle: {
                                 withAnimation(.easeInOut(duration: 0.2)) {
@@ -135,6 +136,7 @@ struct StockDetailView: View {
 
 struct ContextRowView: View {
     let context: MentionContext
+    var highlightTerms: [String] = []
     let isExpanded: Bool
     let onToggle: () -> Void
 
@@ -175,11 +177,20 @@ struct ContextRowView: View {
                 .foregroundStyle(analysisColor)
             }
 
-            // Video title
-            Text(context.video)
-                .font(.caption)
-                .foregroundStyle(.secondary)
-                .lineLimit(isExpanded ? nil : 1)
+            // Video title (tappable if URL available)
+            if let urlString = context.videoURL, let url = URL(string: urlString) {
+                Link(destination: url) {
+                    Text(context.video)
+                        .font(.caption)
+                        .foregroundStyle(.blue)
+                        .lineLimit(isExpanded ? nil : 1)
+                }
+            } else {
+                Text(context.video)
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                    .lineLimit(isExpanded ? nil : 1)
+            }
 
             // Context text (expandable)
             if !context.text.isEmpty {
@@ -194,9 +205,8 @@ struct ContextRowView: View {
                                 .foregroundStyle(.secondary)
                         }
                         if isExpanded {
-                            Text("…\(context.text)…")
+                            Text(highlighted("…\(context.text)…"))
                                 .font(.caption)
-                                .foregroundStyle(.primary)
                                 .multilineTextAlignment(.leading)
                         }
                     }
@@ -205,6 +215,20 @@ struct ContextRowView: View {
             }
         }
         .padding(.vertical, 4)
+    }
+
+    private func highlighted(_ text: String) -> AttributedString {
+        var attributed = AttributedString(text)
+        for term in highlightTerms where !term.isEmpty {
+            var searchStart = attributed.startIndex
+            while searchStart < attributed.endIndex,
+                  let range = attributed[searchStart...].range(of: term, options: .caseInsensitive) {
+                attributed[range].foregroundColor = .orange
+                attributed[range].inlinePresentationIntent = .stronglyEmphasized
+                searchStart = range.upperBound
+            }
+        }
+        return attributed
     }
 
     private var analysisColor: Color {

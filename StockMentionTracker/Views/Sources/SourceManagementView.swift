@@ -50,7 +50,10 @@ struct ChannelManagementView: View {
             } message: { ch in
                 Text("確定要從掃描清單移除「\(ch.name)」嗎？")
             }
-            .alert("發生錯誤", isPresented: .constant(errorMessage != nil)) {
+            .alert("發生錯誤", isPresented: Binding(
+                get: { errorMessage != nil },
+                set: { if !$0 { errorMessage = nil } }
+            )) {
                 Button("確定") { errorMessage = nil }
             } message: {
                 Text(errorMessage ?? "")

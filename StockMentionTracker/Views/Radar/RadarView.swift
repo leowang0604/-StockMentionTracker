@@ -8,70 +8,95 @@ struct RadarView: View {
         dataService.scanResult.stocksRanking
     }
 
-    // 看多共識: sentiment_score > 0.7 AND last 7 days mentions >= 5
+    // 看多共識: sentiment_score > 0.7 AND mentions in selected window >= 2
     private var bullishConsensus: [StockEntry] {
-        let cutoff = Calendar.current.date(byAdding: .day, value: -7, to: Date()) ?? Date()
+        let cutoff = appState.cutoffDate
         return allStocks.filter { stock in
             guard let score = stock.sentimentScore else { return false }
             let recentCount = stock.contexts.filter {
                 ($0.parsedDate ?? .distantPast) >= cutoff
             }.count
-            return score > 0.7 && recentCount >= 5
+            return score > 0.7 && recentCount >= 2
         }.sorted { ($0.sentimentScore ?? 0) > ($1.sentimentScore ?? 0) }
     }
 
-    // 看空共識: sentiment_score < 0.3 AND last 7 days mentions >= 5
+    // 看空共識: sentiment_score < 0.3 AND mentions in selected window >= 2
     private var bearishConsensus: [StockEntry] {
-        let cutoff = Calendar.current.date(byAdding: .day, value: -7, to: Date()) ?? Date()
+        let cutoff = appState.cutoffDate
         return allStocks.filter { stock in
             guard let score = stock.sentimentScore else { return false }
             let recentCount = stock.contexts.filter {
                 ($0.parsedDate ?? .distantPast) >= cutoff
             }.count
-            return score < 0.3 && recentCount >= 5
+            return score < 0.3 && recentCount >= 2
         }.sorted { ($0.sentimentScore ?? 1) < ($1.sentimentScore ?? 1) }
     }
 
-    // 本週提及次數
-    private func weeklyMentions(_ stock: StockEntry, weeksAgo: Int) -> Int {
+    // 區間提及次數：使用 selectedDays 為窗口大小
+    private func periodMentions(_ stock: StockEntry, periodsAgo: Int) -> Int {
+        let days = Int(appState.selectedDays)
         let now = Date()
-        let weekStart = Calendar.current.date(byAdding: .day, value: -7 * (weeksAgo + 1), to: now) ?? now
-        let weekEnd   = Calendar.current.date(byAdding: .day, value: -7 * weeksAgo, to: now) ?? now
+        let start = Calendar.current.date(byAdding: .day, value: -days * (periodsAgo + 1), to: now) ?? now
+        let end   = Calendar.current.date(byAdding: .day, value: -days * periodsAgo, to: now) ?? now
         return stock.contexts.filter {
             guard let d = $0.parsedDate else { return false }
-            return d >= weekStart && d < weekEnd
+            return d >= start && d < end
         }.count
     }
 
-    // 本週暴紅: this week > last week * 2 AND this week >= 3
+    // 近期暴紅: this period > last period * 2 AND last period > 0 AND this period >= 2
     private var hotThisWeek: [StockEntry] {
         allStocks.filter { stock in
-            let thisWeek = weeklyMentions(stock, weeksAgo: 0)
-            let lastWeek = weeklyMentions(stock, weeksAgo: 1)
-            guard thisWeek >= 3 else { return false }
-            if lastWeek == 0 { return thisWeek >= 3 }
-            return Double(thisWeek) / Double(lastWeek) > 2.0
-        }.sorted { weeklyMentions($0, weeksAgo: 0) > weeklyMentions($1, weeksAgo: 0) }
+            let cur  = periodMentions(stock, periodsAgo: 0)
+            let prev = periodMentions(stock, periodsAgo: 1)
+            guard cur >= 2, prev > 0 else { return false }
+            return Double(cur) / Double(prev) > 2.0
+        }.sorted { periodMentions($0, periodsAgo: 0) > periodMentions($1, periodsAgo: 0) }
     }
 
-    // 本週降溫: this week < last week * 0.5 AND last week >= 3
+    // 近期新上榜: this period >= 1 AND last period == 0
+    private var newThisWeek: [StockEntry] {
+        allStocks.filter { stock in
+            let cur  = periodMentions(stock, periodsAgo: 0)
+            let prev = periodMentions(stock, periodsAgo: 1)
+            return cur >= 1 && prev == 0
+        }.sorted { periodMentions($0, periodsAgo: 0) > periodMentions($1, periodsAgo: 0) }
+    }
+
+    // 近期降溫: this period < last period * 0.5 AND last period >= 2
     private var coolingThisWeek: [StockEntry] {
         allStocks.filter { stock in
-            let thisWeek = weeklyMentions(stock, weeksAgo: 0)
-            let lastWeek = weeklyMentions(stock, weeksAgo: 1)
-            guard lastWeek >= 3 else { return false }
-            return Double(thisWeek) / Double(lastWeek) < 0.5
-        }.sorted { weeklyMentions($0, weeksAgo: 1) > weeklyMentions($1, weeksAgo: 1) }
+            let cur  = periodMentions(stock, periodsAgo: 0)
+            let prev = periodMentions(stock, periodsAgo: 1)
+            guard prev >= 2 else { return false }
+            return Double(cur) / Double(prev) < 0.5
+        }.sorted { periodMentions($0, periodsAgo: 1) > periodMentions($1, periodsAgo: 1) }
     }
 
     var body: some View {
-        NavigationStack {
-            List {
+        @Bindable var appState = appState
+        return NavigationStack {
+            VStack(spacing: 0) {
+                HStack(spacing: 10) {
+                    Text("最近")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                    Slider(value: $appState.selectedDays, in: 1...90, step: 1)
+                    Text("\(Int(appState.selectedDays)) 天")
+                        .font(.caption.monospacedDigit())
+                        .frame(width: 44, alignment: .trailing)
+                }
+                .padding(.horizontal)
+                .padding(.vertical, 8)
+                Divider()
+
+                List {
                 radarSection(
                     title: "看多共識",
                     icon: "arrow.up.circle.fill",
                     color: .green,
                     stocks: bullishConsensus,
+                    emptyHint: "目前無看多股票（需情緒 > 70% 且近期提及 ≥ 2 次）",
                     subtitle: { stock in
                         let score = stock.sentimentScore.map { String(format: "%.0f%%", $0 * 100) } ?? ""
                         return "看多 \(score) · \(stock.totalMentions) 次提及"
@@ -82,37 +107,52 @@ struct RadarView: View {
                     icon: "arrow.down.circle.fill",
                     color: .red,
                     stocks: bearishConsensus,
+                    emptyHint: "目前無看空股票（需情緒 < 30% 且近期提及 ≥ 2 次）",
                     subtitle: { stock in
                         let score = stock.sentimentScore.map { String(format: "%.0f%%", (1 - $0) * 100) } ?? ""
                         return "看空 \(score) · \(stock.totalMentions) 次提及"
                     }
                 )
                 radarSection(
-                    title: "本週暴紅",
+                    title: "近期暴紅",
                     icon: "flame.fill",
                     color: .orange,
                     stocks: hotThisWeek,
+                    emptyHint: "近期無暴紅股票（需本期提及 ≥ 2 次且為上期 2 倍以上）",
                     subtitle: { stock in
-                        let tw = weeklyMentions(stock, weeksAgo: 0)
-                        let lw = weeklyMentions(stock, weeksAgo: 1)
-                        let ratio = lw > 0 ? String(format: "+%.0f%%", (Double(tw) / Double(lw) - 1) * 100) : "新上榜"
-                        return "本週 \(tw) 次 \(ratio)"
+                        let cur  = periodMentions(stock, periodsAgo: 0)
+                        let prev = periodMentions(stock, periodsAgo: 1)
+                        let ratio = prev > 0 ? String(format: "+%.0f%%", (Double(cur) / Double(prev) - 1) * 100) : ""
+                        return "本期 \(cur) 次 \(ratio)"
                     }
                 )
                 radarSection(
-                    title: "本週降溫",
+                    title: "近期新上榜",
+                    icon: "sparkle",
+                    color: .purple,
+                    stocks: newThisWeek,
+                    emptyHint: "近期無新上榜股票（上期未被提及、本期首次出現）",
+                    subtitle: { stock in
+                        let cur = periodMentions(stock, periodsAgo: 0)
+                        return "首次出現 · \(cur) 次提及"
+                    }
+                )
+                radarSection(
+                    title: "近期降溫",
                     icon: "snowflake",
                     color: .blue,
                     stocks: coolingThisWeek,
+                    emptyHint: "近期無降溫股票（需上期提及 ≥ 2 次且本期不到上期一半）",
                     subtitle: { stock in
-                        let tw = weeklyMentions(stock, weeksAgo: 0)
-                        let lw = weeklyMentions(stock, weeksAgo: 1)
-                        let ratio = lw > 0 ? String(format: "%.0f%%", Double(tw) / Double(lw) * 100) : "0%"
-                        return "本週 \(tw) 次（上週 \(lw) 次，剩 \(ratio)）"
+                        let cur  = periodMentions(stock, periodsAgo: 0)
+                        let prev = periodMentions(stock, periodsAgo: 1)
+                        let ratio = prev > 0 ? String(format: "%.0f%%", Double(cur) / Double(prev) * 100) : "0%"
+                        return "本期 \(cur) 次（上期 \(prev) 次，剩 \(ratio)）"
                     }
                 )
+                }
+                .listStyle(.insetGrouped)
             }
-            .listStyle(.insetGrouped)
             .navigationTitle("投資雷達")
         }
     }
@@ -123,13 +163,15 @@ struct RadarView: View {
         icon: String,
         color: Color,
         stocks: [StockEntry],
+        emptyHint: String,
         subtitle: @escaping (StockEntry) -> String
     ) -> some View {
         Section {
             if stocks.isEmpty {
-                Text("目前無符合條件的股票")
+                Text(emptyHint)
                     .foregroundStyle(.secondary)
                     .font(.caption)
+                    .padding(.vertical, 2)
             } else {
                 ForEach(stocks.prefix(10)) { stock in
                     NavigationLink {
