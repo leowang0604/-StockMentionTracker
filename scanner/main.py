@@ -703,6 +703,7 @@ def build_stock_dict(
 
 CONTEXT_REQUIRED: dict[str, list[str]] = {
     "AI": ["C3", "C3.ai"],  # avoid matching generic "AI" mentions not about C3.ai
+    "LI": ["Li Auto", "理想", "理想汽車"],  # avoid matching "li" in general Chinese text
 }
 
 # ─────────────────────────────────────────────────────────────────────────────
