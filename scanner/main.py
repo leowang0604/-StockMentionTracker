@@ -1122,7 +1122,10 @@ def process_youtube_video(
 
     mentions = []
     for h in hits:
-        label, score = analyze_sentiment(h["context"])
+        if analysis_source == "titleAndDescription":
+            label, score = "neutral", 0.5
+        else:
+            label, score = analyze_sentiment(h["context"])
         mentions.append({
             "stock_code":      h["stock_code"],
             "stock_name":      h["stock_name"],
@@ -1263,7 +1266,10 @@ def process_podcast_episode(
 
     mentions = []
     for h in hits:
-        label, score = analyze_sentiment(h["context"])
+        if analysis_source == "titleAndDescription":
+            label, score = "neutral", 0.5
+        else:
+            label, score = analyze_sentiment(h["context"])
         mentions.append({
             "stock_code":      h["stock_code"],
             "stock_name":      h["stock_name"],
