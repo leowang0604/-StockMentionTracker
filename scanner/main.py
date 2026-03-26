@@ -54,7 +54,7 @@ STOCKS_CACHE_FILE = Path(__file__).parent.parent / "data" / "stocks.json"
 
 ALIASES: dict[str, str] = {
     # 晶圓代工
-    "TSMC": "2330", "台積": "2330", "台灣積體電路": "2330",
+    "TSMC": "2330", "TSM": "2330", "台積": "2330", "台灣積體電路": "2330",
     "UMC": "2303", "聯電": "2303",
     "PSMC": "6770", "力積": "6770",
     "世界先進": "5347", "Vanguard": "5347",
