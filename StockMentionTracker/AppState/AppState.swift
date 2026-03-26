@@ -6,8 +6,7 @@ import Observation
 class AppState {
     private let defaults = UserDefaults.standard
 
-    static let githubPATKey   = "github_pat"
-    static let geminiAPIKeyKey = "gemini_api_key"
+    static let githubPATKey = "github_pat"
 
     // MARK: - Onboarding
 
@@ -43,12 +42,6 @@ class AppState {
 
     var cutoffDate: Date {
         Calendar.current.date(byAdding: .day, value: -Int(selectedDays), to: Date()) ?? Date()
-    }
-
-    // MARK: - Gemini API Key (for sentiment analysis, optional)
-
-    var geminiAPIKey: String = KeychainService.shared.get(key: AppState.geminiAPIKeyKey) ?? "" {
-        didSet { KeychainService.shared.set(key: AppState.geminiAPIKeyKey, value: geminiAPIKey) }
     }
 
     // MARK: - Computed
