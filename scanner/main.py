@@ -748,11 +748,12 @@ def recognize_stocks(text: str) -> list[dict]:
                     continue
 
             hits.append({
-                "stock_code":   code,
-                "stock_name":   CODE_TO_NAME.get(code, keyword),
-                "stock_market": STOCK_MARKET.get(code, "TW"),
-                "stock_sector": STOCK_SECTOR.get(code),
-                "context":      ctx,
+                "stock_code":      code,
+                "stock_name":      CODE_TO_NAME.get(code, keyword),
+                "stock_market":    STOCK_MARKET.get(code, "TW"),
+                "stock_sector":    STOCK_SECTOR.get(code),
+                "context":         ctx,
+                "matched_keyword": keyword,
             })
 
     return hits
@@ -1134,11 +1135,12 @@ def process_youtube_video(
             "video_title":     title,
             "channel":         source_name,
             "date":            date,
-            "context":         h["context"],
-            "analysis_source": analysis_source,
-            "sentiment":       label,
-            "sentiment_score": score,
-            "video_url":       video_url,
+            "context":          h["context"],
+            "matched_keyword":  h.get("matched_keyword", ""),
+            "analysis_source":  analysis_source,
+            "sentiment":        label,
+            "sentiment_score":  score,
+            "video_url":        video_url,
         })
 
     return video_entry, mentions
@@ -1442,11 +1444,12 @@ def merge_into_history(
                 "video":           m["video_title"],
                 "channel":         m["channel"],
                 "date":            m["date"],
-                "text":            m["context"],
-                "analysis_source": m.get("analysis_source", "titleAndDescription"),
-                "sentiment":       m.get("sentiment", "neutral"),
-                "sentiment_score": m.get("sentiment_score", 0.5),
-                "video_url":       m.get("video_url"),
+                "text":             m["context"],
+                "matched_keyword":  m.get("matched_keyword", ""),
+                "analysis_source":  m.get("analysis_source", "titleAndDescription"),
+                "sentiment":        m.get("sentiment", "neutral"),
+                "sentiment_score":  m.get("sentiment_score", 0.5),
+                "video_url":        m.get("video_url"),
             })
 
     # Rebuild stocks_ranking with daily aggregation and sentiment_score
