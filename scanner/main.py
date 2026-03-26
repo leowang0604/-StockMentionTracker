@@ -198,7 +198,7 @@ BULLISH_STRONG: set[str] = {
 # ── 弱看多關鍵字（權重 0.3）────────────────────────────────────────────────────
 BULLISH_MILD: set[str] = {
     # 短線
-    "看好", "低估", "便宜", "機會",
+    "看好", "低估", "便宜", "機會", "非常強", "很強", "超強", "極強",
     # 產業趨勢中性偏多
     "景氣回溫中", "庫存健康", "需求穩定", "訂單穩定",
     "產業整合", "強者恆強", "等待催化劑", "靜待訊號",
@@ -801,15 +801,6 @@ def analyze_sentiment(text: str) -> tuple[str, float]:
             bear_w += 0.3
 
     if bull_w == 0.0 and bear_w == 0.0:
-        try:
-            from snownlp import SnowNLP
-            score = float(SnowNLP(text[:200]).sentiments)
-            if score > 0.6:
-                return "bullish", round(score, 3)
-            elif score < 0.4:
-                return "bearish", round(score, 3)
-        except Exception:
-            pass
         return "neutral", 0.5
 
     total_w = bull_w + bear_w
