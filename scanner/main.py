@@ -1375,18 +1375,29 @@ def merge_into_history(
     - Appends new mention contexts to existing stocks
     - Recalculates total_mentions and sectors_ranking from all data
     """
-    existing_keys = {get_video_key(v) for v in history["videos_scanned"]}
+    # Quality ranking: whisper > captions > titleAndDescription
+    _quality = {"whisper": 2, "captions": 1, "titleAndDescription": 0}
+
+    existing_map: dict[str, dict] = {get_video_key(v): v for v in history["videos_scanned"]}
 
     actually_new: list[dict] = []
+    upgraded:     list[dict] = []
     for v in new_videos:
-        if get_video_key(v) not in existing_keys:
+        key = get_video_key(v)
+        if key not in existing_map:
             actually_new.append(v)
+        else:
+            old_quality = _quality.get(existing_map[key].get("analysis_source", ""), 0)
+            new_quality = _quality.get(v.get("analysis_source", ""), 0)
+            if new_quality > old_quality:
+                upgraded.append(v)
+                existing_map[key] = v   # replace with higher-quality entry
 
-    skipped = len(new_videos) - len(actually_new)
-    print(f"[scanner] New: {len(actually_new)} videos/episodes (skipped {skipped} duplicates)")
+    skipped = len(new_videos) - len(actually_new) - len(upgraded)
+    print(f"[scanner] New: {len(actually_new)} videos/episodes, upgraded: {len(upgraded)}, skipped: {skipped} duplicates")
 
-    merged_videos = history["videos_scanned"] + actually_new
-    new_titles    = {v["title"] for v in actually_new}
+    merged_videos = list(existing_map.values()) + actually_new
+    new_titles    = {v["title"] for v in actually_new + upgraded}
 
     # Start from existing stocks
     merged_stocks: dict[str, dict] = {}
