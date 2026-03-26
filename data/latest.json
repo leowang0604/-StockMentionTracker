@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-26T02:13:20",
+  "updated_at": "2026-03-26T02:13:40",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -254,10 +254,20 @@
           "sentiment": "bearish",
           "sentiment_score": 0.054,
           "video_url": null
+        },
+        {
+          "video": "天量套牢又來了？台積電長多不變！2026/03/23【老王不只三分鐘】",
+          "channel": "老王愛說笑",
+          "date": "2026-03-23",
+          "text": "天量套牢又來了？台積電長多不變！2026/03/23【老王不只三分鐘】 天量套牢又來而已？台積電長多不變！2026/03/23【老王不只三分鐘】 ☆加入軟體會員：https://reurl.cc/zKq",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "bearish",
+          "sentiment_score": 0.0,
+          "video_url": "https://www.youtube.com/watch?v=h8LeRetxETQ"
         }
       ],
-      "total_mentions": 25,
-      "sentiment_score": 0.28,
+      "total_mentions": 26,
+      "sentiment_score": 0.269,
       "daily": {
         "2026-03-25": {
           "mentions": 11,
@@ -274,11 +284,11 @@
           "sentiment_score": 0.0
         },
         "2026-03-23": {
-          "mentions": 4,
+          "mentions": 5,
           "bullish": 2,
-          "bearish": 2,
+          "bearish": 3,
           "neutral": 0,
-          "sentiment_score": 0.5
+          "sentiment_score": 0.4
         },
         "2026-03-21": {
           "mentions": 7,
@@ -1998,13 +2008,71 @@
           "sentiment_score": 1.0
         }
       }
+    },
+    {
+      "code": "3481",
+      "name": "群創",
+      "market": "TW",
+      "sector": "面板",
+      "contexts": [
+        {
+          "video": "群創身心受創？記憶體全倒只剩它們？2026/03/20【老王不只三分鐘】",
+          "channel": "老王愛說笑",
+          "date": "2026-03-20",
+          "text": "群創身心受創？記憶體全倒只剩它們？2026/03/20【老王不只三分鐘】 群創身心受創？記憶體全倒只剩它們？2026/03/20【老王不只三分鐘】 ☆加入軟體會員：https://re",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "bearish",
+          "sentiment_score": 0.001,
+          "video_url": "https://www.youtube.com/watch?v=2N0AFD_EUC4"
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.0,
+      "daily": {
+        "2026-03-20": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 1,
+          "neutral": 0,
+          "sentiment_score": 0.0
+        }
+      }
+    },
+    {
+      "code": "2368",
+      "name": "金像電",
+      "market": "TW",
+      "sector": "PCB",
+      "contexts": [
+        {
+          "video": "金像電1000了｜【浦男搜股】EP.261",
+          "channel": "老王愛說笑",
+          "date": "2026-03-19",
+          "text": "金像電1000了｜【浦男搜股】EP.261 加入老王會員請點選浦惠投顧官網：https://www.inclusion.com.tw/ ☆加入VIC黎志建、陳於晨、錢冠州老師會員，請來電",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "bearish",
+          "sentiment_score": 0.166,
+          "video_url": "https://www.youtube.com/watch?v=7Tn60jvAjJU"
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.0,
+      "daily": {
+        "2026-03-19": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 1,
+          "neutral": 0,
+          "sentiment_score": 0.0
+        }
+      }
     }
   ],
   "sectors_ranking": [
     {
       "sector": "晶圓代工",
       "market": "TW",
-      "total_mentions": 25,
+      "total_mentions": 26,
       "stock_codes": [
         "2330"
       ]
@@ -2086,6 +2154,15 @@
       ]
     },
     {
+      "sector": "PCB",
+      "market": "TW",
+      "total_mentions": 3,
+      "stock_codes": [
+        "4958",
+        "2368"
+      ]
+    },
+    {
       "sector": "AI軟體",
       "market": "US",
       "total_mentions": 2,
@@ -2118,11 +2195,12 @@
       ]
     },
     {
-      "sector": "PCB",
+      "sector": "面板",
       "market": "TW",
       "total_mentions": 2,
       "stock_codes": [
-        "4958"
+        "2409",
+        "3481"
       ]
     },
     {
@@ -2140,14 +2218,6 @@
       "total_mentions": 1,
       "stock_codes": [
         "LITE"
-      ]
-    },
-    {
-      "sector": "面板",
-      "market": "TW",
-      "total_mentions": 1,
-      "stock_codes": [
-        "2409"
       ]
     },
     {
@@ -2486,6 +2556,66 @@
       ],
       "analysis_source": "titleAndDescription",
       "thumbnail_url": "https://i.ytimg.com/vi/K6Rh2BVCGCA/mqdefault.jpg"
+    },
+    {
+      "video_id": "h8LeRetxETQ",
+      "title": "天量套牢又來了？台積電長多不變！2026/03/23【老王不只三分鐘】",
+      "channel": "老王愛說笑",
+      "date": "2026-03-23",
+      "stocks_found": [
+        "2330"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/h8LeRetxETQ/mqdefault.jpg"
+    },
+    {
+      "video_id": "WtghlG3g2XM",
+      "title": "聯準會｜【浦男搜股】EP.263",
+      "channel": "老王愛說笑",
+      "date": "2026-03-23",
+      "stocks_found": [],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/WtghlG3g2XM/mqdefault.jpg"
+    },
+    {
+      "video_id": "2N0AFD_EUC4",
+      "title": "群創身心受創？記憶體全倒只剩它們？2026/03/20【老王不只三分鐘】",
+      "channel": "老王愛說笑",
+      "date": "2026-03-20",
+      "stocks_found": [
+        "3481"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/2N0AFD_EUC4/mqdefault.jpg"
+    },
+    {
+      "video_id": "t1JqMTOR3_s",
+      "title": "光通訊｜【浦男搜股】EP.262",
+      "channel": "老王愛說笑",
+      "date": "2026-03-20",
+      "stocks_found": [],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/t1JqMTOR3_s/mqdefault.jpg"
+    },
+    {
+      "video_id": "37lpwfulLbo",
+      "title": "大戶都在買！不降息買什麼？2026/03/19【老王不只三分鐘】",
+      "channel": "老王愛說笑",
+      "date": "2026-03-19",
+      "stocks_found": [],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/37lpwfulLbo/mqdefault.jpg"
+    },
+    {
+      "video_id": "7Tn60jvAjJU",
+      "title": "金像電1000了｜【浦男搜股】EP.261",
+      "channel": "老王愛說笑",
+      "date": "2026-03-19",
+      "stocks_found": [
+        "2368"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/7Tn60jvAjJU/mqdefault.jpg"
     }
   ]
 }
