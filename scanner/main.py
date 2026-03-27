@@ -651,7 +651,8 @@ def fetch_stock_list() -> list[dict]:
     return stocks
 
 
-US_STOCKS_EXTRA_FILE = Path(__file__).parent.parent / "data" / "us_stocks_extra.json"
+US_STOCKS_EXTRA_FILE  = Path(__file__).parent.parent / "data" / "us_stocks_extra.json"
+SECTORS_CACHE_FILE    = Path(__file__).parent.parent / "data" / "sectors_cache.json"
 
 
 def enrich_us_stocks_with_gemini() -> list[tuple[list[str], str, str, str]]:
@@ -725,6 +726,66 @@ def enrich_us_stocks_with_gemini() -> list[tuple[list[str], str, str, str]]:
     except Exception as e:
         print(f"  [gemini] US stock enrichment failed: {e}", file=sys.stderr)
         return []
+
+
+def load_sectors_cache() -> dict[str, str]:
+    """載入 sectors_cache.json，回傳 code → sector dict。"""
+    try:
+        with open(SECTORS_CACHE_FILE, encoding="utf-8") as f:
+            return json.load(f).get("sectors", {})
+    except Exception:
+        return {}
+
+
+def enrich_sectors_with_gemini(codes_without_sector: list[str]) -> dict[str, str]:
+    """
+    對沒有 sector 的台股 code 批次問 Gemini，回傳 code → sector dict。
+    結果合併寫入 sectors_cache.json。
+    """
+    if not GEMINI_API_KEY or not codes_without_sector:
+        return {}
+
+    model = _get_gemini_model()
+    if not model:
+        return {}
+
+    # 只問有 name 的 code
+    items = [(c, CODE_TO_NAME.get(c, c)) for c in codes_without_sector if c in CODE_TO_NAME]
+    if not items:
+        return {}
+
+    lines = "\n".join(f"{code} {name}" for code, name in items)
+    prompt = (
+        "以下是台灣上市/上櫃股票，請為每支分配一個繁體中文族群名稱（例如：AI晶片、晶圓代工、記憶體、"
+        "伺服器、網通、散熱、電源、PCB、被動元件、面板、金融、航運、鋼鐵、電動車、生技製藥、ETF、其他）。\n"
+        "只回傳 JSON 物件，格式為 {\"股票代號\": \"族群\",...}，不要有多餘文字。\n\n"
+        + lines
+    )
+
+    try:
+        response = model.generate_content(prompt)
+        text = response.text.strip()
+        if text.startswith("```"):
+            text = re.sub(r"^```[a-z]*\n?", "", text)
+            text = re.sub(r"\n?```$", "", text)
+        new_sectors = json.loads(text)
+
+        # Merge with existing cache
+        existing = load_sectors_cache()
+        existing.update(new_sectors)
+
+        SECTORS_CACHE_FILE.parent.mkdir(parents=True, exist_ok=True)
+        with open(SECTORS_CACHE_FILE, "w", encoding="utf-8") as f:
+            json.dump({
+                "updated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S"),
+                "sectors": existing,
+            }, f, ensure_ascii=False, indent=2)
+
+        print(f"  [gemini] sector enriched: +{len(new_sectors)} stocks", file=sys.stderr)
+        return new_sectors
+    except Exception as e:
+        print(f"  [gemini] sector enrichment failed: {e}", file=sys.stderr)
+        return {}
 
 
 def build_stock_dict(
@@ -1688,6 +1749,11 @@ def main() -> None:
     print("[scanner] Enriching US stocks with Gemini…")
     extra_us = enrich_us_stocks_with_gemini()
     STOCK_DICT, CODE_TO_NAME, STOCK_MARKET, STOCK_SECTOR = build_stock_dict(stocks, extra_us)
+
+    # Merge cached sectors into STOCK_SECTOR
+    cached_sectors = load_sectors_cache()
+    STOCK_SECTOR.update(cached_sectors)
+
     us_count = sum(1 for v in STOCK_MARKET.values() if v == "US")
     tw_count = sum(1 for v in STOCK_MARKET.values() if v == "TW")
     print(f"[scanner] Stock dict ready — {len(STOCK_DICT)} keywords | TW: {tw_count}, US: {us_count}")
@@ -1767,6 +1833,21 @@ def main() -> None:
                 print(f"  📤 Pushed intermediate results")
         except Exception as e:
             print(f"  ⚠️  Intermediate commit failed (non-fatal): {e}")
+
+    # ── Enrich sectors for TW stocks mentioned but without sector ─────────
+    if GEMINI_API_KEY:
+        mentioned_tw = {
+            s["code"] for s in history.get("stocks_ranking", [])
+            if STOCK_MARKET.get(s["code"]) == "TW" and not STOCK_SECTOR.get(s["code"])
+        }
+        if mentioned_tw:
+            print(f"\n[scanner] Enriching sectors for {len(mentioned_tw)} TW stocks via Gemini…")
+            new_sectors = enrich_sectors_with_gemini(list(mentioned_tw))
+            STOCK_SECTOR.update(new_sectors)
+            # Patch sectors into history stocks_ranking
+            for stock in history.get("stocks_ranking", []):
+                if stock["code"] in new_sectors:
+                    stock["sector"] = new_sectors[stock["code"]]
 
     output         = history
     stocks_ranking = output["stocks_ranking"]
