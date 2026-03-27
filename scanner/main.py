@@ -651,8 +651,85 @@ def fetch_stock_list() -> list[dict]:
     return stocks
 
 
+US_STOCKS_EXTRA_FILE = Path(__file__).parent.parent / "data" / "us_stocks_extra.json"
+
+
+def enrich_us_stocks_with_gemini() -> list[tuple[list[str], str, str, str]]:
+    """
+    Ask Gemini to suggest additional US stocks popular in Taiwanese financial media
+    that aren't in our hardcoded list. Caches result for 30 days.
+    Returns list of (keywords, ticker, name, sector).
+    """
+    if not GEMINI_API_KEY:
+        return []
+
+    # Load from cache if fresh (< 30 days)
+    if US_STOCKS_EXTRA_FILE.exists():
+        age_days = (datetime.now(timezone.utc).timestamp() - US_STOCKS_EXTRA_FILE.stat().st_mtime) / 86400
+        if age_days < 30:
+            try:
+                with open(US_STOCKS_EXTRA_FILE, encoding="utf-8") as f:
+                    data = json.load(f)
+                result = [(item["keywords"], item["ticker"], item["name"], item["sector"])
+                          for item in data.get("stocks", [])]
+                print(f"  [gemini] US extra stocks loaded from cache: {len(result)} tickers", file=sys.stderr)
+                return result
+            except Exception:
+                pass
+
+    existing_tickers = set(US_CODE_TO_INFO.keys())
+    model = _get_gemini_model()
+    if not model:
+        return []
+
+    prompt = (
+        "台灣財經 YouTube 和 Podcast 頻道中，常被討論的美股有哪些？\n"
+        f"以下 ticker 已經有了，請列出還沒有、但台灣投資人常討論的美股：{', '.join(sorted(existing_tickers))}\n\n"
+        "請回傳 JSON 陣列，每筆格式（繁體中文 sector）：\n"
+        "[{\"ticker\": \"TICKER\", \"name\": \"英文公司名\", "
+        "\"sector\": \"族群\", \"keywords\": [\"中文名\", \"別名\", \"TICKER\"]}, ...]\n"
+        "只回傳 JSON，不要有多餘文字。列出 20~30 支。"
+    )
+
+    try:
+        response = model.generate_content(prompt)
+        text = response.text.strip()
+        if text.startswith("```"):
+            text = re.sub(r"^```[a-z]*\n?", "", text)
+            text = re.sub(r"\n?```$", "", text)
+        stocks_raw = json.loads(text)
+
+        result = []
+        for item in stocks_raw:
+            ticker = item.get("ticker", "").strip()
+            if not ticker or ticker in existing_tickers:
+                continue
+            result.append((
+                item.get("keywords", [ticker]),
+                ticker,
+                item.get("name", ticker),
+                item.get("sector", "其他"),
+            ))
+
+        # Save cache
+        US_STOCKS_EXTRA_FILE.parent.mkdir(parents=True, exist_ok=True)
+        with open(US_STOCKS_EXTRA_FILE, "w", encoding="utf-8") as f:
+            json.dump({
+                "updated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S"),
+                "stocks": [{"ticker": t, "name": n, "sector": s, "keywords": kws}
+                           for kws, t, n, s in result],
+            }, f, ensure_ascii=False, indent=2)
+
+        print(f"  [gemini] US extra stocks enriched: +{len(result)} new tickers", file=sys.stderr)
+        return result
+    except Exception as e:
+        print(f"  [gemini] US stock enrichment failed: {e}", file=sys.stderr)
+        return []
+
+
 def build_stock_dict(
     stocks: list[dict],
+    extra_us_stocks: list[tuple[list[str], str, str, str]] | None = None,
 ) -> tuple[dict[str, str], dict[str, str], dict[str, str], dict[str, str]]:
     """
     從台股清單 + US built-in dict 建立：
@@ -685,6 +762,16 @@ def build_stock_dict(
             code_to_name[ticker] = info["name"]
         stock_market[ticker] = "US"
         stock_sector[ticker] = info["sector"]
+
+    # ── US stocks (Gemini-enriched extra) ─────────────────────────────────
+    for kws, ticker, name, sector in (extra_us_stocks or []):
+        if ticker not in code_to_name:
+            code_to_name[ticker] = name
+        stock_market[ticker] = "US"
+        stock_sector[ticker] = sector
+        for kw in kws:
+            if kw not in stock_dict:  # don't override hardcoded entries
+                stock_dict[kw] = ticker
 
     # ── Taiwan aliases (override conflicts; TW wins over US for same keyword) ─
     for alias, code in ALIASES.items():
@@ -1598,7 +1685,9 @@ def main() -> None:
     global STOCK_DICT, CODE_TO_NAME, STOCK_MARKET, STOCK_SECTOR
     print("[scanner] Fetching Taiwan stock list…")
     stocks = fetch_stock_list()
-    STOCK_DICT, CODE_TO_NAME, STOCK_MARKET, STOCK_SECTOR = build_stock_dict(stocks)
+    print("[scanner] Enriching US stocks with Gemini…")
+    extra_us = enrich_us_stocks_with_gemini()
+    STOCK_DICT, CODE_TO_NAME, STOCK_MARKET, STOCK_SECTOR = build_stock_dict(stocks, extra_us)
     us_count = sum(1 for v in STOCK_MARKET.values() if v == "US")
     tw_count = sum(1 for v in STOCK_MARKET.values() if v == "TW")
     print(f"[scanner] Stock dict ready — {len(STOCK_DICT)} keywords | TW: {tw_count}, US: {us_count}")

@@ -105,6 +105,7 @@ jobs:
           ls -la data/ 2>/dev/null || echo "(data/ not found)"
           git add data/latest.json
           git add data/stocks.json 2>/dev/null || true
+          git add data/us_stocks_extra.json 2>/dev/null || true
           echo "=== staged diff stat ==="
           git diff --staged --stat
           if git diff --staged --quiet; then
