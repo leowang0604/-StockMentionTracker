@@ -44,6 +44,12 @@ struct RankingView: View {
                     emptyState
                 } else {
                     List {
+                        if let summary = dataService.scanResult.weeklySummary,
+                           searchText.isEmpty, marketFilter == "all" {
+                            Section {
+                                WeeklySummaryCard(summary: summary)
+                            }
+                        }
                         ForEach(Array(filteredStocks.enumerated()), id: \.element.id) { index, stock in
                             NavigationLink {
                                 StockDetailView(stock: stock)
@@ -135,6 +141,38 @@ struct RankingView: View {
                 .buttonStyle(.borderedProminent)
             }
         }
+    }
+}
+
+// MARK: - Weekly Summary Card
+
+struct WeeklySummaryCard: View {
+    let summary: WeeklySummary
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            Label("市場摘要", systemImage: "sparkles")
+                .font(.subheadline.bold())
+                .foregroundStyle(.purple)
+
+            Text(summary.text)
+                .font(.caption)
+                .foregroundStyle(.primary)
+                .lineSpacing(4)
+
+            if !summary.keyThemes.isEmpty {
+                HStack(spacing: 6) {
+                    ForEach(summary.keyThemes, id: \.self) { theme in
+                        Text(theme)
+                            .font(.caption2)
+                            .padding(.horizontal, 8).padding(.vertical, 3)
+                            .background(.purple.opacity(0.1), in: Capsule())
+                            .foregroundStyle(.purple)
+                    }
+                }
+            }
+        }
+        .padding(.vertical, 6)
     }
 }
 

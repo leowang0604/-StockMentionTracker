@@ -728,6 +728,52 @@ def enrich_us_stocks_with_gemini() -> list[tuple[list[str], str, str, str]]:
         return []
 
 
+def generate_weekly_summary(stocks_ranking: list[dict], days_back: int) -> dict | None:
+    """
+    用 Gemini 根據掃描結果產生市場摘要。
+    回傳 {"text": ..., "hot_stocks": [...], "key_themes": [...], "generated_at": ...}
+    """
+    if not GEMINI_API_KEY or not stocks_ranking:
+        return None
+
+    model = _get_gemini_model()
+    if not model:
+        return None
+
+    top = stocks_ranking[:20]
+    lines = []
+    for s in top:
+        score = s.get("sentiment_score", 0.5)
+        sentiment = "看多" if score > 0.6 else ("看空" if score < 0.4 else "中性")
+        lines.append(
+            f"{s['name']}({s['code']}) 提及{s['total_mentions']}次 {sentiment}"
+            + (f" 族群:{s['sector']}" if s.get("sector") else "")
+        )
+
+    prompt = (
+        f"以下是過去 {days_back} 天台灣財經 YouTube/Podcast 頻道的股票提及排行，"
+        "請用繁體中文寫一段 100-150 字的市場摘要。"
+        "重點包括：哪些股票最熱、整體市場情緒、主要族群趨勢。語氣像財經播客開場白。\n\n"
+        + "\n".join(lines)
+        + "\n\n只回傳 JSON："
+        "{\"text\": \"摘要文字\", \"hot_stocks\": [\"代號\",...最多5個], \"key_themes\": [\"主題\",...最多3個]}"
+    )
+
+    try:
+        response = model.generate_content(prompt)
+        text = response.text.strip()
+        if text.startswith("```"):
+            text = re.sub(r"^```[a-z]*\n?", "", text)
+            text = re.sub(r"\n?```$", "", text)
+        result = json.loads(text)
+        result["generated_at"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S")
+        print("  [gemini] weekly summary generated", file=sys.stderr)
+        return result
+    except Exception as e:
+        print(f"  [gemini] weekly summary failed: {e}", file=sys.stderr)
+        return None
+
+
 def load_sectors_cache() -> dict[str, str]:
     """載入 sectors_cache.json，回傳 code → sector dict。"""
     try:
@@ -1848,6 +1894,13 @@ def main() -> None:
             for stock in history.get("stocks_ranking", []):
                 if stock["code"] in new_sectors:
                     stock["sector"] = new_sectors[stock["code"]]
+
+    # ── Generate weekly summary ───────────────────────────────────────────
+    if GEMINI_API_KEY:
+        print("\n[scanner] Generating weekly summary via Gemini…")
+        summary = generate_weekly_summary(history.get("stocks_ranking", []), DAYS_BACK)
+        if summary:
+            history["weekly_summary"] = summary
 
     output         = history
     stocks_ranking = output["stocks_ranking"]

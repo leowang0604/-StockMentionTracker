@@ -1,5 +1,21 @@
 import Foundation
 
+// MARK: - Weekly Summary
+
+struct WeeklySummary: Codable {
+    let text: String
+    let hotStocks: [String]
+    let keyThemes: [String]
+    let generatedAt: String
+
+    enum CodingKeys: String, CodingKey {
+        case text
+        case hotStocks   = "hot_stocks"
+        case keyThemes   = "key_themes"
+        case generatedAt = "generated_at"
+    }
+}
+
 // MARK: - Top-level scan result
 
 struct ScanResult: Codable {
@@ -7,14 +23,16 @@ struct ScanResult: Codable {
     let stocksRanking: [StockEntry]
     let sectorsRanking: [SectorEntry]?
     let videosScanned: [VideoScanned]
+    let weeklySummary: WeeklySummary?
 
-    static let empty = ScanResult(updatedAt: "", stocksRanking: [], sectorsRanking: nil, videosScanned: [])
+    static let empty = ScanResult(updatedAt: "", stocksRanking: [], sectorsRanking: nil, videosScanned: [], weeklySummary: nil)
 
     enum CodingKeys: String, CodingKey {
         case updatedAt      = "updated_at"
         case stocksRanking  = "stocks_ranking"
         case sectorsRanking = "sectors_ranking"
         case videosScanned  = "videos_scanned"
+        case weeklySummary  = "weekly_summary"
     }
 
     var updatedDate: Date? {
