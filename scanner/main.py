@@ -1062,6 +1062,77 @@ def analyze_sentiment_batch_gemini(items: list[dict]) -> list[tuple[str, float]]
     return [_keyword_sentiment(it["context"]) for it in items]
 
 
+# Short English keywords that could be common words (need Gemini validation)
+_AMBIGUOUS_TICKER_KWS = {kw for kw in [] }  # built dynamically below
+
+def _is_ambiguous_hit(hit: dict) -> bool:
+    """判斷這個 hit 是否需要 Gemini 驗證（短英文 ticker 可能誤判）"""
+    # Already handled by CONTEXT_REQUIRED fast-path in recognize_stocks()
+    if hit["stock_code"] in CONTEXT_REQUIRED:
+        return False
+    kw = hit.get("matched_keyword", "")
+    # Chinese keywords are very specific — safe
+    if not re.match(r'^[A-Za-z]', kw):
+        return False
+    # 1-2 char English → always ambiguous
+    if len(kw) <= 2:
+        return True
+    # Known ambiguous 3-char English words
+    if kw.upper() in {"ARM"}:
+        return True
+    return False
+
+
+def filter_ambiguous_hits_with_gemini(hits: list[dict]) -> list[dict]:
+    """
+    對短英文 ticker 的命中，批次送 Gemini 確認是否真的在討論該股票。
+    每支影片最多 1 次 Gemini call。沒有 API key 則直接回傳原始 hits。
+    """
+    if not GEMINI_API_KEY or not hits:
+        return hits
+
+    safe_hits      = [h for h in hits if not _is_ambiguous_hit(h)]
+    ambiguous_hits = [h for h in hits if _is_ambiguous_hit(h)]
+
+    if not ambiguous_hits:
+        return hits
+
+    model = _get_gemini_model()
+    if not model:
+        return hits
+
+    lines = []
+    for i, h in enumerate(ambiguous_hits, 1):
+        lines.append(
+            f"{i}. 代號{h['stock_code']}({h['stock_name']})，"
+            f"上下文：「{h['context'][:100]}」"
+        )
+
+    prompt = (
+        "以下是從台灣財經 YouTube/Podcast 內容中比對到的股票，"
+        "請判斷哪些真的在討論該股票（而非一般英文用語或中文詞）。\n"
+        "只回傳真正在討論股票的編號 JSON 陣列，例如 [1, 3]。若全部都不是則回傳 []。\n\n"
+        + "\n".join(lines)
+    )
+
+    try:
+        response = model.generate_content(prompt)
+        text = response.text.strip()
+        if text.startswith("```"):
+            text = re.sub(r"^```[a-z]*\n?", "", text)
+            text = re.sub(r"\n?```$", "", text)
+        valid_indices = set(json.loads(text))
+        validated = [h for i, h in enumerate(ambiguous_hits, 1) if i in valid_indices]
+        removed = len(ambiguous_hits) - len(validated)
+        if removed > 0:
+            codes = [h["stock_code"] for h in ambiguous_hits if h not in validated]
+            print(f"  [gemini] filtered {removed} ambiguous hits: {codes}", file=sys.stderr)
+        return safe_hits + validated
+    except Exception as e:
+        print(f"  [gemini] ambiguous filter failed: {e}", file=sys.stderr)
+        return hits  # fallback: keep all
+
+
 def analyze_sentiment(text: str) -> tuple[str, float]:
     """
     Single-context sentiment analysis.
@@ -1356,7 +1427,7 @@ def process_youtube_video(
         print(f"  ⚠ fallback → title+description")
 
     # ── Recognize stocks ──────────────────────────────────────────────────
-    hits        = recognize_stocks(text)
+    hits        = filter_ambiguous_hits_with_gemini(recognize_stocks(text))
     stock_codes = list({h["stock_code"] for h in hits})
     if stock_codes:
         print(f"  📌 {stock_codes}")
@@ -1508,7 +1579,7 @@ def process_podcast_episode(
         text = title + " " + ep.get("description", "")
         analysis_source = "titleAndDescription"
 
-    hits        = recognize_stocks(text)
+    hits        = filter_ambiguous_hits_with_gemini(recognize_stocks(text))
     stock_codes = list({h["stock_code"] for h in hits})
     if stock_codes:
         print(f"  📌 {stock_codes}")
