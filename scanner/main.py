@@ -1943,6 +1943,10 @@ def main() -> None:
                     check=True
                 )
                 subprocess.run(
+                    ["git", "rebase", "--abort"],
+                    capture_output=True  # non-fatal if no rebase in progress
+                )
+                subprocess.run(
                     ["git", "pull", "--rebase", "origin", "main"],
                     check=True
                 )

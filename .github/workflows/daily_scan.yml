@@ -113,6 +113,7 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "chore: daily scan $(date -u +%Y-%m-%d)"
+            git rebase --abort 2>/dev/null || true
             git pull --rebase origin main
             git push
           fi
