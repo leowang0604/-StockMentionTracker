@@ -46,8 +46,11 @@ struct RankingView: View {
                     List {
                         if let summary = dataService.scanResult.weeklySummary,
                            searchText.isEmpty, marketFilter == "all" {
+                            let stockLookup = Dictionary(
+                                uniqueKeysWithValues: dataService.scanResult.stocksRanking.map { ($0.code, $0) }
+                            )
                             Section {
-                                WeeklySummaryCard(summary: summary)
+                                WeeklySummaryCard(summary: summary, stockLookup: stockLookup)
                             }
                         }
                         ForEach(Array(filteredStocks.enumerated()), id: \.element.id) { index, stock in
@@ -148,17 +151,43 @@ struct RankingView: View {
 
 struct WeeklySummaryCard: View {
     let summary: WeeklySummary
+    let stockLookup: [String: StockEntry]
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Label("市場摘要", systemImage: "sparkles")
-                .font(.subheadline.bold())
-                .foregroundStyle(.purple)
+            HStack {
+                Label("市場摘要", systemImage: "sparkles")
+                    .font(.subheadline.bold())
+                    .foregroundStyle(.purple)
+                Spacer()
+                Text(generatedAtText)
+                    .font(.caption2)
+                    .foregroundStyle(.tertiary)
+            }
 
             Text(summary.text)
                 .font(.caption)
                 .foregroundStyle(.primary)
                 .lineSpacing(4)
+
+            if !hotStockEntries.isEmpty {
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 6) {
+                        ForEach(hotStockEntries) { stock in
+                            NavigationLink {
+                                StockDetailView(stock: stock)
+                            } label: {
+                                Text(stock.name)
+                                    .font(.caption2.bold())
+                                    .padding(.horizontal, 8).padding(.vertical, 3)
+                                    .background(.orange.opacity(0.12), in: Capsule())
+                                    .foregroundStyle(.orange)
+                            }
+                            .buttonStyle(.plain)
+                        }
+                    }
+                }
+            }
 
             if !summary.keyThemes.isEmpty {
                 HStack(spacing: 6) {
@@ -173,6 +202,20 @@ struct WeeklySummaryCard: View {
             }
         }
         .padding(.vertical, 6)
+    }
+
+    private var hotStockEntries: [StockEntry] {
+        summary.hotStocks.compactMap { stockLookup[$0] }
+    }
+
+    private var generatedAtText: String {
+        let f = ISO8601DateFormatter()
+        f.formatOptions = [.withFullDate, .withTime, .withDashSeparatorInDate, .withColonSeparatorInTime]
+        guard let date = f.date(from: summary.generatedAt) else { return "" }
+        let df = DateFormatter()
+        df.locale = Locale(identifier: "zh_TW")
+        df.dateFormat = "M/d 由 AI 生成"
+        return df.string(from: date)
     }
 }
 
