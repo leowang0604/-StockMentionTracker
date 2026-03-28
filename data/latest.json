@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-28T19:10:58",
+  "updated_at": "2026-03-28T19:11:09",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -646,9 +646,20 @@
           "sentiment": "bullish",
           "sentiment_score": 0.9,
           "video_url": null
+        },
+        {
+          "video": "股票開高要追嗎?【王老先聲】#停損價 #投資人 #紀律",
+          "channel": "老王愛說笑",
+          "date": "2026-03-28",
+          "text": "股票開高要追嗎?【王老先聲】#停損價 #投資人 #紀律 您也可以在以下頻道透過Podcast收聽： Apple Podcast：https://reurl.cc/52DnlR Spotify：https://reurl.cc/xEpqZE ...",
+          "matched_keyword": "Apple",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "https://www.youtube.com/watch?v=O1UIm7-L3IQ"
         }
       ],
-      "total_mentions": 26,
+      "total_mentions": 27,
       "sentiment_score": 0.417,
       "daily": {
         "2026-03-25": {
@@ -694,10 +705,10 @@
           "sentiment_score": 0.667
         },
         "2026-03-28": {
-          "mentions": 9,
+          "mentions": 10,
           "bullish": 8,
           "bearish": 0,
-          "neutral": 1,
+          "neutral": 2,
           "sentiment_score": 1.0
         }
       }
@@ -4822,7 +4833,7 @@
     {
       "sector": "消費電子",
       "market": "US",
-      "total_mentions": 26,
+      "total_mentions": 27,
       "stock_codes": [
         "AAPL"
       ]
@@ -5862,6 +5873,17 @@
       ],
       "analysis_source": "whisper",
       "thumbnail_url": null
+    },
+    {
+      "video_id": "O1UIm7-L3IQ",
+      "title": "股票開高要追嗎?【王老先聲】#停損價 #投資人 #紀律",
+      "channel": "老王愛說笑",
+      "date": "2026-03-28",
+      "stocks_found": [
+        "AAPL"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/O1UIm7-L3IQ/mqdefault.jpg"
     }
   ]
 }
