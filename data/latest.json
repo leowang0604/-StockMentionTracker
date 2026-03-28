@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-28T19:11:09",
+  "updated_at": "2026-03-28T21:16:21",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -964,10 +964,21 @@
           "sentiment": "bullish",
           "sentiment_score": 0.9,
           "video_url": null
+        },
+        {
+          "video": "EP1066｜台股有些怪怪的？無法止戰，會否拖磨指數向下？低軌衛星、矽光子、PCB、設備看高做低的方法？認真等一下的時間到了！ft.操盤手 黃豐凱",
+          "channel": "兆華與股惑仔",
+          "date": "2026-03-27",
+          "text": "不過因為現階段 你要直接V轉 直接漲上去 我覺得機率也是相對低 畢竟就是這種佔於密布的陰霾 油價上去通膨的陰霾 然後AI這個支出 現在大家市場評價 不是很買單的陰霾 然後還有像 Google不是推了這什麼Turbo Turbo礦 結果讓整個機體殺下來 不過今天機體看起來是指紋囉 所以我跟凱哥在記憶體的想法 都是一樣的 記憶體因為它的價格 現在有點鬆動的關係 型態看起來",
+          "matched_keyword": "",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.7,
+          "video_url": null
         }
       ],
-      "total_mentions": 23,
-      "sentiment_score": 0.5,
+      "total_mentions": 24,
+      "sentiment_score": 0.471,
       "daily": {
         "2026-03-22": {
           "mentions": 5,
@@ -1012,11 +1023,11 @@
           "sentiment_score": 1.0
         },
         "2026-03-27": {
-          "mentions": 2,
+          "mentions": 3,
           "bullish": 0,
-          "bearish": 0,
+          "bearish": 1,
           "neutral": 2,
-          "sentiment_score": 0.5
+          "sentiment_score": 0.0
         },
         "2026-03-28": {
           "mentions": 9,
@@ -2178,10 +2189,21 @@
           "sentiment": "bearish",
           "sentiment_score": 0.0,
           "video_url": null
+        },
+        {
+          "video": "EP1066｜台股有些怪怪的？無法止戰，會否拖磨指數向下？低軌衛星、矽光子、PCB、設備看高做低的方法？認真等一下的時間到了！ft.操盤手 黃豐凱",
+          "channel": "兆華與股惑仔",
+          "date": "2026-03-27",
+          "text": "中東國家的這個神明 是 他們的這個 最高指導原則 阿拉真神 真神 所以我說 除非川普把基督 這個上帝拉出來 否則基本上 他是一個屬林的戰爭 所以很難講是會贏 真的 我覺得 尤其你是統一個馬風窩之後 這個馬風窩 飛出來的這個 風質很多 所以基本上 他有點失控 失控 但是我覺得 我剛講一件事情 你要認真聽 我剛講 他開放五個國家郵輪 可以進出河母之海峽 代表 河母之",
+          "matched_keyword": "",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.8,
+          "video_url": null
         }
       ],
-      "total_mentions": 12,
-      "sentiment_score": 0.417,
+      "total_mentions": 13,
+      "sentiment_score": 0.385,
       "daily": {
         "2026-03-23": {
           "mentions": 3,
@@ -2210,6 +2232,175 @@
           "bearish": 3,
           "neutral": 0,
           "sentiment_score": 0.5
+        },
+        "2026-03-27": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 1,
+          "neutral": 0,
+          "sentiment_score": 0.0
+        }
+      }
+    },
+    {
+      "code": "3045",
+      "name": "台灣大",
+      "market": "TW",
+      "sector": "電信",
+      "contexts": [
+        {
+          "video": "EP1066｜台股有些怪怪的？無法止戰，會否拖磨指數向下？低軌衛星、矽光子、PCB、設備看高做低的方法？認真等一下的時間到了！ft.操盤手 黃豐凱",
+          "channel": "兆華與股惑仔",
+          "date": "2026-03-27",
+          "text": "為之前 我們也有這樣想過 可是廠物後來又在 絕地大反攻一次 我覺得那一波主要是漢堂帶動 可是那一波漢堂主要是 因為高股息的概念股 高股息的資金在買它 還是比較有這個部分 那一樣在講台灣大車隊 其實我這幾年 我很常每次要做台灣大車隊 我就問他們說 最近生意怎麼樣什麼 因為我有一個很好的 我的同門 他就持有很多台灣大車隊 所以我就特別關心台灣大車隊 台灣大車隊的司機",
+          "matched_keyword": "",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.6,
+          "video_url": null
+        },
+        {
+          "video": "EP1066｜台股有些怪怪的？無法止戰，會否拖磨指數向下？低軌衛星、矽光子、PCB、設備看高做低的方法？認真等一下的時間到了！ft.操盤手 黃豐凱",
+          "channel": "兆華與股惑仔",
+          "date": "2026-03-27",
+          "text": "高股息的資金在買它 還是比較有這個部分 那一樣在講台灣大車隊 其實我這幾年 我很常每次要做台灣大車隊 我就問他們說 最近生意怎麼樣什麼 因為我有一個很好的 我的同門 他就持有很多台灣大車隊 所以我就特別關心台灣大車隊 台灣大車隊的司機 就會跟你來北郊部 就是說 因為台灣大車 其實它一直在併小的車隊 併完之後它的這個 包括像跳錶機啊什麼 它都恰舉一個很高的約租費",
+          "matched_keyword": "",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": null
+        },
+        {
+          "video": "EP1066｜台股有些怪怪的？無法止戰，會否拖磨指數向下？低軌衛星、矽光子、PCB、設備看高做低的方法？認真等一下的時間到了！ft.操盤手 黃豐凱",
+          "channel": "兆華與股惑仔",
+          "date": "2026-03-27",
+          "text": "要做台灣大車隊 我就問他們說 最近生意怎麼樣什麼 因為我有一個很好的 我的同門 他就持有很多台灣大車隊 所以我就特別關心台灣大車隊 台灣大車隊的司機 就會跟你來北郊部 就是說 因為台灣大車 其實它一直在併小的車隊 併完之後它的這個 包括像跳錶機啊什麼 它都恰舉一個很高的約租費 所以它基本上就是從 計程車的司機上面 撥一層皮下來 對 撥個皮 是不是很像 那因為它規模",
+          "matched_keyword": "",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.8,
+          "video_url": null
+        },
+        {
+          "video": "EP1066｜台股有些怪怪的？無法止戰，會否拖磨指數向下？低軌衛星、矽光子、PCB、設備看高做低的方法？認真等一下的時間到了！ft.操盤手 黃豐凱",
+          "channel": "兆華與股惑仔",
+          "date": "2026-03-27",
+          "text": "為它規模擴大了嘛 所以它就會產生規模效益 規模效益 再加上 因為最近戰爭的關係 所以 通常在戰爭的時候 通常高股息的股票就會開始 睡醒 通常睡醒的時候 它就會一波 漲上來 但是我說台灣大車隊 其實你要注意喔 因為它近期已經開始在爆亮了 所以你就要稍微注意一下 它是爆亮不漲 那如果它爆亮還會持續在上漲 基本上 就還是可以操作啦 那如果它開始爆亮不漲 流長上影線 你就",
+          "matched_keyword": "",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.7,
+          "video_url": null
+        },
+        {
+          "video": "EP1066｜台股有些怪怪的？無法止戰，會否拖磨指數向下？低軌衛星、矽光子、PCB、設備看高做低的方法？認真等一下的時間到了！ft.操盤手 黃豐凱",
+          "channel": "兆華與股惑仔",
+          "date": "2026-03-27",
+          "text": "近這樣長起來 第一我當然覺得是 一定有反映去年的獲利 有大幅的成長 那後來最有趣的是 那天跟韋太講 他就說 欸 我跟你講啊 這場公司一定有他的賺錢的方法 我又怎麼講 他說因為每次搭台灣大車 對他的司機都一直抱怨公司 我就說 可是我每次聽他們抱怨 我都覺得有點叫去 但我為什麼會一直叫 台灣大車隊的車 其實那時候有人跟我說 因為他的車越來越難叫 現在其實好像願意開 小",
+          "matched_keyword": "",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.8,
+          "video_url": null
+        },
+        {
+          "video": "EP1066｜台股有些怪怪的？無法止戰，會否拖磨指數向下？低軌衛星、矽光子、PCB、設備看高做低的方法？認真等一下的時間到了！ft.操盤手 黃豐凱",
+          "channel": "兆華與股惑仔",
+          "date": "2026-03-27",
+          "text": "說 欸 我跟你講啊 這場公司一定有他的賺錢的方法 我又怎麼講 他說因為每次搭台灣大車 對他的司機都一直抱怨公司 我就說 可是我每次聽他們抱怨 我都覺得有點叫去 但我為什麼會一直叫 台灣大車隊的車 其實那時候有人跟我說 因為他的車越來越難叫 現在其實好像願意開 小黃的司機越來越少 變得好難叫 他們都說 你為什麼不叫Uber 你為什麼不叫很多 什麼Lightaxe 好",
+          "matched_keyword": "",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.8,
+          "video_url": null
+        },
+        {
+          "video": "EP1066｜台股有些怪怪的？無法止戰，會否拖磨指數向下？低軌衛星、矽光子、PCB、設備看高做低的方法？認真等一下的時間到了！ft.操盤手 黃豐凱",
+          "channel": "兆華與股惑仔",
+          "date": "2026-03-27",
+          "text": "開 小黃的司機越來越少 變得好難叫 他們都說 你為什麼不叫Uber 你為什麼不叫很多 什麼Lightaxe 好多 我說可是 我做完覺得 雖然大家搭計程車 多多少少會有不開心的經驗 台灣大車隊也有 但它真的比較少 所以對我來說 我就覺得很重要 就是至少我要讓這個 搭車不愉快的體驗 跟安全感要拉高 所以我還是 每天都至少貢獻兩趟 台灣大車隊的錢 那我想到了 為什麼我之",
+          "matched_keyword": "",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.9,
+          "video_url": null
+        },
+        {
+          "video": "EP1066｜台股有些怪怪的？無法止戰，會否拖磨指數向下？低軌衛星、矽光子、PCB、設備看高做低的方法？認真等一下的時間到了！ft.操盤手 黃豐凱",
+          "channel": "兆華與股惑仔",
+          "date": "2026-03-27",
+          "text": "程車 多多少少會有不開心的經驗 台灣大車隊也有 但它真的比較少 所以對我來說 我就覺得很重要 就是至少我要讓這個 搭車不愉快的體驗 跟安全感要拉高 所以我還是 每天都至少貢獻兩趟 台灣大車隊的錢 那我想到了 為什麼我之前不賣 我之前就覺得 喔他有股息 那他股息進來 剛好可以cover 我每天搭計程車的錢 所以我就不賣 他也是一種 大家如果在生活上 選股可以考量的方",
+          "matched_keyword": "",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.9,
+          "video_url": null
+        },
+        {
+          "video": "EP1066｜台股有些怪怪的？無法止戰，會否拖磨指數向下？低軌衛星、矽光子、PCB、設備看高做低的方法？認真等一下的時間到了！ft.操盤手 黃豐凱",
+          "channel": "兆華與股惑仔",
+          "date": "2026-03-27",
+          "text": "萬萬沒想到 因為現在是AI時代 我萬萬沒有想到 竟然還有這種 所謂的 以前拿來零股息的股票 內需概念的 可以拿來在這個時候 討論我覺得非常有趣 對因為其實他就是 你生活的概念 而且台灣大車隊 已經變成是一個知名品牌 可是不流行生活概念 你在叫計程車的時候 你去想一件事情 找一下什麼新生活車隊 什麼藍天使車隊 其實都消失了 其實很多隊已經被 台灣大車隊買下來了 但現",
+          "matched_keyword": "",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.8,
+          "video_url": null
+        },
+        {
+          "video": "EP1066｜台股有些怪怪的？無法止戰，會否拖磨指數向下？低軌衛星、矽光子、PCB、設備看高做低的方法？認真等一下的時間到了！ft.操盤手 黃豐凱",
+          "channel": "兆華與股惑仔",
+          "date": "2026-03-27",
+          "text": "你生活的概念 而且台灣大車隊 已經變成是一個知名品牌 可是不流行生活概念 你在叫計程車的時候 你去想一件事情 找一下什麼新生活車隊 什麼藍天使車隊 其實都消失了 其實很多隊已經被 台灣大車隊買下來了 但現在車子 就很多計程車大哥 他們就是一台車友 好幾個身份 就是他既跑台灣大車隊 他也會跑uber 所以基本上 你不知道他的身份到底是什麼 但是你記得 你偷偷台灣大車",
+          "matched_keyword": "",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": null
+        },
+        {
+          "video": "EP1066｜台股有些怪怪的？無法止戰，會否拖磨指數向下？低軌衛星、矽光子、PCB、設備看高做低的方法？認真等一下的時間到了！ft.操盤手 黃豐凱",
+          "channel": "兆華與股惑仔",
+          "date": "2026-03-27",
+          "text": "候 你去想一件事情 找一下什麼新生活車隊 什麼藍天使車隊 其實都消失了 其實很多隊已經被 台灣大車隊買下來了 但現在車子 就很多計程車大哥 他們就是一台車友 好幾個身份 就是他既跑台灣大車隊 他也會跑uber 所以基本上 你不知道他的身份到底是什麼 但是你記得 你偷偷台灣大車隊 叫車他就屬於 台灣大車隊的營收 應該這樣講 不好叫 然後他們還有叫我一些 Petbal",
+          "matched_keyword": "",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": null
+        },
+        {
+          "video": "EP1066｜台股有些怪怪的？無法止戰，會否拖磨指數向下？低軌衛星、矽光子、PCB、設備看高做低的方法？認真等一下的時間到了！ft.操盤手 黃豐凱",
+          "channel": "兆華與股惑仔",
+          "date": "2026-03-27",
+          "text": "台灣大車隊買下來了 但現在車子 就很多計程車大哥 他們就是一台車友 好幾個身份 就是他既跑台灣大車隊 他也會跑uber 所以基本上 你不知道他的身份到底是什麼 但是你記得 你偷偷台灣大車隊 叫車他就屬於 台灣大車隊的營收 應該這樣講 不好叫 然後他們還有叫我一些 Petball 例如說 因為他們現在好像是 他們叫車收的儀器 是看不到叫的人 想要在哪裡下車的 雖然",
+          "matched_keyword": "",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.6,
+          "video_url": null
+        },
+        {
+          "video": "EP1066｜台股有些怪怪的？無法止戰，會否拖磨指數向下？低軌衛星、矽光子、PCB、設備看高做低的方法？認真等一下的時間到了！ft.操盤手 黃豐凱",
+          "channel": "兆華與股惑仔",
+          "date": "2026-03-27",
+          "text": "樣我就可以馬上決定 要接你的單子 要不然因為我看不到 我就會有點擔心 當然你會說 司機怎麼可以挑單 但難免 我有一隻難免 所以我都會寫一下 我的下車地在哪裡 其實告訴一個秘密 因為台灣大車隊 在大直有一個休息站 有啦 有 所以我通常會大直 你回大直 他們可能說 順便回去休息一下 因為你要知道 司機在那邊跑一整天 很辛苦 真的很辛苦 那他們 其實你隨便路邊亂停 可能",
+          "matched_keyword": "",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.6,
+          "video_url": null
+        }
+      ],
+      "total_mentions": 13,
+      "sentiment_score": 0.9,
+      "daily": {
+        "2026-03-27": {
+          "mentions": 13,
+          "bullish": 9,
+          "bearish": 1,
+          "neutral": 3,
+          "sentiment_score": 0.9
         }
       }
     },
@@ -3048,6 +3239,123 @@
       }
     },
     {
+      "code": "LI",
+      "name": "Li Auto",
+      "market": "US",
+      "sector": "電動車",
+      "contexts": [
+        {
+          "video": "EP1063｜停戰羅生門，川劇演到哪？台股千點被沒收，投信、大戶仍進場、第一個拐點出現？檢查一下，愛股契機出現沒？ft.選股教練 陳唯泰",
+          "channel": "兆華與股惑仔",
+          "date": "2026-03-24",
+          "text": "會不會再升席 這件事情 這個可能要 接下來就是 市場上面的關注的 焦點 例如說 CPI的連爭率 或者PPI連爭率 因為其實PPI跟CPI 才上一次的公告數 是來講 其實都不是特別的理想 大家會擔心 通鋒似不是有可能 我真的在一起 所以接下來 我覺得大家 可能 新中的焦點 就要開始放在這個 所謂的聯準會 未來的一個 升席與否的一個問題 那這次聯準會 做公告出來的這",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.0,
+          "video_url": null
+        },
+        {
+          "video": "EP1062｜美伊更兇，嗆炸電廠、炸AI中心，通膨起？股債金銀都跌！台積電撐盤，乖離修正恐持續？如何判斷跌到哪裡該加碼、加碼誰？ft.存股教父 股魚",
+          "channel": "兆華與股惑仔",
+          "date": "2026-03-23",
+          "text": "買一貼幅的時候 大幅都很喜歡買 0.757萬 因為金牙骨 他過去一年鋪 你千萬不要這麼說 最難能他在一貼幅的這一塊 可能你覺得七五七 在最近的表現 因為大型骨的關係 表現比較不那麼理想 可是在海外型的基金 裡面有一檔 叫做統一全球新科技基金 他整體的一個配置跟價格 有點像0.757有 那他的話 在最近三年交出來的基銷 也高達219% 所以他的效果 也是非常不錯的",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.132,
+          "video_url": null
+        },
+        {
+          "video": "EP1061｜戰爭亂到4月底？不讓自己被套牢，也不錯過小飆股的操作SOP！台股1700多檔股票，如何高勝率選股？套牢股換到強勢股，心魔大破解！ft.朱家泓.林穎",
+          "channel": "兆華與股惑仔",
+          "date": "2026-03-21",
+          "text": "掉 那賺錢 你也知道要賺到 拿你才賣 而不會小小的又跑掉了 那這就是一般閃哭 一直沒有抓到一個 一個方向或一個方法 也就是老師這很訴求 就是第一時間 你就預防剩於治療 第一時間 你理想就沒有被套老的問題 但如果真的很不信 被套老很深的朋友 林老師還是建議你 至少不分要換心金回來 然後因為現在看到 排面上有很多數可以讓你 轉載為銀的 繼續反攻的股票 那我這邊今天兩",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.0,
+          "video_url": null
+        },
+        {
+          "video": "EP211 | 台、美股重點一次說，IG被停用中，華通未來主要營收結構，LPU與SRAM和設備廠關係，NVDA GTC大會",
+          "channel": "韭菜畢業班",
+          "date": "2026-03-15",
+          "text": "應該還是會去看到的 那我也不奢望說 每個人都要回來追蹤我這樣子 我覺得反正有中午一天會 假如去做短癮 做得好的話 我覺得還是會被人家看見的 反正我們就是一樣保持 我覺得最根本的一個理想 就是讓先追蹤我的人驕傲 那現在如果重新創一個 大家先重新追蹤我 那也要是第一批人了 那我還是會非常感謝 反正我認為現在追蹤我的 我應該會加倍感謝 因為我其實都是一個蠻感恩的人 那",
+          "matched_keyword": "",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.0,
+          "video_url": null
+        },
+        {
+          "video": "EP1065｜盤中跳水，不安全感轟炸！PCB多檔創高，點名「光模塊」，華通、臻鼎的新商機？中國玻纖擴產，誰不受影響？ft.PCB女王 廖婉婷",
+          "channel": "兆華與股惑仔",
+          "date": "2026-03-26",
+          "text": "論到的 一檔ETF是你們統一的00757 就是美國的金牙鼓的Pras等一檔 那因為它在過去一年就表現不好了 因為美國的所謂的金牙鼓 甚至裡面可能也包含了七巨頭 它就狀況就不是那麼的理想 但是我個人覺得 757從來都不是在它標的時候 硬要去買它 對 就是我非常任何完全的講法 就如果你手上有這種 美國巨頭型的 AI 科技型的ETF 你會肯定覺得 怎麼就跟不上 因為也",
+          "matched_keyword": "",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.0,
+          "video_url": null
+        },
+        {
+          "video": "EP1066｜台股有些怪怪的？無法止戰，會否拖磨指數向下？低軌衛星、矽光子、PCB、設備看高做低的方法？認真等一下的時間到了！ft.操盤手 黃豐凱",
+          "channel": "兆華與股惑仔",
+          "date": "2026-03-27",
+          "text": "級基金操盤手黃豐凱凱哥 早安好 各位聽眾大家下午好 下午好 播出的時候是傍晚通勤時間 希望這一個禮拜 大家的疲憊 能夠先暫時放到一邊 因為這禮拜如果在台股市場裡面的感受 應該不是太理想 除非您買到的是跟凱哥一樣 因為他剛剛跟我說他有君華 他有擁置科 喔不行啦 那是你在高興 很多人並沒有辦法開心 那我們先來講一下 現在這個國際局勢 我想這禮拜最特別的 應該就是因為",
+          "matched_keyword": "",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": null
+        }
+      ],
+      "total_mentions": 6,
+      "sentiment_score": 0.0,
+      "daily": {
+        "2026-03-24": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 1,
+          "neutral": 0,
+          "sentiment_score": 0.0
+        },
+        "2026-03-23": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 1,
+          "neutral": 0,
+          "sentiment_score": 0.0
+        },
+        "2026-03-21": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 1,
+          "neutral": 0,
+          "sentiment_score": 0.0
+        },
+        "2026-03-15": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 1,
+          "neutral": 0,
+          "sentiment_score": 0.0
+        },
+        "2026-03-26": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 1,
+          "neutral": 0,
+          "sentiment_score": 0.0
+        },
+        "2026-03-27": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
       "code": "2344",
       "name": "華邦電",
       "market": "TW",
@@ -3215,105 +3523,6 @@
       }
     },
     {
-      "code": "LI",
-      "name": "Li Auto",
-      "market": "US",
-      "sector": "電動車",
-      "contexts": [
-        {
-          "video": "EP1063｜停戰羅生門，川劇演到哪？台股千點被沒收，投信、大戶仍進場、第一個拐點出現？檢查一下，愛股契機出現沒？ft.選股教練 陳唯泰",
-          "channel": "兆華與股惑仔",
-          "date": "2026-03-24",
-          "text": "會不會再升席 這件事情 這個可能要 接下來就是 市場上面的關注的 焦點 例如說 CPI的連爭率 或者PPI連爭率 因為其實PPI跟CPI 才上一次的公告數 是來講 其實都不是特別的理想 大家會擔心 通鋒似不是有可能 我真的在一起 所以接下來 我覺得大家 可能 新中的焦點 就要開始放在這個 所謂的聯準會 未來的一個 升席與否的一個問題 那這次聯準會 做公告出來的這",
-          "analysis_source": "whisper",
-          "sentiment": "bearish",
-          "sentiment_score": 0.0,
-          "video_url": null
-        },
-        {
-          "video": "EP1062｜美伊更兇，嗆炸電廠、炸AI中心，通膨起？股債金銀都跌！台積電撐盤，乖離修正恐持續？如何判斷跌到哪裡該加碼、加碼誰？ft.存股教父 股魚",
-          "channel": "兆華與股惑仔",
-          "date": "2026-03-23",
-          "text": "買一貼幅的時候 大幅都很喜歡買 0.757萬 因為金牙骨 他過去一年鋪 你千萬不要這麼說 最難能他在一貼幅的這一塊 可能你覺得七五七 在最近的表現 因為大型骨的關係 表現比較不那麼理想 可是在海外型的基金 裡面有一檔 叫做統一全球新科技基金 他整體的一個配置跟價格 有點像0.757有 那他的話 在最近三年交出來的基銷 也高達219% 所以他的效果 也是非常不錯的",
-          "analysis_source": "whisper",
-          "sentiment": "bearish",
-          "sentiment_score": 0.132,
-          "video_url": null
-        },
-        {
-          "video": "EP1061｜戰爭亂到4月底？不讓自己被套牢，也不錯過小飆股的操作SOP！台股1700多檔股票，如何高勝率選股？套牢股換到強勢股，心魔大破解！ft.朱家泓.林穎",
-          "channel": "兆華與股惑仔",
-          "date": "2026-03-21",
-          "text": "掉 那賺錢 你也知道要賺到 拿你才賣 而不會小小的又跑掉了 那這就是一般閃哭 一直沒有抓到一個 一個方向或一個方法 也就是老師這很訴求 就是第一時間 你就預防剩於治療 第一時間 你理想就沒有被套老的問題 但如果真的很不信 被套老很深的朋友 林老師還是建議你 至少不分要換心金回來 然後因為現在看到 排面上有很多數可以讓你 轉載為銀的 繼續反攻的股票 那我這邊今天兩",
-          "analysis_source": "whisper",
-          "sentiment": "bearish",
-          "sentiment_score": 0.0,
-          "video_url": null
-        },
-        {
-          "video": "EP211 | 台、美股重點一次說，IG被停用中，華通未來主要營收結構，LPU與SRAM和設備廠關係，NVDA GTC大會",
-          "channel": "韭菜畢業班",
-          "date": "2026-03-15",
-          "text": "應該還是會去看到的 那我也不奢望說 每個人都要回來追蹤我這樣子 我覺得反正有中午一天會 假如去做短癮 做得好的話 我覺得還是會被人家看見的 反正我們就是一樣保持 我覺得最根本的一個理想 就是讓先追蹤我的人驕傲 那現在如果重新創一個 大家先重新追蹤我 那也要是第一批人了 那我還是會非常感謝 反正我認為現在追蹤我的 我應該會加倍感謝 因為我其實都是一個蠻感恩的人 那",
-          "matched_keyword": "",
-          "analysis_source": "whisper",
-          "sentiment": "bearish",
-          "sentiment_score": 0.0,
-          "video_url": null
-        },
-        {
-          "video": "EP1065｜盤中跳水，不安全感轟炸！PCB多檔創高，點名「光模塊」，華通、臻鼎的新商機？中國玻纖擴產，誰不受影響？ft.PCB女王 廖婉婷",
-          "channel": "兆華與股惑仔",
-          "date": "2026-03-26",
-          "text": "論到的 一檔ETF是你們統一的00757 就是美國的金牙鼓的Pras等一檔 那因為它在過去一年就表現不好了 因為美國的所謂的金牙鼓 甚至裡面可能也包含了七巨頭 它就狀況就不是那麼的理想 但是我個人覺得 757從來都不是在它標的時候 硬要去買它 對 就是我非常任何完全的講法 就如果你手上有這種 美國巨頭型的 AI 科技型的ETF 你會肯定覺得 怎麼就跟不上 因為也",
-          "matched_keyword": "",
-          "analysis_source": "whisper",
-          "sentiment": "bearish",
-          "sentiment_score": 0.0,
-          "video_url": null
-        }
-      ],
-      "total_mentions": 5,
-      "sentiment_score": 0.0,
-      "daily": {
-        "2026-03-24": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 1,
-          "neutral": 0,
-          "sentiment_score": 0.0
-        },
-        "2026-03-23": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 1,
-          "neutral": 0,
-          "sentiment_score": 0.0
-        },
-        "2026-03-21": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 1,
-          "neutral": 0,
-          "sentiment_score": 0.0
-        },
-        "2026-03-15": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 1,
-          "neutral": 0,
-          "sentiment_score": 0.0
-        },
-        "2026-03-26": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 1,
-          "neutral": 0,
-          "sentiment_score": 0.0
-        }
-      }
-    },
-    {
       "code": "2327",
       "name": "國巨",
       "market": "TW",
@@ -3432,10 +3641,21 @@
           "sentiment": "neutral",
           "sentiment_score": 0.5,
           "video_url": "https://www.youtube.com/watch?v=OmvZlzIrdDA"
+        },
+        {
+          "video": "EP1066｜台股有些怪怪的？無法止戰，會否拖磨指數向下？低軌衛星、矽光子、PCB、設備看高做低的方法？認真等一下的時間到了！ft.操盤手 黃豐凱",
+          "channel": "兆華與股惑仔",
+          "date": "2026-03-27",
+          "text": "線 台積電這個位置 會不會再跌 答案是 ofcourse 一定會再跌 所以 你這時候 要去買台積電嗎 我覺得你可以再忍耐一下 我們上次來就講說 這個盤現在不看台積電 這盤現在可以看台達電 因為它是AI的 AI的重兵 那 我覺得台積電 你就可以稍微再等一下 也許 大盤再回車前低那個位置 你的台積電就可以 認真的來買一下 但這個時間點 我覺得就可以再等一等 等一等 那",
+          "matched_keyword": "",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.9,
+          "video_url": null
         }
       ],
-      "total_mentions": 4,
-      "sentiment_score": 0.0,
+      "total_mentions": 5,
+      "sentiment_score": 0.5,
       "daily": {
         "2026-03-25": {
           "mentions": 3,
@@ -3450,6 +3670,13 @@
           "bearish": 0,
           "neutral": 1,
           "sentiment_score": 0.5
+        },
+        "2026-03-27": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
         }
       }
     },
@@ -3823,6 +4050,58 @@
           "bearish": 2,
           "neutral": 0,
           "sentiment_score": 0.0
+        }
+      }
+    },
+    {
+      "code": "0056",
+      "name": "元大高股息",
+      "market": "TW",
+      "sector": "ETF",
+      "contexts": [
+        {
+          "video": "EP1066｜台股有些怪怪的？無法止戰，會否拖磨指數向下？低軌衛星、矽光子、PCB、設備看高做低的方法？認真等一下的時間到了！ft.操盤手 黃豐凱",
+          "channel": "兆華與股惑仔",
+          "date": "2026-03-27",
+          "text": "有看股價 就說 他跌了嗎 不是 是噴了 好 我現在要來考凱哥了 漢堂 同樣是無城市的 工程設備 也曾經漲得那麼高 那為什麼 這幾天 他開始還有一點獨翹翠的味道 漢堂之前是 我論文是高股息的概念股 在買它 所以高股息的資金買完之後 基本上 就沒有這麼多資金往這裡面來 再來就是我剛剛講 它比較偏廠物 現在大家在看的是設備 不是廠物 所以廠物的股票相對 它不會這麼的強",
+          "matched_keyword": "",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.4,
+          "video_url": null
+        },
+        {
+          "video": "EP1066｜台股有些怪怪的？無法止戰，會否拖磨指數向下？低軌衛星、矽光子、PCB、設備看高做低的方法？認真等一下的時間到了！ft.操盤手 黃豐凱",
+          "channel": "兆華與股惑仔",
+          "date": "2026-03-27",
+          "text": "設備的概念股 不是廠物的概念股 廠物真的就沒有辦法 再來一次 因為之前 我們也有這樣想過 可是廠物後來又在 絕地大反攻一次 我覺得那一波主要是漢堂帶動 可是那一波漢堂主要是 因為高股息的概念股 高股息的資金在買它 還是比較有這個部分 那一樣在講台灣大車隊 其實我這幾年 我很常每次要做台灣大車隊 我就問他們說 最近生意怎麼樣什麼 因為我有一個很好的 我的同門 他就",
+          "matched_keyword": "",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": null
+        },
+        {
+          "video": "EP1066｜台股有些怪怪的？無法止戰，會否拖磨指數向下？低軌衛星、矽光子、PCB、設備看高做低的方法？認真等一下的時間到了！ft.操盤手 黃豐凱",
+          "channel": "兆華與股惑仔",
+          "date": "2026-03-27",
+          "text": "本上就是從 計程車的司機上面 撥一層皮下來 對 撥個皮 是不是很像 那因為它規模擴大了嘛 所以它就會產生規模效益 規模效益 再加上 因為最近戰爭的關係 所以 通常在戰爭的時候 通常高股息的股票就會開始 睡醒 通常睡醒的時候 它就會一波 漲上來 但是我說台灣大車隊 其實你要注意喔 因為它近期已經開始在爆亮了 所以你就要稍微注意一下 它是爆亮不漲 那如果它爆亮還會持續",
+          "matched_keyword": "",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": null
+        }
+      ],
+      "total_mentions": 3,
+      "sentiment_score": 1.0,
+      "daily": {
+        "2026-03-27": {
+          "mentions": 3,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 2,
+          "sentiment_score": 1.0
         }
       }
     },
@@ -4804,13 +5083,43 @@
           "sentiment_score": 0.5
         }
       }
+    },
+    {
+      "code": "6462",
+      "name": "神盾",
+      "market": "TW",
+      "sector": null,
+      "contexts": [
+        {
+          "video": "EP1066｜台股有些怪怪的？無法止戰，會否拖磨指數向下？低軌衛星、矽光子、PCB、設備看高做低的方法？認真等一下的時間到了！ft.操盤手 黃豐凱",
+          "channel": "兆華與股惑仔",
+          "date": "2026-03-27",
+          "text": "房貸 資產這樣 我覺得應該算有合格 很喜歡聽您跟達人 分享在投資市場的經驗 曾經講過 您放空股票倒睡不著 我跟你講 不是放空股票 是放空股票的期貨 當然睡不著 開七倍槓桿 小哥放空神盾就不 只能在飛機上 趕快回補 被咬了 格爾被咬了 好 這些經驗 都是點點滴滴 累積起來 警惕自己要小心再小心 再十年我就想退休了 希望所有資產 能夠再放大 累積足夠的退休老本體 非",
+          "matched_keyword": "",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.8,
+          "video_url": null
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 1.0,
+      "daily": {
+        "2026-03-27": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        }
+      }
     }
   ],
   "sectors_ranking": [
     {
       "sector": "雲端/AI",
       "market": "US",
-      "total_mentions": 50,
+      "total_mentions": 51,
       "stock_codes": [
         "GOOGL",
         "META",
@@ -4866,9 +5175,17 @@
     {
       "sector": "食品",
       "market": "TW",
-      "total_mentions": 12,
+      "total_mentions": 13,
       "stock_codes": [
         "1216"
+      ]
+    },
+    {
+      "sector": "電信",
+      "market": "TW",
+      "total_mentions": 13,
+      "stock_codes": [
+        "3045"
       ]
     },
     {
@@ -4880,20 +5197,20 @@
       ]
     },
     {
+      "sector": "電動車",
+      "market": "US",
+      "total_mentions": 10,
+      "stock_codes": [
+        "LI",
+        "TSLA"
+      ]
+    },
+    {
       "sector": "組裝代工",
       "market": "TW",
       "total_mentions": 9,
       "stock_codes": [
         "2317"
-      ]
-    },
-    {
-      "sector": "電動車",
-      "market": "US",
-      "total_mentions": 9,
-      "stock_codes": [
-        "LI",
-        "TSLA"
       ]
     },
     {
@@ -4915,9 +5232,18 @@
     {
       "sector": "電源供應器",
       "market": "TW",
-      "total_mentions": 4,
+      "total_mentions": 5,
       "stock_codes": [
         "2308"
+      ]
+    },
+    {
+      "sector": "ETF",
+      "market": "TW",
+      "total_mentions": 5,
+      "stock_codes": [
+        "0056",
+        "0050"
       ]
     },
     {
@@ -4987,14 +5313,6 @@
       "total_mentions": 2,
       "stock_codes": [
         "3443"
-      ]
-    },
-    {
-      "sector": "ETF",
-      "market": "TW",
-      "total_mentions": 2,
-      "stock_codes": [
-        "0050"
       ]
     },
     {
@@ -5884,6 +6202,24 @@
       ],
       "analysis_source": "titleAndDescription",
       "thumbnail_url": "https://i.ytimg.com/vi/O1UIm7-L3IQ/mqdefault.jpg"
+    },
+    {
+      "video_id": "04dc5506-24cd-41b8-818d-f190e8cd8c92",
+      "title": "EP1066｜台股有些怪怪的？無法止戰，會否拖磨指數向下？低軌衛星、矽光子、PCB、設備看高做低的方法？認真等一下的時間到了！ft.操盤手 黃豐凱",
+      "channel": "兆華與股惑仔",
+      "date": "2026-03-27",
+      "stocks_found": [
+        "GOOGL",
+        "1216",
+        "2330",
+        "2308",
+        "6462",
+        "3045",
+        "0056",
+        "LI"
+      ],
+      "analysis_source": "whisper",
+      "thumbnail_url": null
     }
   ]
 }
