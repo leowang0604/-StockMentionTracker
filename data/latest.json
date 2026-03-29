@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-29T18:44:19",
+  "updated_at": "2026-03-29T18:44:31",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -1370,9 +1370,20 @@
           "sentiment": "neutral",
           "sentiment_score": 0.5,
           "video_url": null
+        },
+        {
+          "video": "40萬賺466萬，賺錢的必勝方法！【王老先聲】#欣興 #長期投資 #基礎原則",
+          "channel": "老王愛說笑",
+          "date": "2026-03-29",
+          "text": "40萬賺466萬，賺錢的必勝方法！【王老先聲】#欣興 #長期投資 #基礎原則 您也可以在以下頻道透過Podcast收聽： Apple Podcast：https://reurl.cc/52DnlR Spotify：https://reurl.cc/xEpqZE ...",
+          "matched_keyword": "Apple",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "https://www.youtube.com/watch?v=4xKq-eFeFlI"
         }
       ],
-      "total_mentions": 24,
+      "total_mentions": 25,
       "sentiment_score": 1.0,
       "daily": {
         "2026-03-28": {
@@ -1404,6 +1415,13 @@
           "sentiment_score": 1.0
         },
         "2026-03-23": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-03-29": {
           "mentions": 1,
           "bullish": 0,
           "bearish": 0,
@@ -5333,6 +5351,36 @@
           "sentiment_score": 1.0
         }
       }
+    },
+    {
+      "code": "3037",
+      "name": "欣興",
+      "market": "TW",
+      "sector": "PCB載板",
+      "contexts": [
+        {
+          "video": "40萬賺466萬，賺錢的必勝方法！【王老先聲】#欣興 #長期投資 #基礎原則",
+          "channel": "老王愛說笑",
+          "date": "2026-03-29",
+          "text": "40萬賺466萬，賺錢的必勝方法！【王老先聲】#欣興 #長期投資 #基礎原則 您也可以在以下頻道透過Podcast收聽： Apple Podcast：https://reurl.cc/52DnlR Spotify：https://reurl.cc/xEpqZE ...",
+          "matched_keyword": "欣興",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "https://www.youtube.com/watch?v=4xKq-eFeFlI"
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-03-29": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
     }
   ],
   "sectors_ranking": [
@@ -5373,7 +5421,7 @@
     {
       "sector": "消費電子",
       "market": "US",
-      "total_mentions": 24,
+      "total_mentions": 25,
       "stock_codes": [
         "AAPL"
       ]
@@ -5508,6 +5556,16 @@
       ]
     },
     {
+      "sector": "PCB載板",
+      "market": "TW",
+      "total_mentions": 4,
+      "stock_codes": [
+        "8046",
+        "3189",
+        "3037"
+      ]
+    },
+    {
       "sector": "ETF・台股指數",
       "market": "TW",
       "total_mentions": 3,
@@ -5521,15 +5579,6 @@
       "total_mentions": 3,
       "stock_codes": [
         "3260"
-      ]
-    },
-    {
-      "sector": "PCB載板",
-      "market": "TW",
-      "total_mentions": 3,
-      "stock_codes": [
-        "8046",
-        "3189"
       ]
     },
     {
@@ -6040,6 +6089,18 @@
       ],
       "analysis_source": "whisper",
       "thumbnail_url": null
+    },
+    {
+      "video_id": "4xKq-eFeFlI",
+      "title": "40萬賺466萬，賺錢的必勝方法！【王老先聲】#欣興 #長期投資 #基礎原則",
+      "channel": "老王愛說笑",
+      "date": "2026-03-29",
+      "stocks_found": [
+        "AAPL",
+        "3037"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/4xKq-eFeFlI/mqdefault.jpg"
     }
   ]
 }
