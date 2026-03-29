@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-29T01:21:47",
+  "updated_at": "2026-03-29T04:49:07",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -1308,7 +1308,7 @@
       "code": "1303",
       "name": "南亞",
       "market": "TW",
-      "sector": null,
+      "sector": "記憶體",
       "contexts": [
         {
           "video": "EP1060｜還是得休息，熱門股熄火！大摩降評記憶體，股價和報價的拉鋸，誰贏？金居、富喬、萬潤出關，命運不同？ft.操盤手 黃豐凱",
@@ -1499,7 +1499,7 @@
       "code": "5903",
       "name": "全家",
       "market": "TW",
-      "sector": null,
+      "sector": "其他",
       "contexts": [
         {
           "video": "EP647 | 🍬",
@@ -2734,7 +2734,7 @@
       "code": "2408",
       "name": "南亞科",
       "market": "TW",
-      "sector": null,
+      "sector": "記憶體",
       "contexts": [
         {
           "video": "EP1060｜還是得休息，熱門股熄火！大摩降評記憶體，股價和報價的拉鋸，誰贏？金居、富喬、萬潤出關，命運不同？ft.操盤手 黃豐凱",
@@ -3359,7 +3359,7 @@
       "code": "2344",
       "name": "華邦電",
       "market": "TW",
-      "sector": null,
+      "sector": "記憶體",
       "contexts": [
         {
           "video": "EP1060｜還是得休息，熱門股熄火！大摩降評記憶體，股價和報價的拉鋸，誰贏？金居、富喬、萬潤出關，命運不同？ft.操盤手 黃豐凱",
@@ -3452,7 +3452,7 @@
       "code": "3665",
       "name": "貿聯",
       "market": "TW",
-      "sector": null,
+      "sector": "電動車",
       "contexts": [
         {
           "video": "EP209 | 台、美股重點一次說，台股跌幅擴大後 ？博通財報後市場反應，何產業跟光通訊開始有關係 ？",
@@ -3684,7 +3684,7 @@
       "code": "2301",
       "name": "光寶",
       "market": "TW",
-      "sector": null,
+      "sector": "電源供應器",
       "contexts": [
         {
           "video": "【理財達人秀】台股彈826 記憶體能撿？太空回後飛 CPO全面擴散？台達電創高 電源低轉強？博通CALL訊 設備+PCB跟大人？｜李兆華、朱家泓、王建文、高憲容2026.03.25【電視完整版】",
@@ -4057,7 +4057,7 @@
       "code": "0056",
       "name": "元大高股息",
       "market": "TW",
-      "sector": "ETF",
+      "sector": "ETF・高股息",
       "contexts": [
         {
           "video": "EP1066｜台股有些怪怪的？無法止戰，會否拖磨指數向下？低軌衛星、矽光子、PCB、設備看高做低的方法？認真等一下的時間到了！ft.操盤手 黃豐凱",
@@ -4153,7 +4153,7 @@
       "code": "1536",
       "name": "和大",
       "market": "TW",
-      "sector": null,
+      "sector": "電動車",
       "contexts": [
         {
           "video": "EP213 | 台、美股重點一次說，台股反彈怎麼看？美股極度恐慌後的觀察重點，南俊國際與滑軌需求，設備股後勢",
@@ -4363,7 +4363,7 @@
       "code": "0050",
       "name": "元大台灣50",
       "market": "TW",
-      "sector": "ETF",
+      "sector": "ETF・台股指數",
       "contexts": [
         {
           "video": "EP645 | 🎱",
@@ -4452,7 +4452,7 @@
       "code": "2337",
       "name": "旺宏",
       "market": "TW",
-      "sector": null,
+      "sector": "Flash",
       "contexts": [
         {
           "video": "EP644 | 🦇",
@@ -4703,7 +4703,7 @@
       "code": "2059",
       "name": "川湖",
       "market": "TW",
-      "sector": null,
+      "sector": "伺服器機殼",
       "contexts": [
         {
           "video": "EP213 | 台、美股重點一次說，台股反彈怎麼看？美股極度恐慌後的觀察重點，南俊國際與滑軌需求，設備股後勢",
@@ -4761,7 +4761,7 @@
       "code": "2377",
       "name": "微星",
       "market": "TW",
-      "sector": null,
+      "sector": "伺服器",
       "contexts": [
         {
           "video": "EP1064｜美伊和談是真的？台積法說前，設備股先創新高！中國巨石壓不倒PCB？博通再助攻矽光子！來市場，是要賺錢的！ft.紀緯明 小明同學",
@@ -5088,7 +5088,7 @@
       "code": "6462",
       "name": "神盾",
       "market": "TW",
-      "sector": null,
+      "sector": "AI晶片",
       "contexts": [
         {
           "video": "EP1066｜台股有些怪怪的？無法止戰，會否拖磨指數向下？低軌衛星、矽光子、PCB、設備看高做低的方法？認真等一下的時間到了！ft.操盤手 黃豐凱",
@@ -5140,6 +5140,16 @@
       ]
     },
     {
+      "sector": "記憶體",
+      "market": "TW",
+      "total_mentions": 29,
+      "stock_codes": [
+        "1303",
+        "2408",
+        "2344"
+      ]
+    },
+    {
       "sector": "消費電子",
       "market": "US",
       "total_mentions": 27,
@@ -5162,6 +5172,14 @@
       "stock_codes": [
         "NVDA",
         "AMD"
+      ]
+    },
+    {
+      "sector": "其他",
+      "market": "TW",
+      "total_mentions": 13,
+      "stock_codes": [
+        "5903"
       ]
     },
     {
@@ -5214,11 +5232,30 @@
       ]
     },
     {
+      "sector": "電源供應器",
+      "market": "TW",
+      "total_mentions": 9,
+      "stock_codes": [
+        "2308",
+        "2301"
+      ]
+    },
+    {
       "sector": "伺服器",
       "market": "TW",
-      "total_mentions": 6,
+      "total_mentions": 7,
       "stock_codes": [
-        "2382"
+        "2382",
+        "2377"
+      ]
+    },
+    {
+      "sector": "電動車",
+      "market": "TW",
+      "total_mentions": 7,
+      "stock_codes": [
+        "3665",
+        "1536"
       ]
     },
     {
@@ -5227,23 +5264,6 @@
       "total_mentions": 5,
       "stock_codes": [
         "2327"
-      ]
-    },
-    {
-      "sector": "電源供應器",
-      "market": "TW",
-      "total_mentions": 5,
-      "stock_codes": [
-        "2308"
-      ]
-    },
-    {
-      "sector": "ETF",
-      "market": "TW",
-      "total_mentions": 5,
-      "stock_codes": [
-        "0056",
-        "0050"
       ]
     },
     {
@@ -5262,6 +5282,14 @@
       "total_mentions": 3,
       "stock_codes": [
         "TSM"
+      ]
+    },
+    {
+      "sector": "ETF・高股息",
+      "market": "TW",
+      "total_mentions": 3,
+      "stock_codes": [
+        "0056"
       ]
     },
     {
@@ -5316,11 +5344,27 @@
       ]
     },
     {
+      "sector": "ETF・台股指數",
+      "market": "TW",
+      "total_mentions": 2,
+      "stock_codes": [
+        "0050"
+      ]
+    },
+    {
       "sector": "手機晶片",
       "market": "TW",
       "total_mentions": 2,
       "stock_codes": [
         "2454"
+      ]
+    },
+    {
+      "sector": "Flash",
+      "market": "TW",
+      "total_mentions": 2,
+      "stock_codes": [
+        "2337"
       ]
     },
     {
@@ -5348,6 +5392,14 @@
       ]
     },
     {
+      "sector": "伺服器機殼",
+      "market": "TW",
+      "total_mentions": 1,
+      "stock_codes": [
+        "2059"
+      ]
+    },
+    {
       "sector": "記憶體IC",
       "market": "TW",
       "total_mentions": 1,
@@ -5369,6 +5421,14 @@
       "total_mentions": 1,
       "stock_codes": [
         "NET"
+      ]
+    },
+    {
+      "sector": "AI晶片",
+      "market": "TW",
+      "total_mentions": 1,
+      "stock_codes": [
+        "6462"
       ]
     }
   ],
