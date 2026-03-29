@@ -109,7 +109,7 @@ struct StockDetailView: View {
                     ForEach(stock.contexts) { ctx in
                         ContextRowView(
                             context: ctx,
-                            highlightTerms: ([stock.name, stock.code] + [ctx.matchedKeyword]).compactMap { $0 }.filter { !$0.isEmpty },
+                            highlightTerms: shortNameTerms(stock.name, stock.code, ctx.matchedKeyword),
                             isExpanded: expandedIDs.contains(ctx.id),
                             onToggle: {
                                 withAnimation(.easeInOut(duration: 0.2)) {
@@ -130,6 +130,22 @@ struct StockDetailView: View {
         .navigationBarTitleDisplayMode(.large)
 #endif
     }
+}
+
+/// Builds highlight terms from stock name, code, and matchedKeyword.
+/// Also extracts the short name (before ", " or " Inc"/" Ltd" etc.) so that
+/// "Cloudflare, Inc." → also searches "Cloudflare".
+private func shortNameTerms(_ name: String, _ code: String, _ keyword: String?) -> [String] {
+    var terms: [String] = []
+    terms.append(name)
+    // Short name: strip legal suffixes
+    let stripped = name
+        .components(separatedBy: ",").first?
+        .trimmingCharacters(in: .whitespaces) ?? name
+    if stripped != name { terms.append(stripped) }
+    terms.append(code)
+    if let kw = keyword, !kw.isEmpty { terms.append(kw) }
+    return terms.filter { !$0.isEmpty }
 }
 
 // MARK: - Context Row
@@ -217,15 +233,16 @@ struct ContextRowView: View {
         .padding(.vertical, 4)
     }
 
-    private func highlighted(_ text: String) -> AttributedString {
-        var attributed = AttributedString(text)
+    private func highlighted(_ raw: String) -> AttributedString {
+        var attributed = AttributedString(raw)
         for term in highlightTerms where !term.isEmpty {
-            var searchStart = attributed.startIndex
-            while searchStart < attributed.endIndex,
-                  let range = attributed[searchStart...].range(of: term, options: .caseInsensitive) {
-                attributed[range].foregroundColor = .orange
-                attributed[range].inlinePresentationIntent = .stronglyEmphasized
-                searchStart = range.upperBound
+            var searchRange = raw.startIndex..<raw.endIndex
+            while let strRange = raw.range(of: term, options: .caseInsensitive, range: searchRange) {
+                if let attrRange = Range(strRange, in: attributed) {
+                    attributed[attrRange].foregroundColor = .orange
+                    attributed[attrRange].inlinePresentationIntent = .stronglyEmphasized
+                }
+                searchRange = strRange.upperBound..<raw.endIndex
             }
         }
         return attributed

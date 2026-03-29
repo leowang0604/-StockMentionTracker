@@ -29,7 +29,8 @@ struct RankingView: View {
                 let matchSearch = searchText.isEmpty ||
                     stock.name.contains(searchText) ||
                     stock.code.contains(searchText)
-                return matchMarket && matchSearch
+                let matchETF = appState.isETFVisible(sector: stock.sector)
+                return matchMarket && matchSearch && matchETF
             }
     }
 

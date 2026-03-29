@@ -14,6 +14,7 @@ struct SettingsView: View {
             Form {
                 dataURLSection
                 githubSection
+                etfFilterSection
                 dataInfoSection
                 dangerZoneSection
             }
@@ -100,6 +101,24 @@ struct SettingsView: View {
             Text("GitHub 設定（頻道管理）")
         } footer: {
             Text("需要有 repo 寫入權限的 PAT，用於在「頻道管理」頁面新增/刪除掃描頻道。")
+        }
+    }
+
+    // MARK: - ETF Filter Section
+
+    private var etfFilterSection: some View {
+        @Bindable var appState = appState
+        return Section {
+            Toggle("台股指數 ETF（0050、006208）", isOn: $appState.showETFIndex)
+            Toggle("高股息 ETF（0056、00878、00919…）", isOn: $appState.showETFDividend)
+            Toggle("科技 ETF（00891…）", isOn: $appState.showETFTech)
+            Toggle("主動型 ETF（00981A、00992A）", isOn: $appState.showETFActive)
+            Toggle("債券 ETF（00679B、00720B…）", isOn: $appState.showETFBond)
+            Toggle("槓桿反向 ETF（00631L、00632R）", isOn: $appState.showETFLeverage)
+        } header: {
+            Text("ETF 類別篩選")
+        } footer: {
+            Text("關閉後該類 ETF 不會出現在排行榜中")
         }
     }
 

@@ -169,12 +169,16 @@ ALIASES: dict[str, str] = {
     # 汽車
     "和泰車": "2207", "裕隆": "2201",
     # ETF
-    "台灣50": "0050", "元大台灣50": "0050",
-    "高股息": "0056", "元大高股息": "0056",
-    "國泰永續高股息": "00878",
-    "富邦台50": "006208",
+    "台灣50": "0050", "台灣五十": "0050", "元大台灣50": "0050", "0050": "0050",
+    "元大高股息": "0056", "0056": "0056",
+    "國泰永續高股息": "00878", "00878": "00878",
+    "富邦台50": "006208", "富邦台五十": "006208", "006208": "006208",
     "中信關鍵半導體": "00891",
     "00919": "00919", "00929": "00929", "00934": "00934",
+    "主動統一台股增長": "00981A", "00981A": "00981A",
+    "主動群益科技創新": "00992A", "00992A": "00992A",
+    "00631L": "00631L", "00632R": "00632R",
+    "00679B": "00679B", "00720B": "00720B",
 }
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -338,7 +342,7 @@ _US_STOCKS_DATA: list[tuple[list[str], str, str, str]] = [
     (["Rivian", "RIVN"],                               "RIVN",  "Rivian",             "電動車"),
     (["Lucid", "LCID"],                                "LCID",  "Lucid Motors",       "電動車"),
     (["蔚來", "NIO"],                                  "NIO",   "NIO",                "電動車"),
-    (["理想汽車", "理想", "LI"],                        "LI",    "Li Auto",            "電動車"),
+    (["理想汽車", "LI"],                                 "LI",    "Li Auto",            "電動車"),
     (["小鵬", "XPEV"],                                 "XPEV",  "XPeng",              "電動車"),
     # ── 電動車充電 ──────────────────────────────────────────────────────────────
     (["ChargePoint", "CHPT"],                          "CHPT",  "ChargePoint",        "電動車充電"),
@@ -490,8 +494,13 @@ TW_STOCK_SECTORS: dict[str, str] = {
     # ── 汽車 ────────────────────────────────────────────────────────────────────
     "2201": "汽車",     "2207": "汽車",
     # ── ETF ─────────────────────────────────────────────────────────────────────
-    "0050": "ETF",  "0056": "ETF",  "00878": "ETF", "006208": "ETF",
-    "00891": "ETF", "00919": "ETF", "00929": "ETF", "00934": "ETF",
+    "0050": "ETF・台股指數", "006208": "ETF・台股指數",
+    "0056": "ETF・高股息",   "00878": "ETF・高股息",
+    "00919": "ETF・高股息",  "00929": "ETF・高股息",  "00934": "ETF・高股息",
+    "00891": "ETF・科技",
+    "00981A": "ETF・主動型", "00992A": "ETF・主動型",
+    "00631L": "ETF・槓桿反向", "00632R": "ETF・槓桿反向",
+    "00679B": "ETF・債券",   "00720B": "ETF・債券",
 }
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -898,7 +907,12 @@ def build_stock_dict(
 
 CONTEXT_REQUIRED: dict[str, list[str]] = {
     "AI": ["C3", "C3.ai"],  # avoid matching generic "AI" mentions not about C3.ai
-    "LI": ["Li Auto", "理想", "理想汽車"],  # avoid matching "li" in general Chinese text
+    "LI": ["Li Auto", "理想汽車"],  # avoid matching "li" in general Chinese text; "理想" removed (too generic)
+}
+
+# If ANY of these strings appear in the context, the match is rejected.
+CONTEXT_FORBIDDEN: dict[str, list[str]] = {
+    "2327": ["中國巨石"],  # "國巨" inside "中國巨石" is not Yageo
 }
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -940,6 +954,12 @@ def recognize_stocks(text: str) -> list[dict]:
             if code in CONTEXT_REQUIRED:
                 required_terms = CONTEXT_REQUIRED[code]
                 if not any(term in ctx for term in required_terms):
+                    continue
+
+            # Reject if forbidden context terms appear (avoids substring false positives)
+            if code in CONTEXT_FORBIDDEN:
+                forbidden_terms = CONTEXT_FORBIDDEN[code]
+                if any(term in ctx for term in forbidden_terms):
                     continue
 
             hits.append({
@@ -1062,23 +1082,57 @@ def analyze_sentiment_batch_gemini(items: list[dict]) -> list[tuple[str, float]]
     return [_keyword_sentiment(it["context"]) for it in items]
 
 
+def _sentiment_for_hits(hits: list[dict], analysis_source: str) -> list[tuple[str, float]]:
+    """
+    Returns a (label, score) list aligned with hits.
+    Groups contexts by stock_code → one Gemini call per unique stock per episode,
+    so all mentions of the same stock share one holistic sentiment judgment.
+    Falls back to keyword rules when no GEMINI_API_KEY.
+    """
+    if analysis_source == "titleAndDescription" or not hits:
+        return [("neutral", 0.5)] * len(hits)
+
+    if not GEMINI_API_KEY:
+        return [_keyword_sentiment(h["context"]) for h in hits]
+
+    # Group hit indices by stock_code
+    groups: dict[str, list[int]] = {}
+    for i, h in enumerate(hits):
+        groups.setdefault(h["stock_code"], []).append(i)
+
+    # One batch item per unique stock: combine up to 5 contexts with separator
+    unique_codes = list(groups.keys())
+    batch_items = []
+    for code in unique_codes:
+        indices = groups[code]
+        combined = " … ".join(hits[i]["context"] for i in indices[:5])
+        batch_items.append({"stock": hits[indices[0]]["stock_name"], "context": combined})
+
+    stock_sentiments = analyze_sentiment_batch_gemini(batch_items)
+    sentiment_map = {code: stock_sentiments[j] for j, code in enumerate(unique_codes)}
+    return [sentiment_map[h["stock_code"]] for h in hits]
+
+
 # Short English keywords that could be common words (need Gemini validation)
 _AMBIGUOUS_TICKER_KWS = {kw for kw in [] }  # built dynamically below
 
 def _is_ambiguous_hit(hit: dict) -> bool:
-    """判斷這個 hit 是否需要 Gemini 驗證（短英文 ticker 可能誤判）"""
+    """判斷這個 hit 是否需要 Gemini 驗證（短詞可能誤匹配子字串）"""
     # Already handled by CONTEXT_REQUIRED fast-path in recognize_stocks()
     if hit["stock_code"] in CONTEXT_REQUIRED:
         return False
     kw = hit.get("matched_keyword", "")
-    # Chinese keywords are very specific — safe
-    if not re.match(r'^[A-Za-z]', kw):
+    if re.match(r'^[A-Za-z]', kw):
+        # 1-2 char English → always ambiguous
+        if len(kw) <= 2:
+            return True
+        # Known ambiguous 3-char English words
+        if kw.upper() in {"ARM"}:
+            return True
         return False
-    # 1-2 char English → always ambiguous
-    if len(kw) <= 2:
-        return True
-    # Known ambiguous 3-char English words
-    if kw.upper() in {"ARM"}:
+    # Chinese/non-ASCII keywords ≤ 3 chars may appear as substrings of other words
+    # e.g. "國巨" inside "中國巨石"
+    if len(kw) <= 3:
         return True
     return False
 
@@ -1444,14 +1498,7 @@ def process_youtube_video(
 
     video_url = f"https://www.youtube.com/watch?v={video_id}"
 
-    # Batch sentiment analysis for non-titleAndDescription sources
-    if analysis_source == "titleAndDescription" or not hits:
-        sentiments = [("neutral", 0.5)] * len(hits)
-    elif GEMINI_API_KEY:
-        batch_items = [{"stock": h["stock_name"], "context": h["context"]} for h in hits]
-        sentiments = analyze_sentiment_batch_gemini(batch_items)
-    else:
-        sentiments = [_keyword_sentiment(h["context"]) for h in hits]
+    sentiments = _sentiment_for_hits(hits, analysis_source)
 
     mentions = []
     for h, (label, score) in zip(hits, sentiments):
@@ -1594,14 +1641,7 @@ def process_podcast_episode(
         "thumbnail_url":   None,
     }
 
-    # Batch sentiment analysis for non-titleAndDescription sources
-    if analysis_source == "titleAndDescription" or not hits:
-        sentiments = [("neutral", 0.5)] * len(hits)
-    elif GEMINI_API_KEY:
-        batch_items = [{"stock": h["stock_name"], "context": h["context"]} for h in hits]
-        sentiments = analyze_sentiment_batch_gemini(batch_items)
-    else:
-        sentiments = [_keyword_sentiment(h["context"]) for h in hits]
+    sentiments = _sentiment_for_hits(hits, analysis_source)
 
     mentions = []
     for h, (label, score) in zip(hits, sentiments):
