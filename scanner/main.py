@@ -1141,10 +1141,8 @@ def _is_ambiguous_hit(hit: dict) -> bool:
         if kw.upper() in {"ARM"}:
             return True
         return False
-    # Chinese/non-ASCII keywords ≤ 3 chars may appear as substrings of other words
-    # e.g. "國巨" inside "中國巨石"
-    if len(kw) <= 3:
-        return True
+    # Chinese company names skip Gemini validation; specific false-positive cases
+    # are handled via KEYWORD_PATTERN_OVERRIDE / CONTEXT_FORBIDDEN instead.
     return False
 
 
