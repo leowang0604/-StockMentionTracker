@@ -915,6 +915,12 @@ CONTEXT_FORBIDDEN: dict[str, list[str]] = {
     "2327": ["中國巨石"],  # "國巨" inside "中國巨石" is not Yageo
 }
 
+# Custom regex patterns for keywords that need lookbehind/lookahead to avoid substring matches.
+# Overrides the default re.escape(keyword) pattern for Chinese keywords.
+KEYWORD_PATTERN_OVERRIDE: dict[str, str] = {
+    "國巨": r"(?<!中)國巨(?!石)",   # exclude "中國巨石" (China Jushi)
+}
+
 # ─────────────────────────────────────────────────────────────────────────────
 # Stock Recognition
 # ─────────────────────────────────────────────────────────────────────────────
@@ -931,6 +937,8 @@ def recognize_stocks(text: str) -> list[dict]:
         # Use word boundaries for ASCII-starting keywords (avoids partial matches)
         if re.match(r"^[A-Za-z]", keyword):
             pattern = r"(?<![A-Za-z0-9])" + re.escape(keyword) + r"(?![A-Za-z0-9])"
+        elif keyword in KEYWORD_PATTERN_OVERRIDE:
+            pattern = KEYWORD_PATTERN_OVERRIDE[keyword]
         else:
             pattern = re.escape(keyword)
 
