@@ -1,1 +1,147 @@
-{"updated_at":"","stocks_ranking":[],"sectors_ranking":[],"videos_scanned":[]}
+{
+  "updated_at": "2026-03-29T07:05:23",
+  "stocks_ranking": [
+    {
+      "code": "GOOGL",
+      "name": "Alphabet",
+      "market": "US",
+      "sector": "雲端/AI",
+      "contexts": [
+        {
+          "video": "【理財達人秀】太空資金新歡 下個華通？ 谷歌嚇趴記憶體 被錯殺？｜李兆華、黃豐凱 2026.03.27 part2",
+          "channel": "東森財經",
+          "date": "2026-03-27",
+          "text": "【理財達人秀】太空資金新歡 下個華通？ 谷歌嚇趴記憶體 被錯殺？｜李兆華、黃豐凱 2026.03.27 part2 完整版：https://youtu.be/Mxy_tG6oF5E #美伊戰爭#台股#PCB #理財達人秀本節目與分析師所推介個股，無不當之財務利益關係， ...",
+          "matched_keyword": "谷歌",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "https://www.youtube.com/watch?v=CcmU_RALIpg"
+        },
+        {
+          "video": "【理財達人秀】台股以盤代跌？出關法說股伺機攻？下個華通 太空資金新歡？被谷歌嚇趴 記憶體錯殺？投信Q2掃貨 必買名單？｜李兆華、鍾國忠、黃豐凱、翁士峻2026.03.27【電視完整版】",
+          "channel": "東森財經",
+          "date": "2026-03-27",
+          "text": "【理財達人秀】台股以盤代跌？出關法說股伺機攻？下個華通 太空資金新歡？被谷歌嚇趴 記憶體錯殺？投信Q2掃貨 必買名單？｜李兆華、鍾國忠、黃豐凱、翁士峻2026.03.27【電視完整版】 貼在你身編：節前量縮台股週線翻黑以盤代跌? #美伊戰爭#台股#PCB #理財達人秀(00:00) 中東局勢不明!台股選股不選市4月操作?",
+          "matched_keyword": "谷歌",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "https://www.youtube.com/watch?v=Mxy_tG6oF5E"
+        }
+      ],
+      "total_mentions": 2,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-03-27": {
+          "mentions": 2,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 2,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
+      "code": "2603",
+      "name": "長榮",
+      "market": "TW",
+      "sector": "航運",
+      "contexts": [
+        {
+          "video": "【兆華艾綸說】川普的大危機來了！台股再測前低？5不和5要，絕對不被套！設備、PCB、CPO還有低位階？｜李兆華、艾綸、朱家泓｜#兆華艾綸說 20260327",
+          "channel": "東森財經",
+          "date": "2026-03-27",
+          "text": "【兆華艾綸說】川普的大危機來了！台股再測前低？5不和5要，絕對不被套！設備、PCB、CPO還有低位階？｜李兆華、艾綸、朱家泓｜#兆華艾綸說 20260327 節目內容純屬主持人與來賓個人經驗分享，非個股推薦。投資人須自行謹慎判斷，評估擔負風險。 主持人：李兆華、艾綸來賓：K線 ...",
+          "matched_keyword": "2603",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "https://www.youtube.com/watch?v=Z4Q1f0k_Ya4"
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-03-27": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    }
+  ],
+  "sectors_ranking": [
+    {
+      "sector": "雲端/AI",
+      "market": "US",
+      "total_mentions": 2,
+      "stock_codes": [
+        "GOOGL"
+      ]
+    },
+    {
+      "sector": "航運",
+      "market": "TW",
+      "total_mentions": 1,
+      "stock_codes": [
+        "2603"
+      ]
+    }
+  ],
+  "videos_scanned": [
+    {
+      "video_id": "WpHQtmGPVjM",
+      "title": "【理財達人秀】4月漲率大公開 震盪照賺？ 拉回必買 投信Q2掃貨名單｜李兆華、翁士峻 2026.03.27 part3",
+      "channel": "東森財經",
+      "date": "2026-03-27",
+      "stocks_found": [],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/WpHQtmGPVjM/mqdefault.jpg"
+    },
+    {
+      "video_id": "CcmU_RALIpg",
+      "title": "【理財達人秀】太空資金新歡 下個華通？ 谷歌嚇趴記憶體 被錯殺？｜李兆華、黃豐凱 2026.03.27 part2",
+      "channel": "東森財經",
+      "date": "2026-03-27",
+      "stocks_found": [
+        "GOOGL"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/CcmU_RALIpg/mqdefault.jpg"
+    },
+    {
+      "video_id": "krbFioD_g0s",
+      "title": "【理財達人秀】節前量縮 台股以盤代跌？ 出關、法說股 伺機上攻？｜李兆華、鍾國忠 2026.03.27 part1",
+      "channel": "東森財經",
+      "date": "2026-03-27",
+      "stocks_found": [],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/krbFioD_g0s/mqdefault.jpg"
+    },
+    {
+      "video_id": "Z4Q1f0k_Ya4",
+      "title": "【兆華艾綸說】川普的大危機來了！台股再測前低？5不和5要，絕對不被套！設備、PCB、CPO還有低位階？｜李兆華、艾綸、朱家泓｜#兆華艾綸說 20260327",
+      "channel": "東森財經",
+      "date": "2026-03-27",
+      "stocks_found": [
+        "2603"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/Z4Q1f0k_Ya4/mqdefault.jpg"
+    },
+    {
+      "video_id": "Mxy_tG6oF5E",
+      "title": "【理財達人秀】台股以盤代跌？出關法說股伺機攻？下個華通 太空資金新歡？被谷歌嚇趴 記憶體錯殺？投信Q2掃貨 必買名單？｜李兆華、鍾國忠、黃豐凱、翁士峻2026.03.27【電視完整版】",
+      "channel": "東森財經",
+      "date": "2026-03-27",
+      "stocks_found": [
+        "GOOGL"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/Mxy_tG6oF5E/mqdefault.jpg"
+    }
+  ]
+}
