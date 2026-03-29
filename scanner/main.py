@@ -42,7 +42,7 @@ COOKIES_FILE = os.environ.get("YOUTUBE_COOKIES_FILE", "")
 
 MAX_ITEMS_PER_SOURCE = int(os.environ.get("MAX_ITEMS", "10"))
 DAYS_BACK            = int(os.environ.get("DAYS_BACK", "7"))
-CONTEXT_CHARS        = 90   # characters of context around each mention
+CONTEXT_CHARS        = 150  # characters of context around each mention
 MAX_CONTEXTS_PER_STOCK = 30 # cap to keep JSON manageable
 
 SOURCES_FILE     = Path(__file__).parent / "sources.json"
@@ -1060,7 +1060,10 @@ def analyze_sentiment_batch_gemini(items: list[dict]) -> list[tuple[str, float]]
     for i, it in enumerate(items):
         lines.append(f"{i+1}. 股票：{it['stock']}，提及內容：{it['context']}")
     prompt = (
-        "你是台灣股市情緒分析專家。針對以下每條提及內容，判斷對該股票的情緒。\n"
+        "你是台灣股市情緒分析專家。針對以下每條提及內容，判斷主持人/YouTuber 對該股票的看法情緒。\n"
+        "注意台股常見用語：「非常暴力」「狂飆」「爆衝」= 極度看多；「護國神山」「台積神山」= 對台積電正面；"
+        "「減碼」「出清」「跑了」= 看空；「中性」「觀望」= 中性；部分內容是 Whisper 語音轉文字，可能有雜訊。\n"
+        "判斷依據應是主持人對股票前景的實際觀點，而非描述市場現狀的中性陳述。\n"
         "只回傳 JSON 陣列，格式為 [{\"label\": \"bullish\"|\"bearish\"|\"neutral\", \"score\": 0.0~1.0}, ...]，"
         "score 代表看多程度（1.0=極度看多，0.0=極度看空，0.5=中性），數量與輸入相同，不要有多餘文字。\n\n"
         + "\n".join(lines)
@@ -1803,7 +1806,9 @@ def merge_into_history(
             "code":     s["code"],
             "name":     s["name"],
             "market":   s.get("market", "TW"),
-            "sector":   s.get("sector"),
+            # Always use TW_STOCK_SECTORS when available so sub-category labels
+            # (e.g. "ETF・台股指數") override the stale value from history.
+            "sector":   TW_STOCK_SECTORS.get(s["code"]) or STOCK_SECTOR.get(s["code"]) or s.get("sector"),
             "contexts": list(s["contexts"]),
         }
 
@@ -1915,9 +1920,10 @@ def main() -> None:
     extra_us = enrich_us_stocks_with_gemini()
     STOCK_DICT, CODE_TO_NAME, STOCK_MARKET, STOCK_SECTOR = build_stock_dict(stocks, extra_us)
 
-    # Merge cached sectors into STOCK_SECTOR
+    # Merge cached sectors into STOCK_SECTOR, but TW_STOCK_SECTORS always wins
     cached_sectors = load_sectors_cache()
     STOCK_SECTOR.update(cached_sectors)
+    STOCK_SECTOR.update(TW_STOCK_SECTORS)  # hardcoded sub-categories override cached values
 
     us_count = sum(1 for v in STOCK_MARKET.values() if v == "US")
     tw_count = sum(1 for v in STOCK_MARKET.values() if v == "TW")
