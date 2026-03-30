@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-30T08:43:23",
+  "updated_at": "2026-03-30T17:58:03",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -4714,7 +4714,7 @@
       "code": "NET",
       "name": "Cloudflare, Inc.",
       "market": "US",
-      "sector": "資訊科技",
+      "sector": "其他",
       "contexts": [
         {
           "video": "EP648 | 🦆",
@@ -4804,7 +4804,7 @@
       "code": "SBUX",
       "name": "Starbucks Corporation",
       "market": "US",
-      "sector": "非必需消費",
+      "sector": "消費",
       "contexts": [
         {
           "video": "EP645 | 🎱",
@@ -4864,7 +4864,7 @@
       "code": "ADBE",
       "name": "Adobe Inc.",
       "market": "US",
-      "sector": "資訊科技",
+      "sector": "科技",
       "contexts": [
         {
           "video": "EP644 | 🦇",
@@ -5609,6 +5609,36 @@
           "sentiment_score": 0.5
         }
       }
+    },
+    {
+      "code": "PCB",
+      "name": "PCB BANCORP",
+      "market": "US",
+      "sector": "其他",
+      "contexts": [
+        {
+          "video": "【理財達人秀】中小撐台股 連假前操作？法人報告挺 記憶體沒死？PCB.低軌.砷化鎵回檔 低接好入袋？工具機.塑化 搶短高勝率？｜李兆華、李永年、林漢偉、楊雲翔2026.03.30【電視完整版】",
+          "channel": "東森財經",
+          "date": "2026-03-30",
+          "text": "【理財達人秀】中小撐台股 連假前操作？法人報告挺 記憶體沒死？PCB.低軌.砷化鎵回檔 低接好入袋？工具機.塑化 搶短高勝率？｜李兆華、李永年、林漢偉、楊雲翔2026.03.30【電視完整版】 貼在你身編：台股失守33K 台積電破季線清明真變盤? #美伊戰爭#台積電#台股#理財達人秀(00:00) 台積跌破1800 中小股撐盤連假前 ...",
+          "matched_keyword": "PCB",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "https://www.youtube.com/watch?v=LX5oKDN3DO4"
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-03-30": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
     }
   ],
   "sectors_ranking": [
@@ -5840,12 +5870,12 @@
       ]
     },
     {
-      "sector": "資訊科技",
+      "sector": "其他",
       "market": "US",
       "total_mentions": 2,
       "stock_codes": [
         "NET",
-        "ADBE"
+        "PCB"
       ]
     },
     {
@@ -5883,11 +5913,19 @@
       ]
     },
     {
-      "sector": "非必需消費",
+      "sector": "消費",
       "market": "US",
       "total_mentions": 1,
       "stock_codes": [
         "SBUX"
+      ]
+    },
+    {
+      "sector": "科技",
+      "market": "US",
+      "total_mentions": 1,
+      "stock_codes": [
+        "ADBE"
       ]
     },
     {
@@ -6440,6 +6478,18 @@
       ],
       "analysis_source": "titleAndDescription",
       "thumbnail_url": null
+    },
+    {
+      "video_id": "LX5oKDN3DO4",
+      "title": "【理財達人秀】中小撐台股 連假前操作？法人報告挺 記憶體沒死？PCB.低軌.砷化鎵回檔 低接好入袋？工具機.塑化 搶短高勝率？｜李兆華、李永年、林漢偉、楊雲翔2026.03.30【電視完整版】",
+      "channel": "東森財經",
+      "date": "2026-03-30",
+      "stocks_found": [
+        "PCB",
+        "2330"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/LX5oKDN3DO4/mqdefault.jpg"
     }
   ]
 }
