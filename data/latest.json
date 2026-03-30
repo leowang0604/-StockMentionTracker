@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-30T04:05:28",
+  "updated_at": "2026-03-30T04:05:42",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -1381,9 +1381,20 @@
           "sentiment": "neutral",
           "sentiment_score": 0.5,
           "video_url": "https://www.youtube.com/watch?v=4xKq-eFeFlI"
+        },
+        {
+          "video": "每年盤勢都不同！【王老先聲】#股票 #主流 ##盤勢",
+          "channel": "老王愛說笑",
+          "date": "2026-03-25",
+          "text": "每年盤勢都不同！【王老先聲】#股票 #主流 ##盤勢 您也可以在以下頻道透過Podcast收聽： Apple Podcast：https://reurl.cc/52DnlR Spotify：https://reurl.cc/xEpqZE ...",
+          "matched_keyword": "Apple",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "https://www.youtube.com/watch?v=MrkyLoKlKO8"
         }
       ],
-      "total_mentions": 25,
+      "total_mentions": 26,
       "sentiment_score": 1.0,
       "daily": {
         "2026-03-28": {
@@ -1422,6 +1433,13 @@
           "sentiment_score": 0.5
         },
         "2026-03-29": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-03-25": {
           "mentions": 1,
           "bullish": 0,
           "bearish": 0,
@@ -5381,6 +5399,66 @@
           "sentiment_score": 0.5
         }
       }
+    },
+    {
+      "code": "2313",
+      "name": "華通",
+      "market": "TW",
+      "sector": "PCB",
+      "contexts": [
+        {
+          "video": "華通還沒結束｜【浦男搜股】EP.265",
+          "channel": "老王愛說笑",
+          "date": "2026-03-25",
+          "text": "華通還沒結束｜【浦男搜股】EP.265 加入老王會員請點選浦惠投顧官網：https://www.inclusion.com.tw/ ☆加入VIC黎志建、陳於晨、錢冠州老師會員，請來電會員 ...",
+          "matched_keyword": "華通",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "https://www.youtube.com/watch?v=4nTgn6Hms44"
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-03-25": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
+      "code": "3105",
+      "name": "穩懋",
+      "market": "TW",
+      "sector": null,
+      "contexts": [
+        {
+          "video": "穩懋真的穩嗎？｜【浦男搜股】EP.264",
+          "channel": "老王愛說笑",
+          "date": "2026-03-24",
+          "text": "穩懋真的穩嗎？｜【浦男搜股】EP.264 加入老王會員請點選浦惠投顧官網：https://www.inclusion.com.tw/ ☆加入VIC黎志建、陳於晨、錢冠州老師會員，請來電會員 ...",
+          "matched_keyword": "穩懋",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "https://www.youtube.com/watch?v=KGM3V-HlIzM"
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-03-24": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
     }
   ],
   "sectors_ranking": [
@@ -5421,7 +5499,7 @@
     {
       "sector": "消費電子",
       "market": "US",
-      "total_mentions": 25,
+      "total_mentions": 26,
       "stock_codes": [
         "AAPL"
       ]
@@ -5582,20 +5660,21 @@
       ]
     },
     {
+      "sector": "PCB",
+      "market": "TW",
+      "total_mentions": 3,
+      "stock_codes": [
+        "4958",
+        "2313"
+      ]
+    },
+    {
       "sector": "串流媒體",
       "market": "US",
       "total_mentions": 3,
       "stock_codes": [
         "NFLX",
         "DIS"
-      ]
-    },
-    {
-      "sector": "PCB",
-      "market": "TW",
-      "total_mentions": 2,
-      "stock_codes": [
-        "4958"
       ]
     },
     {
@@ -6101,6 +6180,77 @@
       ],
       "analysis_source": "titleAndDescription",
       "thumbnail_url": "https://i.ytimg.com/vi/4xKq-eFeFlI/mqdefault.jpg"
+    },
+    {
+      "video_id": "MrkyLoKlKO8",
+      "title": "每年盤勢都不同！【王老先聲】#股票 #主流 ##盤勢",
+      "channel": "老王愛說笑",
+      "date": "2026-03-25",
+      "stocks_found": [
+        "AAPL"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/MrkyLoKlKO8/mqdefault.jpg"
+    },
+    {
+      "video_id": "dnx6ygrxWcU",
+      "title": "感謝消防員【王老先聲】第220封快遞",
+      "channel": "老王愛說笑",
+      "date": "2026-03-25",
+      "stocks_found": [],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/dnx6ygrxWcU/mqdefault.jpg"
+    },
+    {
+      "video_id": "4nTgn6Hms44",
+      "title": "華通還沒結束｜【浦男搜股】EP.265",
+      "channel": "老王愛說笑",
+      "date": "2026-03-25",
+      "stocks_found": [
+        "2313"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/4nTgn6Hms44/mqdefault.jpg"
+    },
+    {
+      "video_id": "JCosg0XGMfY",
+      "title": "小心！這事比油價可怕！2026/03/24【老王不只三分鐘】",
+      "channel": "老王愛說笑",
+      "date": "2026-03-24",
+      "stocks_found": [],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/JCosg0XGMfY/mqdefault.jpg"
+    },
+    {
+      "video_id": "KGM3V-HlIzM",
+      "title": "穩懋真的穩嗎？｜【浦男搜股】EP.264",
+      "channel": "老王愛說笑",
+      "date": "2026-03-24",
+      "stocks_found": [
+        "3105"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/KGM3V-HlIzM/mqdefault.jpg"
+    },
+    {
+      "video_id": "h8LeRetxETQ",
+      "title": "天量套牢又來了？台積電長多不變！2026/03/23【老王不只三分鐘】",
+      "channel": "老王愛說笑",
+      "date": "2026-03-23",
+      "stocks_found": [
+        "2330"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/h8LeRetxETQ/mqdefault.jpg"
+    },
+    {
+      "video_id": "WtghlG3g2XM",
+      "title": "聯準會｜【浦男搜股】EP.263",
+      "channel": "老王愛說笑",
+      "date": "2026-03-23",
+      "stocks_found": [],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/WtghlG3g2XM/mqdefault.jpg"
     }
   ]
 }
