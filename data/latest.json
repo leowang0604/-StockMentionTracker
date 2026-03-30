@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-30T07:26:14",
+  "updated_at": "2026-03-30T07:26:17",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -5459,6 +5459,36 @@
           "sentiment_score": 0.5
         }
       }
+    },
+    {
+      "code": "3661",
+      "name": "世芯-KY",
+      "market": "TW",
+      "sector": "AI設計",
+      "contexts": [
+        {
+          "video": "世芯-KY怎麼了？｜【浦男搜股】EP.268",
+          "channel": "老王愛說笑",
+          "date": "2026-03-30",
+          "text": "世芯-KY怎麼了？｜【浦男搜股】EP.268 加入老王會員請點選浦惠投顧官網：https://www.inclusion.com.tw/ ☆加入VIC黎志建、陳於晨、錢冠州老師會員，請來電會員 ...",
+          "matched_keyword": "世芯-KY",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "https://www.youtube.com/watch?v=bc4fC1ZKikM"
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-03-30": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
     }
   ],
   "sectors_ranking": [
@@ -5704,6 +5734,15 @@
       ]
     },
     {
+      "sector": "AI設計",
+      "market": "TW",
+      "total_mentions": 2,
+      "stock_codes": [
+        "3443",
+        "3661"
+      ]
+    },
+    {
       "sector": "航運",
       "market": "TW",
       "total_mentions": 1,
@@ -5757,14 +5796,6 @@
       "total_mentions": 1,
       "stock_codes": [
         "2327"
-      ]
-    },
-    {
-      "sector": "AI設計",
-      "market": "TW",
-      "total_mentions": 1,
-      "stock_codes": [
-        "3443"
       ]
     }
   ],
@@ -6251,6 +6282,17 @@
       "stocks_found": [],
       "analysis_source": "titleAndDescription",
       "thumbnail_url": "https://i.ytimg.com/vi/WtghlG3g2XM/mqdefault.jpg"
+    },
+    {
+      "video_id": "bc4fC1ZKikM",
+      "title": "世芯-KY怎麼了？｜【浦男搜股】EP.268",
+      "channel": "老王愛說笑",
+      "date": "2026-03-30",
+      "stocks_found": [
+        "3661"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/bc4fC1ZKikM/mqdefault.jpg"
     }
   ]
 }
