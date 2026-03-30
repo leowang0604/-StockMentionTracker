@@ -596,9 +596,10 @@ def fetch_stock_list() -> list[dict]:
     每筆格式：{"code": "2330", "name": "台積電", "market": "twse"}
     失敗時 fallback 讀取快取 data/stocks.json。
     """
-    TWSE_URL = "https://openapi.twse.com.tw/v1/referenceData/listOfSecurities"
-    TPEX_URL = "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap03_O"
-    ETF_URL  = "https://www.twse.com.tw/rwd/zh/ETF/domestic"
+    TWSE_URL     = "https://openapi.twse.com.tw/v1/referenceData/listOfSecurities"  # often blocked in Actions
+    TWSE_RWD_URL = "https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY_ALL"      # fallback, works in Actions
+    TPEX_URL     = "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap03_O"
+    ETF_URL      = "https://www.twse.com.tw/rwd/zh/ETF/domestic"
 
     stocks: list[dict] = []
 
@@ -641,6 +642,21 @@ def fetch_stock_list() -> list[dict]:
             return []
 
     twse = _fetch(TWSE_URL, "twse")
+    if not twse:
+        # Fallback: TWSE daily trading data (rwd endpoint, works in GitHub Actions)
+        twse = _fetch_etf.__func__(TWSE_RWD_URL, "twse") if hasattr(_fetch_etf, '__func__') else []
+        if not twse:
+            try:
+                resp = requests.get(TWSE_RWD_URL, timeout=15, headers={"Accept": "application/json"})
+                resp.raise_for_status()
+                rows = resp.json().get("data", [])
+                twse = [
+                    {"code": str(r[0]).strip(), "name": str(r[1]).strip(), "market": "twse"}
+                    for r in rows if len(r) >= 2 and re.match(r"^\d{4,6}$", str(r[0]).strip())
+                ]
+                print(f"  [stocks] twse (rwd fallback): {len(twse)} securities fetched", file=sys.stderr)
+            except Exception as e:
+                print(f"  [stocks] twse rwd fallback error: {e}", file=sys.stderr)
     tpex = _fetch(TPEX_URL, "tpex")
     etfs = _fetch_etf()
     # Merge: ETF codes override any duplicate from TWSE general list
