@@ -977,9 +977,41 @@ def recognize_stocks(text: str) -> list[dict]:
                 "stock_sector":    STOCK_SECTOR.get(code),
                 "context":         ctx,
                 "matched_keyword": keyword,
+                "position":        pos,
             })
 
     return hits
+
+
+def deduplicate_hits(hits: list[dict]) -> list[dict]:
+    """
+    同一支股票在同一段文字中，若兩次 match 的位置距離小於 CONTEXT_CHARS，
+    代表 context 視窗會重疊（同一段話）。
+    合併成一個 hit，mention_count 記錄實際提及次數，保留較早出現的 context。
+    """
+    from collections import defaultdict
+    groups: dict[str, list[dict]] = defaultdict(list)
+    for h in hits:
+        groups[h["stock_code"]].append(h)
+
+    result = []
+    for code, group in groups.items():
+        group.sort(key=lambda h: h.get("position", 0))
+        current = dict(group[0])
+        current["mention_count"] = 1
+
+        for h in group[1:]:
+            if abs(h.get("position", 0) - current.get("position", 0)) < CONTEXT_CHARS:
+                # Overlapping window — same discussion, just count it
+                current["mention_count"] += 1
+            else:
+                result.append(current)
+                current = dict(h)
+                current["mention_count"] = 1
+
+        result.append(current)
+
+    return result
 
 
 def _keyword_sentiment(text: str) -> tuple[str, float]:
@@ -1490,7 +1522,7 @@ def process_youtube_video(
         print(f"  ⚠ fallback → title+description")
 
     # ── Recognize stocks ──────────────────────────────────────────────────
-    hits        = filter_ambiguous_hits_with_gemini(recognize_stocks(text))
+    hits        = deduplicate_hits(filter_ambiguous_hits_with_gemini(recognize_stocks(text)))
     stock_codes = list({h["stock_code"] for h in hits})
     if stock_codes:
         print(f"  📌 {stock_codes}")
@@ -1525,6 +1557,7 @@ def process_youtube_video(
             "sentiment":        label,
             "sentiment_score":  score,
             "video_url":        video_url,
+            "mention_count":    h.get("mention_count", 1),
         })
 
     return video_entry, mentions
@@ -1635,7 +1668,7 @@ def process_podcast_episode(
         text = title + " " + ep.get("description", "")
         analysis_source = "titleAndDescription"
 
-    hits        = filter_ambiguous_hits_with_gemini(recognize_stocks(text))
+    hits        = deduplicate_hits(filter_ambiguous_hits_with_gemini(recognize_stocks(text)))
     stock_codes = list({h["stock_code"] for h in hits})
     if stock_codes:
         print(f"  📌 {stock_codes}")
@@ -1848,18 +1881,19 @@ def merge_into_history(
             d = ctx.get("date", "")[:10]
             if d not in daily:
                 daily[d] = {"mentions": 0, "bullish": 0, "bearish": 0, "neutral": 0}
-            daily[d]["mentions"] += 1
+            mc = ctx.get("mention_count", 1)
+            daily[d]["mentions"] += mc
             sent = ctx.get("sentiment", "neutral")
-            daily[d][sent] = daily[d].get(sent, 0) + 1
+            daily[d][sent] = daily[d].get(sent, 0) + mc
         for d, stats in daily.items():
             b = stats["bullish"]
             bear = stats["bearish"]
             signaled = b + bear
             stats["sentiment_score"] = round(b / signaled, 3) if signaled > 0 else 0.5
-        # Overall sentiment_score
-        total = len(ctxs)
-        bullish_total = sum(1 for c in ctxs if c.get("sentiment") == "bullish")
-        bearish_total = sum(1 for c in ctxs if c.get("sentiment") == "bearish")
+        # Overall sentiment_score (weighted by mention_count)
+        total = sum(ctx.get("mention_count", 1) for ctx in ctxs)
+        bullish_total = sum(ctx.get("mention_count", 1) for ctx in ctxs if ctx.get("sentiment") == "bullish")
+        bearish_total = sum(ctx.get("mention_count", 1) for ctx in ctxs if ctx.get("sentiment") == "bearish")
         signaled = bullish_total + bearish_total
         sentiment_score = round(bullish_total / signaled, 3) if signaled > 0 else 0.5
         stocks_ranking.append({
