@@ -1404,6 +1404,69 @@ def _sentiment_for_hits(hits: list[dict], analysis_source: str) -> list[tuple[st
     return [sentiment_map[h["stock_code"]] for h in hits]
 
 
+def _batch_channel_sentiments(
+    episodes: list[tuple[list[dict], str]],
+) -> list[list[tuple[str, float]]]:
+    """
+    ONE Gemini call for all hits across every episode of one channel.
+    episodes: [(hits, analysis_source), ...]
+    Returns: list of [(label, score)] per episode, each list aligned with that episode's hits.
+    """
+    # ── Build batch items, tracking which (ep_idx, stock_code) each item maps to ──
+    batch_items: list[dict] = []
+    batch_keys:  list[tuple[int, str]] = []
+    ep_groups:   list[dict[str, list[int]]] = []  # per episode: code → hit indices
+
+    for ep_idx, (hits, analysis_source) in enumerate(episodes):
+        if analysis_source == "titleAndDescription" or not hits:
+            ep_groups.append({})
+            continue
+        groups: dict[str, list[int]] = {}
+        for i, h in enumerate(hits):
+            groups.setdefault(h["stock_code"], []).append(i)
+        ep_groups.append(groups)
+        for code, indices in groups.items():
+            combined = " … ".join(hits[i]["context"] for i in indices[:5])
+            batch_items.append({"stock": hits[indices[0]]["stock_name"], "context": combined})
+            batch_keys.append((ep_idx, code))
+
+    # ── Fallback: no Gemini key or nothing to analyze ─────────────────────────
+    def _keyword_fallback() -> list[list[tuple[str, float]]]:
+        out = []
+        for hits, analysis_source in episodes:
+            if analysis_source == "titleAndDescription" or not hits:
+                out.append([("neutral", 0.5)] * len(hits))
+            else:
+                out.append([_keyword_sentiment(h["context"]) for h in hits])
+        return out
+
+    if not batch_items or not GEMINI_API_KEY:
+        return _keyword_fallback()
+
+    # ── ONE Gemini batch call ──────────────────────────────────────────────────
+    raw = analyze_sentiment_batch_gemini(batch_items)
+    if len(raw) != len(batch_items):
+        return _keyword_fallback()
+
+    sentiment_map: dict[tuple[int, str], tuple[str, float]] = {
+        key: result for key, result in zip(batch_keys, raw)
+    }
+
+    # ── Map results back to per-episode, per-hit lists ─────────────────────────
+    results: list[list[tuple[str, float]]] = []
+    for ep_idx, (hits, analysis_source) in enumerate(episodes):
+        if analysis_source == "titleAndDescription" or not hits:
+            results.append([("neutral", 0.5)] * len(hits))
+            continue
+        groups = ep_groups[ep_idx]
+        stock_sent = {
+            code: sentiment_map.get((ep_idx, code), _keyword_sentiment(hits[indices[0]]["context"]))
+            for code, indices in groups.items()
+        }
+        results.append([stock_sent[h["stock_code"]] for h in hits])
+    return results
+
+
 # Short English keywords that could be common words (need Gemini validation)
 _AMBIGUOUS_TICKER_KWS = {kw for kw in [] }  # built dynamically below
 
@@ -1718,15 +1781,13 @@ def transcribe_audio(audio_path: str) -> str | None:
 # YouTube — process one video
 # ─────────────────────────────────────────────────────────────────────────────
 
-def process_youtube_video(
+def _detect_youtube_video(
     video: dict, source_name: str
-) -> tuple[dict, list[dict]]:
+) -> tuple[dict, list[dict], str, str]:
     """
-    處理單支 YouTube 影片：
-      1. 嘗試抓字幕（快速）
-      2. 若無字幕且 USE_WHISPER → 下載音訊並轉逐字稿
-      3. Fallback → 標題 + 描述
-    回傳 (video_entry, mention_list)
+    Pass 1: 取得逐字稿並辨識股票。
+    回傳 (video_entry, hits, analysis_source, video_url)。
+    不呼叫 Gemini sentiment（由頻道層級 batch 處理）。
     """
     video_id  = video["id"]
     title     = video["title"]
@@ -1745,7 +1806,7 @@ def process_youtube_video(
     else:
         print(f"  ✗ no captions")
 
-    # ── Step 2: Whisper（有 retry 與 bot 偵測限制）────────────────────────
+    # ── Step 2: Whisper ───────────────────────────────────────────────────
     if text is None and (USE_WHISPER or TEST_DOWNLOAD_ONLY):
         print(f"  ⏳ {'testing audio download' if TEST_DOWNLOAD_ONLY else 'transcribing with Whisper'}…")
         with tempfile.TemporaryDirectory() as tmpdir:
@@ -1776,19 +1837,23 @@ def process_youtube_video(
         print(f"  📌 {stock_codes}")
 
     video_entry = {
-        "video_id":       video_id,
-        "title":          title,
-        "channel":        source_name,
-        "date":           date,
-        "stocks_found":   stock_codes,
+        "video_id":        video_id,
+        "title":           title,
+        "channel":         source_name,
+        "date":            date,
+        "stocks_found":    stock_codes,
         "analysis_source": analysis_source,
-        "thumbnail_url":  video.get("thumbnail_url"),
+        "thumbnail_url":   video.get("thumbnail_url"),
     }
-
     video_url = f"https://www.youtube.com/watch?v={video_id}"
+    return video_entry, hits, analysis_source, video_url
 
-    sentiments = _sentiment_for_hits(hits, analysis_source)
 
+def _build_youtube_mentions(
+    v_entry: dict, hits: list[dict], analysis_source: str,
+    video_url: str, sentiments: list[tuple[str, float]],
+) -> list[dict]:
+    """Pass 3: 用預先計算好的 sentiments 組出 mention list。"""
     mentions = []
     for h, (label, score) in zip(hits, sentiments):
         mentions.append({
@@ -1796,19 +1861,18 @@ def process_youtube_video(
             "stock_name":      h["stock_name"],
             "stock_market":    h.get("stock_market", "TW"),
             "stock_sector":    h.get("stock_sector"),
-            "video_title":     title,
-            "channel":         source_name,
-            "date":            date,
-            "context":          h["context"],
-            "matched_keyword":  h.get("matched_keyword", ""),
-            "analysis_source":  analysis_source,
-            "sentiment":        label,
-            "sentiment_score":  score,
-            "video_url":        video_url,
-            "mention_count":    h.get("mention_count", 1),
+            "video_title":     v_entry["title"],
+            "channel":         v_entry["channel"],
+            "date":            v_entry["date"],
+            "context":         h["context"],
+            "matched_keyword": h.get("matched_keyword", ""),
+            "analysis_source": analysis_source,
+            "sentiment":       label,
+            "sentiment_score": score,
+            "video_url":       video_url,
+            "mention_count":   h.get("mention_count", 1),
         })
-
-    return video_entry, mentions
+    return mentions
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Apple Podcast
@@ -1883,10 +1947,13 @@ def fetch_apple_podcast_episodes(
         return []
 
 
-def process_podcast_episode(
+def _detect_podcast_episode(
     ep: dict, source: dict
-) -> tuple[dict, list[dict]]:
-    """處理 Podcast 集數（title+desc，或 Whisper）"""
+) -> tuple[dict, list[dict], str]:
+    """
+    Pass 1: 取得逐字稿並辨識股票。
+    回傳 (video_entry, hits, analysis_source)。
+    """
     title       = ep["title"]
     date        = ep.get("date", "")
     source_name = source["name"]
@@ -1936,9 +2003,14 @@ def process_podcast_episode(
         "analysis_source": analysis_source,
         "thumbnail_url":   None,
     }
+    return video_entry, hits, analysis_source
 
-    sentiments = _sentiment_for_hits(hits, analysis_source)
 
+def _build_podcast_mentions(
+    v_entry: dict, hits: list[dict], analysis_source: str,
+    sentiments: list[tuple[str, float]],
+) -> list[dict]:
+    """Pass 3: 用預先計算好的 sentiments 組出 mention list。"""
     mentions = []
     for h, (label, score) in zip(hits, sentiments):
         mentions.append({
@@ -1946,16 +2018,15 @@ def process_podcast_episode(
             "stock_name":      h["stock_name"],
             "stock_market":    h.get("stock_market", "TW"),
             "stock_sector":    h.get("stock_sector"),
-            "video_title":     title,
-            "channel":         source_name,
-            "date":            date,
+            "video_title":     v_entry["title"],
+            "channel":         v_entry["channel"],
+            "date":            v_entry["date"],
             "context":         h["context"],
             "analysis_source": analysis_source,
             "sentiment":       label,
             "sentiment_score": score,
         })
-
-    return video_entry, mentions
+    return mentions
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Spotify
@@ -2236,29 +2307,44 @@ def main() -> None:
         source_videos:   list[dict] = []
         source_mentions: list[dict] = []
 
+        # ── Pass 1: detection (transcript + stock recognition) ───────────
+        # Each item: (v_entry, hits, analysis_source, video_url_or_None)
+        detected: list[tuple] = []
+
         if stype == "youtube":
             videos = get_channel_videos(ident)
             print(f"  → {len(videos)} videos")
             for video in videos:
-                v_entry, mentions = process_youtube_video(video, sname)
-                source_videos.append(v_entry)
-                source_mentions.extend(mentions)
+                v_entry, hits, asrc, vurl = _detect_youtube_video(video, sname)
+                detected.append((v_entry, hits, asrc, vurl))
 
         elif stype == "applePodcast":
             episodes = fetch_apple_podcast_episodes(ident)
             print(f"  → {len(episodes)} episodes")
             for ep in episodes:
-                v_entry, mentions = process_podcast_episode(ep, source)
-                source_videos.append(v_entry)
-                source_mentions.extend(mentions)
+                v_entry, hits, asrc = _detect_podcast_episode(ep, source)
+                detected.append((v_entry, hits, asrc, None))
 
         elif stype == "spotify":
             episodes = fetch_spotify_episodes(ident)
             print(f"  → {len(episodes)} episodes")
             for ep in episodes:
-                v_entry, mentions = process_podcast_episode(ep, source)
-                source_videos.append(v_entry)
-                source_mentions.extend(mentions)
+                v_entry, hits, asrc = _detect_podcast_episode(ep, source)
+                detected.append((v_entry, hits, asrc, None))
+
+        # ── Pass 2: ONE batch Gemini sentiment call per channel ───────────
+        ep_sentiment_input = [(hits, asrc) for _, hits, asrc, _ in detected]
+        all_sentiments = _batch_channel_sentiments(ep_sentiment_input)
+        print(f"  [sentiment] batch done — {sum(len(hits) for _, hits, _, _ in detected)} hits across {len(detected)} episodes")
+
+        # ── Pass 3: build mentions using pre-computed sentiments ──────────
+        for (v_entry, hits, asrc, vurl), sentiments in zip(detected, all_sentiments):
+            if stype == "youtube":
+                mentions = _build_youtube_mentions(v_entry, hits, asrc, vurl, sentiments)
+            else:
+                mentions = _build_podcast_mentions(v_entry, hits, asrc, sentiments)
+            source_videos.append(v_entry)
+            source_mentions.extend(mentions)
 
         # ── Save after each source ────────────────────────────────────────
         history = merge_into_history(history, source_videos, source_mentions)
