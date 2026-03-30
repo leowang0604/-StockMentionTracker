@@ -567,8 +567,8 @@ def fetch_stock_list() -> list[dict]:
             data = resp.json()
             result = []
             for item in data:
-                code = (item.get("Code") or item.get("SecuritiesCode") or "").strip()
-                name = (item.get("Name") or item.get("CompanyName") or "").strip()
+                code = (item.get("Code") or item.get("SecuritiesCode") or item.get("SecuritiesCompanyCode") or "").strip()
+                name = (item.get("Name") or item.get("CompanyAbbreviation") or item.get("CompanyName") or "").strip()
                 # Keep only numeric codes (exclude warrants, preferred shares, etc.)
                 if code and name and re.match(r"^\d{4,6}$", code):
                     result.append({"code": code, "name": name, "market": market})
