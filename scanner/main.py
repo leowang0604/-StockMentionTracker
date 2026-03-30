@@ -291,6 +291,21 @@ BEARISH_KEYWORDS = BEARISH_STRONG | BEARISH_MILD
 # Format: (keyword_list, ticker, display_name, sector)
 # ─────────────────────────────────────────────────────────────────────────────
 
+# GICS sector → Chinese sector label
+_GICS_SECTOR_MAP: dict[str, str] = {
+    "Information Technology": "科技",
+    "Health Care":            "醫療",
+    "Financials":             "金融",
+    "Consumer Discretionary": "消費",
+    "Communication Services": "通訊媒體",
+    "Industrials":            "工業",
+    "Consumer Staples":       "民生消費",
+    "Energy":                 "能源",
+    "Real Estate":            "房地產",
+    "Materials":              "原料",
+    "Utilities":              "公用事業",
+}
+
 _US_STOCKS_DATA: list[tuple[list[str], str, str, str]] = [
     # ── AI晶片 ──────────────────────────────────────────────────────────────────
     (["輝達", "黃仁勳", "NVIDIA", "Nvidia", "NVDA"],   "NVDA",  "NVIDIA",             "AI晶片"),
@@ -745,6 +760,7 @@ def fetch_stock_list() -> list[dict]:
 
 
 US_STOCKS_EXTRA_FILE  = Path(__file__).parent.parent / "data" / "us_stocks_extra.json"
+US_SP500_CACHE_FILE   = Path(__file__).parent.parent / "data" / "us_sp500_cache.json"
 SECTORS_CACHE_FILE    = Path(__file__).parent.parent / "data" / "sectors_cache.json"
 
 
@@ -819,6 +835,108 @@ def enrich_us_stocks_with_gemini() -> list[tuple[list[str], str, str, str]]:
     except Exception as e:
         print(f"  [gemini] US stock enrichment failed: {e}", file=sys.stderr)
         return []
+
+
+def fetch_us_stocks() -> list[dict]:
+    """
+    Fetch US stock list dynamically:
+      1. S&P 500 from Wikipedia (500 stocks, name + sector)
+      2. All US tickers from SEC EDGAR (~8 k, ticker-only)
+    Caches result to us_sp500_cache.json for 30 days.
+    Returns list of {code, name, sector}.
+    """
+    # ── Load from cache if fresh ──────────────────────────────────────────
+    if US_SP500_CACHE_FILE.exists():
+        age_days = (datetime.now(timezone.utc).timestamp() - US_SP500_CACHE_FILE.stat().st_mtime) / 86400
+        if age_days < 30:
+            try:
+                with open(US_SP500_CACHE_FILE, encoding="utf-8") as f:
+                    cached = json.load(f)
+                stocks = cached.get("stocks", [])
+                print(f"  [us_stocks] Loaded from cache: {len(stocks)} US stocks", file=sys.stderr)
+                return stocks
+            except Exception:
+                pass
+
+    hardcoded_tickers = set(US_CODE_TO_INFO.keys())
+    stocks: list[dict] = []
+    sp500_tickers: set[str] = set()
+
+    # ── 1. S&P 500 from Wikipedia ─────────────────────────────────────────
+    try:
+        url = "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"
+        req = urequest.Request(url, headers={"User-Agent": "StockMentionTracker/1.0"})
+        with urequest.urlopen(req, timeout=20) as r:
+            html = r.read().decode("utf-8")
+
+        # Extract the constituents table
+        table_match = re.search(r'id="constituents".*?</table>', html, re.DOTALL)
+        if table_match:
+            table_html = table_match.group(0)
+            row_pat  = re.compile(r'<tr[^>]*>(.*?)</tr>', re.DOTALL)
+            cell_pat = re.compile(r'<td[^>]*>(.*?)</td>', re.DOTALL)
+            tag_pat  = re.compile(r'<[^>]+>')
+
+            for row in row_pat.finditer(table_html):
+                cells = cell_pat.findall(row.group(1))
+                if len(cells) < 3:
+                    continue
+                ticker = tag_pat.sub("", cells[0]).strip()
+                name   = tag_pat.sub("", cells[1]).strip()
+                gics   = tag_pat.sub("", cells[2]).strip()
+                if not re.match(r'^[A-Z]{1,5}(?:\.[A-Z])?$', ticker):
+                    continue
+                sp500_tickers.add(ticker)
+                if ticker not in hardcoded_tickers:
+                    stocks.append({
+                        "code":   ticker,
+                        "name":   name,
+                        "sector": _GICS_SECTOR_MAP.get(gics, "其他"),
+                    })
+        print(f"  [us_stocks] S&P 500 Wikipedia: {len(sp500_tickers)} tickers, +{len(stocks)} new", file=sys.stderr)
+    except Exception as e:
+        print(f"  [us_stocks] S&P 500 Wikipedia fetch failed: {e}", file=sys.stderr)
+
+    # ── 2. SEC EDGAR (all US-listed tickers) ─────────────────────────────
+    try:
+        edgar_url = "https://www.sec.gov/files/company_tickers.json"
+        req = urequest.Request(
+            edgar_url,
+            headers={"User-Agent": "StockMentionTracker research@stockmentiontracker.example.com"},
+        )
+        with urequest.urlopen(req, timeout=20) as r:
+            edgar_data = json.loads(r.read().decode("utf-8"))
+
+        already = hardcoded_tickers | sp500_tickers | {s["code"] for s in stocks}
+        edgar_new = 0
+        for entry in edgar_data.values():
+            ticker = entry.get("ticker", "").strip().upper()
+            name   = entry.get("title", "").strip()
+            # Only 2-5 letter tickers on major exchanges (skip 1-letter, skip already known)
+            if (ticker and name
+                    and re.match(r'^[A-Z]{2,5}$', ticker)
+                    and ticker not in already):
+                stocks.append({"code": ticker, "name": name, "sector": "其他"})
+                already.add(ticker)
+                edgar_new += 1
+        print(f"  [us_stocks] EDGAR: +{edgar_new} additional tickers", file=sys.stderr)
+    except Exception as e:
+        print(f"  [us_stocks] EDGAR fetch failed: {e}", file=sys.stderr)
+
+    # ── Save cache ────────────────────────────────────────────────────────
+    if stocks:
+        US_SP500_CACHE_FILE.parent.mkdir(parents=True, exist_ok=True)
+        with open(US_SP500_CACHE_FILE, "w", encoding="utf-8") as f:
+            json.dump({
+                "updated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S"),
+                "count": len(stocks),
+                "stocks": stocks,
+            }, f, ensure_ascii=False, indent=2)
+        print(f"  [us_stocks] Saved {len(stocks)} US stocks to cache", file=sys.stderr)
+    else:
+        print("  [us_stocks] No US stocks fetched (both sources failed)", file=sys.stderr)
+
+    return stocks
 
 
 def generate_weekly_summary(stocks_ranking: list[dict], days_back: int) -> dict | None:
@@ -930,6 +1048,7 @@ def enrich_sectors_with_gemini(codes_without_sector: list[str]) -> dict[str, str
 def build_stock_dict(
     stocks: list[dict],
     extra_us_stocks: list[tuple[list[str], str, str, str]] | None = None,
+    dynamic_us: list[dict] | None = None,
 ) -> tuple[dict[str, str], dict[str, str], dict[str, str], dict[str, str]]:
     """
     從台股清單 + US built-in dict 建立：
@@ -1003,6 +1122,20 @@ def build_stock_dict(
         for kw in kws:
             if kw not in stock_dict:  # don't override hardcoded entries
                 stock_dict[kw] = ticker
+
+    # ── US stocks (S&P 500 + EDGAR dynamic, lowest US priority) ──────────
+    _known_us = set(US_CODE_TO_INFO.keys()) | {t for _, t, _, _ in (extra_us_stocks or [])}
+    for s in (dynamic_us or []):
+        ticker = s["code"]
+        if ticker in _known_us:
+            continue  # already covered by hardcoded or Gemini
+        if ticker not in code_to_name:
+            code_to_name[ticker] = s["name"]
+        stock_market[ticker] = "US"
+        if ticker not in stock_sector:
+            stock_sector[ticker] = s.get("sector", "其他")
+        if ticker not in stock_dict:  # ticker-only recognition
+            stock_dict[ticker] = ticker
 
     # ── Taiwan aliases (override conflicts; TW wins over US for same keyword) ─
     for alias, code in ALIASES.items():
@@ -2069,9 +2202,11 @@ def main() -> None:
     global STOCK_DICT, CODE_TO_NAME, STOCK_MARKET, STOCK_SECTOR
     print("[scanner] Fetching Taiwan stock list…")
     stocks = fetch_stock_list()
+    print("[scanner] Fetching US stocks (S&P 500 + EDGAR)…")
+    dynamic_us = fetch_us_stocks()
     print("[scanner] Enriching US stocks with Gemini…")
     extra_us = enrich_us_stocks_with_gemini()
-    STOCK_DICT, CODE_TO_NAME, STOCK_MARKET, STOCK_SECTOR = build_stock_dict(stocks, extra_us)
+    STOCK_DICT, CODE_TO_NAME, STOCK_MARKET, STOCK_SECTOR = build_stock_dict(stocks, extra_us, dynamic_us)
 
     # Merge cached sectors into STOCK_SECTOR, but TW_STOCK_SECTORS always wins
     cached_sectors = load_sectors_cache()
