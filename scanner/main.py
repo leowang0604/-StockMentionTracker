@@ -764,7 +764,9 @@ US_SP500_CACHE_FILE   = Path(__file__).parent.parent / "data" / "us_sp500_cache.
 SECTORS_CACHE_FILE    = Path(__file__).parent.parent / "data" / "sectors_cache.json"
 
 
-def enrich_us_stocks_with_gemini() -> list[tuple[list[str], str, str, str]]:
+def enrich_us_stocks_with_gemini(
+    sp500_candidates: list[dict] | None = None,
+) -> list[tuple[list[str], str, str, str]]:
     """
     Ask Gemini to suggest additional US stocks popular in Taiwanese financial media
     that aren't in our hardcoded list. Caches result for 30 days.
@@ -792,13 +794,29 @@ def enrich_us_stocks_with_gemini() -> list[tuple[list[str], str, str, str]]:
     if not model:
         return []
 
+    # Build S&P 500 candidate hint (tech/finance/health sectors, up to 80 tickers)
+    sp500_hint = ""
+    if sp500_candidates:
+        _priority_sectors = {"科技", "金融", "醫療", "消費", "通訊媒體"}
+        candidates = [
+            s for s in sp500_candidates
+            if s["code"] not in existing_tickers and s.get("sector") in _priority_sectors
+        ][:80]
+        if candidates:
+            lines = ", ".join(f"{s['code']}({s['name']})" for s in candidates)
+            sp500_hint = (
+                f"\n\n以下是 S&P 500 中科技/金融/醫療/消費類股，"
+                f"請從中挑選台灣投資人常討論的，並提供中文名稱：\n{lines}"
+            )
+
     prompt = (
         "台灣財經 YouTube 和 Podcast 頻道中，常被討論的美股有哪些？\n"
-        f"以下 ticker 已經有了，請列出還沒有、但台灣投資人常討論的美股：{', '.join(sorted(existing_tickers))}\n\n"
+        f"以下 ticker 已經有了，請勿重複：{', '.join(sorted(existing_tickers))}\n"
+        f"{sp500_hint}\n\n"
         "請回傳 JSON 陣列，每筆格式（繁體中文 sector）：\n"
         "[{\"ticker\": \"TICKER\", \"name\": \"英文公司名\", "
         "\"sector\": \"族群\", \"keywords\": [\"中文名\", \"別名\", \"TICKER\"]}, ...]\n"
-        "只回傳 JSON，不要有多餘文字。列出 20~30 支。"
+        "只回傳 JSON，不要有多餘文字。列出 30~50 支。"
     )
 
     try:
@@ -884,7 +902,7 @@ def fetch_us_stocks() -> list[dict]:
                 ticker = tag_pat.sub("", cells[0]).strip()
                 name   = tag_pat.sub("", cells[1]).strip()
                 gics   = tag_pat.sub("", cells[2]).strip()
-                if not re.match(r'^[A-Z]{1,5}(?:\.[A-Z])?$', ticker):
+                if not re.match(r'^[A-Z]{2,5}(?:\.[A-Z])?$', ticker):
                     continue
                 sp500_tickers.add(ticker)
                 if ticker not in hardcoded_tickers:
@@ -912,9 +930,9 @@ def fetch_us_stocks() -> list[dict]:
         for entry in edgar_data.values():
             ticker = entry.get("ticker", "").strip().upper()
             name   = entry.get("title", "").strip()
-            # Only 2-5 letter tickers on major exchanges (skip 1-letter, skip already known)
+            # Only 3-5 letter tickers (2-letter ones are handled by hardcoded list)
             if (ticker and name
-                    and re.match(r'^[A-Z]{2,5}$', ticker)
+                    and re.match(r'^[A-Z]{3,5}$', ticker)
                     and ticker not in already):
                 stocks.append({"code": ticker, "name": name, "sector": "其他"})
                 already.add(ticker)
@@ -2276,7 +2294,8 @@ def main() -> None:
     print("[scanner] Fetching US stocks (S&P 500 + EDGAR)…")
     dynamic_us = fetch_us_stocks()
     print("[scanner] Enriching US stocks with Gemini…")
-    extra_us = enrich_us_stocks_with_gemini()
+    sp500_only = [s for s in dynamic_us if s.get("sector") != "其他"]  # S&P 500 has sector
+    extra_us = enrich_us_stocks_with_gemini(sp500_candidates=sp500_only)
     STOCK_DICT, CODE_TO_NAME, STOCK_MARKET, STOCK_SECTOR = build_stock_dict(stocks, extra_us, dynamic_us)
 
     # Merge cached sectors into STOCK_SECTOR, but TW_STOCK_SECTORS always wins
