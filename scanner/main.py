@@ -1673,6 +1673,12 @@ def process_podcast_episode(
     if stock_codes:
         print(f"  📌 {stock_codes}")
 
+    # Debug: check if known watch-keywords appear in text but weren't detected
+    _WATCH = {"華通": "2313", "欣興": "3037", "臻鼎": "4958"}
+    for kw, code in _WATCH.items():
+        if kw in text and code not in stock_codes:
+            print(f"  ⚠️  [{kw}] in text but NOT detected (code={code})", file=sys.stderr)
+
     video_entry = {
         "video_id":        ep["id"],
         "title":           title,
