@@ -1,0 +1,461 @@
+{
+  "updated_at": "2026-03-30T17:57:48",
+  "stocks": [
+    {
+      "ticker": "ACN",
+      "name": "Accenture",
+      "sector": "科技",
+      "keywords": [
+        "埃森哲",
+        "艾森哲",
+        "ACN"
+      ]
+    },
+    {
+      "ticker": "ADBE",
+      "name": "Adobe Inc.",
+      "sector": "科技",
+      "keywords": [
+        "Adobe",
+        "奧多比",
+        "ADBE"
+      ]
+    },
+    {
+      "ticker": "A",
+      "name": "Agilent Technologies",
+      "sector": "科技",
+      "keywords": [
+        "安捷倫科技",
+        "安捷倫",
+        "A"
+      ]
+    },
+    {
+      "ticker": "AKAM",
+      "name": "Akamai Technologies",
+      "sector": "科技",
+      "keywords": [
+        "阿卡邁科技",
+        "阿卡邁",
+        "AKAM"
+      ]
+    },
+    {
+      "ticker": "ADI",
+      "name": "Analog Devices",
+      "sector": "科技",
+      "keywords": [
+        "亞德諾半導體",
+        "ADI"
+      ]
+    },
+    {
+      "ticker": "ADSK",
+      "name": "Autodesk",
+      "sector": "科技",
+      "keywords": [
+        "歐特克",
+        "Autodesk",
+        "ADSK"
+      ]
+    },
+    {
+      "ticker": "CDNS",
+      "name": "Cadence Design Systems",
+      "sector": "科技",
+      "keywords": [
+        "益華電腦",
+        "楷登電子",
+        "CDNS"
+      ]
+    },
+    {
+      "ticker": "COIN",
+      "name": "Coinbase",
+      "sector": "科技",
+      "keywords": [
+        "Coinbase",
+        "加密幣基地",
+        "COIN"
+      ]
+    },
+    {
+      "ticker": "CMCSA",
+      "name": "Comcast",
+      "sector": "科技",
+      "keywords": [
+        "康卡斯特",
+        "Comcast",
+        "CMCSA"
+      ]
+    },
+    {
+      "ticker": "GLW",
+      "name": "Corning Inc.",
+      "sector": "科技",
+      "keywords": [
+        "康寧",
+        "Corning",
+        "GLW"
+      ]
+    },
+    {
+      "ticker": "CRWD",
+      "name": "CrowdStrike",
+      "sector": "科技",
+      "keywords": [
+        "CrowdStrike",
+        "駭客群",
+        "CRWD"
+      ]
+    },
+    {
+      "ticker": "DDOG",
+      "name": "Datadog",
+      "sector": "科技",
+      "keywords": [
+        "Datadog",
+        "數據狗",
+        "DDOG"
+      ]
+    },
+    {
+      "ticker": "EBAY",
+      "name": "eBay Inc.",
+      "sector": "科技",
+      "keywords": [
+        "eBay",
+        "電子海灣",
+        "EBAY"
+      ]
+    },
+    {
+      "ticker": "EPAM",
+      "name": "EPAM Systems",
+      "sector": "科技",
+      "keywords": [
+        "EPAM Systems",
+        "EPAM"
+      ]
+    },
+    {
+      "ticker": "AFL",
+      "name": "Aflac",
+      "sector": "金融",
+      "keywords": [
+        "美國意外險公司",
+        "Aflac",
+        "AFL"
+      ]
+    },
+    {
+      "ticker": "AXP",
+      "name": "American Express",
+      "sector": "金融",
+      "keywords": [
+        "美國運通",
+        "美運",
+        "AXP"
+      ]
+    },
+    {
+      "ticker": "AIG",
+      "name": "American International Group",
+      "sector": "金融",
+      "keywords": [
+        "美國國際集團",
+        "AIG"
+      ]
+    },
+    {
+      "ticker": "BLK",
+      "name": "BlackRock",
+      "sector": "金融",
+      "keywords": [
+        "貝萊德",
+        "BlackRock",
+        "BLK"
+      ]
+    },
+    {
+      "ticker": "BX",
+      "name": "Blackstone Inc.",
+      "sector": "金融",
+      "keywords": [
+        "黑石集團",
+        "Blackstone",
+        "BX"
+      ]
+    },
+    {
+      "ticker": "XYZ",
+      "name": "Block, Inc.",
+      "sector": "金融",
+      "keywords": [
+        "Block",
+        "區塊",
+        "Square",
+        "XYZ"
+      ]
+    },
+    {
+      "ticker": "BK",
+      "name": "BNY Mellon",
+      "sector": "金融",
+      "keywords": [
+        "紐約梅隆銀行",
+        "BNY Mellon",
+        "BK"
+      ]
+    },
+    {
+      "ticker": "COF",
+      "name": "Capital One",
+      "sector": "金融",
+      "keywords": [
+        "首都一號",
+        "Capital One",
+        "COF"
+      ]
+    },
+    {
+      "ticker": "SCHW",
+      "name": "Charles Schwab Corporation",
+      "sector": "金融",
+      "keywords": [
+        "嘉信理財",
+        "Charles Schwab",
+        "SCHW"
+      ]
+    },
+    {
+      "ticker": "C",
+      "name": "Citigroup",
+      "sector": "金融",
+      "keywords": [
+        "花旗集團",
+        "Citigroup",
+        "C"
+      ]
+    },
+    {
+      "ticker": "CME",
+      "name": "CME Group",
+      "sector": "金融",
+      "keywords": [
+        "芝加哥商品交易所集團",
+        "CME",
+        "CME"
+      ]
+    },
+    {
+      "ticker": "CPAY",
+      "name": "Corpay",
+      "sector": "金融",
+      "keywords": [
+        "Corpay",
+        "柯爾佩",
+        "CPAY"
+      ]
+    },
+    {
+      "ticker": "ABT",
+      "name": "Abbott Laboratories",
+      "sector": "醫療",
+      "keywords": [
+        "亞培",
+        "Abbott",
+        "ABT"
+      ]
+    },
+    {
+      "ticker": "ALGN",
+      "name": "Align Technology",
+      "sector": "醫療",
+      "keywords": [
+        "愛齊科技",
+        "隱適美",
+        "ALGN"
+      ]
+    },
+    {
+      "ticker": "BAX",
+      "name": "Baxter International",
+      "sector": "醫療",
+      "keywords": [
+        "百特國際",
+        "Baxter",
+        "BAX"
+      ]
+    },
+    {
+      "ticker": "BDX",
+      "name": "Becton Dickinson",
+      "sector": "醫療",
+      "keywords": [
+        "必帝",
+        "Becton Dickinson",
+        "BDX"
+      ]
+    },
+    {
+      "ticker": "BIIB",
+      "name": "Biogen",
+      "sector": "醫療",
+      "keywords": [
+        "百健",
+        "Biogen",
+        "BIIB"
+      ]
+    },
+    {
+      "ticker": "BMY",
+      "name": "Bristol Myers Squibb",
+      "sector": "醫療",
+      "keywords": [
+        "必治妥施貴寶",
+        "必治妥",
+        "BMY"
+      ]
+    },
+    {
+      "ticker": "CVS",
+      "name": "CVS Health",
+      "sector": "醫療",
+      "keywords": [
+        "CVS健康",
+        "CVS"
+      ]
+    },
+    {
+      "ticker": "DHR",
+      "name": "Danaher Corporation",
+      "sector": "醫療",
+      "keywords": [
+        "丹納赫",
+        "Danaher",
+        "DHR"
+      ]
+    },
+    {
+      "ticker": "DXCM",
+      "name": "Dexcom",
+      "sector": "醫療",
+      "keywords": [
+        "德康醫療",
+        "Dexcom",
+        "DXCM"
+      ]
+    },
+    {
+      "ticker": "EW",
+      "name": "Edwards Lifesciences",
+      "sector": "醫療",
+      "keywords": [
+        "愛德華生命科學",
+        "Edwards Lifesciences",
+        "EW"
+      ]
+    },
+    {
+      "ticker": "ELV",
+      "name": "Elevance Health",
+      "sector": "醫療",
+      "keywords": [
+        "宜聯健康",
+        "Elevance",
+        "ELV"
+      ]
+    },
+    {
+      "ticker": "ABNB",
+      "name": "Airbnb",
+      "sector": "消費",
+      "keywords": [
+        "愛彼迎",
+        "Airbnb",
+        "ABNB"
+      ]
+    },
+    {
+      "ticker": "T",
+      "name": "AT&T",
+      "sector": "消費",
+      "keywords": [
+        "美國電話電報公司",
+        "AT&T",
+        "T"
+      ]
+    },
+    {
+      "ticker": "BBY",
+      "name": "Best Buy",
+      "sector": "消費",
+      "keywords": [
+        "百思買",
+        "Best Buy",
+        "BBY"
+      ]
+    },
+    {
+      "ticker": "BKNG",
+      "name": "Booking Holdings",
+      "sector": "消費",
+      "keywords": [
+        "Booking Holdings",
+        "Booking.com",
+        "BKNG"
+      ]
+    },
+    {
+      "ticker": "CMG",
+      "name": "Chipotle Mexican Grill",
+      "sector": "消費",
+      "keywords": [
+        "墨西哥捲餅",
+        "Chipotle",
+        "CMG"
+      ]
+    },
+    {
+      "ticker": "DECK",
+      "name": "Deckers Brands",
+      "sector": "消費",
+      "keywords": [
+        "迪克斯品牌",
+        "Deckers",
+        "DECK"
+      ]
+    },
+    {
+      "ticker": "DPZ",
+      "name": "Domino's",
+      "sector": "消費",
+      "keywords": [
+        "達美樂",
+        "Domino's",
+        "DPZ"
+      ]
+    },
+    {
+      "ticker": "DASH",
+      "name": "DoorDash",
+      "sector": "消費",
+      "keywords": [
+        "DoorDash",
+        "門衝",
+        "DASH"
+      ]
+    },
+    {
+      "ticker": "EA",
+      "name": "Electronic Arts",
+      "sector": "消費",
+      "keywords": [
+        "美商藝電",
+        "EA"
+      ]
+    }
+  ]
+}
