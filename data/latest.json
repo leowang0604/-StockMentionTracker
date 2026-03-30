@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-30T08:37:08",
+  "updated_at": "2026-03-30T08:43:10",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -5494,7 +5494,7 @@
       "code": "2404",
       "name": "漢唐",
       "market": "TW",
-      "sector": null,
+      "sector": "其他",
       "contexts": [
         {
           "video": "EP1067｜跌不深又漲不動，清明節前的矛盾？記憶體能反彈嗎？設備要選跌深廠務還是飛天CoWos？低軌、矽光子就是顯學！ft.題材獵人 林漢偉",
@@ -5524,7 +5524,7 @@
       "code": "6139",
       "name": "亞翔",
       "market": "TW",
-      "sector": null,
+      "sector": "其他",
       "contexts": [
         {
           "video": "EP1067｜跌不深又漲不動，清明節前的矛盾？記憶體能反彈嗎？設備要選跌深廠務還是飛天CoWos？低軌、矽光子就是顯學！ft.題材獵人 林漢偉",
@@ -5584,7 +5584,7 @@
       "code": "6640",
       "name": "均華",
       "market": "TW",
-      "sector": null,
+      "sector": "其他",
       "contexts": [
         {
           "video": "EP1067｜跌不深又漲不動，清明節前的矛盾？記憶體能反彈嗎？設備要選跌深廠務還是飛天CoWos？低軌、矽光子就是顯學！ft.題材獵人 林漢偉",
@@ -5673,6 +5673,18 @@
       ]
     },
     {
+      "sector": "其他",
+      "market": "TW",
+      "total_mentions": 16,
+      "stock_codes": [
+        "5903",
+        "1301",
+        "2404",
+        "6139",
+        "6640"
+      ]
+    },
+    {
       "sector": "面板",
       "market": "TW",
       "total_mentions": 14,
@@ -5687,15 +5699,6 @@
       "total_mentions": 13,
       "stock_codes": [
         "3045"
-      ]
-    },
-    {
-      "sector": "其他",
-      "market": "TW",
-      "total_mentions": 13,
-      "stock_codes": [
-        "5903",
-        "1301"
       ]
     },
     {
