@@ -112,6 +112,9 @@ ALIASES: dict[str, str] = {
     "健鼎": "3044", "Tripod Tech": "3044",
     "金像電": "2368",
     "燿華": "2367",
+    "華通": "2313",
+    # 光通訊
+    "光聖": "6442",
     # 被動元件
     "國巨": "2327", "YAGEO": "2327",
     "華新科": "2492",
@@ -353,7 +356,7 @@ _US_STOCKS_DATA: list[tuple[list[str], str, str, str]] = [
     (["美國銀行", "Bank of America", "BAC"],           "BAC",   "Bank of America",    "金融"),
     (["高盛", "Goldman Sachs", "GS"],                  "GS",    "Goldman Sachs",      "金融"),
     (["摩根士丹利", "Morgan Stanley", "MS"],           "MS",    "Morgan Stanley",     "金融"),
-    (["巴菲特", "波克夏", "Berkshire"],                "BRK.B", "Berkshire",          "金融"),
+    (["波克夏", "Berkshire"],                           "BRK.B", "Berkshire",          "金融"),
     (["Visa", "VISA", "V"],                            "V",     "Visa",               "金融"),
     (["Mastercard", "MA"],                             "MA",    "Mastercard",         "金融"),
     # ── 生技製藥 ────────────────────────────────────────────────────────────────
@@ -435,11 +438,11 @@ TW_STOCK_SECTORS: dict[str, str] = {
     # ── CPO光通訊 ───────────────────────────────────────────────────────────────
     "6451": "CPO光通訊", "3234": "CPO光通訊", "3081": "CPO光通訊",
     "6616": "CPO光通訊", "4977": "CPO光通訊", "6183": "CPO光通訊",
-    "4979": "CPO光通訊",
+    "4979": "CPO光通訊", "6442": "CPO光通訊",
     # ── PCB載板ABF ───────────────────────────────────────────────────────────────
     "3037": "PCB載板",  "8046": "PCB載板",  "3189": "PCB載板",  "2367": "PCB載板",
     # ── 一般PCB ─────────────────────────────────────────────────────────────────
-    "4958": "PCB",      "3044": "PCB",      "2368": "PCB",      "8103": "PCB",
+    "4958": "PCB",      "3044": "PCB",      "2368": "PCB",      "8103": "PCB",      "2313": "PCB",
     # ── 軟板FPC ─────────────────────────────────────────────────────────────────
     "6153": "FPC",      "6269": "FPC",      "4526": "FPC",
     # ── CCL覆銅板 ────────────────────────────────────────────────────────────────
@@ -859,6 +862,33 @@ def build_stock_dict(
     stock_market: dict[str, str] = {}
     stock_sector: dict[str, str] = {}
 
+    # Common suffixes to strip when generating short-name aliases
+    _TW_SUFFIXES = [
+        "股份有限公司", "有限公司",
+        "投資控股", "投控", "控股",
+        "光電工業", "光電", "電子工業", "電子",
+        "科技工業", "科技", "電腦", "工業", "企業", "實業", "國際",
+    ]
+
+    def _short_aliases(name: str) -> list[str]:
+        """Strip trailing suffixes repeatedly to generate spoken short names.
+        e.g. "聯亞光電工業" → ["聯亞光電", "聯亞"]
+        """
+        aliases = []
+        current = name
+        while True:
+            stripped = False
+            for suffix in _TW_SUFFIXES:
+                if current.endswith(suffix):
+                    current = current[: -len(suffix)]
+                    if len(current) >= 2:
+                        aliases.append(current)
+                    stripped = True
+                    break
+            if not stripped:
+                break
+        return aliases
+
     # ── Taiwan stocks (TWSE / TPEx) ───────────────────────────────────────
     for s in stocks:
         code = s["code"]
@@ -869,6 +899,10 @@ def build_stock_dict(
         stock_market[code] = "TW"
         if code in TW_STOCK_SECTORS:
             stock_sector[code] = TW_STOCK_SECTORS[code]
+        # Also register short spoken name (e.g. "華通電腦" → "華通")
+        for short in _short_aliases(name):
+            if short not in stock_dict:  # don't override existing entries
+                stock_dict[short] = code
 
     # ── US stocks (built-in) — added BEFORE aliases so aliases can override ─
     for kw, ticker in US_KEYWORD_TO_CODE.items():

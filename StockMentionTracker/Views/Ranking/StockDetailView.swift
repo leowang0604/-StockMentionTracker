@@ -236,13 +236,12 @@ struct ContextRowView: View {
     private func highlighted(_ raw: String) -> AttributedString {
         var attributed = AttributedString(raw)
         for term in highlightTerms where !term.isEmpty {
-            var searchRange = raw.startIndex..<raw.endIndex
-            while let strRange = raw.range(of: term, options: .caseInsensitive, range: searchRange) {
-                if let attrRange = Range(strRange, in: attributed) {
-                    attributed[attrRange].foregroundColor = .orange
-                    attributed[attrRange].inlinePresentationIntent = .stronglyEmphasized
-                }
-                searchRange = strRange.upperBound..<raw.endIndex
+            var searchStart = attributed.startIndex
+            while searchStart < attributed.endIndex,
+                  let range = attributed[searchStart...].range(of: term, options: .caseInsensitive) {
+                attributed[range].foregroundColor = .orange
+                attributed[range].inlinePresentationIntent = .stronglyEmphasized
+                searchStart = range.upperBound
             }
         }
         return attributed
