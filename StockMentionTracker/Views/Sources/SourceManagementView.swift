@@ -208,44 +208,48 @@ struct ChannelRowView: View {
     }
 
     var body: some View {
-        HStack(spacing: 12) {
-            ZStack {
-                RoundedRectangle(cornerRadius: 8)
-                    .fill(iconBackground)
-                    .frame(width: 44, height: 44)
-                Image(systemName: channel.sourceType.icon)
-                    .foregroundStyle(.white)
-                    .font(.title3)
-            }
+        NavigationLink {
+            ChannelDetailView(channelName: channel.name)
+        } label: {
+            HStack(spacing: 12) {
+                ZStack {
+                    RoundedRectangle(cornerRadius: 8)
+                        .fill(iconBackground)
+                        .frame(width: 44, height: 44)
+                    Image(systemName: channel.sourceType.icon)
+                        .foregroundStyle(.white)
+                        .font(.title3)
+                }
 
-            VStack(alignment: .leading, spacing: 3) {
-                Text(channel.name)
-                    .font(.headline)
-                    .lineLimit(1)
-                HStack(spacing: 4) {
-                    Text(channel.sourceType.displayName)
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
-                    Text("·")
-                        .font(.caption)
-                        .foregroundStyle(.tertiary)
-                    Text(channel.identifier)
-                        .font(.caption.monospaced())
-                        .foregroundStyle(.tertiary)
+                VStack(alignment: .leading, spacing: 3) {
+                    Text(channel.name)
+                        .font(.headline)
                         .lineLimit(1)
+                    HStack(spacing: 4) {
+                        Text(channel.sourceType.displayName)
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                        Text("·")
+                            .font(.caption)
+                            .foregroundStyle(.tertiary)
+                        Text(channel.identifier)
+                            .font(.caption.monospaced())
+                            .foregroundStyle(.tertiary)
+                            .lineLimit(1)
+                    }
                 }
+
+                Spacer()
+
+                Toggle("", isOn: $isActive)
+                    .labelsHidden()
+                    .onChange(of: isActive) { _, newValue in
+                        onToggle(newValue)
+                    }
             }
-
-            Spacer()
-
-            Toggle("", isOn: $isActive)
-                .labelsHidden()
-                .onChange(of: isActive) { _, newValue in
-                    onToggle(newValue)
-                }
+            .padding(.vertical, 4)
+            .opacity(isActive ? 1.0 : 0.6)
         }
-        .padding(.vertical, 4)
-        .opacity(isActive ? 1.0 : 0.6)
     }
 
     private var iconBackground: Color {

@@ -44,6 +44,38 @@ class DataService {
         isLoading = false
     }
 
+    // MARK: - Channel queries
+
+    func stocksByChannel(_ channelName: String, cutoff: Date) -> [StockEntry] {
+        scanResult.stocksRanking.compactMap { stock -> StockEntry? in
+            let ctxs = stock.contexts.filter {
+                $0.channel == channelName && ($0.parsedDate ?? .distantPast) >= cutoff
+            }
+            guard !ctxs.isEmpty else { return nil }
+            return StockEntry(code: stock.code, name: stock.name,
+                              market: stock.market, sector: stock.sector,
+                              totalMentions: ctxs.count, contexts: ctxs,
+                              sentimentScore: nil, daily: nil)
+        }.sorted { $0.totalMentions > $1.totalMentions }
+    }
+
+    func episodesByChannel(_ channelName: String, cutoff: Date) -> [VideoScanned] {
+        scanResult.videosScanned
+            .filter { $0.channel == channelName && ($0.parsedDate ?? .distantPast) >= cutoff }
+            .sorted { ($0.parsedDate ?? .distantPast) > ($1.parsedDate ?? .distantPast) }
+    }
+
+    func stockEntries(for video: VideoScanned) -> [StockEntry] {
+        scanResult.stocksRanking.compactMap { stock -> StockEntry? in
+            let ctxs = stock.contexts.filter { $0.video == video.title }
+            guard !ctxs.isEmpty else { return nil }
+            return StockEntry(code: stock.code, name: stock.name,
+                              market: stock.market, sector: stock.sector,
+                              totalMentions: ctxs.count, contexts: ctxs,
+                              sentimentScore: nil, daily: nil)
+        }
+    }
+
     func clearCache() {
         try? FileManager.default.removeItem(at: cacheURL)
         scanResult = .empty

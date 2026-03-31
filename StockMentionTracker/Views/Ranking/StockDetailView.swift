@@ -165,9 +165,21 @@ struct ContextRowView: View {
                     .foregroundStyle(.red)
 
                 VStack(alignment: .leading, spacing: 2) {
-                    Text(context.channel ?? "未知來源")
-                        .font(.subheadline.weight(.medium))
-                        .lineLimit(1)
+                    if let channelName = context.channel {
+                        NavigationLink {
+                            ChannelDetailView(channelName: channelName)
+                        } label: {
+                            Text(channelName)
+                                .font(.subheadline.weight(.medium))
+                                .lineLimit(1)
+                                .foregroundStyle(.primary)
+                        }
+                        .buttonStyle(.plain)
+                    } else {
+                        Text("未知來源")
+                            .font(.subheadline.weight(.medium))
+                            .lineLimit(1)
+                    }
                     Text(context.dateText)
                         .font(.caption)
                         .foregroundStyle(.secondary)
