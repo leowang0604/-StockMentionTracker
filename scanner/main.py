@@ -1205,6 +1205,9 @@ def recognize_stocks(text: str) -> list[dict]:
             pattern = r"(?<![A-Za-z0-9])" + re.escape(keyword) + r"(?![A-Za-z0-9])"
         elif keyword in KEYWORD_PATTERN_OVERRIDE:
             pattern = KEYWORD_PATTERN_OVERRIDE[keyword]
+        elif re.match(r"^\d+$", keyword):
+            # Numeric stock codes: avoid matching years/dates (e.g. "2022年", "3月")
+            pattern = r"(?<!\d)" + re.escape(keyword) + r"(?!\d|年|月|日|年度|年代)"
         else:
             pattern = re.escape(keyword)
 
@@ -2007,7 +2010,7 @@ def _detect_podcast_episode(
         print(f"  📌 {stock_codes}")
 
     # Debug: check if known watch-keywords appear in text but weren't detected
-    _WATCH = {"華通": "2313", "欣興": "3037", "臻鼎": "4958"}
+    _WATCH = {"華通": "2313", "欣興": "3037", "臻鼎": "4958", "均華": "6640"}
     for kw, code in _WATCH.items():
         if kw in text and code not in stock_codes:
             print(f"  ⚠️  [{kw}] in text but NOT detected (code={code})", file=sys.stderr)
@@ -2186,11 +2189,21 @@ def merge_into_history(
             "contexts": list(s["contexts"]),
         }
 
-    # Add contexts from new videos only
+    # Build index of (video_title, stock_code) pairs already in history
+    # so we can detect stocks newly found in a re-scanned (same-quality) episode.
+    existing_ctx_keys: set[tuple[str, str]] = set()
+    for s in history.get("stocks_ranking", []):
+        for ctx in s.get("contexts", []):
+            existing_ctx_keys.add((ctx.get("video", ""), s["code"]))
+
+    # Add contexts from new/upgraded videos, or for new stock detections in
+    # same-quality re-scans (prevents silently dropping newly detected stocks).
     for m in new_mentions:
-        if m["video_title"] not in new_titles:
-            continue
+        vt   = m["video_title"]
         code = m["stock_code"]
+        ctx_key = (vt, code)
+        if vt not in new_titles and ctx_key in existing_ctx_keys:
+            continue  # truly duplicate: same episode, same stock, already recorded
         if code not in merged_stocks:
             merged_stocks[code] = {
                 "code":     code,
@@ -2201,7 +2214,7 @@ def merge_into_history(
             }
         if len(merged_stocks[code]["contexts"]) < MAX_CONTEXTS_PER_STOCK:
             merged_stocks[code]["contexts"].append({
-                "video":           m["video_title"],
+                "video":           vt,
                 "channel":         m["channel"],
                 "date":            m["date"],
                 "text":             m["context"],
