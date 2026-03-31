@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-30T22:08:30",
+  "updated_at": "2026-03-31T17:58:53",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -4004,9 +4004,20 @@
           "sentiment": "neutral",
           "sentiment_score": 0.5,
           "video_url": null
+        },
+        {
+          "video": "【理財達人秀】台股殺795取量 破季線反彈？投信清明結帳躲戰火 IC封測彎腰撿鑽石？原料飆 油鋼鋁紙找補漲？黃金失避險鎖美元?｜李兆華、艾綸、陳唯泰、李其展2026.03.31【網路獨播版】",
+          "channel": "東森財經",
+          "date": "2026-03-31",
+          "text": "【理財達人秀】台股殺795取量 破季線反彈？投信清明結帳躲戰火 IC封測彎腰撿鑽石？原料飆 油鋼鋁紙找補漲？黃金失避險鎖美元?｜李兆華、艾綸、陳唯泰、李其展2026.03.31【網路獨播版】 貼在你身編：台積電破前低台達電摜破月線能止穩? #台股#美伊戰爭#荷姆茲海峽#理財達人秀(00:00) 台股大跌逾795失守32K 清明節 ...",
+          "matched_keyword": "台達電",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "https://www.youtube.com/watch?v=I5rKgCBPQIM"
         }
       ],
-      "total_mentions": 10,
+      "total_mentions": 11,
       "sentiment_score": 1.0,
       "daily": {
         "2026-03-25": {
@@ -4024,6 +4035,13 @@
           "sentiment_score": 1.0
         },
         "2026-03-30": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-03-31": {
           "mentions": 1,
           "bullish": 0,
           "bearish": 0,
@@ -4786,7 +4804,7 @@
       "code": "2337",
       "name": "旺宏",
       "market": "TW",
-      "sector": "Flash",
+      "sector": "記憶體",
       "contexts": [
         {
           "video": "EP644 | 🦇",
@@ -8819,10 +8837,11 @@
     {
       "sector": "記憶體",
       "market": "TW",
-      "total_mentions": 50,
+      "total_mentions": 56,
       "stock_codes": [
         "1303",
         "2408",
+        "2337",
         "2344"
       ]
     },
@@ -8951,7 +8970,7 @@
     {
       "sector": "電源供應器",
       "market": "TW",
-      "total_mentions": 10,
+      "total_mentions": 11,
       "stock_codes": [
         "2308"
       ]
@@ -8978,14 +8997,6 @@
       "total_mentions": 6,
       "stock_codes": [
         "2317"
-      ]
-    },
-    {
-      "sector": "Flash",
-      "market": "TW",
-      "total_mentions": 6,
-      "stock_codes": [
-        "2337"
       ]
     },
     {
@@ -9893,6 +9904,60 @@
       ],
       "analysis_source": "whisper",
       "thumbnail_url": null
+    },
+    {
+      "video_id": "31WQfA9X7WU",
+      "title": "【理財達人秀】飆股屠殺日 90%翻身術？設備.IC股鎖下波主流 錯殺股怎撿？台股首破季線 補跌開始？4月還有大戲 逢低挖飆兵！｜李兆華、蔡明翰、高憲容、謝富旭2026.03.31【電視完整版】",
+      "channel": "東森財經",
+      "date": "2026-03-31",
+      "stocks_found": [],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/31WQfA9X7WU/mqdefault.jpg"
+    },
+    {
+      "video_id": "I5rKgCBPQIM",
+      "title": "【理財達人秀】台股殺795取量 破季線反彈？投信清明結帳躲戰火 IC封測彎腰撿鑽石？原料飆 油鋼鋁紙找補漲？黃金失避險鎖美元?｜李兆華、艾綸、陳唯泰、李其展2026.03.31【網路獨播版】",
+      "channel": "東森財經",
+      "date": "2026-03-31",
+      "stocks_found": [
+        "2308",
+        "2330"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/I5rKgCBPQIM/mqdefault.jpg"
+    },
+    {
+      "video_id": "j53PFKnPpmo",
+      "title": "【理財達人秀】風雨中撿槍 鋁電右下賺？ 回檔人氣股 怎低接好入袋？｜李兆華、楊雲翔 2026.03.30 part3",
+      "channel": "東森財經",
+      "date": "2026-03-30",
+      "stocks_found": [
+        "2330"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/j53PFKnPpmo/mqdefault.jpg"
+    },
+    {
+      "video_id": "JLvac_TSJVk",
+      "title": "【理財達人秀】法人報告挺 記憶體沒死？ 戰火警報響 4類受惠買誰？｜李兆華、林漢偉 2026.03.30 part2",
+      "channel": "東森財經",
+      "date": "2026-03-30",
+      "stocks_found": [
+        "2330"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/JLvac_TSJVk/mqdefault.jpg"
+    },
+    {
+      "video_id": "fdCNjNolTqE",
+      "title": "【理財達人秀】中小撐台股 連假前操作？ 工具機、橡膠 搶短高勝率｜李兆華、李永年 2026.03.30 part1",
+      "channel": "東森財經",
+      "date": "2026-03-30",
+      "stocks_found": [
+        "2330"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/fdCNjNolTqE/mqdefault.jpg"
     }
   ]
 }
