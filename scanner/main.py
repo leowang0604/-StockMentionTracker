@@ -1171,8 +1171,10 @@ def build_stock_dict(
 # ─────────────────────────────────────────────────────────────────────────────
 
 CONTEXT_REQUIRED: dict[str, list[str]] = {
-    "AI": ["C3", "C3.ai"],  # avoid matching generic "AI" mentions not about C3.ai
-    "LI": ["Li Auto", "理想汽車"],  # avoid matching "li" in general Chinese text; "理想" removed (too generic)
+    "AI":  ["C3", "C3.ai"],       # avoid matching generic "AI" mentions not about C3.ai
+    "LI":  ["Li Auto", "理想汽車"],# avoid matching "li" in general Chinese text
+    "PCB": ["Bancorp", "PCBP", "PCB Bank"],  # "PCB" in TW content = 電路板產業, not PCB Bancorp
+    "5287": ["5287", "數字科技"],  # 「數字」是中文常用詞，需要出現股號或公司全名才算
 }
 
 # If ANY of these strings appear in the context, the match is rejected.
