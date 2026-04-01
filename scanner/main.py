@@ -1171,10 +1171,26 @@ def build_stock_dict(
 # ─────────────────────────────────────────────────────────────────────────────
 
 CONTEXT_REQUIRED: dict[str, list[str]] = {
-    "AI":  ["C3", "C3.ai"],       # avoid matching generic "AI" mentions not about C3.ai
-    "LI":  ["Li Auto", "理想汽車"],# avoid matching "li" in general Chinese text
-    "PCB": ["Bancorp", "PCBP", "PCB Bank"],  # "PCB" in TW content = 電路板產業, not PCB Bancorp
-    "5287": ["5287", "數字科技"],  # 「數字」是中文常用詞，需要出現股號或公司全名才算
+    "AI":   ["C3", "C3.ai"],        # avoid matching generic "AI" mentions not about C3.ai
+    "LI":   ["Li Auto", "理想汽車"],# avoid matching "li" in general Chinese text
+    "PCB":  ["Bancorp", "PCBP", "PCB Bank"],   # "PCB" in TW content = 電路板產業, not PCB Bancorp
+    "5287": ["5287", "數字科技"],   # 「數字」是中文常用詞，需要出現股號或公司全名才算
+    # Year codes that overlap with calendar years
+    "2008": ["高興昌"],             # 2008 = 高興昌，but "2008年" / "2008 年" is the financial crisis year
+    "2009": ["第一銅"],             # 2009 = 第一銅
+    "2025": ["千興"],               # 2025 = 千興，but "2025年" / "2025 年" is a calendar year
+    # Common Chinese words / phrases used as company names
+    "1259": ["安心食品", "1259"],   # 「安心」是日常用語，需要完整公司名或股號
+    "6486": ["互動娛樂", "6486"],   # 「互動」是日常用語
+    "9921": ["捷安特", "Giant", "9921"],  # 「巨大」是形容詞，需要 Giant/捷安特 等品牌詞
+    "7584": ["7584", "樂意科技"],   # 「樂意」是日常用語（很樂意、非常樂意）
+    "8201": ["8201", "無敵國際"],   # 「無敵」是形容詞（AI是無敵的）
+    "1108": ["1108", "幸福水泥", "水泥"],  # 「幸福」是形容詞
+    "5310": ["5310", "天剛電子"],   # 「天剛」常出現在「昨天剛好」等句子中
+    # US tickers that conflict with common terms / abbreviations
+    "O":   ["Realty", "REIT", "O股"],        # "O" alone matches any standalone O in Chinese text
+    "LINE": ["Lineage", "LINE股", "不動產投資"], # LINE = 通訊軟體，需要區分
+    "ARR":  ["Armour", "按揭", "mREIT", "ARR股"],  # ARR = Annual Recurring Revenue 指標
 }
 
 # If ANY of these strings appear in the context, the match is rejected.
@@ -1186,6 +1202,7 @@ CONTEXT_FORBIDDEN: dict[str, list[str]] = {
 # Overrides the default re.escape(keyword) pattern for Chinese keywords.
 KEYWORD_PATTERN_OVERRIDE: dict[str, str] = {
     "國巨": r"(?<!中)國巨(?!石)",   # exclude "中國巨石" (China Jushi)
+    "天剛": r"(?<![昨今前上那這每])天剛",  # exclude "昨天剛好", "今天剛好" etc.
 }
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -1207,8 +1224,8 @@ def recognize_stocks(text: str) -> list[dict]:
         elif keyword in KEYWORD_PATTERN_OVERRIDE:
             pattern = KEYWORD_PATTERN_OVERRIDE[keyword]
         elif re.match(r"^\d+$", keyword):
-            # Numeric stock codes: avoid matching years/dates (e.g. "2022年", "3月")
-            pattern = r"(?<!\d)" + re.escape(keyword) + r"(?!\d|年|月|日|年度|年代)"
+            # Numeric stock codes: avoid matching years/dates (e.g. "2022年", "2025 年")
+            pattern = r"(?<!\d)" + re.escape(keyword) + r"(?!\d|\s*年|\s*月|\s*日|\s*季)"
         else:
             pattern = re.escape(keyword)
 
