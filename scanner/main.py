@@ -1193,6 +1193,7 @@ CONTEXT_REQUIRED: dict[str, list[str]] = {
     "1108": ["1108", "幸福水泥", "水泥"],  # 「幸福」是形容詞
     "5310": ["5310", "天剛電子"],   # 「天剛」常出現在「昨天剛好」等句子中
     "5903": ["5903", "全家便利", "FamilyMart"],  # 「全家」是日常用語（全家人、全家出遊）
+    "3167": ["3167", "大量電子"],               # 「大量」是日常副詞（大量資金、大量買進）
     # US tickers that conflict with common terms / abbreviations
     "O":   ["Realty", "REIT", "O股"],        # "O" alone matches any standalone O in Chinese text
     "LINE": ["Lineage", "LINE股", "不動產投資"], # LINE = 通訊軟體，需要區分
