@@ -1368,20 +1368,10 @@ def _get_gemini_model():
         return None
 
 
-def analyze_sentiment_batch_gemini(items: list[dict]) -> list[tuple[str, float]]:
-    """
-    items: list of {"stock": stock_name, "context": mention_text}
-    Returns list of (label, score) in the same order.
-    Falls back to keyword rules on any error.
-    """
-    if not GEMINI_API_KEY or not items:
-        return [_keyword_sentiment(it["context"]) for it in items]
+_SENTIMENT_BATCH_SIZE = 30  # max items per Gemini call to avoid output token truncation
 
-    model = _get_gemini_model()
-    if model is None:
-        return [_keyword_sentiment(it["context"]) for it in items]
-
-    # Build prompt
+def _sentiment_batch_single(model, items: list[dict]) -> list[tuple[str, float]] | None:
+    """One Gemini call for up to _SENTIMENT_BATCH_SIZE items. Returns None on failure."""
     lines = []
     for i, it in enumerate(items):
         lines.append(f"{i+1}. 股票：{it['stock']}，提及內容：{it['context']}")
@@ -1394,11 +1384,9 @@ def analyze_sentiment_batch_gemini(items: list[dict]) -> list[tuple[str, float]]
         "score 代表看多程度（1.0=極度看多，0.0=極度看空，0.5=中性），數量與輸入相同，不要有多餘文字。\n\n"
         + "\n".join(lines)
     )
-
     try:
         response = model.models.generate_content(model=_GEMINI_MODEL_NAME, contents=prompt)
         text = response.text.strip()
-        # Strip markdown code fences if present
         if text.startswith("```"):
             text = re.sub(r"^```[a-z]*\n?", "", text)
             text = re.sub(r"\n?```$", "", text)
@@ -1415,8 +1403,33 @@ def analyze_sentiment_batch_gemini(items: list[dict]) -> list[tuple[str, float]]
             return results
     except Exception as e:
         print(f"  [gemini] batch analysis failed: {e}", file=sys.stderr)
+    return None
 
-    return [_keyword_sentiment(it["context"]) for it in items]
+
+def analyze_sentiment_batch_gemini(items: list[dict]) -> list[tuple[str, float]]:
+    """
+    items: list of {"stock": stock_name, "context": mention_text}
+    Returns list of (label, score) in the same order.
+    Splits into chunks of _SENTIMENT_BATCH_SIZE to avoid output token truncation.
+    Falls back to keyword rules on any error.
+    """
+    if not GEMINI_API_KEY or not items:
+        return [_keyword_sentiment(it["context"]) for it in items]
+
+    model = _get_gemini_model()
+    if model is None:
+        return [_keyword_sentiment(it["context"]) for it in items]
+
+    results: list[tuple[str, float]] = []
+    for i in range(0, len(items), _SENTIMENT_BATCH_SIZE):
+        chunk = items[i:i + _SENTIMENT_BATCH_SIZE]
+        chunk_results = _sentiment_batch_single(model, chunk)
+        if chunk_results is None:
+            # fallback for this chunk only
+            results.extend(_keyword_sentiment(it["context"]) for it in chunk)
+        else:
+            results.extend(chunk_results)
+    return results
 
 
 def _sentiment_for_hits(hits: list[dict], analysis_source: str) -> list[tuple[str, float]]:
