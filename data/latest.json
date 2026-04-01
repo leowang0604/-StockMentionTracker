@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-01T18:33:58",
+  "updated_at": "2026-04-01T18:41:07",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -9827,6 +9827,47 @@
       }
     },
     {
+      "code": "PD",
+      "name": "PagerDuty, Inc.",
+      "market": "US",
+      "sector": "其他",
+      "contexts": [
+        {
+          "video": "EP214 | 台、美股重點一次說，低軌衛星產業動能，光電二極體與台股關係，定穎投控轉型，google新技術與記憶體 ？",
+          "channel": "韭菜畢業班",
+          "date": "2026-03-29",
+          "text": "好 那再來回到台股 可以跟各位聊就是一些 光通訊相關的東西 我們其實在上一集有講到 就是累晶相關等 像連亞全新 好IT這些 IT其實之前也有講過 就是在某一集 應該有特別講過 但IT的話 其實主力的產品的話 就是光纖網路的這些 IMP的這種累晶 然後再來就是 它主要供應的就是 光纖發膜組所需的那個PD 也就是光電二級體 其實講到PD 最近很紅的 就是只要你只要去打PD 相關的供應鏈 其實幾乎都往上去噴的 非常的快的 然後再來就是 目前的高階應用 因為從100G 已經到了現在已經400G了 跟CPU相關的應用 所以你每一個 雷射的這種二級體LD 它需要搭配就是1到4個PD 那你繼續算一下 它的整體",
+          "matched_keyword": "",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": null
+        },
+        {
+          "video": "EP214 | 台、美股重點一次說，低軌衛星產業動能，光電二極體與台股關係，定穎投控轉型，google新技術與記憶體 ？",
+          "channel": "韭菜畢業班",
+          "date": "2026-03-29",
+          "text": "關的供應鏈 其實幾乎都往上去噴的 非常的快的 然後再來就是 目前的高階應用 因為從100G 已經到了現在已經400G了 跟CPU相關的應用 所以你每一個 雷射的這種二級體LD 它需要搭配就是1到4個PD 那你繼續算一下 它的整體的營收期 就會往上去從 那以1.6T的這種光纖發膜組 需要就是200G的PD 那3.2T四代的話 需要採用的是400G的PD 那現在IT的話 100G的這種PD的話 已經大量的出貨 那再來就是 1.6T理論上在2026年 應該會持續的往上去從 那成長率基本上 都是直接翻倍 這滿正常的一件事情 所以我們可以看到 相關的這種 產能其實都已經往上去從 然後再來就是毛利率的部分 其",
+          "matched_keyword": "",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": null
+        }
+      ],
+      "total_mentions": 2,
+      "sentiment_score": 1.0,
+      "daily": {
+        "2026-03-29": {
+          "mentions": 2,
+          "bullish": 2,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        }
+      }
+    },
+    {
       "code": "2603",
       "name": "長榮",
       "market": "TW",
@@ -12877,7 +12918,7 @@
     {
       "sector": "其他",
       "market": "US",
-      "total_mentions": 48,
+      "total_mentions": 50,
       "stock_codes": [
         "ASIC",
         "BBU",
@@ -12886,6 +12927,7 @@
         "SR",
         "SSD",
         "EP",
+        "PD",
         "NET",
         "QQQ",
         "JD",
