@@ -13,7 +13,7 @@ struct StockDetailView: View {
         @Bindable var appState = appState
         let cutoff = appState.cutoffDate
         return dataService.scanResult.stocksRanking
-            .filter { $0.sector == sector && $0.code != stock.code }
+            .filter { $0.sector == sector && $0.code != stock.code && $0.market == stock.market }
             .compactMap { s -> StockEntry? in
                 let ctxs = s.contexts.filter { ($0.parsedDate ?? .distantPast) >= cutoff }
                 guard !ctxs.isEmpty else { return nil }
