@@ -431,6 +431,9 @@ for _kws, _ticker, _name, _sector in _US_STOCKS_DATA:
     for _kw in _kws:
         US_KEYWORD_TO_CODE[_kw] = _ticker
 
+# Canonical US sector labels — Gemini must pick from this list for consistency
+US_SECTORS: list[str] = sorted(set(s for _, _, _, s in _US_STOCKS_DATA))
+
 # ─────────────────────────────────────────────────────────────────────────────
 # Taiwan stock sector mapping (code → sector)
 # ─────────────────────────────────────────────────────────────────────────────
@@ -808,11 +811,13 @@ def enrich_us_stocks_with_gemini(
                 f"請從中挑選台灣投資人常討論的，並提供中文名稱：\n{lines}"
             )
 
+    sector_list = "、".join(US_SECTORS)
     prompt = (
         "台灣財經 YouTube 和 Podcast 頻道中，常被討論的美股有哪些？\n"
         f"以下 ticker 已經有了，請勿重複：{', '.join(sorted(existing_tickers))}\n"
         f"{sp500_hint}\n\n"
-        "請回傳 JSON 陣列，每筆格式（繁體中文 sector）：\n"
+        f"sector 欄位必須從以下清單中選擇最接近的一個，不可自行創造新詞：\n{sector_list}\n\n"
+        "請回傳 JSON 陣列，每筆格式：\n"
         "[{\"ticker\": \"TICKER\", \"name\": \"英文公司名\", "
         "\"sector\": \"族群\", \"keywords\": [\"中文名\", \"別名\", \"TICKER\"]}, ...]\n"
         "只回傳 JSON，不要有多餘文字。列出 30~50 支。"
