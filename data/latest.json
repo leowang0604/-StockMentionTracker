@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-01T02:15:00",
+  "updated_at": "2026-04-01T02:15:05",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -13439,6 +13439,36 @@
           "bearish": 0,
           "neutral": 0,
           "sentiment_score": 1.0
+        }
+      }
+    },
+    {
+      "code": "5013",
+      "name": "強新",
+      "market": "TW",
+      "sector": null,
+      "contexts": [
+        {
+          "video": "EP648 | 🦆",
+          "channel": "股癌",
+          "date": "2026-03-28",
+          "text": "EP648 | 🦆 狀態：早上歡樂晚上哀     🎁 股癌限定優惠開跑！  修麗可 A.G.E 極效賦活緊緻精華（電波V臉瓶） 超強新品上市🔥  很多人抗老都在「補」，但其實關鍵是——撐不撐得住。     電波V臉瓶它裡面有一個關鍵成分叫35%普拉絲鏈（Proxylane），濃度算是業界很頂的。  這東西在做的事情是——幫膠原結構「往內撐」。  再加上所謂的「煥活四重膠原機制」，  簡單講就是，不是短線發光，是把膠原支撐慢慢撐回來",
+          "matched_keyword": "",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": null
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-03-28": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
         }
       }
     }
