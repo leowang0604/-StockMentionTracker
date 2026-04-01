@@ -291,6 +291,21 @@ BEARISH_KEYWORDS = BEARISH_STRONG | BEARISH_MILD
 # Format: (keyword_list, ticker, display_name, sector)
 # ─────────────────────────────────────────────────────────────────────────────
 
+# TWSE/TPEx industry category code → Chinese sector label
+# Source: TWSE openapi IndustryCategoryCode field
+_TW_INDUSTRY_CODE_MAP: dict[str, str] = {
+    "01": "水泥",       "02": "食品",       "03": "塑膠",
+    "04": "紡織",       "05": "電機機械",   "06": "電器電纜",
+    "07": "化工",       "08": "玻璃陶瓷",   "09": "造紙",
+    "10": "鋼鐵",       "11": "橡膠",       "12": "汽車",
+    "14": "建材營造",   "15": "航運",       "16": "觀光餐旅",
+    "17": "金融保險",   "18": "貿易百貨",   "20": "其他",
+    "21": "生技醫療",   "22": "光電",       "23": "通訊網路",
+    "24": "電子零組件", "25": "電腦周邊",   "26": "半導體",
+    "27": "電子通路",   "28": "資訊服務",   "29": "其他電子",
+    "31": "油電燃氣",
+}
+
 # GICS sector → Chinese sector label
 _GICS_SECTOR_MAP: dict[str, str] = {
     "Information Technology": "科技",
@@ -372,7 +387,15 @@ _US_STOCKS_DATA: list[tuple[list[str], str, str, str]] = [
     (["MongoDB", "MDB"],                               "MDB",   "MongoDB",            "AI軟體"),
     (["C3.ai", "AI"],                                  "AI",    "C3.ai",              "AI軟體"),
     (["UiPath", "PATH"],                               "PATH",  "UiPath",             "AI軟體"),
+    # ── 網路安全 ────────────────────────────────────────────────────────────────
+    (["Cloudflare", "NET"],                            "NET",   "Cloudflare",         "網路安全"),
+    (["Palo Alto", "PANW"],                            "PANW",  "Palo Alto Networks", "網路安全"),
+    (["CrowdStrike", "CRWD"],                          "CRWD",  "CrowdStrike",        "網路安全"),
+    (["Zscaler", "ZS"],                                "ZS",    "Zscaler",            "網路安全"),
+    (["Fortinet", "FTNT"],                             "FTNT",  "Fortinet",           "網路安全"),
+    (["Okta", "OKTA"],                                 "OKTA",  "Okta",               "網路安全"),
     # ── 企業軟體 ────────────────────────────────────────────────────────────────
+    (["Adobe", "ADBE"],                                "ADBE",  "Adobe",              "企業軟體"),
     (["IBM"],                                          "IBM",   "IBM",                "企業軟體"),
     # ── 消費電子 ────────────────────────────────────────────────────────────────
     (["蘋果", "Apple", "AAPL"],                        "AAPL",  "Apple",              "消費電子"),
@@ -631,7 +654,9 @@ def fetch_stock_list() -> list[dict]:
                 name = (item.get("Name") or item.get("CompanyAbbreviation") or item.get("CompanyName") or "").strip()
                 # Keep only numeric codes (exclude warrants, preferred shares, etc.)
                 if code and name and re.match(r"^\d{4,6}$", code):
-                    result.append({"code": code, "name": name, "market": market})
+                    industry_code = (item.get("IndustryCategoryCode") or item.get("IndustryCode") or "").strip()
+                    sector = _TW_INDUSTRY_CODE_MAP.get(industry_code, "")
+                    result.append({"code": code, "name": name, "market": market, "sector": sector})
             print(f"  [stocks] {market}: {len(result)} securities fetched", file=sys.stderr)
             return result
         except Exception as e:
@@ -1121,6 +1146,8 @@ def build_stock_dict(
         stock_market[code] = "TW"
         if code in TW_STOCK_SECTORS:
             stock_sector[code] = TW_STOCK_SECTORS[code]
+        elif s.get("sector"):  # sector from TWSE IndustryCategoryCode
+            stock_sector[code] = s["sector"]
         # Also register short spoken name (e.g. "華通電腦" → "華通")
         for short in _short_aliases(name):
             if short not in stock_dict:  # don't override existing entries
@@ -1147,16 +1174,45 @@ def build_stock_dict(
 
     # ── US stocks (S&P 500 + EDGAR dynamic, lowest US priority) ──────────
     _known_us = set(US_CODE_TO_INFO.keys()) | {t for _, t, _, _ in (extra_us_stocks or [])}
+    _us_name_suffixes = [
+        " Inc.", " Inc", " Corp.", " Corp", " Corporation",
+        " LLC", " Ltd.", " Ltd", " Co.", " Holdings", " Group",
+        " L.P.", " LP", " plc", " PLC",
+    ]
+
+    def _strip_us_name(name: str) -> str:
+        for suffix in _us_name_suffixes:
+            if name.endswith(suffix):
+                return name[:-len(suffix)].strip()
+        return name
+
     for s in (dynamic_us or []):
         ticker = s["code"]
+        name   = s["name"]
+        sector = s.get("sector", "其他")
         if ticker in _known_us:
             continue  # already covered by hardcoded or Gemini
         if ticker not in code_to_name:
-            code_to_name[ticker] = s["name"]
+            code_to_name[ticker] = name
         stock_market[ticker] = "US"
         if ticker not in stock_sector:
-            stock_sector[ticker] = s.get("sector", "其他")
-        if ticker not in stock_dict:  # ticker-only recognition
+            stock_sector[ticker] = sector
+
+        # EDGAR-only stocks (sector="其他") are not added to stock_dict at all:
+        # their tickers are too short/generic and they have no usable sector.
+        # S&P 500 stocks (sector != "其他") get name-based + 4+-char ticker recognition.
+        if sector == "其他":
+            continue
+
+        # Full company name (≥5 chars)
+        if len(name) >= 5 and name not in stock_dict:
+            stock_dict[name] = ticker
+        # Stripped name (without Inc./Corp. etc.)
+        stripped = _strip_us_name(name)
+        if stripped != name and len(stripped) >= 5 and stripped not in stock_dict:
+            stock_dict[stripped] = ticker
+        # Ticker only if ≥4 chars (shorter ones cause false positives in Chinese text)
+        if len(ticker) >= 4 and ticker not in stock_dict:
             stock_dict[ticker] = ticker
 
     # ── Taiwan aliases (override conflicts; TW wins over US for same keyword) ─
@@ -1180,10 +1236,6 @@ CONTEXT_REQUIRED: dict[str, list[str]] = {
     "LI":   ["Li Auto", "理想汽車"],# avoid matching "li" in general Chinese text
     "PCB":  ["Bancorp", "PCBP", "PCB Bank"],   # "PCB" in TW content = 電路板產業, not PCB Bancorp
     "5287": ["5287", "數字科技"],   # 「數字」是中文常用詞，需要出現股號或公司全名才算
-    # Year codes that overlap with calendar years
-    "2008": ["高興昌"],             # 2008 = 高興昌，but "2008年" / "2008 年" is the financial crisis year
-    "2009": ["第一銅"],             # 2009 = 第一銅
-    "2025": ["千興"],               # 2025 = 千興，but "2025年" / "2025 年" is a calendar year
     # Common Chinese words / phrases used as company names
     "1259": ["安心食品", "1259"],   # 「安心」是日常用語，需要完整公司名或股號
     "6486": ["互動娛樂", "6486"],   # 「互動」是日常用語
@@ -1191,6 +1243,8 @@ CONTEXT_REQUIRED: dict[str, list[str]] = {
     "7584": ["7584", "樂意科技"],   # 「樂意」是日常用語（很樂意、非常樂意）
     "8201": ["8201", "無敵國際"],   # 「無敵」是形容詞（AI是無敵的）
     "1108": ["1108", "幸福水泥", "水泥"],  # 「幸福」是形容詞
+    "1109": ["1109", "信大水泥", "水泥"],  # 「信大」出現在「相信大家」等日常句子
+    "6923": ["6923"],                      # 「中台」出現在「情況中台股」（情況中 + 台股）
     "5310": ["5310", "天剛電子"],   # 「天剛」常出現在「昨天剛好」等句子中
     "5903": ["5903", "全家便利", "FamilyMart"],  # 「全家」是日常用語（全家人、全家出遊）
     "3167": ["3167", "大量電子"],               # 「大量」是日常副詞（大量資金、大量買進）
@@ -1198,6 +1252,8 @@ CONTEXT_REQUIRED: dict[str, list[str]] = {
     "O":   ["Realty", "REIT", "O股"],        # "O" alone matches any standalone O in Chinese text
     "LINE": ["Lineage", "LINE股", "不動產投資"], # LINE = 通訊軟體，需要區分
     "ARR":  ["Armour", "按揭", "mREIT", "ARR股"],  # ARR = Annual Recurring Revenue 指標
+    "ASIC": ["Ategrity", "保險", "insurance"],     # "ASIC" in Chinese content = AI chip accelerator term
+    "1565": ["光學", "1565", "精華光學"],           # 「精華」是日常用語（精華時段、精華片段）
 }
 
 # If ANY of these strings appear in the context, the match is rejected.
@@ -1256,6 +1312,13 @@ def recognize_stocks(text: str) -> list[dict]:
             if code in CONTEXT_REQUIRED:
                 required_terms = CONTEXT_REQUIRED[code]
                 if not any(term in ctx for term in required_terms):
+                    continue
+
+            # Year-shaped codes (1990–2099): require company name in context.
+            # Avoids matching "2024年" / "1998年以前" etc. as stock mentions.
+            if re.match(r"^(19|20)\d{2}$", code) and code not in CONTEXT_REQUIRED:
+                company_name = CODE_TO_NAME.get(code, "")
+                if company_name and company_name not in ctx:
                     continue
 
             # Reject if forbidden context terms appear (avoids substring false positives)

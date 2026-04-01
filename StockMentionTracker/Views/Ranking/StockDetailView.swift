@@ -9,7 +9,7 @@ struct StockDetailView: View {
     @State private var expandedIDs = Set<String>()
 
     private var sectorPeers: [StockEntry] {
-        guard let sector = stock.sector else { return [] }
+        guard let sector = stock.sector, sector != "其他" else { return [] }
         @Bindable var appState = appState
         let cutoff = appState.cutoffDate
         return dataService.scanResult.stocksRanking
@@ -138,11 +138,38 @@ struct StockDetailView: View {
 private func shortNameTerms(_ name: String, _ code: String, _ keyword: String?) -> [String] {
     var terms: [String] = []
     terms.append(name)
-    // Short name: strip legal suffixes
-    let stripped = name
+    // Short name: strip English legal suffixes
+    // e.g. "Cloudflare, Inc." → "Cloudflare", "Adobe Inc." → "Adobe"
+    let commaStripped = name
         .components(separatedBy: ",").first?
         .trimmingCharacters(in: .whitespaces) ?? name
-    if stripped != name { terms.append(stripped) }
+    if commaStripped != name { terms.append(commaStripped) }
+    let englishSuffixes = [" Inc.", " Inc", " Corp.", " Corp", " Corporation",
+                           " LLC", " Ltd.", " Ltd", " Co.", " Holdings", " Group"]
+    let baseForSuffix = commaStripped
+    for suffix in englishSuffixes {
+        if baseForSuffix.hasSuffix(suffix) {
+            let s = String(baseForSuffix.dropLast(suffix.count)).trimmingCharacters(in: .whitespaces)
+            if s != name && s.count >= 2 { terms.append(s) }
+            break
+        }
+    }
+    // Short name: strip Chinese company suffixes repeatedly
+    // e.g. "南俊國際股份有限公司" → "南俊國際" → "南俊"
+    let chineseSuffixes = ["股份有限公司", "有限公司", "投資控股", "投控", "控股",
+                           "光電工業", "光電", "電子工業", "電子", "科技工業", "科技",
+                           "電腦", "工業", "企業", "實業", "國際"]
+    var current = name
+    outer: while true {
+        for suffix in chineseSuffixes {
+            if current.hasSuffix(suffix) {
+                current = String(current.dropLast(suffix.count))
+                if current.count >= 2 { terms.append(current) }
+                continue outer
+            }
+        }
+        break
+    }
     terms.append(code)
     if let kw = keyword, !kw.isEmpty { terms.append(kw) }
     return terms.filter { !$0.isEmpty }
