@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-01T02:15:08",
+  "updated_at": "2026-04-01T02:15:13",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -10730,6 +10730,54 @@
       }
     },
     {
+      "code": "EP",
+      "name": "EMPIRE PETROLEUM CORP",
+      "market": "US",
+      "sector": "其他",
+      "contexts": [
+        {
+          "video": "EP648 | 🦆",
+          "channel": "股癌",
+          "date": "2026-03-28",
+          "text": "就想起來 我想說可能有一些單身的 就會覺得說 幹  gay 掰 什麼這個家就是什麼 孩子控制的 但真的要體驗過 你才會明白 很多事情你沒有看過 你是不知道 就下從不可與兵 下面也會 二保將 氣氛載從 2025 拜新年 流到了過了掃木端 五萬身 會被咔掉 一直都沒有抓到聯密 那想送生日祝福都送不出去 EP 647 提到周遭的人登出 想起高中時的夢中夢到媽媽走了 那醒來第一件事情 就是打電話回家問男 掛好高中是住宿 一整天心情都不好 很難想像真的遇到會怎麼樣 祝大家生活順遂 那可以的話 計畫永遠走在意外前 掛好把握當下 開心掛好撒花 對啊 確實是要把握當下 那像我自己的父母 最近也開始有比較密集的拜訪",
+          "matched_keyword": "",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": null
+        },
+        {
+          "video": "台股怎麼了｜【浦男搜股】EP.269",
+          "channel": "老王愛說笑",
+          "date": "2026-03-31",
+          "text": "台股怎麼了｜【浦男搜股】EP.269 加入老王會員請點選浦惠投顧官網：https://www.inclusion.com.tw/ ☆加入VIC黎志建、陳於晨、錢冠州老師會員，請來電會員 ...",
+          "matched_keyword": "EP",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "https://www.youtube.com/watch?v=XcfVmf1puHM"
+        }
+      ],
+      "total_mentions": 2,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-03-28": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-03-31": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
       "code": "2603",
       "name": "長榮",
       "market": "TW",
@@ -12380,36 +12428,6 @@
       }
     },
     {
-      "code": "EP",
-      "name": "EMPIRE PETROLEUM CORP",
-      "market": "US",
-      "sector": "其他",
-      "contexts": [
-        {
-          "video": "EP648 | 🦆",
-          "channel": "股癌",
-          "date": "2026-03-28",
-          "text": "就想起來 我想說可能有一些單身的 就會覺得說 幹  gay 掰 什麼這個家就是什麼 孩子控制的 但真的要體驗過 你才會明白 很多事情你沒有看過 你是不知道 就下從不可與兵 下面也會 二保將 氣氛載從 2025 拜新年 流到了過了掃木端 五萬身 會被咔掉 一直都沒有抓到聯密 那想送生日祝福都送不出去 EP 647 提到周遭的人登出 想起高中時的夢中夢到媽媽走了 那醒來第一件事情 就是打電話回家問男 掛好高中是住宿 一整天心情都不好 很難想像真的遇到會怎麼樣 祝大家生活順遂 那可以的話 計畫永遠走在意外前 掛好把握當下 開心掛好撒花 對啊 確實是要把握當下 那像我自己的父母 最近也開始有比較密集的拜訪",
-          "matched_keyword": "",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": null
-        }
-      ],
-      "total_mentions": 1,
-      "sentiment_score": 0.5,
-      "daily": {
-        "2026-03-28": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        }
-      }
-    },
-    {
       "code": "AVG",
       "name": "ANEW HEALTH Ltd",
       "market": "US",
@@ -13640,7 +13658,7 @@
     {
       "sector": "其他",
       "market": "US",
-      "total_mentions": 75,
+      "total_mentions": 76,
       "stock_codes": [
         "PCB",
         "ASIC",
@@ -13650,6 +13668,7 @@
         "LINE",
         "ARR",
         "SSD",
+        "EP",
         "NET",
         "QQQ",
         "JD",
@@ -13663,7 +13682,6 @@
         "SMR",
         "CW",
         "CE",
-        "EP",
         "AVG",
         "RKLB",
         "DXYZ",
