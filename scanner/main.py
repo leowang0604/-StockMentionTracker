@@ -824,7 +824,7 @@ def enrich_us_stocks_with_gemini(
     )
 
     try:
-        response = model.generate_content(prompt)
+        response = model.models.generate_content(model=_GEMINI_MODEL_NAME, contents=prompt)
         text = response.text.strip()
         if text.startswith("```"):
             text = re.sub(r"^```[a-z]*\n?", "", text)
@@ -993,7 +993,7 @@ def generate_weekly_summary(stocks_ranking: list[dict], days_back: int) -> dict 
     )
 
     try:
-        response = model.generate_content(prompt)
+        response = model.models.generate_content(model=_GEMINI_MODEL_NAME, contents=prompt)
         text = response.text.strip()
         if text.startswith("```"):
             text = re.sub(r"^```[a-z]*\n?", "", text)
@@ -1042,7 +1042,7 @@ def enrich_sectors_with_gemini(codes_without_sector: list[str]) -> dict[str, str
     )
 
     try:
-        response = model.generate_content(prompt)
+        response = model.models.generate_content(model=_GEMINI_MODEL_NAME, contents=prompt)
         text = response.text.strip()
         if text.startswith("```"):
             text = re.sub(r"^```[a-z]*\n?", "", text)
@@ -1352,17 +1352,17 @@ def _keyword_sentiment(text: str) -> tuple[str, float]:
 
 
 # Gemini client (lazy-initialized)
-_gemini_model = None
+_GEMINI_MODEL_NAME = "gemini-2.5-flash-lite"
+_gemini_client = None
 
 def _get_gemini_model():
-    global _gemini_model
-    if _gemini_model is not None:
-        return _gemini_model
+    global _gemini_client
+    if _gemini_client is not None:
+        return _gemini_client
     try:
-        import google.generativeai as genai
-        genai.configure(api_key=GEMINI_API_KEY)
-        _gemini_model = genai.GenerativeModel("gemini-2.5-flash-lite")
-        return _gemini_model
+        from google import genai
+        _gemini_client = genai.Client(api_key=GEMINI_API_KEY)
+        return _gemini_client
     except Exception as e:
         print(f"  [gemini] init failed: {e}", file=sys.stderr)
         return None
@@ -1396,7 +1396,7 @@ def analyze_sentiment_batch_gemini(items: list[dict]) -> list[tuple[str, float]]
     )
 
     try:
-        response = model.generate_content(prompt)
+        response = model.models.generate_content(model=_GEMINI_MODEL_NAME, contents=prompt)
         text = response.text.strip()
         # Strip markdown code fences if present
         if text.startswith("```"):
@@ -1568,7 +1568,7 @@ def filter_ambiguous_hits_with_gemini(hits: list[dict]) -> list[dict]:
     )
 
     try:
-        response = model.generate_content(prompt)
+        response = model.models.generate_content(model=_GEMINI_MODEL_NAME, contents=prompt)
         text = response.text.strip()
         if text.startswith("```"):
             text = re.sub(r"^```[a-z]*\n?", "", text)

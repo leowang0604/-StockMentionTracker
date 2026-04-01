@@ -43,7 +43,7 @@ jobs:
           cache-dependency-path: scanner/requirements.txt
 
       - name: Install base dependencies
-        run: pip install "yt-dlp>=2025.1.1" requests "youtube-transcript-api>=1.0.0" google-generativeai
+        run: pip install "yt-dlp>=2025.1.1" requests "youtube-transcript-api>=1.0.0" google-genai
 
       - name: Cache Whisper model
         if: ${{ inputs.use_whisper != 'false' }}
