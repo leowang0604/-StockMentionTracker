@@ -2558,6 +2558,8 @@ def main() -> None:
         try:
             subprocess.run(["git", "config", "user.email", "github-actions[bot]@users.noreply.github.com"], check=True)
             subprocess.run(["git", "config", "user.name", "github-actions[bot]"], check=True)
+            # Stage latest.json + any other modified tracked files in data/
+            subprocess.run(["git", "add", "-u", "data/"], capture_output=True)
             subprocess.run(["git", "add", str(OUTPUT_FILE)], check=True)
             result = subprocess.run(
                 ["git", "diff", "--staged", "--quiet"],
@@ -2570,11 +2572,7 @@ def main() -> None:
                     check=True
                 )
                 subprocess.run(
-                    ["git", "rebase", "--abort"],
-                    capture_output=True  # non-fatal if no rebase in progress
-                )
-                subprocess.run(
-                    ["git", "pull", "--rebase", "origin", "main"],
+                    ["git", "pull", "--rebase", "--autostash", "origin", "main"],
                     check=True
                 )
                 subprocess.run(["git", "push"], check=True)
