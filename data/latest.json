@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-02T18:39:14",
+  "updated_at": "2026-04-02T18:39:27",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -6628,9 +6628,20 @@
           "sentiment": "bearish",
           "sentiment_score": 0.0,
           "video_url": null
+        },
+        {
+          "video": "股神也會看錯？【王老先聲】#分析股票 #績效 #整體操作",
+          "channel": "老王愛說笑",
+          "date": "2026-04-01",
+          "text": "股神也會看錯？【王老先聲】#分析股票 #績效 #整體操作 您也可以在以下頻道透過Podcast收聽： Apple Podcast：https://reurl.cc/52DnlR Spotify：https://reurl.cc/xEpqZE ...",
+          "matched_keyword": "分析",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "https://www.youtube.com/watch?v=dVpFcWrTq34"
         }
       ],
-      "total_mentions": 9,
+      "total_mentions": 10,
       "sentiment_score": 0.2,
       "daily": {
         "2026-04-02": {
@@ -6641,10 +6652,10 @@
           "sentiment_score": 0.5
         },
         "2026-04-01": {
-          "mentions": 3,
+          "mentions": 4,
           "bullish": 1,
           "bearish": 0,
-          "neutral": 2,
+          "neutral": 3,
           "sentiment_score": 1.0
         },
         "2026-03-28": {
@@ -14706,6 +14717,17 @@
       ]
     },
     {
+      "sector": "企業軟體",
+      "market": "US",
+      "total_mentions": 13,
+      "stock_codes": [
+        "DDOG",
+        "ADBE",
+        "ACN",
+        "CDNS"
+      ]
+    },
+    {
       "sector": "電源供應器",
       "market": "TW",
       "total_mentions": 12,
@@ -14728,17 +14750,6 @@
       "stock_codes": [
         "3443",
         "3661"
-      ]
-    },
-    {
-      "sector": "企業軟體",
-      "market": "US",
-      "total_mentions": 12,
-      "stock_codes": [
-        "DDOG",
-        "ADBE",
-        "ACN",
-        "CDNS"
       ]
     },
     {
