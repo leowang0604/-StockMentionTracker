@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-01T23:24:09",
+  "updated_at": "2026-04-02T08:59:49",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -5691,7 +5691,7 @@
       "code": "APP",
       "name": "AppLovin",
       "market": "US",
-      "sector": "科技",
+      "sector": "AI軟體",
       "contexts": [
         {
           "video": "EP214 | 台、美股重點一次說，低軌衛星產業動能，光電二極體與台股關係，定穎投控轉型，google新技術與記憶體 ？",
@@ -8906,7 +8906,7 @@
       "code": "A",
       "name": "Agilent Technologies",
       "market": "US",
-      "sector": "科技",
+      "sector": "生技製藥",
       "contexts": [
         {
           "video": "2026/03/30 (一）納指進入修正區，美伊戰爭AI衝擊還沒來？科技股下跌 才剛開始？",
@@ -10754,7 +10754,7 @@
       "code": "ADBE",
       "name": "Adobe Inc.",
       "market": "US",
-      "sector": "科技",
+      "sector": "企業軟體",
       "contexts": [
         {
           "video": "EP644 | 🦇",
@@ -11414,7 +11414,7 @@
       "code": "CRWD",
       "name": "CrowdStrike",
       "market": "US",
-      "sector": "科技",
+      "sector": "網路安全",
       "contexts": [
         {
           "video": "2026/03/30 (一）納指進入修正區，美伊戰爭AI衝擊還沒來？科技股下跌 才剛開始？",
@@ -13004,7 +13004,7 @@
       "code": "COIN",
       "name": "Coinbase",
       "market": "US",
-      "sector": "科技",
+      "sector": "金融",
       "contexts": [
         {
           "video": "2026/03/27 (五）殖利率飆、美債危險，川普急了嗎？",
@@ -13749,6 +13749,36 @@
           "sentiment_score": 1.0
         }
       }
+    },
+    {
+      "code": "1315",
+      "name": "達新",
+      "market": "TW",
+      "sector": "塑膠工業",
+      "contexts": [
+        {
+          "video": "【理財達人秀】AI硬體利空？ 曲博追真相！ 輝達新神兵 老AI最補？｜李兆華、曲建仲 2026.04.01 part6",
+          "channel": "東森財經",
+          "date": "2026-04-02",
+          "text": "【理財達人秀】AI硬體利空？ 曲博追真相！ 輝達新神兵 老AI最補？｜李兆華、曲建仲 2026.04.01 part6 完整版：https://youtu.be/TdLj60MYAuM #美伊戰爭#台積電#台股#理財達人秀本節目與分析師所推介個股，無不當之財務利益關係， ...",
+          "matched_keyword": "達新",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "https://www.youtube.com/watch?v=i-6XWTetpqo"
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-04-02": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
     }
   ],
   "sectors_ranking": [
@@ -13894,17 +13924,21 @@
       ]
     },
     {
-      "sector": "科技",
+      "sector": "金融",
       "market": "US",
       "total_mentions": 24,
       "stock_codes": [
-        "APP",
-        "Q",
-        "A",
-        "IT",
-        "ADBE",
-        "CRWD",
-        "COIN"
+        "V",
+        "MS",
+        "L",
+        "BAC",
+        "BRK.B",
+        "GS",
+        "BLK",
+        "KKR",
+        "COIN",
+        "JPM",
+        "C"
       ]
     },
     {
@@ -13924,23 +13958,6 @@
         "2020",
         "5013",
         "1220"
-      ]
-    },
-    {
-      "sector": "金融",
-      "market": "US",
-      "total_mentions": 23,
-      "stock_codes": [
-        "V",
-        "MS",
-        "L",
-        "BAC",
-        "BRK.B",
-        "GS",
-        "BLK",
-        "KKR",
-        "JPM",
-        "C"
       ]
     },
     {
@@ -14039,6 +14056,14 @@
       ]
     },
     {
+      "sector": "AI軟體",
+      "market": "US",
+      "total_mentions": 11,
+      "stock_codes": [
+        "APP"
+      ]
+    },
+    {
       "sector": "伺服器",
       "market": "TW",
       "total_mentions": 11,
@@ -14078,6 +14103,15 @@
       "total_mentions": 7,
       "stock_codes": [
         "2454"
+      ]
+    },
+    {
+      "sector": "科技",
+      "market": "US",
+      "total_mentions": 7,
+      "stock_codes": [
+        "Q",
+        "IT"
       ]
     },
     {
@@ -14162,6 +14196,15 @@
       ]
     },
     {
+      "sector": "生技製藥",
+      "market": "US",
+      "total_mentions": 4,
+      "stock_codes": [
+        "A",
+        "MRNA"
+      ]
+    },
+    {
       "sector": "半導體設備",
       "market": "TW",
       "total_mentions": 4,
@@ -14239,6 +14282,15 @@
       ]
     },
     {
+      "sector": "網路安全",
+      "market": "US",
+      "total_mentions": 2,
+      "stock_codes": [
+        "NET",
+        "CRWD"
+      ]
+    },
+    {
       "sector": "電動車",
       "market": "TW",
       "total_mentions": 2,
@@ -14257,11 +14309,11 @@
       ]
     },
     {
-      "sector": "網路安全",
+      "sector": "企業軟體",
       "market": "US",
       "total_mentions": 1,
       "stock_codes": [
-        "NET"
+        "ADBE"
       ]
     },
     {
@@ -14286,14 +14338,6 @@
       "total_mentions": 1,
       "stock_codes": [
         "2327"
-      ]
-    },
-    {
-      "sector": "生技製藥",
-      "market": "US",
-      "total_mentions": 1,
-      "stock_codes": [
-        "MRNA"
       ]
     },
     {
@@ -14358,6 +14402,14 @@
       "total_mentions": 1,
       "stock_codes": [
         "00631L"
+      ]
+    },
+    {
+      "sector": "塑膠工業",
+      "market": "TW",
+      "total_mentions": 1,
+      "stock_codes": [
+        "1315"
       ]
     }
   ],
@@ -15393,6 +15445,41 @@
       ],
       "analysis_source": "titleAndDescription",
       "thumbnail_url": "https://i.ytimg.com/vi/cNue7Efgxig/mqdefault.jpg"
+    },
+    {
+      "video_id": "i-6XWTetpqo",
+      "title": "【理財達人秀】AI硬體利空？ 曲博追真相！ 輝達新神兵 老AI最補？｜李兆華、曲建仲 2026.04.01 part6",
+      "channel": "東森財經",
+      "date": "2026-04-02",
+      "stocks_found": [
+        "2330",
+        "NVDA",
+        "1315"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/i-6XWTetpqo/mqdefault.jpg"
+    },
+    {
+      "video_id": "YDztWVWcMe0",
+      "title": "【理財達人秀】美伊最終戰？ 台股滿血復活 CPO、低軌還沒漲夠 買誰？｜李兆華、紀緯明 2026.04.01 part5",
+      "channel": "東森財經",
+      "date": "2026-04-02",
+      "stocks_found": [
+        "2330"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/YDztWVWcMe0/mqdefault.jpg"
+    },
+    {
+      "video_id": "Vfaux-EuUug",
+      "title": "【理財達人秀】警報解除？ 節前3招安心抱 PCB回後買 記憶體反彈跑？｜李兆華、朱家泓 2026.04.01 part4",
+      "channel": "東森財經",
+      "date": "2026-04-01",
+      "stocks_found": [
+        "2330"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/Vfaux-EuUug/mqdefault.jpg"
     }
   ]
 }
