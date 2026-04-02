@@ -1909,8 +1909,8 @@ def fetch_captions(video_id: str) -> str | None:
             text = " ".join(s.text for s in fetched).replace("\n", " ").strip()
             if text:
                 return text
-    except Exception:
-        pass
+    except Exception as e:
+        print(f"  [captions] error: {type(e).__name__}: {e}", file=sys.stderr)
 
     # yt-dlp fallback removed — always blocked by YouTube bot detection on CI
     return None
