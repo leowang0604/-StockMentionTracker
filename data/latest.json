@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-02T13:35:11",
+  "updated_at": "2026-04-02T13:35:13",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -13695,20 +13695,51 @@
           "sentiment_score": 0.5
         }
       }
+    },
+    {
+      "code": "GOOG",
+      "name": "Alphabet Inc. (Class C)",
+      "market": "US",
+      "sector": "雲端/AI",
+      "contexts": [
+        {
+          "video": "EP214 | 台、美股重點一次說，低軌衛星產業動能，光電二極體與台股關係，定穎投控轉型，google新技術與記憶體 ？",
+          "channel": "韭菜畢業班",
+          "date": "2026-03-29",
+          "text": "記憶體產業的影響  - Meta 近況：法律訴訟與液冷散熱趨勢  - 低軌衛星產業動能  - 光電二極體與台股關係  - 定穎投控產業轉型：從車用到 AI 伺服器高階板     韭菜畢業班總連結 : https://portaly.cc/uncle_stock  －－－－以下為 SoundOn 動態廣告－－－－  【遠雄樂元】 台中北屯捷運X好市多 雙首排 ➤早鳥首付55萬起 旗艦級新地標21-39坪，台中北屯機捷總站20米，好市多60米，出站即到家。2147坪新世代遊園宅，全齡化公設✦ 早鳥輕入住 https://sofm.pse.is/8vulnu  -- Hosting provided b",
+          "matched_keyword": "",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": null
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-03-29": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
     }
   ],
   "sectors_ranking": [
     {
       "sector": "雲端/AI",
       "market": "US",
-      "total_mentions": 103,
+      "total_mentions": 104,
       "stock_codes": [
         "GOOGL",
         "META",
         "MSFT",
         "AMZN",
         "ORCL",
-        "CRM"
+        "CRM",
+        "GOOG"
       ]
     },
     {
