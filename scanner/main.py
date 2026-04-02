@@ -1256,6 +1256,8 @@ def build_stock_dict(
         stock_market[ticker] = "US"
         stock_sector[ticker] = sector
         for kw in kws:
+            if not re.match(r'^[A-Za-z0-9]', kw):
+                continue  # skip non-ASCII (Chinese) aliases — too many false positives
             if kw not in stock_dict:  # don't override hardcoded entries
                 stock_dict[kw] = ticker
 
@@ -1341,6 +1343,7 @@ CONTEXT_REQUIRED: dict[str, list[str]] = {
     "ARR":  ["Armour", "按揭", "mREIT", "ARR股"],  # ARR = Annual Recurring Revenue 指標
     "ASIC": ["Ategrity", "保險", "insurance"],     # "ASIC" in Chinese content = AI chip accelerator term
     "1565": ["光學", "1565", "精華光學"],           # 「精華」是日常用語（精華時段、精華片段）
+    "BX":   ["Blackstone", "黑石"],                # "BX" rarely appears in TW financial content
 }
 
 # If ANY of these strings appear in the context, the match is rejected.
@@ -1406,6 +1409,15 @@ def recognize_stocks(text: str) -> list[dict]:
             if re.match(r"^(19|20)\d{2}$", code) and code not in CONTEXT_REQUIRED:
                 company_name = CODE_TO_NAME.get(code, "")
                 if company_name and company_name not in ctx:
+                    continue
+
+            # Price-level false positive: 4-digit numeric code appearing as a stock
+            # price rather than a stock mention.
+            # e.g. "漲到1760" / "跌到1760" / "1760字頭" → price context, not stock.
+            if re.match(r"^\d{4}$", keyword) and code not in CONTEXT_REQUIRED:
+                pre = text[max(0, pos - 8): pos]
+                suf = text[pos + 4: min(len(text), pos + 10)]
+                if re.search(r'[到至達]\s*$', pre) or re.search(r'^\s*字頭', suf):
                     continue
 
             # Reject if forbidden context terms appear (avoids substring false positives)
