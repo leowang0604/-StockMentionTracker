@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-02T12:19:52",
+  "updated_at": "2026-04-02T12:27:33",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -13741,19 +13741,17 @@
     {
       "sector": "其他",
       "market": "TW",
-      "total_mentions": 56,
+      "total_mentions": 53,
       "stock_codes": [
         "5007",
         "2640",
         "6139",
         "2404",
-        "1109",
         "8047",
         "2901",
         "1301",
         "6640",
         "6164",
-        "6923",
         "3252",
         "3444",
         "1313",
@@ -13778,12 +13776,20 @@
       ]
     },
     {
+      "sector": "AI晶片",
+      "market": "US",
+      "total_mentions": 40,
+      "stock_codes": [
+        "NVDA",
+        "AMD",
+        "MRVL"
+      ]
+    },
+    {
       "sector": "其他",
       "market": "US",
-      "total_mentions": 50,
+      "total_mentions": 38,
       "stock_codes": [
-        "ASIC",
-        "BBU",
         "HBM",
         "AGI",
         "SR",
@@ -13810,16 +13816,6 @@
         "CMP",
         "NIC",
         "AKA"
-      ]
-    },
-    {
-      "sector": "AI晶片",
-      "market": "US",
-      "total_mentions": 40,
-      "stock_codes": [
-        "NVDA",
-        "AMD",
-        "MRVL"
       ]
     },
     {
