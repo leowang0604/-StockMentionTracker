@@ -47,7 +47,8 @@ MAX_CONTEXTS_PER_STOCK = 30 # cap to keep JSON manageable
 
 SOURCES_FILE     = Path(__file__).parent / "sources.json"
 OUTPUT_FILE      = Path(__file__).parent.parent / "data" / "latest.json"
-STOCKS_CACHE_FILE = Path(__file__).parent.parent / "data" / "stocks.json"
+STOCKS_CACHE_FILE    = Path(__file__).parent.parent / "data" / "stocks.json"
+TW_INDUSTRY_CACHE_FILE = Path(__file__).parent.parent / "data" / "tw_industry_cache.json"
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Static aliases: English names, abbreviations, nicknames not in official list
@@ -627,6 +628,68 @@ STOCK_MARKET: dict[str, str] = {}  # code → "TW" or "US"
 STOCK_SECTOR: dict[str, str] = {}  # code → sector name
 
 # ─────────────────────────────────────────────────────────────────────────────
+# Taiwan stock industry mapping — fetched from TWSE ISIN page
+# ─────────────────────────────────────────────────────────────────────────────
+
+def fetch_tw_industry_map() -> dict[str, str]:
+    """
+    從 TWSE ISIN 頁面抓取 股票代碼 → 產業別 mapping。
+    結果快取到 tw_industry_cache.json，30 天內不重抓。
+    e.g. {"2330": "半導體業", "1101": "水泥工業", ...}
+    """
+    # Load from cache if fresh
+    if TW_INDUSTRY_CACHE_FILE.exists():
+        age_days = (datetime.now(timezone.utc).timestamp() - TW_INDUSTRY_CACHE_FILE.stat().st_mtime) / 86400
+        if age_days < 30:
+            try:
+                with open(TW_INDUSTRY_CACHE_FILE, encoding="utf-8") as f:
+                    cached = json.load(f)
+                mapping = cached.get("mapping", {})
+                print(f"  [tw_industry] Loaded from cache: {len(mapping)} entries", file=sys.stderr)
+                return mapping
+            except Exception:
+                pass
+
+    mapping: dict[str, str] = {}
+    # strMode=2: 上市 (TWSE listed), strMode=4: 上櫃 (TPEx OTC)
+    for mode in ("2", "4"):
+        url = f"https://isin.twse.com.tw/isin/C_public.jsp?strMode={mode}"
+        try:
+            req = urequest.Request(url, headers={"User-Agent": "StockMentionTracker/1.0"})
+            with urequest.urlopen(req, timeout=20) as r:
+                raw = r.read().decode("cp950", errors="ignore")
+            rows = re.findall(r'<tr[^>]*>(.*?)</tr>', raw, re.DOTALL)
+            tag_pat = re.compile(r'<[^>]+>')
+            count = 0
+            for row in rows:
+                cells = re.findall(r'<td[^>]*>(.*?)</td>', row, re.DOTALL)
+                cells = [tag_pat.sub("", c).strip() for c in cells]
+                if len(cells) < 5:
+                    continue
+                # cells[0] = "1101　台泥" (full-width space between code and name)
+                code = cells[0].split("\u3000")[0].strip()
+                industry = cells[4].strip()
+                if re.match(r"^\d{4,6}$", code) and industry:
+                    mapping[code] = industry
+                    count += 1
+            print(f"  [tw_industry] ISIN strMode={mode}: {count} entries", file=sys.stderr)
+        except Exception as e:
+            print(f"  [tw_industry] ISIN fetch failed (strMode={mode}): {e}", file=sys.stderr)
+
+    if mapping:
+        TW_INDUSTRY_CACHE_FILE.parent.mkdir(parents=True, exist_ok=True)
+        with open(TW_INDUSTRY_CACHE_FILE, "w", encoding="utf-8") as f:
+            json.dump({
+                "updated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S"),
+                "count": len(mapping),
+                "mapping": mapping,
+            }, f, ensure_ascii=False, indent=2)
+        print(f"  [tw_industry] Saved {len(mapping)} entries to cache", file=sys.stderr)
+
+    return mapping
+
+
+# ─────────────────────────────────────────────────────────────────────────────
 # Dynamic stock list — TWSE + TPEx OpenAPI
 # ─────────────────────────────────────────────────────────────────────────────
 
@@ -1096,6 +1159,7 @@ def build_stock_dict(
     stocks: list[dict],
     extra_us_stocks: list[tuple[list[str], str, str, str]] | None = None,
     dynamic_us: list[dict] | None = None,
+    tw_industry_map: dict[str, str] | None = None,
 ) -> tuple[dict[str, str], dict[str, str], dict[str, str], dict[str, str]]:
     """
     從台股清單 + US built-in dict 建立：
@@ -1146,8 +1210,8 @@ def build_stock_dict(
         stock_market[code] = "TW"
         if code in TW_STOCK_SECTORS:
             stock_sector[code] = TW_STOCK_SECTORS[code]
-        elif s.get("sector"):  # sector from TWSE IndustryCategoryCode
-            stock_sector[code] = s["sector"]
+        elif tw_industry_map and code in tw_industry_map:
+            stock_sector[code] = tw_industry_map[code]
         # Also register short spoken name (e.g. "華通電腦" → "華通")
         for short in _short_aliases(name):
             if short not in stock_dict:  # don't override existing entries
@@ -2405,12 +2469,14 @@ def main() -> None:
     global STOCK_DICT, CODE_TO_NAME, STOCK_MARKET, STOCK_SECTOR
     print("[scanner] Fetching Taiwan stock list…")
     stocks = fetch_stock_list()
+    print("[scanner] Fetching TW industry map…")
+    tw_industry_map = fetch_tw_industry_map()
     print("[scanner] Fetching US stocks (S&P 500 + EDGAR)…")
     dynamic_us = fetch_us_stocks()
     print("[scanner] Enriching US stocks with Gemini…")
     sp500_only = [s for s in dynamic_us if s.get("sector") != "其他"]  # S&P 500 has sector
     extra_us = enrich_us_stocks_with_gemini(sp500_candidates=sp500_only)
-    STOCK_DICT, CODE_TO_NAME, STOCK_MARKET, STOCK_SECTOR = build_stock_dict(stocks, extra_us, dynamic_us)
+    STOCK_DICT, CODE_TO_NAME, STOCK_MARKET, STOCK_SECTOR = build_stock_dict(stocks, extra_us, dynamic_us, tw_industry_map)
 
     # Merge cached sectors into STOCK_SECTOR, but TW_STOCK_SECTORS always wins
     cached_sectors = load_sectors_cache()
