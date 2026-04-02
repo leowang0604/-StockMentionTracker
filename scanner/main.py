@@ -1889,7 +1889,8 @@ def fetch_captions(video_id: str) -> str | None:
     # ── 1. youtube-transcript-api ──────────────────────────────────────────
     try:
         from youtube_transcript_api import YouTubeTranscriptApi, NoTranscriptFound, TranscriptsDisabled
-        api = YouTubeTranscriptApi()
+        cookies_file = os.environ.get("YOUTUBE_COOKIES_FILE")
+        api = YouTubeTranscriptApi(cookies=cookies_file)
         transcript_list = api.list(video_id)
         transcript = None
         for lang in preferred:
