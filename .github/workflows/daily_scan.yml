@@ -103,9 +103,9 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           echo "=== data/ contents ==="
           ls -la data/ 2>/dev/null || echo "(data/ not found)"
+          git add -u data/ 2>/dev/null || true   # stage modifications + deletions
           git add data/latest.json
           git add data/stocks.json 2>/dev/null || true
-          git add data/us_stocks_extra.json 2>/dev/null || true
           git add data/us_sp500_cache.json 2>/dev/null || true
           git add data/sectors_cache.json 2>/dev/null || true
           echo "=== staged diff stat ==="
