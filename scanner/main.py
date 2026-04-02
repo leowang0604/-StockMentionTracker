@@ -305,6 +305,10 @@ _TW_INDUSTRY_CODE_MAP: dict[str, str] = {
     "24": "電子零組件", "25": "電腦周邊",   "26": "半導體",
     "27": "電子通路",   "28": "資訊服務",   "29": "其他電子",
     "31": "油電燃氣",
+    # TPEx (上櫃) specific codes
+    "30": "文化創意",   "32": "管理股票",   "33": "電子商務",
+    "35": "綠能環保",   "36": "數位雲端",   "37": "運動休閒",
+    "38": "居家生活",
 }
 
 # GICS sector → Chinese sector label
@@ -651,30 +655,48 @@ def fetch_tw_industry_map() -> dict[str, str]:
                 pass
 
     mapping: dict[str, str] = {}
-    # strMode=2: 上市 (TWSE listed), strMode=4: 上櫃 (TPEx OTC)
-    for mode in ("2", "4"):
-        url = f"https://isin.twse.com.tw/isin/C_public.jsp?strMode={mode}"
-        try:
-            req = urequest.Request(url, headers={"User-Agent": "StockMentionTracker/1.0"})
-            with urequest.urlopen(req, timeout=20) as r:
-                raw = r.read().decode("cp950", errors="ignore")
-            rows = re.findall(r'<tr[^>]*>(.*?)</tr>', raw, re.DOTALL)
-            tag_pat = re.compile(r'<[^>]+>')
-            count = 0
-            for row in rows:
-                cells = re.findall(r'<td[^>]*>(.*?)</td>', row, re.DOTALL)
-                cells = [tag_pat.sub("", c).strip() for c in cells]
-                if len(cells) < 5:
-                    continue
-                # cells[0] = "1101　台泥" (full-width space between code and name)
-                code = cells[0].split("\u3000")[0].strip()
-                industry = cells[4].strip()
-                if re.match(r"^\d{4,6}$", code) and industry:
-                    mapping[code] = industry
+
+    # ── TWSE 上市：ISIN strMode=2 ─────────────────────────────────────────────
+    twse_url = "https://isin.twse.com.tw/isin/C_public.jsp?strMode=2"
+    try:
+        req = urequest.Request(twse_url, headers={"User-Agent": "StockMentionTracker/1.0"})
+        with urequest.urlopen(req, timeout=20) as r:
+            raw = r.read().decode("cp950", errors="ignore")
+        rows = re.findall(r'<tr[^>]*>(.*?)</tr>', raw, re.DOTALL)
+        tag_pat = re.compile(r'<[^>]+>')
+        count = 0
+        for row in rows:
+            cells = re.findall(r'<td[^>]*>(.*?)</td>', row, re.DOTALL)
+            cells = [tag_pat.sub("", c).strip() for c in cells]
+            if len(cells) < 5:
+                continue
+            # cells[0] = "1101　台泥" (full-width space between code and name)
+            code = cells[0].split("\u3000")[0].strip()
+            industry = cells[4].strip()
+            if re.match(r"^\d{4,6}$", code) and industry:
+                mapping[code] = industry
+                count += 1
+        print(f"  [tw_industry] TWSE ISIN: {count} entries", file=sys.stderr)
+    except Exception as e:
+        print(f"  [tw_industry] TWSE ISIN fetch failed: {e}", file=sys.stderr)
+
+    # ── TPEx 上櫃：OpenAPI（strMode=4 ISIN page times out in GitHub Actions）──
+    tpex_url = "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap03_O"
+    try:
+        resp = requests.get(tpex_url, timeout=20, headers={"Accept": "application/json"})
+        resp.raise_for_status()
+        count = 0
+        for item in resp.json():
+            code = (item.get("SecuritiesCompanyCode") or item.get("SecuretiesCompanyCode") or "").strip()
+            industry_code = (item.get("SecuritiesIndustryCode") or item.get("SecuretiesIndustryCode") or "").strip()
+            if re.match(r"^\d{4,6}$", code) and industry_code:
+                sector = _TW_INDUSTRY_CODE_MAP.get(industry_code, "")
+                if sector:
+                    mapping[code] = sector
                     count += 1
-            print(f"  [tw_industry] ISIN strMode={mode}: {count} entries", file=sys.stderr)
-        except Exception as e:
-            print(f"  [tw_industry] ISIN fetch failed (strMode={mode}): {e}", file=sys.stderr)
+        print(f"  [tw_industry] TPEx OpenAPI: {count} entries", file=sys.stderr)
+    except Exception as e:
+        print(f"  [tw_industry] TPEx OpenAPI fetch failed: {e}", file=sys.stderr)
 
     if mapping:
         TW_INDUSTRY_CACHE_FILE.parent.mkdir(parents=True, exist_ok=True)
@@ -717,7 +739,8 @@ def fetch_stock_list() -> list[dict]:
                 name = (item.get("Name") or item.get("CompanyAbbreviation") or item.get("CompanyName") or "").strip()
                 # Keep only numeric codes (exclude warrants, preferred shares, etc.)
                 if code and name and re.match(r"^\d{4,6}$", code):
-                    industry_code = (item.get("IndustryCategoryCode") or item.get("IndustryCode") or "").strip()
+                    industry_code = (item.get("IndustryCategoryCode") or item.get("IndustryCode")
+                                     or item.get("SecuritiesIndustryCode") or item.get("SecuretiesIndustryCode") or "").strip()
                     sector = _TW_INDUSTRY_CODE_MAP.get(industry_code, "")
                     result.append({"code": code, "name": name, "market": market, "sector": sector})
             print(f"  [stocks] {market}: {len(result)} securities fetched", file=sys.stderr)
