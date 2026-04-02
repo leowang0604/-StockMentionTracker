@@ -229,7 +229,6 @@ struct StockTrendDetailView: View {
     }
 
     private var mentionsChart: some View {
-        let days = Int(appState.selectedDays)
         return Group {
             if chartData.isEmpty {
                 ContentUnavailableView("此時間範圍無資料",
@@ -249,7 +248,7 @@ struct StockTrendDetailView: View {
                 }
                 .chartYScale(domain: 0...(maxCount + 1))
                 .chartXAxis {
-                    AxisMarks(values: .stride(by: .day, count: days > 30 ? 14 : 7)) { _ in
+                    AxisMarks(values: chartData.map(\.date)) { _ in
                         AxisGridLine()
                         AxisValueLabel(format: .dateTime.month().day())
                     }
@@ -261,7 +260,6 @@ struct StockTrendDetailView: View {
     }
 
     private var sentimentChart: some View {
-        let days = Int(appState.selectedDays)
         return Group {
             if sentimentData.count < 3 {
                 ContentUnavailableView("資料點不足",
@@ -280,7 +278,7 @@ struct StockTrendDetailView: View {
                         .foregroundStyle(.red.opacity(0.5))
                 }
                 .chartXAxis {
-                    AxisMarks(values: .stride(by: .day, count: days > 30 ? 14 : 7)) { _ in
+                    AxisMarks(values: sentimentData.map(\.date)) { _ in
                         AxisGridLine()
                         AxisValueLabel(format: .dateTime.month().day())
                     }
@@ -336,8 +334,6 @@ struct SectorTrendDetailView: View {
 
     var body: some View {
         @Bindable var appState = appState
-        let days = Int(appState.selectedDays)
-
         VStack(spacing: 0) {
             HStack(spacing: 10) {
                 Text("最近").font(.caption).foregroundStyle(.secondary)
@@ -376,7 +372,7 @@ struct SectorTrendDetailView: View {
                             startPoint: .top, endPoint: .bottom))
                 }
                 .chartXAxis {
-                    AxisMarks(values: .stride(by: .day, count: days > 30 ? 14 : 7)) { _ in
+                    AxisMarks(values: chartData.map(\.date)) { _ in
                         AxisGridLine()
                         AxisValueLabel(format: .dateTime.month().day())
                     }

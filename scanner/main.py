@@ -1413,11 +1413,11 @@ def recognize_stocks(text: str) -> list[dict]:
 
             # Price-level false positive: 4-digit numeric code appearing as a stock
             # price rather than a stock mention.
-            # e.g. "漲到1760" / "跌到1760" / "1760字頭" → price context, not stock.
+            # e.g. "漲到1760" / "跌到1760" / "漲1451" / "1760字頭" / "1451點" → price context, not stock.
             if re.match(r"^\d{4}$", keyword) and code not in CONTEXT_REQUIRED:
                 pre = text[max(0, pos - 8): pos]
                 suf = text[pos + 4: min(len(text), pos + 10)]
-                if re.search(r'[到至達]\s*$', pre) or re.search(r'^\s*字頭', suf):
+                if re.search(r'[到至達漲跌]\s*$', pre) or re.search(r'^\s*(?:字頭|點)', suf):
                     continue
 
             # Reject if forbidden context terms appear (avoids substring false positives)
@@ -1705,6 +1705,9 @@ def _is_ambiguous_hit(hit: dict) -> bool:
         if kw.upper() in {"ARM"}:
             return True
         return False
+    # 4-digit numeric TW codes can match price / index levels (e.g. "台股漲1451")
+    if re.match(r'^\d{4}$', kw):
+        return True
     # Chinese company names skip Gemini validation; specific false-positive cases
     # are handled via KEYWORD_PATTERN_OVERRIDE / CONTEXT_FORBIDDEN instead.
     return False
@@ -1737,7 +1740,8 @@ def filter_ambiguous_hits_with_gemini(hits: list[dict]) -> list[dict]:
 
     prompt = (
         "以下是從台灣財經 YouTube/Podcast 內容中比對到的股票，"
-        "請判斷哪些真的在討論該股票（而非一般英文用語或中文詞）。\n"
+        "請判斷哪些真的在討論該股票（而非一般英文用語、股價數字或加權指數點位）。\n"
+        "注意：4位數股票代碼（如1451、2330）可能是指數點位或個股股價，而非提及該公司本身。\n"
         "只回傳真正在討論股票的編號 JSON 陣列，例如 [1, 3]。若全部都不是則回傳 []。\n\n"
         + "\n".join(lines)
     )
