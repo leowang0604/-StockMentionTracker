@@ -68,3 +68,57 @@
 - TWSE API 是否真的回傳 `IndustryCategoryCode` 欄位
 - S&P 500 全名識別有無誤判（如 "Target"、"Home Depot" 等常見英文詞）
 - 假陽性（ASIC、BBU、L）是否完全消失
+
+---
+
+## 2026-04-02（下午延伸，commits f95d1ad–44b4da5）
+
+### 一、TPEX 上櫃產業別（scanner/main.py）
+
+**問題**：`fetch_tw_industry_map()` 原本對 TWSE 抓 `strMode=2`（HTML ISIN 頁），對 TPEX 抓 `strMode=4`，但 `strMode=4` 在 GitHub Actions 中 timeout，導致上櫃股票全部沒有產業別。
+
+**修法**：
+- 將 strMode=4 改為呼叫 TPEX OpenAPI：`https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap03_O`
+- 讀取 `SecuritiesIndustryCode`（數字代碼）→ 透過 `_TW_INDUSTRY_CODE_MAP` 轉中文族群
+- `_TW_INDUSTRY_CODE_MAP` 新增 TPEx 專屬代碼 30/32/33/35/36/37/38（文化創意/管理股票/電子商務/綠能環保/數位雲端/運動休閒/居家生活）
+- `fetch_stock_list()._fetch()` 同步新增讀取 `SecuritiesIndustryCode` 欄位
+
+**驗證（run #86）**：
+```
+[tw_industry] TWSE ISIN: 1070 entries
+[tw_industry] TPEx OpenAPI: 881 entries
+[tw_industry] Saved 1951 entries to cache
+```
+上櫃 881 筆產業別成功取得。
+
+---
+
+### 二、假陽性清除（data/latest.json）
+
+**問題**：ASIC（Ategrity）、BBU（Brookfield）、1109（信大）、6923（中台）雖已加入 CONTEXT_REQUIRED 防止未來再偵測，但舊紀錄仍殘留在 latest.json 中（merge 是累加式的，不會自動移除）。
+
+**修法**：直接從 latest.json 刪除這 4 筆（199 → 195 stocks，後因 run #85 並發變為 200 → 196）。
+
+---
+
+### 三、YouTube 字幕調查
+
+**現象**：所有 YouTube 影片均為 `titleAndDescription`，從未成功抓到字幕。
+
+**調查過程**（run #87–#89）：
+1. 加 exception logging → 確認錯誤為 `RequestBlocked`（youtube-transcript-api v1.2.4）
+2. 嘗試傳 cookies（`YOUTUBE_COOKIES_FILE`）→ 失敗，v1.2.4 已移除 `cookies` constructor 參數
+3. 嘗試 `test_download_only=true` → yt-dlp 音訊下載也被 bot detection 擋住，即使帶 cookies
+
+**結論**：GitHub Actions 共享 IP 被 YouTube 封鎖，無論字幕 API 或音訊下載均無效。根本解法需自架機器或付費 proxy，暫時擱置。YouTube 兩個頻道繼續以標題+描述偵測。
+
+---
+
+### 四、現況總結
+
+| 來源 | 分析方式 | 狀態 |
+|------|---------|------|
+| 股癌、韭菜畢業班、兆華與股惑仔、財女珍妮、股市隱者（Podcast） | Whisper | ✅ 正常 |
+| 東森財經、老王愛說笑（YouTube） | 標題+描述 | ⚠️ IP 封鎖，無字幕 |
+| 台股產業別（上市） | TWSE ISIN strMode=2 | ✅ 1070 筆 |
+| 台股產業別（上櫃） | TPEX OpenAPI | ✅ 881 筆（今日修復）|
