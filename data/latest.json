@@ -1,6 +1,653 @@
 {
-  "updated_at": "",
-  "stocks_ranking": [],
-  "sectors_ranking": [],
-  "videos_scanned": []
+  "updated_at": "2026-04-03T04:30:42",
+  "stocks_ranking": [
+    {
+      "code": "2330",
+      "name": "台積電",
+      "market": "TW",
+      "sector": "晶圓代工",
+      "contexts": [
+        {
+          "video": "【理財達人秀】川普變驚嚇 低軌.封測.CPO壓不住？節後搶反彈 抄投信答案？波段配短線 PCB雙面賺？台積電設備 合約負債挖寶？｜李兆華、黃豐凱、陳唯泰、陳威良2026.04.02【電視完整版】",
+          "channel": "東森財經",
+          "date": "2026-04-02",
+          "text": "【理財達人秀】川普變驚嚇 低軌.封測.CPO壓不住？節後搶反彈 抄投信答案？波段配短線 PCB雙面賺？台積電設備 合約負債挖寶？｜李兆華、黃豐凱、陳唯泰、陳威良2026.04.02【電視完整版】 貼在你身編：台積電季線有守清明變盤轉折向上? #美伊戰爭#川普#台股#理財達人秀(00:00) 川普續打伊朗又來送分?卡位連假後下個 ...",
+          "matched_keyword": "台積電",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "https://www.youtube.com/watch?v=3OkC0iIGJWg"
+        },
+        {
+          "video": "【理財達人秀】AI硬體利空？ 曲博追真相！ 輝達新神兵 老AI最補？｜李兆華、曲建仲 2026.04.01 part6",
+          "channel": "東森財經",
+          "date": "2026-04-02",
+          "text": "【理財達人秀】AI硬體利空？ 曲博追真相！ 輝達新神兵 老AI最補？｜李兆華、曲建仲 2026.04.01 part6 完整版：https://youtu.be/TdLj60MYAuM #美伊戰爭#台積電#台股#理財達人秀本節目與分析師所推介個股，無不當之財務利益關係， ...",
+          "matched_keyword": "台積電",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "https://www.youtube.com/watch?v=i-6XWTetpqo"
+        },
+        {
+          "video": "【理財達人秀】美伊最終戰？ 台股滿血復活 CPO、低軌還沒漲夠 買誰？｜李兆華、紀緯明 2026.04.01 part5",
+          "channel": "東森財經",
+          "date": "2026-04-02",
+          "text": "【理財達人秀】美伊最終戰？ 台股滿血復活 CPO、低軌還沒漲夠 買誰？｜李兆華、紀緯明 2026.04.01 part5 完整版：https://youtu.be/TdLj60MYAuM #美伊戰爭#台積電#台股#理財達人秀本節目與分析師所推介個股，無不當之財務利益關係， ...",
+          "matched_keyword": "台積電",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "https://www.youtube.com/watch?v=YDztWVWcMe0"
+        },
+        {
+          "video": "【理財達人秀】警報解除？ 節前3招安心抱 PCB回後買 記憶體反彈跑？｜李兆華、朱家泓 2026.04.01 part4",
+          "channel": "東森財經",
+          "date": "2026-04-01",
+          "text": "【理財達人秀】警報解除？ 節前3招安心抱 PCB回後買 記憶體反彈跑？｜李兆華、朱家泓 2026.04.01 part4 完整版：https://youtu.be/TdLj60MYAuM #美伊戰爭#台積電#台股#理財達人秀本節目與分析師所推介個股，無不當之財務利益關係， ...",
+          "matched_keyword": "台積電",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "https://www.youtube.com/watch?v=Vfaux-EuUug"
+        },
+        {
+          "video": "【理財達人秀】台股台積拚轉多 缺一味？ 反彈盤挖寶 2條件安心買｜李兆華、朱家泓 2026.04.01 part3",
+          "channel": "東森財經",
+          "date": "2026-04-01",
+          "text": "【理財達人秀】台股台積拚轉多 缺一味？ 反彈盤挖寶 2條件安心買｜李兆華、朱家泓 2026.04.01 part3 完整版：https://youtu.be/OMy0hmcUqP0 #台股#美伊戰爭#記憶體#理財達人秀本節目與分析師所推介個股，無不當之財務利益關係 ...",
+          "matched_keyword": "台積",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "https://www.youtube.com/watch?v=N7Q1EBzgqM8"
+        },
+        {
+          "video": "【理財達人秀】台股漲1451 美伊警報解除？PCB回後買記憶體反彈跑？CPO.低軌還沒漲夠 買誰？AI硬體利空 曲博追真相老AI最補？｜李兆華、朱家泓、紀緯明、曲建仲2026.04.01【電視完整版】",
+          "channel": "東森財經",
+          "date": "2026-04-01",
+          "text": "【理財達人秀】台股漲1451 美伊警報解除？PCB回後買記憶體反彈跑？CPO.低軌還沒漲夠 買誰？AI硬體利空 曲博追真相老AI最補？｜李兆華、朱家泓、紀緯明、曲建仲2026.04.01【電視完整版】 貼在你身編：中東戰事霧裡看花三招安全抱股過節? #美伊戰爭#台積電#台股#理財達人秀(00:00) 史上第二大漲點新機會?題材股猛噴 ...",
+          "matched_keyword": "台積電",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "https://www.youtube.com/watch?v=TdLj60MYAuM"
+        },
+        {
+          "video": "【理財達人秀】猛噴1451點 川普愚人節？台積電法說 四月送分題？今天不敢追 CPO.PCB還有機會？台股轉多缺一味 2條件安心買？｜李兆華、艾綸、王建文、朱家泓2026.04.01【網路獨播版】",
+          "channel": "東森財經",
+          "date": "2026-04-01",
+          "text": "【理財達人秀】猛噴1451點 川普愚人節？台積電法說 四月送分題？今天不敢追 CPO.PCB還有機會？台股轉多缺一味 2條件安心買？｜李兆華、艾綸、王建文、朱家泓2026.04.01【網路獨播版】 貼在你身編：台積電突破下降切線穩? 鴻海破底翻? #台股#美伊戰爭#記憶體#理財達人秀(00:00) 暴漲1451點危機解除?輝達再出手 ...",
+          "matched_keyword": "台積電",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "https://www.youtube.com/watch?v=OMy0hmcUqP0"
+        },
+        {
+          "video": "【理財達人秀】台股殺795取量 破季線反彈？投信清明結帳躲戰火 IC封測彎腰撿鑽石？原料飆 油鋼鋁紙找補漲？黃金失避險鎖美元?｜李兆華、艾綸、陳唯泰、李其展2026.03.31【網路獨播版】",
+          "channel": "東森財經",
+          "date": "2026-03-31",
+          "text": "【理財達人秀】台股殺795取量 破季線反彈？投信清明結帳躲戰火 IC封測彎腰撿鑽石？原料飆 油鋼鋁紙找補漲？黃金失避險鎖美元?｜李兆華、艾綸、陳唯泰、李其展2026.03.31【網路獨播版】 貼在你身編：台積電破前低 台達電摜破月線 能止穩? #台股 #美伊戰爭 #荷姆茲海峽 #理財達人秀 (00:00) 台股大跌逾795失守32K ...",
+          "matched_keyword": "台積電",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "https://www.youtube.com/watch?v=I5rKgCBPQIM"
+        },
+        {
+          "video": "【理財達人秀】風雨中撿槍 鋁電右下賺？ 回檔人氣股 怎低接好入袋？｜李兆華、楊雲翔 2026.03.30 part3",
+          "channel": "東森財經",
+          "date": "2026-03-30",
+          "text": "【理財達人秀】風雨中撿槍 鋁電右下賺？ 回檔人氣股 怎低接好入袋？｜李兆華、楊雲翔 2026.03.30 part3 完整版：https://youtu.be/LX5oKDN3DO4 #美伊戰爭#台積電#台股#理財達人秀本節目與分析師所推介個股，無不當之財務利益關係 ...",
+          "matched_keyword": "台積電",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "https://www.youtube.com/watch?v=j53PFKnPpmo"
+        },
+        {
+          "video": "【理財達人秀】法人報告挺 記憶體沒死？ 戰火警報響 4類受惠買誰？｜李兆華、林漢偉 2026.03.30 part2",
+          "channel": "東森財經",
+          "date": "2026-03-30",
+          "text": "【理財達人秀】法人報告挺 記憶體沒死？ 戰火警報響 4類受惠買誰？｜李兆華、林漢偉 2026.03.30 part2 完整版：https://youtu.be/LX5oKDN3DO4 #美伊戰爭#台積電#台股#理財達人秀本節目與分析師所推介個股，無不當之財務利益關係 ...",
+          "matched_keyword": "台積電",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "https://www.youtube.com/watch?v=JLvac_TSJVk"
+        },
+        {
+          "video": "【理財達人秀】中小撐台股 連假前操作？ 工具機、橡膠 搶短高勝率｜李兆華、李永年 2026.03.30 part1",
+          "channel": "東森財經",
+          "date": "2026-03-30",
+          "text": "【理財達人秀】中小撐台股 連假前操作？ 工具機、橡膠 搶短高勝率｜李兆華、李永年 2026.03.30 part1 完整版：https://youtu.be/LX5oKDN3DO4 #美伊戰爭#台積電#台股#理財達人秀本節目與分析師所推介個股，無不當之財務利益關係 ...",
+          "matched_keyword": "台積電",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "https://www.youtube.com/watch?v=fdCNjNolTqE"
+        },
+        {
+          "video": "【理財達人秀】中小撐台股 連假前操作？法人報告挺 記憶體沒死？PCB.低軌.砷化鎵回檔 低接好入袋？工具機.塑化 搶短高勝率？｜李兆華、李永年、林漢偉、楊雲翔2026.03.30【電視完整版】",
+          "channel": "東森財經",
+          "date": "2026-03-30",
+          "text": "【理財達人秀】中小撐台股 連假前操作？法人報告挺 記憶體沒死？PCB.低軌.砷化鎵回檔 低接好入袋？工具機.塑化 搶短高勝率？｜李兆華、李永年、林漢偉、楊雲翔2026.03.30【電視完整版】 貼在你身編：台股失守33K 台積電破季線清明真變盤? #美伊戰爭#台積電#台股#理財達人秀(00:00) 台積跌破1800 中小股撐盤連假前 ...",
+          "matched_keyword": "台積電",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "https://www.youtube.com/watch?v=LX5oKDN3DO4"
+        }
+      ],
+      "total_mentions": 12,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-04-02": {
+          "mentions": 3,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 3,
+          "sentiment_score": 0.5
+        },
+        "2026-04-01": {
+          "mentions": 4,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 4,
+          "sentiment_score": 0.5
+        },
+        "2026-03-31": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-03-30": {
+          "mentions": 4,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 4,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
+      "code": "NVDA",
+      "name": "NVIDIA",
+      "market": "US",
+      "sector": "AI晶片",
+      "contexts": [
+        {
+          "video": "【理財達人秀】AI硬體利空？ 曲博追真相！ 輝達新神兵 老AI最補？｜李兆華、曲建仲 2026.04.01 part6",
+          "channel": "東森財經",
+          "date": "2026-04-02",
+          "text": "【理財達人秀】AI硬體利空？ 曲博追真相！ 輝達新神兵 老AI最補？｜李兆華、曲建仲 2026.04.01 part6 完整版：https://youtu.be/TdLj60MYAuM #美伊戰爭#台積電#台股#理財達人秀本節目與分析師所推介個股，無不當之財務利益關係， ...",
+          "matched_keyword": "輝達",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "https://www.youtube.com/watch?v=i-6XWTetpqo"
+        },
+        {
+          "video": "【理財達人秀】猛噴1451點 川普愚人節？台積電法說 四月送分題？今天不敢追 CPO.PCB還有機會？台股轉多缺一味 2條件安心買？｜李兆華、艾綸、王建文、朱家泓2026.04.01【網路獨播版】",
+          "channel": "東森財經",
+          "date": "2026-04-01",
+          "text": "1點 川普愚人節？台積電法說 四月送分題？今天不敢追 CPO.PCB還有機會？台股轉多缺一味 2條件安心買？｜李兆華、艾綸、王建文、朱家泓2026.04.01【網路獨播版】 貼在你身編：台積電突破下降切線穩? 鴻海破底翻? #台股#美伊戰爭#記憶體#理財達人秀(00:00) 暴漲1451點危機解除?輝達再出手 ...",
+          "matched_keyword": "輝達",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "https://www.youtube.com/watch?v=OMy0hmcUqP0"
+        }
+      ],
+      "total_mentions": 2,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-04-02": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-04-01": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
+      "code": "1315",
+      "name": "達新",
+      "market": "TW",
+      "sector": "塑膠工業",
+      "contexts": [
+        {
+          "video": "【理財達人秀】AI硬體利空？ 曲博追真相！ 輝達新神兵 老AI最補？｜李兆華、曲建仲 2026.04.01 part6",
+          "channel": "東森財經",
+          "date": "2026-04-02",
+          "text": "【理財達人秀】AI硬體利空？ 曲博追真相！ 輝達新神兵 老AI最補？｜李兆華、曲建仲 2026.04.01 part6 完整版：https://youtu.be/TdLj60MYAuM #美伊戰爭#台積電#台股#理財達人秀本節目與分析師所推介個股，無不當之財務利益關係， ...",
+          "matched_keyword": "達新",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "https://www.youtube.com/watch?v=i-6XWTetpqo"
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-04-02": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
+      "code": "2317",
+      "name": "鴻海",
+      "market": "TW",
+      "sector": "組裝代工",
+      "contexts": [
+        {
+          "video": "【理財達人秀】猛噴1451點 川普愚人節？台積電法說 四月送分題？今天不敢追 CPO.PCB還有機會？台股轉多缺一味 2條件安心買？｜李兆華、艾綸、王建文、朱家泓2026.04.01【網路獨播版】",
+          "channel": "東森財經",
+          "date": "2026-04-01",
+          "text": "【理財達人秀】猛噴1451點 川普愚人節？台積電法說 四月送分題？今天不敢追 CPO.PCB還有機會？台股轉多缺一味 2條件安心買？｜李兆華、艾綸、王建文、朱家泓2026.04.01【網路獨播版】 貼在你身編：台積電突破下降切線穩? 鴻海破底翻? #台股#美伊戰爭#記憶體#理財達人秀(00:00) 暴漲1451點危機解除?輝達再出手 ...",
+          "matched_keyword": "鴻海",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "https://www.youtube.com/watch?v=OMy0hmcUqP0"
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-04-01": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
+      "code": "3234",
+      "name": "光環",
+      "market": "TW",
+      "sector": "CPO光通訊",
+      "contexts": [
+        {
+          "video": "【理財達人秀】費半破線 熊襲？撿便宜？ 黃金失避險光環 鎖美元？｜李兆華、李其展 2026.03.31 part3",
+          "channel": "東森財經",
+          "date": "2026-03-31",
+          "text": "【理財達人秀】費半破線 熊襲？撿便宜？ 黃金失避險光環 鎖美元？｜李兆華、李其展 2026.03.31 part3 完整版：https://youtu.be/I5rKgCBPQIM #台股#美伊戰爭#荷姆茲海峽#理財達人秀本節目與分析師所推介個股，無不當之財務利益 ...",
+          "matched_keyword": "光環",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "https://www.youtube.com/watch?v=WOByNLjv_xk"
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-03-31": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
+      "code": "2308",
+      "name": "台達電",
+      "market": "TW",
+      "sector": "電源供應器",
+      "contexts": [
+        {
+          "video": "【理財達人秀】台股殺795取量 破季線反彈？投信清明結帳躲戰火 IC封測彎腰撿鑽石？原料飆 油鋼鋁紙找補漲？黃金失避險鎖美元?｜李兆華、艾綸、陳唯泰、李其展2026.03.31【網路獨播版】",
+          "channel": "東森財經",
+          "date": "2026-03-31",
+          "text": "【理財達人秀】台股殺795取量 破季線反彈？投信清明結帳躲戰火 IC封測彎腰撿鑽石？原料飆 油鋼鋁紙找補漲？黃金失避險鎖美元?｜李兆華、艾綸、陳唯泰、李其展2026.03.31【網路獨播版】 貼在你身編：台積電破前低 台達電摜破月線 能止穩? #台股 #美伊戰爭 #荷姆茲海峽 #理財達人秀 (00:00) 台股大跌逾795失守32K ...",
+          "matched_keyword": "台達電",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "https://www.youtube.com/watch?v=I5rKgCBPQIM"
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-03-31": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    }
+  ],
+  "sectors_ranking": [
+    {
+      "sector": "晶圓代工",
+      "market": "TW",
+      "total_mentions": 12,
+      "stock_codes": [
+        "2330"
+      ]
+    },
+    {
+      "sector": "AI晶片",
+      "market": "US",
+      "total_mentions": 2,
+      "stock_codes": [
+        "NVDA"
+      ]
+    },
+    {
+      "sector": "塑膠工業",
+      "market": "TW",
+      "total_mentions": 1,
+      "stock_codes": [
+        "1315"
+      ]
+    },
+    {
+      "sector": "組裝代工",
+      "market": "TW",
+      "total_mentions": 1,
+      "stock_codes": [
+        "2317"
+      ]
+    },
+    {
+      "sector": "CPO光通訊",
+      "market": "TW",
+      "total_mentions": 1,
+      "stock_codes": [
+        "3234"
+      ]
+    },
+    {
+      "sector": "電源供應器",
+      "market": "TW",
+      "total_mentions": 1,
+      "stock_codes": [
+        "2308"
+      ]
+    }
+  ],
+  "videos_scanned": [
+    {
+      "video_id": "cCYdVjw9cJo",
+      "title": "【理財達人秀】波段配短線 PCB雙面賺 享受積情 合約負債挖寶｜李兆華、陳威良 2026.04.02 part3",
+      "channel": "東森財經",
+      "date": "2026-04-02",
+      "stocks_found": [],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/cCYdVjw9cJo/mqdefault.jpg"
+    },
+    {
+      "video_id": "hM-_DHam-kc",
+      "title": "【理財達人秀】節後搶反彈 抄投信答案 怕戰火偷襲 避風高殖率｜李兆華、陳唯泰 2026.04.02 part2",
+      "channel": "東森財經",
+      "date": "2026-04-02",
+      "stocks_found": [],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/hM-_DHam-kc/mqdefault.jpg"
+    },
+    {
+      "video_id": "tiUaen6LyX4",
+      "title": "【理財達人秀】川普變驚嚇 先蹲跳更高 壓不住 鎖低軌、封測、CPO｜李兆華、黃豐凱 2026.04.02 part1",
+      "channel": "東森財經",
+      "date": "2026-04-02",
+      "stocks_found": [],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/tiUaen6LyX4/mqdefault.jpg"
+    },
+    {
+      "video_id": "3OkC0iIGJWg",
+      "title": "【理財達人秀】川普變驚嚇 低軌.封測.CPO壓不住？節後搶反彈 抄投信答案？波段配短線 PCB雙面賺？台積電設備 合約負債挖寶？｜李兆華、黃豐凱、陳唯泰、陳威良2026.04.02【電視完整版】",
+      "channel": "東森財經",
+      "date": "2026-04-02",
+      "stocks_found": [
+        "2330"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/3OkC0iIGJWg/mqdefault.jpg"
+    },
+    {
+      "video_id": "i-6XWTetpqo",
+      "title": "【理財達人秀】AI硬體利空？ 曲博追真相！ 輝達新神兵 老AI最補？｜李兆華、曲建仲 2026.04.01 part6",
+      "channel": "東森財經",
+      "date": "2026-04-02",
+      "stocks_found": [
+        "1315",
+        "NVDA",
+        "2330"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/i-6XWTetpqo/mqdefault.jpg"
+    },
+    {
+      "video_id": "YDztWVWcMe0",
+      "title": "【理財達人秀】美伊最終戰？ 台股滿血復活 CPO、低軌還沒漲夠 買誰？｜李兆華、紀緯明 2026.04.01 part5",
+      "channel": "東森財經",
+      "date": "2026-04-02",
+      "stocks_found": [
+        "2330"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/YDztWVWcMe0/mqdefault.jpg"
+    },
+    {
+      "video_id": "Vfaux-EuUug",
+      "title": "【理財達人秀】警報解除？ 節前3招安心抱 PCB回後買 記憶體反彈跑？｜李兆華、朱家泓 2026.04.01 part4",
+      "channel": "東森財經",
+      "date": "2026-04-01",
+      "stocks_found": [
+        "2330"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/Vfaux-EuUug/mqdefault.jpg"
+    },
+    {
+      "video_id": "N7Q1EBzgqM8",
+      "title": "【理財達人秀】台股台積拚轉多 缺一味？ 反彈盤挖寶 2條件安心買｜李兆華、朱家泓 2026.04.01 part3",
+      "channel": "東森財經",
+      "date": "2026-04-01",
+      "stocks_found": [
+        "2330"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/N7Q1EBzgqM8/mqdefault.jpg"
+    },
+    {
+      "video_id": "HiK_BOxhotE",
+      "title": "【理財達人秀】昨天不敢買 今天不敢追？ 還有機會 找低檔CPO、PCB｜李兆華、王建文 2026.04.01 part2",
+      "channel": "東森財經",
+      "date": "2026-04-01",
+      "stocks_found": [],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/HiK_BOxhotE/mqdefault.jpg"
+    },
+    {
+      "video_id": "cNue7Efgxig",
+      "title": "【理財達人秀】猛噴1451點 川普愚人節？ 美伊快落幕 四月送分題｜李兆華、艾綸 2026.04.01 part1",
+      "channel": "東森財經",
+      "date": "2026-04-01",
+      "stocks_found": [],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/cNue7Efgxig/mqdefault.jpg"
+    },
+    {
+      "video_id": "TdLj60MYAuM",
+      "title": "【理財達人秀】台股漲1451 美伊警報解除？PCB回後買記憶體反彈跑？CPO.低軌還沒漲夠 買誰？AI硬體利空 曲博追真相老AI最補？｜李兆華、朱家泓、紀緯明、曲建仲2026.04.01【電視完整版】",
+      "channel": "東森財經",
+      "date": "2026-04-01",
+      "stocks_found": [
+        "2330"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/TdLj60MYAuM/mqdefault.jpg"
+    },
+    {
+      "video_id": "OMy0hmcUqP0",
+      "title": "【理財達人秀】猛噴1451點 川普愚人節？台積電法說 四月送分題？今天不敢追 CPO.PCB還有機會？台股轉多缺一味 2條件安心買？｜李兆華、艾綸、王建文、朱家泓2026.04.01【網路獨播版】",
+      "channel": "東森財經",
+      "date": "2026-04-01",
+      "stocks_found": [
+        "2330",
+        "2317",
+        "NVDA"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/OMy0hmcUqP0/mqdefault.jpg"
+    },
+    {
+      "video_id": "qp38imqeXFQ",
+      "title": "【理財達人秀】飆股屠殺日 90%翻身術？ 破底轉機股 逢低挖飆兵！｜李兆華、謝富旭 2026.03.31 part6",
+      "channel": "東森財經",
+      "date": "2026-04-01",
+      "stocks_found": [],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/qp38imqeXFQ/mqdefault.jpg"
+    },
+    {
+      "video_id": "OYRjE_nNxfY",
+      "title": "【理財達人秀】油上股下 清明變盤攻略！ 4月還有大戲 鎖下波主流？｜李兆華、高憲容 2026.03.31 part5",
+      "channel": "東森財經",
+      "date": "2026-04-01",
+      "stocks_found": [],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/OYRjE_nNxfY/mqdefault.jpg"
+    },
+    {
+      "video_id": "dCjwFy2B_o0",
+      "title": "【理財達人秀】台股首破季線 補跌開始？ 節前賣誰？ 錯殺股怎撿？｜李兆華、蔡明翰 2026.03.31 part4",
+      "channel": "東森財經",
+      "date": "2026-03-31",
+      "stocks_found": [],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/dCjwFy2B_o0/mqdefault.jpg"
+    },
+    {
+      "video_id": "WOByNLjv_xk",
+      "title": "【理財達人秀】費半破線 熊襲？撿便宜？ 黃金失避險光環 鎖美元？｜李兆華、李其展 2026.03.31 part3",
+      "channel": "東森財經",
+      "date": "2026-03-31",
+      "stocks_found": [
+        "3234"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/WOByNLjv_xk/mqdefault.jpg"
+    },
+    {
+      "video_id": "DEeZ-djLrxc",
+      "title": "【理財達人秀】躲戰火 投信清明結帳？ 原料飆 油鋼鋁紙找補漲｜李兆華、陳唯泰 2026.03.31 part2",
+      "channel": "東森財經",
+      "date": "2026-03-31",
+      "stocks_found": [],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/DEeZ-djLrxc/mqdefault.jpg"
+    },
+    {
+      "video_id": "82j-JgpScQk",
+      "title": "【理財達人秀】殺795取量 破季線反彈？ 恐懼時貪婪 彎腰撿鑽石｜李兆華、艾綸 2026.03.31 part1",
+      "channel": "東森財經",
+      "date": "2026-03-31",
+      "stocks_found": [],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/82j-JgpScQk/mqdefault.jpg"
+    },
+    {
+      "video_id": "31WQfA9X7WU",
+      "title": "【理財達人秀】飆股屠殺日 90%翻身術？設備.IC股鎖下波主流 錯殺股怎撿？台股首破季線 補跌開始？4月還有大戲 逢低挖飆兵！｜李兆華、蔡明翰、高憲容、謝富旭2026.03.31【電視完整版】",
+      "channel": "東森財經",
+      "date": "2026-03-31",
+      "stocks_found": [],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/31WQfA9X7WU/mqdefault.jpg"
+    },
+    {
+      "video_id": "I5rKgCBPQIM",
+      "title": "【理財達人秀】台股殺795取量 破季線反彈？投信清明結帳躲戰火 IC封測彎腰撿鑽石？原料飆 油鋼鋁紙找補漲？黃金失避險鎖美元?｜李兆華、艾綸、陳唯泰、李其展2026.03.31【網路獨播版】",
+      "channel": "東森財經",
+      "date": "2026-03-31",
+      "stocks_found": [
+        "2308",
+        "2330"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/I5rKgCBPQIM/mqdefault.jpg"
+    },
+    {
+      "video_id": "j53PFKnPpmo",
+      "title": "【理財達人秀】風雨中撿槍 鋁電右下賺？ 回檔人氣股 怎低接好入袋？｜李兆華、楊雲翔 2026.03.30 part3",
+      "channel": "東森財經",
+      "date": "2026-03-30",
+      "stocks_found": [
+        "2330"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/j53PFKnPpmo/mqdefault.jpg"
+    },
+    {
+      "video_id": "JLvac_TSJVk",
+      "title": "【理財達人秀】法人報告挺 記憶體沒死？ 戰火警報響 4類受惠買誰？｜李兆華、林漢偉 2026.03.30 part2",
+      "channel": "東森財經",
+      "date": "2026-03-30",
+      "stocks_found": [
+        "2330"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/JLvac_TSJVk/mqdefault.jpg"
+    },
+    {
+      "video_id": "fdCNjNolTqE",
+      "title": "【理財達人秀】中小撐台股 連假前操作？ 工具機、橡膠 搶短高勝率｜李兆華、李永年 2026.03.30 part1",
+      "channel": "東森財經",
+      "date": "2026-03-30",
+      "stocks_found": [
+        "2330"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/fdCNjNolTqE/mqdefault.jpg"
+    },
+    {
+      "video_id": "LX5oKDN3DO4",
+      "title": "【理財達人秀】中小撐台股 連假前操作？法人報告挺 記憶體沒死？PCB.低軌.砷化鎵回檔 低接好入袋？工具機.塑化 搶短高勝率？｜李兆華、李永年、林漢偉、楊雲翔2026.03.30【電視完整版】",
+      "channel": "東森財經",
+      "date": "2026-03-30",
+      "stocks_found": [
+        "2330"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/LX5oKDN3DO4/mqdefault.jpg"
+    },
+    {
+      "video_id": "WpHQtmGPVjM",
+      "title": "【理財達人秀】4月漲率大公開 震盪照賺？ 拉回必買 投信Q2掃貨名單｜李兆華、翁士峻 2026.03.27 part3",
+      "channel": "東森財經",
+      "date": "2026-03-27",
+      "stocks_found": [],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/WpHQtmGPVjM/mqdefault.jpg"
+    }
+  ]
 }
