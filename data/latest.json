@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-03T14:22:38",
+  "updated_at": "2026-04-03T14:22:42",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -519,6 +519,36 @@
           "sentiment_score": 0.5
         }
       }
+    },
+    {
+      "code": "AAPL",
+      "name": "Apple",
+      "market": "US",
+      "sector": "消費電子",
+      "contexts": [
+        {
+          "video": "股神也會看錯？【王老先聲】#分析股票 #績效 #整體操作",
+          "channel": "老王愛說笑",
+          "date": "2026-04-01",
+          "text": "股神也會看錯？【王老先聲】#分析股票 #績效 #整體操作 您也可以在以下頻道透過Podcast收聽： Apple Podcast：https://reurl.cc/52DnlR Spotify：https://reurl.cc/xEpqZE ...",
+          "matched_keyword": "Apple",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "https://www.youtube.com/watch?v=dVpFcWrTq34"
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-04-01": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
     }
   ],
   "sectors_ranking": [
@@ -601,6 +631,14 @@
       "total_mentions": 1,
       "stock_codes": [
         "2455"
+      ]
+    },
+    {
+      "sector": "消費電子",
+      "market": "US",
+      "total_mentions": 1,
+      "stock_codes": [
+        "AAPL"
       ]
     }
   ],
@@ -905,6 +943,35 @@
       ],
       "analysis_source": "titleAndDescription",
       "thumbnail_url": null
+    },
+    {
+      "video_id": "HAr3MpwswZ0",
+      "title": "巴菲特不急！巴克萊喊買！2026/04/02【老王不只三分鐘】",
+      "channel": "老王愛說笑",
+      "date": "2026-04-02",
+      "stocks_found": [],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/HAr3MpwswZ0/mqdefault.jpg"
+    },
+    {
+      "video_id": "0Cd8VLDnWdk",
+      "title": "川普在幹嘛？｜【浦男搜股】EP.271",
+      "channel": "老王愛說笑",
+      "date": "2026-04-02",
+      "stocks_found": [],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/0Cd8VLDnWdk/mqdefault.jpg"
+    },
+    {
+      "video_id": "dVpFcWrTq34",
+      "title": "股神也會看錯？【王老先聲】#分析股票 #績效 #整體操作",
+      "channel": "老王愛說笑",
+      "date": "2026-04-01",
+      "stocks_found": [
+        "AAPL"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/dVpFcWrTq34/mqdefault.jpg"
     }
   ]
 }
