@@ -1242,6 +1242,8 @@ def build_stock_dict(
 
     # ── US stocks (built-in) — added BEFORE aliases so aliases can override ─
     for kw, ticker in US_KEYWORD_TO_CODE.items():
+        if re.match(r'^[A-Za-z]$', kw):
+            continue  # single-letter tickers cause too many false positives in Chinese text
         stock_dict[kw] = ticker
     for ticker, info in US_CODE_TO_INFO.items():
         if ticker not in code_to_name:
@@ -1258,6 +1260,8 @@ def build_stock_dict(
         for kw in kws:
             if not re.match(r'^[A-Za-z0-9]', kw):
                 continue  # skip non-ASCII (Chinese) aliases — too many false positives
+            if len(kw) < 2:
+                continue  # single-letter keywords are too noisy
             if kw not in stock_dict:  # don't override hardcoded entries
                 stock_dict[kw] = ticker
 
@@ -2377,12 +2381,18 @@ def merge_into_history(
     skipped = len(new_videos) - len(actually_new) - len(upgraded)
     print(f"[scanner] New: {len(actually_new)} videos/episodes, upgraded: {len(upgraded)}, skipped: {skipped} duplicates")
 
-    merged_videos = list(existing_map.values()) + actually_new
-    new_titles    = {v["title"] for v in actually_new + upgraded}
+    merged_videos  = list(existing_map.values()) + actually_new
+    new_titles     = {v["title"] for v in actually_new + upgraded}
+    upgraded_titles = {v["title"] for v in upgraded}
 
-    # Start from existing stocks
+    # Start from existing stocks, dropping contexts from upgraded videos so they
+    # get replaced by the higher-quality re-scan results below.
     merged_stocks: dict[str, dict] = {}
     for s in history.get("stocks_ranking", []):
+        kept_contexts = [
+            c for c in s["contexts"]
+            if c.get("video", "") not in upgraded_titles
+        ]
         merged_stocks[s["code"]] = {
             "code":     s["code"],
             "name":     s["name"],
@@ -2390,7 +2400,7 @@ def merge_into_history(
             # Always use TW_STOCK_SECTORS when available so sub-category labels
             # (e.g. "ETF・台股指數") override the stale value from history.
             "sector":   TW_STOCK_SECTORS.get(s["code"]) or STOCK_SECTOR.get(s["code"]) or s.get("sector"),
-            "contexts": list(s["contexts"]),
+            "contexts": kept_contexts,
         }
 
     # Build index of (video_title, stock_code) pairs already in history
