@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-03T14:18:12",
+  "updated_at": "2026-04-03T14:22:35",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -200,9 +200,20 @@
           "sentiment": "neutral",
           "sentiment_score": 0.5,
           "video_url": "https://www.youtube.com/watch?v=OMy0hmcUqP0"
+        },
+        {
+          "video": "【兆華艾綸說】川普把伊朗轟回石器時代？連假測試利空跌不跌，輝達打造AI供應鏈帝國！用10萬元、4檔ETF完整資產配置！｜李兆華、艾綸、股魚｜#兆華艾綸說 20260403",
+          "channel": "東森財經",
+          "date": "2026-04-03",
+          "text": "【兆華艾綸說】川普把伊朗轟回石器時代？連假測試利空跌不跌，輝達打造AI供應鏈帝國！用10萬元、4檔ETF完整資產配置！｜李兆華、艾綸、股魚｜#兆華艾綸說 20260403 節目內容純屬主持人與來賓個人經驗分享，非個股推薦。投資人須自行謹慎判斷，評估擔負風險。 主持人：李兆華、艾綸來賓：存股 ...",
+          "matched_keyword": "輝達",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "https://www.youtube.com/watch?v=KzndAUJQZgI"
         }
       ],
-      "total_mentions": 2,
+      "total_mentions": 3,
       "sentiment_score": 0.5,
       "daily": {
         "2026-04-02": {
@@ -213,6 +224,13 @@
           "sentiment_score": 0.5
         },
         "2026-04-01": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-04-03": {
           "mentions": 1,
           "bullish": 0,
           "bearish": 0,
@@ -354,7 +372,7 @@
     {
       "sector": "AI晶片",
       "market": "US",
-      "total_mentions": 2,
+      "total_mentions": 3,
       "stock_codes": [
         "NVDA"
       ]
@@ -648,6 +666,17 @@
       "stocks_found": [],
       "analysis_source": "titleAndDescription",
       "thumbnail_url": "https://i.ytimg.com/vi/WpHQtmGPVjM/mqdefault.jpg"
+    },
+    {
+      "video_id": "KzndAUJQZgI",
+      "title": "【兆華艾綸說】川普把伊朗轟回石器時代？連假測試利空跌不跌，輝達打造AI供應鏈帝國！用10萬元、4檔ETF完整資產配置！｜李兆華、艾綸、股魚｜#兆華艾綸說 20260403",
+      "channel": "東森財經",
+      "date": "2026-04-03",
+      "stocks_found": [
+        "NVDA"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/KzndAUJQZgI/mqdefault.jpg"
     }
   ]
 }
