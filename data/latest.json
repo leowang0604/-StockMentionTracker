@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-03T14:22:46",
+  "updated_at": "2026-04-03T14:22:47",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -894,15 +894,46 @@
           "sentiment_score": 0.5
         }
       }
+    },
+    {
+      "code": "5347",
+      "name": "世界",
+      "market": "TW",
+      "sector": "晶圓代工",
+      "contexts": [
+        {
+          "video": "EP411｜ 努力不一定有回報",
+          "channel": "股市隱者",
+          "date": "2026-03-30",
+          "text": "EP411｜ 努力不一定有回報 是不是這個世界，  本來就不是靠努力在運作的。     重點摘要：  🔺問題不是你不夠努力     🔺市場在獎勵什麼     🔺為什麼你越努力越容易輸           --  股市隱者－贏勢股 APP｜量化交易｜法人預估｜策略選股  贏勢股 APP 把投資簡化成「選股」和「找價位」兩個步驟，從基本面、技術面、",
+          "matched_keyword": "",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": null
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-03-30": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
     }
   ],
   "sectors_ranking": [
     {
       "sector": "晶圓代工",
       "market": "TW",
-      "total_mentions": 13,
+      "total_mentions": 14,
       "stock_codes": [
-        "2330"
+        "2330",
+        "5347"
       ]
     },
     {
@@ -1423,6 +1454,26 @@
         "MSFT",
         "MRVL",
         "NVDA"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": null
+    },
+    {
+      "video_id": "fa019537-7eed-4f19-9bc4-50b6051ba7cc",
+      "title": "EP412｜不急，才會賺到錢",
+      "channel": "股市隱者",
+      "date": "2026-04-02",
+      "stocks_found": [],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": null
+    },
+    {
+      "video_id": "63613083-d821-4eaf-805e-2bacac6383d9",
+      "title": "EP411｜ 努力不一定有回報",
+      "channel": "股市隱者",
+      "date": "2026-03-30",
+      "stocks_found": [
+        "5347"
       ],
       "analysis_source": "titleAndDescription",
       "thumbnail_url": null
