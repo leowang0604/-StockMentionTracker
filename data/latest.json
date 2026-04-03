@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-03T14:22:37",
+  "updated_at": "2026-04-03T14:22:38",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -240,6 +240,47 @@
       }
     },
     {
+      "code": "3715",
+      "name": "定穎投控",
+      "market": "TW",
+      "sector": "PCB",
+      "contexts": [
+        {
+          "video": "EP214 | 台、美股重點一次說，低軌衛星產業動能，光電二極體與台股關係，定穎投控轉型，google新技術與記憶體 ？",
+          "channel": "韭菜畢業班",
+          "date": "2026-03-29",
+          "text": "EP214 | 台、美股重點一次說，低軌衛星產業動能，光電二極體與台股關係，定穎投控轉型，google新技術與記憶體 ？ 全新氣氛值選股軟體 : https://cmy.tw/00ArN8     IG  https://www.instagram.com/unclewhereareyou     廣播專區  https://t.me/uncle_stock     - Googl",
+          "matched_keyword": "",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": null
+        },
+        {
+          "video": "EP214 | 台、美股重點一次說，低軌衛星產業動能，光電二極體與台股關係，定穎投控轉型，google新技術與記憶體 ？",
+          "channel": "韭菜畢業班",
+          "date": "2026-03-29",
+          "text": "ram.com/unclewhereareyou     廣播專區  https://t.me/uncle_stock     - Google 演算法 TurboQuant 對記憶體產業的影響  - Meta 近況：法律訴訟與液冷散熱趨勢  - 低軌衛星產業動能  - 光電二極體與台股關係  - 定穎投控產業轉型：從車用到 AI 伺服器高階板     韭菜畢業班總連結 : https://portaly.cc/uncle_stock  -- Hosting provided by SoundOn",
+          "matched_keyword": "",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": null
+        }
+      ],
+      "total_mentions": 2,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-03-29": {
+          "mentions": 2,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 2,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
       "code": "1315",
       "name": "達新",
       "market": "TW",
@@ -388,6 +429,96 @@
           "sentiment_score": 0.5
         }
       }
+    },
+    {
+      "code": "2455",
+      "name": "全新",
+      "market": "TW",
+      "sector": "網通",
+      "contexts": [
+        {
+          "video": "EP214 | 台、美股重點一次說，低軌衛星產業動能，光電二極體與台股關係，定穎投控轉型，google新技術與記憶體 ？",
+          "channel": "韭菜畢業班",
+          "date": "2026-03-29",
+          "text": "EP214 | 台、美股重點一次說，低軌衛星產業動能，光電二極體與台股關係，定穎投控轉型，google新技術與記憶體 ？ 全新氣氛值選股軟體 : https://cmy.tw/00ArN8     IG  https://www.instagram.com/unclewhereareyou     廣播專區  https://t.me/uncle_stock     - Google 演算法 TurboQuant 對記憶體",
+          "matched_keyword": "",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": null
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-03-29": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
+      "code": "GOOGL",
+      "name": "Alphabet",
+      "market": "US",
+      "sector": "雲端/AI",
+      "contexts": [
+        {
+          "video": "EP214 | 台、美股重點一次說，低軌衛星產業動能，光電二極體與台股關係，定穎投控轉型，google新技術與記憶體 ？",
+          "channel": "韭菜畢業班",
+          "date": "2026-03-29",
+          "text": "，定穎投控轉型，google新技術與記憶體 ？ 全新氣氛值選股軟體 : https://cmy.tw/00ArN8     IG  https://www.instagram.com/unclewhereareyou     廣播專區  https://t.me/uncle_stock     - Google 演算法 TurboQuant 對記憶體產業的影響  - Meta 近況：法律訴訟與液冷散熱趨勢  - 低軌衛星產業動能  - 光電二極體與台股關係  - 定穎投控產業轉型：從車用到 AI 伺服器高階板     韭菜畢業班總連結 : https://portaly.cc/uncle_stock  -",
+          "matched_keyword": "",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": null
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-03-29": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
+      "code": "META",
+      "name": "Meta",
+      "market": "US",
+      "sector": "雲端/AI",
+      "contexts": [
+        {
+          "video": "EP214 | 台、美股重點一次說，低軌衛星產業動能，光電二極體與台股關係，定穎投控轉型，google新技術與記憶體 ？",
+          "channel": "韭菜畢業班",
+          "date": "2026-03-29",
+          "text": "https://cmy.tw/00ArN8     IG  https://www.instagram.com/unclewhereareyou     廣播專區  https://t.me/uncle_stock     - Google 演算法 TurboQuant 對記憶體產業的影響  - Meta 近況：法律訴訟與液冷散熱趨勢  - 低軌衛星產業動能  - 光電二極體與台股關係  - 定穎投控產業轉型：從車用到 AI 伺服器高階板     韭菜畢業班總連結 : https://portaly.cc/uncle_stock  -- Hosting provided by SoundOn",
+          "matched_keyword": "",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": null
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-03-29": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
     }
   ],
   "sectors_ranking": [
@@ -405,6 +536,23 @@
       "total_mentions": 3,
       "stock_codes": [
         "NVDA"
+      ]
+    },
+    {
+      "sector": "PCB",
+      "market": "TW",
+      "total_mentions": 2,
+      "stock_codes": [
+        "3715"
+      ]
+    },
+    {
+      "sector": "雲端/AI",
+      "market": "US",
+      "total_mentions": 2,
+      "stock_codes": [
+        "GOOGL",
+        "META"
       ]
     },
     {
@@ -445,6 +593,14 @@
       "total_mentions": 1,
       "stock_codes": [
         "5013"
+      ]
+    },
+    {
+      "sector": "網通",
+      "market": "TW",
+      "total_mentions": 1,
+      "stock_codes": [
+        "2455"
       ]
     }
   ],
@@ -732,6 +888,20 @@
       "date": "2026-03-28",
       "stocks_found": [
         "5013"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": null
+    },
+    {
+      "video_id": "6b89f8c2-7075-498f-86fc-17723113c548",
+      "title": "EP214 | 台、美股重點一次說，低軌衛星產業動能，光電二極體與台股關係，定穎投控轉型，google新技術與記憶體 ？",
+      "channel": "韭菜畢業班",
+      "date": "2026-03-29",
+      "stocks_found": [
+        "3715",
+        "GOOGL",
+        "META",
+        "2455"
       ],
       "analysis_source": "titleAndDescription",
       "thumbnail_url": null
