@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-03T18:15:45",
+  "updated_at": "2026-04-03T18:22:04",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -471,9 +471,31 @@
           "sentiment": "neutral",
           "sentiment_score": 0.5,
           "video_url": null
+        },
+        {
+          "video": "EP214 | 台、美股重點一次說，低軌衛星產業動能，光電二極體與台股關係，定穎投控轉型，google新技術與記憶體 ？",
+          "channel": "韭菜畢業班",
+          "date": "2026-03-29",
+          "text": "是我自己 思考上面的錯誤 然後其實根本就沒有那麼影響到 這個也是我自己在看到這件事情 那我們先來解釋一下 這一個演算法他到底在做什麼事情 好了其實簡而言之 他其實就是在解決這些AI推論 然後假如記憶體支援 其實是耗得非常的快的 那他可以讓這一個記憶體的空間需求 大幅度的看了至少6倍 那也就是說假如在NVIDIA 以前的這種H100的晶片上面的話 他的運算速度是以前的800倍 800% 800倍是什麼鬼東西 然後等於是就是還有另外一個重點 就是零精度的這種損失 就等於是他是一個完整的一個資料 所以就等於是在以後的 AI PC或說手機上面的話 其實這種32K 這種上下紋長度的這種AI應用 其實它都是可以大幅度",
+          "matched_keyword": "",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.8,
+          "video_url": null
+        },
+        {
+          "video": "EP214 | 台、美股重點一次說，低軌衛星產業動能，光電二極體與台股關係，定穎投控轉型，google新技術與記憶體 ？",
+          "channel": "韭菜畢業班",
+          "date": "2026-03-29",
+          "text": "是就是還有另外一個重點 就是零精度的這種損失 就等於是他是一個完整的一個資料 所以就等於是在以後的 AI PC或說手機上面的話 其實這種32K 這種上下紋長度的這種AI應用 其實它都是可以大幅度的推動 也就是說所謂的運算這件事情的發展 其實是大幅度的往前的 好那其實這一件事情出來之後 我後面去看一下NVIDIA 其實之前也有發不過類似的東西 也就是講求效率 讓他可以在所有裝置上面 邊緣裝置上面都可以使用 這個我覺得是之前就已經有發生過的事情 但是比較酷的事情是 其實之前NVIDIA發布這件事情的時候 市場其實是沒有下殺記憶體的 那反而現在因為記憶體下殺之後 大家可能會去想要趕快去找一個 所謂的原因下殺下來",
+          "matched_keyword": "",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.8,
+          "video_url": null
         }
       ],
-      "total_mentions": 15,
+      "total_mentions": 17,
       "sentiment_score": 1.0,
       "daily": {
         "2026-04-02": {
@@ -503,6 +525,13 @@
           "bearish": 0,
           "neutral": 1,
           "sentiment_score": 0.5
+        },
+        "2026-03-29": {
+          "mentions": 2,
+          "bullish": 2,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
         }
       }
     },
@@ -512,17 +541,6 @@
       "market": "US",
       "sector": "雲端/AI",
       "contexts": [
-        {
-          "video": "EP214 | 台、美股重點一次說，低軌衛星產業動能，光電二極體與台股關係，定穎投控轉型，google新技術與記憶體 ？",
-          "channel": "韭菜畢業班",
-          "date": "2026-03-29",
-          "text": "，定穎投控轉型，google新技術與記憶體 ？ 全新氣氛值選股軟體 : https://cmy.tw/00ArN8     IG  https://www.instagram.com/unclewhereareyou     廣播專區  https://t.me/uncle_stock     - Google 演算法 TurboQuant 對記憶體產業的影響  - Meta 近況：法律訴訟與液冷散熱趨勢  - 低軌衛星產業動能  - 光電二極體與台股關係  - 定穎投控產業轉型：從車用到 AI 伺服器高階板     韭菜畢業班總連結 : https://portaly.cc/uncle_stock  -",
-          "matched_keyword": "",
-          "analysis_source": "titleAndDescription",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": null
-        },
         {
           "video": "EP649 | 💌",
           "channel": "股癌",
@@ -621,18 +639,44 @@
           "sentiment": "bullish",
           "sentiment_score": 0.6,
           "video_url": null
+        },
+        {
+          "video": "EP214 | 台、美股重點一次說，低軌衛星產業動能，光電二極體與台股關係，定穎投控轉型，google新技術與記憶體 ？",
+          "channel": "韭菜畢業班",
+          "date": "2026-03-29",
+          "text": "是我自己的一些個人的習慣 那我覺得試著可以這樣做看看 然後如果有什麼東西 是想要直接給大家看的 我覺得也可以用videoparcast的方式給大家看 如果你原本就是只是聽 語音開車的時候 就你自己選擇 這個都是 It's up to you啦 好,那再來就是最近 我覺得市場主要在看的東西 第一個就是Google的這個新技術 這個演算法 我們在開頭先來聊這件事情 我們等一下再來聊其他事情啦 那其實這個Google的最新的黑科技 那就是 所謂的Turbo-Crant 這一個演算法的話 其實我看到當下是3月25號 然後在X上面看到第一者 然後再來就是其實Google 官網集就有丟出來這件事情了 那原來上我第一件",
+          "matched_keyword": "",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.75,
+          "video_url": null
+        },
+        {
+          "video": "EP214 | 台、美股重點一次說，低軌衛星產業動能，光電二極體與台股關係，定穎投控轉型，google新技術與記憶體 ？",
+          "channel": "韭菜畢業班",
+          "date": "2026-03-29",
+          "text": "天划了所有東西 其實大家要的東西 不管是創作者 然後還是平台 其實要的都是你的專注力 所以我們之前也講過這件事情 就是你的專注力是很值錢的一件事情 那這件事情被判賠 整體事情還是還蠻 tricky的 我們想到竟然可以判賠成功 好 那再來就是 最近我們可以看到Meta 其實我們在上一集 有跟各位聊過 Google在夜冷相關的東西的佈局 其實算是手腳還蠻快的 所以我們看到中國板塊那邊 其實都是有一起往上去走 但是像Meta最近的智能晶片 那功耗的話 其實已經飆破到了1700W 那再來就是單一機櫃的整體的 功率密度的話 其實也是持續的往上去衝的 等於是 傳統的女風冷其實是沒有辦法的 所以夜冷的話 其實等於是一個",
+          "matched_keyword": "",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.75,
+          "video_url": null
+        },
+        {
+          "video": "EP214 | 台、美股重點一次說，低軌衛星產業動能，光電二極體與台股關係，定穎投控轉型，google新技術與記憶體 ？",
+          "channel": "韭菜畢業班",
+          "date": "2026-03-29",
+          "text": "果我們用 GPU主板的角度去思考的話 它應該是在第3季 2026年的第3季才會進入量產的 那ASIC跟Switch相關的產品的話 應該是在第4季的時候才會量產 所以這個是 後續大家可以去思考的一件事情 那其實ASIC相關的加速器 以及Switch這種交換機板 40x以上的 那原則上我們會去掛購 就是Google跟Meta 這兩家 所以大家也可以去注意一下 那剛剛所講到DDR-FI的話 可能就是長薪存儲 那長薪存儲就是大家最 之前每次記憶體 然後要出現一些利空的時候 像CXNT 這是大家很常聽到的一個名詞 如果有興趣的朋友 你都可以上網查一下 好 那原則上就這樣 我覺得今天這一集 就大概回到這邊 那我們節目",
+          "matched_keyword": "",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.75,
+          "video_url": null
         }
       ],
-      "total_mentions": 10,
+      "total_mentions": 12,
       "sentiment_score": 1.0,
       "daily": {
-        "2026-03-29": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
         "2026-04-01": {
           "mentions": 2,
           "bullish": 2,
@@ -643,6 +687,13 @@
         "2026-03-28": {
           "mentions": 7,
           "bullish": 7,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        },
+        "2026-03-29": {
+          "mentions": 3,
+          "bullish": 3,
           "bearish": 0,
           "neutral": 0,
           "sentiment_score": 1.0
@@ -1018,9 +1069,20 @@
           "sentiment": "bullish",
           "sentiment_score": 0.7,
           "video_url": null
+        },
+        {
+          "video": "EP214 | 台、美股重點一次說，低軌衛星產業動能，光電二極體與台股關係，定穎投控轉型，google新技術與記憶體 ？",
+          "channel": "韭菜畢業班",
+          "date": "2026-03-29",
+          "text": "那最後補充一下 其實最近還有看到 像穩貌 洋出場穩貌 它其實又動起來 那穩貌其實主要的市場的話題 我可以再跟各位複習一下 第一個的話就是 SpaceX 這個Starlink的這種低軌衛星的供應鏈 這絕對是有的 那再來其次的話就是 如果我們看光通訊 它其實會去注意到的東西 像是Broadcom 也就是博通 那再來就是Rumenton 其實也是有的 那再來的話 我們可以看到機械人相關的話題 也是有 但是我自己會先把focus在 一些光手發模組 以及CW Laser的這種底層代工 這個是我覺得它主要的一個話題 會是比較重點的 那再來就是IMP的這種晶圓代工 也是很重要的 所以如果說大家看 穩貌的話 其實",
+          "matched_keyword": "",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": null
         }
       ],
-      "total_mentions": 5,
+      "total_mentions": 6,
       "sentiment_score": 1.0,
       "daily": {
         "2026-04-01": {
@@ -1029,6 +1091,105 @@
           "bearish": 0,
           "neutral": 0,
           "sentiment_score": 1.0
+        },
+        "2026-03-29": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        }
+      }
+    },
+    {
+      "code": "META",
+      "name": "Meta",
+      "market": "US",
+      "sector": "雲端/AI",
+      "contexts": [
+        {
+          "video": "EP648 | 🦆",
+          "channel": "股癌",
+          "date": "2026-03-28",
+          "text": "去 好像是兩集 三集前我跟大家聊到 他要去搞那個 Terra Fab 我們的一些看法 最主要是 我覺得在財務上面 一定是一顆累贅 那當然有可能 真的給他搞起來 後面因為IDM的關係 然後他可以省下一些成本 他的整個毛利數字也拉上去 有什麼 但那個真的是比較偏很遠的東西 有點類似 我感覺他有點像之前 Meta的那個transition階段 就是他要去搞那種圓宇宙 然後那時候不是股價敵要爛掉嗎 那當時勇敢去買的 當然後面是轉帆 可是當下你叫我買 其實我真的不太敢買 因為我已經看不太到說 你後面要搞的東西是什麼 會不會你真的把 所有廣告的收入都投進去那個圓宇宙 那事後證明說 其實這個看法是沒有錯的 因為他那",
+          "matched_keyword": "",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.3,
+          "video_url": null
+        },
+        {
+          "video": "EP214 | 台、美股重點一次說，低軌衛星產業動能，光電二極體與台股關係，定穎投控轉型，google新技術與記憶體 ？",
+          "channel": "韭菜畢業班",
+          "date": "2026-03-29",
+          "text": "天有一個 利多的前提之下 他被下殺下來的話 那等於是市場看起來 整體買盤還是沒有那麼多的感覺 那當然後續會怎麼樣去發展 我覺得這個東西 也不是我們能夠預測的東西 只能講當下我們看到的事情 好 那大概我覺得 前面先把記憶體相關的東西 跟各位聊完之後 大家可能會比較有概念一點 好 那再來的話 就是聊一下Meta好了 雖然Meta是我最近的青頭的痛 Meta其實在 最近的股價表現 也是非常的差 就是破底在破底 真的不錯 那當然這個是有點屬於個人恩怨 因為我們看到 Meta如果用七巨頭的角度來看的話 其實是近期表現相對最差的 因為在禮拜四3月26號的時候 是一根接近8%的跌幅 下殺下來之後 就等於是破底在破底",
+          "matched_keyword": "",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.3,
+          "video_url": null
+        },
+        {
+          "video": "EP214 | 台、美股重點一次說，低軌衛星產業動能，光電二極體與台股關係，定穎投控轉型，google新技術與記憶體 ？",
+          "channel": "韭菜畢業班",
+          "date": "2026-03-29",
+          "text": "前我跟各位講過 這個注意這件事情 就是你今天划了所有東西 其實大家要的東西 不管是創作者 然後還是平台 其實要的都是你的專注力 所以我們之前也講過這件事情 就是你的專注力是很值錢的一件事情 那這件事情被判賠 整體事情還是還蠻 tricky的 我們想到竟然可以判賠成功 好 那再來就是 最近我們可以看到Meta 其實我們在上一集 有跟各位聊過 Google在夜冷相關的東西的佈局 其實算是手腳還蠻快的 所以我們看到中國板塊那邊 其實都是有一起往上去走 但是像Meta最近的智能晶片 那功耗的話 其實已經飆破到了1700W 那再來就是單一機櫃的整體的 功率密度的話 其實也是持續的往上去衝的 等於是 傳統的女風冷",
+          "matched_keyword": "",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.3,
+          "video_url": null
+        },
+        {
+          "video": "EP214 | 台、美股重點一次說，低軌衛星產業動能，光電二極體與台股關係，定穎投控轉型，google新技術與記憶體 ？",
+          "channel": "韭菜畢業班",
+          "date": "2026-03-29",
+          "text": "還蠻快的 所以我們看到中國板塊那邊 其實都是有一起往上去走 但是像Meta最近的智能晶片 那功耗的話 其實已經飆破到了1700W 那再來就是單一機櫃的整體的 功率密度的話 其實也是持續的往上去衝的 等於是 傳統的女風冷其實是沒有辦法的 所以夜冷的話 其實等於是一個非常重要的一個標配 所以我們看到 像Meta一些相關的機櫃的東西 其實都有一齊往上去衝 原則上的話就是 現在夜冷看起來 會是一個蠻重要的趨勢 只是市場可能目前還沒有看到 買盤全部的進駐 那原則上我覺得大家會去盯著 可能像齊鴻建策 然後雙鴻 甚至有一家叫麥克的 這個是 也是大家可能會去注意到的東西 就等於是大家可能市場會慢慢開始 往這邊去靠 我",
+          "matched_keyword": "",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.3,
+          "video_url": null
+        },
+        {
+          "video": "EP214 | 台、美股重點一次說，低軌衛星產業動能，光電二極體與台股關係，定穎投控轉型，google新技術與記憶體 ？",
+          "channel": "韭菜畢業班",
+          "date": "2026-03-29",
+          "text": "齊往上去衝 原則上的話就是 現在夜冷看起來 會是一個蠻重要的趨勢 只是市場可能目前還沒有看到 買盤全部的進駐 那原則上我覺得大家會去盯著 可能像齊鴻建策 然後雙鴻 甚至有一家叫麥克的 這個是 也是大家可能會去注意到的東西 就等於是大家可能市場會慢慢開始 往這邊去靠 我覺得大家也可以稍微去注意一下 那Meta的話原則上 就大概這樣 我們也不要特別多聊Meta了 因為對我來講 Meta真的是沒什麼好聊的 你懂我意思嗎 就算它接下來可能在2026年 會推出的AALC的這種散熱的架構 那也就是所謂的超級機櫃 如果硬要講這個機櫃的話 好啦 我們還是來聊一下 這個機櫃整體的話 應該是有廣達去做代工 然後再來就是其",
+          "matched_keyword": "",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.3,
+          "video_url": null
+        },
+        {
+          "video": "EP214 | 台、美股重點一次說，低軌衛星產業動能，光電二極體與台股關係，定穎投控轉型，google新技術與記憶體 ？",
+          "channel": "韭菜畢業班",
+          "date": "2026-03-29",
+          "text": "U主板的角度去思考的話 它應該是在第3季 2026年的第3季才會進入量產的 那ASIC跟Switch相關的產品的話 應該是在第4季的時候才會量產 所以這個是 後續大家可以去思考的一件事情 那其實ASIC相關的加速器 以及Switch這種交換機板 40x以上的 那原則上我們會去掛購 就是Google跟Meta 這兩家 所以大家也可以去注意一下 那剛剛所講到DDR-FI的話 可能就是長薪存儲 那長薪存儲就是大家最 之前每次記憶體 然後要出現一些利空的時候 像CXNT 這是大家很常聽到的一個名詞 如果有興趣的朋友 你都可以上網查一下 好 那原則上就這樣 我覺得今天這一集 就大概回到這邊 那我們節目的最後 我",
+          "matched_keyword": "",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.3,
+          "video_url": null
+        }
+      ],
+      "total_mentions": 6,
+      "sentiment_score": 0.0,
+      "daily": {
+        "2026-03-28": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 1,
+          "neutral": 0,
+          "sentiment_score": 0.0
+        },
+        "2026-03-29": {
+          "mentions": 5,
+          "bullish": 0,
+          "bearish": 5,
+          "neutral": 0,
+          "sentiment_score": 0.0
         }
       }
     },
@@ -1239,16 +1400,16 @@
       }
     },
     {
-      "code": "3715",
-      "name": "定穎投控",
-      "market": "TW",
-      "sector": "PCB",
+      "code": "TSLA",
+      "name": "Tesla",
+      "market": "US",
+      "sector": "電動車",
       "contexts": [
         {
-          "video": "EP214 | 台、美股重點一次說，低軌衛星產業動能，光電二極體與台股關係，定穎投控轉型，google新技術與記憶體 ？",
-          "channel": "韭菜畢業班",
-          "date": "2026-03-29",
-          "text": "EP214 | 台、美股重點一次說，低軌衛星產業動能，光電二極體與台股關係，定穎投控轉型，google新技術與記憶體 ？ 全新氣氛值選股軟體 : https://cmy.tw/00ArN8     IG  https://www.instagram.com/unclewhereareyou     廣播專區  https://t.me/uncle_stock     - Googl",
+          "video": "2026/04/01 (三）停戰有譜，美股真的跌完了？Nvidia再投資Marvell 20億美元",
+          "channel": "財女珍妮",
+          "date": "2026-04-01",
+          "text": "✅ 美股財報分析 ✅  👉 Gemini 逼近、算力成本失控，OpenAI帝國防線出現裂痕？  🔗 https://reurl.cc/VmdDz5     👉 微軟(MSFT)：AI帝國 「軍備競賽」，微軟的新護城河與變現真相  🔗 https://reurl.cc/NN7AQ6     👉 特斯拉(TSLA)：當賣車不再是唯一，新商模展開！AI 與利潤率撐起新敘事  🔗 https://reurl.cc/QVvLRp     👉 ARK Big Ideas 2026：大加速時",
           "matched_keyword": "",
           "analysis_source": "titleAndDescription",
           "sentiment": "neutral",
@@ -1256,25 +1417,50 @@
           "video_url": null
         },
         {
+          "video": "EP648 | 🦆",
+          "channel": "股癌",
+          "date": "2026-03-28",
+          "text": "的 雖然跟爸媽不一定會有 太多的東西可以對話什麼 但就是盡量能做得主 就不要讓自己有一天會後悔 下面也會 撥撥愛上夢宮 愛上夢宮那一天三 夢宮恰安 我是今天交測的特粉 歪好好開 那希望有天可以在路上看到你 然後上演一段 逢迪索跟保羅沃克到別時 申請款款的細碼 感覺都很感人 那不說了 我要先去多點幾股特斯拉股票了 祝福所有特粉出入平安 在外都有超充可以充愛你 特斯拉股價最近真的 他媽現在多大便 那還是要稍微的緊記一下 我們再來過去 好像是兩集 三集前我跟大家聊到 他要去搞那個 Terra Fab 我們的一些看法 最主要是 我覺得在財務上面 一定是一顆累贅 那當然有可能 真的給他搞起來 後面因為IDM的",
+          "matched_keyword": "",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.3,
+          "video_url": null
+        },
+        {
           "video": "EP214 | 台、美股重點一次說，低軌衛星產業動能，光電二極體與台股關係，定穎投控轉型，google新技術與記憶體 ？",
           "channel": "韭菜畢業班",
           "date": "2026-03-29",
-          "text": "ram.com/unclewhereareyou     廣播專區  https://t.me/uncle_stock     - Google 演算法 TurboQuant 對記憶體產業的影響  - Meta 近況：法律訴訟與液冷散熱趨勢  - 低軌衛星產業動能  - 光電二極體與台股關係  - 定穎投控產業轉型：從車用到 AI 伺服器高階板     韭菜畢業班總連結 : https://portaly.cc/uncle_stock  -- Hosting provided by SoundOn",
+          "text": "及CW Laser的這種底層代工 這個是我覺得它主要的一個話題 會是比較重點的 那再來就是IMP的這種晶圓代工 也是很重要的 所以如果說大家看 穩貌的話 其實可以用不同的角度去思考它 它真的不是以前的這種洋出場了 當然之前其實骨架理論上 應該是有受到一些波動 因為就創高之後 它又落塞下來 其實這個跟特斯拉有一點像 之前在3月初的時候 是往上去創高 連續幾天的一個修正之下 大概也是修正的幅度 應該也是有一個20%附近 但這個是我覺得 骨架真的是 很常發生的一件事情 所以其實如果你今天 再看的是一些骨架 假設它現在又回測了一個 20-30%的話 其實不一定代表它很爛 我必須這麼說 就等於是有時候 它反而",
           "matched_keyword": "",
-          "analysis_source": "titleAndDescription",
+          "analysis_source": "whisper",
           "sentiment": "neutral",
-          "sentiment_score": 0.5,
+          "sentiment_score": 0.4,
           "video_url": null
         }
       ],
-      "total_mentions": 2,
-      "sentiment_score": 0.5,
+      "total_mentions": 3,
+      "sentiment_score": 0.0,
       "daily": {
-        "2026-03-29": {
-          "mentions": 2,
+        "2026-04-01": {
+          "mentions": 1,
           "bullish": 0,
           "bearish": 0,
-          "neutral": 2,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-03-28": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 1,
+          "neutral": 0,
+          "sentiment_score": 0.0
+        },
+        "2026-03-29": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
           "sentiment_score": 0.5
         }
       }
@@ -1328,54 +1514,6 @@
       }
     },
     {
-      "code": "META",
-      "name": "Meta",
-      "market": "US",
-      "sector": "雲端/AI",
-      "contexts": [
-        {
-          "video": "EP214 | 台、美股重點一次說，低軌衛星產業動能，光電二極體與台股關係，定穎投控轉型，google新技術與記憶體 ？",
-          "channel": "韭菜畢業班",
-          "date": "2026-03-29",
-          "text": "https://cmy.tw/00ArN8     IG  https://www.instagram.com/unclewhereareyou     廣播專區  https://t.me/uncle_stock     - Google 演算法 TurboQuant 對記憶體產業的影響  - Meta 近況：法律訴訟與液冷散熱趨勢  - 低軌衛星產業動能  - 光電二極體與台股關係  - 定穎投控產業轉型：從車用到 AI 伺服器高階板     韭菜畢業班總連結 : https://portaly.cc/uncle_stock  -- Hosting provided by SoundOn",
-          "matched_keyword": "",
-          "analysis_source": "titleAndDescription",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": null
-        },
-        {
-          "video": "EP648 | 🦆",
-          "channel": "股癌",
-          "date": "2026-03-28",
-          "text": "去 好像是兩集 三集前我跟大家聊到 他要去搞那個 Terra Fab 我們的一些看法 最主要是 我覺得在財務上面 一定是一顆累贅 那當然有可能 真的給他搞起來 後面因為IDM的關係 然後他可以省下一些成本 他的整個毛利數字也拉上去 有什麼 但那個真的是比較偏很遠的東西 有點類似 我感覺他有點像之前 Meta的那個transition階段 就是他要去搞那種圓宇宙 然後那時候不是股價敵要爛掉嗎 那當時勇敢去買的 當然後面是轉帆 可是當下你叫我買 其實我真的不太敢買 因為我已經看不太到說 你後面要搞的東西是什麼 會不會你真的把 所有廣告的收入都投進去那個圓宇宙 那事後證明說 其實這個看法是沒有錯的 因為他那",
-          "matched_keyword": "",
-          "analysis_source": "whisper",
-          "sentiment": "bearish",
-          "sentiment_score": 0.3,
-          "video_url": null
-        }
-      ],
-      "total_mentions": 2,
-      "sentiment_score": 0.0,
-      "daily": {
-        "2026-03-29": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-03-28": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 1,
-          "neutral": 0,
-          "sentiment_score": 0.0
-        }
-      }
-    },
-    {
       "code": "MRVL",
       "name": "Marvell",
       "market": "US",
@@ -1413,54 +1551,6 @@
           "bearish": 0,
           "neutral": 1,
           "sentiment_score": 1.0
-        }
-      }
-    },
-    {
-      "code": "TSLA",
-      "name": "Tesla",
-      "market": "US",
-      "sector": "電動車",
-      "contexts": [
-        {
-          "video": "2026/04/01 (三）停戰有譜，美股真的跌完了？Nvidia再投資Marvell 20億美元",
-          "channel": "財女珍妮",
-          "date": "2026-04-01",
-          "text": "✅ 美股財報分析 ✅  👉 Gemini 逼近、算力成本失控，OpenAI帝國防線出現裂痕？  🔗 https://reurl.cc/VmdDz5     👉 微軟(MSFT)：AI帝國 「軍備競賽」，微軟的新護城河與變現真相  🔗 https://reurl.cc/NN7AQ6     👉 特斯拉(TSLA)：當賣車不再是唯一，新商模展開！AI 與利潤率撐起新敘事  🔗 https://reurl.cc/QVvLRp     👉 ARK Big Ideas 2026：大加速時",
-          "matched_keyword": "",
-          "analysis_source": "titleAndDescription",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": null
-        },
-        {
-          "video": "EP648 | 🦆",
-          "channel": "股癌",
-          "date": "2026-03-28",
-          "text": "的 雖然跟爸媽不一定會有 太多的東西可以對話什麼 但就是盡量能做得主 就不要讓自己有一天會後悔 下面也會 撥撥愛上夢宮 愛上夢宮那一天三 夢宮恰安 我是今天交測的特粉 歪好好開 那希望有天可以在路上看到你 然後上演一段 逢迪索跟保羅沃克到別時 申請款款的細碼 感覺都很感人 那不說了 我要先去多點幾股特斯拉股票了 祝福所有特粉出入平安 在外都有超充可以充愛你 特斯拉股價最近真的 他媽現在多大便 那還是要稍微的緊記一下 我們再來過去 好像是兩集 三集前我跟大家聊到 他要去搞那個 Terra Fab 我們的一些看法 最主要是 我覺得在財務上面 一定是一顆累贅 那當然有可能 真的給他搞起來 後面因為IDM的",
-          "matched_keyword": "",
-          "analysis_source": "whisper",
-          "sentiment": "bearish",
-          "sentiment_score": 0.3,
-          "video_url": null
-        }
-      ],
-      "total_mentions": 2,
-      "sentiment_score": 0.0,
-      "daily": {
-        "2026-04-01": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-03-28": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 1,
-          "neutral": 0,
-          "sentiment_score": 0.0
         }
       }
     },
@@ -1564,23 +1654,23 @@
           "video": "EP214 | 台、美股重點一次說，低軌衛星產業動能，光電二極體與台股關係，定穎投控轉型，google新技術與記憶體 ？",
           "channel": "韭菜畢業班",
           "date": "2026-03-29",
-          "text": "EP214 | 台、美股重點一次說，低軌衛星產業動能，光電二極體與台股關係，定穎投控轉型，google新技術與記憶體 ？ 全新氣氛值選股軟體 : https://cmy.tw/00ArN8     IG  https://www.instagram.com/unclewhereareyou     廣播專區  https://t.me/uncle_stock     - Google 演算法 TurboQuant 對記憶體",
+          "text": "但現在反而是 每一股沒有這麼大的動能 但是我們可以看到一些 台股相關的供應鏈 也是有往上去衝的 所以會不會其實這個也是 現在台股市場 想要去炒的另外一個話題 我覺得這也是 大家可以去注意的一件事情 好再來回到台股 可以跟各位聊就是一些 光通訊相關的東西 我們其實在上一集有講到 就是累晶相關等 像連亞全新 好 IET這些 IET其實之前也有講過 就是在某一集應該有特別講過 但 IET的話 其實主力的產品的話 就是光纖網路的這些 IMP的這種累晶 然後再來就是 它主要供應的就是 光纖發膜組所需的那個PD 也就是光電二級體 其實講到PD 最近很紅的 就是只要你只要去打PD 相關的供應鏈其實 幾乎都往上去",
           "matched_keyword": "",
-          "analysis_source": "titleAndDescription",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
           "video_url": null
         }
       ],
       "total_mentions": 1,
-      "sentiment_score": 0.5,
+      "sentiment_score": 1.0,
       "daily": {
         "2026-03-29": {
           "mentions": 1,
-          "bullish": 0,
+          "bullish": 1,
           "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
+          "neutral": 0,
+          "sentiment_score": 1.0
         }
       }
     },
@@ -1883,6 +1973,276 @@
           "sentiment_score": 0.5
         }
       }
+    },
+    {
+      "code": "1303",
+      "name": "南亞",
+      "market": "TW",
+      "sector": "記憶體",
+      "contexts": [
+        {
+          "video": "EP214 | 台、美股重點一次說，低軌衛星產業動能，光電二極體與台股關係，定穎投控轉型，google新技術與記憶體 ？",
+          "channel": "韭菜畢業班",
+          "date": "2026-03-29",
+          "text": "槽 或者是說 更去想要做出更多東西的 這個欲望我覺得是更多的 所以整體看下來 我覺得並不會覺得 他是影響機體最大的主要原因 那當然後續 如果機體繼續下殺下去的話 我覺得就是思考方式歸思考方式 股價歸股價 大家請不要把它完全的掛鉤上去 因為如果完全掛鉤上去的話 其實再舉前幾天的一個例子 來看好了 像是南亞科 因為南亞科其實可以看到 像斯科Sandex 凱霞 然後再甚至海利士 其實都有砸下來 要去參與這種私募 那我們也在 槌上面有發一篇文 就是說我認為這個東西的話 他簽這種三年的長約 勢必就是需要這個產能不斷貨 但是我們可以看到 市場其實會去更注意到的東西 理論上應該還是在 接下來的季度的漲幅 就等於",
+          "matched_keyword": "",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": null
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-03-29": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
+      "code": "2382",
+      "name": "廣達",
+      "market": "TW",
+      "sector": "伺服器",
+      "contexts": [
+        {
+          "video": "EP214 | 台、美股重點一次說，低軌衛星產業動能，光電二極體與台股關係，定穎投控轉型，google新技術與記憶體 ？",
+          "channel": "韭菜畢業班",
+          "date": "2026-03-29",
+          "text": "以稍微去注意一下 那Meta的話原則上 就大概這樣 我們也不要特別多聊Meta了 因為對我來講 Meta真的是沒什麼好聊的 你懂我意思嗎 就算它接下來可能在2026年 會推出的AALC的這種散熱的架構 那也就是所謂的超級機櫃 如果硬要講這個機櫃的話 好啦 我們還是來聊一下 這個機櫃整體的話 應該是有廣達去做代工 然後再來就是其中的這種業人設備的話 理論上我們會直接去看的東西 還是在台達店那一塊 所以等於是這兩家的話 老AI可能大家比較沒有那麼大的興趣 但是台達店還是有吃這一塊餅 所以其實還是算蠻強的 當然最近的股價 我們先不要去討論它 到底往什麼樣子的方向去走 但是台達店我覺得 不管在各個層面來看",
+          "matched_keyword": "",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": null
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-03-29": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
+      "code": "2408",
+      "name": "南亞科",
+      "market": "TW",
+      "sector": "記憶體",
+      "contexts": [
+        {
+          "video": "EP214 | 台、美股重點一次說，低軌衛星產業動能，光電二極體與台股關係，定穎投控轉型，google新技術與記憶體 ？",
+          "channel": "韭菜畢業班",
+          "date": "2026-03-29",
+          "text": "槽 或者是說 更去想要做出更多東西的 這個欲望我覺得是更多的 所以整體看下來 我覺得並不會覺得 他是影響機體最大的主要原因 那當然後續 如果機體繼續下殺下去的話 我覺得就是思考方式歸思考方式 股價歸股價 大家請不要把它完全的掛鉤上去 因為如果完全掛鉤上去的話 其實再舉前幾天的一個例子 來看好了 像是南亞科 因為南亞科其實可以看到 像斯科Sandex 凱霞 然後再甚至海利士 其實都有砸下來 要去參與這種私募 那我們也在 槌上面有發一篇文 就是說我認為這個東西的話 他簽這種三年的長約 勢必就是需要這個產能不斷貨 但是我們可以看到 市場其實會去更注意到的東西 理論上應該還是在 接下來的季度的漲幅 就等於是",
+          "matched_keyword": "",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": null
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-03-29": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
+      "code": "6442",
+      "name": "光聖",
+      "market": "TW",
+      "sector": "CPO光通訊",
+      "contexts": [
+        {
+          "video": "EP214 | 台、美股重點一次說，低軌衛星產業動能，光電二極體與台股關係，定穎投控轉型，google新技術與記憶體 ？",
+          "channel": "韭菜畢業班",
+          "date": "2026-03-29",
+          "text": "1.6T理論上在2026年 應該會持續的往上去從 那成長率基本上 都是直接翻倍 這滿正常的一件事情 所以我們可以看到 相關的這種 產能其實都已經往上去從 然後再來就是毛利率的部分 其實應該還是會繼續的 往上去提上去 這個是勢必的 所以我們會看到 最近 IET也是沖得非常的快 然後再加上它之前 其實跟光聖的一個合作 就是新聞一出來之後 其實就也是直接往上去飛天了 那這個我覺得也是大家可以 稍微去注意一下的 那上一集我們其實有講到 南俊 那就是一些滑軌相關的話題 雖然南俊現在卡在一個比較尷尬的點 就是20分處置盤 這個真的說真的 是台股的一個痛 就等於是每一次 20分處置盤 我知道有些人專門在處理這些",
+          "matched_keyword": "",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": null
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 1.0,
+      "daily": {
+        "2026-03-29": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        }
+      }
+    },
+    {
+      "code": "3324",
+      "name": "雙鴻",
+      "market": "TW",
+      "sector": "散熱",
+      "contexts": [
+        {
+          "video": "EP214 | 台、美股重點一次說，低軌衛星產業動能，光電二極體與台股關係，定穎投控轉型，google新技術與記憶體 ？",
+          "channel": "韭菜畢業班",
+          "date": "2026-03-29",
+          "text": "等於是 傳統的女風冷其實是沒有辦法的 所以夜冷的話 其實等於是一個非常重要的一個標配 所以我們看到 像Meta一些相關的機櫃的東西 其實都有一齊往上去衝 原則上的話就是 現在夜冷看起來 會是一個蠻重要的趨勢 只是市場可能目前還沒有看到 買盤全部的進駐 那原則上我覺得大家會去盯著 可能像齊鴻建策 然後雙鴻 甚至有一家叫麥克的 這個是 也是大家可能會去注意到的東西 就等於是大家可能市場會慢慢開始 往這邊去靠 我覺得大家也可以稍微去注意一下 那Meta的話原則上 就大概這樣 我們也不要特別多聊Meta了 因為對我來講 Meta真的是沒什麼好聊的 你懂我意思嗎 就算它接下來可能在2026年 會推出的AAL",
+          "matched_keyword": "",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": null
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 1.0,
+      "daily": {
+        "2026-03-29": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        }
+      }
+    },
+    {
+      "code": "6584",
+      "name": "南俊國際",
+      "market": "TW",
+      "sector": "伺服器",
+      "contexts": [
+        {
+          "video": "EP214 | 台、美股重點一次說，低軌衛星產業動能，光電二極體與台股關係，定穎投控轉型，google新技術與記憶體 ？",
+          "channel": "韭菜畢業班",
+          "date": "2026-03-29",
+          "text": "能其實都已經往上去從 然後再來就是毛利率的部分 其實應該還是會繼續的 往上去提上去 這個是勢必的 所以我們會看到 最近 IET也是沖得非常的快 然後再加上它之前 其實跟光聖的一個合作 就是新聞一出來之後 其實就也是直接往上去飛天了 那這個我覺得也是大家可以 稍微去注意一下的 那上一集我們其實有講到 南俊 那就是一些滑軌相關的話題 雖然南俊現在卡在一個比較尷尬的點 就是20分處置盤 這個真的說真的 是台股的一個痛 就等於是每一次 20分處置盤 我知道有些人專門在處理這些東西 但是對於散戶來講 真的是滿不友善的 就是有些人想要參與 其實也是偏比較難一點點的 好 那再來的話 應該節目已經進入最後吧 可能",
+          "matched_keyword": "",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.4,
+          "video_url": null
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-03-29": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
+      "code": "MU",
+      "name": "Micron",
+      "market": "US",
+      "sector": "記憶體",
+      "contexts": [
+        {
+          "video": "EP214 | 台、美股重點一次說，低軌衛星產業動能，光電二極體與台股關係，定穎投控轉型，google新技術與記憶體 ？",
+          "channel": "韭菜畢業班",
+          "date": "2026-03-29",
+          "text": "個東西效率加倍 但是你覺得他們要的是只有一倍 他們要的是更多東西 等於是你現在我還是全部照單全收 反正我就是要一直衝我的一個量 我就是要一直衝我的算力 所以大家還是會需要 這一個所謂的記憶體 或是說NED的這種存儲相關的東西 我覺得都還是需要的 好那你聽到這邊可能會有人就說 那我現在是不是要趕快去做美光 趕快去做Sendis相關的東西 因為現在都已經下殺下來 可能就會馬上要去 可能減便宜什麼的 但是我覺得這個地方 大家可以先稍微冷靜一下 因為現在美光跟Sendis 其實整體的下殺 我覺得已經偏向有點是 Formal式的下殺 就等於是幾乎是不掌眼的往下去走 你看像美光他從3月16號 一路下殺下來 現",
+          "matched_keyword": "",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.2,
+          "video_url": null
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.0,
+      "daily": {
+        "2026-03-29": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 1,
+          "neutral": 0,
+          "sentiment_score": 0.0
+        }
+      }
+    },
+    {
+      "code": "BAC",
+      "name": "Bank of America",
+      "market": "US",
+      "sector": "金融",
+      "contexts": [
+        {
+          "video": "EP214 | 台、美股重點一次說，低軌衛星產業動能，光電二極體與台股關係，定穎投控轉型，google新技術與記憶體 ？",
+          "channel": "韭菜畢業班",
+          "date": "2026-03-29",
+          "text": "更省成本 然後再來就是記憶體 雖然說看起來第一直線想的東西 會是力空 但是後面想一想 其實記憶體還是需要的 那這是我自己下的一個 算是最快的一個註解 當下的一個想法 好 那再來就是我們更新一下 這除了我自己的想法之外 我們看到其他的一些外資 相關的像Morgan Stanley 或者是說像是花旗 美國銀行等等的 其實都有提出來相對應 解釋說這個東西其實 並沒有說不需要了 他們是用另外一個層面 就等於是當技術 這種進步到某一個資源 然後使用效率已經很高的一個情況下 他其實不會去減少 對資源的這種消耗 反而會因為使用成本的降低 進而激發出更大的這種需求 所以就是我們剛剛所講的那個道理 就是他要的是mor",
+          "matched_keyword": "",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": null
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-03-29": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
+      "code": "MS",
+      "name": "Morgan Stanley",
+      "market": "US",
+      "sector": "金融",
+      "contexts": [
+        {
+          "video": "EP214 | 台、美股重點一次說，低軌衛星產業動能，光電二極體與台股關係，定穎投控轉型，google新技術與記憶體 ？",
+          "channel": "韭菜畢業班",
+          "date": "2026-03-29",
+          "text": "有講到就是 我自己下一個很簡單的註解 就是他更快 更省成本 然後再來就是記憶體 雖然說看起來第一直線想的東西 會是力空 但是後面想一想 其實記憶體還是需要的 那這是我自己下的一個 算是最快的一個註解 當下的一個想法 好 那再來就是我們更新一下 這除了我自己的想法之外 我們看到其他的一些外資 相關的像Morgan Stanley 或者是說像是花旗 美國銀行等等的 其實都有提出來相對應 解釋說這個東西其實 並沒有說不需要了 他們是用另外一個層面 就等於是當技術 這種進步到某一個資源 然後使用效率已經很高的一個情況下 他其實不會去減少 對資源的這種消耗 反而會因為使用成本的降低 進而激發出更大的這種需求 所以就是我們剛剛所講的",
+          "matched_keyword": "",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": null
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-03-29": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
     }
   ],
   "sectors_ranking": [
@@ -1896,23 +2256,23 @@
       ]
     },
     {
+      "sector": "雲端/AI",
+      "market": "US",
+      "total_mentions": 22,
+      "stock_codes": [
+        "GOOGL",
+        "META",
+        "MSFT"
+      ]
+    },
+    {
       "sector": "AI晶片",
       "market": "US",
-      "total_mentions": 18,
+      "total_mentions": 20,
       "stock_codes": [
         "NVDA",
         "MRVL",
         "AMD"
-      ]
-    },
-    {
-      "sector": "雲端/AI",
-      "market": "US",
-      "total_mentions": 16,
-      "stock_codes": [
-        "GOOGL",
-        "MSFT",
-        "META"
       ]
     },
     {
@@ -1934,9 +2294,19 @@
     {
       "sector": "AI網路",
       "market": "US",
-      "total_mentions": 5,
+      "total_mentions": 6,
       "stock_codes": [
         "AVGO"
+      ]
+    },
+    {
+      "sector": "記憶體",
+      "market": "TW",
+      "total_mentions": 5,
+      "stock_codes": [
+        "6239",
+        "1303",
+        "2408"
       ]
     },
     {
@@ -1948,11 +2318,11 @@
       ]
     },
     {
-      "sector": "記憶體",
-      "market": "TW",
+      "sector": "電動車",
+      "market": "US",
       "total_mentions": 3,
       "stock_codes": [
-        "6239"
+        "TSLA"
       ]
     },
     {
@@ -1966,14 +2336,6 @@
       ]
     },
     {
-      "sector": "PCB",
-      "market": "TW",
-      "total_mentions": 2,
-      "stock_codes": [
-        "3715"
-      ]
-    },
-    {
       "sector": "電源供應器",
       "market": "TW",
       "total_mentions": 2,
@@ -1982,11 +2344,30 @@
       ]
     },
     {
-      "sector": "電動車",
+      "sector": "CPO光通訊",
+      "market": "TW",
+      "total_mentions": 2,
+      "stock_codes": [
+        "3234",
+        "6442"
+      ]
+    },
+    {
+      "sector": "伺服器",
+      "market": "TW",
+      "total_mentions": 2,
+      "stock_codes": [
+        "2382",
+        "6584"
+      ]
+    },
+    {
+      "sector": "金融",
       "market": "US",
       "total_mentions": 2,
       "stock_codes": [
-        "TSLA"
+        "BAC",
+        "MS"
       ]
     },
     {
@@ -2003,14 +2384,6 @@
       "total_mentions": 1,
       "stock_codes": [
         "2317"
-      ]
-    },
-    {
-      "sector": "CPO光通訊",
-      "market": "TW",
-      "total_mentions": 1,
-      "stock_codes": [
-        "3234"
       ]
     },
     {
@@ -2067,6 +2440,22 @@
       "total_mentions": 1,
       "stock_codes": [
         "DIS"
+      ]
+    },
+    {
+      "sector": "散熱",
+      "market": "TW",
+      "total_mentions": 1,
+      "stock_codes": [
+        "3324"
+      ]
+    },
+    {
+      "sector": "記憶體",
+      "market": "US",
+      "total_mentions": 1,
+      "stock_codes": [
+        "MU"
       ]
     }
   ],
@@ -2387,12 +2776,23 @@
       "channel": "韭菜畢業班",
       "date": "2026-03-29",
       "stocks_found": [
-        "3715",
-        "GOOGL",
+        "2382",
+        "TSLA",
         "META",
-        "2455"
+        "MU",
+        "3324",
+        "2408",
+        "1303",
+        "BAC",
+        "GOOGL",
+        "NVDA",
+        "6584",
+        "AVGO",
+        "2455",
+        "MS",
+        "6442"
       ],
-      "analysis_source": "titleAndDescription",
+      "analysis_source": "whisper",
       "thumbnail_url": null
     },
     {
