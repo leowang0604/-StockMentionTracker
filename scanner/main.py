@@ -2133,7 +2133,7 @@ def fetch_apple_podcast_episodes(
         ns       = {"itunes": "http://www.itunes.com/dtds/podcast-1.0.dtd"}
         episodes = []
         for item in channel.findall("item"):
-            if len(episodes) >= limit:
+            if limit and len(episodes) >= limit:
                 break
             title = (item.findtext("title") or "").strip()
             if not title:
