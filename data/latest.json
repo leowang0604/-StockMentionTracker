@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-03T18:22:04",
+  "updated_at": "2026-04-03T18:22:15",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -793,16 +793,27 @@
           "sentiment": "bullish",
           "sentiment_score": 0.7,
           "video_url": null
+        },
+        {
+          "video": "我的30萬又不見了【王老先聲】第221封快遞",
+          "channel": "老王愛說笑",
+          "date": "2026-04-01",
+          "text": "我的30萬又不見了【王老先聲】第221封快遞 加入軟體會員：https://reurl.cc/zKqoNy ☆加入會員請點選浦惠投顧官網：https://www.inclusion.com.tw/ Apple ...",
+          "matched_keyword": "Apple",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "https://www.youtube.com/watch?v=LqEuSYikVXY"
         }
       ],
-      "total_mentions": 8,
+      "total_mentions": 9,
       "sentiment_score": 1.0,
       "daily": {
         "2026-04-01": {
-          "mentions": 4,
+          "mentions": 5,
           "bullish": 3,
           "bearish": 0,
-          "neutral": 1,
+          "neutral": 2,
           "sentiment_score": 1.0
         },
         "2026-03-28": {
@@ -2278,7 +2289,7 @@
     {
       "sector": "消費電子",
       "market": "US",
-      "total_mentions": 8,
+      "total_mentions": 9,
       "stock_codes": [
         "AAPL"
       ]
@@ -2916,6 +2927,26 @@
       ],
       "analysis_source": "titleAndDescription",
       "thumbnail_url": null
+    },
+    {
+      "video_id": "LqEuSYikVXY",
+      "title": "我的30萬又不見了【王老先聲】第221封快遞",
+      "channel": "老王愛說笑",
+      "date": "2026-04-01",
+      "stocks_found": [
+        "AAPL"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/LqEuSYikVXY/mqdefault.jpg"
+    },
+    {
+      "video_id": "pkYRQejRiGM",
+      "title": "四月看誰？｜【浦男搜股】EP.270",
+      "channel": "老王愛說笑",
+      "date": "2026-04-01",
+      "stocks_found": [],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/pkYRQejRiGM/mqdefault.jpg"
     }
   ]
 }
