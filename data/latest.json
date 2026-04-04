@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-04T19:56:42",
+  "updated_at": "2026-04-04T21:05:25",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -2367,10 +2367,21 @@
           "sentiment": "neutral",
           "sentiment_score": 0.5,
           "video_url": ""
+        },
+        {
+          "video": "2026/03/31 (二）鮑威爾放軟，衰退升溫？",
+          "channel": "財女珍妮",
+          "date": "2026-03-31",
+          "text": "格突然大跌 的原因呢 其實你說觸發點好了 在前面就已經有開始 慢慢的去反映一些 供需的狀況啊 或者是 呃 大家都已經覺得嘛 你今天記憶體的股價 都已經反映到 2027年 2028年了 是不是也有這種估值過高的一個情況 那第二個呢 就是在前一陣子 我們在上個禮拜的時候 也有跟大家分享嘛 就是那個時候 Google它不是出了一個 呃 新的叫做TurboQuant的一個 呃 算是算法吧 然後呢 就會告訴你說 我今天可以去提高這個運算的效率 既然我可以去提高運算的效率 我可以去 節約記憶體的用量的時候 我可以去大幅降低ai的成本的時候 那我是不是就 不需要這麼多的記憶體了 我今天呢 反而是我可以從軟體的優化的部分",
+          "matched_keyword": "Google",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.2,
+          "video_url": ""
         }
       ],
-      "total_mentions": 20,
-      "sentiment_score": 0.812,
+      "total_mentions": 21,
+      "sentiment_score": 0.765,
       "daily": {
         "2026-04-01": {
           "mentions": 4,
@@ -2427,6 +2438,13 @@
           "bearish": 0,
           "neutral": 1,
           "sentiment_score": 0.5
+        },
+        "2026-03-31": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 1,
+          "neutral": 0,
+          "sentiment_score": 0.0
         }
       }
     },
@@ -2622,10 +2640,21 @@
           "sentiment": "bullish",
           "sentiment_score": 0.6,
           "video_url": ""
+        },
+        {
+          "video": "2026/03/30 (一）納指進入修正區，美伊戰爭AI衝擊還沒來？科技股下跌 才剛開始？",
+          "channel": "財女珍妮",
+          "date": "2026-03-30",
+          "text": "金流非常的崇佩 他有很好的一個資金來源 或者是他的資產負債表示非常漂亮的 你覺得大家會一直去講說 哎你的違約風險升高嗎 就沒有人在講其他五大科技巨頭 七大科技巨頭他的違約風險升高嗎 所以其實都是一樣的道理 你今天不管放在個人還是放在企業一樣 都是一樣的 那如果今天我們去看上個禮拜跌最長 我覺得應該是META吧 但是我們因為已經有了 兩期節目第一個就是講 呃META他在 他最新的一些 策略上面呢有什麼樣的改變 以及他面對到的監管 就是今天在社群成癮的這個罰款上面呢 開了先例之後呢 在未來是不是也會增添了新的不確定性 所以導致他的股價或者是像Google啊 表現的都是比較差一點的 我覺得呢這個是 目前科技",
+          "matched_keyword": "META",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.25,
+          "video_url": ""
         }
       ],
-      "total_mentions": 17,
-      "sentiment_score": 0.4,
+      "total_mentions": 18,
+      "sentiment_score": 0.375,
       "daily": {
         "2026-03-28": {
           "mentions": 1,
@@ -2675,6 +2704,13 @@
           "bearish": 0,
           "neutral": 0,
           "sentiment_score": 1.0
+        },
+        "2026-03-30": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 1,
+          "neutral": 0,
+          "sentiment_score": 0.0
         }
       }
     },
@@ -5077,6 +5113,72 @@
       }
     },
     {
+      "code": "ORCL",
+      "name": "Oracle",
+      "market": "US",
+      "sector": "雲端/AI",
+      "contexts": [
+        {
+          "video": "EP645 | 🎱",
+          "channel": "股癌",
+          "date": "2026-03-18",
+          "text": "祝老婆 五周年快樂 他說要肌肉男的聲音 那孟公聽眾端午快樂 身體健康 繼續肌肉某男生大叫 Hey Siri 我大概是沒動 不知道是殺小 不是啊 端午節是要到的是嗎 不是今天才剛開始 怎麼叫端午節 下一位 Joe163333 祝你安安 想問主委如果想要下注OpenAI 但又不想要打Microsoft Oracle 這些插邊球 那對一般小菜雞 要什麼好的方式嗎 那最後我在這邊 用張哥的語氣 祝主委電腦平安 A Microsoft 應該嚴格上來說 不是插邊球了 他的持股不是還滿多的嗎 那Oracle的話應該算 那其他的話 像是Amazon 或是說其他有 有間接投資到的NVIDIA 什麼的 假設有拿到股權的話 我",
+          "matched_keyword": "Oracle",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.6,
+          "video_url": ""
+        },
+        {
+          "video": "EP643 | 🦊",
+          "channel": "股癌",
+          "date": "2026-03-11",
+          "text": "每個人都在我們的 這個討論局都在問股票 然後每個人都覺得說 很瘋狂要趕快衝 可是你知道 你看一殺的時候 其實是可以殺到你 所以你沒有提早準備好的 甚至你就沒有機會 你就沒有彈藥去做這些嘗試 那整體來看 目前沒有在產業方面 或是說趨勢方面注意到 那種就是要整體扭轉的一個傾向 那包含市場上面比較擔心的 Oracle 其實我覺得要開罪的成績也還OK 所以目前整體來說 我不覺得有注意到特別大的警訊 有些人講說 這會不會是像2022一開始一樣 那大家可能本來覺得沒事 然後後來有事 我還是得講 就是我們去做投資教育的 我知道有些人喜歡當預言家 他只是我自己或說 身邊我注意到比較成功的人士 其實沒有人喜歡當預言家 就要",
+          "matched_keyword": "Oracle",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
+        },
+        {
+          "video": "2026/03/30 (一）納指進入修正區，美伊戰爭AI衝擊還沒來？科技股下跌 才剛開始？",
+          "channel": "財女珍妮",
+          "date": "2026-03-30",
+          "text": "恐慌嘛 所以這種防禦型的類股呢 表現就比較好 油價長呢 能源類股表現就比較好 但是呢我們剛有提到的幾個重點嘛 關鍵原物料有可能會短缺 比如說像駭氣的攻擊 能源的成本上升 有可能會使一些大型的數據中型 或者是一些公司呢 他們的產能擴張是會受阻的 然後他們的營運呢 也會面臨到更大的壓力 或者是你有看到像甲骨文 他的這個違約的一個風險呢 也持續的在升高當中 其實也是因為槓桿嘛 他如果今天他的現金流非常的崇佩 他有很好的一個資金來源 或者是他的資產負債表示非常漂亮的 你覺得大家會一直去講說 哎你的違約風險升高嗎 就沒有人在講其他五大科技巨頭 七大科技巨頭他的違約風險升高嗎 所以其實都是一樣的道理 你今天不管",
+          "matched_keyword": "甲骨文",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.2,
+          "video_url": ""
+        }
+      ],
+      "total_mentions": 3,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-03-18": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        },
+        "2026-03-11": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-03-30": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 1,
+          "neutral": 0,
+          "sentiment_score": 0.0
+        }
+      }
+    },
+    {
       "code": "COHR",
       "name": "Coherent",
       "market": "US",
@@ -5721,54 +5823,6 @@
       }
     },
     {
-      "code": "ORCL",
-      "name": "Oracle",
-      "market": "US",
-      "sector": "雲端/AI",
-      "contexts": [
-        {
-          "video": "EP645 | 🎱",
-          "channel": "股癌",
-          "date": "2026-03-18",
-          "text": "祝老婆 五周年快樂 他說要肌肉男的聲音 那孟公聽眾端午快樂 身體健康 繼續肌肉某男生大叫 Hey Siri 我大概是沒動 不知道是殺小 不是啊 端午節是要到的是嗎 不是今天才剛開始 怎麼叫端午節 下一位 Joe163333 祝你安安 想問主委如果想要下注OpenAI 但又不想要打Microsoft Oracle 這些插邊球 那對一般小菜雞 要什麼好的方式嗎 那最後我在這邊 用張哥的語氣 祝主委電腦平安 A Microsoft 應該嚴格上來說 不是插邊球了 他的持股不是還滿多的嗎 那Oracle的話應該算 那其他的話 像是Amazon 或是說其他有 有間接投資到的NVIDIA 什麼的 假設有拿到股權的話 我",
-          "matched_keyword": "Oracle",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.6,
-          "video_url": ""
-        },
-        {
-          "video": "EP643 | 🦊",
-          "channel": "股癌",
-          "date": "2026-03-11",
-          "text": "每個人都在我們的 這個討論局都在問股票 然後每個人都覺得說 很瘋狂要趕快衝 可是你知道 你看一殺的時候 其實是可以殺到你 所以你沒有提早準備好的 甚至你就沒有機會 你就沒有彈藥去做這些嘗試 那整體來看 目前沒有在產業方面 或是說趨勢方面注意到 那種就是要整體扭轉的一個傾向 那包含市場上面比較擔心的 Oracle 其實我覺得要開罪的成績也還OK 所以目前整體來說 我不覺得有注意到特別大的警訊 有些人講說 這會不會是像2022一開始一樣 那大家可能本來覺得沒事 然後後來有事 我還是得講 就是我們去做投資教育的 我知道有些人喜歡當預言家 他只是我自己或說 身邊我注意到比較成功的人士 其實沒有人喜歡當預言家 就要",
-          "matched_keyword": "Oracle",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": ""
-        }
-      ],
-      "total_mentions": 2,
-      "sentiment_score": 1.0,
-      "daily": {
-        "2026-03-18": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 1.0
-        },
-        "2026-03-11": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        }
-      }
-    },
-    {
       "code": "8069",
       "name": "元太",
       "market": "TW",
@@ -5860,6 +5914,47 @@
           "bullish": 1,
           "bearish": 0,
           "neutral": 0,
+          "sentiment_score": 1.0
+        }
+      }
+    },
+    {
+      "code": "CDNS",
+      "name": "Cadence Design Systems",
+      "market": "US",
+      "sector": "企業軟體",
+      "contexts": [
+        {
+          "video": "EP649 | 💌",
+          "channel": "股癌",
+          "date": "2026-04-01",
+          "text": "謀的計畫 所以再來就要稍微的注意一下 因為他過去 他其實買了滿多東西 像什麼 Synopsis Core with Coherent Lumentine 最新是兩個光通全包 Nabius Marvel全包 那所以基本上的 你可以看到說他裡面 就是你要把它湊在一起的話 OK 那像Synopsis就是 EDA的設計 那可能是Fusion Chiplet的 某種那種設計工具店 那Core with跟Nabius的話 可能就是說 Data Center的一個部件 跟AI工廠的擴張 那Core with Lumentine 那不用講就是光相關的一個佈局 那Marvel的話 現在拉進去NV另Fusion 其實前",
+          "matched_keyword": "EDA",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
+        },
+        {
+          "video": "2026/04/01 (三）停戰有譜，美股真的跌完了？Nvidia再投資Marvell 20億美元",
+          "channel": "財女珍妮",
+          "date": "2026-04-01",
+          "text": "天他真的可以沾得回去的話 整個大盤 我覺得整個氛圍跟氣勢 也都會有所改變 那我們剛就有講了嘛 你這一筆投資Marvel 二十億美元的這個策略呢 對於輝達的股價的影響是什麼 短期呢 大家可以看到你就是一個 生態系的佈局 你就是把你自己的觸角呢 就像他之前有去投資Coral Weave啊 或者是投資 呃EDA啊或者是 投資光通訊的廠商Cohirin啊 然後還有Lutman啊這些公司嘛 他都是希望說 哎我可以保住未來的產能 我可以保住未來的市場 可以讓我呢 領導優勢不會那麼容易的 被競爭對手操勁 那中期呢 他可以帶來的更好 更長遠的影響是什麼呢 就是他可以透過他自己的 nvlink的平台 然後呢 去把Ma",
+          "matched_keyword": "EDA",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": ""
+        }
+      ],
+      "total_mentions": 2,
+      "sentiment_score": 1.0,
+      "daily": {
+        "2026-04-01": {
+          "mentions": 2,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 1,
           "sentiment_score": 1.0
         }
       }
@@ -7095,36 +7190,6 @@
       }
     },
     {
-      "code": "CDNS",
-      "name": "Cadence Design Systems",
-      "market": "US",
-      "sector": "企業軟體",
-      "contexts": [
-        {
-          "video": "EP649 | 💌",
-          "channel": "股癌",
-          "date": "2026-04-01",
-          "text": "謀的計畫 所以再來就要稍微的注意一下 因為他過去 他其實買了滿多東西 像什麼 Synopsis Core with Coherent Lumentine 最新是兩個光通全包 Nabius Marvel全包 那所以基本上的 你可以看到說他裡面 就是你要把它湊在一起的話 OK 那像Synopsis就是 EDA的設計 那可能是Fusion Chiplet的 某種那種設計工具店 那Core with跟Nabius的話 可能就是說 Data Center的一個部件 跟AI工廠的擴張 那Core with Lumentine 那不用講就是光相關的一個佈局 那Marvel的話 現在拉進去NV另Fusion 其實前",
-          "matched_keyword": "EDA",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": ""
-        }
-      ],
-      "total_mentions": 1,
-      "sentiment_score": 0.5,
-      "daily": {
-        "2026-04-01": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        }
-      }
-    },
-    {
       "code": "1210",
       "name": "大成",
       "market": "TW",
@@ -7333,13 +7398,73 @@
           "sentiment_score": 1.0
         }
       }
+    },
+    {
+      "code": "1220",
+      "name": "台榮",
+      "market": "TW",
+      "sector": "鋼鐵",
+      "contexts": [
+        {
+          "video": "2026/04/01 (三）停戰有譜，美股真的跌完了？Nvidia再投資Marvell 20億美元",
+          "channel": "財女珍妮",
+          "date": "2026-04-01",
+          "text": "沒有消失嘛 AI有沒有辦法帶來獲利嘛 那AI的投資到底有沒有消失呢 企業到底他們在AI的布局上面 有沒有放緩呢 我們接下來呢就講三個 我覺得呢 這兩天呢發生比較重要的一事件 第一個呢 就是OpenAI 完成了細股史上最大的融資案 好 OpenAI呢 大家如果今天早上 看到新聞的話 它剛剛完成了一輪 1220億的美元估值的融資 哦 美元的融資 估值呢是衝到了8520億美元 這個是有史以來細股呢 金額最大的一輪實務 那他們公司的財務長呢 也有表示說 這個這一筆錢呢 規模是超越了時尚 任何一場的IPO 好 那我們就要去想啊 到底是誰投了那麼多錢嘛 誰那麼有錢呢 那主要呢像是亞馬遜 亞馬遜在這一輪裡面呢 它是",
+          "matched_keyword": "1220",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.8,
+          "video_url": ""
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 1.0,
+      "daily": {
+        "2026-04-01": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        }
+      }
+    },
+    {
+      "code": "3444",
+      "name": "利機",
+      "market": "TW",
+      "sector": "其他",
+      "contexts": [
+        {
+          "video": "2026/03/30 (一）納指進入修正區，美伊戰爭AI衝擊還沒來？科技股下跌 才剛開始？",
+          "channel": "財女珍妮",
+          "date": "2026-03-30",
+          "text": "但是我們不能否認 今天ANDROP 或者是其他AI平台的出現 去推出了AI相關的 呃 防護的功能 對於這些資安股是完全沒有影響的 但是當你的敵人 或者是當你的競爭對手 正在前進的時候 這些公司他也應該要看到 他未來的一個樣貌嘛 整個商業模式 整個產業的樣貌嘛 所以我覺得呢 他們要怎麼樣去找到他們的利機點 是很重要的 那我覺得CROSS-TRACK 今天還有一個利機點就是 今天ANDROP這個東西呢 他現在只是他的能力 他把他推出來 他把他宣告出來 可是你還沒有第三方的驗證啊 比如說CROSS-TRACK他 呃 很大的一個原因 他有這麼多的這種 呃 財新500大啊 美國的上市 大型的企業啊 他可能",
+          "matched_keyword": "利機",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-03-30": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
     }
   ],
   "sectors_ranking": [
     {
       "sector": "雲端/AI",
       "market": "US",
-      "total_mentions": 82,
+      "total_mentions": 85,
       "stock_codes": [
         "MSFT",
         "GOOGL",
@@ -7369,17 +7494,9 @@
       ]
     },
     {
-      "sector": "半導體",
-      "market": "US",
-      "total_mentions": 22,
-      "stock_codes": [
-        "INTC"
-      ]
-    },
-    {
       "sector": "其他",
       "market": "TW",
-      "total_mentions": 22,
+      "total_mentions": 23,
       "stock_codes": [
         "5007",
         "6164",
@@ -7393,7 +7510,16 @@
         "1473",
         "8047",
         "3492",
-        "1210"
+        "1210",
+        "3444"
+      ]
+    },
+    {
+      "sector": "半導體",
+      "market": "US",
+      "total_mentions": 22,
+      "stock_codes": [
+        "INTC"
       ]
     },
     {
@@ -7590,6 +7716,15 @@
       ]
     },
     {
+      "sector": "企業軟體",
+      "market": "US",
+      "total_mentions": 3,
+      "stock_codes": [
+        "CDNS",
+        "ADBE"
+      ]
+    },
+    {
       "sector": "光通訊",
       "market": "US",
       "total_mentions": 2,
@@ -7647,15 +7782,6 @@
       "stock_codes": [
         "CRWD",
         "NET"
-      ]
-    },
-    {
-      "sector": "企業軟體",
-      "market": "US",
-      "total_mentions": 2,
-      "stock_codes": [
-        "ADBE",
-        "CDNS"
       ]
     },
     {
@@ -7800,6 +7926,14 @@
       "total_mentions": 1,
       "stock_codes": [
         "3665"
+      ]
+    },
+    {
+      "sector": "鋼鐵",
+      "market": "TW",
+      "total_mentions": 1,
+      "stock_codes": [
+        "1220"
       ]
     }
   ],
