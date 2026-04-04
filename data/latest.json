@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-04T18:38:57",
+  "updated_at": "2026-04-04T18:39:11",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -2068,9 +2068,20 @@
           "sentiment": "bullish",
           "sentiment_score": 0.6,
           "video_url": ""
+        },
+        {
+          "video": "遇到系統性風險 要怎麼操作【王老先聲】#台北股市 #長期投資 #短線交易",
+          "channel": "老王愛說笑",
+          "date": "2026-04-04",
+          "text": "遇到系統性風險 要怎麼操作【王老先聲】#台北股市 #長期投資 #短線交易 您也可以在以下頻道透過Podcast收聽： Apple Podcast：https://reurl.cc/52DnlR Spotify：https://reurl.cc/xEpqZE ...",
+          "matched_keyword": "Apple",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "https://www.youtube.com/watch?v=sVolmcdnye8"
         }
       ],
-      "total_mentions": 20,
+      "total_mentions": 21,
       "sentiment_score": 0.933,
       "daily": {
         "2026-04-01": {
@@ -2121,6 +2132,13 @@
           "bearish": 0,
           "neutral": 0,
           "sentiment_score": 1.0
+        },
+        "2026-04-04": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
         }
       }
     },
@@ -7213,7 +7231,7 @@
     {
       "sector": "消費電子",
       "market": "US",
-      "total_mentions": 20,
+      "total_mentions": 21,
       "stock_codes": [
         "AAPL"
       ]
@@ -8333,6 +8351,17 @@
       ],
       "analysis_source": "whisper",
       "thumbnail_url": null
+    },
+    {
+      "video_id": "sVolmcdnye8",
+      "title": "遇到系統性風險 要怎麼操作【王老先聲】#台北股市 #長期投資 #短線交易",
+      "channel": "老王愛說笑",
+      "date": "2026-04-04",
+      "stocks_found": [
+        "AAPL"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/sVolmcdnye8/mqdefault.jpg"
     }
   ]
 }
