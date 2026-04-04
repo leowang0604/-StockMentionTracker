@@ -1348,6 +1348,7 @@ CONTEXT_REQUIRED: dict[str, list[str]] = {
     "ASIC": ["Ategrity", "保險", "insurance"],     # "ASIC" in Chinese content = AI chip accelerator term
     "1565": ["光學", "1565", "精華光學"],           # 「精華」是日常用語（精華時段、精華片段）
     "BX":   ["Blackstone", "黑石"],                # "BX" rarely appears in TW financial content
+    "9937": ["9937", "全國電", "全國電子"],         # 「全國」是日常用語（全國演說、全國上下）
 }
 
 # If ANY of these strings appear in the context, the match is rejected.
