@@ -2251,9 +2251,12 @@ def _build_podcast_mentions(
             "channel":         v_entry["channel"],
             "date":            v_entry["date"],
             "context":         h["context"],
+            "matched_keyword": h.get("matched_keyword", ""),
             "analysis_source": analysis_source,
             "sentiment":       label,
             "sentiment_score": score,
+            "video_url":       v_entry.get("url", ""),
+            "mention_count":   h.get("mention_count", 1),
         })
     return mentions
 
