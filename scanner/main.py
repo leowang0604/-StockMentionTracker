@@ -1349,6 +1349,8 @@ CONTEXT_REQUIRED: dict[str, list[str]] = {
     "1565": ["光學", "1565", "精華光學"],           # 「精華」是日常用語（精華時段、精華片段）
     "BX":   ["Blackstone", "黑石"],                # "BX" rarely appears in TW financial content
     "9937": ["9937", "全國電", "全國電子"],         # 「全國」是日常用語（全國演說、全國上下）
+    "3038": ["3038", "全台電子", "全台科"],            # 「全台」常縮寫全台灣（全台灣最大的）
+    "1315": ["1315", "達新工業"],                     # 「達新」出現在「輝達新神兵」等句子中
 }
 
 # If ANY of these strings appear in the context, the match is rejected.
