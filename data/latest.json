@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-05T06:16:37",
+  "updated_at": "2026-04-05T15:30:24",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -5860,7 +5860,7 @@
       "code": "APP",
       "name": "AppLovin",
       "market": "US",
-      "sector": "AI軟體",
+      "sector": "科技",
       "contexts": [
         {
           "video": "EP214 | 台、美股重點一次說，低軌衛星產業動能，光電二極體與台股關係，定穎投控轉型，google新技術與記憶體 ？",
@@ -7842,7 +7842,7 @@
       "code": "CCL",
       "name": "Carnival",
       "market": "US",
-      "sector": "零售電商",
+      "sector": "消費",
       "contexts": [
         {
           "video": "EP213 | 台、美股重點一次說，台股反彈怎麼看？美股極度恐慌後的觀察重點，南俊國際與滑軌需求，設備股後勢",
@@ -11805,6 +11805,15 @@
       ]
     },
     {
+      "sector": "科技",
+      "market": "US",
+      "total_mentions": 10,
+      "stock_codes": [
+        "APP",
+        "SNDK"
+      ]
+    },
+    {
       "sector": "手機晶片",
       "market": "US",
       "total_mentions": 10,
@@ -11843,14 +11852,6 @@
       "total_mentions": 9,
       "stock_codes": [
         "8299"
-      ]
-    },
-    {
-      "sector": "AI軟體",
-      "market": "US",
-      "total_mentions": 8,
-      "stock_codes": [
-        "APP"
       ]
     },
     {
@@ -11933,6 +11934,15 @@
       ]
     },
     {
+      "sector": "消費",
+      "market": "US",
+      "total_mentions": 4,
+      "stock_codes": [
+        "CCL",
+        "ABNB"
+      ]
+    },
+    {
       "sector": "電動車",
       "market": "TW",
       "total_mentions": 4,
@@ -11957,14 +11967,6 @@
       "total_mentions": 3,
       "stock_codes": [
         "3260"
-      ]
-    },
-    {
-      "sector": "零售電商",
-      "market": "US",
-      "total_mentions": 3,
-      "stock_codes": [
-        "CCL"
       ]
     },
     {
@@ -12042,14 +12044,6 @@
       "total_mentions": 2,
       "stock_codes": [
         "6654"
-      ]
-    },
-    {
-      "sector": "科技",
-      "market": "US",
-      "total_mentions": 2,
-      "stock_codes": [
-        "SNDK"
       ]
     },
     {
@@ -12142,14 +12136,6 @@
       "total_mentions": 1,
       "stock_codes": [
         "00631L"
-      ]
-    },
-    {
-      "sector": "消費",
-      "market": "US",
-      "total_mentions": 1,
-      "stock_codes": [
-        "ABNB"
       ]
     },
     {
