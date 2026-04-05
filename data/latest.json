@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-05T15:30:31",
+  "updated_at": "2026-04-05T15:30:36",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -3047,9 +3047,20 @@
           "sentiment": "bullish",
           "sentiment_score": 1.0,
           "video_url": ""
+        },
+        {
+          "video": "左側VS右側 能賺錢就是王道【王老先聲】#左側交易 #右側交易 #順勢交易",
+          "channel": "老王愛說笑",
+          "date": "2026-04-05",
+          "text": "左側VS右側 能賺錢就是王道【王老先聲】#左側交易 #右側交易 #順勢交易 您也可以在以下頻道透過Podcast收聽： Apple Podcast：https://reurl.cc/52DnlR Spotify：https://reurl.cc/xEpqZE ...",
+          "matched_keyword": "Apple",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "https://www.youtube.com/watch?v=cJwFrrvixCk"
         }
       ],
-      "total_mentions": 24,
+      "total_mentions": 25,
       "sentiment_score": 0.938,
       "daily": {
         "2026-04-01": {
@@ -3128,6 +3139,13 @@
           "bearish": 0,
           "neutral": 0,
           "sentiment_score": 1.0
+        },
+        "2026-04-05": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
         }
       }
     },
@@ -11779,7 +11797,7 @@
     {
       "sector": "消費電子",
       "market": "US",
-      "total_mentions": 24,
+      "total_mentions": 25,
       "stock_codes": [
         "AAPL"
       ]
@@ -13421,6 +13439,17 @@
       ],
       "analysis_source": "titleAndDescription",
       "thumbnail_url": null
+    },
+    {
+      "video_id": "cJwFrrvixCk",
+      "title": "左側VS右側 能賺錢就是王道【王老先聲】#左側交易 #右側交易 #順勢交易",
+      "channel": "老王愛說笑",
+      "date": "2026-04-05",
+      "stocks_found": [
+        "AAPL"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/cJwFrrvixCk/mqdefault.jpg"
     }
   ]
 }
