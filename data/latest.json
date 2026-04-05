@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-05T15:30:38",
+  "updated_at": "2026-04-05T15:30:40",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -8403,6 +8403,72 @@
       }
     },
     {
+      "code": "6239",
+      "name": "力成",
+      "market": "TW",
+      "sector": "記憶體",
+      "contexts": [
+        {
+          "video": "2026/04/03 (五）美股為什麼又Ｖ轉了？終於要講微軟....為什麼跌？",
+          "channel": "財女珍妮",
+          "date": "2026-04-03",
+          "text": "net/@jcinsightgroup  🤍 FB： / jcinsightgroup  🤍 Podcast：財女珍妮：https://reurl.cc/XRWqYR  🤍 著作《美股投資學》：https://reurl.cc/A2k4eK     ✅ 美股財報分析 ✅  👉 Gemini 逼近、算力成本失控，OpenAI帝國防線出現裂痕？  🔗 https://reurl.cc/VmdDz5     👉 微軟(MSFT)：AI帝國 「軍備競賽」，微軟的新護城河與",
+          "matched_keyword": "力成",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
+        },
+        {
+          "video": "2026/04/02 (四）史上最大IPO， SpaceX 要來了！",
+          "channel": "財女珍妮",
+          "date": "2026-04-02",
+          "text": "net/@jcinsightgroup  🤍 FB： / jcinsightgroup  🤍 Podcast：財女珍妮：https://reurl.cc/XRWqYR  🤍 著作《美股投資學》：https://reurl.cc/A2k4eK     ✅ 美股財報分析 ✅  👉 Gemini 逼近、算力成本失控，OpenAI帝國防線出現裂痕？  🔗 https://reurl.cc/VmdDz5     👉 微軟(MSFT)：AI帝國 「軍備競賽」，微軟的新護城河與",
+          "matched_keyword": "力成",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
+        },
+        {
+          "video": "2026/04/01 (三）停戰有譜，美股真的跌完了？Nvidia再投資Marvell 20億美元",
+          "channel": "財女珍妮",
+          "date": "2026-04-01",
+          "text": "net/@jcinsightgroup  🤍 FB： / jcinsightgroup  🤍 Podcast：財女珍妮：https://reurl.cc/XRWqYR  🤍 著作《美股投資學》：https://reurl.cc/A2k4eK     ✅ 美股財報分析 ✅  👉 Gemini 逼近、算力成本失控，OpenAI帝國防線出現裂痕？  🔗 https://reurl.cc/VmdDz5     👉 微軟(MSFT)：AI帝國 「軍備競賽」，微軟的新護城河與變現真相  🔗 https://reurl.cc/NN7AQ6     👉 特斯拉(TSLA)：當賣車不再是唯一，新商模展開！AI 與利",
+          "matched_keyword": "力成",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
+        }
+      ],
+      "total_mentions": 3,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-04-03": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-04-02": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-04-01": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
       "code": "00894",
       "name": "中信小資高價30",
       "market": "TW",
@@ -9432,16 +9498,27 @@
           "sentiment": "bullish",
           "sentiment_score": 0.7,
           "video_url": null
+        },
+        {
+          "video": "2026/04/01 (三）停戰有譜，美股真的跌完了？Nvidia再投資Marvell 20億美元",
+          "channel": "財女珍妮",
+          "date": "2026-04-01",
+          "text": "2026/04/01 (三）停戰有譜，美股真的跌完了？Nvidia再投資Marvell 20億美元 🤍 每天早上8:30 跟大家分享投資市場大小事  🤍 訂閱Jenny 財經分析專欄：https://reurl.cc/YqOVrl  【追蹤各大平台最新資訊】  🤍 IG： / jcinsightgroup  🤍Threads：https://www.threads.net/@jcin",
+          "matched_keyword": "Marvell",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
         }
       ],
-      "total_mentions": 1,
+      "total_mentions": 2,
       "sentiment_score": 1.0,
       "daily": {
         "2026-04-01": {
-          "mentions": 1,
+          "mentions": 2,
           "bullish": 1,
           "bearish": 0,
-          "neutral": 0,
+          "neutral": 1,
           "sentiment_score": 1.0
         }
       }
@@ -11833,26 +11910,27 @@
       ]
     },
     {
-      "sector": "AI晶片",
-      "market": "US",
-      "total_mentions": 43,
-      "stock_codes": [
-        "NVDA",
-        "AMD",
-        "MRVL"
-      ]
-    },
-    {
       "sector": "記憶體",
       "market": "TW",
-      "total_mentions": 43,
+      "total_mentions": 46,
       "stock_codes": [
         "1303",
         "2408",
         "2337",
         "2344",
+        "6239",
         "5289",
         "8110"
+      ]
+    },
+    {
+      "sector": "AI晶片",
+      "market": "US",
+      "total_mentions": 44,
+      "stock_codes": [
+        "NVDA",
+        "AMD",
+        "MRVL"
       ]
     },
     {
