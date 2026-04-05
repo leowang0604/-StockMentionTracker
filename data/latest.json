@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-05T17:37:28",
+  "updated_at": "2026-04-05T18:13:41",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -11862,6 +11862,36 @@
           "sentiment_score": 0.5
         }
       }
+    },
+    {
+      "code": "CHTR",
+      "name": "Charter Communications",
+      "market": "US",
+      "sector": "高速連接",
+      "contexts": [
+        {
+          "video": "EP649 | 💌",
+          "channel": "股癌",
+          "date": "2026-04-01",
+          "text": "XPU裡面 一起去做封裝 它提供了1.8TPS的 一個雙向頻寬 那再來就是在 Vera的CPU方面 如果說你們只有XPU的話 那我可以提供你CPU on base的一個solution 那或者是像ConnectX的NIC 然後跟Bluefield DPU Envading Interconnect Spectrum 或者是Quantum的相關的switch 光通的解放 CPU它都可以給你 所以它現在能夠做的事情 有點像他說 OK 那我知道像這種XPU的設計 你們要去選Marvel 或是你要選MTK L-Chip 你要選Broadcom OK 都可以 但你其他東西 你是有我的這個產品線 都是可以去做支援跟使用的",
+          "matched_keyword": "Spectrum",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.75,
+          "video_url": ""
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 1.0,
+      "daily": {
+        "2026-04-01": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        }
+      }
     }
   ],
   "sectors_ranking": [
@@ -12515,6 +12545,14 @@
       "total_mentions": 1,
       "stock_codes": [
         "MRNA"
+      ]
+    },
+    {
+      "sector": "高速連接",
+      "market": "US",
+      "total_mentions": 1,
+      "stock_codes": [
+        "CHTR"
       ]
     }
   ],
