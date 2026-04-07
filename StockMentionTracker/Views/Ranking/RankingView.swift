@@ -16,14 +16,18 @@ struct RankingView: View {
             .compactMap { stock -> StockEntry? in
                 let ctxs = stock.contexts.filter { ($0.parsedDate ?? .distantPast) >= cutoff }
                 guard !ctxs.isEmpty else { return nil }
+                let bullish = Double(ctxs.filter { $0.sentiment == "bullish" }.count)
+                let bearish = Double(ctxs.filter { $0.sentiment == "bearish" }.count)
+                let signaled = bullish + bearish
+                let filteredScore: Double? = signaled > 0 ? bullish / signaled : nil
                 return StockEntry(
                     code: stock.code, name: stock.name,
                     market: stock.market, sector: stock.sector,
                     totalMentions: ctxs.count, contexts: ctxs,
-                    sentimentScore: stock.sentimentScore, daily: nil
+                    sentimentScore: filteredScore, daily: nil
                 )
             }
-            .sorted { $0.totalMentions > $1.totalMentions }
+            .sorted { $0.episodeCount > $1.episodeCount }
             .filter { stock in
                 let matchMarket = marketFilter == "all" || stock.market == marketFilter
                 let matchSearch = searchText.isEmpty ||
@@ -275,11 +279,14 @@ struct RankingRowView: View {
             Spacer()
 
             VStack(alignment: .trailing, spacing: 2) {
-                Text("\(stock.totalMentions)")
+                Text("\(stock.episodeCount)")
                     .font(.title2.bold().monospacedDigit())
-                Text("次提及")
+                Text("集提及")
                     .font(.caption2)
                     .foregroundStyle(.secondary)
+                Text("共 \(stock.totalMentions) 次")
+                    .font(.caption2)
+                    .foregroundStyle(.tertiary)
             }
         }
         .padding(.vertical, 6)

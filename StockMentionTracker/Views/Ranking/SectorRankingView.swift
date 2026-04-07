@@ -31,21 +31,22 @@ struct SectorRankingView: View {
             guard let sector = stock.sector else { continue }
             let market = stock.market ?? "TW"
             let key = "\(market)_\(sector)"
+            let episodes = stock.episodeCount
             if var existing = sectorsMap[key] {
                 let newCodes = existing.entry.stockCodes + [stock.code]
                 existing.entry = SectorEntry(
                     sector: sector, market: market,
-                    totalMentions: existing.entry.totalMentions + stock.totalMentions,
+                    totalMentions: existing.entry.totalMentions + episodes,
                     stockCodes: newCodes
                 )
-                existing.mentions += stock.totalMentions
+                existing.mentions += episodes
                 sectorsMap[key] = existing
             } else {
                 sectorsMap[key] = (
                     SectorEntry(sector: sector, market: market,
-                                totalMentions: stock.totalMentions,
+                                totalMentions: episodes,
                                 stockCodes: [stock.code]),
-                    stock.totalMentions
+                    episodes
                 )
             }
         }
@@ -136,7 +137,7 @@ struct SectorRowView: View {
             VStack(alignment: .trailing, spacing: 2) {
                 Text("\(sector.totalMentions)")
                     .font(.title2.bold().monospacedDigit())
-                Text("次提及")
+                Text("集提及")
                     .font(.caption2)
                     .foregroundStyle(.secondary)
             }
@@ -177,7 +178,7 @@ struct SectorDetailView: View {
                     sentimentScore: nil, daily: nil
                 )
             }
-            .sorted { $0.totalMentions > $1.totalMentions }
+            .sorted { $0.episodeCount > $1.episodeCount }
     }
 
     var body: some View {
@@ -191,7 +192,7 @@ struct SectorDetailView: View {
                             }
                             Text(sector.sector).font(.title2.bold())
                         }
-                        Text("族群總提及：\(sector.totalMentions) 次")
+                        Text("族群總提及：\(sector.totalMentions) 集")
                             .font(.subheadline).foregroundStyle(.secondary)
                         Text("\(sector.stockCodes.count) 支個股")
                             .font(.caption).foregroundStyle(.tertiary)

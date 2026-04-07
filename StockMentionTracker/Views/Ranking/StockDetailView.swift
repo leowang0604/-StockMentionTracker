@@ -8,6 +8,17 @@ struct StockDetailView: View {
 
     @State private var expandedIDs = Set<String>()
 
+    /// All distinct keywords matched across every context for this stock.
+    /// Uses ALL unfiltered contexts from dataService so date-window filtering
+    /// doesn't strip out the keywords we need for highlighting.
+    private var allHighlightTerms: [String] {
+        let fullContexts = dataService.scanResult.stocksRanking
+            .first { $0.code == stock.code }?.contexts ?? stock.contexts
+        let keywords = fullContexts.compactMap(\.matchedKeyword).filter { !$0.isEmpty }
+        let base = shortNameTerms(stock.name, stock.code, nil)
+        return Array(Set(base + keywords))
+    }
+
     private var sectorPeers: [StockEntry] {
         guard let sector = stock.sector, sector != "其他" else { return [] }
         @Bindable var appState = appState
@@ -46,7 +57,7 @@ struct StockDetailView: View {
                                 .background(.blue.opacity(0.12), in: Capsule())
                                 .foregroundStyle(.blue)
                         }
-                        Text("提及次數：\(stock.totalMentions) 次")
+                        Text("提及集數：\(stock.episodeCount) 集（共 \(stock.totalMentions) 次）")
                             .font(.subheadline).foregroundStyle(.secondary)
                         Text("涵蓋來源：\(stock.channelCount) 個")
                             .font(.caption).foregroundStyle(.tertiary)
@@ -109,7 +120,7 @@ struct StockDetailView: View {
                     ForEach(stock.contexts) { ctx in
                         ContextRowView(
                             context: ctx,
-                            highlightTerms: shortNameTerms(stock.name, stock.code, ctx.matchedKeyword),
+                            highlightTerms: allHighlightTerms,
                             isExpanded: expandedIDs.contains(ctx.id),
                             onToggle: {
                                 withAnimation(.easeInOut(duration: 0.2)) {
@@ -127,7 +138,7 @@ struct StockDetailView: View {
         }
         .navigationTitle(stock.name)
 #if os(iOS)
-        .navigationBarTitleDisplayMode(.large)
+        .navigationBarTitleDisplayMode(.inline)
 #endif
     }
 }
@@ -275,12 +286,16 @@ struct ContextRowView: View {
     private func highlighted(_ raw: String) -> AttributedString {
         var attributed = AttributedString(raw)
         for term in highlightTerms where !term.isEmpty {
-            var searchStart = attributed.startIndex
-            while searchStart < attributed.endIndex,
-                  let range = attributed[searchStart...].range(of: term, options: .caseInsensitive) {
-                attributed[range].foregroundColor = .orange
-                attributed[range].inlinePresentationIntent = .stronglyEmphasized
-                searchStart = range.upperBound
+            var searchFrom = raw.startIndex
+            while searchFrom < raw.endIndex,
+                  let found = raw.range(of: term, options: .caseInsensitive, range: searchFrom..<raw.endIndex) {
+                let offset = raw.distance(from: raw.startIndex, to: found.lowerBound)
+                let length = raw.distance(from: found.lowerBound, to: found.upperBound)
+                let lo = attributed.characters.index(attributed.startIndex, offsetBy: offset)
+                let hi = attributed.characters.index(lo, offsetBy: length)
+                attributed[lo..<hi].foregroundColor = .orange
+                attributed[lo..<hi].inlinePresentationIntent = .stronglyEmphasized
+                searchFrom = found.upperBound
             }
         }
         return attributed

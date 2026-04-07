@@ -104,6 +104,7 @@ ALIASES: dict[str, str] = {
     # 光通訊
     "上詮": "3363",
     "光環": "3234",
+    "波若威": "3163", "波諾威": "3163",  # Whisper 常將「波若威」誤轉為「波諾威」
     # PCB載板
     "欣興": "3037", "Unimicron": "3037",
     "南電": "8046",
@@ -737,8 +738,8 @@ def fetch_stock_list() -> list[dict]:
             for item in data:
                 code = (item.get("Code") or item.get("SecuritiesCode") or item.get("SecuritiesCompanyCode") or "").strip()
                 name = (item.get("Name") or item.get("CompanyAbbreviation") or item.get("CompanyName") or "").strip()
-                # Keep only numeric codes (exclude warrants, preferred shares, etc.)
-                if code and name and re.match(r"^\d{4,6}$", code):
+                # Allow numeric codes + alphanumeric ETF codes; exclude warrants (5-digit + C/P)
+                if code and name and re.match(r"^\d{3,6}[A-Z]?$", code) and not re.match(r"^\d{5}[CP]$", code):
                     industry_code = (item.get("IndustryCategoryCode") or item.get("IndustryCode")
                                      or item.get("SecuritiesIndustryCode") or item.get("SecuretiesIndustryCode") or "").strip()
                     sector = _TW_INDUSTRY_CODE_MAP.get(industry_code, "")
@@ -1367,6 +1368,7 @@ CONTEXT_FORBIDDEN: dict[str, list[str]] = {
 KEYWORD_PATTERN_OVERRIDE: dict[str, str] = {
     "國巨": r"(?<!中)國巨(?!石)",   # exclude "中國巨石" (China Jushi)
     "天剛": r"(?<![昨今前上那這每])天剛",  # exclude "昨天剛好", "今天剛好" etc.
+    "力士": r"(?<!海)力士",         # exclude "海力士" (SK Hynix)
 }
 
 # ─────────────────────────────────────────────────────────────────────────────
