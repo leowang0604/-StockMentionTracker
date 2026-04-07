@@ -1356,6 +1356,7 @@ CONTEXT_REQUIRED: dict[str, list[str]] = {
     "5347": ["5347", "世界先進"],                     # 「世界」是日常用語（世界上每個人）
     "6164": ["6164", "華興電子"],                     # 「華興」常被Whisper誤轉自「華星光」
     "8477": ["8477", "創業家兄弟"],                   # 「創業家」是日常用語（創業家精神）
+    "3118": ["光電", "LED", "3118", "進階光電"],       # 「進階」是日常用語（進階到Level2、進階版）
 }
 
 # If ANY of these strings appear in the context, the match is rejected.
@@ -1430,7 +1431,7 @@ def recognize_stocks(text: str) -> list[dict]:
             if re.match(r"^\d{4}$", keyword) and code not in CONTEXT_REQUIRED:
                 pre = text[max(0, pos - 8): pos]
                 suf = text[pos + 4: min(len(text), pos + 10)]
-                if re.search(r'[到至達漲跌]\s*$', pre) or re.search(r'^\s*(?:字頭|點|億)', suf):
+                if re.search(r'[到至達漲跌]\s*$', pre) or re.search(r'^\s*(?:字頭|點|億|%)', suf):
                     continue
 
             # Reject if forbidden context terms appear (avoids substring false positives)
