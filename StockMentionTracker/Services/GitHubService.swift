@@ -17,6 +17,8 @@ actor GitHubService {
         var request = URLRequest(url: url)
         request.setValue("token \(pat)", forHTTPHeaderField: "Authorization")
         request.setValue("application/vnd.github.v3+json", forHTTPHeaderField: "Accept")
+        request.setValue("no-cache", forHTTPHeaderField: "Cache-Control")
+        request.cachePolicy = .reloadIgnoringLocalCacheData
 
         let (data, response) = try await URLSession.shared.data(for: request)
         guard (response as? HTTPURLResponse)?.statusCode == 200 else {
@@ -56,7 +58,8 @@ actor GitHubService {
         let (_, response) = try await URLSession.shared.data(for: request)
         guard let httpResponse = response as? HTTPURLResponse,
               (200...201).contains(httpResponse.statusCode) else {
-            throw GitHubError.saveFailed
+            let code = (response as? HTTPURLResponse)?.statusCode ?? -1
+            throw GitHubError.saveFailedWithCode(code)
         }
     }
 
@@ -71,6 +74,7 @@ actor GitHubService {
 enum GitHubError: LocalizedError {
     case notFound
     case saveFailed
+    case saveFailedWithCode(Int)
     case invalidURL
     case decodeFailed
 
@@ -78,6 +82,7 @@ enum GitHubError: LocalizedError {
         switch self {
         case .notFound: return "找不到 sources.json（請確認 repo 路徑與 PAT）"
         case .saveFailed: return "儲存頻道列表失敗"
+        case .saveFailedWithCode(let code): return "儲存失敗（HTTP \(code)）"
         case .invalidURL: return "無效的 GitHub repo 格式（應為 username/repo）"
         case .decodeFailed: return "解析 GitHub 回應失敗"
         }

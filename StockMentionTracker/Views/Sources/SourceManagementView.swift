@@ -14,35 +14,22 @@ struct ChannelManagementView: View {
     @State private var showDeleteAlert = false
     @State private var isSaving = false
     @State private var saveSuccess = false
+    @State private var needsResave = false
 
     var body: some View {
-        NavigationStack {
-            Group {
-                if !appState.hasGitHubConfig {
-                    noConfigState
-                } else if isLoading {
-                    ProgressView("載入頻道清單…")
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                } else {
-                    channelList
-                }
-            }
+        mainContent
             .navigationTitle("頻道管理")
             .toolbar {
                 if appState.hasGitHubConfig {
                     ToolbarItem(placement: .automatic) {
-                        Button {
-                            showingAddChannel = true
-                        } label: {
+                        Button { showingAddChannel = true } label: {
                             Image(systemName: "plus")
                         }
                     }
                 }
             }
             .sheet(isPresented: $showingAddChannel) {
-                AddChannelView { newChannel in
-                    addChannel(newChannel)
-                }
+                AddChannelView { newChannel in addChannel(newChannel) }
             }
             .alert("確認刪除", isPresented: $showDeleteAlert, presenting: channelToDelete) { ch in
                 Button("刪除", role: .destructive) { deleteChannel(ch) }
@@ -64,6 +51,17 @@ struct ChannelManagementView: View {
             .onChange(of: appState.hasGitHubConfig) { _, hasConfig in
                 if hasConfig { Task { await loadChannels() } }
             }
+    }
+
+    @ViewBuilder
+    private var mainContent: some View {
+        if !appState.hasGitHubConfig {
+            noConfigState
+        } else if isLoading {
+            ProgressView("載入頻道清單…")
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+        } else {
+            channelList
         }
     }
 
@@ -151,20 +149,37 @@ struct ChannelManagementView: View {
     }
 
     private func saveChannels() async {
+        guard !isSaving else {
+            needsResave = true
+            return
+        }
         isSaving = true
+        needsResave = false
         saveSuccess = false
         do {
-            try await GitHubService.shared.saveSources(
-                config: sourcesConfig,
-                repo: appState.githubRepo,
-                pat: appState.githubPAT,
-                sha: currentSHA
-            )
-            // Reload to get updated SHA
-            let (config, sha) = try await GitHubService.shared.fetchSources(
+            do {
+                try await GitHubService.shared.saveSources(
+                    config: sourcesConfig,
+                    repo: appState.githubRepo,
+                    pat: appState.githubPAT,
+                    sha: currentSHA
+                )
+            } catch {
+                // SHA conflict — refresh and retry once
+                let (_, freshSHA) = try await GitHubService.shared.fetchSources(
+                    repo: appState.githubRepo, pat: appState.githubPAT
+                )
+                currentSHA = freshSHA
+                try await GitHubService.shared.saveSources(
+                    config: sourcesConfig,
+                    repo: appState.githubRepo,
+                    pat: appState.githubPAT,
+                    sha: currentSHA
+                )
+            }
+            let (_, sha) = try await GitHubService.shared.fetchSources(
                 repo: appState.githubRepo, pat: appState.githubPAT
             )
-            sourcesConfig = config
             currentSHA = sha
             saveSuccess = true
             try? await Task.sleep(nanoseconds: 2_000_000_000)
@@ -173,9 +188,19 @@ struct ChannelManagementView: View {
             errorMessage = error.localizedDescription
         }
         isSaving = false
+        if needsResave {
+            await saveChannels()
+        }
     }
 
     private func addChannel(_ channel: ChannelSource) {
+        let isDuplicate = sourcesConfig.sources.contains {
+            $0.identifier == channel.identifier && $0.type == channel.type
+        }
+        guard !isDuplicate else {
+            errorMessage = "「\(channel.name)」已在清單中（ID 重複）"
+            return
+        }
         sourcesConfig.sources.append(channel)
         Task { await saveChannels() }
     }

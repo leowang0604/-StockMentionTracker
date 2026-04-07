@@ -59,7 +59,7 @@ struct ChannelDetailView: View {
         }
         .navigationTitle(channelName)
 #if os(iOS)
-        .navigationBarTitleDisplayMode(.large)
+        .navigationBarTitleDisplayMode(.inline)
 #endif
     }
 }

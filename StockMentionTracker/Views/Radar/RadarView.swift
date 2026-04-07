@@ -38,10 +38,11 @@ struct RadarView: View {
         let now = Date()
         let start = Calendar.current.date(byAdding: .day, value: -days * (periodsAgo + 1), to: now) ?? now
         let end   = Calendar.current.date(byAdding: .day, value: -days * periodsAgo, to: now) ?? now
-        return stock.contexts.filter {
+        let filtered = stock.contexts.filter {
             guard let d = $0.parsedDate else { return false }
             return d >= start && d < end
-        }.count
+        }
+        return Set(filtered.map { "\($0.channel ?? "")_\($0.video)" }).count
     }
 
     // 近期暴紅: this period > last period * 2 AND last period > 0 AND this period >= 2
@@ -99,7 +100,7 @@ struct RadarView: View {
                     emptyHint: "目前無看多股票（需情緒 > 70% 且近期提及 ≥ 2 次）",
                     subtitle: { stock in
                         let score = stock.sentimentScore.map { String(format: "%.0f%%", $0 * 100) } ?? ""
-                        return "看多 \(score) · \(stock.totalMentions) 次提及"
+                        return "看多 \(score) · \(stock.episodeCount) 集提及"
                     }
                 )
                 radarSection(
@@ -110,7 +111,7 @@ struct RadarView: View {
                     emptyHint: "目前無看空股票（需情緒 < 30% 且近期提及 ≥ 2 次）",
                     subtitle: { stock in
                         let score = stock.sentimentScore.map { String(format: "%.0f%%", (1 - $0) * 100) } ?? ""
-                        return "看空 \(score) · \(stock.totalMentions) 次提及"
+                        return "看空 \(score) · \(stock.episodeCount) 集提及"
                     }
                 )
                 radarSection(
@@ -123,7 +124,7 @@ struct RadarView: View {
                         let cur  = periodMentions(stock, periodsAgo: 0)
                         let prev = periodMentions(stock, periodsAgo: 1)
                         let ratio = prev > 0 ? String(format: "+%.0f%%", (Double(cur) / Double(prev) - 1) * 100) : ""
-                        return "本期 \(cur) 次 \(ratio)"
+                        return "本期 \(cur) 集 \(ratio)"
                     }
                 )
                 radarSection(
@@ -134,7 +135,7 @@ struct RadarView: View {
                     emptyHint: "近期無新上榜股票（上期未被提及、本期首次出現）",
                     subtitle: { stock in
                         let cur = periodMentions(stock, periodsAgo: 0)
-                        return "首次出現 · \(cur) 次提及"
+                        return "首次出現 · \(cur) 集"
                     }
                 )
                 radarSection(
@@ -147,7 +148,7 @@ struct RadarView: View {
                         let cur  = periodMentions(stock, periodsAgo: 0)
                         let prev = periodMentions(stock, periodsAgo: 1)
                         let ratio = prev > 0 ? String(format: "%.0f%%", Double(cur) / Double(prev) * 100) : "0%"
-                        return "本期 \(cur) 次（上期 \(prev) 次，剩 \(ratio)）"
+                        return "本期 \(cur) 集（上期 \(prev) 集，剩 \(ratio)）"
                     }
                 )
                 }

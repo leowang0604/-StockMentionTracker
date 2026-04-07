@@ -138,6 +138,11 @@ struct StockEntry: Codable, Identifiable {
         Set(contexts.compactMap(\.channel)).count
     }
 
+    /// Number of distinct episodes (channel + video title) mentioning this stock
+    var episodeCount: Int {
+        Set(contexts.map { "\($0.channel ?? "")_\($0.video)" }).count
+    }
+
     var analysisSourceSymbols: [String] {
         let sources = Set(contexts.compactMap(\.analysisSource))
         var result: [String] = []

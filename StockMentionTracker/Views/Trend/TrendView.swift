@@ -171,10 +171,11 @@ struct StockTrendDetailView: View {
         return daily.compactMap { (dateStr, stats) -> SentimentDataPoint? in
             guard let date = fmt.date(from: dateStr),
                   Calendar.current.startOfDay(for: date) >= Calendar.current.startOfDay(for: cutoff),
-                  stats.bullish + stats.bearish > 0
+                  stats.mentions > 0
             else { return nil }
             return SentimentDataPoint(date: date, score: stats.sentimentScore,
-                                      bullish: stats.bullish, bearish: stats.bearish)
+                                      bullish: stats.bullish, bearish: stats.bearish,
+                                      neutral: stats.neutral)
         }.sorted { $0.date < $1.date }
     }
 
@@ -261,13 +262,17 @@ struct StockTrendDetailView: View {
 
     private var sentimentChart: some View {
         return Group {
-            if sentimentData.count < 3 {
-                ContentUnavailableView("資料點不足",
+            if sentimentData.isEmpty {
+                ContentUnavailableView("此時間範圍無資料",
                     systemImage: "chart.line.flattrend.xyaxis",
-                    description: Text("需要至少 3 天以上的情緒資料才能顯示趨勢，請等待更多掃描累積"))
+                    description: Text("請選擇更長的時間範圍"))
                 .frame(height: 250)
             } else {
                 Chart(sentimentData) { point in
+                    BarMark(x: .value("日期", point.date, unit: .day),
+                            y: .value("中性", point.neutral),
+                            stacking: .unstacked)
+                        .foregroundStyle(.gray.opacity(0.4))
                     BarMark(x: .value("日期", point.date, unit: .day),
                             y: .value("看多", point.bullish),
                             stacking: .unstacked)
@@ -283,7 +288,11 @@ struct StockTrendDetailView: View {
                         AxisValueLabel(format: .dateTime.month().day())
                     }
                 }
-                .chartForegroundStyleScale(["看多": Color.green.opacity(0.7), "看空": Color.red.opacity(0.5)])
+                .chartForegroundStyleScale([
+                    "中性": Color.gray.opacity(0.4),
+                    "看多": Color.green.opacity(0.7),
+                    "看空": Color.red.opacity(0.5)
+                ])
                 .frame(height: 250)
                 .padding()
             }
@@ -402,4 +411,5 @@ struct SentimentDataPoint: Identifiable {
     let score:   Double
     let bullish: Int
     let bearish: Int
+    let neutral: Int
 }
