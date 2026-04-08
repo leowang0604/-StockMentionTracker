@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-08T19:02:35",
+  "updated_at": "2026-04-08T19:12:43",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -14719,6 +14719,36 @@
           "sentiment_score": 1.0
         }
       }
+    },
+    {
+      "code": "6164",
+      "name": "華興",
+      "market": "TW",
+      "sector": "其他",
+      "contexts": [
+        {
+          "video": "EP215 | 台、美股重點一次說，CPU重新被市場重視 ？，Intel的佈局，手機市場與台股關係，PCB設備廠",
+          "channel": "韭菜畢業班",
+          "date": "2026-04-05",
+          "text": "TN的這種兩側 然後再來就是 一些AOI的這種檢測機 它其實都是有提供的 但是它主要主軸在PCB的設備 這個是非常重要的一件事情 所以它才可以看到 這麼強勢的一個上修的空間 所以我覺得這個是PCB設備 大家也可以去注意一下 當然現在設備理論上來說的話 我覺得 胎骨應該都有反應了 然後再來就是一些 像6164這種 也都有一起往上去走 那我們就會去看一下 接下來的一個走勢 異貨是一些光通訊相關的東西 CBO檢測像 6830範拳 它也是一樣 有動起來 甚至波諾威都已經快要去 創下了一個歷史新高 創應該是快要 破千塊了吧 這個是我們之前有聊過的話題 如果有興趣朋友的話 可以往前面的輯數去聽 那我們今天這一集",
+          "matched_keyword": "6164",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.8,
+          "video_url": ""
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 1.0,
+      "daily": {
+        "2026-04-05": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        }
+      }
     }
   ],
   "sectors_ranking": [
@@ -14738,7 +14768,7 @@
     {
       "sector": "其他",
       "market": "TW",
-      "total_mentions": 70,
+      "total_mentions": 71,
       "stock_codes": [
         "5007",
         "2640",
@@ -14763,7 +14793,8 @@
         "8222",
         "1313",
         "8923",
-        "1459"
+        "1459",
+        "6164"
       ]
     },
     {
