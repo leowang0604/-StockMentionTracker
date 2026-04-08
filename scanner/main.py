@@ -50,6 +50,7 @@ OUTPUT_FILE      = Path(__file__).parent.parent / "data" / "latest.json"
 STOCKS_CACHE_FILE    = Path(__file__).parent.parent / "data" / "stocks.json"
 TW_INDUSTRY_CACHE_FILE = Path(__file__).parent.parent / "data" / "tw_industry_cache.json"
 LEARNED_ALIASES_FILE = Path(__file__).parent.parent / "data" / "learned_aliases.json"
+GEMINI_USAGE_FILE    = Path(__file__).parent.parent / "data" / "gemini_usage.json"
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Static aliases: English names, abbreviations, nicknames not in official list
@@ -978,7 +979,7 @@ def enrich_us_stocks_with_gemini(
     )
 
     try:
-        response = model.models.generate_content(model=_GEMINI_MODEL_NAME, contents=prompt)
+        response = _gemini_generate(model, prompt)
         text = response.text.strip()
         if text.startswith("```"):
             text = re.sub(r"^```[a-z]*\n?", "", text)
@@ -1147,7 +1148,7 @@ def generate_weekly_summary(stocks_ranking: list[dict], days_back: int) -> dict 
     )
 
     try:
-        response = model.models.generate_content(model=_GEMINI_MODEL_NAME, contents=prompt)
+        response = _gemini_generate(model, prompt)
         text = response.text.strip()
         if text.startswith("```"):
             text = re.sub(r"^```[a-z]*\n?", "", text)
@@ -1196,7 +1197,7 @@ def enrich_sectors_with_gemini(codes_without_sector: list[str]) -> dict[str, str
     )
 
     try:
-        response = model.models.generate_content(model=_GEMINI_MODEL_NAME, contents=prompt)
+        response = _gemini_generate(model, prompt)
         text = response.text.strip()
         if text.startswith("```"):
             text = re.sub(r"^```[a-z]*\n?", "", text)
@@ -1594,6 +1595,71 @@ def _get_gemini_model():
         return None
 
 
+# ── Gemini rate limiting & usage monitoring ───────────────────────────────────
+_GEMINI_RPM_LIMIT      = 12    # stay under free-tier 15 RPM
+_GEMINI_RPD_WARN_AT    = 1200  # warn at 80% of 1500 RPD free-tier limit
+_GEMINI_CALLS_WINDOW:  list[float] = []  # timestamps within last 60 s
+_GEMINI_CALLS_SESSION: int = 0           # total calls this scan run
+
+
+def _gemini_today_count() -> int:
+    """Return today's recorded Gemini call count from disk."""
+    try:
+        if GEMINI_USAGE_FILE.exists():
+            data = json.loads(GEMINI_USAGE_FILE.read_text(encoding="utf-8"))
+            today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+            return data.get(today, 0)
+    except Exception:
+        pass
+    return 0
+
+
+def _gemini_generate(model, prompt: str):
+    """
+    Wrapper around model.models.generate_content that enforces:
+    1. RPM rate limiting (≤ _GEMINI_RPM_LIMIT calls / minute)
+    2. Per-day usage recording with quota warning
+    """
+    import time
+    global _GEMINI_CALLS_SESSION
+
+    # ── 1. RPM gate ───────────────────────────────────────────────────────
+    now = time.time()
+    _GEMINI_CALLS_WINDOW[:] = [t for t in _GEMINI_CALLS_WINDOW if now - t < 60]
+    if len(_GEMINI_CALLS_WINDOW) >= _GEMINI_RPM_LIMIT:
+        wait = 60.0 - (now - _GEMINI_CALLS_WINDOW[0]) + 0.5
+        if wait > 0:
+            print(f"  [gemini] RPM limit — waiting {wait:.1f}s", file=sys.stderr)
+            time.sleep(wait)
+    _GEMINI_CALLS_WINDOW.append(time.time())
+
+    # ── 2. API call ───────────────────────────────────────────────────────
+    response = model.models.generate_content(model=_GEMINI_MODEL_NAME, contents=prompt)
+
+    # ── 3. Record usage ───────────────────────────────────────────────────
+    _GEMINI_CALLS_SESSION += 1
+    try:
+        today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+        data: dict = {}
+        if GEMINI_USAGE_FILE.exists():
+            data = json.loads(GEMINI_USAGE_FILE.read_text(encoding="utf-8"))
+        data[today] = data.get(today, 0) + 1
+        cutoff = (datetime.now(timezone.utc) - timedelta(days=7)).strftime("%Y-%m-%d")
+        data = {k: v for k, v in data.items() if k >= cutoff}
+        GEMINI_USAGE_FILE.write_text(
+            json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8"
+        )
+        if data[today] >= _GEMINI_RPD_WARN_AT:
+            print(
+                f"  [gemini] ⚠️  今日已呼叫 {data[today]} 次（免費上限 1500）",
+                file=sys.stderr,
+            )
+    except Exception:
+        pass
+
+    return response
+
+
 _SENTIMENT_BATCH_SIZE = 30  # max items per Gemini call to avoid output token truncation
 
 def _sentiment_batch_single(model, items: list[dict]) -> list[tuple[str, float]] | None:
@@ -1611,7 +1677,7 @@ def _sentiment_batch_single(model, items: list[dict]) -> list[tuple[str, float]]
         + "\n".join(lines)
     )
     try:
-        response = model.models.generate_content(model=_GEMINI_MODEL_NAME, contents=prompt)
+        response = _gemini_generate(model, prompt)
         text = response.text.strip()
         if text.startswith("```"):
             text = re.sub(r"^```[a-z]*\n?", "", text)
@@ -1828,7 +1894,7 @@ def filter_ambiguous_hits_with_gemini(hits: list[dict]) -> list[dict]:
     )
 
     try:
-        response = model.models.generate_content(model=_GEMINI_MODEL_NAME, contents=prompt)
+        response = _gemini_generate(model, prompt)
         text = response.text.strip()
         if text.startswith("```"):
             text = re.sub(r"^```[a-z]*\n?", "", text)
@@ -2764,6 +2830,13 @@ def main() -> None:
         f"{total_new_mentions} new mentions this run"
     )
     print(f"[scanner] Output → {OUTPUT_FILE}")
+    if GEMINI_API_KEY:
+        daily = _gemini_today_count()
+        print(
+            f"[scanner] Gemini 本次呼叫：{_GEMINI_CALLS_SESSION} 次｜"
+            f"今日累積：{daily} 次 / 1500"
+            + ("  ⚠️  接近上限！" if daily >= _GEMINI_RPD_WARN_AT else "")
+        )
 
 
 if __name__ == "__main__":
