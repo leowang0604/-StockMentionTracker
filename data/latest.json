@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-08T20:03:47",
+  "updated_at": "2026-04-08T20:58:31",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -15084,6 +15084,66 @@
           "sentiment_score": 1.0
         }
       }
+    },
+    {
+      "code": "6719",
+      "name": "力智",
+      "market": "TW",
+      "sector": "半導體業",
+      "contexts": [
+        {
+          "video": "2026/04/08 (三）停戰再兩週， 這次是真的？",
+          "channel": "財女珍妮",
+          "date": "2026-04-08",
+          "text": "horopy大概是2028年的時候 它可以達到損益平衡 所以就損益平衡 可以開始賺錢的時間點來說 Anthoropy是會比較快的 好 那我們就要去思考一件事情 就是為什麼訓練的成本 這麼的失控呢 對不對 你不能少花一點錢嗎 那你不是更早就可以開始賺錢了嗎 那原因是因為每一代新的模型 你今天要達到它智力智能上面的提升 其實越來越難的 而且它的代價會比上一代還要高 它不是一個線性成長 它是一個指數級的算力的競賽 你模型做得越聰明 你需要的算力就會越多 你的算力需要越多 但也會越貴 所以現在大家都選擇 我就是持續砸錢 我要在這個市場上面 我就是要當第一 我就是要當冠軍 那一旦你今天你的智力成本 在能力上",
+          "matched_keyword": "力智",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-04-08": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
+      "code": "AIG",
+      "name": "American International Group",
+      "market": "US",
+      "sector": "金融",
+      "contexts": [
+        {
+          "video": "2026/04/07 (二）伊朗拒停火， 油價不漲了？博通、Google擴大合作",
+          "channel": "財女珍妮",
+          "date": "2026-04-07",
+          "text": "還蠻重要的 博通呢 他有一份新的 就是他提供給 美國證交會的文件嘛 那在這份文件裡面呢 他就有揭露了 最新跟Google簽訂的長期協議 內容分成兩個部分 第一個是博通負責開發 並供應未來時代Google的 客製化的TPU嘛 就是他自己的 這個ACS的一個處理器 第二呢就是博通為 Google的下一代AIG價 會去提供網路跟其他的元件 這一份協議的效期呢 會延伸到2031年 但是因為他是盤後 所以才公開的 所以你在盤中的時候 看到博通的股價 其實是蠻弱的 盤後的股價呢 大概漲了快要3%左右 只是因為博通呢 他在近期 也是從去年大概9月開始吧 就一直呈現一個高檔震盪 創高之後回落 通常是一個短線轉弱的一",
+          "matched_keyword": "AIG",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.3,
+          "video_url": ""
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-04-07": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
     }
   ],
   "sectors_ranking": [
@@ -15171,7 +15231,7 @@
     {
       "sector": "金融",
       "market": "US",
-      "total_mentions": 35,
+      "total_mentions": 36,
       "stock_codes": [
         "BLK",
         "MS",
@@ -15180,7 +15240,8 @@
         "JPM",
         "COIN",
         "CME",
-        "MA"
+        "MA",
+        "AIG"
       ]
     },
     {
@@ -15501,6 +15562,17 @@
       ]
     },
     {
+      "sector": "半導體業",
+      "market": "TW",
+      "total_mentions": 4,
+      "stock_codes": [
+        "3686",
+        "5222",
+        "5269",
+        "6719"
+      ]
+    },
+    {
       "sector": "記憶體模組",
       "market": "TW",
       "total_mentions": 3,
@@ -15552,16 +15624,6 @@
         "3711",
         "8150",
         "2449"
-      ]
-    },
-    {
-      "sector": "半導體業",
-      "market": "TW",
-      "total_mentions": 3,
-      "stock_codes": [
-        "3686",
-        "5222",
-        "5269"
       ]
     },
     {
