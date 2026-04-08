@@ -2,7 +2,44 @@
 
 ## 2026-04-08（commits d585358–f6014c1）
 
-### 一、發現 Gemini quota 爆掉（run #104）
+### 一、Whisper 錯字 aliases 與 false positive 修正（commit 512e50a）
+
+**新增 Whisper 轉錄錯字 ALIASES**：
+| 錯字 | 正確股票 | 代碼 |
+|------|---------|------|
+| 台波 | 台玻 | 1802 |
+| 台澳 | 台燿 | 6274 |
+| 連帽 / 連貌 | 聯茂 | 6213 |
+| 紅塑 / 宏塑 | 弘塑 | 3131 |
+
+**新增 CONTEXT_REQUIRED**：
+- `8047 星雲`：需含「油電/能源/燃氣」，防止「辛耘(3583)」被誤判為「星雲」（發音相近）
+
+---
+
+### 二、Gemini Whisper 自動修正 + auto-learn（commit ebf23a3）
+
+**修法**：
+- `filter_ambiguous_hits_with_gemini()` 改為 per-hit JSON 格式，請 Gemini 同時做兩件事：
+  1. 判斷是否真的在討論股票（原有功能）
+  2. 偵測 Whisper 語音辨識錯字，回傳正確代碼
+- 確認為 Whisper 錯字後，自動儲存到 `data/learned_aliases.json`，下次啟動即載入，不需手動加 ALIASES
+- 新增 `WHISPER_ALIAS_KEYWORDS` set：已知錯字關鍵字送 Gemini 驗證（先前被視為安全中文 hit 跳過）
+- `build_stock_dict()` 啟動時載入 `learned_aliases.json`
+
+---
+
+### 三、Gemini 限流與用量監控（commit eb99f90）
+
+**新增 `_gemini_generate()` wrapper**，所有 Gemini 呼叫統一走此函數：
+- RPM gate：最多 12 calls/min（免費上限 15），超過自動 sleep
+- 每日用量記錄到 `data/gemini_usage.json`（7 日滾動）
+- 用量達 1200 次輸出警告
+- 掃描結束輸出本次呼叫數 + 今日累積數
+
+---
+
+### 四、發現 Gemini quota 爆掉（run #104）
 
 **現象**：run #104（長測試，Whisper 啟用）跑到一半出現大量 `429 RESOURCE_EXHAUSTED`，`quotaId: GenerateRequestsPerDayPerProjectPerModel-FreeTier, limit: 20, model: gemini-2.5-flash-lite`。
 
