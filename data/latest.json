@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-08T21:04:49",
+  "updated_at": "2026-04-08T21:21:32",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -12026,6 +12026,54 @@
       }
     },
     {
+      "code": "1723",
+      "name": "中碳",
+      "market": "TW",
+      "sector": "化學工業",
+      "contexts": [
+        {
+          "video": "EP651 | One for all",
+          "channel": "股癌",
+          "date": "2026-04-08",
+          "text": "個東西 那那個東西是什麼 那個東西就是Kyber 就是INVIDIA的下一個結構 叫Kyber 那在Kyber 他們有一些connector上面 會有很多的證 很多個PIN 他們在推這個PIN 這個PIN就是由這一家所出的 所以在這個案例上就知道說 你看A這些人 他們是認為是Pogo PIN 那確實中碳針也有做Pogo PIN 那B這些人是認為說 不是那個東西 是在講說 connector裡面的這種PIN 他是在Kyber裡面要去專用的 所以你就發現說 兩邊的人其實敘事是完全不一樣 他們看的東西是不一樣 可是兩邊的人 因為在你看中碳針碰成這樣 兩邊的人都會覺得說 他們是對的 對吧 我買這個故事 真",
+          "matched_keyword": "中碳",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
+        },
+        {
+          "video": "EP323 次級市場企業家",
+          "channel": "投資癮",
+          "date": "2026-04-05",
+          "text": "但是原本的觀察類股 持續成長 持續創高 像這些手上有一籃子的 半導體測試界裡面公司 其實從最早的時候 是從旺戲跟影尾開始 當時在Presway 就注意到這些公司 就開始慢慢去投入的 直到去年11、12月的時候 等體市場盤面沒有這麼好 但是庸置客系 是第一個創新高的公司 之後在1月19號的時候 發現了中碳針 這兩隻就把它綁在一起 再加上前面的綁在一起以後 就一籃子的公司了 直到現在 這個族群還是沿著 最小族律線緩緩前進 但也因為股價都來到這個位置的 也沒有什麼值得討論的地方 現在市場上面都是好消息 你也找不太到壞消息 我自己在做交易的時候 我會去思考說 哪些公司讓我覺得 有些興趣的時候 就會慢慢把一",
+          "matched_keyword": "中碳",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": ""
+        }
+      ],
+      "total_mentions": 2,
+      "sentiment_score": 1.0,
+      "daily": {
+        "2026-04-08": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-04-05": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        }
+      }
+    },
+    {
       "code": "9911",
       "name": "櫻花",
       "market": "TW",
@@ -14906,36 +14954,6 @@
       }
     },
     {
-      "code": "1723",
-      "name": "中碳",
-      "market": "TW",
-      "sector": "化學工業",
-      "contexts": [
-        {
-          "video": "EP651 | One for all",
-          "channel": "股癌",
-          "date": "2026-04-08",
-          "text": "個東西 那那個東西是什麼 那個東西就是Kyber 就是INVIDIA的下一個結構 叫Kyber 那在Kyber 他們有一些connector上面 會有很多的證 很多個PIN 他們在推這個PIN 這個PIN就是由這一家所出的 所以在這個案例上就知道說 你看A這些人 他們是認為是Pogo PIN 那確實中碳針也有做Pogo PIN 那B這些人是認為說 不是那個東西 是在講說 connector裡面的這種PIN 他是在Kyber裡面要去專用的 所以你就發現說 兩邊的人其實敘事是完全不一樣 他們看的東西是不一樣 可是兩邊的人 因為在你看中碳針碰成這樣 兩邊的人都會覺得說 他們是對的 對吧 我買這個故事 真",
-          "matched_keyword": "中碳",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": ""
-        }
-      ],
-      "total_mentions": 1,
-      "sentiment_score": 0.5,
-      "daily": {
-        "2026-04-08": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        }
-      }
-    },
-    {
       "code": "5269",
       "name": "祥碩",
       "market": "TW",
@@ -15607,6 +15625,15 @@
       ]
     },
     {
+      "sector": "化學工業",
+      "market": "TW",
+      "total_mentions": 3,
+      "stock_codes": [
+        "1723",
+        "1717"
+      ]
+    },
+    {
       "sector": "散熱",
       "market": "TW",
       "total_mentions": 3,
@@ -15701,15 +15728,6 @@
       "stock_codes": [
         "CRWD",
         "NET"
-      ]
-    },
-    {
-      "sector": "化學工業",
-      "market": "TW",
-      "total_mentions": 2,
-      "stock_codes": [
-        "1717",
-        "1723"
       ]
     },
     {
