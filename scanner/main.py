@@ -1651,7 +1651,7 @@ def _gemini_generate(model, prompt: str):
         )
         if data[today] >= _GEMINI_RPD_WARN_AT:
             print(
-                f"  [gemini] ⚠️  今日已呼叫 {data[today]} 次（免費上限 1500）",
+                f"  [gemini] ⚠️  今日已呼叫 {data[today]} 次（免費上限 ~20）",
                 file=sys.stderr,
             )
     except Exception:
@@ -2226,10 +2226,8 @@ def _detect_youtube_video(
         print(f"  ⚠ fallback → title+description")
 
     # ── Recognize stocks ──────────────────────────────────────────────────
-    hits        = deduplicate_hits(filter_ambiguous_hits_with_gemini(recognize_stocks(text)))
+    hits        = deduplicate_hits(recognize_stocks(text))
     stock_codes = list({h["stock_code"] for h in hits})
-    if stock_codes:
-        print(f"  📌 {stock_codes}")
 
     video_entry = {
         "video_id":        video_id,
@@ -2242,6 +2240,124 @@ def _detect_youtube_video(
     }
     video_url = f"https://www.youtube.com/watch?v={video_id}"
     return video_entry, hits, analysis_source, video_url
+
+
+_AMBIGUOUS_BATCH_SIZE = 20  # max ambiguous hits per Gemini call
+
+
+def _batch_filter_ambiguous_hits(detected: list[tuple]) -> list[tuple]:
+    """
+    Cross-video ambiguous hit filtering for one source.
+    Instead of one Gemini call per video, batches all ambiguous hits
+    (max _AMBIGUOUS_BATCH_SIZE per call) across all videos in the source.
+    Returns updated detected list with hits filtered/corrected.
+    """
+    if not GEMINI_API_KEY:
+        return detected
+
+    model = _get_gemini_model()
+    if not model:
+        return detected
+
+    # Collect all ambiguous hits with their locations
+    # Each entry: (detected_idx, hit_idx, hit, video_title)
+    pending: list[tuple] = []
+    for d_idx, (v_entry, hits, asrc, vurl) in enumerate(detected):
+        title = v_entry.get("title", "")
+        for h_idx, h in enumerate(hits):
+            if _is_ambiguous_hit(h):
+                pending.append((d_idx, h_idx, h, title))
+
+    if not pending:
+        return detected
+
+    # Build mutable copy (hits as mutable lists)
+    result = [(v_entry, list(hits), asrc, vurl) for v_entry, hits, asrc, vurl in detected]
+    to_remove: set[tuple] = set()  # (d_idx, h_idx)
+
+    for batch_start in range(0, len(pending), _AMBIGUOUS_BATCH_SIZE):
+        batch = pending[batch_start:batch_start + _AMBIGUOUS_BATCH_SIZE]
+
+        # Build prompt, grouping consecutive hits by video title
+        lines = []
+        current_title = None
+        for i, (d_idx, h_idx, h, title) in enumerate(batch, 1):
+            if title != current_title:
+                lines.append(f"\n[影片：{title[:60]}]")
+                current_title = title
+            lines.append(
+                f"{i}. 代號{h['stock_code']}({h['stock_name']})，"
+                f"匹配詞「{h['matched_keyword']}」，"
+                f"上下文：「{h['context'][:120]}」"
+            )
+
+        prompt = (
+            "以下是從台灣財經 YouTube/Podcast 語音辨識文字中比對到的可能股票，"
+            "文字可能含 Whisper 轉錄錯字。\n"
+            + "\n".join(lines)
+            + "\n\n請逐一判斷每個條目：\n"
+            "1. 是否真的在討論某支股票（非股價數字、指數點位、一般用語）\n"
+            "2. 匹配詞是否為 Whisper 語音辨識錯字，若是請給出正確股票代碼與名稱\n\n"
+            f"回傳 JSON 陣列（長度必須等於條目數 {len(batch)}，順序一致）：\n"
+            "[{\"is_stock\": true, \"corrected_code\": null, \"corrected_name\": null}, ...]\n\n"
+            "說明：\n"
+            "- is_stock：此上下文是否真的在討論某支股票\n"
+            "- corrected_code：若匹配詞是 Whisper 錯字且應對應不同股票，填入正確代碼；否則填 null\n"
+            "- corrected_name：對應的正確股票名稱；否則填 null\n\n"
+            "例：「光盛」→ {\"is_stock\": true, \"corrected_code\": \"6442\", \"corrected_name\": \"光聖\"}\n"
+            "    「時間點」→ {\"is_stock\": false, \"corrected_code\": null, \"corrected_name\": null}"
+        )
+
+        try:
+            response = _gemini_generate(model, prompt)
+            text = response.text.strip()
+            if text.startswith("```"):
+                text = re.sub(r"^```[a-z]*\n?", "", text)
+                text = re.sub(r"\n?```$", "", text)
+            results = json.loads(text)
+            if not isinstance(results, list) or len(results) != len(batch):
+                raise ValueError(f"expected {len(batch)} results, got {len(results)}")
+
+            removed = 0
+            for (d_idx, h_idx, h, title), r in zip(batch, results):
+                if not r.get("is_stock"):
+                    to_remove.add((d_idx, h_idx))
+                    print(f"  [gemini] filtered: {h['stock_code']}({h['matched_keyword']})", file=sys.stderr)
+                    removed += 1
+                    continue
+
+                corrected_code = r.get("corrected_code")
+                corrected_name = r.get("corrected_name")
+                if corrected_code and corrected_code != h["stock_code"] and corrected_code in CODE_TO_NAME:
+                    keyword = h["matched_keyword"]
+                    _save_learned_alias(keyword, corrected_code)
+                    new_h = dict(h)
+                    new_h["stock_code"]   = corrected_code
+                    new_h["stock_name"]   = corrected_name or CODE_TO_NAME.get(corrected_code, corrected_code)
+                    new_h["stock_market"] = STOCK_MARKET.get(corrected_code, "TW")
+                    new_h["stock_sector"] = STOCK_SECTOR.get(corrected_code)
+                    result[d_idx][1][h_idx] = new_h
+                    print(f"  [gemini] corrected: 「{keyword}」→ {corrected_code}({new_h['stock_name']})", file=sys.stderr)
+
+            if removed > 0:
+                print(f"  [gemini] filtered {removed}/{len(batch)} in batch", file=sys.stderr)
+
+        except Exception as e:
+            print(f"  [gemini] batch ambiguous filter failed: {e}", file=sys.stderr)
+            # fallback: keep all hits in this batch
+
+    # Apply removals and update stocks_found in v_entry
+    final = []
+    for d_idx, (v_entry, hits, asrc, vurl) in enumerate(result):
+        filtered_hits = [h for h_idx, h in enumerate(hits) if (d_idx, h_idx) not in to_remove]
+        if len(filtered_hits) != len(hits):
+            v_entry = dict(v_entry)
+            v_entry["stocks_found"] = list({h["stock_code"] for h in filtered_hits})
+        if filtered_hits:
+            print(f"  📌 [{v_entry['title'][:30]}] {[h['stock_code'] for h in filtered_hits]}")
+        final.append((v_entry, filtered_hits, asrc, vurl))
+
+    return final
 
 
 def _build_youtube_mentions(
@@ -2378,10 +2494,8 @@ def _detect_podcast_episode(
         text = title + " " + ep.get("description", "")
         analysis_source = "titleAndDescription"
 
-    hits        = deduplicate_hits(filter_ambiguous_hits_with_gemini(recognize_stocks(text)))
+    hits        = deduplicate_hits(recognize_stocks(text))
     stock_codes = list({h["stock_code"] for h in hits})
-    if stock_codes:
-        print(f"  📌 {stock_codes}")
 
     # Debug: check if known watch-keywords appear in text but weren't detected
     _WATCH = {"華通": "2313", "欣興": "3037", "臻鼎": "4958", "均華": "6640", "光聖": "6442"}
@@ -2748,6 +2862,9 @@ def main() -> None:
             for ep in episodes:
                 v_entry, hits, asrc = _detect_podcast_episode(ep, source)
                 detected.append((v_entry, hits, asrc, None))
+
+        # ── Pass 1.5: batch Gemini ambiguous filter across all videos ────
+        detected = _batch_filter_ambiguous_hits(detected)
 
         # ── Pass 2: ONE batch Gemini sentiment call per channel ───────────
         ep_sentiment_input = [(hits, asrc) for _, hits, asrc, _ in detected]
