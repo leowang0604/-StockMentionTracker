@@ -49,6 +49,7 @@ SOURCES_FILE     = Path(__file__).parent / "sources.json"
 OUTPUT_FILE      = Path(__file__).parent.parent / "data" / "latest.json"
 STOCKS_CACHE_FILE    = Path(__file__).parent.parent / "data" / "stocks.json"
 TW_INDUSTRY_CACHE_FILE = Path(__file__).parent.parent / "data" / "tw_industry_cache.json"
+LEARNED_ALIASES_FILE = Path(__file__).parent.parent / "data" / "learned_aliases.json"
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Static aliases: English names, abbreviations, nicknames not in official list
@@ -106,6 +107,7 @@ ALIASES: dict[str, str] = {
     "光環": "3234",
     "波若威": "3163", "波諾威": "3163",  # Whisper 常將「波若威」誤轉為「波諾威」
     "台波": "1802",                      # Whisper 常將「台玻」誤轉為「台波」
+    "光盛": "6442",                      # Whisper 常將「光聖」誤轉為「光盛」
     "台澳": "6274",                      # Whisper 常將「台燿」誤轉為「台澳」
     "連帽": "6213", "連貌": "6213",      # Whisper 常將「聯茂」誤轉為「連帽」/「連貌」
     "紅塑": "3131", "宏塑": "3131",      # Whisper 常將「弘塑」誤轉為「紅塑」/「宏塑」
@@ -210,6 +212,42 @@ ALIASES: dict[str, str] = {
     "00631L": "00631L", "00632R": "00632R",
     "00679B": "00679B", "00720B": "00720B",
 }
+
+# Keywords known to be Whisper transcription errors — sent to Gemini for
+# validation and auto-correction. New entries are added automatically when
+# Gemini detects a correction (see _save_learned_alias).
+WHISPER_ALIAS_KEYWORDS: set[str] = {
+    "波諾威", "台波", "光盛", "台澳", "連帽", "連貌", "紅塑", "宏塑",
+}
+
+
+def _load_learned_aliases() -> dict[str, str]:
+    """Load auto-saved Whisper corrections from disk."""
+    try:
+        if LEARNED_ALIASES_FILE.exists():
+            return json.loads(LEARNED_ALIASES_FILE.read_text(encoding="utf-8"))
+    except Exception:
+        pass
+    return {}
+
+
+def _save_learned_alias(wrong_keyword: str, correct_code: str) -> None:
+    """Persist a Gemini-confirmed Whisper correction and update runtime dicts."""
+    learned = _load_learned_aliases()
+    if learned.get(wrong_keyword) == correct_code:
+        return  # already saved
+    learned[wrong_keyword] = correct_code
+    try:
+        LEARNED_ALIASES_FILE.write_text(
+            json.dumps(learned, ensure_ascii=False, indent=2), encoding="utf-8"
+        )
+        print(f"  [auto-learn] 新增 Whisper 修正：「{wrong_keyword}」→ {correct_code}", file=sys.stderr)
+    except Exception as e:
+        print(f"  [auto-learn] 儲存失敗: {e}", file=sys.stderr)
+    # Update runtime dicts so the rest of this scan benefits immediately
+    STOCK_DICT[wrong_keyword] = correct_code
+    WHISPER_ALIAS_KEYWORDS.add(wrong_keyword)
+
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Sentiment keywords (financial Chinese)
@@ -1321,6 +1359,13 @@ def build_stock_dict(
         if code not in stock_market:
             stock_market[code] = "TW"
 
+    # ── Auto-learned Whisper corrections (persisted from previous Gemini calls) ─
+    for alias, code in _load_learned_aliases().items():
+        stock_dict[alias] = code
+        WHISPER_ALIAS_KEYWORDS.add(alias)
+        if code not in stock_market:
+            stock_market[code] = "TW"
+
     return stock_dict, code_to_name, stock_market, stock_sector
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -1716,6 +1761,9 @@ def _is_ambiguous_hit(hit: dict) -> bool:
     if hit["stock_code"] in CONTEXT_REQUIRED:
         return False
     kw = hit.get("matched_keyword", "")
+    # Known Whisper transcription errors → always validate + attempt correction
+    if kw in WHISPER_ALIAS_KEYWORDS:
+        return True
     if re.match(r'^[A-Za-z]', kw):
         # 1-2 char English → always ambiguous
         if len(kw) <= 2:
@@ -1734,8 +1782,10 @@ def _is_ambiguous_hit(hit: dict) -> bool:
 
 def filter_ambiguous_hits_with_gemini(hits: list[dict]) -> list[dict]:
     """
-    對短英文 ticker 的命中，批次送 Gemini 確認是否真的在討論該股票。
-    每支影片最多 1 次 Gemini call。沒有 API key 則直接回傳原始 hits。
+    對可疑 hits 批次送 Gemini，同時做兩件事：
+    1. 確認是否真的在討論某支股票（過濾 false positive）
+    2. 偵測 Whisper 語音辨識錯字並自動修正（auto-learn 到 learned_aliases.json）
+    沒有 API key 則直接回傳原始 hits。
     """
     if not GEMINI_API_KEY or not hits:
         return hits
@@ -1754,15 +1804,27 @@ def filter_ambiguous_hits_with_gemini(hits: list[dict]) -> list[dict]:
     for i, h in enumerate(ambiguous_hits, 1):
         lines.append(
             f"{i}. 代號{h['stock_code']}({h['stock_name']})，"
-            f"上下文：「{h['context'][:100]}」"
+            f"匹配詞「{h['matched_keyword']}」，"
+            f"上下文：「{h['context'][:120]}」"
         )
 
     prompt = (
-        "以下是從台灣財經 YouTube/Podcast 內容中比對到的股票，"
-        "請判斷哪些真的在討論該股票（而非一般英文用語、股價數字或加權指數點位）。\n"
-        "注意：4位數股票代碼（如1451、2330）可能是指數點位或個股股價，而非提及該公司本身。\n"
-        "只回傳真正在討論股票的編號 JSON 陣列，例如 [1, 3]。若全部都不是則回傳 []。\n\n"
+        "以下是從台灣財經 YouTube/Podcast 語音辨識文字中比對到的可能股票，"
+        "文字可能含 Whisper 轉錄錯字。\n\n"
+        "請逐一判斷每個條目：\n"
+        "1. 是否真的在討論某支股票（非股價數字、指數點位、一般用語）\n"
+        "2. 匹配詞是否為 Whisper 語音辨識錯字，若是請給出正確股票代碼與名稱\n\n"
+        "條目列表：\n"
         + "\n".join(lines)
+        + "\n\n"
+        "回傳 JSON 陣列（長度必須等於條目數，順序一致）：\n"
+        "[{\"is_stock\": true, \"corrected_code\": null, \"corrected_name\": null}, ...]\n\n"
+        "說明：\n"
+        "- is_stock：此上下文是否真的在討論某支股票\n"
+        "- corrected_code：若匹配詞是 Whisper 錯字且應對應不同股票，填入正確代碼；否則填 null\n"
+        "- corrected_name：對應的正確股票名稱；否則填 null\n\n"
+        "例：「光盛」→ {\"is_stock\": true, \"corrected_code\": \"6442\", \"corrected_name\": \"光聖\"}\n"
+        "    「時間點」→ {\"is_stock\": false, \"corrected_code\": null, \"corrected_name\": null}"
     )
 
     try:
@@ -1771,12 +1833,35 @@ def filter_ambiguous_hits_with_gemini(hits: list[dict]) -> list[dict]:
         if text.startswith("```"):
             text = re.sub(r"^```[a-z]*\n?", "", text)
             text = re.sub(r"\n?```$", "", text)
-        valid_indices = set(json.loads(text))
-        validated = [h for i, h in enumerate(ambiguous_hits, 1) if i in valid_indices]
+        results = json.loads(text)
+        if not isinstance(results, list) or len(results) != len(ambiguous_hits):
+            raise ValueError(f"expected {len(ambiguous_hits)} results, got {len(results)}")
+
+        validated = []
+        for h, r in zip(ambiguous_hits, results):
+            if not r.get("is_stock"):
+                print(f"  [gemini] filtered: {h['stock_code']}({h['matched_keyword']})", file=sys.stderr)
+                continue
+
+            corrected_code = r.get("corrected_code")
+            corrected_name = r.get("corrected_name")
+
+            # Whisper correction: update hit and auto-learn the mapping
+            if corrected_code and corrected_code != h["stock_code"] and corrected_code in CODE_TO_NAME:
+                keyword = h["matched_keyword"]
+                _save_learned_alias(keyword, corrected_code)
+                h = dict(h)
+                h["stock_code"]   = corrected_code
+                h["stock_name"]   = corrected_name or CODE_TO_NAME.get(corrected_code, corrected_code)
+                h["stock_market"] = STOCK_MARKET.get(corrected_code, "TW")
+                h["stock_sector"] = STOCK_SECTOR.get(corrected_code)
+                print(f"  [gemini] corrected: 「{keyword}」→ {corrected_code}({h['stock_name']})", file=sys.stderr)
+
+            validated.append(h)
+
         removed = len(ambiguous_hits) - len(validated)
         if removed > 0:
-            codes = [h["stock_code"] for h in ambiguous_hits if h not in validated]
-            print(f"  [gemini] filtered {removed} ambiguous hits: {codes}", file=sys.stderr)
+            print(f"  [gemini] filtered {removed} ambiguous hits", file=sys.stderr)
         return safe_hits + validated
     except Exception as e:
         print(f"  [gemini] ambiguous filter failed: {e}", file=sys.stderr)
