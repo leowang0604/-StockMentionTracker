@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-08T01:52:18",
+  "updated_at": "2026-04-08T01:59:18",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -6339,7 +6339,7 @@
       "code": "APP",
       "name": "AppLovin",
       "market": "US",
-      "sector": "科技",
+      "sector": "AI軟體",
       "contexts": [
         {
           "video": "EP214 | 台、美股重點一次說，低軌衛星產業動能，光電二極體與台股關係，定穎投控轉型，google新技術與記憶體 ？",
@@ -9568,7 +9568,7 @@
       "code": "CDNS",
       "name": "Cadence Design Systems",
       "market": "US",
-      "sector": "AI晶片",
+      "sector": "企業軟體",
       "contexts": [
         {
           "video": "EP649 | 💌",
@@ -12723,7 +12723,7 @@
       "code": "CHTR",
       "name": "Charter Communications",
       "market": "US",
-      "sector": "高速連接",
+      "sector": "通訊媒體",
       "contexts": [
         {
           "video": "EP649 | 💌",
@@ -13472,11 +13472,10 @@
     {
       "sector": "AI晶片",
       "market": "US",
-      "total_mentions": 47,
+      "total_mentions": 45,
       "stock_codes": [
         "NVDA",
         "AMD",
-        "CDNS",
         "MRVL"
       ]
     },
@@ -13625,15 +13624,6 @@
       ]
     },
     {
-      "sector": "科技",
-      "market": "US",
-      "total_mentions": 10,
-      "stock_codes": [
-        "APP",
-        "SNDK"
-      ]
-    },
-    {
       "sector": "網通",
       "market": "TW",
       "total_mentions": 10,
@@ -13669,6 +13659,14 @@
         "3081",
         "6442",
         "4979"
+      ]
+    },
+    {
+      "sector": "AI軟體",
+      "market": "US",
+      "total_mentions": 8,
+      "stock_codes": [
+        "APP"
       ]
     },
     {
@@ -13825,6 +13823,15 @@
       ]
     },
     {
+      "sector": "企業軟體",
+      "market": "US",
+      "total_mentions": 3,
+      "stock_codes": [
+        "CDNS",
+        "ADBE"
+      ]
+    },
+    {
       "sector": "ETF",
       "market": "TW",
       "total_mentions": 3,
@@ -13889,6 +13896,14 @@
       ]
     },
     {
+      "sector": "科技",
+      "market": "US",
+      "total_mentions": 2,
+      "stock_codes": [
+        "SNDK"
+      ]
+    },
+    {
       "sector": "公用事業",
       "market": "US",
       "total_mentions": 2,
@@ -13939,6 +13954,15 @@
       "stock_codes": [
         "3686",
         "5222"
+      ]
+    },
+    {
+      "sector": "通訊媒體",
+      "market": "US",
+      "total_mentions": 2,
+      "stock_codes": [
+        "SATS",
+        "CHTR"
       ]
     },
     {
@@ -13995,14 +14019,6 @@
       "total_mentions": 1,
       "stock_codes": [
         "COP"
-      ]
-    },
-    {
-      "sector": "企業軟體",
-      "market": "US",
-      "total_mentions": 1,
-      "stock_codes": [
-        "ADBE"
       ]
     },
     {
@@ -14078,27 +14094,11 @@
       ]
     },
     {
-      "sector": "通訊媒體",
-      "market": "US",
-      "total_mentions": 1,
-      "stock_codes": [
-        "SATS"
-      ]
-    },
-    {
       "sector": "生技製藥",
       "market": "US",
       "total_mentions": 1,
       "stock_codes": [
         "MRNA"
-      ]
-    },
-    {
-      "sector": "高速連接",
-      "market": "US",
-      "total_mentions": 1,
-      "stock_codes": [
-        "CHTR"
       ]
     },
     {
