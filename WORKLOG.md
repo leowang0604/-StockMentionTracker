@@ -1,5 +1,45 @@
 # Work Log
 
+## 2026-04-08（commits d585358–f6014c1）
+
+### 一、發現 Gemini quota 爆掉（run #104）
+
+**現象**：run #104（長測試，Whisper 啟用）跑到一半出現大量 `429 RESOURCE_EXHAUSTED`，`quotaId: GenerateRequestsPerDayPerProjectPerModel-FreeTier, limit: 20, model: gemini-2.5-flash-lite`。
+
+**原因**：
+- `gemini-2.5-flash-lite` 的免費 tier 實際上限是 **20 RPD**（先前記憶體誤記為 1000 RPD）
+- 今天同一 UTC 日連跑兩次（#103 短測試用 2 次 + #104 長測試用 ~18 次 = 爆）
+- 原架構是每部影片一次 Gemini call，完整掃描約 18 次，只要當天多跑一次測試就超標
+
+**影響**：#104 仍以 `success` 完成（fallback 為 keep all hits），但 ambiguous hits 未過濾，資料混入 false positive（`MA`、`世界` 等）。這些不會被後續掃描自動覆蓋。
+
+---
+
+### 二、Gemini ambiguous filter 改為跨影片批次（commit d585358）
+
+**修法**：
+- 移除 `_detect_youtube_video` / `_detect_podcast_episode` 裡的逐影片 Gemini 呼叫
+- 新增 `_batch_filter_ambiguous_hits(detected)`：收集一個 channel 所有影片的 ambiguous hits，每批最多 20 個合成一次呼叫，prompt 標註來源影片標題
+- 在 `main()` Pass 1（偵測）與 Pass 2（情緒分析）之間插入 Pass 1.5
+
+**預期效果**：每次完整掃描從 ~18 次 Gemini call 降到 3-4 次，符合 20 RPD 限制。
+
+---
+
+### 三、清理與文件更新（commit f6014c1）
+
+- 刪除已無呼叫端的舊函數 `filter_ambiguous_hits_with_gemini`
+- 修正 `ARCHITECTURE.md` 多處錯誤：workflow 檔名（scan.yml → daily_scan.yml）、Gemini RPD（1500 → 20）、檔案路徑（learned_aliases 在 data/ 不在 scanner/）、Views 清單補全（TrendView、RadarView、SourceManagementView 等）、use_whisper 預設值（false → true）
+
+---
+
+### 待確認
+
+- 明天（UTC 00:00 重置後）觸發短測試，驗證 batch 改動 Gemini 呼叫次數是否降到預期
+- 確認穩定後，可考慮觸發一次全量重掃（days_back=30）清除今天的 false positive 歷史資料
+
+---
+
 ## 2026-04-02 (commit a015a10)
 
 ### 背景
