@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-07T20:13:33",
+  "updated_at": "2026-04-08T01:51:56",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -9514,7 +9514,7 @@
       "code": "CDNS",
       "name": "Cadence Design Systems",
       "market": "US",
-      "sector": "企業軟體",
+      "sector": "AI晶片",
       "contexts": [
         {
           "video": "EP649 | 💌",
@@ -12669,7 +12669,7 @@
       "code": "CHTR",
       "name": "Charter Communications",
       "market": "US",
-      "sector": "通訊媒體",
+      "sector": "高速連接",
       "contexts": [
         {
           "video": "EP649 | 💌",
@@ -13388,10 +13388,11 @@
     {
       "sector": "AI晶片",
       "market": "US",
-      "total_mentions": 45,
+      "total_mentions": 47,
       "stock_codes": [
         "NVDA",
         "AMD",
+        "CDNS",
         "MRVL"
       ]
     },
@@ -13740,15 +13741,6 @@
       ]
     },
     {
-      "sector": "企業軟體",
-      "market": "US",
-      "total_mentions": 3,
-      "stock_codes": [
-        "CDNS",
-        "ADBE"
-      ]
-    },
-    {
       "sector": "ETF",
       "market": "TW",
       "total_mentions": 3,
@@ -13866,15 +13858,6 @@
       ]
     },
     {
-      "sector": "通訊媒體",
-      "market": "US",
-      "total_mentions": 2,
-      "stock_codes": [
-        "SATS",
-        "CHTR"
-      ]
-    },
-    {
       "sector": "電動車充電",
       "market": "US",
       "total_mentions": 1,
@@ -13928,6 +13911,14 @@
       "total_mentions": 1,
       "stock_codes": [
         "COP"
+      ]
+    },
+    {
+      "sector": "企業軟體",
+      "market": "US",
+      "total_mentions": 1,
+      "stock_codes": [
+        "ADBE"
       ]
     },
     {
@@ -14003,11 +13994,27 @@
       ]
     },
     {
+      "sector": "通訊媒體",
+      "market": "US",
+      "total_mentions": 1,
+      "stock_codes": [
+        "SATS"
+      ]
+    },
+    {
       "sector": "生技製藥",
       "market": "US",
       "total_mentions": 1,
       "stock_codes": [
         "MRNA"
+      ]
+    },
+    {
+      "sector": "高速連接",
+      "market": "US",
+      "total_mentions": 1,
+      "stock_codes": [
+        "CHTR"
       ]
     },
     {
@@ -15304,6 +15311,35 @@
       ],
       "analysis_source": "whisper",
       "thumbnail_url": null
+    },
+    {
+      "video_id": "mFvHh5rl4LE",
+      "title": "【理財達人秀】量縮軋空手？ 台積法說能救？ 半導體「超」能力 小資雙吃法｜李兆華、林漢偉 2026.04.07 part6",
+      "channel": "東森財經",
+      "date": "2026-04-08",
+      "stocks_found": [
+        "2330"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/mFvHh5rl4LE/mqdefault.jpg"
+    },
+    {
+      "video_id": "hMswUVwtx50",
+      "title": "【理財達人秀】PCB缺料漲價 換股攻略！ 揭主力動向 賣高低接權證？｜李兆華、權證小哥 2026.04.07 part5",
+      "channel": "東森財經",
+      "date": "2026-04-08",
+      "stocks_found": [],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/hMswUVwtx50/mqdefault.jpg"
+    },
+    {
+      "video_id": "npqByE9kMFc",
+      "title": "【理財達人秀】川普最後通牒 短空長多？ ABF、網通、CoPoS 內資掃貨｜李兆華、黃豐凱 2026.04.07 part4",
+      "channel": "東森財經",
+      "date": "2026-04-07",
+      "stocks_found": [],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/npqByE9kMFc/mqdefault.jpg"
     }
   ]
 }
