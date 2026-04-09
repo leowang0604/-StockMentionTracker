@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-09T23:55:04",
+  "updated_at": "2026-04-09T23:55:06",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -8236,9 +8236,20 @@
           "sentiment": "bullish",
           "sentiment_score": 1.0,
           "video_url": ""
+        },
+        {
+          "video": "EP216 | 台、美股重點一次說，台積電法說會前瞻，半導體檢測與光學材料漲價，低軌衛星台廠營收占比",
+          "channel": "韭菜畢業班",
+          "date": "2026-04-08",
+          "text": "EP216 | 台、美股重點一次說，台積電法說會前瞻，半導體檢測與光學材料漲價，低軌衛星台廠營收占比 全新氣氛值選股軟體 : https://cmy.tw/00ArN8     IG  https://www.instagram.com/unclewhereareyou     廣播專區  https://t.me/uncle_stock     - 低軌衛星台廠營收占比  - 台積電法說會前瞻  -",
+          "matched_keyword": "全新",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
         }
       ],
-      "total_mentions": 6,
+      "total_mentions": 7,
       "sentiment_score": 1.0,
       "daily": {
         "2026-03-29": {
@@ -8261,6 +8272,13 @@
           "bearish": 0,
           "neutral": 1,
           "sentiment_score": 1.0
+        },
+        "2026-04-08": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
         }
       }
     },
@@ -15714,6 +15732,36 @@
           "sentiment_score": 1.0
         }
       }
+    },
+    {
+      "code": "2731",
+      "name": "雄獅",
+      "market": "TW",
+      "sector": "觀光餐旅",
+      "contexts": [
+        {
+          "video": "EP216 | 台、美股重點一次說，台積電法說會前瞻，半導體檢測與光學材料漲價，低軌衛星台廠營收占比",
+          "channel": "韭菜畢業班",
+          "date": "2026-04-08",
+          "text": "－－以下為 SoundOn 動態廣告－－－－  全台矚目的淡江大橋即將完工，現在就搶先包船用最美視角近距離見證歷史！  精選11條特色路線，最低只要299元，博物館深度巡禮，含專業導覽與手作體驗，讓您輕鬆徜徉文史魅力!  平假日均出發，樂齡慢遊、親子同遊都適合，這麼便宜了還不趕快報名。  立即搜尋「雄獅淡水299」或上「與橋同行 淡八共鳴」官網查詢! https://sofm.pse.is/8x3bub  -- Hosting provided by SoundOn",
+          "matched_keyword": "雄獅",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-04-08": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
     }
   ],
   "sectors_ranking": [
@@ -15943,6 +15991,17 @@
       ]
     },
     {
+      "sector": "網通",
+      "market": "TW",
+      "total_mentions": 11,
+      "stock_codes": [
+        "2455",
+        "8011",
+        "3025",
+        "6561"
+      ]
+    },
+    {
       "sector": "記憶體IC",
       "market": "TW",
       "total_mentions": 10,
@@ -15966,17 +16025,6 @@
       "stock_codes": [
         "2383",
         "6213"
-      ]
-    },
-    {
-      "sector": "網通",
-      "market": "TW",
-      "total_mentions": 10,
-      "stock_codes": [
-        "2455",
-        "8011",
-        "3025",
-        "6561"
       ]
     },
     {
@@ -16547,6 +16595,14 @@
       "total_mentions": 1,
       "stock_codes": [
         "1432"
+      ]
+    },
+    {
+      "sector": "觀光餐旅",
+      "market": "TW",
+      "total_mentions": 1,
+      "stock_codes": [
+        "2731"
       ]
     }
   ],
