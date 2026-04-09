@@ -2355,6 +2355,8 @@ def _batch_filter_ambiguous_hits(detected: list[tuple], history: dict | None = N
 
                 corrected_code = r.get("corrected_code")
                 corrected_name = r.get("corrected_name")
+                if corrected_code and corrected_code != h["stock_code"] and corrected_code not in CODE_TO_NAME:
+                    print(f"  [gemini] corrected code unknown: 「{h['matched_keyword']}」→ {corrected_code} (not in dict)", file=sys.stderr)
                 if corrected_code and corrected_code != h["stock_code"] and corrected_code in CODE_TO_NAME:
                     keyword = h["matched_keyword"]
                     _save_learned_alias(keyword, corrected_code)
