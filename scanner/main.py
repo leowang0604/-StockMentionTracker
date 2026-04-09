@@ -467,6 +467,8 @@ _US_STOCKS_DATA: list[tuple[list[str], str, str, str]] = [
     (["波克夏", "Berkshire"],                           "BRK.B", "Berkshire",          "金融"),
     (["Visa", "VISA", "V"],                            "V",     "Visa",               "金融"),
     (["Mastercard", "MA"],                             "MA",    "Mastercard",         "金融"),
+    # ── 醫療保險 ────────────────────────────────────────────────────────────────
+    (["聯合健康", "UnitedHealth", "UNH"],              "UNH",   "UnitedHealth",       "醫療"),
     # ── 生技製藥 ────────────────────────────────────────────────────────────────
     (["輝瑞", "Pfizer", "PFE"],                        "PFE",   "Pfizer",             "生技製藥"),
     (["Moderna", "莫德納", "MRNA"],                    "MRNA",  "Moderna",            "生技製藥"),
@@ -1422,6 +1424,7 @@ CONTEXT_REQUIRED: dict[str, list[str]] = {
 # If ANY of these strings appear in the context, the match is rejected.
 CONTEXT_FORBIDDEN: dict[str, list[str]] = {
     "2327": ["中國巨石"],  # "國巨" inside "中國巨石" is not Yageo
+    "4129": ["健康"],      # "聯合健康" = UnitedHealth (UNH)，不是台股聯合4129
 }
 
 # Custom regex patterns for keywords that need lookbehind/lookahead to avoid substring matches.
