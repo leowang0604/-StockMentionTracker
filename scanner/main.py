@@ -1833,6 +1833,23 @@ def _batch_channel_sentiments(
 # Short English keywords that could be common words (need Gemini validation)
 _AMBIGUOUS_TICKER_KWS = {kw for kw in [] }  # built dynamically below
 
+
+def _levenshtein(a: str, b: str) -> int:
+    """Compute edit distance between two strings."""
+    if a == b:
+        return 0
+    la, lb = len(a), len(b)
+    if la == 0: return lb
+    if lb == 0: return la
+    prev = list(range(lb + 1))
+    for i, ca in enumerate(a, 1):
+        curr = [i] + [0] * lb
+        for j, cb in enumerate(b, 1):
+            curr[j] = min(prev[j] + 1, curr[j-1] + 1, prev[j-1] + (ca != cb))
+        prev = curr
+    return prev[lb]
+
+
 def _is_ambiguous_hit(hit: dict) -> bool:
     """判斷這個 hit 是否需要 Gemini 驗證（短詞可能誤匹配子字串）"""
     # Already handled by CONTEXT_REQUIRED fast-path in recognize_stocks()
@@ -1856,6 +1873,54 @@ def _is_ambiguous_hit(hit: dict) -> bool:
     # Chinese company names skip Gemini validation; specific false-positive cases
     # are handled via KEYWORD_PATTERN_OVERRIDE / CONTEXT_FORBIDDEN instead.
     return False
+
+
+# Max suspicious Chinese hits sent to Gemini per scan (quota guard)
+_MAX_SUSPICIOUS_CHINESE = 30
+
+
+def _suspicious_chinese_hits(
+    detected: list[tuple],
+    history_counts: dict[str, int],
+    learned: dict[str, str],
+) -> list[tuple[int, int, dict, str, int]]:
+    """
+    Scan Whisper-sourced hits for suspicious Chinese keywords that may be
+    Whisper transcription errors. Returns list of
+    (d_idx, h_idx, hit, title, edit_dist), capped at _MAX_SUSPICIOUS_CHINESE,
+    sorted by edit distance ascending (most likely errors first).
+    """
+    candidates: list[tuple[int, int, dict, str, int]] = []
+    for d_idx, (v_entry, hits, asrc, vurl) in enumerate(detected):
+        if asrc != "whisper":
+            continue  # only Whisper transcripts can have transcription errors
+        title = v_entry.get("title", "")
+        for h_idx, h in enumerate(hits):
+            kw = h.get("matched_keyword", "")
+            # Skip non-Chinese keywords (handled elsewhere)
+            if not kw or re.match(r'^[A-Za-z0-9]', kw):
+                continue
+            # Skip already-known Whisper errors (handled by _is_ambiguous_hit)
+            if kw in WHISPER_ALIAS_KEYWORDS:
+                continue
+            # Skip if keyword is already in learned aliases
+            if kw in learned:
+                continue
+            # Skip if keyword exactly matches the stock name (no transcription error)
+            if kw == h.get("stock_name", ""):
+                continue
+            # Skip if stock is well-established in history (> 5 mentions past 30d)
+            if history_counts.get(h["stock_code"], 0) > 5:
+                continue
+            # Compute edit distance between keyword and stock name
+            dist = _levenshtein(kw, h.get("stock_name", ""))
+            # Suspicious: close to stock name (possible error) OR brand new stock
+            if dist <= 2 or h["stock_code"] not in history_counts:
+                candidates.append((d_idx, h_idx, h, title, dist))
+
+    # Sort by edit distance ascending (most likely errors first), cap at limit
+    candidates.sort(key=lambda x: x[4])
+    return candidates[:_MAX_SUSPICIOUS_CHINESE]
 
 
 def analyze_sentiment(text: str) -> tuple[str, float]:
@@ -2169,11 +2234,13 @@ def _detect_youtube_video(
 _AMBIGUOUS_BATCH_SIZE = 20  # max ambiguous hits per Gemini call
 
 
-def _batch_filter_ambiguous_hits(detected: list[tuple]) -> list[tuple]:
+def _batch_filter_ambiguous_hits(detected: list[tuple], history: dict | None = None) -> list[tuple]:
     """
     Cross-video ambiguous hit filtering for one source.
     Instead of one Gemini call per video, batches all ambiguous hits
     (max _AMBIGUOUS_BATCH_SIZE per call) across all videos in the source.
+    Also validates suspicious Chinese hits from Whisper sources that may be
+    transcription errors (edit distance ≤ 2 or brand-new stocks).
     Returns updated detected list with hits filtered/corrected.
     """
     if not GEMINI_API_KEY:
@@ -2183,6 +2250,25 @@ def _batch_filter_ambiguous_hits(detected: list[tuple]) -> list[tuple]:
     if not model:
         return detected
 
+    # Build history lookup: code → mention count in past 30 days
+    history_counts: dict[str, int] = {}
+    if history:
+        cutoff_ts = datetime.now(timezone.utc).timestamp() - 30 * 86400
+        def _date_ts(d: str) -> float:
+            try:
+                return datetime.fromisoformat(d).replace(tzinfo=timezone.utc).timestamp()
+            except Exception:
+                return 0.0
+        for stock in history.get("stocks_ranking", []):
+            code = stock.get("code", "")
+            count = sum(
+                1 for c in stock.get("contexts", [])
+                if _date_ts(c.get("date", "")) >= cutoff_ts
+            )
+            history_counts[code] = count
+
+    learned = _load_learned_aliases()
+
     # Collect all ambiguous hits with their locations
     # Each entry: (detected_idx, hit_idx, hit, video_title)
     pending: list[tuple] = []
@@ -2191,6 +2277,16 @@ def _batch_filter_ambiguous_hits(detected: list[tuple]) -> list[tuple]:
         for h_idx, h in enumerate(hits):
             if _is_ambiguous_hit(h):
                 pending.append((d_idx, h_idx, h, title))
+
+    # Add suspicious Chinese hits from Whisper sources
+    suspicious = _suspicious_chinese_hits(detected, history_counts, learned)
+    existing_keys = {(d, h) for d, h, _, _ in pending}
+    for d_idx, h_idx, h, title, dist in suspicious:
+        if (d_idx, h_idx) not in existing_keys:
+            pending.append((d_idx, h_idx, h, title))
+            existing_keys.add((d_idx, h_idx))
+    if suspicious:
+        print(f"  [gemini] {len(suspicious)} suspicious Chinese hits queued for Whisper validation", file=sys.stderr)
 
     if not pending:
         return detected
@@ -2788,7 +2884,7 @@ def main() -> None:
                 detected.append((v_entry, hits, asrc, None))
 
         # ── Pass 1.5: batch Gemini ambiguous filter across all videos ────
-        detected = _batch_filter_ambiguous_hits(detected)
+        detected = _batch_filter_ambiguous_hits(detected, history=history)
 
         # ── Pass 2: ONE batch Gemini sentiment call per channel ───────────
         ep_sentiment_input = [(hits, asrc) for _, hits, asrc, _ in detected]
