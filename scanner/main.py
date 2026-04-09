@@ -1912,10 +1912,17 @@ def _suspicious_chinese_hits(
             # Skip if stock is well-established in history (> 5 mentions past 30d)
             if history_counts.get(h["stock_code"], 0) > 5:
                 continue
-            # Compute edit distance between keyword and stock name
-            dist = _levenshtein(kw, h.get("stock_name", ""))
+            stock_name = h.get("stock_name", "")
+            # Edit distance check only when both keyword and name are ≥ 3 chars;
+            # 2-char strings have dist ≤ 2 for almost anything → too noisy
+            if len(kw) >= 3 and len(stock_name) >= 3:
+                dist = _levenshtein(kw, stock_name)
+                close_match = dist <= 2
+            else:
+                dist = 0
+                close_match = False
             # Suspicious: close to stock name (possible error) OR brand new stock
-            if dist <= 2 or h["stock_code"] not in history_counts:
+            if close_match or h["stock_code"] not in history_counts:
                 candidates.append((d_idx, h_idx, h, title, dist))
 
     # Sort by edit distance ascending (most likely errors first), cap at limit
