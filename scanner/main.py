@@ -975,6 +975,7 @@ def enrich_us_stocks_with_gemini(
         "請回傳 JSON 陣列，每筆格式：\n"
         "[{\"ticker\": \"TICKER\", \"name\": \"英文公司名\", "
         "\"sector\": \"族群\", \"keywords\": [\"中文名\", \"別名\", \"TICKER\"]}, ...]\n"
+        "keywords 必須是公司名稱、品牌名或股票代號，不可包含 ETF、IPO、AI 等通用金融/科技術語。\n"
         "只回傳 JSON，不要有多餘文字。列出 30~50 支。"
     )
 
@@ -1296,6 +1297,12 @@ def build_stock_dict(
         stock_sector[ticker] = info["sector"]
 
     # ── US stocks (Gemini-enriched extra) ─────────────────────────────────
+    # Hard blocklist: generic financial/tech terms Gemini may suggest but are NOT stock identifiers
+    _GENERIC_FINANCE_TERMS = {
+        "ETF", "IPO", "EPS", "PE", "PB", "ROE", "ROA", "AUM", "NAV",
+        "GDP", "CPI", "Fed", "ECB", "IMF", "SPX", "VIX", "USD", "EUR",
+        "AI", "API", "ESG",
+    }
     for kws, ticker, name, sector in (extra_us_stocks or []):
         if ticker not in code_to_name:
             code_to_name[ticker] = name
@@ -1306,6 +1313,8 @@ def build_stock_dict(
                 continue  # skip non-ASCII (Chinese) aliases — too many false positives
             if len(kw) < 2:
                 continue  # single-letter keywords are too noisy
+            if kw.upper() in _GENERIC_FINANCE_TERMS:
+                continue  # skip generic terms that cause mass false positives
             if kw not in stock_dict:  # don't override hardcoded entries
                 stock_dict[kw] = ticker
 
