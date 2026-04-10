@@ -2486,7 +2486,11 @@ def _batch_filter_ambiguous_hits(detected: list[tuple], history: dict | None = N
                 corrected_name = r.get("corrected_name")
                 if corrected_code and corrected_code != h["stock_code"] and corrected_code not in CODE_TO_NAME:
                     print(f"  [gemini] corrected code unknown: 「{h['matched_keyword']}」→ {corrected_code} (not in dict)", file=sys.stderr)
-                if corrected_code and corrected_code != h["stock_code"] and corrected_code in CODE_TO_NAME:
+                # Block correction when keyword IS the stock's own numeric code — Gemini's role
+                # here is only to validate (price vs. stock), not to remap codes.
+                # e.g. "5289" matched as 宜鼎 should never be "corrected" to 宏匯(2349).
+                kw_is_own_code = (h["matched_keyword"] == h["stock_code"])
+                if corrected_code and corrected_code != h["stock_code"] and corrected_code in CODE_TO_NAME and not kw_is_own_code:
                     keyword = h["matched_keyword"]
                     _save_learned_alias(keyword, corrected_code)
                     new_h = dict(h)
@@ -2830,10 +2834,15 @@ def merge_into_history(
     # get replaced by the higher-quality re-scan results below.
     merged_stocks: dict[str, dict] = {}
     for s in history.get("stocks_ranking", []):
-        kept_contexts = [
-            c for c in s["contexts"]
-            if c.get("video", "") not in upgraded_titles
-        ]
+        kept_contexts = []
+        for c in s["contexts"]:
+            if c.get("video", "") in upgraded_titles:
+                continue
+            # Backfill matched_keyword for old contexts written before the field existed
+            if not c.get("matched_keyword"):
+                c = dict(c)
+                c["matched_keyword"] = s["code"]
+            kept_contexts.append(c)
         merged_stocks[s["code"]] = {
             "code":     s["code"],
             "name":     s["name"],
