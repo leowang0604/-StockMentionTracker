@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-09T23:55:17",
+  "updated_at": "2026-04-10T03:06:10",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -10329,7 +10329,7 @@
       "code": "CCL",
       "name": "Carnival",
       "market": "US",
-      "sector": "消費",
+      "sector": "消費電子",
       "contexts": [
         {
           "video": "EP213 | 台、美股重點一次說，台股反彈怎麼看？美股極度恐慌後的觀察重點，南俊國際與滑軌需求，設備股後勢",
@@ -14519,7 +14519,7 @@
       "code": "CHTR",
       "name": "Charter Communications",
       "market": "US",
-      "sector": "網路",
+      "sector": "串流媒體",
       "contexts": [
         {
           "video": "EP649 | 💌",
@@ -15929,19 +15929,20 @@
       ]
     },
     {
+      "sector": "消費電子",
+      "market": "US",
+      "total_mentions": 33,
+      "stock_codes": [
+        "AAPL",
+        "CCL"
+      ]
+    },
+    {
       "sector": "半導體",
       "market": "US",
       "total_mentions": 30,
       "stock_codes": [
         "INTC"
-      ]
-    },
-    {
-      "sector": "消費電子",
-      "market": "US",
-      "total_mentions": 30,
-      "stock_codes": [
-        "AAPL"
       ]
     },
     {
@@ -16163,6 +16164,16 @@
       ]
     },
     {
+      "sector": "串流媒體",
+      "market": "US",
+      "total_mentions": 7,
+      "stock_codes": [
+        "NFLX",
+        "DIS",
+        "CHTR"
+      ]
+    },
+    {
       "sector": "光電業",
       "market": "TW",
       "total_mentions": 7,
@@ -16193,15 +16204,6 @@
       ]
     },
     {
-      "sector": "串流媒體",
-      "market": "US",
-      "total_mentions": 6,
-      "stock_codes": [
-        "NFLX",
-        "DIS"
-      ]
-    },
-    {
       "sector": "電子零組件",
       "market": "TW",
       "total_mentions": 6,
@@ -16209,16 +16211,6 @@
         "3264",
         "3372",
         "6182"
-      ]
-    },
-    {
-      "sector": "消費",
-      "market": "US",
-      "total_mentions": 5,
-      "stock_codes": [
-        "CCL",
-        "ABNB",
-        "NKE"
       ]
     },
     {
@@ -16442,6 +16434,15 @@
       ]
     },
     {
+      "sector": "消費",
+      "market": "US",
+      "total_mentions": 2,
+      "stock_codes": [
+        "ABNB",
+        "NKE"
+      ]
+    },
+    {
       "sector": "網路安全",
       "market": "US",
       "total_mentions": 2,
@@ -16579,14 +16580,6 @@
       "total_mentions": 1,
       "stock_codes": [
         "MRNA"
-      ]
-    },
-    {
-      "sector": "網路",
-      "market": "US",
-      "total_mentions": 1,
-      "stock_codes": [
-        "CHTR"
       ]
     },
     {
