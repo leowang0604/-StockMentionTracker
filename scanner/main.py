@@ -782,13 +782,18 @@ def fetch_tw_industry_map() -> dict[str, str]:
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# ETF full name fetch — TWSE opendata + TPEX ETF list
+# ETF full name fetch — TWSE opendata + TWSE domestic + TWSE foreign
 # ─────────────────────────────────────────────────────────────────────────────
 
 def fetch_etf_full_names() -> dict[str, str]:
-    """從 TWSE + TPEX 官方 API 抓取 ETF 完整中文名稱。
+    """從 TWSE 官方 API 抓取 ETF 完整中文名稱（國內型 + 海外型）。
     Returns dict: code → full_name（例：{"00878": "國泰永續高股息"}）。
     快取 7 天，失敗時回傳空 dict（caller fallback 到 stock list 內建名稱）。
+
+    資料來源優先順序：
+    1. TWSE opendata getETFInfo（GHA 環境可能 DNS 失敗，允許 fallback）
+    2. TWSE rwd domestic（國內型 ETF，穩定可用）
+    3. TWSE rwd foreign（海外型 ETF，穩定可用）
     """
     # ── 讀快取 ──────────────────────────────────────────────────────────────
     if ETF_NAMES_CACHE_FILE.exists():
@@ -820,39 +825,26 @@ def fetch_etf_full_names() -> dict[str, str]:
     except Exception as e:
         print(f"  [etf_names] TWSE opendata failed: {e}", file=sys.stderr)
 
-    # ── 2. TWSE domestic ETF list（fallback，穩定可用）────────────────────────
-    try:
-        resp = requests.get(
-            "https://www.twse.com.tw/rwd/zh/ETF/domestic",
-            timeout=15, headers={"Accept": "application/json"},
-        )
-        resp.raise_for_status()
-        for row in resp.json().get("data", []):
-            if len(row) < 2:
-                continue
-            code, name = str(row[0]).strip(), str(row[1]).strip()
-            if code and name and code not in mapping:
-                mapping[code] = name
-        print(f"  [etf_names] TWSE domestic total: {len(mapping)} ETFs", file=sys.stderr)
-    except Exception as e:
-        print(f"  [etf_names] TWSE domestic failed: {e}", file=sys.stderr)
-
-    # ── 3. TPEX ETF list（上櫃 ETF）──────────────────────────────────────────
-    try:
-        resp = requests.get(
-            "https://www.tpex.org.tw/openapi/v1/tpex_etf_list",
-            timeout=15, headers={"Accept": "application/json"},
-        )
-        resp.raise_for_status()
-        before = len(mapping)
-        for item in resp.json():
-            code = (item.get("SecuritiesCode") or item.get("Code") or "").strip()
-            name = (item.get("CompanyName") or item.get("Name") or "").strip()
-            if code and name and code not in mapping:
-                mapping[code] = name
-        print(f"  [etf_names] TPEX: +{len(mapping) - before} ETFs", file=sys.stderr)
-    except Exception as e:
-        print(f"  [etf_names] TPEX failed (expected if blocked): {e}", file=sys.stderr)
+    # ── 2. TWSE rwd ETF list（domestic + foreign，穩定可用）──────────────────
+    for etf_type in ("domestic", "foreign"):
+        try:
+            resp = requests.get(
+                f"https://www.twse.com.tw/rwd/zh/ETF/{etf_type}",
+                timeout=15, headers={"Accept": "application/json"},
+            )
+            resp.raise_for_status()
+            before = len(mapping)
+            for row in resp.json().get("data", []):
+                if len(row) < 2:
+                    continue
+                code, name = str(row[0]).strip(), str(row[1]).strip()
+                # Foreign ETF rows sometimes have "(新臺幣)" or "(人民幣)" appended to code
+                code = code.replace("(新臺幣)", "").replace("(人民幣)", "").strip()
+                if code and name and code not in mapping:
+                    mapping[code] = name
+            print(f"  [etf_names] TWSE {etf_type}: +{len(mapping) - before} ETFs", file=sys.stderr)
+        except Exception as e:
+            print(f"  [etf_names] TWSE {etf_type} failed: {e}", file=sys.stderr)
 
     # ── 儲存快取 ─────────────────────────────────────────────────────────────
     if mapping:
