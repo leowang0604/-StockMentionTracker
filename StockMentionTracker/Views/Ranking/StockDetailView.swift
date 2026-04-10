@@ -362,7 +362,7 @@ struct SentimentBar: View {
                 Text(label)
                     .font(.caption.bold())
                     .foregroundStyle(barColor)
-                Text(String(format: "%.0f%%", score * 100))
+                Text(String(format: "%.0f%%", displayPercentage))
                     .font(.caption.monospacedDigit())
                     .foregroundStyle(.secondary)
             }
@@ -382,5 +382,12 @@ struct SentimentBar: View {
         if score > 0.6 { return .green }
         if score < 0.4 { return .red }
         return .secondary
+    }
+
+    /// 顯示「朝該方向的強度」：看多 → score%；看空 → (1-score)%；中性 → 50%
+    private var displayPercentage: Double {
+        if score > 0.6 { return score * 100 }
+        if score < 0.4 { return (1 - score) * 100 }
+        return 50
     }
 }
