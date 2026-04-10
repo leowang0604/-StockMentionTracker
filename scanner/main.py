@@ -2635,6 +2635,8 @@ def _detect_podcast_episode(
     text: str | None = None
     analysis_source  = "titleAndDescription"
 
+    if USE_WHISPER and not audio_url:
+        print(f"  ⚠ {title[:40]!r} — no audio_url, skipping Whisper")
     if USE_WHISPER and audio_url:
         print(f"  ⏳ {title[:40]!r} — Whisper…")
         with tempfile.TemporaryDirectory() as tmpdir:
