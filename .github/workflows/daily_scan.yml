@@ -111,6 +111,7 @@ jobs:
           git add data/tw_industry_cache.json 2>/dev/null || true
           git add data/etf_names_cache.json 2>/dev/null || true
           git add data/gemini_usage.json 2>/dev/null || true
+          git add data/learned_aliases.json 2>/dev/null || true
           echo "=== staged diff stat ==="
           git diff --staged --stat
           if git diff --staged --quiet; then
