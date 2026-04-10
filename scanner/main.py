@@ -49,6 +49,7 @@ SOURCES_FILE     = Path(__file__).parent / "sources.json"
 OUTPUT_FILE      = Path(__file__).parent.parent / "data" / "latest.json"
 STOCKS_CACHE_FILE    = Path(__file__).parent.parent / "data" / "stocks.json"
 TW_INDUSTRY_CACHE_FILE = Path(__file__).parent.parent / "data" / "tw_industry_cache.json"
+ETF_NAMES_CACHE_FILE   = Path(__file__).parent.parent / "data" / "etf_names_cache.json"
 LEARNED_ALIASES_FILE = Path(__file__).parent.parent / "data" / "learned_aliases.json"
 GEMINI_USAGE_FILE    = Path(__file__).parent.parent / "data" / "gemini_usage.json"
 
@@ -781,6 +782,93 @@ def fetch_tw_industry_map() -> dict[str, str]:
 
 
 # ─────────────────────────────────────────────────────────────────────────────
+# ETF full name fetch — TWSE opendata + TPEX ETF list
+# ─────────────────────────────────────────────────────────────────────────────
+
+def fetch_etf_full_names() -> dict[str, str]:
+    """從 TWSE + TPEX 官方 API 抓取 ETF 完整中文名稱。
+    Returns dict: code → full_name（例：{"00878": "國泰永續高股息"}）。
+    快取 7 天，失敗時回傳空 dict（caller fallback 到 stock list 內建名稱）。
+    """
+    # ── 讀快取 ──────────────────────────────────────────────────────────────
+    if ETF_NAMES_CACHE_FILE.exists():
+        age_days = (datetime.now(timezone.utc).timestamp() - ETF_NAMES_CACHE_FILE.stat().st_mtime) / 86400
+        if age_days < 7:
+            try:
+                with open(ETF_NAMES_CACHE_FILE, encoding="utf-8") as f:
+                    data = json.load(f)
+                print(f"  [etf_names] Using cache ({data.get('count', 0)} ETFs)", file=sys.stderr)
+                return data.get("mapping", {})
+            except Exception:
+                pass
+
+    mapping: dict[str, str] = {}
+
+    # ── 1. TWSE opendata ETF info ────────────────────────────────────────────
+    try:
+        resp = requests.get(
+            "https://opendata.twse.com.tw/v1/ETF/getETFInfo",
+            timeout=15, headers={"Accept": "application/json"},
+        )
+        resp.raise_for_status()
+        for item in resp.json():
+            code = (item.get("ETFid") or item.get("Code") or item.get("No") or "").strip()
+            name = (item.get("ChineseName") or item.get("ETFName") or item.get("Name") or "").strip()
+            if code and name:
+                mapping[code] = name
+        print(f"  [etf_names] TWSE opendata: {len(mapping)} ETFs", file=sys.stderr)
+    except Exception as e:
+        print(f"  [etf_names] TWSE opendata failed: {e}", file=sys.stderr)
+
+    # ── 2. TWSE domestic ETF list（fallback，穩定可用）────────────────────────
+    try:
+        resp = requests.get(
+            "https://www.twse.com.tw/rwd/zh/ETF/domestic",
+            timeout=15, headers={"Accept": "application/json"},
+        )
+        resp.raise_for_status()
+        for row in resp.json().get("data", []):
+            if len(row) < 2:
+                continue
+            code, name = str(row[0]).strip(), str(row[1]).strip()
+            if code and name and code not in mapping:
+                mapping[code] = name
+        print(f"  [etf_names] TWSE domestic total: {len(mapping)} ETFs", file=sys.stderr)
+    except Exception as e:
+        print(f"  [etf_names] TWSE domestic failed: {e}", file=sys.stderr)
+
+    # ── 3. TPEX ETF list（上櫃 ETF）──────────────────────────────────────────
+    try:
+        resp = requests.get(
+            "https://www.tpex.org.tw/openapi/v1/tpex_etf_list",
+            timeout=15, headers={"Accept": "application/json"},
+        )
+        resp.raise_for_status()
+        before = len(mapping)
+        for item in resp.json():
+            code = (item.get("SecuritiesCode") or item.get("Code") or "").strip()
+            name = (item.get("CompanyName") or item.get("Name") or "").strip()
+            if code and name and code not in mapping:
+                mapping[code] = name
+        print(f"  [etf_names] TPEX: +{len(mapping) - before} ETFs", file=sys.stderr)
+    except Exception as e:
+        print(f"  [etf_names] TPEX failed (expected if blocked): {e}", file=sys.stderr)
+
+    # ── 儲存快取 ─────────────────────────────────────────────────────────────
+    if mapping:
+        ETF_NAMES_CACHE_FILE.parent.mkdir(parents=True, exist_ok=True)
+        with open(ETF_NAMES_CACHE_FILE, "w", encoding="utf-8") as f:
+            json.dump({
+                "updated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S"),
+                "count": len(mapping),
+                "mapping": mapping,
+            }, f, ensure_ascii=False, indent=2)
+        print(f"  [etf_names] Saved {len(mapping)} entries", file=sys.stderr)
+
+    return mapping
+
+
+# ─────────────────────────────────────────────────────────────────────────────
 # Dynamic stock list — TWSE + TPEx OpenAPI
 # ─────────────────────────────────────────────────────────────────────────────
 
@@ -1253,6 +1341,7 @@ def build_stock_dict(
     extra_us_stocks: list[tuple[list[str], str, str, str]] | None = None,
     dynamic_us: list[dict] | None = None,
     tw_industry_map: dict[str, str] | None = None,
+    etf_full_names: dict[str, str] | None = None,
 ) -> tuple[dict[str, str], dict[str, str], dict[str, str], dict[str, str]]:
     """
     從台股清單 + US built-in dict 建立：
@@ -1293,6 +1382,57 @@ def build_stock_dict(
                 break
         return aliases
 
+    # ETF 發行商前綴（剝離後得到口語縮稱）
+    _ETF_ISSUER_PREFIXES = [
+        "主動",  # 主動型 ETF 前綴，最優先剝離
+        "元大", "富邦", "國泰", "永豐", "兆豐", "第一金", "群益",
+        "中信", "凱基", "復華", "新光", "台新", "統一", "野村",
+        "大華", "安聯", "聯邦", "玉山", "華南永昌", "華南", "摩根", "FT",
+    ]
+
+    def _etf_aliases(name: str) -> list[str]:
+        """從 ETF 中文名稱產生口語縮稱。
+        例：「主動群益科技創新」→ ["群益科技創新", "科技創新"]
+            「國泰永續高股息」  → ["永續高股息"]
+            「復華台灣科技優息」→ ["台灣科技優息", "科技優息"]
+        最短 4 字，避免太短誤判。
+        """
+        aliases: list[str] = []
+        # 去掉備註，如「(原簡稱:群益台灣ESG低碳)」
+        clean = re.sub(r"\(原簡稱[：:][^)]+\)", "", name).strip()
+
+        # 1. 剝離「主動」前綴
+        if clean.startswith("主動"):
+            after_active = clean[2:]
+            if len(after_active) >= 4:
+                aliases.append(after_active)
+            clean = after_active  # 繼續從剝離後的名稱處理
+
+        # 2. 剝離發行商前綴
+        for prefix in _ETF_ISSUER_PREFIXES:
+            if prefix == "主動":
+                continue
+            if clean.startswith(prefix):
+                core = clean[len(prefix):]
+                if len(core) >= 4:
+                    aliases.append(core)
+                # 3. 進一步剝離「台灣」/「臺灣」
+                for tw in ("台灣", "臺灣"):
+                    if core.startswith(tw):
+                        deeper = core[len(tw):]
+                        if len(deeper) >= 4:
+                            aliases.append(deeper)
+                        break
+                break
+
+        return aliases
+
+    def _register_etf_aliases(code: str, name: str) -> None:
+        """為一個 ETF 代碼/名稱組合，把所有 alias 加入 stock_dict。"""
+        for alias in _etf_aliases(name):
+            if alias not in stock_dict:
+                stock_dict[alias] = code
+
     # ── Taiwan stocks (TWSE / TPEx) ───────────────────────────────────────
     for s in stocks:
         code = s["code"]
@@ -1309,6 +1449,16 @@ def build_stock_dict(
         for short in _short_aliases(name):
             if short not in stock_dict:  # don't override existing entries
                 stock_dict[short] = code
+        # For ETF codes: also generate issuer-stripped spoken aliases
+        if re.match(r"^0\d{3,5}[A-Z]?$", code):
+            _register_etf_aliases(code, name)
+            # Also use full official name from ETF names cache if different
+            if etf_full_names and code in etf_full_names:
+                full_name = etf_full_names[code]
+                if full_name != name:
+                    if full_name not in stock_dict:
+                        stock_dict[full_name] = code
+                    _register_etf_aliases(code, full_name)
 
     # ── US stocks (built-in) — added BEFORE aliases so aliases can override ─
     for kw, ticker in US_KEYWORD_TO_CODE.items():
@@ -1641,7 +1791,7 @@ def _get_gemini_model():
 
 # ── Gemini rate limiting & usage monitoring ───────────────────────────────────
 _GEMINI_RPM_LIMIT      = 12    # stay under free-tier 15 RPM
-_GEMINI_RPD_WARN_AT    = 1200  # warn at 80% of 1500 RPD free-tier limit
+_GEMINI_RPD_WARN_AT    = 16    # warn at 80% of 20 RPD free-tier limit (gemini-2.5-flash-lite)
 _GEMINI_CALLS_WINDOW:  list[float] = []  # timestamps within last 60 s
 _GEMINI_CALLS_SESSION: int = 0           # total calls this scan run
 
@@ -2864,12 +3014,14 @@ def main() -> None:
     stocks = fetch_stock_list()
     print("[scanner] Fetching TW industry map…")
     tw_industry_map = fetch_tw_industry_map()
+    print("[scanner] Fetching ETF full names…")
+    etf_full_names = fetch_etf_full_names()
     print("[scanner] Fetching US stocks (S&P 500 + EDGAR)…")
     dynamic_us = fetch_us_stocks()
     print("[scanner] Enriching US stocks with Gemini…")
     sp500_only = [s for s in dynamic_us if s.get("sector") != "其他"]  # S&P 500 has sector
     extra_us = enrich_us_stocks_with_gemini(sp500_candidates=sp500_only)
-    STOCK_DICT, CODE_TO_NAME, STOCK_MARKET, STOCK_SECTOR = build_stock_dict(stocks, extra_us, dynamic_us, tw_industry_map)
+    STOCK_DICT, CODE_TO_NAME, STOCK_MARKET, STOCK_SECTOR = build_stock_dict(stocks, extra_us, dynamic_us, tw_industry_map, etf_full_names)
 
     # Merge cached sectors into STOCK_SECTOR, but TW_STOCK_SECTORS always wins
     cached_sectors = load_sectors_cache()
