@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-10T18:29:07",
+  "updated_at": "2026-04-10T18:44:43",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -11197,14 +11197,32 @@
           "sentiment": "bullish",
           "sentiment_score": 0.7,
           "video_url": null
+        },
+        {
+          "video": "EP216 | 台、美股重點一次說，台積電法說會前瞻，半導體檢測與光學材料漲價，低軌衛星台廠營收占比",
+          "channel": "韭菜畢業班",
+          "date": "2026-04-08",
+          "text": "其實我覺得以 散戶來說或說以上班族來講 其實最重要的武器就是時間 時間是可以讓你在 台股相對安全的 特別在鱗鋼桿的一個狀況下 你跟他耗 你只要看好產業基本上 其實也沒什麼變化 我們舉個例子來講好了 像是低軌衛星 那其實低軌衛星 整體的話題都還是很好 像 Space的部分 其實 像第一季就已經發射了 894顆的一個衛星了 年增率其實是60%以上 所以在全年的預估量 已經達到了25.5% 所以再加上今年6月 市場整體預估IPO 其實整體的市值已經突破1.75兆 那如果大家去看一些 像台股的一些ETF 或是說像是 美股的一些 可能是穆基金的股票 大家應該都知道在講哪一家 所以 他們也都是往上去跳空的 這個",
+          "matched_keyword": "894",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.6,
+          "video_url": ""
         }
       ],
-      "total_mentions": 2,
+      "total_mentions": 3,
       "sentiment_score": 1.0,
       "daily": {
         "2026-04-01": {
           "mentions": 2,
           "bullish": 2,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        },
+        "2026-04-08": {
+          "mentions": 1,
+          "bullish": 1,
           "bearish": 0,
           "neutral": 0,
           "sentiment_score": 1.0
@@ -15918,6 +15936,36 @@
           "sentiment_score": 0.5
         }
       }
+    },
+    {
+      "code": "2913",
+      "name": "農林",
+      "market": "TW",
+      "sector": "貿易百貨業",
+      "contexts": [
+        {
+          "video": "EP216 | 台、美股重點一次說，台積電法說會前瞻，半導體檢測與光學材料漲價，低軌衛星台廠營收占比",
+          "channel": "韭菜畢業班",
+          "date": "2026-04-08",
+          "text": "各位農林漁木業的朋友們 大家好 我是沈文成 114年農林漁木業普查開始了 您只要在4月10日到4月30日 上網填報 普查員就不會到府拜訪 還能參加抽獎 您的資料絕對保密 請您放心 支持農業普查 再現農業風華 以上廣告由行政院主計總署提供 不過我們自己內部在做一些最後的調教 我認為要把東西做好來 如果你原本就",
+          "matched_keyword": "農林",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-04-08": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
     }
   ],
   "sectors_ranking": [
@@ -16414,6 +16462,14 @@
       ]
     },
     {
+      "sector": "ETF・其他",
+      "market": "TW",
+      "total_mentions": 3,
+      "stock_codes": [
+        "00894"
+      ]
+    },
+    {
       "sector": "半導體",
       "market": "TW",
       "total_mentions": 3,
@@ -16467,14 +16523,6 @@
         "2881",
         "2882",
         "2891"
-      ]
-    },
-    {
-      "sector": "ETF・其他",
-      "market": "TW",
-      "total_mentions": 2,
-      "stock_codes": [
-        "00894"
       ]
     },
     {
@@ -16753,6 +16801,14 @@
       "total_mentions": 1,
       "stock_codes": [
         "2731"
+      ]
+    },
+    {
+      "sector": "貿易百貨業",
+      "market": "TW",
+      "total_mentions": 1,
+      "stock_codes": [
+        "2913"
       ]
     }
   ],
