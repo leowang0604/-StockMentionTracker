@@ -1401,12 +1401,13 @@ def build_stock_dict(
         # 去掉備註，如「(原簡稱:群益台灣ESG低碳)」
         clean = re.sub(r"\(原簡稱[：:][^)]+\)", "", name).strip()
 
-        # 1. 剝離「主動」前綴
+        # 1. 剝離「主動」前綴 — 剝完即停，不再繼續剝發行商
+        #    避免「主動群益科技創新」→「科技創新」這類過短且日常的詞
         if clean.startswith("主動"):
             after_active = clean[2:]
             if len(after_active) >= 4:
                 aliases.append(after_active)
-            clean = after_active  # 繼續從剝離後的名稱處理
+            return aliases  # 主動型 ETF 只取這一層 alias
 
         # 2. 剝離發行商前綴
         for prefix in _ETF_ISSUER_PREFIXES:
