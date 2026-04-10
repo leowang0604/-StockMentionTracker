@@ -1382,62 +1382,13 @@ def build_stock_dict(
                 break
         return aliases
 
-    # ETF 發行商前綴（剝離後得到口語縮稱）
-    _ETF_ISSUER_PREFIXES = [
-        "主動",  # 主動型 ETF 前綴，最優先剝離
-        "元大", "富邦", "國泰", "永豐", "兆豐", "第一金", "群益",
-        "中信", "凱基", "復華", "新光", "台新", "統一", "野村",
-        "大華", "安聯", "聯邦", "玉山", "華南永昌", "華南", "摩根", "FT",
-    ]
-
-    def _etf_aliases(name: str) -> list[str]:
-        """從 ETF 中文名稱產生口語縮稱。
-        例：「主動群益科技創新」→ ["群益科技創新", "科技創新"]
-            「國泰永續高股息」  → ["永續高股息"]
-            「復華台灣科技優息」→ ["台灣科技優息", "科技優息"]
-        最短 4 字，避免太短誤判。
-        """
-        aliases: list[str] = []
-        # 去掉備註，如「(原簡稱:群益台灣ESG低碳)」
-        clean = re.sub(r"\(原簡稱[：:][^)]+\)", "", name).strip()
-
-        # 1. 剝離「主動」前綴 — 剝完即停，不再繼續剝發行商
-        #    避免「主動群益科技創新」→「科技創新」這類過短且日常的詞
-        if clean.startswith("主動"):
-            after_active = clean[2:]
-            if len(after_active) >= 4:
-                aliases.append(after_active)
-            return aliases  # 主動型 ETF 只取這一層 alias
-
-        # 2. 剝離發行商前綴
-        for prefix in _ETF_ISSUER_PREFIXES:
-            if prefix == "主動":
-                continue
-            if clean.startswith(prefix):
-                core = clean[len(prefix):]
-                if len(core) >= 4:
-                    aliases.append(core)
-                # 3. 進一步剝離「台灣」/「臺灣」
-                for tw in ("台灣", "臺灣"):
-                    if core.startswith(tw):
-                        deeper = core[len(tw):]
-                        if len(deeper) >= 4:
-                            aliases.append(deeper)
-                        break
-                break
-
-        return aliases
-
-    def _register_etf_aliases(code: str, name: str) -> None:
-        """為一個 ETF 代碼/名稱組合，把所有 alias 加入 stock_dict。"""
-        for alias in _etf_aliases(name):
-            if alias not in stock_dict:
-                stock_dict[alias] = code
-
     # ── Taiwan stocks (TWSE / TPEx) ───────────────────────────────────────
     for s in stocks:
         code = s["code"]
         name = s["name"]
+        # 清理 ETF 名稱備註，如「(原簡稱:群益台灣ESG低碳)」
+        if re.match(r"^0\d{3,5}[A-Z]?$", code):
+            name = re.sub(r"\(原簡稱[：:][^)]+\)", "", name).strip()
         code_to_name[code] = name
         stock_dict[name]   = code
         stock_dict[code]   = code
@@ -1447,19 +1398,18 @@ def build_stock_dict(
         elif tw_industry_map and code in tw_industry_map:
             stock_sector[code] = tw_industry_map[code]
         # Also register short spoken name (e.g. "華通電腦" → "華通")
-        for short in _short_aliases(name):
-            if short not in stock_dict:  # don't override existing entries
-                stock_dict[short] = code
-        # For ETF codes: also generate issuer-stripped spoken aliases
-        if re.match(r"^0\d{3,5}[A-Z]?$", code):
-            _register_etf_aliases(code, name)
-            # Also use full official name from ETF names cache if different
-            if etf_full_names and code in etf_full_names:
-                full_name = etf_full_names[code]
-                if full_name != name:
-                    if full_name not in stock_dict:
-                        stock_dict[full_name] = code
-                    _register_etf_aliases(code, full_name)
+        # ETF codes are excluded — their names are already in full, and
+        # shortened aliases (e.g. "永續高股息") cause too many false positives
+        # in financial content where these phrases appear in non-ETF contexts.
+        if not re.match(r"^0\d{3,5}[A-Z]?$", code):
+            for short in _short_aliases(name):
+                if short not in stock_dict:
+                    stock_dict[short] = code
+        # For ETF codes: also register the full official name from cache if different
+        if re.match(r"^0\d{3,5}[A-Z]?$", code) and etf_full_names and code in etf_full_names:
+            full_name = re.sub(r"\(原簡稱[：:][^)]+\)", "", etf_full_names[code]).strip()
+            if full_name and full_name not in stock_dict:
+                stock_dict[full_name] = code
 
     # ── US stocks (built-in) — added BEFORE aliases so aliases can override ─
     for kw, ticker in US_KEYWORD_TO_CODE.items():
