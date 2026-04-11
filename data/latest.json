@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-10T20:29:23",
+  "updated_at": "2026-04-11T17:37:44",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -7540,7 +7540,7 @@
       "code": "APP",
       "name": "AppLovin",
       "market": "US",
-      "sector": "科技",
+      "sector": "AI軟體",
       "contexts": [
         {
           "video": "EP214 | 台、美股重點一次說，低軌衛星產業動能，光電二極體與台股關係，定穎投控轉型，google新技術與記憶體 ？",
@@ -10954,7 +10954,7 @@
       "code": "CCL",
       "name": "Carnival",
       "market": "US",
-      "sector": "消費",
+      "sector": "金融",
       "contexts": [
         {
           "video": "EP213 | 台、美股重點一次說，台股反彈怎麼看？美股極度恐慌後的觀察重點，南俊國際與滑軌需求，設備股後勢",
@@ -11989,7 +11989,7 @@
       "code": "CDNS",
       "name": "Cadence Design Systems",
       "market": "US",
-      "sector": "科技",
+      "sector": "AI晶片",
       "contexts": [
         {
           "video": "EP649 | 💌",
@@ -16691,10 +16691,11 @@
     {
       "sector": "AI晶片",
       "market": "US",
-      "total_mentions": 48,
+      "total_mentions": 50,
       "stock_codes": [
         "NVDA",
         "AMD",
+        "CDNS",
         "MRVL"
       ]
     },
@@ -16772,6 +16773,23 @@
       ]
     },
     {
+      "sector": "金融",
+      "market": "US",
+      "total_mentions": 20,
+      "stock_codes": [
+        "MS",
+        "CCL",
+        "GS",
+        "BAC",
+        "JPM",
+        "BLK",
+        "COIN",
+        "CME",
+        "AIG",
+        "MA"
+      ]
+    },
+    {
       "sector": "食品",
       "market": "TW",
       "total_mentions": 17,
@@ -16789,22 +16807,6 @@
         "5475",
         "3715",
         "2368"
-      ]
-    },
-    {
-      "sector": "金融",
-      "market": "US",
-      "total_mentions": 17,
-      "stock_codes": [
-        "MS",
-        "GS",
-        "BAC",
-        "JPM",
-        "BLK",
-        "COIN",
-        "CME",
-        "AIG",
-        "MA"
       ]
     },
     {
@@ -16833,17 +16835,6 @@
       "stock_codes": [
         "3443",
         "3661"
-      ]
-    },
-    {
-      "sector": "科技",
-      "market": "US",
-      "total_mentions": 14,
-      "stock_codes": [
-        "APP",
-        "SNDK",
-        "CDNS",
-        "INTU"
       ]
     },
     {
@@ -16932,6 +16923,14 @@
         "1519",
         "2371",
         "6435"
+      ]
+    },
+    {
+      "sector": "AI軟體",
+      "market": "US",
+      "total_mentions": 8,
+      "stock_codes": [
+        "APP"
       ]
     },
     {
@@ -17029,16 +17028,6 @@
       ]
     },
     {
-      "sector": "消費",
-      "market": "US",
-      "total_mentions": 5,
-      "stock_codes": [
-        "CCL",
-        "ABNB",
-        "NKE"
-      ]
-    },
-    {
       "sector": "半導體設備",
       "market": "TW",
       "total_mentions": 5,
@@ -17078,6 +17067,15 @@
         "5269",
         "6719",
         "4919"
+      ]
+    },
+    {
+      "sector": "科技",
+      "market": "US",
+      "total_mentions": 4,
+      "stock_codes": [
+        "SNDK",
+        "INTU"
       ]
     },
     {
@@ -17236,6 +17234,15 @@
       "stock_codes": [
         "3653",
         "3533"
+      ]
+    },
+    {
+      "sector": "消費",
+      "market": "US",
+      "total_mentions": 2,
+      "stock_codes": [
+        "ABNB",
+        "NKE"
       ]
     },
     {
@@ -19162,6 +19169,39 @@
       ],
       "analysis_source": "whisper",
       "thumbnail_url": null
+    },
+    {
+      "video_id": "MJXRF1eWRqk",
+      "title": "【理財達人秀】還在怕美伊？ 大戶已進場 記憶、CCL、低軌 高低階買法｜李兆華、雷老闆 2026.04.10 part3",
+      "channel": "東森財經",
+      "date": "2026-04-10",
+      "stocks_found": [
+        "2330"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/MJXRF1eWRqk/mqdefault.jpg"
+    },
+    {
+      "video_id": "yHALcaGYC7Q",
+      "title": "【理財達人秀】3月營收強 股價摔撿不撿？ 挑低本益比、高息 更有肉｜李兆華、陳唯泰 2026.04.10 part2",
+      "channel": "東森財經",
+      "date": "2026-04-10",
+      "stocks_found": [
+        "2330"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/yHALcaGYC7Q/mqdefault.jpg"
+    },
+    {
+      "video_id": "6IaXsPpsm1g",
+      "title": "【理財達人秀】台積Q1賺翻了 法說再給喜？ 複製缺貨送分 被動看大做小｜李兆華、鍾國忠 2026.04.10 part1",
+      "channel": "東森財經",
+      "date": "2026-04-10",
+      "stocks_found": [
+        "2330"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/6IaXsPpsm1g/mqdefault.jpg"
     }
   ]
 }
