@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-11T17:37:44",
+  "updated_at": "2026-04-11T18:14:42",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -6201,9 +6201,20 @@
           "sentiment": "bullish",
           "sentiment_score": 0.7,
           "video_url": ""
+        },
+        {
+          "video": "EP652 | 🐸",
+          "channel": "股癌",
+          "date": "2026-04-11",
+          "text": "就是說 要買亞馬遜會在後面 去加大CPU的各種投片跟生產 去供這些客戶 這個是 我覺得就必然會發生的事情 那第二呢 就是這些客戶 因為他們要CPU 可是他們沒有CPU 所以他就必須要去找別人去拿CPU 或甚至是說 繼續找一些 就是可能是比較偏向 像GPGPU這樣的廠商 他們是做通用品的 Intel、AMD之類的 那他們就是有機會在後面 都會產出不錯的一個成績 就是說在這個自股東西裡面 已經像是卸貼了 就是告訴你說CPU非常好 那所以在我自己的角度 會認為說都持續的看下去 就手上的CPU的股票就是持續的拿 甚至會開始去思考說 有沒有可能走出 除了這個2B的很好之外 然後會影響到2C 類似可能我們在之前",
+          "matched_keyword": "AMD",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.8,
+          "video_url": ""
         }
       ],
-      "total_mentions": 16,
+      "total_mentions": 17,
       "sentiment_score": 1.0,
       "daily": {
         "2026-04-01": {
@@ -6263,6 +6274,13 @@
           "sentiment_score": 1.0
         },
         "2026-04-10": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        },
+        "2026-04-11": {
           "mentions": 1,
           "bullish": 1,
           "bearish": 0,
@@ -10649,6 +10667,83 @@
       }
     },
     {
+      "code": "SNDK",
+      "name": "Sandisk",
+      "market": "US",
+      "sector": "科技",
+      "contexts": [
+        {
+          "video": "2026/03/26 (四）存儲出大事， MU, SNDK還能漲？",
+          "channel": "財女珍妮",
+          "date": "2026-03-26",
+          "text": "把電網呢 去做的很好去做交互 甚至我可以在高峰期跟低谷期的時候 可以做一些彈性的調配的話 那我可能就不會那麼的緊繃 那不會那麼的緊繃 是不是就有可能可以去緩解未來等 大幅上漲的壓力 所以我覺得是這個部分呢 是昨天這些股票 他股價下跌的主要原因 因為過去一年這些公司 真的漲的太多了 你說像美光 你說像Sandisk 你說像Weighton 或者是像CJ 這些公司 其實都一樣 他們漲的都是一樣 就是我東西做不出來 我今天大家都在搶 我的產能已經排到很遠了 所以大家已經知道了 TurboCon 他可以去透過系統 透過演算法 透過Catch 去有很大的優化空間的時候 那記憶體呢 他的不可取代性 可能就沒有那麼的 不",
+          "matched_keyword": "Sandisk",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.4,
+          "video_url": ""
+        },
+        {
+          "video": "2026/03/26 (四）存儲出大事， MU, SNDK還能漲？",
+          "channel": "財女珍妮",
+          "date": "2026-03-26",
+          "text": "方 比如說其他的公司 還沒有在做投資 資本支出還沒有在增加 因為他們一定是看未來 會特別的樂觀的 所以他們才會去花這麼多的錢 在這個地方上面 所以這個就可以延伸到 我們今天要講到的第二個主題 這個主題就是昨天晚上 大家看到的 海谷的記憶體大廠丹雅可 他發了公告宣布 完成大規模的私募股權 那引進的像是Sandisk 海峽 或者是海地市 還有Sysco 大家都知道的就是這個 網通設備股私科 這幾國際大廠 他都已經來就是 認購這個股票 然後合計大概35萬張的普通股 以每股定價223.9元去計算 總共會募集的資金 達到了新台幣787億元左右 那奈雅可就表示 我今天募到的這些錢 我就是要拿去投資 先進的記憶體製造 以",
+          "matched_keyword": "Sandisk",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.4,
+          "video_url": ""
+        },
+        {
+          "video": "EP1072｜美伊停火2週，台股暴漲1531點，熱門股、主動ETF多檔創新高，能維持還是會再翻臉？用好的節奏豐收，還有機會？ft.報價天王 林信富",
+          "channel": "兆華與股惑仔",
+          "date": "2026-04-08",
+          "text": "要跌的機率 我個人還是認為相當低 只是說 市場的反應就是這樣 剛有遇到戰爭的利空 或者說有什麼哪邊 那個通路商有在盜貨 什麼這些利空 把股價打下來 但是我覺得接下來如果說 我剛剛看一下韓國的記憶體 今天 或日本的記憶體 今天都漲8% 10%以上 然後美股 因為這個 核談兩個禮拜的消息一出來 像美光、Sandisk 這些盤後也 盤後也都大漲8% 9% 所以如果未來假設美光創新高了 或者說Sandisk的創新高了 那你說南亞科還沒有辦法 走回去300塊 我認為也不可能 就是大廠如果都創新高的話 台灣這些記憶體 我想其實 即便拉回了這一波幅度 比較深 但是應該後面 也是會跟上全球 這些記憶體大廠的腳步 記憶體的話",
+          "matched_keyword": "Sandisk",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": ""
+        },
+        {
+          "video": "EP652 | 🐸",
+          "channel": "股癌",
+          "date": "2026-04-11",
+          "text": "怎麼講 那有一些產業的朋友 就有來給我feedback 那基本上在產業的朋友 都有看到這樣的一個趨勢 那只是 他們的說法就是說 這有點類似說 二三或是二四的記憶體 就是你不知道 什麼時候它會發作 那時候發作的一個原因 是因為sora 因為sora就整個觸動到 整個記憶體足群噴出去 還有那時候有看到 Sandisk的一個漲價性 我們在第一時間 就有跟大家分享 所以可能就是 當然漲價性 我們過去在被動元件 已經看到很多了 所以它可能需要 某一個事件去做 催化跟驅動 所以如果說有那個事件 跑出來的話 那可能資金就會往這個方向去看 那接下來可能就注意一下 禮拜三的國際的法說 會講什麼東西 沒有任何意外的話 就是我們",
+          "matched_keyword": "Sandisk",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.6,
+          "video_url": ""
+        }
+      ],
+      "total_mentions": 4,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-03-26": {
+          "mentions": 2,
+          "bullish": 0,
+          "bearish": 2,
+          "neutral": 0,
+          "sentiment_score": 0.0
+        },
+        "2026-04-08": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        },
+        "2026-04-11": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        }
+      }
+    },
+    {
       "code": "3714",
       "name": "富采",
       "market": "TW",
@@ -11367,65 +11462,6 @@
           "bearish": 0,
           "neutral": 1,
           "sentiment_score": 0.5
-        }
-      }
-    },
-    {
-      "code": "SNDK",
-      "name": "Sandisk",
-      "market": "US",
-      "sector": "科技",
-      "contexts": [
-        {
-          "video": "2026/03/26 (四）存儲出大事， MU, SNDK還能漲？",
-          "channel": "財女珍妮",
-          "date": "2026-03-26",
-          "text": "把電網呢 去做的很好去做交互 甚至我可以在高峰期跟低谷期的時候 可以做一些彈性的調配的話 那我可能就不會那麼的緊繃 那不會那麼的緊繃 是不是就有可能可以去緩解未來等 大幅上漲的壓力 所以我覺得是這個部分呢 是昨天這些股票 他股價下跌的主要原因 因為過去一年這些公司 真的漲的太多了 你說像美光 你說像Sandisk 你說像Weighton 或者是像CJ 這些公司 其實都一樣 他們漲的都是一樣 就是我東西做不出來 我今天大家都在搶 我的產能已經排到很遠了 所以大家已經知道了 TurboCon 他可以去透過系統 透過演算法 透過Catch 去有很大的優化空間的時候 那記憶體呢 他的不可取代性 可能就沒有那麼的 不",
-          "matched_keyword": "Sandisk",
-          "analysis_source": "whisper",
-          "sentiment": "bearish",
-          "sentiment_score": 0.4,
-          "video_url": ""
-        },
-        {
-          "video": "2026/03/26 (四）存儲出大事， MU, SNDK還能漲？",
-          "channel": "財女珍妮",
-          "date": "2026-03-26",
-          "text": "方 比如說其他的公司 還沒有在做投資 資本支出還沒有在增加 因為他們一定是看未來 會特別的樂觀的 所以他們才會去花這麼多的錢 在這個地方上面 所以這個就可以延伸到 我們今天要講到的第二個主題 這個主題就是昨天晚上 大家看到的 海谷的記憶體大廠丹雅可 他發了公告宣布 完成大規模的私募股權 那引進的像是Sandisk 海峽 或者是海地市 還有Sysco 大家都知道的就是這個 網通設備股私科 這幾國際大廠 他都已經來就是 認購這個股票 然後合計大概35萬張的普通股 以每股定價223.9元去計算 總共會募集的資金 達到了新台幣787億元左右 那奈雅可就表示 我今天募到的這些錢 我就是要拿去投資 先進的記憶體製造 以",
-          "matched_keyword": "Sandisk",
-          "analysis_source": "whisper",
-          "sentiment": "bearish",
-          "sentiment_score": 0.4,
-          "video_url": ""
-        },
-        {
-          "video": "EP1072｜美伊停火2週，台股暴漲1531點，熱門股、主動ETF多檔創新高，能維持還是會再翻臉？用好的節奏豐收，還有機會？ft.報價天王 林信富",
-          "channel": "兆華與股惑仔",
-          "date": "2026-04-08",
-          "text": "要跌的機率 我個人還是認為相當低 只是說 市場的反應就是這樣 剛有遇到戰爭的利空 或者說有什麼哪邊 那個通路商有在盜貨 什麼這些利空 把股價打下來 但是我覺得接下來如果說 我剛剛看一下韓國的記憶體 今天 或日本的記憶體 今天都漲8% 10%以上 然後美股 因為這個 核談兩個禮拜的消息一出來 像美光、Sandisk 這些盤後也 盤後也都大漲8% 9% 所以如果未來假設美光創新高了 或者說Sandisk的創新高了 那你說南亞科還沒有辦法 走回去300塊 我認為也不可能 就是大廠如果都創新高的話 台灣這些記憶體 我想其實 即便拉回了這一波幅度 比較深 但是應該後面 也是會跟上全球 這些記憶體大廠的腳步 記憶體的話",
-          "matched_keyword": "Sandisk",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.7,
-          "video_url": ""
-        }
-      ],
-      "total_mentions": 3,
-      "sentiment_score": 0.333,
-      "daily": {
-        "2026-03-26": {
-          "mentions": 2,
-          "bullish": 0,
-          "bearish": 2,
-          "neutral": 0,
-          "sentiment_score": 0.0
-        },
-        "2026-04-08": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 1.0
         }
       }
     },
@@ -13418,6 +13454,54 @@
       }
     },
     {
+      "code": "6770",
+      "name": "力積電",
+      "market": "TW",
+      "sector": "晶圓代工",
+      "contexts": [
+        {
+          "video": "EP212 | 台、美股重點一次說，新IG出生，美光財報，光通訊與銅纜後勢，液冷與電網族群後勢，聽眾QA",
+          "channel": "韭菜畢業班",
+          "date": "2026-03-22",
+          "text": "用本一筆的角度來去思考 也就是說有PE ratio來看的話 其實像三星 以及海力士都還在十倍以下 那去年的話 甚至也大概就只有11倍附近 但是就是市場願不願意買 但這個是另外一回事 因為我們可以看到 最近的台股 像以記憶體的角度來看的話 最主要的動能 應該還是發揮在旺紅身上 那其他的像 南亞科華邦電力積電等等的 或是群聯 他的表現就沒有像 之前來的這麼的兇猛 以南亞科來看的話 他其實稍微小幅度的反彈之後 連續兩天大概又跌了15% 那季線的話也是稍微的破掉了 旺紅這一次我覺得 主要的題材 除了我們之前所講過的三星 因為他宣布全面停止生產LC 還有ENC的這個產品 那我們之前講的是LC這一塊 那我們今天",
+          "matched_keyword": "力積電",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
+        },
+        {
+          "video": "EP652 | 🐸",
+          "channel": "股癌",
+          "date": "2026-04-11",
+          "text": "牆的處理器都會降頻 市場波動大的時候判斷慢半排 不是因為笨而是因為沒電了 米紅這次回歸的MACA組合邏輯很簡單 私立MACA膠囊就是日常打底 這是你的基本持股 95%高純度、600%濃縮 目標是要讓你在每天的精神都維持於均限值上 不要讓體力出現斷層 其中MACA粉包則是加強保養 這就是你的槓桿工具 6770毫克的頂規劑量 加上人身造乾和L金安酸 當你遇到高壓會議或是必須要硬撐的關鍵時刻 這一包讓你突破盤枕、強勢續航的關鍵 如果說你感覺你的體力快要瞬間跳空往下碳 這組就是你的最強支撐 這次一樣是老樣子 給古來聽眾最簡單、最不用動腦的方式 不用輸入折扣碼 直接下單最高限省1980元 省下來時間跟錢拿去專注",
+          "matched_keyword": "6770",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
+        }
+      ],
+      "total_mentions": 2,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-03-22": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-04-11": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
       "code": "BLK",
       "name": "BlackRock",
       "market": "US",
@@ -14179,36 +14263,6 @@
           "date": "2026-03-22",
           "text": "我要讓它最快最猛 那當然第二件事情 它就是含的還是人形機器人 那從之前10億台 到現在變100億台 就等於是直接擴展10倍以上 再來就是高功率晶片 太空專用的這種 把這種巨大的AI算力之中心 直接搬上太空 那其實就是含了一些太陽能 但是太陽能我們看到 在之前其實是有喊動的 以台國的角度來看的話 像元晶 塑合這種東西 其實都有一起往上去 帶上去 但是做一陣子之後 又稍微休息一下 其實就我覺得比較偏向是一個題材 裡面噴上去之後 稍做休息 那這個也是我們之前 在看產業的時候 常常會發生一件事情 就說A許這個東西 不好意思 因為我的貓在做貓抓板 所以其實你會聽到一些貓抓板 聲音是非常正常 但是他現在也不",
           "matched_keyword": "元晶",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": ""
-        }
-      ],
-      "total_mentions": 1,
-      "sentiment_score": 0.5,
-      "daily": {
-        "2026-03-22": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        }
-      }
-    },
-    {
-      "code": "6770",
-      "name": "力積電",
-      "market": "TW",
-      "sector": "晶圓代工",
-      "contexts": [
-        {
-          "video": "EP212 | 台、美股重點一次說，新IG出生，美光財報，光通訊與銅纜後勢，液冷與電網族群後勢，聽眾QA",
-          "channel": "韭菜畢業班",
-          "date": "2026-03-22",
-          "text": "用本一筆的角度來去思考 也就是說有PE ratio來看的話 其實像三星 以及海力士都還在十倍以下 那去年的話 甚至也大概就只有11倍附近 但是就是市場願不願意買 但這個是另外一回事 因為我們可以看到 最近的台股 像以記憶體的角度來看的話 最主要的動能 應該還是發揮在旺紅身上 那其他的像 南亞科華邦電力積電等等的 或是群聯 他的表現就沒有像 之前來的這麼的兇猛 以南亞科來看的話 他其實稍微小幅度的反彈之後 連續兩天大概又跌了15% 那季線的話也是稍微的破掉了 旺紅這一次我覺得 主要的題材 除了我們之前所講過的三星 因為他宣布全面停止生產LC 還有ENC的這個產品 那我們之前講的是LC這一塊 那我們今天",
-          "matched_keyword": "力積電",
           "analysis_source": "whisper",
           "sentiment": "neutral",
           "sentiment_score": 0.5,
@@ -16626,6 +16680,36 @@
           "sentiment_score": 1.0
         }
       }
+    },
+    {
+      "code": "2850",
+      "name": "新產",
+      "market": "TW",
+      "sector": "金融保險業",
+      "contexts": [
+        {
+          "video": "EP652 | 🐸",
+          "channel": "股癌",
+          "date": "2026-04-11",
+          "text": "推東西的時候 就會導致市場裡面的新風鞋遇 那市場裡面的泛瀾體股其實 在過去呢 其實有一些那種比較強勢的 重新爬而去 像是什麼cloud failure 或是payment here 那或是像是cloud strike 他們都曾經是爬到 就是零軸附近的 就是等於說是今年沒有跌 那可是像這一波 他們釋出新產品 然後再一次的把這些東西 就再打回去徹底一次 那我就覺得說蠻靠北的 因為我自己也是 長期只有這些標的 所以就會覺得 市場的這些 fud的情緒 是已經讓我自己覺得有點煩躁 就是如果說什麼 像他講說什麼 他的AI東西有多屌 都會偵測或什麼的 那他們之前怎麼會發生說 自己的代碼外洩 你AI真的這麼厲害",
+          "matched_keyword": "新產",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.2,
+          "video_url": ""
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.0,
+      "daily": {
+        "2026-04-11": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 1,
+          "neutral": 0,
+          "sentiment_score": 0.0
+        }
+      }
     }
   ],
   "sectors_ranking": [
@@ -16691,7 +16775,7 @@
     {
       "sector": "AI晶片",
       "market": "US",
-      "total_mentions": 50,
+      "total_mentions": 51,
       "stock_codes": [
         "NVDA",
         "AMD",
@@ -16702,7 +16786,7 @@
     {
       "sector": "晶圓代工",
       "market": "TW",
-      "total_mentions": 39,
+      "total_mentions": 40,
       "stock_codes": [
         "2330",
         "2303",
@@ -17028,6 +17112,15 @@
       ]
     },
     {
+      "sector": "科技",
+      "market": "US",
+      "total_mentions": 5,
+      "stock_codes": [
+        "SNDK",
+        "INTU"
+      ]
+    },
+    {
       "sector": "半導體設備",
       "market": "TW",
       "total_mentions": 5,
@@ -17067,15 +17160,6 @@
         "5269",
         "6719",
         "4919"
-      ]
-    },
-    {
-      "sector": "科技",
-      "market": "US",
-      "total_mentions": 4,
-      "stock_codes": [
-        "SNDK",
-        "INTU"
       ]
     },
     {
@@ -17480,6 +17564,14 @@
       "total_mentions": 1,
       "stock_codes": [
         "2913"
+      ]
+    },
+    {
+      "sector": "金融保險業",
+      "market": "TW",
+      "total_mentions": 1,
+      "stock_codes": [
+        "2850"
       ]
     }
   ],
@@ -19202,6 +19294,26 @@
       ],
       "analysis_source": "titleAndDescription",
       "thumbnail_url": "https://i.ytimg.com/vi/6IaXsPpsm1g/mqdefault.jpg"
+    },
+    {
+      "video_id": "3a7ba4a5-4df7-4b83-a6ed-2b545c1d74f5",
+      "title": "EP652 | 🐸",
+      "channel": "股癌",
+      "date": "2026-04-11",
+      "stocks_found": [
+        "6770",
+        "GOOGL",
+        "AMZN",
+        "SNDK",
+        "MSFT",
+        "TSLA",
+        "2850",
+        "AMD",
+        "INTC",
+        "META"
+      ],
+      "analysis_source": "whisper",
+      "thumbnail_url": null
     }
   ]
 }
