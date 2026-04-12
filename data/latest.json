@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-11T20:14:03",
+  "updated_at": "2026-04-12T09:46:34",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -7558,7 +7558,7 @@
       "code": "APP",
       "name": "AppLovin",
       "market": "US",
-      "sector": "AI軟體",
+      "sector": "科技",
       "contexts": [
         {
           "video": "EP214 | 台、美股重點一次說，低軌衛星產業動能，光電二極體與台股關係，定穎投控轉型，google新技術與記憶體 ？",
@@ -11049,7 +11049,7 @@
       "code": "CCL",
       "name": "Carnival",
       "market": "US",
-      "sector": "金融",
+      "sector": "消費",
       "contexts": [
         {
           "video": "EP213 | 台、美股重點一次說，台股反彈怎麼看？美股極度恐慌後的觀察重點，南俊國際與滑軌需求，設備股後勢",
@@ -12025,7 +12025,7 @@
       "code": "CDNS",
       "name": "Cadence Design Systems",
       "market": "US",
-      "sector": "AI晶片",
+      "sector": "企業軟體",
       "contexts": [
         {
           "video": "EP649 | 💌",
@@ -16775,11 +16775,10 @@
     {
       "sector": "AI晶片",
       "market": "US",
-      "total_mentions": 51,
+      "total_mentions": 49,
       "stock_codes": [
         "NVDA",
         "AMD",
-        "CDNS",
         "MRVL"
       ]
     },
@@ -16857,23 +16856,6 @@
       ]
     },
     {
-      "sector": "金融",
-      "market": "US",
-      "total_mentions": 20,
-      "stock_codes": [
-        "MS",
-        "CCL",
-        "GS",
-        "BAC",
-        "JPM",
-        "BLK",
-        "COIN",
-        "CME",
-        "AIG",
-        "MA"
-      ]
-    },
-    {
       "sector": "食品",
       "market": "TW",
       "total_mentions": 17,
@@ -16891,6 +16873,22 @@
         "5475",
         "3715",
         "2368"
+      ]
+    },
+    {
+      "sector": "金融",
+      "market": "US",
+      "total_mentions": 17,
+      "stock_codes": [
+        "MS",
+        "GS",
+        "BAC",
+        "JPM",
+        "BLK",
+        "COIN",
+        "CME",
+        "AIG",
+        "MA"
       ]
     },
     {
@@ -16919,6 +16917,16 @@
       "stock_codes": [
         "3443",
         "3661"
+      ]
+    },
+    {
+      "sector": "科技",
+      "market": "US",
+      "total_mentions": 13,
+      "stock_codes": [
+        "APP",
+        "SNDK",
+        "INTU"
       ]
     },
     {
@@ -17007,14 +17015,6 @@
         "1519",
         "2371",
         "6435"
-      ]
-    },
-    {
-      "sector": "AI軟體",
-      "market": "US",
-      "total_mentions": 8,
-      "stock_codes": [
-        "APP"
       ]
     },
     {
@@ -17112,12 +17112,13 @@
       ]
     },
     {
-      "sector": "科技",
+      "sector": "消費",
       "market": "US",
       "total_mentions": 5,
       "stock_codes": [
-        "SNDK",
-        "INTU"
+        "CCL",
+        "ABNB",
+        "NKE"
       ]
     },
     {
@@ -17160,6 +17161,15 @@
         "5269",
         "6719",
         "4919"
+      ]
+    },
+    {
+      "sector": "企業軟體",
+      "market": "US",
+      "total_mentions": 4,
+      "stock_codes": [
+        "CDNS",
+        "ADBE"
       ]
     },
     {
@@ -17304,29 +17314,12 @@
       ]
     },
     {
-      "sector": "企業軟體",
-      "market": "US",
-      "total_mentions": 2,
-      "stock_codes": [
-        "ADBE"
-      ]
-    },
-    {
       "sector": "電子零組件業",
       "market": "TW",
       "total_mentions": 2,
       "stock_codes": [
         "3653",
         "3533"
-      ]
-    },
-    {
-      "sector": "消費",
-      "market": "US",
-      "total_mentions": 2,
-      "stock_codes": [
-        "ABNB",
-        "NKE"
       ]
     },
     {
