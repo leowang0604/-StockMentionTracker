@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-12T10:07:48",
+  "updated_at": "2026-04-12T10:22:46",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -9233,9 +9233,20 @@
           "sentiment": "bullish",
           "sentiment_score": 1.0,
           "video_url": ""
+        },
+        {
+          "video": "EP324 用生活記憶股票",
+          "channel": "投資癮",
+          "date": "2026-04-12",
+          "text": "是錯的 不然為什麼在2024年9月的時候 央行要做出信用管制 這其實也證明了 央行的角度是比較中立一點點 他主觀認為 房市的市場過熱了 所以到2024年 從信用管制之後的下一季 雖然還沒有明顯的變化 但2025年整年度 你會發現房市非常的冷 幾乎是快要冷凍的狀況 但其中還有一個小小的差距 2023年新興的2.0出來之後 其實2024年初的時候 整個營建類股大飆升以外 房屋中間裡面唯一的上市公司信義 也在當時創了新高 但是整個市場的氛圍 都圍繞到房地產船上 跟營建類股身上 而後來我們也知道這件事情 現在以事業論的角度 的確 營建股那時候在最高點 房市的價格那時候在最高點 成交上級凍之後到現在 大多數",
+          "matched_keyword": "新興",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": ""
         }
       ],
-      "total_mentions": 6,
+      "total_mentions": 7,
       "sentiment_score": 1.0,
       "daily": {
         "2026-04-02": {
@@ -9255,6 +9266,13 @@
         "2026-03-26": {
           "mentions": 3,
           "bullish": 3,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        },
+        "2026-04-12": {
+          "mentions": 1,
+          "bullish": 1,
           "bearish": 0,
           "neutral": 0,
           "sentiment_score": 1.0
@@ -10821,6 +10839,90 @@
       }
     },
     {
+      "code": "ORCL",
+      "name": "Oracle",
+      "market": "US",
+      "sector": "雲端/AI",
+      "contexts": [
+        {
+          "video": "EP645 | 🎱",
+          "channel": "股癌",
+          "date": "2026-03-18",
+          "text": "祝老婆 五周年快樂 他說要肌肉男的聲音 那孟公聽眾端午快樂 身體健康 繼續肌肉某男生大叫 Hey Siri 我大概是沒動 不知道是殺小 不是啊 端午節是要到的是嗎 不是今天才剛開始 怎麼叫端午節 下一位 Joe163333 祝你安安 想問主委如果想要下注OpenAI 但又不想要打Microsoft Oracle 這些插邊球 那對一般小菜雞 要什麼好的方式嗎 那最後我在這邊 用張哥的語氣 祝主委電腦平安 A Microsoft 應該嚴格上來說 不是插邊球了 他的持股不是還滿多的嗎 那Oracle的話應該算 那其他的話 像是Amazon 或是說其他有 有間接投資到的NVIDIA 什麼的 假設有拿到股權的話 我",
+          "matched_keyword": "Oracle",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.6,
+          "video_url": ""
+        },
+        {
+          "video": "EP643 | 🦊",
+          "channel": "股癌",
+          "date": "2026-03-11",
+          "text": "每個人都在我們的 這個討論局都在問股票 然後每個人都覺得說 很瘋狂要趕快衝 可是你知道 你看一殺的時候 其實是可以殺到你 所以你沒有提早準備好的 甚至你就沒有機會 你就沒有彈藥去做這些嘗試 那整體來看 目前沒有在產業方面 或是說趨勢方面注意到 那種就是要整體扭轉的一個傾向 那包含市場上面比較擔心的 Oracle 其實我覺得要開罪的成績也還OK 所以目前整體來說 我不覺得有注意到特別大的警訊 有些人講說 這會不會是像2022一開始一樣 那大家可能本來覺得沒事 然後後來有事 我還是得講 就是我們去做投資教育的 我知道有些人喜歡當預言家 他只是我自己或說 身邊我注意到比較成功的人士 其實沒有人喜歡當預言家 就要",
+          "matched_keyword": "Oracle",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
+        },
+        {
+          "video": "2026/03/30 (一）納指進入修正區，美伊戰爭AI衝擊還沒來？科技股下跌 才剛開始？",
+          "channel": "財女珍妮",
+          "date": "2026-03-30",
+          "text": "恐慌嘛 所以這種防禦型的類股呢 表現就比較好 油價長呢 能源類股表現就比較好 但是呢我們剛有提到的幾個重點嘛 關鍵原物料有可能會短缺 比如說像駭氣的攻擊 能源的成本上升 有可能會使一些大型的數據中型 或者是一些公司呢 他們的產能擴張是會受阻的 然後他們的營運呢 也會面臨到更大的壓力 或者是你有看到像甲骨文 他的這個違約的一個風險呢 也持續的在升高當中 其實也是因為槓桿嘛 他如果今天他的現金流非常的崇佩 他有很好的一個資金來源 或者是他的資產負債表示非常漂亮的 你覺得大家會一直去講說 哎你的違約風險升高嗎 就沒有人在講其他五大科技巨頭 七大科技巨頭他的違約風險升高嗎 所以其實都是一樣的道理 你今天不管",
+          "matched_keyword": "甲骨文",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.2,
+          "video_url": ""
+        },
+        {
+          "video": "EP324 用生活記憶股票",
+          "channel": "投資癮",
+          "date": "2026-04-12",
+          "text": "3.28元買進10%股權 所以20元以下算是個 蠻安全的區間 所以那個角度來說 我認為我的成本算是合理的 而目前優勢站在我的方向 而這種概念 其實過去有討論過 公司定價是一個角度 我相信這些很大資金的持有的人 或是他們真的把錢丟進去的人 他們都不是傻瓜 他們都會經過很多層面的判斷 推估 它不像當時的甲骨文 用剩餘履約一物 任列5,530億美金 這種東西真的是很奇怪 當時也因為這樣子 市場大漲到345億元 現在回頭看看還是持續剝底 至少下跌5成左右了 所以真的有投錢進去 跟未來可能會投錢進去 我認為在實務上面根本就是兩回事 而當時市場過熱吹捧AI這件事情 也才衍生出那一集 從吹泡泡到吹泡泡 那回來in",
+          "matched_keyword": "甲骨文",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": ""
+        }
+      ],
+      "total_mentions": 4,
+      "sentiment_score": 0.667,
+      "daily": {
+        "2026-03-18": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        },
+        "2026-03-11": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-03-30": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 1,
+          "neutral": 0,
+          "sentiment_score": 0.0
+        },
+        "2026-04-12": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        }
+      }
+    },
+    {
       "code": "3714",
       "name": "富采",
       "market": "TW",
@@ -10869,72 +10971,6 @@
           "bearish": 0,
           "neutral": 0,
           "sentiment_score": 1.0
-        }
-      }
-    },
-    {
-      "code": "ORCL",
-      "name": "Oracle",
-      "market": "US",
-      "sector": "雲端/AI",
-      "contexts": [
-        {
-          "video": "EP645 | 🎱",
-          "channel": "股癌",
-          "date": "2026-03-18",
-          "text": "祝老婆 五周年快樂 他說要肌肉男的聲音 那孟公聽眾端午快樂 身體健康 繼續肌肉某男生大叫 Hey Siri 我大概是沒動 不知道是殺小 不是啊 端午節是要到的是嗎 不是今天才剛開始 怎麼叫端午節 下一位 Joe163333 祝你安安 想問主委如果想要下注OpenAI 但又不想要打Microsoft Oracle 這些插邊球 那對一般小菜雞 要什麼好的方式嗎 那最後我在這邊 用張哥的語氣 祝主委電腦平安 A Microsoft 應該嚴格上來說 不是插邊球了 他的持股不是還滿多的嗎 那Oracle的話應該算 那其他的話 像是Amazon 或是說其他有 有間接投資到的NVIDIA 什麼的 假設有拿到股權的話 我",
-          "matched_keyword": "Oracle",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.6,
-          "video_url": ""
-        },
-        {
-          "video": "EP643 | 🦊",
-          "channel": "股癌",
-          "date": "2026-03-11",
-          "text": "每個人都在我們的 這個討論局都在問股票 然後每個人都覺得說 很瘋狂要趕快衝 可是你知道 你看一殺的時候 其實是可以殺到你 所以你沒有提早準備好的 甚至你就沒有機會 你就沒有彈藥去做這些嘗試 那整體來看 目前沒有在產業方面 或是說趨勢方面注意到 那種就是要整體扭轉的一個傾向 那包含市場上面比較擔心的 Oracle 其實我覺得要開罪的成績也還OK 所以目前整體來說 我不覺得有注意到特別大的警訊 有些人講說 這會不會是像2022一開始一樣 那大家可能本來覺得沒事 然後後來有事 我還是得講 就是我們去做投資教育的 我知道有些人喜歡當預言家 他只是我自己或說 身邊我注意到比較成功的人士 其實沒有人喜歡當預言家 就要",
-          "matched_keyword": "Oracle",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": ""
-        },
-        {
-          "video": "2026/03/30 (一）納指進入修正區，美伊戰爭AI衝擊還沒來？科技股下跌 才剛開始？",
-          "channel": "財女珍妮",
-          "date": "2026-03-30",
-          "text": "恐慌嘛 所以這種防禦型的類股呢 表現就比較好 油價長呢 能源類股表現就比較好 但是呢我們剛有提到的幾個重點嘛 關鍵原物料有可能會短缺 比如說像駭氣的攻擊 能源的成本上升 有可能會使一些大型的數據中型 或者是一些公司呢 他們的產能擴張是會受阻的 然後他們的營運呢 也會面臨到更大的壓力 或者是你有看到像甲骨文 他的這個違約的一個風險呢 也持續的在升高當中 其實也是因為槓桿嘛 他如果今天他的現金流非常的崇佩 他有很好的一個資金來源 或者是他的資產負債表示非常漂亮的 你覺得大家會一直去講說 哎你的違約風險升高嗎 就沒有人在講其他五大科技巨頭 七大科技巨頭他的違約風險升高嗎 所以其實都是一樣的道理 你今天不管",
-          "matched_keyword": "甲骨文",
-          "analysis_source": "whisper",
-          "sentiment": "bearish",
-          "sentiment_score": 0.2,
-          "video_url": ""
-        }
-      ],
-      "total_mentions": 3,
-      "sentiment_score": 0.5,
-      "daily": {
-        "2026-03-18": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 1.0
-        },
-        "2026-03-11": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-03-30": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 1,
-          "neutral": 0,
-          "sentiment_score": 0.0
         }
       }
     },
@@ -13516,6 +13552,47 @@
           "bearish": 0,
           "neutral": 1,
           "sentiment_score": 0.5
+        }
+      }
+    },
+    {
+      "code": "9940",
+      "name": "信義",
+      "market": "TW",
+      "sector": "其他業",
+      "contexts": [
+        {
+          "video": "EP324 用生活記憶股票",
+          "channel": "投資癮",
+          "date": "2026-04-12",
+          "text": "立一點點 他主觀認為 房市的市場過熱了 所以到2024年 從信用管制之後的下一季 雖然還沒有明顯的變化 但2025年整年度 你會發現房市非常的冷 幾乎是快要冷凍的狀況 但其中還有一個小小的差距 2023年新興的2.0出來之後 其實2024年初的時候 整個營建類股大飆升以外 房屋中間裡面唯一的上市公司信義 也在當時創了新高 但是整個市場的氛圍 都圍繞到房地產船上 跟營建類股身上 而後來我們也知道這件事情 現在以事業論的角度 的確 營建股那時候在最高點 房市的價格那時候在最高點 成交上級凍之後到現在 大多數的營建類股 跌了4成到5成以上 甚至有些公司 現在還在確實下跌 包括信義房屋這種收用金的 你應該",
+          "matched_keyword": "信義",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.1,
+          "video_url": ""
+        },
+        {
+          "video": "EP324 用生活記憶股票",
+          "channel": "投資癮",
+          "date": "2026-04-12",
+          "text": "價格那時候在最高點 成交上級凍之後到現在 大多數的營建類股 跌了4成到5成以上 甚至有些公司 現在還在確實下跌 包括信義房屋這種收用金的 你應該可以發現 去年度 開始慢慢注意到一些房仲的點 開始慢慢收掉了 公司沒有賺錢 公司開始賠錢 用收這件事情 就成交兩樣的問題 很明顯反映在 特意用收業者身上 而信義這件上市公司 現在的股價 而且來到將近 25年左右的新低點了 但如果還原全息之後 雖然沒有這麼慘 因為它是一個高配息的公司 但未來狀況會如何 不得而知 但是至少在當時2024年的時候 沒有買到相對的高點 而多數時候 市場討論的那些東西 都有可能在熱頭上面 熱頭上面的時候 就要去判斷說 自己是做短線的",
+          "matched_keyword": "信義",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.1,
+          "video_url": ""
+        }
+      ],
+      "total_mentions": 2,
+      "sentiment_score": 0.0,
+      "daily": {
+        "2026-04-12": {
+          "mentions": 2,
+          "bullish": 0,
+          "bearish": 2,
+          "neutral": 0,
+          "sentiment_score": 0.0
         }
       }
     },
@@ -16728,13 +16805,43 @@
           "sentiment_score": 0.0
         }
       }
+    },
+    {
+      "code": "3030",
+      "name": "德律",
+      "market": "TW",
+      "sector": "其他電子業",
+      "contexts": [
+        {
+          "video": "EP324 用生活記憶股票",
+          "channel": "投資癮",
+          "date": "2026-04-12",
+          "text": "先想要更專注 在自己的分享的架構裡面 跟自己的交易的思維裡面 去做一個更堅固的交易核心 以及分享的架構裡面核心邏輯 因為會有很多很多的讀者 或聽眾有一些問題 我希望利用這兩三年的時間 把所有的問題一一解決 所以也會開了很多的帳戶 但從2023年開始布局的那些東西 有在這些節目上面討論到 像是台光店 德律貿念等等的 我到現在還很印象深刻 當時布局的狀況 現在在分享這一瞬間 心中還有它的均價 還有當時想要投入的成本 還有當時的一些想法 一些概念 我有時候在想 我自己的腦袋 好像可以停留在那個時候的狀況之下 當然也可能是因為我的生活 比較單純一點 比較少被其他人給影響 我覺得這部分很幸運 我不會焦慮地去",
+          "matched_keyword": "德律",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": ""
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 1.0,
+      "daily": {
+        "2026-04-12": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        }
+      }
     }
   ],
   "sectors_ranking": [
     {
       "sector": "雲端/AI",
       "market": "US",
-      "total_mentions": 126,
+      "total_mentions": 127,
       "stock_codes": [
         "MSFT",
         "GOOGL",
@@ -17061,6 +17168,14 @@
       ]
     },
     {
+      "sector": "航運",
+      "market": "TW",
+      "total_mentions": 7,
+      "stock_codes": [
+        "2605"
+      ]
+    },
+    {
       "sector": "醫療",
       "market": "US",
       "total_mentions": 7,
@@ -17079,14 +17194,6 @@
         "6168",
         "3008",
         "2349"
-      ]
-    },
-    {
-      "sector": "航運",
-      "market": "TW",
-      "total_mentions": 6,
-      "stock_codes": [
-        "2605"
       ]
     },
     {
@@ -17216,6 +17323,16 @@
         "3324",
         "6208",
         "3017"
+      ]
+    },
+    {
+      "sector": "其他業",
+      "market": "TW",
+      "total_mentions": 4,
+      "stock_codes": [
+        "9940",
+        "9927",
+        "3040"
       ]
     },
     {
@@ -17357,15 +17474,6 @@
       ]
     },
     {
-      "sector": "其他業",
-      "market": "TW",
-      "total_mentions": 2,
-      "stock_codes": [
-        "9927",
-        "3040"
-      ]
-    },
-    {
       "sector": "電機機械",
       "market": "TW",
       "total_mentions": 2,
@@ -17381,6 +17489,15 @@
       "stock_codes": [
         "SATS",
         "CHTR"
+      ]
+    },
+    {
+      "sector": "其他電子業",
+      "market": "TW",
+      "total_mentions": 2,
+      "stock_codes": [
+        "6830",
+        "3030"
       ]
     },
     {
@@ -17486,14 +17603,6 @@
       "total_mentions": 1,
       "stock_codes": [
         "MRNA"
-      ]
-    },
-    {
-      "sector": "其他電子業",
-      "market": "TW",
-      "total_mentions": 1,
-      "stock_codes": [
-        "6830"
       ]
     },
     {
@@ -19343,6 +19452,23 @@
       ],
       "analysis_source": "titleAndDescription",
       "thumbnail_url": "https://i.ytimg.com/vi/IK0HkpE3XWk/mqdefault.jpg"
+    },
+    {
+      "video_id": "505d1285-84d2-421b-bc2b-19497054dfba",
+      "title": "EP324 用生活記憶股票",
+      "channel": "投資癮",
+      "date": "2026-04-12",
+      "stocks_found": [
+        "9940",
+        "3030",
+        "2330",
+        "2605",
+        "ORCL",
+        "AAPL",
+        "INTC"
+      ],
+      "analysis_source": "whisper",
+      "thumbnail_url": null
     }
   ]
 }
