@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-12T10:22:46",
+  "updated_at": "2026-04-12T17:40:13",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -10765,7 +10765,7 @@
       "code": "CCL",
       "name": "Carnival",
       "market": "US",
-      "sector": "旅遊",
+      "sector": "消費",
       "contexts": [
         {
           "video": "EP213 | 台、美股重點一次說，台股反彈怎麼看？美股極度恐慌後的觀察重點，南俊國際與滑軌需求，設備股後勢",
@@ -17226,6 +17226,16 @@
       ]
     },
     {
+      "sector": "消費",
+      "market": "US",
+      "total_mentions": 6,
+      "stock_codes": [
+        "CCL",
+        "ABNB",
+        "NKE"
+      ]
+    },
+    {
       "sector": "資訊服務",
       "market": "TW",
       "total_mentions": 6,
@@ -17276,14 +17286,6 @@
         "5269",
         "6719",
         "4919"
-      ]
-    },
-    {
-      "sector": "旅遊",
-      "market": "US",
-      "total_mentions": 4,
-      "stock_codes": [
-        "CCL"
       ]
     },
     {
@@ -17453,15 +17455,6 @@
       "stock_codes": [
         "3653",
         "3533"
-      ]
-    },
-    {
-      "sector": "消費",
-      "market": "US",
-      "total_mentions": 2,
-      "stock_codes": [
-        "ABNB",
-        "NKE"
       ]
     },
     {
