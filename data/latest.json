@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-12T18:16:35",
+  "updated_at": "2026-04-12T18:31:52",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -5393,10 +5393,21 @@
           "sentiment": "bullish",
           "sentiment_score": 0.667,
           "video_url": ""
+        },
+        {
+          "video": "EP217 | 台、美股重點一次說，Google TPU 各代產品結構與台廠供應鏈， 台積電封裝技術進展與風險，CPO量產前注意",
+          "channel": "韭菜畢業班",
+          "date": "2026-04-12",
+          "text": "以分為非常多帶的 那我們就以近幾代的跟各位聊交 我們就不要聊到最前面的 我們以最新我們聽到的 可能大家有感覺到就是第七代 那可能就是 Ironwood 這個東西大家會比較有感受一點 那其實講到這個第七代的話 他主要的 Design 其實是 Brocon 那所以我們會把 另一家公司跟各位來提的 就是把博通這家公司一起拉進來講 因為其實博通 大家老觀眾你們都應該知道 是我自己的 雖然長期持有 我自己對他的想法 或者說 Essex 的市站 以及光通相關的想法 我覺得大家都可以 Reference 這一家 大廠 他其實是非常重要的一個角色 好 那我們講到第七代的話 他主要的時間軸 會落在 2025 年的第",
+          "matched_keyword": "博通",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": ""
         }
       ],
-      "total_mentions": 22,
-      "sentiment_score": 0.944,
+      "total_mentions": 23,
+      "sentiment_score": 0.947,
       "daily": {
         "2026-04-01": {
           "mentions": 7,
@@ -5457,6 +5468,13 @@
         "2026-04-08": {
           "mentions": 2,
           "bullish": 2,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        },
+        "2026-04-12": {
+          "mentions": 1,
+          "bullish": 1,
           "bearish": 0,
           "neutral": 0,
           "sentiment_score": 1.0
@@ -6727,6 +6745,185 @@
         "2026-04-08": {
           "mentions": 1,
           "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        }
+      }
+    },
+    {
+      "code": "2454",
+      "name": "聯發科",
+      "market": "TW",
+      "sector": "手機晶片",
+      "contexts": [
+        {
+          "video": "EP649 | 💌",
+          "channel": "股癌",
+          "date": "2026-04-01",
+          "text": "的某種設計工具店 那Core with跟Nabius的話 可能就是說 Delta Center的一個部件 跟AI工廠的擴張 那Core with Lumentine 那不用講就是 光相關的一個佈局 那Marvell的話 現在拉進去NV另Fusion 其實前面也拉一些夥伴的 像是L Chip 然後像是MTK也在裡面 那所以我會認為說 他真的就是錢太多 去買東西而已 就是我如果真的硬要拆這樣子 那當然第二步的話 就會認為說 他一定是有想去 做一些戰略的佈局 因為大家都知道說現在 目前我們在Hyper Scalar 所看到的一個清新就是 沒有像外面講得這麼誇張 去NVIDIA的話 但是是在分散配置的一個做",
+          "matched_keyword": "2454",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": null
+        },
+        {
+          "video": "EP649 | 💌",
+          "channel": "股癌",
+          "date": "2026-04-01",
+          "text": "ConnectX的NIC 然後跟Bluefield DPU Envading Interconnect Spectrum 或者是Quantum的相關的switch 光通的解放 CPU它都可以給你 所以它現在能夠做的事情 有點像他說 OK 那我知道像這種XPU的設計 你們要去選Marvel 或是你要選MTK L-Chip 你要選Broadcom OK 都可以 但你其他東西 你是有我的這個產品線 都是可以去做支援跟使用的 那當然其實也不一定會用到 NVIDIA的東西 因為我們剛才講的這些東西 可能像Broadcom 它也是有對應的一些解放 但它就是來跟Broadcom搶這個生意 所以你可以這樣去做看待",
+          "matched_keyword": "2454",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": null
+        },
+        {
+          "video": "EP649 | 💌",
+          "channel": "股癌",
+          "date": "2026-04-01",
+          "text": "但它就是來跟Broadcom搶這個生意 所以你可以這樣去做看待 所以我個人認為說 就是如果真的要把這個事件 去做一個誰受會 誰受害 誰可能受到競爭的一個判讀的話 會認為說它的建值是Broadcom 然後最主要是要去打Broadcom 那去拉這些快樂好朋友 像是可能Marvel 或是L-Chip或是MTK 各種什麼NVIDIA Fusion的活動 把你們做在一起 即便可能不一定有財務上的一個投資 但我覺得財務只是一個差奇的意涵 它並沒有辦法真正獲得什麼控制選擇 它只是拿出誠意 放一個錢金在那邊 希望你在後面的一些設計方面 如果有時候客戶需要的話 可以幫我們這東西整合進去 那我是覺得說 反正就是拉這幾",
+          "matched_keyword": "2454",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": null
+        },
+        {
+          "video": "EP649 | 💌",
+          "channel": "股癌",
+          "date": "2026-04-01",
+          "text": "ck後代的 就是那個一蜜蜂裝的相關東西的時候 那時候我們就 去去稍微看一下 Google 的 Role Map 他以前有一個叫 Karina Fish 那另外一個叫 Humu Fish 然後我們就發現說 Karina Fish 不見了 那一開始 那時候我們的認知是 Karina Fish 是 這個 MTK 的 那 Humu Fish 是 Broadcom的 然後最後發現說 欸不對是反過來 所以是 Humu Fish 還在 在 TPU 的 V19 的 Role Map 上面 然後 Karina Fish 不見了 所以不知道Broadcom的東西變什麼 還是說他有一個代號叫 Mirope 的那個東西 會",
+          "matched_keyword": "2454",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": null
+        },
+        {
+          "video": "EP645 | 🎱",
+          "channel": "股癌",
+          "date": "2026-03-18",
+          "text": "後可能就是Blockon 那只是Blockon這邊有些客戶 像剛剛前面提到 可能有一些侃單 有一些調整或什麼 那好在他家的客戶的 這個Portfolio是越來越大 但最近又有聽到一些新的八卦 就是在Google這邊 他除了本來的兩個Design House之外 他是想要再額外再加一個 也就是說本來是MTK跟Blockon 然後他現在可能想要再拉另外一家 那另外一家是誰 其實應該說非常好拆了 反正就是M開頭那一家 那M開頭那一家有可能 看一下後面風向 我們可能要再測一下 可是已經有聽到一些風聲 有一些產品的事情 那如果是這樣子的話 有沒有可能M開頭那一家 以前騙了我感情很多次 我上去壓 每次壓幹都賠錢",
+          "matched_keyword": "MTK",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
+        },
+        {
+          "video": "EP644 | 🦇",
+          "channel": "股癌",
+          "date": "2026-03-14",
+          "text": "的了解狀態 可是問題是 如果你今天要賺錢要分析的話 就像你不會講說什麼硬體股 就全部都是一包 我就問你嘛 廣達跟硬夜達是一樣的東西嗎 台積電跟連電是一樣的東西嗎 就是我們沒有講說誰高誰低 就是如果因為硬體台灣人熟 所以我這樣去講 大家就知道說 沒有要幹它是不一樣的東西 一樣是IC Design 你說MTK跟銳域 那或者說跟一些 我們就不要去去湊人家 有一種超小型的 那種小Design House 那可能 20年前曾經有它的光輝moment 然後現在下去 他們都是IC Design 那你會講說IC Design 一起好的時候 就大家都一起好嘛 其實不會啦 所以軟體你要講說 它一包什麼軟體股大毀滅 然後",
+          "matched_keyword": "MTK",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
+        },
+        {
+          "video": "EP410｜龍蝦的投資機會",
+          "channel": "股市隱者",
+          "date": "2026-03-26",
+          "text": "像Broadcom 它就是全球最大在做AIASIC的公司 還有就是Amazon 它有在開發自己的晶片 而且它也是Anthropic的大股東 它本身也在往AI領域切入 再來就是Alphabet Google Google本身有Germany 什麼都有 我覺得這還是很好的長期標的 台灣相關的 可能就像聯發科 創意 視星 這些都是 但如果你要說最穩的 那就是台積電 第二個 能源 能源的部分 我覺得AI 它其實不是只是算力問題 不是只是到極耐米 我覺得還有一個很重要 就是電力的問題 電力的問題 這個東西就是一個很大的方向 大家還記得嗎 我在前幾集有講 慢變量 其實電力這個就是一個慢變量 你說你要馬上蓋電廠",
+          "matched_keyword": "聯發科",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": ""
+        },
+        {
+          "video": "EP217 | 台、美股重點一次說，Google TPU 各代產品結構與台廠供應鏈， 台積電封裝技術進展與風險，CPO量產前注意",
+          "channel": "韭菜畢業班",
+          "date": "2026-04-12",
+          "text": "把你的成本拉開 這個其實就是我們今天在做 長期投資的人 會去注意到的東西 一下子把你的成本拉開 那個區間 那一個所謂的缺口 其實我覺得是 多數人會蠻喜歡的 因為他就是可以讓你之後 報的比較放心的 好 那我們上一集其實有講到 Intel的一些技術 那我覺得這一集 我覺得可以順便的補充一下 Intel 聯發科 台積電以及Google之間的關係 因為我覺得一直講TPU 我覺得大家可能多多少少心情上 或是說感受上 我覺得沒有這麼的強 那我們今天就把TPU 最近幾代的東西 跟各位來聊一下 然後順便去把其中的一些變化 跟哪些東西有合作 我覺得大家會比較有感受一點 雖然我覺得現在講聯發科 可能大家會覺得說 這就是",
+          "matched_keyword": "聯發科",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": ""
+        },
+        {
+          "video": "EP217 | 台、美股重點一次說，Google TPU 各代產品結構與台廠供應鏈， 台積電封裝技術進展與風險，CPO量產前注意",
+          "channel": "韭菜畢業班",
+          "date": "2026-04-12",
+          "text": "00塊的價值 但是就是他可能又回到一個區間 大家可能就對他沒興趣了 但是我們在上幾集的時候有講過 雖然市場我們看到 對於他手機的那一塊板塊 會有一點擔憂 就覺得說他營收可能沒有辦法衝上去 但是我們其實看到 最近的營收公布出來之後 表現得還算不錯 就是有真的是往上去提 那這個我覺得跟 我們最早期有聊到聯發科 一些我覺得跟 TPU 的接單 或是說我們接下來會主要看的東西 還是在 Google TPU 這一塊 這個我覺得可以跟大家來聊一下 首先第一件事情就是 TPU 這個東西 就是 Google 的字眼晶片 他其實是可以分為非常多帶的 那我們就以近幾代的跟各位聊交 我們就不要聊到最前面的 我們以最新我們聽",
+          "matched_keyword": "聯發科",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": ""
+        },
+        {
+          "video": "EP217 | 台、美股重點一次說，Google TPU 各代產品結構與台廠供應鏈， 台積電封裝技術進展與風險，CPO量產前注意",
+          "channel": "韭菜畢業班",
+          "date": "2026-04-12",
+          "text": "間軸 會落在 2025 年的第四季 主要的廠商就是 Brocon 然後再來的話 他用到的 Compute 那我們可以把它簡單來講 就是他用到的奈米速度 是 3 奈米 那可以簡單來講是 N31 那再來就是 IO 那 IO 的話我們比較 我覺得講白話一點 就有點像是傳輸協議 PCIe 的這種東西 那其實聯發科主要我們會去聽的 就是他賺的錢 其實會是在這一塊 那那個時候的話 用到的技術就是 Core Wars S 那 Core Wars S 的話 其實大家心裡就有底了嘛 就這個就是台積電的技術 那那個時候搭配的東西其實也是 HBN 所以 HBN 從那個時候 其實就已經有一些話題存在的 好 那我們再來眼睛到",
+          "matched_keyword": "聯發科",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": ""
+        },
+        {
+          "video": "EP217 | 台、美股重點一次說，Google TPU 各代產品結構與台廠供應鏈， 台積電封裝技術進展與風險，CPO量產前注意",
+          "channel": "韭菜畢業班",
+          "date": "2026-04-12",
+          "text": "在 Brocon 的部分 那它搭配的台積電的技術的話 就是 Covers 的 Aero 好 那再來講到 FIBA S 跟 FIBA E 也就是講到第二代 第三代 以 TPU 8 的這個東西來講的話 那其實主要配合的東西就是 MediaTag 那這個其實就我覺得相對的重要 就是等於是 Google 跟聯發科 終於有一點合作的一個主要的 我覺得要角啦 那其實這個時間軸的話 就會我們會抓得更遠一點 可能會是在 26 年的第四季 然後再到 2027 年的第四季 所以我們會看到 現在我們雖然講 聯發科營收網上去報充 但是實際上 我們會去看得更遠的東西 S 一個相關的貢獻的話 會是落在第四季跟明年的第四季 這個",
+          "matched_keyword": "聯發科",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": ""
+        },
+        {
+          "video": "EP217 | 台、美股重點一次說，Google TPU 各代產品結構與台廠供應鏈， 台積電封裝技術進展與風險，CPO量產前注意",
+          "channel": "韭菜畢業班",
+          "date": "2026-04-12",
+          "text": "翻長 好 再來就是最重要的 那其實就是 Computei 的部分 那 Computei 的話 它是直接暴增上去的 所以其實我們會講到 FIBA X 跟 FIBA E 為什麼我們會 focus 在這個點的原因 是因為它是一個 營收結構上面的跳躍式成長 所以會很重要 這個我覺得是大家 假如之後我們講到 MediaTek 或者說講到 Google 的時候 大家可以試著用這個概念去代一下 我覺得之後 我們講到大家會比較有感覺一點 好 那再來講到最後一個 那就是 FIBA P 當然我知道還有第九代 但我們先不要聊到這麼更後面的東西 我們先把近期的東西先聊完 讓大家有一個想法 那 FIBA P 其實也有一個 CodeNe",
+          "matched_keyword": "MediaTek",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": ""
+        }
+      ],
+      "total_mentions": 12,
+      "sentiment_score": 1.0,
+      "daily": {
+        "2026-04-01": {
+          "mentions": 4,
+          "bullish": 4,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        },
+        "2026-03-18": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-03-14": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-03-26": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        },
+        "2026-04-12": {
+          "mentions": 5,
+          "bullish": 5,
           "bearish": 0,
           "neutral": 0,
           "sentiment_score": 1.0
@@ -8440,123 +8637,6 @@
       }
     },
     {
-      "code": "2454",
-      "name": "聯發科",
-      "market": "TW",
-      "sector": "手機晶片",
-      "contexts": [
-        {
-          "video": "EP649 | 💌",
-          "channel": "股癌",
-          "date": "2026-04-01",
-          "text": "的某種設計工具店 那Core with跟Nabius的話 可能就是說 Delta Center的一個部件 跟AI工廠的擴張 那Core with Lumentine 那不用講就是 光相關的一個佈局 那Marvell的話 現在拉進去NV另Fusion 其實前面也拉一些夥伴的 像是L Chip 然後像是MTK也在裡面 那所以我會認為說 他真的就是錢太多 去買東西而已 就是我如果真的硬要拆這樣子 那當然第二步的話 就會認為說 他一定是有想去 做一些戰略的佈局 因為大家都知道說現在 目前我們在Hyper Scalar 所看到的一個清新就是 沒有像外面講得這麼誇張 去NVIDIA的話 但是是在分散配置的一個做",
-          "matched_keyword": "2454",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.7,
-          "video_url": null
-        },
-        {
-          "video": "EP649 | 💌",
-          "channel": "股癌",
-          "date": "2026-04-01",
-          "text": "ConnectX的NIC 然後跟Bluefield DPU Envading Interconnect Spectrum 或者是Quantum的相關的switch 光通的解放 CPU它都可以給你 所以它現在能夠做的事情 有點像他說 OK 那我知道像這種XPU的設計 你們要去選Marvel 或是你要選MTK L-Chip 你要選Broadcom OK 都可以 但你其他東西 你是有我的這個產品線 都是可以去做支援跟使用的 那當然其實也不一定會用到 NVIDIA的東西 因為我們剛才講的這些東西 可能像Broadcom 它也是有對應的一些解放 但它就是來跟Broadcom搶這個生意 所以你可以這樣去做看待",
-          "matched_keyword": "2454",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.7,
-          "video_url": null
-        },
-        {
-          "video": "EP649 | 💌",
-          "channel": "股癌",
-          "date": "2026-04-01",
-          "text": "但它就是來跟Broadcom搶這個生意 所以你可以這樣去做看待 所以我個人認為說 就是如果真的要把這個事件 去做一個誰受會 誰受害 誰可能受到競爭的一個判讀的話 會認為說它的建值是Broadcom 然後最主要是要去打Broadcom 那去拉這些快樂好朋友 像是可能Marvel 或是L-Chip或是MTK 各種什麼NVIDIA Fusion的活動 把你們做在一起 即便可能不一定有財務上的一個投資 但我覺得財務只是一個差奇的意涵 它並沒有辦法真正獲得什麼控制選擇 它只是拿出誠意 放一個錢金在那邊 希望你在後面的一些設計方面 如果有時候客戶需要的話 可以幫我們這東西整合進去 那我是覺得說 反正就是拉這幾",
-          "matched_keyword": "2454",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.7,
-          "video_url": null
-        },
-        {
-          "video": "EP649 | 💌",
-          "channel": "股癌",
-          "date": "2026-04-01",
-          "text": "ck後代的 就是那個一蜜蜂裝的相關東西的時候 那時候我們就 去去稍微看一下 Google 的 Role Map 他以前有一個叫 Karina Fish 那另外一個叫 Humu Fish 然後我們就發現說 Karina Fish 不見了 那一開始 那時候我們的認知是 Karina Fish 是 這個 MTK 的 那 Humu Fish 是 Broadcom的 然後最後發現說 欸不對是反過來 所以是 Humu Fish 還在 在 TPU 的 V19 的 Role Map 上面 然後 Karina Fish 不見了 所以不知道Broadcom的東西變什麼 還是說他有一個代號叫 Mirope 的那個東西 會",
-          "matched_keyword": "2454",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.7,
-          "video_url": null
-        },
-        {
-          "video": "EP645 | 🎱",
-          "channel": "股癌",
-          "date": "2026-03-18",
-          "text": "後可能就是Blockon 那只是Blockon這邊有些客戶 像剛剛前面提到 可能有一些侃單 有一些調整或什麼 那好在他家的客戶的 這個Portfolio是越來越大 但最近又有聽到一些新的八卦 就是在Google這邊 他除了本來的兩個Design House之外 他是想要再額外再加一個 也就是說本來是MTK跟Blockon 然後他現在可能想要再拉另外一家 那另外一家是誰 其實應該說非常好拆了 反正就是M開頭那一家 那M開頭那一家有可能 看一下後面風向 我們可能要再測一下 可是已經有聽到一些風聲 有一些產品的事情 那如果是這樣子的話 有沒有可能M開頭那一家 以前騙了我感情很多次 我上去壓 每次壓幹都賠錢",
-          "matched_keyword": "MTK",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": ""
-        },
-        {
-          "video": "EP644 | 🦇",
-          "channel": "股癌",
-          "date": "2026-03-14",
-          "text": "的了解狀態 可是問題是 如果你今天要賺錢要分析的話 就像你不會講說什麼硬體股 就全部都是一包 我就問你嘛 廣達跟硬夜達是一樣的東西嗎 台積電跟連電是一樣的東西嗎 就是我們沒有講說誰高誰低 就是如果因為硬體台灣人熟 所以我這樣去講 大家就知道說 沒有要幹它是不一樣的東西 一樣是IC Design 你說MTK跟銳域 那或者說跟一些 我們就不要去去湊人家 有一種超小型的 那種小Design House 那可能 20年前曾經有它的光輝moment 然後現在下去 他們都是IC Design 那你會講說IC Design 一起好的時候 就大家都一起好嘛 其實不會啦 所以軟體你要講說 它一包什麼軟體股大毀滅 然後",
-          "matched_keyword": "MTK",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": ""
-        },
-        {
-          "video": "EP410｜龍蝦的投資機會",
-          "channel": "股市隱者",
-          "date": "2026-03-26",
-          "text": "像Broadcom 它就是全球最大在做AIASIC的公司 還有就是Amazon 它有在開發自己的晶片 而且它也是Anthropic的大股東 它本身也在往AI領域切入 再來就是Alphabet Google Google本身有Germany 什麼都有 我覺得這還是很好的長期標的 台灣相關的 可能就像聯發科 創意 視星 這些都是 但如果你要說最穩的 那就是台積電 第二個 能源 能源的部分 我覺得AI 它其實不是只是算力問題 不是只是到極耐米 我覺得還有一個很重要 就是電力的問題 電力的問題 這個東西就是一個很大的方向 大家還記得嗎 我在前幾集有講 慢變量 其實電力這個就是一個慢變量 你說你要馬上蓋電廠",
-          "matched_keyword": "聯發科",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.7,
-          "video_url": ""
-        }
-      ],
-      "total_mentions": 7,
-      "sentiment_score": 1.0,
-      "daily": {
-        "2026-04-01": {
-          "mentions": 4,
-          "bullish": 4,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 1.0
-        },
-        "2026-03-18": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-03-14": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-03-26": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 1.0
-        }
-      }
-    },
-    {
       "code": "2313",
       "name": "華通",
       "market": "TW",
@@ -10072,6 +10152,87 @@
           "bearish": 0,
           "neutral": 2,
           "sentiment_score": 0.5
+        }
+      }
+    },
+    {
+      "code": "1459",
+      "name": "聯發",
+      "market": "TW",
+      "sector": "其他",
+      "contexts": [
+        {
+          "video": "EP410｜龍蝦的投資機會",
+          "channel": "股市隱者",
+          "date": "2026-03-26",
+          "text": "像Broadcom 它就是全球最大在做AIASIC的公司 還有就是Amazon 它有在開發自己的晶片 而且它也是Anthropic的大股東 它本身也在往AI領域切入 再來就是Alphabet Google Google本身有Germany 什麼都有 我覺得這還是很好的長期標的 台灣相關的 可能就像聯發科 創意 視星 這些都是 但如果你要說最穩的 那就是台積電 第二個 能源 能源的部分 我覺得AI 它其實不是只是算力問題 不是只是到極耐米 我覺得還有一個很重要 就是電力的問題 電力的問題 這個東西就是一個很大的方向 大家還記得嗎 我在前幾集有講 慢變量 其實電力這個就是一個慢變量 你說你要馬上蓋電",
+          "matched_keyword": "聯發",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": ""
+        },
+        {
+          "video": "EP217 | 台、美股重點一次說，Google TPU 各代產品結構與台廠供應鏈， 台積電封裝技術進展與風險，CPO量產前注意",
+          "channel": "韭菜畢業班",
+          "date": "2026-04-12",
+          "text": "把你的成本拉開 這個其實就是我們今天在做 長期投資的人 會去注意到的東西 一下子把你的成本拉開 那個區間 那一個所謂的缺口 其實我覺得是 多數人會蠻喜歡的 因為他就是可以讓你之後 報的比較放心的 好 那我們上一集其實有講到 Intel的一些技術 那我覺得這一集 我覺得可以順便的補充一下 Intel 聯發科 台積電以及Google之間的關係 因為我覺得一直講TPU 我覺得大家可能多多少少心情上 或是說感受上 我覺得沒有這麼的強 那我們今天就把TPU 最近幾代的東西 跟各位來聊一下 然後順便去把其中的一些變化 跟哪些東西有合作 我覺得大家會比較有感受一點 雖然我覺得現在講聯發科 可能大家會覺得說 這就",
+          "matched_keyword": "聯發",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": ""
+        },
+        {
+          "video": "EP217 | 台、美股重點一次說，Google TPU 各代產品結構與台廠供應鏈， 台積電封裝技術進展與風險，CPO量產前注意",
+          "channel": "韭菜畢業班",
+          "date": "2026-04-12",
+          "text": "00塊的價值 但是就是他可能又回到一個區間 大家可能就對他沒興趣了 但是我們在上幾集的時候有講過 雖然市場我們看到 對於他手機的那一塊板塊 會有一點擔憂 就覺得說他營收可能沒有辦法衝上去 但是我們其實看到 最近的營收公布出來之後 表現得還算不錯 就是有真的是往上去提 那這個我覺得跟 我們最早期有聊到聯發科 一些我覺得跟 TPU 的接單 或是說我們接下來會主要看的東西 還是在 Google TPU 這一塊 這個我覺得可以跟大家來聊一下 首先第一件事情就是 TPU 這個東西 就是 Google 的字眼晶片 他其實是可以分為非常多帶的 那我們就以近幾代的跟各位聊交 我們就不要聊到最前面的 我們以最新我們",
+          "matched_keyword": "聯發",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": ""
+        },
+        {
+          "video": "EP217 | 台、美股重點一次說，Google TPU 各代產品結構與台廠供應鏈， 台積電封裝技術進展與風險，CPO量產前注意",
+          "channel": "韭菜畢業班",
+          "date": "2026-04-12",
+          "text": "間軸 會落在 2025 年的第四季 主要的廠商就是 Brocon 然後再來的話 他用到的 Compute 那我們可以把它簡單來講 就是他用到的奈米速度 是 3 奈米 那可以簡單來講是 N31 那再來就是 IO 那 IO 的話我們比較 我覺得講白話一點 就有點像是傳輸協議 PCIe 的這種東西 那其實聯發科主要我們會去聽的 就是他賺的錢 其實會是在這一塊 那那個時候的話 用到的技術就是 Core Wars S 那 Core Wars S 的話 其實大家心裡就有底了嘛 就這個就是台積電的技術 那那個時候搭配的東西其實也是 HBN 所以 HBN 從那個時候 其實就已經有一些話題存在的 好 那我們再來眼睛",
+          "matched_keyword": "聯發",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": ""
+        },
+        {
+          "video": "EP217 | 台、美股重點一次說，Google TPU 各代產品結構與台廠供應鏈， 台積電封裝技術進展與風險，CPO量產前注意",
+          "channel": "韭菜畢業班",
+          "date": "2026-04-12",
+          "text": "在 Brocon 的部分 那它搭配的台積電的技術的話 就是 Covers 的 Aero 好 那再來講到 FIBA S 跟 FIBA E 也就是講到第二代 第三代 以 TPU 8 的這個東西來講的話 那其實主要配合的東西就是 MediaTag 那這個其實就我覺得相對的重要 就是等於是 Google 跟聯發科 終於有一點合作的一個主要的 我覺得要角啦 那其實這個時間軸的話 就會我們會抓得更遠一點 可能會是在 26 年的第四季 然後再到 2027 年的第四季 所以我們會看到 現在我們雖然講 聯發科營收網上去報充 但是實際上 我們會去看得更遠的東西 S 一個相關的貢獻的話 會是落在第四季跟明年的第四季 這",
+          "matched_keyword": "聯發",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": ""
+        }
+      ],
+      "total_mentions": 5,
+      "sentiment_score": 1.0,
+      "daily": {
+        "2026-03-26": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        },
+        "2026-04-12": {
+          "mentions": 4,
+          "bullish": 4,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
         }
       }
     },
@@ -15187,36 +15348,6 @@
       }
     },
     {
-      "code": "1459",
-      "name": "聯發",
-      "market": "TW",
-      "sector": "其他",
-      "contexts": [
-        {
-          "video": "EP410｜龍蝦的投資機會",
-          "channel": "股市隱者",
-          "date": "2026-03-26",
-          "text": "像Broadcom 它就是全球最大在做AIASIC的公司 還有就是Amazon 它有在開發自己的晶片 而且它也是Anthropic的大股東 它本身也在往AI領域切入 再來就是Alphabet Google Google本身有Germany 什麼都有 我覺得這還是很好的長期標的 台灣相關的 可能就像聯發科 創意 視星 這些都是 但如果你要說最穩的 那就是台積電 第二個 能源 能源的部分 我覺得AI 它其實不是只是算力問題 不是只是到極耐米 我覺得還有一個很重要 就是電力的問題 電力的問題 這個東西就是一個很大的方向 大家還記得嗎 我在前幾集有講 慢變量 其實電力這個就是一個慢變量 你說你要馬上蓋電",
-          "matched_keyword": "聯發",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.7,
-          "video_url": ""
-        }
-      ],
-      "total_mentions": 1,
-      "sentiment_score": 1.0,
-      "daily": {
-        "2026-03-26": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 1.0
-        }
-      }
-    },
-    {
       "code": "MRNA",
       "name": "Moderna",
       "market": "US",
@@ -16854,13 +16985,14 @@
     {
       "sector": "其他",
       "market": "TW",
-      "total_mentions": 83,
+      "total_mentions": 87,
       "stock_codes": [
         "5007",
         "2640",
         "1806",
         "9911",
         "2614",
+        "1459",
         "8047",
         "6139",
         "2404",
@@ -16879,7 +17011,6 @@
         "2312",
         "1313",
         "8923",
-        "1459",
         "6164"
       ]
     },
@@ -16965,7 +17096,7 @@
     {
       "sector": "AI網路",
       "market": "US",
-      "total_mentions": 24,
+      "total_mentions": 25,
       "stock_codes": [
         "AVGO",
         "CSCO"
@@ -17052,6 +17183,14 @@
         "APP",
         "SNDK",
         "INTU"
+      ]
+    },
+    {
+      "sector": "手機晶片",
+      "market": "TW",
+      "total_mentions": 12,
+      "stock_codes": [
+        "2454"
       ]
     },
     {
@@ -17157,14 +17296,6 @@
       "stock_codes": [
         "4129",
         "4743"
-      ]
-    },
-    {
-      "sector": "手機晶片",
-      "market": "TW",
-      "total_mentions": 7,
-      "stock_codes": [
-        "2454"
       ]
     },
     {
@@ -19459,6 +19590,22 @@
         "ORCL",
         "AAPL",
         "INTC"
+      ],
+      "analysis_source": "whisper",
+      "thumbnail_url": null
+    },
+    {
+      "video_id": "7a5bda6f-2295-497c-b200-2dd60e494050",
+      "title": "EP217 | 台、美股重點一次說，Google TPU 各代產品結構與台廠供應鏈， 台積電封裝技術進展與風險，CPO量產前注意",
+      "channel": "韭菜畢業班",
+      "date": "2026-04-12",
+      "stocks_found": [
+        "2454",
+        "1459",
+        "GOOGL",
+        "AVGO",
+        "INTC",
+        "2330"
       ],
       "analysis_source": "whisper",
       "thumbnail_url": null
