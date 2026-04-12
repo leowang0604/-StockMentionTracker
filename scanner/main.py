@@ -52,6 +52,10 @@ TW_INDUSTRY_CACHE_FILE = Path(__file__).parent.parent / "data" / "tw_industry_ca
 ETF_NAMES_CACHE_FILE   = Path(__file__).parent.parent / "data" / "etf_names_cache.json"
 LEARNED_ALIASES_FILE = Path(__file__).parent.parent / "data" / "learned_aliases.json"
 GEMINI_USAGE_FILE    = Path(__file__).parent.parent / "data" / "gemini_usage.json"
+_SKIP_LOG_DIR        = Path(__file__).parent.parent / "data"
+
+# Module-level skip log accumulator; written to data/skip_log_YYYY-MM-DD.json at end of run.
+_skip_log: list[dict] = []
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Static aliases: English names, abbreviations, nicknames not in official list
@@ -272,6 +276,26 @@ def _save_learned_alias(wrong_keyword: str, correct_code: str) -> None:
     # Update runtime dicts so the rest of this scan benefits immediately
     STOCK_DICT[wrong_keyword] = correct_code
     WHISPER_ALIAS_KEYWORDS.add(wrong_keyword)
+
+
+def _write_skip_log() -> None:
+    """Append accumulated _skip_log entries to data/skip_log_YYYY-MM-DD.json."""
+    if not _skip_log:
+        return
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    path  = _SKIP_LOG_DIR / f"skip_log_{today}.json"
+    existing: list[dict] = []
+    if path.exists():
+        try:
+            existing = json.loads(path.read_text(encoding="utf-8"))
+        except Exception:
+            existing = []
+    combined = existing + _skip_log
+    try:
+        path.write_text(json.dumps(combined, ensure_ascii=False, indent=2), encoding="utf-8")
+        print(f"[scanner] Skip log → {path} ({len(_skip_log)} new entries, {len(combined)} total)")
+    except Exception as e:
+        print(f"[scanner] Skip log write failed: {e}", file=sys.stderr)
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -1572,13 +1596,15 @@ KEYWORD_PATTERN_OVERRIDE: dict[str, str] = {
 # Stock Recognition
 # ─────────────────────────────────────────────────────────────────────────────
 
-def recognize_stocks(text: str) -> list[dict]:
+def recognize_stocks(text: str, video_ctx: dict | None = None) -> list[dict]:
     """
     掃描文字，找出所有台股 / 美股提及，回傳含上下文的列表。
     英文關鍵字加 word-boundary 避免誤匹配；相近重複 match 去重。
+    video_ctx: optional {"video_id": ..., "channel": ..., "date": ...} for skip log.
     """
     hits: list[dict] = []
     seen: dict[str, list[int]] = {}  # code → [positions]
+    _vctx = video_ctx or {}
 
     for keyword, code in STOCK_DICT.items():
         # Use word boundaries for ASCII-starting keywords (avoids partial matches)
@@ -1597,6 +1623,20 @@ def recognize_stocks(text: str) -> list[dict]:
         except re.error:
             continue
 
+        # For KEYWORD_PATTERN_OVERRIDE: log positions where the plain keyword
+        # matched but the override pattern excluded them.
+        if keyword in KEYWORD_PATTERN_OVERRIDE:
+            plain_pattern = re.escape(keyword)
+            try:
+                plain_matches = list(re.finditer(plain_pattern, text))
+            except re.error:
+                plain_matches = []
+            override_positions = {m.start() for m in matches}
+            for pm in plain_matches:
+                if pm.start() not in override_positions:
+                    print(f"[SKIP] {keyword} at pos={pm.start()} reason=pattern_override", file=sys.stderr)
+                    _skip_log.append({"keyword": keyword, "pos": pm.start(), "reason": "keyword_pattern_override", "detail": None, **_vctx})
+
         for m in matches:
             pos = m.start()
             # Deduplicate: skip if same stock already matched within 40 chars
@@ -1612,6 +1652,9 @@ def recognize_stocks(text: str) -> list[dict]:
             if code in CONTEXT_REQUIRED:
                 required_terms = CONTEXT_REQUIRED[code]
                 if not any(term in ctx for term in required_terms):
+                    needed = "/".join(required_terms)
+                    print(f"[SKIP] {keyword} at pos={pos} reason=context_required (需要: {needed})", file=sys.stderr)
+                    _skip_log.append({"keyword": keyword, "pos": pos, "reason": "context_required", "detail": needed, **_vctx})
                     continue
 
             # Year-shaped codes (1990–2099): require company name in context.
@@ -1619,6 +1662,8 @@ def recognize_stocks(text: str) -> list[dict]:
             if re.match(r"^(19|20)\d{2}$", code) and code not in CONTEXT_REQUIRED:
                 company_name = CODE_TO_NAME.get(code, "")
                 if company_name and company_name not in ctx:
+                    print(f"[SKIP] {keyword} at pos={pos} reason=context_required (需要: {company_name})", file=sys.stderr)
+                    _skip_log.append({"keyword": keyword, "pos": pos, "reason": "context_required", "detail": company_name, **_vctx})
                     continue
 
             # Price-level false positive: 4-digit numeric code appearing as a stock
@@ -1628,6 +1673,8 @@ def recognize_stocks(text: str) -> list[dict]:
                 pre = text[max(0, pos - 8): pos]
                 suf = text[pos + 4: min(len(text), pos + 10)]
                 if re.search(r'[到至達漲跌]\s*$', pre) or re.search(r'^\s*(?:字頭|點|億|%)', suf):
+                    print(f"[SKIP] {keyword} at pos={pos} reason=price_level_filter", file=sys.stderr)
+                    _skip_log.append({"keyword": keyword, "pos": pos, "reason": "price_level_filter", "detail": None, **_vctx})
                     continue
 
             # Price-level false positive: 3-digit ETF short-form aliases (e.g. "878", "919")
@@ -1636,12 +1683,17 @@ def recognize_stocks(text: str) -> list[dict]:
                 pre = text[max(0, pos - 8): pos]
                 suf = text[pos + 3: min(len(text), pos + 9)]
                 if re.search(r'[到至達漲跌]\s*$', pre) or re.search(r'^\s*(?:字頭|點|元|億|%)', suf):
+                    print(f"[SKIP] {keyword} at pos={pos} reason=price_level_filter", file=sys.stderr)
+                    _skip_log.append({"keyword": keyword, "pos": pos, "reason": "price_level_filter", "detail": None, **_vctx})
                     continue
 
             # Reject if forbidden context terms appear (avoids substring false positives)
             if code in CONTEXT_FORBIDDEN:
                 forbidden_terms = CONTEXT_FORBIDDEN[code]
                 if any(term in ctx for term in forbidden_terms):
+                    matched_forbidden = next(t for t in forbidden_terms if t in ctx)
+                    print(f"[SKIP] {keyword} at pos={pos} reason=context_forbidden ({matched_forbidden})", file=sys.stderr)
+                    _skip_log.append({"keyword": keyword, "pos": pos, "reason": "context_forbidden", "detail": matched_forbidden, **_vctx})
                     continue
 
             hits.append({
@@ -1823,8 +1875,12 @@ def _sentiment_batch_single(model, items: list[dict]) -> list[tuple[str, float]]
     prompt = (
         "你是台灣股市情緒分析專家。針對以下每條提及內容，判斷主持人/YouTuber 對該股票的看法情緒。\n"
         "注意台股常見用語：「非常暴力」「狂飆」「爆衝」= 極度看多；「護國神山」「台積神山」= 對台積電正面；"
-        "「減碼」「出清」「跑了」= 看空；「中性」「觀望」= 中性；部分內容是 Whisper 語音轉文字，可能有雜訊。\n"
-        "判斷依據應是主持人對股票前景的實際觀點，而非描述市場現狀的中性陳述。\n"
+        "「減碼」「出清」「跑了」「不看好」「警示」= 看空；「中性」「觀望」= 中性；部分內容是 Whisper 語音轉文字，可能有雜訊。\n"
+        "【重要】以下描述過程或現狀的語言，應判為「neutral」，不得因字面感覺偏負面就判為 bearish：\n"
+        "「需要時間」「還需要時間」「需要轉型」「轉型中」「轉型需要時間」「整理中」「目前整理」"
+        "「長線布局」「等待訊號」「觀察中」「尚未突破」「還沒發動」「蹲馬步」。\n"
+        "只有主持人明確表達負面意見（例如：「不看好」「不建議」「建議出場」「已出清」「跑了」）才算 bearish。\n"
+        "判斷依據應是主持人對股票前景的實際觀點，而非客觀描述現況或過程的中性陳述。\n"
         "只回傳 JSON 陣列，格式為 [{\"label\": \"bullish\"|\"bearish\"|\"neutral\", \"score\": 0.0~1.0}, ...]，"
         "score 代表看多程度（1.0=極度看多，0.0=極度看空，0.5=中性），數量與輸入相同，不要有多餘文字。\n\n"
         + "\n".join(lines)
@@ -2064,6 +2120,9 @@ def _suspicious_chinese_hits(
                 close_match = False
             # Suspicious: close to stock name (possible error) OR brand new stock
             if close_match or h["stock_code"] not in history_counts:
+                pos = h.get("position", "?")
+                if close_match:
+                    print(f"[SKIP?] {h['matched_keyword']} at pos={pos} reason=edit_distance (dist={dist}, similar_to={stock_name})", file=sys.stderr)
                 candidates.append((d_idx, h_idx, h, title, dist))
 
     # Sort by edit distance ascending (most likely errors first), cap at limit
@@ -2363,7 +2422,7 @@ def _detect_youtube_video(
         print(f"  ⚠ fallback → title+description")
 
     # ── Recognize stocks ──────────────────────────────────────────────────
-    hits        = deduplicate_hits(recognize_stocks(text))
+    hits        = deduplicate_hits(recognize_stocks(text, video_ctx={"video_id": video_id, "channel": source_name, "date": date}))
     stock_codes = list({h["stock_code"] for h in hits})
 
     video_entry = {
@@ -2490,7 +2549,18 @@ def _batch_filter_ambiguous_hits(detected: list[tuple], history: dict | None = N
             for (d_idx, h_idx, h, title), r in zip(batch, results):
                 if not r.get("is_stock"):
                     to_remove.add((d_idx, h_idx))
-                    print(f"  [gemini] filtered: {h['stock_code']}({h['matched_keyword']})", file=sys.stderr)
+                    pos = h.get("position", "?")
+                    print(f"[SKIP] {h['matched_keyword']} at pos={pos} reason=gemini_rejected", file=sys.stderr)
+                    v_entry = result[d_idx][0]
+                    _skip_log.append({
+                        "keyword":  h["matched_keyword"],
+                        "pos":      pos,
+                        "reason":   "gemini_rejected",
+                        "detail":   None,
+                        "video_id": v_entry.get("video_id"),
+                        "channel":  v_entry.get("channel"),
+                        "date":     v_entry.get("date"),
+                    })
                     removed += 1
                     continue
 
@@ -2670,7 +2740,7 @@ def _detect_podcast_episode(
         text = title + " " + ep.get("description", "")
         analysis_source = "titleAndDescription"
 
-    hits        = deduplicate_hits(recognize_stocks(text))
+    hits        = deduplicate_hits(recognize_stocks(text, video_ctx={"video_id": ep["id"], "channel": source_name, "date": date}))
     stock_codes = list({h["stock_code"] for h in hits})
 
     # Debug: check if known watch-keywords appear in text but weren't detected
@@ -3130,6 +3200,7 @@ def main() -> None:
         f"{total_new_mentions} new mentions this run"
     )
     print(f"[scanner] Output → {OUTPUT_FILE}")
+    _write_skip_log()
     if GEMINI_API_KEY:
         daily = _gemini_today_count()
         print(
