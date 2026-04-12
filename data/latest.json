@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-12T19:23:04",
+  "updated_at": "2026-04-12T20:02:19",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -16966,6 +16966,36 @@
           "sentiment_score": 1.0
         }
       }
+    },
+    {
+      "code": "CVS",
+      "name": "CVS Health",
+      "market": "US",
+      "sector": "醫療",
+      "contexts": [
+        {
+          "video": "2026/04/08 (三）停戰再兩週， 這次是真的？",
+          "channel": "財女珍妮",
+          "date": "2026-04-08",
+          "text": "不行了 我要開始去刺激消費的時候 它會先反應衰退 再去反應基地 那這個市場上面 它的反應的程度 跟反應的類股的表現 完全都會是不一樣的狀況 好那我們來看一下 昨天S&P 500指數 單日的漲跌幅 其實漲跌幅呢 表現好的個股 我們在昨天的影片裡面 都已經有跟大家分享 第一個當然就是聯合健康保險啊 然後CVS啊 就是因為昨天聯邦政府宣布 明年Mate Care的 保險幾幅調升2.48% 遠高於1月初所提出的0.09% 所以大幅的讓市場 重估了整個保險族群的獲利預期 因為你今年你的幾幅調升 基本上就是一個穩穩的 穩妥的一個營收保證 所以呢大家對於過去 很保守的這個預期呢 馬上有了非常大的一個逆轉 那另外呢",
+          "matched_keyword": "CVS",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": ""
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 1.0,
+      "daily": {
+        "2026-04-08": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        }
+      }
     }
   ],
   "sectors_ranking": [
@@ -17290,6 +17320,16 @@
       ]
     },
     {
+      "sector": "醫療",
+      "market": "US",
+      "total_mentions": 8,
+      "stock_codes": [
+        "UNH",
+        "HUM",
+        "CVS"
+      ]
+    },
+    {
       "sector": "生技製藥",
       "market": "TW",
       "total_mentions": 8,
@@ -17304,15 +17344,6 @@
       "total_mentions": 7,
       "stock_codes": [
         "2605"
-      ]
-    },
-    {
-      "sector": "醫療",
-      "market": "US",
-      "total_mentions": 7,
-      "stock_codes": [
-        "UNH",
-        "HUM"
       ]
     },
     {
