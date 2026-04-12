@@ -2654,7 +2654,7 @@ def _detect_podcast_episode(
         with tempfile.TemporaryDirectory() as tmpdir:
             out_path = os.path.join(tmpdir, "episode.mp3")
             try:
-                resp = requests.get(audio_url, timeout=30, stream=True,
+                resp = requests.get(audio_url, timeout=120, stream=True,
                                     headers={"User-Agent": "Mozilla/5.0"})
                 with open(out_path, "wb") as f:
                     for chunk in resp.iter_content(chunk_size=65536):

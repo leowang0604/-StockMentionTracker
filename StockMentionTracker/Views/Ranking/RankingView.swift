@@ -84,6 +84,14 @@ struct RankingView: View {
                     }
                     .disabled(dataService.isLoading)
                 }
+                ToolbarItem(placement: .bottomBar) {
+                    let text = dataService.scanResult.updatedAt.isEmpty
+                        ? ""
+                        : "更新於 \(dataService.scanResult.updatedDateText)"
+                    Text(text)
+                        .font(.caption2)
+                        .foregroundStyle(.secondary)
+                }
             }
             .alert("載入失敗", isPresented: $showErrorAlert) {
                 Button("確定") { dataService.errorMessage = nil }
