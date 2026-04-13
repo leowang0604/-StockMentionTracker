@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-13T18:07:51",
+  "updated_at": "2026-04-13T18:43:14",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -7844,9 +7844,20 @@
           "sentiment": "neutral",
           "sentiment_score": 0.5,
           "video_url": ""
+        },
+        {
+          "video": "EP651 | One for all",
+          "channel": "股癌",
+          "date": "2026-04-08",
+          "text": "說導航不能用 叫車會失敗、餐廳查不到 甚至訂單確認驗證碼 航班資訊全部都卡住 你會花很多時間去解決問題 而不是在旅行整個旅遊品質下降許多 以前我也都是拖到最後一刻 才去處理上網 要嘛是SIM卡來不及 要嘛就是在機場排隊浪費生命 像下午比較單純都是直接使用ECIM 下午下午要慣用Sally 在出發前把APP裝好 落地直接連線 不用換卡也不用在那邊找工具 而且它的設計蠻直覺 你只要把方案買好 去到不同的地區就可以切換 APP裡面也可以直接看到 流量的使用狀況 如果你是那種會一直開地圖 滑影片的人 你的用量掉很快 至少是可控的 不夠就直接加 不用臨時找Wi-Fi 或是重買一張卡 另外它有內建VPN 有時候",
+          "matched_keyword": "APP",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
         }
       ],
-      "total_mentions": 8,
+      "total_mentions": 9,
       "sentiment_score": 0.5,
       "daily": {
         "2026-03-29": {
@@ -7878,6 +7889,13 @@
           "sentiment_score": 0.5
         },
         "2026-03-24": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-04-08": {
           "mentions": 1,
           "bullish": 0,
           "bearish": 0,
@@ -17285,6 +17303,16 @@
       ]
     },
     {
+      "sector": "企業軟體",
+      "market": "US",
+      "total_mentions": 13,
+      "stock_codes": [
+        "APP",
+        "CDNS",
+        "ADBE"
+      ]
+    },
+    {
       "sector": "手機晶片",
       "market": "TW",
       "total_mentions": 12,
@@ -17299,16 +17327,6 @@
       "stock_codes": [
         "0052",
         "0053"
-      ]
-    },
-    {
-      "sector": "企業軟體",
-      "market": "US",
-      "total_mentions": 12,
-      "stock_codes": [
-        "APP",
-        "CDNS",
-        "ADBE"
       ]
     },
     {
