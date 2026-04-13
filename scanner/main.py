@@ -1580,6 +1580,8 @@ CONTEXT_REQUIRED: dict[str, list[str]] = {
 CONTEXT_FORBIDDEN: dict[str, list[str]] = {
     "2327": ["中國巨石"],  # "國巨" inside "中國巨石" is not Yageo
     "4129": ["健康"],      # "聯合健康" = UnitedHealth (UNH)，不是台股聯合4129
+    "4128": ["如日中天"],  # 「中天」出現在成語「如日中天」不是中天生技
+    "1806": ["冠軍是", "以來冠軍", "年度冠軍", "績效冠軍"],  # 「冠軍」用於ETF/基金績效排名
 }
 
 # Custom regex patterns for keywords that need lookbehind/lookahead to avoid substring matches.
@@ -1588,8 +1590,9 @@ KEYWORD_PATTERN_OVERRIDE: dict[str, str] = {
     "國巨": r"(?<!中)國巨(?!石)",   # exclude "中國巨石" (China Jushi)
     "天剛": r"(?<![昨今前上那這每])天剛",  # exclude "昨天剛好", "今天剛好" etc.
     "力士": r"(?<!海)力士",         # exclude "海力士" (SK Hynix)
-    "新建": r"(?<!重)新建(?!立)",   # exclude "重新建立" (re-establish)
+    "新建": r"(?<!重新)新建(?!立)",  # exclude "重新建立" (re-establish) — lookbehind covers full "重新"
     "大立": r"大立(?!光)",         # exclude "大立光" (3008 Largan) — 大立(4716) is substring of 大立光
+    "新產": r"新產(?!品)",         # exclude "新產品" (new product)
 }
 
 # ─────────────────────────────────────────────────────────────────────────────
