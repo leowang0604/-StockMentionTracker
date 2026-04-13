@@ -128,16 +128,25 @@ Pass 3：組合輸出，存入 data/latest.json
 - 格式：`{"台波": "1802", "光盛": "6442", ...}`
 - 優點：Whisper 錯字自動累積，不需每次手動加 ALIASES
 
-### 3.5 已知誤報防護規則（截至 2026-04-08）
+### 3.5 已知誤報防護規則（截至 2026-04-13）
 
 | 類型 | 對象 | 規則 |
 |------|------|------|
 | CONTEXT_REQUIRED | 3118 進階 | 需含「光電/LED/磊晶」 |
-| CONTEXT_REQUIRED | 8047 星雲 | 需含「油電/能源/燃氣」 |
+| CONTEXT_REQUIRED | 8047 星雲 | 需含「油電/能源/燃氣」（Whisper 辛耘→星雲） |
 | CONTEXT_REQUIRED | BX (美股) | 需含 Blackstone 相關詞 |
-| KEYWORD_PATTERN_OVERRIDE | 天剛 | 禁止「天剛好/天剛到」等 |
-| CONTEXT_FORBIDDEN | 2327 (國巨) | 禁止「億/兆」後接 |
-| price_level_filter | 4字元股碼 | 「漲到XXXX」型誤觸（+% 字尾） |
+| KEYWORD_PATTERN_OVERRIDE | 天剛 (5310) | `(?<![昨今前上那這每])天剛` — 排除「昨天剛好」 |
+| KEYWORD_PATTERN_OVERRIDE | 全訊 (5222) | `全訊(?!息)` — 排除「全訊息」 |
+| KEYWORD_PATTERN_OVERRIDE | 達新 (1315) | `(?<!輝)達新` — 排除 Whisper 把「輝達新…」誤切 |
+| KEYWORD_PATTERN_OVERRIDE | 新產 (2850) | `新產(?!品)` — 排除「新產品」 |
+| KEYWORD_PATTERN_OVERRIDE | 新建 (2516) | `(?<!重新)新建(?!立)` — 排除「重新建立」 |
+| KEYWORD_PATTERN_OVERRIDE | 國巨 (2327) | `(?<!中)國巨(?!石)` — 排除「中國巨石」 |
+| KEYWORD_PATTERN_OVERRIDE | 大立 (4716) | `大立(?!光)` — 排除「大立光」(3008) |
+| KEYWORD_PATTERN_OVERRIDE | 力士 | `(?<!海)力士` — 排除「海力士」(SK Hynix) |
+| CONTEXT_FORBIDDEN | 2327 國巨 | 禁止「中國巨石」 |
+| CONTEXT_FORBIDDEN | 4128 中天 | 禁止「如日中天」（成語） |
+| CONTEXT_FORBIDDEN | 1806 冠軍 | 禁止「冠軍是/以來冠軍/年度冠軍/績效冠軍」（ETF排名） |
+| price_level_filter | 4/3字元股碼 | 「漲到XXXX」/ 「XXXX點/元」型誤觸 |
 
 ### 3.6 已知 Whisper 錯字 ALIASES（截至 2026-04-08）
 
