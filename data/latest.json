@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-12T20:17:24",
+  "updated_at": "2026-04-13T18:07:51",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -7755,7 +7755,7 @@
       "code": "APP",
       "name": "AppLovin",
       "market": "US",
-      "sector": "科技",
+      "sector": "企業軟體",
       "contexts": [
         {
           "video": "EP214 | 台、美股重點一次說，低軌衛星產業動能，光電二極體與台股關係，定穎投控轉型，google新技術與記憶體 ？",
@@ -10926,7 +10926,7 @@
       "code": "CCL",
       "name": "Carnival",
       "market": "US",
-      "sector": "消費",
+      "sector": "消費電子",
       "contexts": [
         {
           "video": "EP213 | 台、美股重點一次說，台股反彈怎麼看？美股極度恐慌後的觀察重點，南俊國際與滑軌需求，設備股後勢",
@@ -13758,6 +13758,54 @@
       }
     },
     {
+      "code": "3711",
+      "name": "日月光投控",
+      "market": "TW",
+      "sector": "先進封裝",
+      "contexts": [
+        {
+          "video": "EP213 | 台、美股重點一次說，台股反彈怎麼看？美股極度恐慌後的觀察重點，南俊國際與滑軌需求，設備股後勢",
+          "channel": "韭菜畢業班",
+          "date": "2026-03-25",
+          "text": "不會多,那如果我給大家一個想像好了,就像是可能26年它10%好了, 當然在27年28年的話可能可以要到3-40%,但那個是未來市,但如果市場願意去想這些事情的話呢, 可能就會有一個更大的一個買盤出現啦,那像紅塑的話本身又是台積電Core是製程的一個主要廠商,市佔率50%嘛,所以再來就是可以看到,像在日月光細品的話它擁有的市佔率又更高,所以等於是獨家的一個供應商的概念啦,所以我們才會看到股價,最近好像又比較強一點的原因啦,好那我們就在這一集大概補充到這邊啦, 然後就是上IG的端音還是會持續的更新啦,雖然IG現在要回到之前9萬多的兄弟姐妹們的追蹤,我覺得這是一件很難的事情啦,但是就檢看其他走吧,那這一集",
+          "matched_keyword": "日月光",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
+        },
+        {
+          "video": "【理財達人秀】台積法說前賣飛 美伊談崩不怕？被動.PCB 漲價是王道？記憶.組裝 營收好投信買？賺低檔中小 下個立隆電.日月光？｜李兆華、李永年、張林忠、楊雲翔2026.04.13【電視完整版】",
+          "channel": "東森財經",
+          "date": "2026-04-13",
+          "text": "【理財達人秀】台積法說前賣飛 美伊談崩不怕？被動.PCB 漲價是王道？記憶.組裝 營收好投信買？賺低檔中小 下個立隆電.日月光？｜李兆華、李永年、張林忠、楊雲翔2026.04.13【電視完整版】 貼在你身編：被動元件真正切入AI 興勤股價被低估? #荷姆茲#美伊#台積法說#理財達人秀(00:00) 台股驚驚漲中小更有戲!法說報牌翻 ...",
+          "matched_keyword": "日月光",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "https://www.youtube.com/watch?v=jPh1n-cgbH0"
+        }
+      ],
+      "total_mentions": 2,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-03-25": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-04-13": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
       "code": "BLK",
       "name": "BlackRock",
       "market": "US",
@@ -14439,36 +14487,6 @@
       "sentiment_score": 0.5,
       "daily": {
         "2026-03-30": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        }
-      }
-    },
-    {
-      "code": "3711",
-      "name": "日月光投控",
-      "market": "TW",
-      "sector": "先進封裝",
-      "contexts": [
-        {
-          "video": "EP213 | 台、美股重點一次說，台股反彈怎麼看？美股極度恐慌後的觀察重點，南俊國際與滑軌需求，設備股後勢",
-          "channel": "韭菜畢業班",
-          "date": "2026-03-25",
-          "text": "不會多,那如果我給大家一個想像好了,就像是可能26年它10%好了, 當然在27年28年的話可能可以要到3-40%,但那個是未來市,但如果市場願意去想這些事情的話呢, 可能就會有一個更大的一個買盤出現啦,那像紅塑的話本身又是台積電Core是製程的一個主要廠商,市佔率50%嘛,所以再來就是可以看到,像在日月光細品的話它擁有的市佔率又更高,所以等於是獨家的一個供應商的概念啦,所以我們才會看到股價,最近好像又比較強一點的原因啦,好那我們就在這一集大概補充到這邊啦, 然後就是上IG的端音還是會持續的更新啦,雖然IG現在要回到之前9萬多的兄弟姐妹們的追蹤,我覺得這是一件很難的事情啦,但是就檢看其他走吧,那這一集",
-          "matched_keyword": "日月光",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": ""
-        }
-      ],
-      "total_mentions": 1,
-      "sentiment_score": 0.5,
-      "daily": {
-        "2026-03-25": {
           "mentions": 1,
           "bullish": 0,
           "bearish": 0,
@@ -15471,7 +15489,7 @@
       "code": "CHTR",
       "name": "Charter Communications",
       "market": "US",
-      "sector": "通訊媒體",
+      "sector": "網路",
       "contexts": [
         {
           "video": "EP649 | 💌",
@@ -16996,6 +17014,66 @@
           "sentiment_score": 1.0
         }
       }
+    },
+    {
+      "code": "2428",
+      "name": "興勤",
+      "market": "TW",
+      "sector": "電子零組件業",
+      "contexts": [
+        {
+          "video": "【理財達人秀】台積法說前賣飛 美伊談崩不怕？被動.PCB 漲價是王道？記憶.組裝 營收好投信買？賺低檔中小 下個立隆電.日月光？｜李兆華、李永年、張林忠、楊雲翔2026.04.13【電視完整版】",
+          "channel": "東森財經",
+          "date": "2026-04-13",
+          "text": "【理財達人秀】台積法說前賣飛 美伊談崩不怕？被動.PCB 漲價是王道？記憶.組裝 營收好投信買？賺低檔中小 下個立隆電.日月光？｜李兆華、李永年、張林忠、楊雲翔2026.04.13【電視完整版】 貼在你身編：被動元件真正切入AI 興勤股價被低估? #荷姆茲#美伊#台積法說#理財達人秀(00:00) 台股驚驚漲中小更有戲!法說報牌翻 ...",
+          "matched_keyword": "興勤",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "https://www.youtube.com/watch?v=jPh1n-cgbH0"
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-04-13": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
+      "code": "2472",
+      "name": "立隆電",
+      "market": "TW",
+      "sector": "電子零組件業",
+      "contexts": [
+        {
+          "video": "【理財達人秀】台積法說前賣飛 美伊談崩不怕？被動.PCB 漲價是王道？記憶.組裝 營收好投信買？賺低檔中小 下個立隆電.日月光？｜李兆華、李永年、張林忠、楊雲翔2026.04.13【電視完整版】",
+          "channel": "東森財經",
+          "date": "2026-04-13",
+          "text": "【理財達人秀】台積法說前賣飛 美伊談崩不怕？被動.PCB 漲價是王道？記憶.組裝 營收好投信買？賺低檔中小 下個立隆電.日月光？｜李兆華、李永年、張林忠、楊雲翔2026.04.13【電視完整版】 貼在你身編：被動元件真正切入AI 興勤股價被低估? #荷姆茲#美伊#台積法說#理財達人秀(00:00) 台股驚驚漲中小更有戲!法說報牌翻 ...",
+          "matched_keyword": "立隆電",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "https://www.youtube.com/watch?v=jPh1n-cgbH0"
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-04-13": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
     }
   ],
   "sectors_ranking": [
@@ -17091,19 +17169,20 @@
       ]
     },
     {
+      "sector": "消費電子",
+      "market": "US",
+      "total_mentions": 34,
+      "stock_codes": [
+        "AAPL",
+        "CCL"
+      ]
+    },
+    {
       "sector": "半導體",
       "market": "US",
       "total_mentions": 30,
       "stock_codes": [
         "INTC"
-      ]
-    },
-    {
-      "sector": "消費電子",
-      "market": "US",
-      "total_mentions": 30,
-      "stock_codes": [
-        "AAPL"
       ]
     },
     {
@@ -17206,16 +17285,6 @@
       ]
     },
     {
-      "sector": "科技",
-      "market": "US",
-      "total_mentions": 13,
-      "stock_codes": [
-        "APP",
-        "SNDK",
-        "INTU"
-      ]
-    },
-    {
       "sector": "手機晶片",
       "market": "TW",
       "total_mentions": 12,
@@ -17230,6 +17299,16 @@
       "stock_codes": [
         "0052",
         "0053"
+      ]
+    },
+    {
+      "sector": "企業軟體",
+      "market": "US",
+      "total_mentions": 12,
+      "stock_codes": [
+        "APP",
+        "CDNS",
+        "ADBE"
       ]
     },
     {
@@ -17388,16 +17467,6 @@
       ]
     },
     {
-      "sector": "消費",
-      "market": "US",
-      "total_mentions": 6,
-      "stock_codes": [
-        "CCL",
-        "ABNB",
-        "NKE"
-      ]
-    },
-    {
       "sector": "資訊服務",
       "market": "TW",
       "total_mentions": 6,
@@ -17406,6 +17475,15 @@
         "6217",
         "6274",
         "1815"
+      ]
+    },
+    {
+      "sector": "科技",
+      "market": "US",
+      "total_mentions": 5,
+      "stock_codes": [
+        "SNDK",
+        "INTU"
       ]
     },
     {
@@ -17451,15 +17529,6 @@
       ]
     },
     {
-      "sector": "企業軟體",
-      "market": "US",
-      "total_mentions": 4,
-      "stock_codes": [
-        "CDNS",
-        "ADBE"
-      ]
-    },
-    {
       "sector": "ETF",
       "market": "TW",
       "total_mentions": 4,
@@ -17497,6 +17566,27 @@
         "9940",
         "9927",
         "3040"
+      ]
+    },
+    {
+      "sector": "先進封裝",
+      "market": "TW",
+      "total_mentions": 4,
+      "stock_codes": [
+        "3711",
+        "8150",
+        "2449"
+      ]
+    },
+    {
+      "sector": "電子零組件業",
+      "market": "TW",
+      "total_mentions": 4,
+      "stock_codes": [
+        "3653",
+        "3533",
+        "2428",
+        "2472"
       ]
     },
     {
@@ -17551,16 +17641,6 @@
       ]
     },
     {
-      "sector": "先進封裝",
-      "market": "TW",
-      "total_mentions": 3,
-      "stock_codes": [
-        "3711",
-        "8150",
-        "2449"
-      ]
-    },
-    {
       "sector": "金融",
       "market": "TW",
       "total_mentions": 3,
@@ -17611,12 +17691,12 @@
       ]
     },
     {
-      "sector": "電子零組件業",
-      "market": "TW",
+      "sector": "消費",
+      "market": "US",
       "total_mentions": 2,
       "stock_codes": [
-        "3653",
-        "3533"
+        "ABNB",
+        "NKE"
       ]
     },
     {
@@ -17635,15 +17715,6 @@
       "stock_codes": [
         "6425",
         "1599"
-      ]
-    },
-    {
-      "sector": "通訊媒體",
-      "market": "US",
-      "total_mentions": 2,
-      "stock_codes": [
-        "SATS",
-        "CHTR"
       ]
     },
     {
@@ -17753,11 +17824,27 @@
       ]
     },
     {
+      "sector": "通訊媒體",
+      "market": "US",
+      "total_mentions": 1,
+      "stock_codes": [
+        "SATS"
+      ]
+    },
+    {
       "sector": "生技製藥",
       "market": "US",
       "total_mentions": 1,
       "stock_codes": [
         "MRNA"
+      ]
+    },
+    {
+      "sector": "網路",
+      "market": "US",
+      "total_mentions": 1,
+      "stock_codes": [
+        "CHTR"
       ]
     },
     {
@@ -19651,6 +19738,20 @@
       ],
       "analysis_source": "titleAndDescription",
       "thumbnail_url": "https://i.ytimg.com/vi/cROWU9be2ic/mqdefault.jpg"
+    },
+    {
+      "video_id": "jPh1n-cgbH0",
+      "title": "【理財達人秀】台積法說前賣飛 美伊談崩不怕？被動.PCB 漲價是王道？記憶.組裝 營收好投信買？賺低檔中小 下個立隆電.日月光？｜李兆華、李永年、張林忠、楊雲翔2026.04.13【電視完整版】",
+      "channel": "東森財經",
+      "date": "2026-04-13",
+      "stocks_found": [
+        "2330",
+        "3711",
+        "2428",
+        "2472"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": "https://i.ytimg.com/vi/jPh1n-cgbH0/mqdefault.jpg"
     }
   ]
 }
