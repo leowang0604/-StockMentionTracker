@@ -1528,6 +1528,7 @@ def build_stock_dict(
 
 CONTEXT_REQUIRED: dict[str, list[str]] = {
     "AI":   ["C3", "C3.ai"],        # avoid matching generic "AI" mentions not about C3.ai
+    "APP":  ["AppLovin", "APP股"],  # "APP" in TW content = 應用程式, not AppLovin ticker
     "LI":   ["Li Auto", "理想汽車"],# avoid matching "li" in general Chinese text
     "PCB":  ["Bancorp", "PCBP", "PCB Bank"],   # "PCB" in TW content = 電路板產業, not PCB Bancorp
     "5287": ["5287", "數字科技"],   # 「數字」是中文常用詞，需要出現股號或公司全名才算
@@ -1595,6 +1596,8 @@ KEYWORD_PATTERN_OVERRIDE: dict[str, str] = {
     "新產": r"新產(?!品)",         # exclude "新產品" (new product)
     "全訊": r"全訊(?!息)",         # exclude "全訊息" — 5222 全訊科技
     "達新": r"(?<!輝)達新",        # exclude Whisper 把「輝達新…」誤切成「達新」— 1315 達新工業
+    "上亞": r"上亞(?!洲)",         # exclude "上亞洲盤" — 6130 上亞科技
+    "百一": r"(?<!一)百一(?!十)",   # exclude "一百一十幾" — 6152 百一電子
 }
 
 # ─────────────────────────────────────────────────────────────────────────────
