@@ -1588,7 +1588,7 @@ CONTEXT_FORBIDDEN: dict[str, list[str]] = {
 # Overrides the default re.escape(keyword) pattern for Chinese keywords.
 KEYWORD_PATTERN_OVERRIDE: dict[str, str] = {
     "國巨": r"(?<!中)國巨(?!石)",   # exclude "中國巨石" (China Jushi)
-    "天剛": r"(?<![昨今前上那這每])天剛",  # exclude "昨天剛好", "今天剛好" etc.
+    "天剛": r"(?<![昨今前上那這每一哪某])天剛",  # exclude "昨天剛好", "那一天剛好" etc.
     "力士": r"(?<!海)力士",         # exclude "海力士" (SK Hynix)
     "新建": r"(?<!重新)新建(?!立)",  # exclude "重新建立" (re-establish) — lookbehind covers full "重新"
     "大立": r"大立(?!光)",         # exclude "大立光" (3008 Largan) — 大立(4716) is substring of 大立光
