@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-14T18:45:31",
+  "updated_at": "2026-04-14T19:01:04",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -9035,9 +9035,20 @@
           "sentiment": "neutral",
           "sentiment_score": 0.5,
           "video_url": ""
+        },
+        {
+          "video": "EP216 | 台、美股重點一次說，台積電法說會前瞻，半導體檢測與光學材料漲價，低軌衛星台廠營收占比",
+          "channel": "韭菜畢業班",
+          "date": "2026-04-08",
+          "text": "別擔心我 我會努力成為你的森林 盧可佩溫暖主打 親愛的大帝 別擔心我 我親愛的大帝 小小女孩一張塵一片綠淚 盧可佩修張個人全創作專輯 屁屁 溫暖發行 哈囉 大家好 我叔叔在九彩畢業班 如果還沒追蹤我們節目的朋友 可以點擊一下上角 追蹤你就可以在第一層 收到我們節目的官方通知 如果對於產業以及宣估上沒有方向 朋友也歡迎在",
+          "matched_keyword": "力成",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
         }
       ],
-      "total_mentions": 7,
+      "total_mentions": 8,
       "sentiment_score": 1.0,
       "daily": {
         "2026-04-03": {
@@ -9069,10 +9080,10 @@
           "sentiment_score": 0.5
         },
         "2026-04-08": {
-          "mentions": 2,
+          "mentions": 3,
           "bullish": 2,
           "bearish": 0,
-          "neutral": 0,
+          "neutral": 1,
           "sentiment_score": 1.0
         },
         "2026-04-09": {
@@ -17879,7 +17890,7 @@
     {
       "sector": "記憶體",
       "market": "TW",
-      "total_mentions": 71,
+      "total_mentions": 72,
       "stock_codes": [
         "1303",
         "2408",
