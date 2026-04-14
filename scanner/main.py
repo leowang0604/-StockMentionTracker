@@ -1976,7 +1976,7 @@ def _sentiment_for_hits(hits: list[dict], analysis_source: str) -> list[tuple[st
     batch_items = []
     for code in unique_codes:
         indices = groups[code]
-        combined = " … ".join(hits[i]["context"] for i in indices[:5])
+        combined = " … ".join(hits[i]["context"] for i in indices)
         batch_items.append({"stock": hits[indices[0]]["stock_name"], "context": combined})
 
     stock_sentiments = analyze_sentiment_batch_gemini(batch_items)
@@ -2006,7 +2006,7 @@ def _batch_channel_sentiments(
             groups.setdefault(h["stock_code"], []).append(i)
         ep_groups.append(groups)
         for code, indices in groups.items():
-            combined = " … ".join(hits[i]["context"] for i in indices[:5])
+            combined = " … ".join(hits[i]["context"] for i in indices)
             batch_items.append({"stock": hits[indices[0]]["stock_name"], "context": combined})
             batch_keys.append((ep_idx, code))
 
