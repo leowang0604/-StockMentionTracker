@@ -1592,7 +1592,7 @@ KEYWORD_PATTERN_OVERRIDE: dict[str, str] = {
     "天剛": r"(?<![昨今前上那這每一哪某])天剛",  # exclude "昨天剛好", "那一天剛好" etc.
     "力士": r"(?<!海)力士",         # exclude "海力士" (SK Hynix)
     "新建": r"(?<!重新)新建(?!立)",  # exclude "重新建立" (re-establish) — lookbehind covers full "重新"
-    "大立": r"大立(?!光)",         # exclude "大立光" (3008 Largan) — 大立(4716) is substring of 大立光
+    "大立": r"大立(?!\s*光)",       # exclude "大立光" / "大立 光" (3008 Largan) — 大立(4716) is substring of 大立光
     "新產": r"新產(?!品)",         # exclude "新產品" (new product)
     "全訊": r"全訊(?!息)",         # exclude "全訊息" — 5222 全訊科技
     "達新": r"(?<!輝)達新",        # exclude Whisper 把「輝達新…」誤切成「達新」— 1315 達新工業
