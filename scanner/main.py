@@ -1890,7 +1890,12 @@ def _sentiment_batch_single(model, items: list[dict]) -> list[tuple[str, float]]
         "只有主持人明確表達負面意見（例如：「不看好」「不建議」「建議出場」「已出清」「跑了」）才算 bearish。\n"
         "判斷依據應是主持人對股票前景的實際觀點，而非客觀描述現況或過程的中性陳述。\n"
         "只回傳 JSON 陣列，格式為 [{\"label\": \"bullish\"|\"bearish\"|\"neutral\", \"score\": 0.0~1.0}, ...]，"
-        "score 代表看多程度（1.0=極度看多，0.0=極度看空，0.5=中性），數量與輸入相同，不要有多餘文字。\n\n"
+        "score 代表看多程度（0.5=中性，>0.5 偏多，<0.5 偏空）。"
+        "請使用 0.1~0.9 的連續值；0.0 與 1.0 僅保留給「強烈建議賣出/全部出清」或「強烈推薦立即買入/重押」的極端情況。"
+        "一般偏空（如「轉型需要時間」「整理中」「上漲有壓」）請給 0.3~0.45；"
+        "一般偏多（如「有機會」「看好」「上車點」）請給 0.55~0.7；"
+        "明確看多（「非常看好」「目標大漲」）給 0.75~0.9。"
+        "數量與輸入相同，不要有多餘文字。\n\n"
         + "\n".join(lines)
     )
     try:
@@ -1907,6 +1912,13 @@ def _sentiment_batch_single(model, items: list[dict]) -> list[tuple[str, float]]
             score = max(0.0, min(1.0, round(score, 3)))
             if label not in ("bullish", "bearish", "neutral"):
                 label = "neutral"
+            # Reconcile label/score inconsistencies (e.g. label=bullish but score=0.1)
+            if label == "bullish" and score < 0.5:
+                score = 1.0 - score   # mirror: treat as bullish score
+            elif label == "bearish" and score > 0.5:
+                score = 1.0 - score   # mirror: treat as bearish score
+            elif label == "neutral" and (score < 0.35 or score > 0.65):
+                score = 0.5           # force neutral score to midpoint
             results.append((label, score))
         if len(results) == len(items):
             return results
