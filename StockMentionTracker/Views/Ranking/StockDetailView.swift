@@ -7,6 +7,7 @@ struct StockDetailView: View {
     @Environment(AppState.self)    private var appState
 
     @State private var expandedIDs = Set<String>()
+    @State private var contextSort = "newest"  // newest | oldest | count
 
     /// All distinct keywords matched across every context for this stock.
     /// Uses ALL unfiltered contexts from dataService so date-window filtering
@@ -17,6 +18,22 @@ struct StockDetailView: View {
         let keywords = fullContexts.compactMap(\.matchedKeyword).filter { !$0.isEmpty }
         let base = shortNameTerms(stock.name, stock.code, nil)
         return Array(Set(base + keywords))
+    }
+
+    private var sortedContexts: [MentionContext] {
+        switch contextSort {
+        case "oldest":
+            return stock.contexts.sorted { ($0.parsedDate ?? .distantPast) < ($1.parsedDate ?? .distantPast) }
+        case "count":
+            let perVideo = Dictionary(grouping: stock.contexts, by: \.video).mapValues(\.count)
+            return stock.contexts.sorted {
+                let c0 = perVideo[$0.video, default: 1], c1 = perVideo[$1.video, default: 1]
+                if c0 != c1 { return c0 > c1 }
+                return ($0.parsedDate ?? .distantPast) > ($1.parsedDate ?? .distantPast)
+            }
+        default: // newest
+            return stock.contexts.sorted { ($0.parsedDate ?? .distantPast) > ($1.parsedDate ?? .distantPast) }
+        }
     }
 
     private var sectorPeers: [StockEntry] {
@@ -110,14 +127,14 @@ struct StockDetailView: View {
             }
 
             // ── Mention list ──────────────────────────────────────────────
-            Section("提及紀錄（\(stock.contexts.count) 筆）") {
+            Section {
                 if stock.contexts.isEmpty {
                     Text("無提及紀錄")
                         .foregroundStyle(.secondary)
                         .frame(maxWidth: .infinity, alignment: .center)
                         .padding()
                 } else {
-                    ForEach(stock.contexts) { ctx in
+                    ForEach(sortedContexts) { ctx in
                         ContextRowView(
                             context: ctx,
                             highlightTerms: allHighlightTerms,
@@ -132,6 +149,35 @@ struct StockDetailView: View {
                                 }
                             }
                         )
+                    }
+                }
+            } header: {
+                HStack {
+                    Text("提及紀錄（\(stock.contexts.count) 筆）")
+                    Spacer()
+                    Menu {
+                        Button {
+                            contextSort = "newest"
+                        } label: {
+                            Label("最新日期", systemImage: contextSort == "newest" ? "checkmark" : "")
+                        }
+                        Button {
+                            contextSort = "oldest"
+                        } label: {
+                            Label("最舊日期", systemImage: contextSort == "oldest" ? "checkmark" : "")
+                        }
+                        Button {
+                            contextSort = "count"
+                        } label: {
+                            Label("集數次數", systemImage: contextSort == "count" ? "checkmark" : "")
+                        }
+                    } label: {
+                        HStack(spacing: 3) {
+                            Image(systemName: "arrow.up.arrow.down")
+                            Text(contextSort == "newest" ? "最新" : contextSort == "oldest" ? "最舊" : "次數")
+                        }
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
                     }
                 }
             }
