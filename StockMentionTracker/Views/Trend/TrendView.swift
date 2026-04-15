@@ -151,9 +151,10 @@ struct StockTrendDetailView: View {
     @Environment(DataService.self) private var dataService
 
     let stockCode: String
-    @State private var chartMode    = "mentions"
-    @State private var selectedDate: Date?
-    @State private var showDaySheet = false
+    @State private var chartMode     = "mentions"
+    @State private var selectedDate:  Date?
+    @State private var showDaySheet  = false
+    @State private var selectionDate: Date?   // chartXSelection binding
 
     private var stock: StockEntry? {
         dataService.scanResult.stocksRanking.first { $0.code == stockCode }
@@ -271,24 +272,17 @@ struct StockTrendDetailView: View {
                         AxisValueLabel(format: .dateTime.month().day())
                     }
                 }
-                .chartOverlay { proxy in
-                    GeometryReader { geo in
-                        Rectangle().fill(.clear).contentShape(Rectangle())
-                            .onTapGesture { location in
-                                let plotFrame = geo[proxy.plotAreaFrame]
-                                let xPos = location.x - plotFrame.origin.x
-                                guard xPos >= 0, xPos <= plotFrame.width,
-                                      let tappedDate = proxy.value(atX: xPos, as: Date.self)
-                                else { return }
-                                if let nearest = chartData.min(by: {
-                                    abs($0.date.timeIntervalSince(tappedDate)) <
-                                    abs($1.date.timeIntervalSince(tappedDate))
-                                }) {
-                                    selectedDate  = nearest.date
-                                    showDaySheet  = true
-                                }
-                            }
+                .chartXSelection(value: $selectionDate)
+                .onChange(of: selectionDate) { _, tapped in
+                    guard let tapped else { return }
+                    if let nearest = chartData.min(by: {
+                        abs($0.date.timeIntervalSince(tapped)) <
+                        abs($1.date.timeIntervalSince(tapped))
+                    }) {
+                        selectedDate = nearest.date
+                        showDaySheet = true
                     }
+                    selectionDate = nil
                 }
                 .frame(height: 260)
                 .padding()
@@ -445,6 +439,7 @@ struct DayMentionsSheet: View {
     let stock: StockEntry
     let date:  Date
 
+    @Environment(\.dismiss) private var dismiss
     @State private var expandedIDs = Set<String>()
 
     private var dayContexts: [MentionContext] {
@@ -458,11 +453,26 @@ struct DayMentionsSheet: View {
         let df = DateFormatter()
         df.locale = Locale(identifier: "zh_TW")
         df.dateFormat = "M月d日"
-        return "\(stock.name) · \(df.string(from: date))"
+        return "\(stock.name) · \(df.string(from: date))（\(dayContexts.count) 筆）"
     }
 
     var body: some View {
-        NavigationStack {
+        VStack(spacing: 0) {
+            // Header
+            HStack {
+                Text(titleText)
+                    .font(.headline)
+                    .lineLimit(1)
+                Spacer()
+                Button { dismiss() } label: {
+                    Image(systemName: "xmark.circle.fill")
+                        .foregroundStyle(.secondary)
+                        .font(.title3)
+                }
+            }
+            .padding()
+            Divider()
+            // Mentions list
             List(dayContexts) { ctx in
                 ContextRowView(
                     context: ctx,
@@ -480,9 +490,9 @@ struct DayMentionsSheet: View {
                 )
             }
             .listStyle(.plain)
-            .navigationTitle(titleText)
-            .navigationBarTitleDisplayMode(.inline)
         }
+        .presentationDetents([.medium, .large])
+        .presentationDragIndicator(.visible)
     }
 }
 
