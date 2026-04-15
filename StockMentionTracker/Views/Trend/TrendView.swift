@@ -230,6 +230,8 @@ struct StockTrendDetailView: View {
     }
 
     private var mentionsChart: some View {
+        let cutoff = appState.cutoffDate
+        let now    = Date()
         return Group {
             if chartData.isEmpty {
                 ContentUnavailableView("此時間範圍無資料",
@@ -248,8 +250,9 @@ struct StockTrendDetailView: View {
                             startPoint: .top, endPoint: .bottom))
                 }
                 .chartYScale(domain: 0...(maxCount + 1))
+                .chartXScale(domain: cutoff...now)
                 .chartXAxis {
-                    AxisMarks(values: chartData.map(\.date)) { _ in
+                    AxisMarks(values: .automatic(desiredCount: 4)) { _ in
                         AxisGridLine()
                         AxisValueLabel(format: .dateTime.month().day())
                     }
@@ -261,6 +264,8 @@ struct StockTrendDetailView: View {
     }
 
     private var sentimentChart: some View {
+        let cutoff = appState.cutoffDate
+        let now    = Date()
         return Group {
             if sentimentData.isEmpty {
                 ContentUnavailableView("此時間範圍無資料",
@@ -282,8 +287,9 @@ struct StockTrendDetailView: View {
                             stacking: .unstacked)
                         .foregroundStyle(.red.opacity(0.5))
                 }
+                .chartXScale(domain: cutoff...now)
                 .chartXAxis {
-                    AxisMarks(values: sentimentData.map(\.date)) { _ in
+                    AxisMarks(values: .automatic(desiredCount: 4)) { _ in
                         AxisGridLine()
                         AxisValueLabel(format: .dateTime.month().day())
                     }
@@ -371,6 +377,8 @@ struct SectorTrendDetailView: View {
                     description: Text("請選擇更長的時間範圍"))
                 .frame(height: 250)
             } else {
+                let cutoff = appState.cutoffDate
+                let now    = Date()
                 Chart(chartData) { point in
                     LineMark(x: .value("日期", point.date), y: .value("次數", point.count))
                         .foregroundStyle(Color.accentColor)
@@ -380,8 +388,9 @@ struct SectorTrendDetailView: View {
                             colors: [Color.accentColor.opacity(0.5), Color.accentColor.opacity(0.05)],
                             startPoint: .top, endPoint: .bottom))
                 }
+                .chartXScale(domain: cutoff...now)
                 .chartXAxis {
-                    AxisMarks(values: chartData.map(\.date)) { _ in
+                    AxisMarks(values: .automatic(desiredCount: 4)) { _ in
                         AxisGridLine()
                         AxisValueLabel(format: .dateTime.month().day())
                     }
