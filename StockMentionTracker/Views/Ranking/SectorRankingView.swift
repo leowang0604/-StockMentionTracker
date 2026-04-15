@@ -5,6 +5,15 @@ struct SectorRankingView: View {
     @Environment(DataService.self) private var dataService
 
     @State private var marketFilter = "all"   // "all" | "TW" | "US"
+    @State private var sectorSort   = "episodes" // "episodes" | "stocks" | "date"
+
+    private var sortLabel: String {
+        switch sectorSort {
+        case "stocks": return "個股數"
+        case "date":   return "最新日期"
+        default:       return "集數"
+        }
+    }
 
     private var filteredSectors: [SectorEntry] {
         @Bindable var appState = appState
@@ -51,10 +60,27 @@ struct SectorRankingView: View {
             }
         }
 
-        return sectorsMap.values
+        let base = sectorsMap.values
             .map(\.entry)
-            .sorted { $0.totalMentions > $1.totalMentions }
             .filter { marketFilter == "all" || $0.market == marketFilter }
+        switch sectorSort {
+        case "stocks":
+            return base.sorted { $0.stockCodes.count > $1.stockCodes.count }
+        case "date":
+            return base.sorted { a, b in
+                let latestA = dataService.scanResult.stocksRanking
+                    .filter { a.stockCodes.contains($0.code) }
+                    .flatMap(\.contexts)
+                    .compactMap(\.parsedDate).max() ?? .distantPast
+                let latestB = dataService.scanResult.stocksRanking
+                    .filter { b.stockCodes.contains($0.code) }
+                    .flatMap(\.contexts)
+                    .compactMap(\.parsedDate).max() ?? .distantPast
+                return latestA > latestB
+            }
+        default: // episodes
+            return base.sorted { $0.totalMentions > $1.totalMentions }
+        }
     }
 
     var body: some View {
@@ -103,6 +129,26 @@ struct SectorRankingView: View {
                 }
             }
             .navigationTitle("族群排行榜")
+            .toolbar {
+                ToolbarItem(placement: .automatic) {
+                    Menu {
+                        Button { sectorSort = "episodes" } label: {
+                            Label("集數（預設）", systemImage: sectorSort == "episodes" ? "checkmark" : "")
+                        }
+                        Button { sectorSort = "stocks" } label: {
+                            Label("個股數", systemImage: sectorSort == "stocks" ? "checkmark" : "")
+                        }
+                        Button { sectorSort = "date" } label: {
+                            Label("最新日期", systemImage: sectorSort == "date" ? "checkmark" : "")
+                        }
+                    } label: {
+                        HStack(spacing: 3) {
+                            Image(systemName: "arrow.up.arrow.down")
+                            Text(sortLabel).font(.caption)
+                        }
+                    }
+                }
+            }
         }
     }
 }

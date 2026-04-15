@@ -318,13 +318,12 @@ struct RankingRowView: View {
                             .background(sentimentBadgeColor(stock).opacity(0.15), in: Capsule())
                             .foregroundStyle(sentimentBadgeColor(stock))
                     }
-                    Label("\(stock.channelCount) 個來源",
-                          systemImage: "antenna.radiowaves.left.and.right")
-                    Text("·")
-                    Text(stock.lastDateText)
+                    Image(systemName: "antenna.radiowaves.left.and.right")
+                    Text("\(stock.channelCount) 來源 · \(stock.lastDateText)")
                 }
                 .font(.caption)
                 .foregroundStyle(.secondary)
+                .lineLimit(1)
             }
 
             Spacer()
