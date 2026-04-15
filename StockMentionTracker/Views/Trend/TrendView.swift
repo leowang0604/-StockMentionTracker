@@ -250,7 +250,9 @@ struct StockTrendDetailView: View {
                 Chart(chartData) { point in
                     LineMark(x: .value("日期", point.date), y: .value("次數", point.count))
                         .foregroundStyle(Color.accentColor)
-                        .symbol(Circle())
+                    PointMark(x: .value("日期", point.date), y: .value("次數", point.count))
+                        .foregroundStyle(Color.accentColor)
+                        .symbolSize(64)
                         .annotation(position: .top, alignment: .center, spacing: 4) {
                             Text("\(point.count)")
                                 .font(.caption2.bold())
@@ -276,7 +278,7 @@ struct StockTrendDetailView: View {
                                 let plotFrame = geo[proxy.plotAreaFrame]
                                 let xPos = location.x - plotFrame.origin.x
                                 guard xPos >= 0, xPos <= plotFrame.width,
-                                      let tappedDate: Date = proxy.value(atX: xPos)
+                                      let tappedDate = proxy.value(atX: xPos, as: Date.self)
                                 else { return }
                                 if let nearest = chartData.min(by: {
                                     abs($0.date.timeIntervalSince(tappedDate)) <
