@@ -1577,6 +1577,7 @@ CONTEXT_REQUIRED: dict[str, list[str]] = {
     # 5222 全訊：改用 KEYWORD_PATTERN_OVERRIDE 全訊(?!息) 精準排除「全訊息」
     "1324": ["1324", "地球牌", "地球股"],      # 「地球」極常出現於環境/星球語境，需股號或品牌名才算
     "4743": ["4743", "合一生技", "合一藥"],    # 「合一」常出現在「統合一下」「整合一起」等口語
+    "1723": ["1723", "碳黑", "碳纖維", "碳素", "石化", "化工"],  # Whisper 把「中探針」音譯成「中碳增/中碳針」→ 需碳材料或石化詞確認
 }
 
 # If ANY of these strings appear in the context, the match is rejected.
