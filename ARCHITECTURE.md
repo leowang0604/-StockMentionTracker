@@ -128,21 +128,27 @@ Pass 3：組合輸出，存入 data/latest.json
 - 格式：`{"台波": "1802", "光盛": "6442", ...}`
 - 優點：Whisper 錯字自動累積，不需每次手動加 ALIASES
 
-### 3.5 已知誤報防護規則（截至 2026-04-13）
+### 3.5 已知誤報防護規則（截至 2026-04-15）
 
 | 類型 | 對象 | 規則 |
 |------|------|------|
 | CONTEXT_REQUIRED | 3118 進階 | 需含「光電/LED/磊晶」 |
 | CONTEXT_REQUIRED | 8047 星雲 | 需含「油電/能源/燃氣」（Whisper 辛耘→星雲） |
 | CONTEXT_REQUIRED | BX (美股) | 需含 Blackstone 相關詞 |
+| CONTEXT_REQUIRED | 4716 大立 | 需含「醫療器材/醫材/手術/4716/大立醫」— 「大立」是大立光(3008)子字串，Whisper 變體無限 |
+| CONTEXT_REQUIRED | 1459 聯發 | 需含「紡織/棉紗/1459/聯發紡」— 「聯發」幾乎等於聯發科(2454)，1459 紡織股極少被提及 |
+| CONTEXT_REQUIRED | 1210 大成 | 需含「食品股/雞肉/飼料/1210/大成食品」— 「大成」出現於「集大成」等成語 |
+| CONTEXT_REQUIRED | 1723 中碳 | 需含「碳黑/碳纖維/石化/化工」— Whisper 把「中探針」音譯成「中碳增/中碳針」|
 | KEYWORD_PATTERN_OVERRIDE | 天剛 (5310) | `(?<![昨今前上那這每])天剛` — 排除「昨天剛好」 |
 | KEYWORD_PATTERN_OVERRIDE | 全訊 (5222) | `全訊(?!息)` — 排除「全訊息」 |
 | KEYWORD_PATTERN_OVERRIDE | 達新 (1315) | `(?<!輝)達新` — 排除 Whisper 把「輝達新…」誤切 |
 | KEYWORD_PATTERN_OVERRIDE | 新產 (2850) | `新產(?!品)` — 排除「新產品」 |
 | KEYWORD_PATTERN_OVERRIDE | 新建 (2516) | `(?<!重新)新建(?!立)` — 排除「重新建立」 |
 | KEYWORD_PATTERN_OVERRIDE | 國巨 (2327) | `(?<!中)國巨(?!石)` — 排除「中國巨石」 |
-| KEYWORD_PATTERN_OVERRIDE | 大立 (4716) | `大立(?!光)` — 排除「大立光」(3008) |
 | KEYWORD_PATTERN_OVERRIDE | 力士 | `(?<!海)力士` — 排除「海力士」(SK Hynix) |
+| KEYWORD_PATTERN_OVERRIDE | 上亞 (6130) | `上亞(?!洲)` — 排除「上亞洲盤」 |
+| KEYWORD_PATTERN_OVERRIDE | 百一 (6152) | `(?<!一)百一(?!十)` — 排除「一百一十幾」 |
+| KEYWORD_PATTERN_OVERRIDE | 天宇 (8171) | `(?<![昨今明前後每])天宇` — 排除時間詞+人名跨字（昨天宇翔哥） |
 | CONTEXT_FORBIDDEN | 2327 國巨 | 禁止「中國巨石」 |
 | CONTEXT_FORBIDDEN | 4128 中天 | 禁止「如日中天」（成語） |
 | CONTEXT_FORBIDDEN | 1806 冠軍 | 禁止「冠軍是/以來冠軍/年度冠軍/績效冠軍」（ETF排名） |
