@@ -6,13 +6,23 @@ struct RankingView: View {
 
     @State private var searchText     = ""
     @State private var marketFilter   = "all"   // "all" | "TW" | "US"
+    @State private var rankSort       = "episodes" // "episodes" | "mentions" | "date" | "sentiment"
     @State private var showErrorAlert = false
+
+    private var sortLabel: String {
+        switch rankSort {
+        case "mentions":  return "提及次數"
+        case "date":      return "最新日期"
+        case "sentiment": return "情緒看多"
+        default:          return "集數"
+        }
+    }
 
     // Filtered and date-trimmed stocks
     private var filteredStocks: [StockEntry] {
         @Bindable var appState = appState
         let cutoff = appState.cutoffDate
-        return dataService.scanResult.stocksRanking
+        let base = dataService.scanResult.stocksRanking
             .compactMap { stock -> StockEntry? in
                 let ctxs = stock.contexts.filter { ($0.parsedDate ?? .distantPast) >= cutoff }
                 guard !ctxs.isEmpty else { return nil }
@@ -27,7 +37,6 @@ struct RankingView: View {
                     sentimentScore: filteredScore, daily: nil
                 )
             }
-            .sorted { $0.episodeCount > $1.episodeCount }
             .filter { stock in
                 let matchMarket = marketFilter == "all" || stock.market == marketFilter
                 let matchSearch = searchText.isEmpty ||
@@ -36,6 +45,19 @@ struct RankingView: View {
                 let matchETF = appState.isETFVisible(sector: stock.sector)
                 return matchMarket && matchSearch && matchETF
             }
+        switch rankSort {
+        case "mentions":
+            return base.sorted { $0.totalMentions > $1.totalMentions }
+        case "date":
+            return base.sorted {
+                ($0.contexts.compactMap(\.parsedDate).max() ?? .distantPast) >
+                ($1.contexts.compactMap(\.parsedDate).max() ?? .distantPast)
+            }
+        case "sentiment":
+            return base.sorted { ($0.sentimentScore ?? 0) > ($1.sentimentScore ?? 0) }
+        default: // episodes
+            return base.sorted { $0.episodeCount > $1.episodeCount }
+        }
     }
 
     var body: some View {
@@ -83,6 +105,27 @@ struct RankingView: View {
                         }
                     }
                     .disabled(dataService.isLoading)
+                }
+                ToolbarItem(placement: .automatic) {
+                    Menu {
+                        Button { rankSort = "episodes" } label: {
+                            Label("集數（預設）", systemImage: rankSort == "episodes" ? "checkmark" : "")
+                        }
+                        Button { rankSort = "mentions" } label: {
+                            Label("提及次數", systemImage: rankSort == "mentions" ? "checkmark" : "")
+                        }
+                        Button { rankSort = "date" } label: {
+                            Label("最新日期", systemImage: rankSort == "date" ? "checkmark" : "")
+                        }
+                        Button { rankSort = "sentiment" } label: {
+                            Label("情緒看多", systemImage: rankSort == "sentiment" ? "checkmark" : "")
+                        }
+                    } label: {
+                        HStack(spacing: 3) {
+                            Image(systemName: "arrow.up.arrow.down")
+                            Text(sortLabel).font(.caption)
+                        }
+                    }
                 }
                 ToolbarItem(placement: .bottomBar) {
                     let text = dataService.scanResult.updatedAt.isEmpty
