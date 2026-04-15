@@ -6,10 +6,19 @@ struct ChannelDetailView: View {
     @Environment(DataService.self) private var dataService
     @Environment(AppState.self)    private var appState
 
+    @State private var sortByDate = false
+
     private var cutoff: Date { appState.cutoffDate }
 
     private var stocks: [StockEntry] {
-        dataService.stocksByChannel(channelName, cutoff: cutoff)
+        let raw = dataService.stocksByChannel(channelName, cutoff: cutoff)
+        if sortByDate {
+            return raw.sorted {
+                ($0.contexts.compactMap(\.parsedDate).max() ?? .distantPast) >
+                ($1.contexts.compactMap(\.parsedDate).max() ?? .distantPast)
+            }
+        }
+        return raw  // default: by mention count
     }
 
     private var episodes: [VideoScanned] {
@@ -19,7 +28,7 @@ struct ChannelDetailView: View {
     var body: some View {
         List {
             // ── Stocks ────────────────────────────────────────────────────
-            Section("提及股票（\(stocks.count) 支）") {
+            Section {
                 if stocks.isEmpty {
                     Text("此時間範圍內無股票提及")
                         .foregroundStyle(.secondary)
@@ -32,6 +41,19 @@ struct ChannelDetailView: View {
                         } label: {
                             ChannelStockRow(stock: stock)
                         }
+                    }
+                }
+            } header: {
+                HStack {
+                    Text("提及股票（\(stocks.count) 支）")
+                    Spacer()
+                    Button {
+                        sortByDate.toggle()
+                    } label: {
+                        Label(sortByDate ? "最新日期" : "提及次數",
+                              systemImage: sortByDate ? "calendar" : "number")
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
                     }
                 }
             }
@@ -69,6 +91,14 @@ struct ChannelDetailView: View {
 private struct ChannelStockRow: View {
     let stock: StockEntry
 
+    private var latestDate: String? {
+        guard let d = stock.contexts.compactMap(\.parsedDate).max() else { return nil }
+        let df = DateFormatter()
+        df.locale = Locale(identifier: "zh_TW")
+        df.dateFormat = "M/d"
+        return df.string(from: d)
+    }
+
     var body: some View {
         HStack {
             VStack(alignment: .leading, spacing: 3) {
@@ -81,6 +111,11 @@ private struct ChannelStockRow: View {
                     Text(stock.name).font(.subheadline.weight(.semibold))
                     Text(stock.code)
                         .font(.caption).foregroundStyle(.secondary)
+                    if let date = latestDate {
+                        Text(date)
+                            .font(.caption)
+                            .foregroundStyle(.tertiary)
+                    }
                 }
                 SentimentCountRow(contexts: stock.contexts)
             }
