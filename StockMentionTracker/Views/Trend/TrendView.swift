@@ -151,7 +151,9 @@ struct StockTrendDetailView: View {
     @Environment(DataService.self) private var dataService
 
     let stockCode: String
-    @State private var chartMode = "mentions"
+    @State private var chartMode    = "mentions"
+    @State private var selectedDate: Date?
+    @State private var showDaySheet = false
 
     private var stock: StockEntry? {
         dataService.scanResult.stocksRanking.first { $0.code == stockCode }
@@ -226,6 +228,11 @@ struct StockTrendDetailView: View {
             }
             .navigationTitle("\(stock.name)  \(stock.code)")
             .navigationBarTitleDisplayMode(.inline)
+            .sheet(isPresented: $showDaySheet) {
+                if let date = selectedDate {
+                    DayMentionsSheet(stock: stock, date: date)
+                }
+            }
         )
     }
 
@@ -244,12 +251,17 @@ struct StockTrendDetailView: View {
                     LineMark(x: .value("日期", point.date), y: .value("次數", point.count))
                         .foregroundStyle(Color.accentColor)
                         .symbol(Circle())
+                        .annotation(position: .top, alignment: .center, spacing: 4) {
+                            Text("\(point.count)")
+                                .font(.caption2.bold())
+                                .foregroundStyle(.white)
+                        }
                     AreaMark(x: .value("日期", point.date), y: .value("次數", point.count))
                         .foregroundStyle(LinearGradient(
                             colors: [Color.accentColor.opacity(0.5), Color.accentColor.opacity(0.05)],
                             startPoint: .top, endPoint: .bottom))
                 }
-                .chartYScale(domain: 0...(maxCount + 1))
+                .chartYScale(domain: 0...(maxCount + 2))
                 .chartXScale(domain: cutoff...now)
                 .chartXAxis {
                     AxisMarks(values: .automatic(desiredCount: 4)) { _ in
@@ -257,7 +269,26 @@ struct StockTrendDetailView: View {
                         AxisValueLabel(format: .dateTime.month().day())
                     }
                 }
-                .frame(height: 250)
+                .chartOverlay { proxy in
+                    GeometryReader { geo in
+                        Rectangle().fill(.clear).contentShape(Rectangle())
+                            .onTapGesture { location in
+                                let plotFrame = geo[proxy.plotAreaFrame]
+                                let xPos = location.x - plotFrame.origin.x
+                                guard xPos >= 0, xPos <= plotFrame.width,
+                                      let tappedDate: Date = proxy.value(atX: xPos)
+                                else { return }
+                                if let nearest = chartData.min(by: {
+                                    abs($0.date.timeIntervalSince(tappedDate)) <
+                                    abs($1.date.timeIntervalSince(tappedDate))
+                                }) {
+                                    selectedDate  = nearest.date
+                                    showDaySheet  = true
+                                }
+                            }
+                    }
+                }
+                .frame(height: 260)
                 .padding()
             }
         }
@@ -403,6 +434,53 @@ struct SectorTrendDetailView: View {
         }
         .navigationTitle(sector)
         .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+// MARK: - Day Mentions Sheet
+
+struct DayMentionsSheet: View {
+    let stock: StockEntry
+    let date:  Date
+
+    @State private var expandedIDs = Set<String>()
+
+    private var dayContexts: [MentionContext] {
+        stock.contexts.filter {
+            guard let d = $0.parsedDate else { return false }
+            return Calendar.current.isDate(d, inSameDayAs: date)
+        }
+    }
+
+    private var titleText: String {
+        let df = DateFormatter()
+        df.locale = Locale(identifier: "zh_TW")
+        df.dateFormat = "M月d日"
+        return "\(stock.name) · \(df.string(from: date))"
+    }
+
+    var body: some View {
+        NavigationStack {
+            List(dayContexts) { ctx in
+                ContextRowView(
+                    context: ctx,
+                    highlightTerms: [stock.name, stock.code],
+                    isExpanded: expandedIDs.contains(ctx.id),
+                    onToggle: {
+                        withAnimation(.easeInOut(duration: 0.2)) {
+                            if expandedIDs.contains(ctx.id) {
+                                expandedIDs.remove(ctx.id)
+                            } else {
+                                expandedIDs.insert(ctx.id)
+                            }
+                        }
+                    }
+                )
+            }
+            .listStyle(.plain)
+            .navigationTitle(titleText)
+            .navigationBarTitleDisplayMode(.inline)
+        }
     }
 }
 
