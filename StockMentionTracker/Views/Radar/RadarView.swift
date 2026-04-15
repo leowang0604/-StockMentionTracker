@@ -176,7 +176,15 @@ struct RadarView: View {
             } else {
                 ForEach(stocks.prefix(10)) { stock in
                     NavigationLink {
-                        StockDetailView(stock: stock)
+                        let cutoff = appState.cutoffDate
+                        let ctxs = stock.contexts.filter { ($0.parsedDate ?? .distantPast) >= cutoff }
+                        let filtered = StockEntry(
+                            code: stock.code, name: stock.name,
+                            market: stock.market, sector: stock.sector,
+                            totalMentions: ctxs.count, contexts: ctxs,
+                            sentimentScore: stock.sentimentScore, daily: stock.daily
+                        )
+                        StockDetailView(stock: filtered)
                     } label: {
                         HStack(spacing: 12) {
                             Image(systemName: icon)
