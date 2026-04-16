@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-16T18:47:37",
+  "updated_at": "2026-04-16T19:14:38",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -5229,10 +5229,32 @@
           "sentiment": "neutral",
           "sentiment_score": 0.45,
           "video_url": ""
+        },
+        {
+          "video": "訪談特別篇_產業研究與專職交易生活 ft.田中太郎",
+          "channel": "韭菜畢業班",
+          "date": "2026-04-16",
+          "text": "樣的感覺 記憶體去年下半年 開始的時候 在很多的報告或是很多的資訊 你都沒有看到記憶體 怎麼每一個月漲五成八成的 這個數字出來 是最近才看 是這一兩三個月才開始出來的嗎 一開始還被懷疑嗎 說其實根本沒有漲那麼多 是 可是 這個時候大家可已經漲了四五倍了 其實你這樣講就很有感覺 因為現在很多人都會靠背南亞科 怎麼一直疊一直疊 然後望紅怎麼一直疊 但他們其實 他們其實早就漲完 漲窩 不能說漲完 不能講漲完 危險危險 Bro 不能講漲完 但是 早就反映了 這件事情 就是已經陸續在反映了 好 我想問一個比較 比較隱私的 你一開始的時候有看到南亞科嗎 還是你看的是別的記憶體 有看到 對 但是 但是 可以學了再",
+          "matched_keyword": "南亞科",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
+        },
+        {
+          "video": "訪談特別篇_產業研究與專職交易生活 ft.田中太郎",
+          "channel": "韭菜畢業班",
+          "date": "2026-04-16",
+          "text": "漲完 不能講漲完 危險危險 Bro 不能講漲完 但是 早就反映了 這件事情 就是已經陸續在反映了 好 我想問一個比較 比較隱私的 你一開始的時候有看到南亞科嗎 還是你看的是別的記憶體 有看到 對 但是 但是 可以學了再學 我覺得我這一波記憶體做得不是很好 老實講 這麼說 我賣得太早了 我看到的時間 南亞科應該是三 四十塊 四 五十塊 哇 可是早 對 可是可是可是 我覺得這一波 需要非常 需要好好檢討 因為 我買的時間點應該 應該是二 四年的 五月 六 五月的時候 就是那時候其實有漲一小波 也有一些漲價化的 對 它好像後面又再掉下去了 就二五年 二五年的 六月到七月這一段 對 那個時候 那個時候其實",
+          "matched_keyword": "南亞科",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
         }
       ],
-      "total_mentions": 27,
-      "sentiment_score": 0.511,
+      "total_mentions": 29,
+      "sentiment_score": 0.51,
       "daily": {
         "2026-03-29": {
           "mentions": 1,
@@ -5303,6 +5325,13 @@
           "bearish": 0,
           "neutral": 5,
           "sentiment_score": 0.47
+        },
+        "2026-04-16": {
+          "mentions": 2,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 2,
+          "sentiment_score": 0.5
         }
       }
     },
@@ -5597,10 +5626,21 @@
           "sentiment": "bullish",
           "sentiment_score": 0.75,
           "video_url": ""
+        },
+        {
+          "video": "訪談特別篇_產業研究與專職交易生活 ft.田中太郎",
+          "channel": "韭菜畢業班",
+          "date": "2026-04-16",
+          "text": "反正就是搞那一支 對 只要做得出 只要做 所以其實大家就是 賺錢還是要 就是賺錢要去保 我自己是這麼想 賺錢去保 時間要拉長 對 可是 那你覺得現在 有些人在討論ETF 跟各股好了 你覺得做ETF的缺點是哪些 我們不要講優點 優點大家都知道 哪一種ETF 我們就 8EA 98EA好了 哦 對 或者是0050 也可以 我覺得被動主動 我們都可以拿出來討論一下 我覺得被動就是一個 跟 跟全職交易完全相反的思維 確實 那我都會跟我朋友說 因為有些我朋友很上班族 他們可能也想要投資 那我的建議就剩下0050就好了 那 主要原因是因為 我跟他們說 我在這個市場 是 打滾 我都不覺得我會賺錢了 那你是一個上班族",
+          "matched_keyword": "0050",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
         }
       ],
-      "total_mentions": 26,
-      "sentiment_score": 0.635,
+      "total_mentions": 27,
+      "sentiment_score": 0.63,
       "daily": {
         "2026-04-01": {
           "mentions": 11,
@@ -5657,6 +5697,13 @@
           "bearish": 0,
           "neutral": 0,
           "sentiment_score": 0.75
+        },
+        "2026-04-16": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
         }
       }
     },
@@ -13104,6 +13151,83 @@
       }
     },
     {
+      "code": "5475",
+      "name": "德宏",
+      "market": "TW",
+      "sector": "PCB",
+      "contexts": [
+        {
+          "video": "EP1065｜盤中跳水，不安全感轟炸！PCB多檔創高，點名「光模塊」，華通、臻鼎的新商機？中國玻纖擴產，誰不受影響？ft.PCB女王 廖婉婷",
+          "channel": "兆華與股惑仔",
+          "date": "2026-03-26",
+          "text": "剛講到 有族群性 整個除了做光通訊模組的 現在連什麼做光通訊相關設備的 光通訊的封測的 都漲到天上去 大家一起 所以它族群夠大的時候 反而資金有時候覺得 被關的是安定的或什麼的 但是京居就有點可憐 對 你剛剛趙華講到說 京居股價太早反映這件事情 當然我就想要得宏 但是我們在天上呢 其實也蠻像的 就是德宏其實他在反映的是明年 對啦 他Q布明年只要出得出來 然後出得順量率更好 其實他獲利就會上去 對 所以我們現在比較難判斷的是 量率的問題 其實包括京居他也有量率 是 可能性 所以如果他不如我獲利預估的時候 其實不是產業趨勢的問題 而是他可能製造上面量率不好 所以他成本 他要花更多的原物料 才能生產出他",
+          "matched_keyword": "德宏",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.0,
+          "video_url": ""
+        },
+        {
+          "video": "EP1065｜盤中跳水，不安全感轟炸！PCB多檔創高，點名「光模塊」，華通、臻鼎的新商機？中國玻纖擴產，誰不受影響？ft.PCB女王 廖婉婷",
+          "channel": "兆華與股惑仔",
+          "date": "2026-03-26",
+          "text": "問題 其實包括京居他也有量率 是 可能性 所以如果他不如我獲利預估的時候 其實不是產業趨勢的問題 而是他可能製造上面量率不好 所以他成本 他要花更多的原物料 才能生產出他的東西 那成本變貴了 本來獲利就會不如預期 對 所以這個有點難判斷 雖然他委屈 但是在他身上就是沒有效率 現在就會變成這個樣子 那德宏進入到高檔震盪 他也許也會有一點點這個問題出現 我覺得這也是要提醒大家 就雖然自己是大標股 其實我發現我身邊的人 不太有德宏 可能之前真的標太快了 所以他現在如果是高檔震盪的話 可能反而去看一些 其他比較活潑的股票 他的那個時間效率 可能會好一些些 對 像剛剛講到的 也許現在真的光模快 大家如果過於",
+          "matched_keyword": "德宏",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.0,
+          "video_url": ""
+        },
+        {
+          "video": "EP1071｜量縮靜等明天結果，自己的股票自己顧？PCB缺料題材續噴，矽光、低軌大人鎖籌碼？油價仍高，上漲不追，切記重跌可勇敢！ft.操盤手 黃豐凱",
+          "channel": "兆華與股惑仔",
+          "date": "2026-04-07",
+          "text": "還在往上走 我說來一直跟大家講說 你不要 跟人家一樣站在外面看 你跟高手都跟你講說 他只是去幹幹 他沒有說他要退場 那是高手的操作 那你是高手 如果你不是高手 你應該要學習高手的做法 好 那最後還有一點點時間 我想請凱克幫我們講一下 今天一個上中下游 應該都算是有 大漲的PCB 尤其是原料的部分 德宏已經271塊了 真的非常的驚人 那間點專真的也來了 包括說像今天同伯類的 同伯基板 連貌三哥 終於有點吐口氣 但二哥最厲害 台澳今天所漲停板 創歷史新高 現在看起來是二哥 很厲害三哥有在跟 我覺得就CC有這個族群 基本上 台澳應該算是被upgrade 因為我們上次 我來節目講過 不然上次 我說他拿到",
+          "matched_keyword": "德宏",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.85,
+          "video_url": ""
+        },
+        {
+          "video": "訪談特別篇_產業研究與專職交易生活 ft.田中太郎",
+          "channel": "韭菜畢業班",
+          "date": "2026-04-16",
+          "text": "是現在市場反映到哪裡 你不知道 我不敢說 我覺得現在好像會遇到這種情況 就是 我們好像知道 它其實有很大的利多 然後可能 我覺得他們的整體的蠻窄也是夠的 但是股價沒有上去 我覺得這已經有點脫鉤了 就是 你要多一個判斷是 市場反映到哪裡 後來之前其實就已經反映 那因為它其實還肉侷得一個 我覺得最重要像德宏 對 德宏也很重要 可是他 剛好這題沒有提到 就是每個人題材不一樣 德宏就是台灣唯一有Q的廠商 對 這個其實很重要 所以他才這麼這麼強 對 因為你台灣沒得買 但是 很多人都會把富橋跟台波 好像放在一起看 就是看今天富橋漲了 然後台波沒漲 然後因為它 族群性的問題 其實族群性就是有點 其實他們雖然還是",
+          "matched_keyword": "德宏",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": ""
+        }
+      ],
+      "total_mentions": 4,
+      "sentiment_score": 0.387,
+      "daily": {
+        "2026-03-26": {
+          "mentions": 2,
+          "bullish": 0,
+          "bearish": 2,
+          "neutral": 0,
+          "sentiment_score": 0.0
+        },
+        "2026-04-07": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.85
+        },
+        "2026-04-16": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.7
+        }
+      }
+    },
+    {
       "code": "3714",
       "name": "富采",
       "market": "TW",
@@ -13329,65 +13453,6 @@
           "bearish": 0,
           "neutral": 0,
           "sentiment_score": 1.0
-        }
-      }
-    },
-    {
-      "code": "5475",
-      "name": "德宏",
-      "market": "TW",
-      "sector": "PCB",
-      "contexts": [
-        {
-          "video": "EP1065｜盤中跳水，不安全感轟炸！PCB多檔創高，點名「光模塊」，華通、臻鼎的新商機？中國玻纖擴產，誰不受影響？ft.PCB女王 廖婉婷",
-          "channel": "兆華與股惑仔",
-          "date": "2026-03-26",
-          "text": "剛講到 有族群性 整個除了做光通訊模組的 現在連什麼做光通訊相關設備的 光通訊的封測的 都漲到天上去 大家一起 所以它族群夠大的時候 反而資金有時候覺得 被關的是安定的或什麼的 但是京居就有點可憐 對 你剛剛趙華講到說 京居股價太早反映這件事情 當然我就想要得宏 但是我們在天上呢 其實也蠻像的 就是德宏其實他在反映的是明年 對啦 他Q布明年只要出得出來 然後出得順量率更好 其實他獲利就會上去 對 所以我們現在比較難判斷的是 量率的問題 其實包括京居他也有量率 是 可能性 所以如果他不如我獲利預估的時候 其實不是產業趨勢的問題 而是他可能製造上面量率不好 所以他成本 他要花更多的原物料 才能生產出他",
-          "matched_keyword": "德宏",
-          "analysis_source": "whisper",
-          "sentiment": "bearish",
-          "sentiment_score": 0.0,
-          "video_url": ""
-        },
-        {
-          "video": "EP1065｜盤中跳水，不安全感轟炸！PCB多檔創高，點名「光模塊」，華通、臻鼎的新商機？中國玻纖擴產，誰不受影響？ft.PCB女王 廖婉婷",
-          "channel": "兆華與股惑仔",
-          "date": "2026-03-26",
-          "text": "問題 其實包括京居他也有量率 是 可能性 所以如果他不如我獲利預估的時候 其實不是產業趨勢的問題 而是他可能製造上面量率不好 所以他成本 他要花更多的原物料 才能生產出他的東西 那成本變貴了 本來獲利就會不如預期 對 所以這個有點難判斷 雖然他委屈 但是在他身上就是沒有效率 現在就會變成這個樣子 那德宏進入到高檔震盪 他也許也會有一點點這個問題出現 我覺得這也是要提醒大家 就雖然自己是大標股 其實我發現我身邊的人 不太有德宏 可能之前真的標太快了 所以他現在如果是高檔震盪的話 可能反而去看一些 其他比較活潑的股票 他的那個時間效率 可能會好一些些 對 像剛剛講到的 也許現在真的光模快 大家如果過於",
-          "matched_keyword": "德宏",
-          "analysis_source": "whisper",
-          "sentiment": "bearish",
-          "sentiment_score": 0.0,
-          "video_url": ""
-        },
-        {
-          "video": "EP1071｜量縮靜等明天結果，自己的股票自己顧？PCB缺料題材續噴，矽光、低軌大人鎖籌碼？油價仍高，上漲不追，切記重跌可勇敢！ft.操盤手 黃豐凱",
-          "channel": "兆華與股惑仔",
-          "date": "2026-04-07",
-          "text": "還在往上走 我說來一直跟大家講說 你不要 跟人家一樣站在外面看 你跟高手都跟你講說 他只是去幹幹 他沒有說他要退場 那是高手的操作 那你是高手 如果你不是高手 你應該要學習高手的做法 好 那最後還有一點點時間 我想請凱克幫我們講一下 今天一個上中下游 應該都算是有 大漲的PCB 尤其是原料的部分 德宏已經271塊了 真的非常的驚人 那間點專真的也來了 包括說像今天同伯類的 同伯基板 連貌三哥 終於有點吐口氣 但二哥最厲害 台澳今天所漲停板 創歷史新高 現在看起來是二哥 很厲害三哥有在跟 我覺得就CC有這個族群 基本上 台澳應該算是被upgrade 因為我們上次 我來節目講過 不然上次 我說他拿到",
-          "matched_keyword": "德宏",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.85,
-          "video_url": ""
-        }
-      ],
-      "total_mentions": 3,
-      "sentiment_score": 0.283,
-      "daily": {
-        "2026-03-26": {
-          "mentions": 2,
-          "bullish": 0,
-          "bearish": 2,
-          "neutral": 0,
-          "sentiment_score": 0.0
-        },
-        "2026-04-07": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 0.85
         }
       }
     },
@@ -13901,6 +13966,65 @@
           "bullish": 0,
           "bearish": 0,
           "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
+      "code": "1802",
+      "name": "台玻",
+      "market": "TW",
+      "sector": "玻璃陶瓷",
+      "contexts": [
+        {
+          "video": "EP1071｜量縮靜等明天結果，自己的股票自己顧？PCB缺料題材續噴，矽光、低軌大人鎖籌碼？油價仍高，上漲不追，切記重跌可勇敢！ft.操盤手 黃豐凱",
+          "channel": "兆華與股惑仔",
+          "date": "2026-04-07",
+          "text": "塊 但是一樣 他是做同樣的東西 他就會有一個機會 更可聯想 那我們剛剛在講說 得宏為什麼還可以長到這邊來 其實 我之前有提過 其實台光電視 有去認證得宏的東西 而台光本身是有被NVIDIA授權 他可以用自己的 用自己的材料 所以他跟一般的廠商 就不太一樣 所以為什麼 得宏好像跳過像 我們之前講過的 台波 台波直接到台積電 台電也認證台波的東西 可是台波就沒有這麼的強 那就是因為 有一家公司相對來講 他是不按常理在做事的 這家公司就是台光電 那一樣 台光電他可以自己 用自己的材料跟component 台要不行 台要還是要按照規矩來的 所以台要相對會比較受限 他還是會 受到波前部的缺貨 因為他主要還是",
+          "matched_keyword": "台波",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": ""
+        },
+        {
+          "video": "訪談特別篇_產業研究與專職交易生活 ft.田中太郎",
+          "channel": "韭菜畢業班",
+          "date": "2026-04-16",
+          "text": "你就覺得說不行 這個一定要先走了 對 所以大家下單的時候看一下 可能不能空 不能衝 這種的 台灣的政教手 有時候很多這種問題 好啦 我 你又想要回答這一題嗎 我先問一下你意見 我們當最後一題 沒有我就可以 好 他說 因為這個人是第一個問的 所以我比較重視他一個老謝 他說想請問帥氣的叔叔 對南亞富橋跟台波這幾家的看法 那我覺得就是 玻璃香 所謂的E-glass的布 然後T-glass的布 然後RodK這種 那簡單講 為什麼現在 E-Boo跟T-Boo這麼缺的原因是因為 波鮮布在台灣是管制產業 中國的波鮮布是進不了台灣 這個很重要 所以它的供給是大幅往下修 那E-Boo這個東西 其實本來富橋 台波都做",
+          "matched_keyword": "台波",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
+        },
+        {
+          "video": "訪談特別篇_產業研究與專職交易生活 ft.田中太郎",
+          "channel": "韭菜畢業班",
+          "date": "2026-04-16",
+          "text": "點脫鉤了 就是 你要多一個判斷是 市場反映到哪裡 後來之前其實就已經反映 那因為它其實還肉侷得一個 我覺得最重要像德宏 對 德宏也很重要 可是他 剛好這題沒有提到 就是每個人題材不一樣 德宏就是台灣唯一有Q的廠商 對 這個其實很重要 所以他才這麼這麼強 對 因為你台灣沒得買 但是 很多人都會把富橋跟台波 好像放在一起看 就是看今天富橋漲了 然後台波沒漲 然後因為它 族群性的問題 其實族群性就是有點 其實他們雖然還是在同一個族群 但其實又 他們的產品又沒有到很像 產品線很不一樣 然後因為富橋現在主要 在工資樓地可以相關的 對 這個狀況在記憶體 是不是也會有類似的狀況 記憶體可能就分製造跟模組吧 對",
+          "matched_keyword": "台波",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
+        }
+      ],
+      "total_mentions": 3,
+      "sentiment_score": 0.667,
+      "daily": {
+        "2026-04-07": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        },
+        "2026-04-16": {
+          "mentions": 2,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 2,
           "sentiment_score": 0.5
         }
       }
@@ -15669,6 +15793,47 @@
           "bullish": 0,
           "bearish": 0,
           "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
+      "code": "DASH",
+      "name": "DoorDash",
+      "market": "US",
+      "sector": "消費",
+      "contexts": [
+        {
+          "video": "EP217 | 台、美股重點一次說，Google TPU 各代產品結構與台廠供應鏈， 台積電封裝技術進展與風險，CPO量產前注意",
+          "channel": "韭菜畢業班",
+          "date": "2026-04-12",
+          "text": "到最新 那現在最新的話就是 FIBAP 那 FIBAP 的話搭配的東西就是 Core Wars L 也就是跟台積電合作 好 那我們之前有講到另外一個東西 我覺得可以跟各位好好的剖析 也就是 Intel 其實跟 Google 也有合作 那也就是我呼應到我們上一集講的話題 就是 ENIB 的這一個技術 Dash T 的這個技術 其實它在 TPU 的 FIBAE 或者 Human Fish 大家如果有興趣的話可以上網查一下 它其實是有合作的 但是我覺得這個地方要比較去注意到的東西 合作歸合作 但是營收什麼時候貫注進來 這個是我覺得大家另外一層思考的 我們先回到 FIBA 我們講 AX 也就是所謂的 Sunf",
+          "matched_keyword": "DASH",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
+        },
+        {
+          "video": "EP217 | 台、美股重點一次說，Google TPU 各代產品結構與台廠供應鏈， 台積電封裝技術進展與風險，CPO量產前注意",
+          "channel": "韭菜畢業班",
+          "date": "2026-04-12",
+          "text": "到 FIBA E 的話 它是在兩奈米 它開始有兩奈米的一個進展 那也是進展到 HBM4 FIBA E 的話 其實就進展到 HBM4 的這個技術 那跟 Intel 的合作 其實主要就是在這個 Human Fish 就是 FIBA E 的這一塊東西身上 它其實就有跟 Intel 合作 ENIB 的這個 Dash T 的這個技術 所以我們上一集其實有提到 Intel 跟 Google 的合作 我覺得就會是在這個地方 我覺得算是給大家 第二層思維 就是說它到底合作了哪些東西 我覺得大家會比較有感覺 因為其實 如果我們單純講 Intel 早期的時候 其實我自己是不太看它的 但是我們可以看到 隨著資源晶片的發展",
+          "matched_keyword": "DASH",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
+        }
+      ],
+      "total_mentions": 2,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-04-12": {
+          "mentions": 2,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 2,
           "sentiment_score": 0.5
         }
       }
@@ -17684,36 +17849,6 @@
       }
     },
     {
-      "code": "1802",
-      "name": "台玻",
-      "market": "TW",
-      "sector": "玻璃陶瓷",
-      "contexts": [
-        {
-          "video": "EP1071｜量縮靜等明天結果，自己的股票自己顧？PCB缺料題材續噴，矽光、低軌大人鎖籌碼？油價仍高，上漲不追，切記重跌可勇敢！ft.操盤手 黃豐凱",
-          "channel": "兆華與股惑仔",
-          "date": "2026-04-07",
-          "text": "塊 但是一樣 他是做同樣的東西 他就會有一個機會 更可聯想 那我們剛剛在講說 得宏為什麼還可以長到這邊來 其實 我之前有提過 其實台光電視 有去認證得宏的東西 而台光本身是有被NVIDIA授權 他可以用自己的 用自己的材料 所以他跟一般的廠商 就不太一樣 所以為什麼 得宏好像跳過像 我們之前講過的 台波 台波直接到台積電 台電也認證台波的東西 可是台波就沒有這麼的強 那就是因為 有一家公司相對來講 他是不按常理在做事的 這家公司就是台光電 那一樣 台光電他可以自己 用自己的材料跟component 台要不行 台要還是要按照規矩來的 所以台要相對會比較受限 他還是會 受到波前部的缺貨 因為他主要還是",
-          "matched_keyword": "台波",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": ""
-        }
-      ],
-      "total_mentions": 1,
-      "sentiment_score": 1.0,
-      "daily": {
-        "2026-04-07": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 1.0
-        }
-      }
-    },
-    {
       "code": "6274",
       "name": "台燿",
       "market": "TW",
@@ -19032,6 +19167,36 @@
           "sentiment_score": 0.0
         }
       }
+    },
+    {
+      "code": "COST",
+      "name": "Costco",
+      "market": "US",
+      "sector": "零售電商",
+      "contexts": [
+        {
+          "video": "EP217 | 台、美股重點一次說，Google TPU 各代產品結構與台廠供應鏈， 台積電封裝技術進展與風險，CPO量產前注意",
+          "channel": "韭菜畢業班",
+          "date": "2026-04-12",
+          "text": "是定期定額 那定期定額這個概念 我覺得大家應該不陌生 因為台灣有了ETF 那其實在加密貨幣裡面來說 也是有就是每週每月 就是固定你的金額 然後你自動去做一個買入 所以等於是把你的成本去做攤品 然後就不要讓自己 每天都這麼的擔心一次 O-ing 這樣子 那其實這個英文叫做 DCA 就是 Dollar Cost Average 那其實幣按的話就叫做低引頭 那設定好之後就放著 不完全不用管 那第二個就是網格機器人 其實我覺得網格機器人 大家應該都多多少少聽過 它的邏輯有點像是你設定一個 價格的區間 那假如比特幣在 八萬九萬之間去做來回的震盪 那機器人的話就會自動在區間 自動低買高賣這樣子 這種小波動可以幫你",
+          "matched_keyword": "COST",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-04-12": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
     }
   ],
   "sectors_ranking": [
@@ -19051,7 +19216,7 @@
     {
       "sector": "記憶體",
       "market": "TW",
-      "total_mentions": 88,
+      "total_mentions": 90,
       "stock_codes": [
         "1303",
         "2408",
@@ -19160,7 +19325,7 @@
     {
       "sector": "ETF・台股指數",
       "market": "TW",
-      "total_mentions": 27,
+      "total_mentions": 28,
       "stock_codes": [
         "0050",
         "006208"
@@ -19225,7 +19390,7 @@
     {
       "sector": "PCB",
       "market": "TW",
-      "total_mentions": 19,
+      "total_mentions": 20,
       "stock_codes": [
         "2313",
         "8358",
@@ -19309,6 +19474,17 @@
       ]
     },
     {
+      "sector": "消費",
+      "market": "US",
+      "total_mentions": 12,
+      "stock_codes": [
+        "CCL",
+        "DASH",
+        "ABNB",
+        "NKE"
+      ]
+    },
+    {
       "sector": "伺服器",
       "market": "TW",
       "total_mentions": 12,
@@ -19353,16 +19529,6 @@
       "stock_codes": [
         "SNDK",
         "INTU"
-      ]
-    },
-    {
-      "sector": "消費",
-      "market": "US",
-      "total_mentions": 10,
-      "stock_codes": [
-        "CCL",
-        "ABNB",
-        "NKE"
       ]
     },
     {
@@ -19617,6 +19783,14 @@
       ]
     },
     {
+      "sector": "玻璃陶瓷",
+      "market": "TW",
+      "total_mentions": 3,
+      "stock_codes": [
+        "1802"
+      ]
+    },
+    {
       "sector": "半導體",
       "market": "TW",
       "total_mentions": 3,
@@ -19845,14 +20019,6 @@
       ]
     },
     {
-      "sector": "玻璃陶瓷",
-      "market": "TW",
-      "total_mentions": 1,
-      "stock_codes": [
-        "1802"
-      ]
-    },
-    {
       "sector": "紡織纖維",
       "market": "TW",
       "total_mentions": 1,
@@ -19906,6 +20072,14 @@
       "total_mentions": 1,
       "stock_codes": [
         "CRDO"
+      ]
+    },
+    {
+      "sector": "零售電商",
+      "market": "US",
+      "total_mentions": 1,
+      "stock_codes": [
+        "COST"
       ]
     }
   ],
@@ -22171,6 +22345,24 @@
       ],
       "analysis_source": "titleAndDescription",
       "thumbnail_url": "https://i.ytimg.com/vi/KxpznAuJeUo/mqdefault.jpg"
+    },
+    {
+      "video_id": "00a4cb3e-34f4-4776-bf0a-7d7a7e7ddcce",
+      "title": "訪談特別篇_產業研究與專職交易生活 ft.田中太郎",
+      "channel": "韭菜畢業班",
+      "date": "2026-04-16",
+      "stocks_found": [
+        "5475",
+        "1802",
+        "0050",
+        "1303",
+        "2408",
+        "2330",
+        "AAPL",
+        "MU"
+      ],
+      "analysis_source": "whisper",
+      "thumbnail_url": null
     }
   ]
 }
