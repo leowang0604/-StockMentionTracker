@@ -26,9 +26,15 @@ struct RankingView: View {
             .compactMap { stock -> StockEntry? in
                 let ctxs = stock.contexts.filter { ($0.parsedDate ?? .distantPast) >= cutoff }
                 guard !ctxs.isEmpty else { return nil }
-                let total = Double(ctxs.count)
-                let weighted: Double = ctxs.reduce(0.0) { $0 + $1.sentimentScore }
-                let filteredScore: Double? = total > 0 ? weighted / total : nil
+                var weighted: Double = 0
+                for ctx in ctxs {
+                    switch ctx.sentiment {
+                    case "bullish": weighted += 0.7
+                    case "bearish": weighted += 0.3
+                    default:        weighted += 0.5
+                    }
+                }
+                let filteredScore: Double? = ctxs.isEmpty ? nil : weighted / Double(ctxs.count)
                 return StockEntry(
                     code: stock.code, name: stock.name,
                     market: stock.market, sector: stock.sector,
@@ -48,9 +54,10 @@ struct RankingView: View {
         case "mentions":
             return base.sorted { $0.totalMentions > $1.totalMentions }
         case "date":
-            return base.sorted {
-                ($0.contexts.compactMap(\.parsedDate).max() ?? .distantPast) >
-                ($1.contexts.compactMap(\.parsedDate).max() ?? .distantPast)
+            return base.sorted { a, b in
+                let aDate = a.contexts.compactMap { $0.parsedDate }.max() ?? Date.distantPast
+                let bDate = b.contexts.compactMap { $0.parsedDate }.max() ?? Date.distantPast
+                return aDate > bDate
             }
         case "sentiment":
             return base.sorted { ($0.sentimentScore ?? 0) > ($1.sentimentScore ?? 0) }
