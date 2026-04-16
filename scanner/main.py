@@ -423,7 +423,7 @@ _US_STOCKS_DATA: list[tuple[list[str], str, str, str]] = [
     # ── AI晶片 ──────────────────────────────────────────────────────────────────
     (["輝達", "黃仁勳", "NVIDIA", "Nvidia", "NVDA"],   "NVDA",  "NVIDIA",             "AI晶片"),
     (["AMD", "超微半導體", "蘇姿丰"],                   "AMD",   "AMD",                "AI晶片"),
-    (["Marvell", "MRVL"],                              "MRVL",  "Marvell",            "AI晶片"),
+    (["Marvell", "Marvel", "MRVL"],                    "MRVL",  "Marvell",            "AI晶片"),
     # ── 晶圓代工 ────────────────────────────────────────────────────────────────
     (["台積電ADR", "台積ADR", "TSM"],                   "TSM",   "TSMC ADR",           "晶圓代工"),
     (["GlobalFoundries", "GFS"],                       "GFS",   "GlobalFoundries",    "晶圓代工"),
@@ -451,8 +451,8 @@ _US_STOCKS_DATA: list[tuple[list[str], str, str, str]] = [
     (["思科", "Cisco", "CSCO"],                        "CSCO",  "Cisco",              "AI網路"),
     (["Juniper", "JNPR"],                              "JNPR",  "Juniper Networks",   "AI網路"),
     # ── 光通訊/CPO ──────────────────────────────────────────────────────────────
-    (["Lumentum", "流明騰", "LITE"],                   "LITE",  "Lumentum",           "光通訊"),
-    (["Coherent", "COHR"],                             "COHR",  "Coherent",           "光通訊"),
+    (["Lumentum", "Lomantin", "流明騰", "LITE"],        "LITE",  "Lumentum",           "光通訊"),
+    (["Coherent", "Cohirin", "COHR"],                  "COHR",  "Coherent",           "光通訊"),
     (["Fabrinet", "法布瑞", "FN"],                     "FN",    "Fabrinet",           "光通訊"),
     (["Ciena", "CIEN"],                                "CIEN",  "Ciena",              "光通訊"),
     (["Viavi", "VIAV"],                                "VIAV",  "Viavi Solutions",    "光通訊"),
@@ -1628,17 +1628,22 @@ def recognize_stocks(text: str, video_ctx: dict | None = None) -> list[dict]:
     for keyword, code in STOCK_DICT.items():
         # Use word boundaries for ASCII-starting keywords (avoids partial matches)
         if re.match(r"^[A-Za-z]", keyword):
+            # Case-insensitive: Whisper may transcribe Intel/intel/INTEL interchangeably
             pattern = r"(?<![A-Za-z0-9])" + re.escape(keyword) + r"(?![A-Za-z0-9])"
+            flags = re.IGNORECASE
         elif keyword in KEYWORD_PATTERN_OVERRIDE:
             pattern = KEYWORD_PATTERN_OVERRIDE[keyword]
+            flags = 0
         elif re.match(r"^\d+$", keyword):
             # Numeric stock codes: avoid matching years/dates (e.g. "2022年", "2025 年")
             pattern = r"(?<!\d)" + re.escape(keyword) + r"(?!\d|\s*年|\s*月|\s*日|\s*季)"
+            flags = 0
         else:
             pattern = re.escape(keyword)
+            flags = 0
 
         try:
-            matches = list(re.finditer(pattern, text))
+            matches = list(re.finditer(pattern, text, flags))
         except re.error:
             continue
 
