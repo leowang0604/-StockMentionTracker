@@ -26,10 +26,9 @@ struct RankingView: View {
             .compactMap { stock -> StockEntry? in
                 let ctxs = stock.contexts.filter { ($0.parsedDate ?? .distantPast) >= cutoff }
                 guard !ctxs.isEmpty else { return nil }
-                let bullish = Double(ctxs.filter { $0.sentiment == "bullish" }.count)
-                let bearish = Double(ctxs.filter { $0.sentiment == "bearish" }.count)
-                let signaled = bullish + bearish
-                let filteredScore: Double? = signaled > 0 ? bullish / signaled : nil
+                let total = Double(ctxs.count)
+                let weighted = ctxs.reduce(0.0) { $0 + ($1.sentimentScore ?? 0.5) }
+                let filteredScore: Double? = total > 0 ? weighted / total : nil
                 return StockEntry(
                     code: stock.code, name: stock.name,
                     market: stock.market, sector: stock.sector,

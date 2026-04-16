@@ -3021,16 +3021,14 @@ def merge_into_history(
             sent = ctx.get("sentiment", "neutral")
             daily[d][sent] = daily[d].get(sent, 0) + mc
         for d, stats in daily.items():
-            b = stats["bullish"]
-            bear = stats["bearish"]
-            signaled = b + bear
-            stats["sentiment_score"] = round(b / signaled, 3) if signaled > 0 else 0.5
-        # Overall sentiment_score (weighted by mention_count)
+            d_ctxs = [ctx for ctx in ctxs if ctx.get("date", "")[:10] == d]
+            d_total = sum(ctx.get("mention_count", 1) for ctx in d_ctxs)
+            d_weighted = sum(ctx.get("mention_count", 1) * ctx.get("sentiment_score", 0.5) for ctx in d_ctxs)
+            stats["sentiment_score"] = round(d_weighted / d_total, 3) if d_total > 0 else 0.5
+        # Overall sentiment_score: weighted average of per-context scores (neutral contributes 0.5)
         total = sum(ctx.get("mention_count", 1) for ctx in ctxs)
-        bullish_total = sum(ctx.get("mention_count", 1) for ctx in ctxs if ctx.get("sentiment") == "bullish")
-        bearish_total = sum(ctx.get("mention_count", 1) for ctx in ctxs if ctx.get("sentiment") == "bearish")
-        signaled = bullish_total + bearish_total
-        sentiment_score = round(bullish_total / signaled, 3) if signaled > 0 else 0.5
+        weighted = sum(ctx.get("mention_count", 1) * ctx.get("sentiment_score", 0.5) for ctx in ctxs)
+        sentiment_score = round(weighted / total, 3) if total > 0 else 0.5
         stocks_ranking.append({
             **info,
             "total_mentions":  total,
