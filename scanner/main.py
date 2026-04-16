@@ -2562,13 +2562,16 @@ def _batch_filter_ambiguous_hits(detected: list[tuple], history: dict | None = N
             "1. 是否真的在討論某支股票（非股價數字、指數點位、一般用語）\n"
             "2. 匹配詞是否為 Whisper 語音辨識錯字，若是請給出正確股票代碼與名稱\n\n"
             f"回傳 JSON 陣列（長度必須等於條目數 {len(batch)}，順序一致）：\n"
-            "[{\"is_stock\": true, \"corrected_code\": null, \"corrected_name\": null}, ...]\n\n"
+            "[{\"is_stock\": true, \"corrected_code\": null, \"corrected_name\": null, \"reason\": null}, ...]\n\n"
             "說明：\n"
             "- is_stock：此上下文是否真的在討論某支股票\n"
             "- corrected_code：若匹配詞是 Whisper 錯字且應對應不同股票，填入正確代碼；否則填 null\n"
-            "- corrected_name：對應的正確股票名稱；否則填 null\n\n"
-            "例：「光盛」→ {\"is_stock\": true, \"corrected_code\": \"6442\", \"corrected_name\": \"光聖\"}\n"
-            "    「時間點」→ {\"is_stock\": false, \"corrected_code\": null, \"corrected_name\": null}"
+            "- corrected_name：對應的正確股票名稱；否則填 null\n"
+            "- reason：is_stock=false 時，填入拒絕原因（如「一般用語，非股票討論」、「時間點，非股票名稱」、"
+            "「價格數字，非股票代號」、「人名，非股票」、「Whisper 錯字但無法對應任何股票」）；"
+            "is_stock=true 時填 null\n\n"
+            "例：「光盛」→ {\"is_stock\": true, \"corrected_code\": \"6442\", \"corrected_name\": \"光聖\", \"reason\": null}\n"
+            "    「時間點」→ {\"is_stock\": false, \"corrected_code\": null, \"corrected_name\": null, \"reason\": \"時間點，非股票名稱\"}"
         )
 
         try:
@@ -2586,13 +2589,14 @@ def _batch_filter_ambiguous_hits(detected: list[tuple], history: dict | None = N
                 if not r.get("is_stock"):
                     to_remove.add((d_idx, h_idx))
                     pos = h.get("position", "?")
-                    print(f"[SKIP] {h['matched_keyword']} at pos={pos} reason=gemini_rejected", file=sys.stderr)
+                    rejection_reason = r.get("reason") or "未說明"
+                    print(f"[SKIP] {h['matched_keyword']} at pos={pos} reason=gemini_rejected ({rejection_reason})", file=sys.stderr)
                     v_entry = result[d_idx][0]
                     _skip_log.append({
                         "keyword":  h["matched_keyword"],
                         "pos":      pos,
                         "reason":   "gemini_rejected",
-                        "detail":   None,
+                        "detail":   rejection_reason,
                         "video_id": v_entry.get("video_id"),
                         "channel":  v_entry.get("channel"),
                         "date":     v_entry.get("date"),
