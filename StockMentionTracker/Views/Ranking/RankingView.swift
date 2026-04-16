@@ -27,7 +27,7 @@ struct RankingView: View {
                 let ctxs = stock.contexts.filter { ($0.parsedDate ?? .distantPast) >= cutoff }
                 guard !ctxs.isEmpty else { return nil }
                 let total = Double(ctxs.count)
-                let weighted = ctxs.reduce(0.0) { $0 + ($1.sentimentScore ?? 0.5) }
+                let weighted: Double = ctxs.reduce(0.0) { $0 + $1.sentimentScore }
                 let filteredScore: Double? = total > 0 ? weighted / total : nil
                 return StockEntry(
                     code: stock.code, name: stock.name,
