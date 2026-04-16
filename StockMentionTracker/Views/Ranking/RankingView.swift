@@ -88,12 +88,15 @@ struct RankingView: View {
                         }
                     }
                     .listStyle(.plain)
+                    .refreshable {
+                        await dataService.fetchLatest(from: appState.dataURL)
+                    }
                 }
             }
             .navigationTitle("股票排行榜")
             .searchable(text: $searchText, prompt: "搜尋股票名稱或代號")
             .toolbar {
-                ToolbarItem(placement: .automatic) {
+                ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
                         Task { await dataService.fetchLatest(from: appState.dataURL) }
                     } label: {
@@ -105,7 +108,7 @@ struct RankingView: View {
                     }
                     .disabled(dataService.isLoading)
                 }
-                ToolbarItem(placement: .automatic) {
+                ToolbarItem(placement: .navigationBarTrailing) {
                     Menu {
                         Button { rankSort = "episodes" } label: {
                             Label("集數（預設）", systemImage: rankSort == "episodes" ? "checkmark" : "")
