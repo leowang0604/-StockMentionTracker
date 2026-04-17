@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-17T21:04:06",
+  "updated_at": "2026-04-17T21:15:22",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -8214,10 +8214,21 @@
           "sentiment": "neutral",
           "sentiment_score": 0.5,
           "video_url": ""
+        },
+        {
+          "video": "EP414｜只有魔法才能打敗魔法",
+          "channel": "股市隱者",
+          "date": "2026-04-16",
+          "text": "誇張但就是這個概念 就像投資一樣你很怕別人知道你的持股 如果你只有10萬塊 法人根本不在乎你買了什麼 但只有巴菲特的三F的報告全世界都在看 因為他強到別人想要抄他的 這個是差一對你的持股是隱私沒錯 可是其實沒有人care 因為你買了 對這個世界沒有影響 所以呢我要講的是什麼 隱私的價值 其實跟你的能力成正比 你越強 隱私越重要 你還不夠強 保護隱私反而是在限制自己 我講的這一次講會比較 強烈一點 往這個方向當然這不是絕對但這是相對的 那所以呢我就開始 超級認真在用AI的我把 這個anthropic 訂閱訂閱到最滿上限 然後讓他做很多事 除了分析以外還有做劇本還有做很多東西 然後就比較認真使用 所以",
+          "matched_keyword": "力成",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
         }
       ],
-      "total_mentions": 13,
-      "sentiment_score": 0.526,
+      "total_mentions": 14,
+      "sentiment_score": 0.524,
       "daily": {
         "2026-04-03": {
           "mentions": 1,
@@ -8283,10 +8294,10 @@
           "sentiment_score": 0.5
         },
         "2026-04-16": {
-          "mentions": 1,
+          "mentions": 2,
           "bullish": 0,
           "bearish": 0,
-          "neutral": 1,
+          "neutral": 2,
           "sentiment_score": 0.5
         }
       }
@@ -20314,7 +20325,7 @@
     {
       "sector": "記憶體",
       "market": "TW",
-      "total_mentions": 91,
+      "total_mentions": 92,
       "stock_codes": [
         "1303",
         "2408",
@@ -23572,8 +23583,12 @@
       "title": "EP414｜只有魔法才能打敗魔法",
       "channel": "股市隱者",
       "date": "2026-04-16",
-      "stocks_found": [],
-      "analysis_source": "titleAndDescription",
+      "stocks_found": [
+        "GOOGL",
+        "META",
+        "6239"
+      ],
+      "analysis_source": "whisper",
       "thumbnail_url": null
     },
     {
