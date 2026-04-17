@@ -2103,8 +2103,13 @@ def _is_ambiguous_hit(hit: dict) -> bool:
     # 4-digit numeric TW codes can match price / index levels (e.g. "台股漲1451")
     if re.match(r'^\d{4}$', kw):
         return True
-    # Chinese company names skip Gemini validation; specific false-positive cases
-    # are handled via KEYWORD_PATTERN_OVERRIDE / CONTEXT_FORBIDDEN instead.
+    # Short Chinese keywords (≤3 chars) are prone to substring false positives
+    # in Whisper transcripts (e.g. "至上" in "甚至上游", "天正" in "天正式上路").
+    # Route them through the existing Gemini batch — no extra quota cost.
+    if not re.match(r'^[A-Za-z0-9]', kw) and len(kw) <= 3:
+        return True
+    # Longer Chinese company names skip Gemini validation; specific false-positive
+    # cases are handled via KEYWORD_PATTERN_OVERRIDE / CONTEXT_FORBIDDEN instead.
     return False
 
 
