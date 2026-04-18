@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-18T11:58:41",
+  "updated_at": "2026-04-18T17:41:12",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -17293,7 +17293,7 @@
       "code": "ABNB",
       "name": "Airbnb",
       "market": "US",
-      "sector": "消費",
+      "sector": "零售電商",
       "contexts": [
         {
           "video": "2026/04/02 (四）史上最大IPO， SpaceX 要來了！",
@@ -18493,7 +18493,7 @@
       "code": "CHTR",
       "name": "Charter Communications",
       "market": "US",
-      "sector": "網路",
+      "sector": "通訊媒體",
       "contexts": [
         {
           "video": "EP649 | 💌",
@@ -20173,7 +20173,7 @@
       "code": "TECH",
       "name": "Bio-Techne",
       "market": "US",
-      "sector": "醫療",
+      "sector": "生技製藥",
       "contexts": [
         {
           "video": "EP653 | 🕊️",
@@ -20647,16 +20647,6 @@
       ]
     },
     {
-      "sector": "消費",
-      "market": "US",
-      "total_mentions": 15,
-      "stock_codes": [
-        "CCL",
-        "ABNB",
-        "NKE"
-      ]
-    },
-    {
       "sector": "CCL",
       "market": "TW",
       "total_mentions": 15,
@@ -20672,6 +20662,15 @@
       "stock_codes": [
         "3481",
         "2409"
+      ]
+    },
+    {
+      "sector": "消費",
+      "market": "US",
+      "total_mentions": 14,
+      "stock_codes": [
+        "CCL",
+        "NKE"
       ]
     },
     {
@@ -20774,22 +20773,21 @@
       ]
     },
     {
-      "sector": "醫療",
-      "market": "US",
-      "total_mentions": 9,
-      "stock_codes": [
-        "UNH",
-        "HUM",
-        "CVS",
-        "TECH"
-      ]
-    },
-    {
       "sector": "電信",
       "market": "TW",
       "total_mentions": 8,
       "stock_codes": [
         "3045"
+      ]
+    },
+    {
+      "sector": "醫療",
+      "market": "US",
+      "total_mentions": 8,
+      "stock_codes": [
+        "UNH",
+        "HUM",
+        "CVS"
       ]
     },
     {
@@ -20989,6 +20987,16 @@
       ]
     },
     {
+      "sector": "零售電商",
+      "market": "US",
+      "total_mentions": 4,
+      "stock_codes": [
+        "DASH",
+        "ABNB",
+        "COST"
+      ]
+    },
+    {
       "sector": "ETF・其他",
       "market": "TW",
       "total_mentions": 3,
@@ -21057,15 +21065,6 @@
       ]
     },
     {
-      "sector": "零售電商",
-      "market": "US",
-      "total_mentions": 3,
-      "stock_codes": [
-        "DASH",
-        "COST"
-      ]
-    },
-    {
       "sector": "電機機械",
       "market": "TW",
       "total_mentions": 3,
@@ -21098,6 +21097,24 @@
       "stock_codes": [
         "4994",
         "2471"
+      ]
+    },
+    {
+      "sector": "通訊媒體",
+      "market": "US",
+      "total_mentions": 2,
+      "stock_codes": [
+        "SATS",
+        "CHTR"
+      ]
+    },
+    {
+      "sector": "生技製藥",
+      "market": "US",
+      "total_mentions": 2,
+      "stock_codes": [
+        "MRNA",
+        "TECH"
       ]
     },
     {
@@ -21214,30 +21231,6 @@
       "total_mentions": 1,
       "stock_codes": [
         "GEV"
-      ]
-    },
-    {
-      "sector": "通訊媒體",
-      "market": "US",
-      "total_mentions": 1,
-      "stock_codes": [
-        "SATS"
-      ]
-    },
-    {
-      "sector": "生技製藥",
-      "market": "US",
-      "total_mentions": 1,
-      "stock_codes": [
-        "MRNA"
-      ]
-    },
-    {
-      "sector": "網路",
-      "market": "US",
-      "total_mentions": 1,
-      "stock_codes": [
-        "CHTR"
       ]
     },
     {
