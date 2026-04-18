@@ -723,6 +723,7 @@ SECTOR_KEYWORDS: dict[str, list[str]] = {
 # Runtime-populated dicts (filled by build_stock_dict() in main)
 STOCK_DICT:   dict[str, str] = {}
 CODE_TO_NAME: dict[str, str] = {}
+NAME_TO_CODE: dict[str, str] = {}  # reverse lookup: any known name/keyword → code
 STOCK_MARKET: dict[str, str] = {}  # code → "TW" or "US"
 STOCK_SECTOR: dict[str, str] = {}  # code → sector name
 
@@ -1359,13 +1360,14 @@ def build_stock_dict(
     dynamic_us: list[dict] | None = None,
     tw_industry_map: dict[str, str] | None = None,
     etf_full_names: dict[str, str] | None = None,
-) -> tuple[dict[str, str], dict[str, str], dict[str, str], dict[str, str]]:
+) -> tuple[dict[str, str], dict[str, str], dict[str, str], dict[str, str], dict[str, str]]:
     """
     從台股清單 + US built-in dict 建立：
     - stock_dict:   keyword → code
     - code_to_name: code → canonical name
     - stock_market: code → "TW" | "US"
     - stock_sector: code → sector name
+    - name_to_code: reverse lookup (any keyword/name → code), for Gemini extraction
     """
     code_to_name: dict[str, str] = {}
     stock_dict:   dict[str, str] = {}
@@ -1519,7 +1521,15 @@ def build_stock_dict(
         if code not in stock_market:
             stock_market[code] = "TW"
 
-    return stock_dict, code_to_name, stock_market, stock_sector
+    # ── Build reverse name→code lookup for Gemini extraction ────────────────
+    # Includes all keyword→code entries + code→name (canonical names)
+    name_to_code: dict[str, str] = {}
+    for kw, code in stock_dict.items():
+        name_to_code[kw] = code
+    for code, name in code_to_name.items():
+        name_to_code[name] = code
+
+    return stock_dict, code_to_name, stock_market, stock_sector, name_to_code
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Ambiguous ticker context requirements
@@ -1762,6 +1772,62 @@ def deduplicate_hits(hits: list[dict]) -> list[dict]:
         result.append(current)
 
     return result
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Method B: Gemini LLM-based stock extraction utilities
+# ─────────────────────────────────────────────────────────────────────────────
+
+def _split_into_chunks(text: str, target_size: int = 450, max_size: int = 550) -> list[str]:
+    """
+    按句界切割逐字稿，避免在句中截斷股票提及。
+    優先在 。！？\n 斷句，確保每段約 target_size 字。
+    chunk_size=450 → 5000字約 9-10 段，每月費用控制在 20 台幣以內。
+    """
+    if len(text) <= max_size:
+        return [text]
+
+    SENTENCE_ENDS = "。！？\n"
+    chunks: list[str] = []
+    start = 0
+
+    while start < len(text):
+        end = min(start + target_size, len(text))
+
+        if end >= len(text):
+            chunk = text[start:].strip()
+            if chunk:
+                chunks.append(chunk)
+            break
+
+        # 從 target_size 往回找最近的句界
+        best_break = -1
+        for i in range(end, max(start + target_size // 2, start), -1):
+            if text[i] in SENTENCE_ENDS:
+                best_break = i + 1
+                break
+
+        if best_break == -1 or best_break - start > max_size:
+            best_break = end  # 找不到句界就硬切
+
+        chunk = text[start:best_break].strip()
+        if chunk:
+            chunks.append(chunk)
+        start = best_break
+
+    return chunks
+
+
+def _get_extraction_mode(source: dict, sources_config: dict) -> str:
+    """
+    取得 source 的 extraction mode。
+    優先順序：source 欄位 > global_extraction_mode > 預設 "keyword"
+    """
+    source_mode = source.get("extraction_mode", "")
+    if source_mode in ("keyword", "gemini", "auto"):
+        return source_mode
+    global_mode = sources_config.get("global_extraction_mode", "keyword")
+    return global_mode if global_mode in ("keyword", "gemini", "auto") else "keyword"
 
 
 def _keyword_sentiment(text: str) -> tuple[str, float]:
@@ -2182,6 +2248,270 @@ def analyze_sentiment(text: str) -> tuple[str, float]:
     return _keyword_sentiment(text)
 
 # ─────────────────────────────────────────────────────────────────────────────
+# Method B: Gemini LLM extraction core functions
+# ─────────────────────────────────────────────────────────────────────────────
+
+def _gemini_extract_chunk(
+    chunk: str,
+    model,
+    video_title: str = "",
+    channel: str = "",
+) -> list[dict] | None:
+    """
+    送一段逐字稿給 Gemini，同時完成：
+    1. 股票識別（不依賴關鍵字，自動處理 Whisper 錯字）
+    2. 情緒判斷（看多/看空/中性 + 0~1 分數）
+    3. Whisper 錯字修正記錄
+
+    回傳 list of hit dict，失敗回傳 None（觸發 fallback）。
+    若此段無股票討論，回傳空 list []。
+    """
+    prompt = (
+        "你是台灣股市分析專家。以下是一段財經 YouTube/Podcast 的語音辨識逐字稿，"
+        "可能含有 Whisper 語音辨識錯字（例如「新英財」應為「新應材」、「漢微課」應為「漢微科」）。\n\n"
+        f"頻道：{channel}\n"
+        f"影片標題：{video_title[:80]}\n\n"
+        f"逐字稿段落：\n「{chunk}」\n\n"
+        "請完成以下任務：\n"
+        "1. 找出這段文字中主持人**明確提到**的所有台股或美股（需有股票討論語境）\n"
+        "2. 對每支股票判斷主持人的情緒傾向\n"
+        "3. 若某個詞看起來是 Whisper 語音辨識錯字，請給出正確的股票名稱\n\n"
+        "【重要判斷原則】\n"
+        "- 只回傳真正被討論的股票，不要因日常詞語湊巧匹配就回傳\n"
+        "- 「第一天正式上路」→ 不回傳天正國際 ✅\n"
+        "- 「甚至上游材料」→ 不回傳至上電機 ✅\n"
+        "- 「美國眾議院」→ 不回傳國眾 ✅\n"
+        "- 「台積電今天漲很多」→ 回傳台積電 ✅\n"
+        "- 中性描述（「還需要時間」「整理中」「觀察」）→ neutral，不判為 bearish\n\n"
+        "【情緒評分標準】\n"
+        "- bullish (score 0.6–0.9)：「非常看好」「目標大漲」「上車」「爆衝」「狂飆」\n"
+        "- bearish (score 0.1–0.4)：「不看好」「建議出場」「已出清」「警示」「減碼」\n"
+        "- neutral (score 0.4–0.6)：描述現況、觀察等待、需要時間、整理中\n\n"
+        "若此段完全沒有股票討論，回傳空陣列 []。\n"
+        "只回傳 JSON 陣列，不要其他文字：\n"
+        "[{\n"
+        "  \"name\": \"股票正確名稱\",\n"
+        "  \"code\": \"代號或null\",\n"
+        "  \"market\": \"TW或US或null\",\n"
+        "  \"sentiment\": \"bullish或bearish或neutral\",\n"
+        "  \"score\": 0.7,\n"
+        "  \"context\": \"原文中最相關的一句話（限60字內）\",\n"
+        "  \"whisper_original\": \"若有修正填原始錯誤詞，否則null\"\n"
+        "}]"
+    )
+    try:
+        response = _gemini_generate(model, prompt)
+        text = response.text.strip()
+        if text.startswith("```"):
+            text = re.sub(r"^```[a-z]*\n?", "", text)
+            text = re.sub(r"\n?```$", "", text)
+        parsed = json.loads(text)
+        if not isinstance(parsed, list):
+            return None
+        return parsed
+    except Exception as e:
+        print(f"  [gemini_extract] chunk failed: {e}", file=sys.stderr)
+        return None
+
+
+def _validate_gemini_stocks(
+    results: list[dict],
+    chunk_text: str,
+) -> list[dict]:
+    """
+    驗證 Gemini 回傳的股票列表，防止幻覺：
+    層 1：代號在 CODE_TO_NAME，或名稱在 NAME_TO_CODE
+    層 2：Levenshtein 模糊比對（≥3 字）
+    層 3：股票名稱（或 Whisper 原始詞）確實出現在原文中
+
+    回傳格式符合 _build_youtube_mentions() 期待的 hit dict。
+    """
+    validated: list[dict] = []
+
+    for r in results:
+        name = (r.get("name") or "").strip()
+        code = (r.get("code") or "").strip()
+
+        if not name:
+            continue
+
+        # ── 解析代號 ────────────────────────────────────────────────────
+        resolved_code: str | None = None
+        resolved_name: str | None = None
+
+        if code and code in CODE_TO_NAME:
+            resolved_code = code
+            resolved_name = CODE_TO_NAME[code]
+        elif name in NAME_TO_CODE:
+            resolved_code = NAME_TO_CODE[name]
+            resolved_name = name
+        elif name in STOCK_DICT:
+            resolved_code = STOCK_DICT[name]
+            resolved_name = CODE_TO_NAME.get(resolved_code, name)
+        else:
+            # Levenshtein 模糊比對（只對 ≥3 字名稱）
+            if len(name) >= 3:
+                best_code, best_dist = None, 3
+                for kw, c in STOCK_DICT.items():
+                    if abs(len(kw) - len(name)) > 2:
+                        continue
+                    d = _levenshtein(kw, name)
+                    if d < best_dist:
+                        best_dist, best_code = d, c
+                if best_code:
+                    resolved_code = best_code
+                    resolved_name = CODE_TO_NAME.get(best_code, name)
+
+        if not resolved_code:
+            print(f"  [gemini_extract] unknown stock: {name!r} → skipped", file=sys.stderr)
+            continue
+
+        # ── 防幻覺：確認名稱確實出現在原文 ────────────────────────────
+        whisper_orig = (r.get("whisper_original") or "").strip()
+        stock_keywords = [kw for kw, c in STOCK_DICT.items() if c == resolved_code]
+        name_appears = (
+            any(kw in chunk_text for kw in stock_keywords + [name])
+            or (whisper_orig and whisper_orig in chunk_text)
+        )
+        if not name_appears:
+            print(f"  [gemini_extract] hallucination? {resolved_code}({resolved_name}) not in chunk → skipped", file=sys.stderr)
+            continue
+
+        # ── 情緒正規化 ──────────────────────────────────────────────────
+        sentiment = r.get("sentiment", "neutral")
+        score = float(r.get("score", 0.5))
+        score = max(0.0, min(1.0, round(score, 3)))
+        if sentiment not in ("bullish", "bearish", "neutral"):
+            sentiment = "neutral"
+        if sentiment == "bullish" and score < 0.5:
+            score = 1.0 - score
+        elif sentiment == "bearish" and score > 0.5:
+            score = 1.0 - score
+        elif sentiment == "neutral" and (score < 0.35 or score > 0.65):
+            score = 0.5
+
+        ctx = (r.get("context") or "").strip() or chunk_text[:120]
+
+        validated.append({
+            "stock_code":        resolved_code,
+            "stock_name":        resolved_name,
+            "stock_market":      STOCK_MARKET.get(resolved_code, r.get("market") or "TW"),
+            "stock_sector":      STOCK_SECTOR.get(resolved_code),
+            "matched_keyword":   whisper_orig or name,
+            "context":           ctx,
+            "sentiment":         sentiment,
+            "sentiment_score":   score,
+            "whisper_corrected": bool(whisper_orig),
+            "extraction_mode":   "gemini",
+            "mention_count":     1,
+        })
+
+    return validated
+
+
+def _gemini_extract_full_video(
+    text: str,
+    video_ctx: dict,
+    chunk_size: int = 450,
+) -> list[dict] | None:
+    """
+    把整段逐字稿切塊後批次送 Gemini，匯總並去重結果。
+    回傳 list of validated hits；超過半數 chunk 失敗時回傳 None（觸發 fallback）。
+    """
+    if not GEMINI_API_KEY:
+        return None
+    model = _get_gemini_model()
+    if not model:
+        return None
+
+    channel     = video_ctx.get("channel", "")
+    video_title = video_ctx.get("title", "")
+    chunks      = _split_into_chunks(text, target_size=chunk_size)
+
+    all_hits: list[dict] = []
+    failed_chunks = 0
+
+    for i, chunk in enumerate(chunks):
+        raw = _gemini_extract_chunk(chunk, model, video_title=video_title, channel=channel)
+        if raw is None:
+            failed_chunks += 1
+            continue
+
+        validated = _validate_gemini_stocks(raw, chunk)
+        for hit in validated:
+            hit["position"] = i * chunk_size  # synthetic position (chunk index × size)
+
+        all_hits.extend(validated)
+
+    # 超過半數 chunk 失敗 → 整體視為失敗
+    if len(chunks) > 0 and failed_chunks > len(chunks) // 2:
+        print(f"  [gemini_extract] too many failures ({failed_chunks}/{len(chunks)}) → fallback", file=sys.stderr)
+        return None
+
+    # 同一支股票可能在多個 chunk 出現 → 依代號去重，合併 mention_count
+    by_code: dict[str, dict] = {}
+    for hit in all_hits:
+        code = hit["stock_code"]
+        if code not in by_code:
+            by_code[code] = dict(hit)
+        else:
+            existing = by_code[code]
+            existing["mention_count"] = existing.get("mention_count", 1) + 1
+            # 保留較長的 context
+            if len(hit.get("context", "")) > len(existing.get("context", "")):
+                existing["context"] = hit["context"]
+            # 情緒取加權平均
+            existing["sentiment_score"] = round(
+                (existing["sentiment_score"] + hit["sentiment_score"]) / 2, 3
+            )
+            # 重新推算 label
+            s = existing["sentiment_score"]
+            existing["sentiment"] = "bullish" if s > 0.6 else "bearish" if s < 0.4 else "neutral"
+
+    result = list(by_code.values())
+    print(f"  [gemini_extract] {len(chunks)} chunks, {failed_chunks} failed → {len(result)} stocks", file=sys.stderr)
+    return result
+
+
+def _merge_extraction_results(
+    hits_keyword: list[dict],
+    hits_gemini: list[dict] | None,
+) -> list[dict]:
+    """
+    合併關鍵字命中 + Gemini 命中。
+    - Gemini 結果優先（情緒更準、含 Whisper 修正）
+    - Keyword 補充 Gemini 沒找到的冷門股
+    - 相同代號：用 Gemini 情緒，但若 keyword context 較長則保留
+    """
+    if not hits_gemini:
+        for h in hits_keyword:
+            h.setdefault("extraction_mode", "keyword")
+        return hits_keyword
+
+    gemini_codes = {h["stock_code"] for h in hits_gemini}
+    merged: list[dict] = []
+
+    # Gemini 結果優先
+    keyword_by_code: dict[str, dict] = {h["stock_code"]: h for h in hits_keyword}
+    for h in hits_gemini:
+        code = h["stock_code"]
+        kw_hit = keyword_by_code.get(code)
+        if kw_hit and len(kw_hit.get("context", "")) > len(h.get("context", "")):
+            h = dict(h)
+            h["context"] = kw_hit["context"]
+        merged.append(h)
+
+    # Keyword 補充（Gemini 沒有的）
+    for h in hits_keyword:
+        if h["stock_code"] not in gemini_codes:
+            h = dict(h)
+            h.setdefault("extraction_mode", "keyword")
+            merged.append(h)
+
+    return merged
+
+
+# ─────────────────────────────────────────────────────────────────────────────
 # YouTube — channel video listing
 # ─────────────────────────────────────────────────────────────────────────────
 
@@ -2414,12 +2744,16 @@ def transcribe_audio(audio_path: str) -> str | None:
 # ─────────────────────────────────────────────────────────────────────────────
 
 def _detect_youtube_video(
-    video: dict, source_name: str
+    video: dict, source_name: str, extraction_mode: str = "keyword"
 ) -> tuple[dict, list[dict], str, str]:
     """
     Pass 1: 取得逐字稿並辨識股票。
+    extraction_mode: "keyword" | "gemini" | "auto"
+      - keyword: 只用關鍵字比對（現有邏輯）
+      - gemini:  只用 Gemini LLM 抽取（方案 B）
+      - auto:    雙軌並行，結果合併
     回傳 (video_entry, hits, analysis_source, video_url)。
-    不呼叫 Gemini sentiment（由頻道層級 batch 處理）。
+    不呼叫 Gemini sentiment（由頻道層級 batch 處理，或已內嵌於 Gemini 抽取）。
     """
     video_id  = video["id"]
     title     = video["title"]
@@ -2462,8 +2796,21 @@ def _detect_youtube_video(
         analysis_source = "titleAndDescription"
         print(f"  ⚠ fallback → title+description")
 
-    # ── Recognize stocks ──────────────────────────────────────────────────
-    hits        = deduplicate_hits(recognize_stocks(text, video_ctx={"video_id": video_id, "channel": source_name, "date": date}))
+    # ── Recognize stocks (雙軌) ────────────────────────────────────────────
+    video_ctx = {"video_id": video_id, "channel": source_name, "date": date, "title": title}
+
+    # 軌道 A：關鍵字比對（always run as baseline/fallback）
+    hits_keyword = deduplicate_hits(recognize_stocks(text, video_ctx=video_ctx))
+
+    # 軌道 B：Gemini LLM 抽取（只在有足夠文字且 extraction_mode 允許時啟動）
+    hits_gemini: list[dict] | None = None
+    if extraction_mode in ("gemini", "auto") and text and len(text) > 200:
+        hits_gemini = _gemini_extract_full_video(text, video_ctx)
+        if hits_gemini is not None:
+            mode_label = "gemini" if extraction_mode == "gemini" else "auto(gemini+keyword)"
+            print(f"  [extract] {mode_label} → {len(hits_gemini)} stocks from Gemini", file=sys.stderr)
+
+    hits        = _merge_extraction_results(hits_keyword, hits_gemini)
     stock_codes = list({h["stock_code"] for h in hits})
 
     video_entry = {
@@ -2656,7 +3003,7 @@ def _build_youtube_mentions(
     """Pass 3: 用預先計算好的 sentiments 組出 mention list。"""
     mentions = []
     for h, (label, score) in zip(hits, sentiments):
-        mentions.append({
+        mention: dict = {
             "stock_code":      h["stock_code"],
             "stock_name":      h["stock_name"],
             "stock_market":    h.get("stock_market", "TW"),
@@ -2671,7 +3018,12 @@ def _build_youtube_mentions(
             "sentiment_score": score,
             "video_url":       video_url,
             "mention_count":   h.get("mention_count", 1),
-        })
+        }
+        if h.get("extraction_mode"):
+            mention["extraction_mode"] = h["extraction_mode"]
+        if h.get("whisper_corrected"):
+            mention["whisper_corrected"] = True
+        mentions.append(mention)
     return mentions
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -2748,10 +3100,11 @@ def fetch_apple_podcast_episodes(
 
 
 def _detect_podcast_episode(
-    ep: dict, source: dict
+    ep: dict, source: dict, extraction_mode: str = "keyword"
 ) -> tuple[dict, list[dict], str]:
     """
     Pass 1: 取得逐字稿並辨識股票。
+    extraction_mode: "keyword" | "gemini" | "auto"
     回傳 (video_entry, hits, analysis_source)。
     """
     title       = ep["title"]
@@ -2785,7 +3138,14 @@ def _detect_podcast_episode(
         text = title + " " + ep.get("description", "")
         analysis_source = "titleAndDescription"
 
-    hits        = deduplicate_hits(recognize_stocks(text, video_ctx={"video_id": ep["id"], "channel": source_name, "date": date}))
+    video_ctx   = {"video_id": ep["id"], "channel": source_name, "date": date, "title": title}
+    hits_keyword = deduplicate_hits(recognize_stocks(text, video_ctx=video_ctx))
+
+    hits_gemini: list[dict] | None = None
+    if extraction_mode in ("gemini", "auto") and text and len(text) > 200:
+        hits_gemini = _gemini_extract_full_video(text, video_ctx)
+
+    hits        = _merge_extraction_results(hits_keyword, hits_gemini)
     stock_codes = list({h["stock_code"] for h in hits})
 
     # Debug: check if known watch-keywords appear in text but weren't detected
@@ -3074,13 +3434,15 @@ def merge_into_history(
     }
 
 
-def load_sources() -> list[dict]:
+def load_sources() -> tuple[list[dict], dict]:
+    """回傳 (sources_list, sources_config)，config 含 global_extraction_mode 等全局設定"""
     try:
         with open(SOURCES_FILE, encoding="utf-8") as f:
-            return json.load(f).get("sources", [])
+            data = json.load(f)
+        return data.get("sources", []), data
     except Exception as e:
         print(f"[scanner] Cannot load sources: {e}", file=sys.stderr)
-        return []
+        return [], {}
 
 
 def main() -> None:
@@ -3092,7 +3454,7 @@ def main() -> None:
     )
 
     # ── Build dynamic stock dictionary ────────────────────────────────────
-    global STOCK_DICT, CODE_TO_NAME, STOCK_MARKET, STOCK_SECTOR
+    global STOCK_DICT, CODE_TO_NAME, NAME_TO_CODE, STOCK_MARKET, STOCK_SECTOR
     print("[scanner] Fetching Taiwan stock list…")
     stocks = fetch_stock_list()
     print("[scanner] Fetching TW industry map…")
@@ -3104,7 +3466,7 @@ def main() -> None:
     print("[scanner] Enriching US stocks with Gemini…")
     sp500_only = [s for s in dynamic_us if s.get("sector") != "其他"]  # S&P 500 has sector
     extra_us = enrich_us_stocks_with_gemini(sp500_candidates=sp500_only)
-    STOCK_DICT, CODE_TO_NAME, STOCK_MARKET, STOCK_SECTOR = build_stock_dict(stocks, extra_us, dynamic_us, tw_industry_map, etf_full_names)
+    STOCK_DICT, CODE_TO_NAME, STOCK_MARKET, STOCK_SECTOR, NAME_TO_CODE = build_stock_dict(stocks, extra_us, dynamic_us, tw_industry_map, etf_full_names)
 
     # Merge cached sectors into STOCK_SECTOR, but TW_STOCK_SECTORS always wins
     cached_sectors = load_sectors_cache()
@@ -3115,7 +3477,7 @@ def main() -> None:
     tw_count = sum(1 for v in STOCK_MARKET.values() if v == "TW")
     print(f"[scanner] Stock dict ready — {len(STOCK_DICT)} keywords | TW: {tw_count}, US: {us_count}")
 
-    sources        = load_sources()
+    sources, sources_config = load_sources()
     active_sources = [s for s in sources if s.get("active", True)]
     print(f"[scanner] {len(active_sources)} active sources")
 
@@ -3138,34 +3500,68 @@ def main() -> None:
         # Each item: (v_entry, hits, analysis_source, video_url_or_None)
         detected: list[tuple] = []
 
+        exmode = _get_extraction_mode(source, sources_config)
+        print(f"  extraction_mode={exmode}")
+
         if stype == "youtube":
             videos = get_channel_videos(ident)
             print(f"  → {len(videos)} videos")
             for video in videos:
-                v_entry, hits, asrc, vurl = _detect_youtube_video(video, sname)
+                v_entry, hits, asrc, vurl = _detect_youtube_video(video, sname, extraction_mode=exmode)
                 detected.append((v_entry, hits, asrc, vurl))
 
         elif stype == "applePodcast":
             episodes = fetch_apple_podcast_episodes(ident)
             print(f"  → {len(episodes)} episodes")
             for ep in episodes:
-                v_entry, hits, asrc = _detect_podcast_episode(ep, source)
+                v_entry, hits, asrc = _detect_podcast_episode(ep, source, extraction_mode=exmode)
                 detected.append((v_entry, hits, asrc, None))
 
         elif stype == "spotify":
             episodes = fetch_spotify_episodes(ident)
             print(f"  → {len(episodes)} episodes")
             for ep in episodes:
-                v_entry, hits, asrc = _detect_podcast_episode(ep, source)
+                v_entry, hits, asrc = _detect_podcast_episode(ep, source, extraction_mode=exmode)
                 detected.append((v_entry, hits, asrc, None))
 
-        # ── Pass 1.5: batch Gemini ambiguous filter across all videos ────
-        detected = _batch_filter_ambiguous_hits(detected, history=history)
+        # ── Pass 1.5: batch Gemini ambiguous filter (keyword-mode only) ──
+        # Skipped when extraction_mode="gemini" — Gemini already validated hits inline.
+        if exmode != "gemini":
+            detected = _batch_filter_ambiguous_hits(detected, history=history)
 
         # ── Pass 2: ONE batch Gemini sentiment call per channel ───────────
-        ep_sentiment_input = [(hits, asrc) for _, hits, asrc, _ in detected]
-        all_sentiments = _batch_channel_sentiments(ep_sentiment_input)
-        print(f"  [sentiment] batch done — {sum(len(hits) for _, hits, _, _ in detected)} hits across {len(detected)} episodes")
+        # Skipped for hits already carrying gemini sentiment (extraction_mode gemini/auto).
+        gemini_hits_count = sum(
+            sum(1 for h in hits if h.get("extraction_mode") == "gemini")
+            for _, hits, _, _ in detected
+        )
+        keyword_hits_count = sum(
+            sum(1 for h in hits if h.get("extraction_mode") != "gemini")
+            for _, hits, _, _ in detected
+        )
+        # Only run sentiment batch for keyword-sourced hits
+        if keyword_hits_count > 0:
+            ep_sentiment_input = [
+                ([h for h in hits if h.get("extraction_mode") != "gemini"], asrc)
+                for _, hits, asrc, _ in detected
+            ]
+            keyword_sentiments = _batch_channel_sentiments(ep_sentiment_input)
+        else:
+            keyword_sentiments = [[] for _ in detected]
+
+        # Build per-episode full sentiments list (Gemini hits already have sentiment)
+        all_sentiments = []
+        for (_, hits, _, _), kw_sents in zip(detected, keyword_sentiments):
+            ep_sents: list[tuple[str, float]] = []
+            kw_iter = iter(kw_sents)
+            for h in hits:
+                if h.get("extraction_mode") == "gemini":
+                    ep_sents.append((h.get("sentiment", "neutral"), h.get("sentiment_score", 0.5)))
+                else:
+                    ep_sents.append(next(kw_iter, ("neutral", 0.5)))
+            all_sentiments.append(ep_sents)
+
+        print(f"  [sentiment] done — {gemini_hits_count} gemini / {keyword_hits_count} keyword hits")
 
         # ── Pass 3: build mentions using pre-computed sentiments ──────────
         for (v_entry, hits, asrc, vurl), sentiments in zip(detected, all_sentiments):
