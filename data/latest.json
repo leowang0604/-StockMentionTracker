@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-18T08:36:34",
+  "updated_at": "2026-04-18T11:58:30",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -15476,7 +15476,7 @@
       "code": "CDNS",
       "name": "Cadence Design Systems",
       "market": "US",
-      "sector": "AI晶片",
+      "sector": "企業軟體",
       "contexts": [
         {
           "video": "EP649 | 💌",
@@ -16874,7 +16874,7 @@
       "code": "DASH",
       "name": "DoorDash",
       "market": "US",
-      "sector": "消費",
+      "sector": "零售電商",
       "contexts": [
         {
           "video": "EP217 | 台、美股重點一次說，Google TPU 各代產品結構與台廠供應鏈， 台積電封裝技術進展與風險，CPO量產前注意",
@@ -18493,7 +18493,7 @@
       "code": "CHTR",
       "name": "Charter Communications",
       "market": "US",
-      "sector": "通訊媒體",
+      "sector": "網路",
       "contexts": [
         {
           "video": "EP649 | 💌",
@@ -20471,12 +20471,11 @@
     {
       "sector": "AI晶片",
       "market": "US",
-      "total_mentions": 62,
+      "total_mentions": 60,
       "stock_codes": [
         "NVDA",
         "AMD",
-        "MRVL",
-        "CDNS"
+        "MRVL"
       ]
     },
     {
@@ -20630,17 +20629,6 @@
       ]
     },
     {
-      "sector": "消費",
-      "market": "US",
-      "total_mentions": 17,
-      "stock_codes": [
-        "CCL",
-        "DASH",
-        "ABNB",
-        "NKE"
-      ]
-    },
-    {
       "sector": "AI設計",
       "market": "TW",
       "total_mentions": 15,
@@ -20656,6 +20644,16 @@
       "stock_codes": [
         "2327",
         "2492"
+      ]
+    },
+    {
+      "sector": "消費",
+      "market": "US",
+      "total_mentions": 15,
+      "stock_codes": [
+        "CCL",
+        "ABNB",
+        "NKE"
       ]
     },
     {
@@ -20952,6 +20950,15 @@
       ]
     },
     {
+      "sector": "企業軟體",
+      "market": "US",
+      "total_mentions": 4,
+      "stock_codes": [
+        "CDNS",
+        "ADBE"
+      ]
+    },
+    {
       "sector": "ETF",
       "market": "TW",
       "total_mentions": 4,
@@ -21050,6 +21057,15 @@
       ]
     },
     {
+      "sector": "零售電商",
+      "market": "US",
+      "total_mentions": 3,
+      "stock_codes": [
+        "DASH",
+        "COST"
+      ]
+    },
+    {
       "sector": "電機機械",
       "market": "TW",
       "total_mentions": 3,
@@ -21068,14 +21084,6 @@
       ]
     },
     {
-      "sector": "企業軟體",
-      "market": "US",
-      "total_mentions": 2,
-      "stock_codes": [
-        "ADBE"
-      ]
-    },
-    {
       "sector": "半導體設備",
       "market": "US",
       "total_mentions": 2,
@@ -21090,15 +21098,6 @@
       "stock_codes": [
         "4994",
         "2471"
-      ]
-    },
-    {
-      "sector": "通訊媒體",
-      "market": "US",
-      "total_mentions": 2,
-      "stock_codes": [
-        "SATS",
-        "CHTR"
       ]
     },
     {
@@ -21218,11 +21217,27 @@
       ]
     },
     {
+      "sector": "通訊媒體",
+      "market": "US",
+      "total_mentions": 1,
+      "stock_codes": [
+        "SATS"
+      ]
+    },
+    {
       "sector": "生技製藥",
       "market": "US",
       "total_mentions": 1,
       "stock_codes": [
         "MRNA"
+      ]
+    },
+    {
+      "sector": "網路",
+      "market": "US",
+      "total_mentions": 1,
+      "stock_codes": [
+        "CHTR"
       ]
     },
     {
@@ -21287,14 +21302,6 @@
       "total_mentions": 1,
       "stock_codes": [
         "CRDO"
-      ]
-    },
-    {
-      "sector": "零售電商",
-      "market": "US",
-      "total_mentions": 1,
-      "stock_codes": [
-        "COST"
       ]
     },
     {
