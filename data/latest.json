@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-19T07:21:18",
+  "updated_at": "2026-04-19T17:40:40",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -13954,7 +13954,7 @@
       "code": "CDNS",
       "name": "Cadence Design Systems",
       "market": "US",
-      "sector": "科技",
+      "sector": "AI晶片",
       "contexts": [
         {
           "video": "EP649 | 💌",
@@ -18632,11 +18632,12 @@
     {
       "sector": "AI晶片",
       "market": "US",
-      "total_mentions": 61,
+      "total_mentions": 63,
       "stock_codes": [
         "NVDA",
         "AMD",
-        "MRVL"
+        "MRVL",
+        "CDNS"
       ]
     },
     {
@@ -18888,16 +18889,6 @@
       ]
     },
     {
-      "sector": "科技",
-      "market": "US",
-      "total_mentions": 10,
-      "stock_codes": [
-        "SNDK",
-        "CDNS",
-        "INTU"
-      ]
-    },
-    {
       "sector": "電源",
       "market": "TW",
       "total_mentions": 10,
@@ -18942,6 +18933,15 @@
       "total_mentions": 8,
       "stock_codes": [
         "3045"
+      ]
+    },
+    {
+      "sector": "科技",
+      "market": "US",
+      "total_mentions": 8,
+      "stock_codes": [
+        "SNDK",
+        "INTU"
       ]
     },
     {
