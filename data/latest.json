@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-19T00:27:34",
+  "updated_at": "2026-04-19T00:27:40",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -20737,6 +20737,66 @@
           "sentiment_score": 0.5
         }
       }
+    },
+    {
+      "code": "1531",
+      "name": "高林股",
+      "market": "TW",
+      "sector": "電機機械",
+      "contexts": [
+        {
+          "video": "EP1078｜要停利，還是進場？台積電法說很規矩，高標但不驚艷，設備股遇大跌值得買！下次法說前會有成果？被動元件續強中！ft.AI達人 蔡明翰",
+          "channel": "兆華與股惑仔",
+          "date": "2026-04-16",
+          "text": "設備股漲跌互見，只要重挫，都依舊值得入手，晶圓、記憶體都在拚擴廠！",
+          "matched_keyword": "設備股",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": ""
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.7,
+      "daily": {
+        "2026-04-16": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.7
+        }
+      }
+    },
+    {
+      "code": "3024",
+      "name": "憶聲",
+      "market": "TW",
+      "sector": "光電業",
+      "contexts": [
+        {
+          "video": "EP1078｜要停利，還是進場？台積電法說很規矩，高標但不驚艷，設備股遇大跌值得買！下次法說前會有成果？被動元件續強中！ft.AI達人 蔡明翰",
+          "channel": "兆華與股惑仔",
+          "date": "2026-04-16",
+          "text": "為何記憶體追不上美、韓大廠，反彈可短做，下跌千萬勿撿？",
+          "matched_keyword": "記憶體",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-04-16": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
     }
   ],
   "sectors_ranking": [
@@ -20891,14 +20951,15 @@
     {
       "sector": "光電業",
       "market": "TW",
-      "total_mentions": 26,
+      "total_mentions": 27,
       "stock_codes": [
         "3008",
         "3714",
         "2426",
         "6168",
         "2349",
-        "3406"
+        "3406",
+        "3024"
       ]
     },
     {
@@ -21318,6 +21379,17 @@
       ]
     },
     {
+      "sector": "電機機械",
+      "market": "TW",
+      "total_mentions": 4,
+      "stock_codes": [
+        "6425",
+        "1599",
+        "7750",
+        "1531"
+      ]
+    },
+    {
       "sector": "ETF・其他",
       "market": "TW",
       "total_mentions": 3,
@@ -21409,16 +21481,6 @@
       "stock_codes": [
         "DASH",
         "COST"
-      ]
-    },
-    {
-      "sector": "電機機械",
-      "market": "TW",
-      "total_mentions": 3,
-      "stock_codes": [
-        "6425",
-        "1599",
-        "7750"
       ]
     },
     {
