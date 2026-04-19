@@ -2409,7 +2409,22 @@ def _validate_gemini_stocks(
         elif sentiment == "neutral" and (score < 0.35 or score > 0.65):
             score = 0.5
 
-        ctx = (r.get("context") or "").strip() or chunk_text[:120]
+        ctx = (r.get("context") or "").strip()
+        if not ctx:
+            # Center context on the matched term rather than using chunk start
+            search_term = None
+            if whisper_orig and whisper_orig in chunk_text:
+                search_term = whisper_orig
+            else:
+                for kw in stock_keywords + [resolved_name]:
+                    if kw in chunk_text:
+                        search_term = kw
+                        break
+            if search_term:
+                kw_pos = chunk_text.find(search_term)
+                ctx = chunk_text[max(0, kw_pos - 100):kw_pos + len(search_term) + 100]
+            else:
+                ctx = chunk_text[:120]
 
         validated.append({
             "stock_code":        resolved_code,
