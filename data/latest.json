@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-19T03:20:49",
+  "updated_at": "2026-04-19T07:20:07",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -9279,7 +9279,7 @@
       "code": "CCL",
       "name": "Carnival",
       "market": "US",
-      "sector": "旅遊",
+      "sector": "消費",
       "contexts": [
         {
           "video": "EP213 | 台、美股重點一次說，台股反彈怎麼看？美股極度恐慌後的觀察重點，南俊國際與滑軌需求，設備股後勢",
@@ -13954,7 +13954,7 @@
       "code": "CDNS",
       "name": "Cadence Design Systems",
       "market": "US",
-      "sector": "企業軟體",
+      "sector": "科技",
       "contexts": [
         {
           "video": "EP649 | 💌",
@@ -18817,6 +18817,17 @@
       ]
     },
     {
+      "sector": "消費",
+      "market": "US",
+      "total_mentions": 12,
+      "stock_codes": [
+        "CCL",
+        "DASH",
+        "ABNB",
+        "NKE"
+      ]
+    },
+    {
       "sector": "ETF・科技",
       "market": "TW",
       "total_mentions": 11,
@@ -18877,6 +18888,16 @@
       ]
     },
     {
+      "sector": "科技",
+      "market": "US",
+      "total_mentions": 10,
+      "stock_codes": [
+        "SNDK",
+        "CDNS",
+        "INTU"
+      ]
+    },
+    {
       "sector": "電源",
       "market": "TW",
       "total_mentions": 10,
@@ -18908,14 +18929,6 @@
       ]
     },
     {
-      "sector": "旅遊",
-      "market": "US",
-      "total_mentions": 8,
-      "stock_codes": [
-        "CCL"
-      ]
-    },
-    {
       "sector": "記憶體IC",
       "market": "TW",
       "total_mentions": 8,
@@ -18929,15 +18942,6 @@
       "total_mentions": 8,
       "stock_codes": [
         "3045"
-      ]
-    },
-    {
-      "sector": "科技",
-      "market": "US",
-      "total_mentions": 8,
-      "stock_codes": [
-        "SNDK",
-        "INTU"
       ]
     },
     {
@@ -19075,15 +19079,6 @@
       ]
     },
     {
-      "sector": "企業軟體",
-      "market": "US",
-      "total_mentions": 4,
-      "stock_codes": [
-        "CDNS",
-        "ADBE"
-      ]
-    },
-    {
       "sector": "ETF",
       "market": "TW",
       "total_mentions": 4,
@@ -19111,16 +19106,6 @@
         "9940",
         "9927",
         "3040"
-      ]
-    },
-    {
-      "sector": "消費",
-      "market": "US",
-      "total_mentions": 4,
-      "stock_codes": [
-        "DASH",
-        "ABNB",
-        "NKE"
       ]
     },
     {
@@ -19218,6 +19203,14 @@
       "total_mentions": 2,
       "stock_codes": [
         "8046"
+      ]
+    },
+    {
+      "sector": "企業軟體",
+      "market": "US",
+      "total_mentions": 2,
+      "stock_codes": [
+        "ADBE"
       ]
     },
     {
