@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-19T03:20:27",
+  "updated_at": "2026-04-19T03:20:29",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -3478,9 +3478,20 @@
           "sentiment": "bearish",
           "sentiment_score": 0.0,
           "video_url": ""
+        },
+        {
+          "video": "EP217 | 台、美股重點一次說，Google TPU 各代產品結構與台廠供應鏈， 台積電封裝技術進展與風險，CPO量產前注意",
+          "channel": "韭菜畢業班",
+          "date": "2026-04-12",
+          "text": "EP217 | 台、美股重點一次說，Google TPU 各代產品結構與台廠供應鏈， 台積電封裝技術進展與風險，CPO量產前注意 - Google TPU 各代產品結構與台廠供應鏈  - 台積電封裝技術進展與「翹曲」風險  - 台積電與設備廠投資心態  - 共同封裝光學 (CPO) 量產的真正價值與良率挑戰     本集節目由「Binance 幣",
+          "matched_keyword": "Google",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
         }
       ],
-      "total_mentions": 25,
+      "total_mentions": 26,
       "sentiment_score": 0.51,
       "daily": {
         "2026-04-01": {
@@ -3559,6 +3570,13 @@
           "bearish": 2,
           "neutral": 0,
           "sentiment_score": 0.333
+        },
+        "2026-04-12": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
         }
       }
     },
@@ -18399,7 +18417,7 @@
     {
       "sector": "雲端/AI",
       "market": "US",
-      "total_mentions": 131,
+      "total_mentions": 132,
       "stock_codes": [
         "MSFT",
         "AMZN",
