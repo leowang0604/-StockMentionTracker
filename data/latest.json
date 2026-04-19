@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-19T22:37:52",
+  "updated_at": "2026-04-19T22:37:57",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -22158,6 +22158,36 @@
           "sentiment_score": 0.5
         }
       }
+    },
+    {
+      "code": "4905",
+      "name": "台光電",
+      "market": "TW",
+      "sector": "電子通路",
+      "contexts": [
+        {
+          "video": "EP1077｜台股大跨步37000點！賣飛正常，如何重新買回來？台積法說若回檔，設備好機會？PCB、CPO強恆強，被動元件真漲價？ft.報價天王 林信富",
+          "channel": "兆華與股惑仔",
+          "date": "2026-04-15",
+          "text": "正常，如何重新買回來？台積法說若回檔，設備好機會？PCB、CPO強恆強，被動元件真漲價？      又從地獄回天堂，大跨步創新高中，賣飛遺憾怎處理？先整理心情！ 每個決定都有當下理由，不用後悔或得意，喜歡個股的反而機會變多！ 台積電法說前2100元，如果再度休息，設備、供應鏈依舊是好選擇！ PCB有台光電領軍，趨勢繼續向上，有些主動式ETF專攻這領域！ LED切入CPO受青睞，獲利未好籌碼先來，短線操作可以，長線謹慎？ 被動元件好消息越來越多，真漲價，型態全體好轉中？ 網友心情分享：淨身出戶，付完頭期款後只剩500元，穩健投資累積650萬！   -------     節目內容純屬主持人與來賓個人經",
+          "matched_keyword": "台光電",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": ""
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.7,
+      "daily": {
+        "2026-04-15": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.7
+        }
+      }
     }
   ],
   "sectors_ranking": [
@@ -22692,6 +22722,17 @@
       ]
     },
     {
+      "sector": "電子通路",
+      "market": "TW",
+      "total_mentions": 6,
+      "stock_codes": [
+        "3163",
+        "6263",
+        "3221",
+        "4905"
+      ]
+    },
+    {
       "sector": "生技製藥",
       "market": "TW",
       "total_mentions": 5,
@@ -22756,16 +22797,6 @@
         "9940",
         "3040",
         "9927"
-      ]
-    },
-    {
-      "sector": "電子通路",
-      "market": "TW",
-      "total_mentions": 5,
-      "stock_codes": [
-        "3163",
-        "6263",
-        "3221"
       ]
     },
     {
