@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-19T00:38:22",
+  "updated_at": "2026-04-19T00:38:32",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -20797,6 +20797,36 @@
           "sentiment_score": 0.5
         }
       }
+    },
+    {
+      "code": "1210",
+      "name": "大成",
+      "market": "TW",
+      "sector": "其他",
+      "contexts": [
+        {
+          "video": "EP1076｜台股36341點登高！為何這2天找個股而不是ETF？聯發科、大立光的改變？光學、機器人動了，CPO、載板沒壞！ft.選股教練 陳唯泰",
+          "channel": "兆華與股惑仔",
+          "date": "2026-04-14",
+          "text": "沉寂許久的機器人先有大銀微、新代，火種開始蔓延了？",
+          "matched_keyword": "大銀微",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": ""
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.7,
+      "daily": {
+        "2026-04-14": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.7
+        }
+      }
     }
   ],
   "sectors_ranking": [
@@ -20830,7 +20860,7 @@
     {
       "sector": "其他",
       "market": "TW",
-      "total_mentions": 88,
+      "total_mentions": 89,
       "stock_codes": [
         "5007",
         "2640",
@@ -20854,7 +20884,8 @@
         "2312",
         "1313",
         "8923",
-        "6164"
+        "6164",
+        "1210"
       ]
     },
     {
