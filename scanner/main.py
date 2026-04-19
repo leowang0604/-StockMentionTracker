@@ -2373,6 +2373,21 @@ def _validate_gemini_stocks(
             any(kw in chunk_text for kw in stock_keywords + [name])
             or (whisper_orig and whisper_orig in chunk_text)
         )
+        # Whisper 錯字修正場景：Gemini 給了正確名稱但未填 whisper_original，
+        # 用 Levenshtein 在 chunk 中滑動視窗找相近的詞（長度相同 ±1，距離 ≤ 2）
+        if not name_appears and len(resolved_name) >= 3:
+            win = len(resolved_name)
+            for start in range(len(chunk_text) - win + 1):
+                window = chunk_text[start:start + win]
+                if _levenshtein(resolved_name, window) <= 2:
+                    name_appears = True
+                    break
+                # 也試 win+1 視窗
+                if start + win + 1 <= len(chunk_text):
+                    window2 = chunk_text[start:start + win + 1]
+                    if _levenshtein(resolved_name, window2) <= 2:
+                        name_appears = True
+                        break
         if not name_appears:
             print(f"  [gemini_extract] hallucination? {resolved_code}({resolved_name}) not in chunk → skipped", file=sys.stderr)
             continue
