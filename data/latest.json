@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-19T03:20:31",
+  "updated_at": "2026-04-19T03:20:41",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -10209,10 +10209,21 @@
           "sentiment": "neutral",
           "sentiment_score": 0.5,
           "video_url": "https://www.youtube.com/watch?v=KxpznAuJeUo"
+        },
+        {
+          "video": "EP1077｜台股大跨步37000點！賣飛正常，如何重新買回來？台積法說若回檔，設備好機會？PCB、CPO強恆強，被動元件真漲價？ft.報價天王 林信富",
+          "channel": "兆華與股惑仔",
+          "date": "2026-04-15",
+          "text": "正常，如何重新買回來？台積法說若回檔，設備好機會？PCB、CPO強恆強，被動元件真漲價？      又從地獄回天堂，大跨步創新高中，賣飛遺憾怎處理？先整理心情！ 每個決定都有當下理由，不用後悔或得意，喜歡個股的反而機會變多！ 台積電法說前2100元，如果再度休息，設備、供應鏈依舊是好選擇！ PCB有台光電領軍，趨勢繼續向上，有些主動式ETF專攻這領域！ LED切入CPO受青睞，獲利未好籌碼先來，短線操作可以，長線謹慎？ 被動元件好消息越來越多，真漲價，型態全體好轉中？ 網友心情分享：淨身出戶，付完頭期款後只剩500元，穩健投資累積650萬！   -------     節目內容純屬主持人與來賓個人經",
+          "matched_keyword": "台光電",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "bullish",
+          "sentiment_score": 0.8,
+          "video_url": ""
         }
       ],
-      "total_mentions": 7,
-      "sentiment_score": 0.543,
+      "total_mentions": 8,
+      "sentiment_score": 0.575,
       "daily": {
         "2026-04-01": {
           "mentions": 1,
@@ -10236,11 +10247,11 @@
           "sentiment_score": 0.6
         },
         "2026-04-15": {
-          "mentions": 2,
-          "bullish": 0,
+          "mentions": 3,
+          "bullish": 1,
           "bearish": 0,
           "neutral": 2,
-          "sentiment_score": 0.5
+          "sentiment_score": 0.6
         },
         "2026-04-16": {
           "mentions": 1,
@@ -14963,6 +14974,54 @@
       }
     },
     {
+      "code": "3533",
+      "name": "嘉澤",
+      "market": "TW",
+      "sector": "電子零組件業",
+      "contexts": [
+        {
+          "video": "EP650 | 🦄",
+          "channel": "股癌",
+          "date": "2026-04-04",
+          "text": "相關的一些標的 那雖然其實像這樣子的討論 大概已經在過去的 3到5個月左右 有持續的發酵 好但我自己還是會去看 這個股票的型態 作為一個輔助 那特別是當我最近注意到 像是ARM 像是Intel 像是AMD 他們算是在美股市場裡面 是相對比較硬的東西 那或是說 如果你今天轉頭看一下 台灣的話 你看一下3533 加者 他就是跟CPUSockets 高度相關的一個標的 那這些東西都算是相對強勢 但台股強勢的東西很多 所以看美股比較準 就是在美股 就像光通 然後會像是CPU 他們現在是走得相對比較好 那所以有可能 他們就是帶有一些故事性 那我們先大概簡單講一下 他這個背後故事性的 理由跟主因是什麼 那首先大家",
+          "matched_keyword": "3533",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.8,
+          "video_url": ""
+        },
+        {
+          "video": "EP1075｜談崩也不怕？漲價題材更猛，117家漲停板，被動元件不一樣了！利空鈍化又怕，找獲利好、型態佳、股性差的低估股？ft.冠軍操盤手 楊雲翔",
+          "channel": "兆華與股惑仔",
+          "date": "2026-04-13",
+          "text": "封測還是半導體裡最便宜，台星科沉澱大半年都漲了，力成何時恢復？",
+          "matched_keyword": "台星科",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": ""
+        }
+      ],
+      "total_mentions": 2,
+      "sentiment_score": 0.75,
+      "daily": {
+        "2026-04-04": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.8
+        },
+        "2026-04-13": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.7
+        }
+      }
+    },
+    {
       "code": "6213",
       "name": "聯茂",
       "market": "TW",
@@ -15709,36 +15768,6 @@
           "bearish": 0,
           "neutral": 0,
           "sentiment_score": 0.6
-        }
-      }
-    },
-    {
-      "code": "3533",
-      "name": "嘉澤",
-      "market": "TW",
-      "sector": "電子零組件業",
-      "contexts": [
-        {
-          "video": "EP650 | 🦄",
-          "channel": "股癌",
-          "date": "2026-04-04",
-          "text": "相關的一些標的 那雖然其實像這樣子的討論 大概已經在過去的 3到5個月左右 有持續的發酵 好但我自己還是會去看 這個股票的型態 作為一個輔助 那特別是當我最近注意到 像是ARM 像是Intel 像是AMD 他們算是在美股市場裡面 是相對比較硬的東西 那或是說 如果你今天轉頭看一下 台灣的話 你看一下3533 加者 他就是跟CPUSockets 高度相關的一個標的 那這些東西都算是相對強勢 但台股強勢的東西很多 所以看美股比較準 就是在美股 就像光通 然後會像是CPU 他們現在是走得相對比較好 那所以有可能 他們就是帶有一些故事性 那我們先大概簡單講一下 他這個背後故事性的 理由跟主因是什麼 那首先大家",
-          "matched_keyword": "3533",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.8,
-          "video_url": ""
-        }
-      ],
-      "total_mentions": 1,
-      "sentiment_score": 0.8,
-      "daily": {
-        "2026-04-04": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 0.8
         }
       }
     },
@@ -18731,6 +18760,15 @@
       ]
     },
     {
+      "sector": "CCL",
+      "market": "TW",
+      "total_mentions": 9,
+      "stock_codes": [
+        "2383",
+        "6213"
+      ]
+    },
+    {
       "sector": "醫療",
       "market": "US",
       "total_mentions": 9,
@@ -18763,15 +18801,6 @@
       "total_mentions": 8,
       "stock_codes": [
         "3045"
-      ]
-    },
-    {
-      "sector": "CCL",
-      "market": "TW",
-      "total_mentions": 8,
-      "stock_codes": [
-        "2383",
-        "6213"
       ]
     },
     {
@@ -18813,23 +18842,23 @@
       ]
     },
     {
+      "sector": "電子零組件業",
+      "market": "TW",
+      "total_mentions": 7,
+      "stock_codes": [
+        "2472",
+        "3533",
+        "3653",
+        "2428",
+        "6834"
+      ]
+    },
+    {
       "sector": "玻璃陶瓷",
       "market": "TW",
       "total_mentions": 6,
       "stock_codes": [
         "1802"
-      ]
-    },
-    {
-      "sector": "電子零組件業",
-      "market": "TW",
-      "total_mentions": 6,
-      "stock_codes": [
-        "2472",
-        "3653",
-        "3533",
-        "2428",
-        "6834"
       ]
     },
     {
@@ -21625,6 +21654,18 @@
       ],
       "analysis_source": "titleAndDescription",
       "thumbnail_url": "https://i.ytimg.com/vi/8PWpnwU3rzk/mqdefault.jpg"
+    },
+    {
+      "video_id": "ab67cb8a-549d-40b8-ac6e-aaf4b790a415",
+      "title": "EP1077｜台股大跨步37000點！賣飛正常，如何重新買回來？台積法說若回檔，設備好機會？PCB、CPO強恆強，被動元件真漲價？ft.報價天王 林信富",
+      "channel": "兆華與股惑仔",
+      "date": "2026-04-15",
+      "stocks_found": [
+        "2330",
+        "2383"
+      ],
+      "analysis_source": "titleAndDescription",
+      "thumbnail_url": null
     }
   ]
 }
