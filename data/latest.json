@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-19T00:27:40",
+  "updated_at": "2026-04-19T00:27:44",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -20751,20 +20751,20 @@
           "text": "設備股漲跌互見，只要重挫，都依舊值得入手，晶圓、記憶體都在拚擴廠！",
           "matched_keyword": "設備股",
           "analysis_source": "titleAndDescription",
-          "sentiment": "bullish",
-          "sentiment_score": 0.7,
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
           "video_url": ""
         }
       ],
       "total_mentions": 1,
-      "sentiment_score": 0.7,
+      "sentiment_score": 0.5,
       "daily": {
         "2026-04-16": {
           "mentions": 1,
-          "bullish": 1,
+          "bullish": 0,
           "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 0.7
+          "neutral": 1,
+          "sentiment_score": 0.5
         }
       }
     },
