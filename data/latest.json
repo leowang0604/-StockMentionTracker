@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-19T20:55:28",
+  "updated_at": "2026-04-19T22:37:38",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -15630,7 +15630,7 @@
       "code": "CDNS",
       "name": "Cadence Design Systems",
       "market": "US",
-      "sector": "AI晶片",
+      "sector": "科技",
       "contexts": [
         {
           "video": "EP649 | 💌",
@@ -19133,7 +19133,7 @@
       "code": "CHTR",
       "name": "Charter Communications",
       "market": "US",
-      "sector": "通訊媒體",
+      "sector": "串流媒體",
       "contexts": [
         {
           "video": "EP649 | 💌",
@@ -20903,7 +20903,7 @@
       "code": "EA",
       "name": "Electronic Arts",
       "market": "US",
-      "sector": "消費電子",
+      "sector": "通訊媒體",
       "contexts": [
         {
           "video": "訪談特別篇_產業研究與專職交易生活 ft.田中太郎",
@@ -21563,7 +21563,7 @@
       "code": "00830",
       "name": "國泰費城半導體",
       "market": "TW",
-      "sector": null,
+      "sector": "ETF",
       "contexts": [
         {
           "video": "EP1075｜談崩也不怕？漲價題材更猛，117家漲停板，被動元件不一樣了！利空鈍化又怕，找獲利好、型態佳、股性差的低估股？ft.冠軍操盤手 楊雲翔",
@@ -21713,7 +21713,7 @@
       "code": "BIIB",
       "name": "Biogen",
       "market": "US",
-      "sector": "生技製藥",
+      "sector": "醫療",
       "contexts": [
         {
           "video": "2026/04/16 (四）美股創新高 ，泡沫示警？ASML財報，Tesla AI5晶片設計定案",
@@ -22222,12 +22222,11 @@
     {
       "sector": "AI晶片",
       "market": "US",
-      "total_mentions": 65,
+      "total_mentions": 63,
       "stock_codes": [
         "NVDA",
         "AMD",
-        "MRVL",
-        "CDNS"
+        "MRVL"
       ]
     },
     {
@@ -22272,21 +22271,20 @@
       ]
     },
     {
-      "sector": "消費電子",
-      "market": "US",
-      "total_mentions": 31,
-      "stock_codes": [
-        "AAPL",
-        "EA"
-      ]
-    },
-    {
       "sector": "AI網路",
       "market": "US",
       "total_mentions": 31,
       "stock_codes": [
         "AVGO",
         "CSCO"
+      ]
+    },
+    {
+      "sector": "消費電子",
+      "market": "US",
+      "total_mentions": 30,
+      "stock_codes": [
+        "AAPL"
       ]
     },
     {
@@ -22493,6 +22491,16 @@
       ]
     },
     {
+      "sector": "科技",
+      "market": "US",
+      "total_mentions": 12,
+      "stock_codes": [
+        "SNDK",
+        "CDNS",
+        "INTU"
+      ]
+    },
+    {
       "sector": "半導體業",
       "market": "TW",
       "total_mentions": 12,
@@ -22542,24 +22550,16 @@
       ]
     },
     {
-      "sector": "科技",
-      "market": "US",
-      "total_mentions": 10,
-      "stock_codes": [
-        "SNDK",
-        "INTU"
-      ]
-    },
-    {
       "sector": "醫療",
       "market": "US",
-      "total_mentions": 10,
+      "total_mentions": 11,
       "stock_codes": [
         "UNH",
         "HUM",
         "CVS",
         "TECH",
-        "COO"
+        "COO",
+        "BIIB"
       ]
     },
     {
@@ -22571,20 +22571,21 @@
       ]
     },
     {
+      "sector": "串流媒體",
+      "market": "US",
+      "total_mentions": 9,
+      "stock_codes": [
+        "NFLX",
+        "DIS",
+        "CHTR"
+      ]
+    },
+    {
       "sector": "電信",
       "market": "TW",
       "total_mentions": 8,
       "stock_codes": [
         "3045"
-      ]
-    },
-    {
-      "sector": "串流媒體",
-      "market": "US",
-      "total_mentions": 8,
-      "stock_codes": [
-        "NFLX",
-        "DIS"
       ]
     },
     {
@@ -22727,6 +22728,17 @@
       ]
     },
     {
+      "sector": "ETF",
+      "market": "TW",
+      "total_mentions": 5,
+      "stock_codes": [
+        "00757",
+        "00735",
+        "00400A",
+        "00830"
+      ]
+    },
+    {
       "sector": "散熱",
       "market": "TW",
       "total_mentions": 5,
@@ -22792,16 +22804,6 @@
       "stock_codes": [
         "8112",
         "3036"
-      ]
-    },
-    {
-      "sector": "ETF",
-      "market": "TW",
-      "total_mentions": 4,
-      "stock_codes": [
-        "00757",
-        "00735",
-        "00400A"
       ]
     },
     {
@@ -22950,16 +22952,7 @@
       "total_mentions": 2,
       "stock_codes": [
         "SATS",
-        "CHTR"
-      ]
-    },
-    {
-      "sector": "生技製藥",
-      "market": "US",
-      "total_mentions": 2,
-      "stock_codes": [
-        "MRNA",
-        "BIIB"
+        "EA"
       ]
     },
     {
@@ -23053,6 +23046,14 @@
       "total_mentions": 1,
       "stock_codes": [
         "SYY"
+      ]
+    },
+    {
+      "sector": "生技製藥",
+      "market": "US",
+      "total_mentions": 1,
+      "stock_codes": [
+        "MRNA"
       ]
     },
     {
