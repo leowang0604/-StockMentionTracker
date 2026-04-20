@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-20T18:02:21",
+  "updated_at": "2026-04-20T18:39:15",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -17688,6 +17688,54 @@
       }
     },
     {
+      "code": "6182",
+      "name": "合晶",
+      "market": "TW",
+      "sector": "電子零組件",
+      "contexts": [
+        {
+          "video": "2026/04/08 (三）停戰再兩週， 這次是真的？",
+          "channel": "財女珍妮",
+          "date": "2026-04-08",
+          "text": "以看到它在X平台上面 它就拋了一個在英特爾跟馬斯克握手的照片 這種兩邊之間合作的消息 然後合作的合照一出來 市場馬上高潮 對不對 那我們之前已經有用一集影片 有跟大家分享過 Terrafeb是什麼 它是馬斯克今年最有野心 最重要的計畫之一 目標就是在德州的奧斯林建造兩座 超大型的AI晶片工廠 垂直整合晶片的設計製造封裝這些流程 來解決AI時代晶片供應的瓶頸 那它的年計算年算力的目標 是達到了1TW 也就是非常高 非常去量的一個算力的一個攻擊 那我們也知道 就是馬斯克他要做自動駕駛 人型機器人 甚至未來要在太空去建AI資料中心 你今天一定是要非常多的技術的整合 或者是你在未來 你要怎麼樣真的實現你的",
+          "matched_keyword": "合晶",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
+        },
+        {
+          "video": "EP653 | 🕊️",
+          "channel": "股癌",
+          "date": "2026-04-15",
+          "text": "我們發現說 哎 MACO你做一堆衛星版 怎麼不用漲 結果後來 哎 MACO直接快速的翻倍",
+          "matched_keyword": "MACO",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.85,
+          "video_url": ""
+        }
+      ],
+      "total_mentions": 2,
+      "sentiment_score": 0.675,
+      "daily": {
+        "2026-04-08": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-04-15": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.85
+        }
+      }
+    },
+    {
       "code": "6213",
       "name": "聯茂",
       "market": "TW",
@@ -19454,36 +19502,6 @@
           "bearish": 1,
           "neutral": 0,
           "sentiment_score": 0.0
-        }
-      }
-    },
-    {
-      "code": "6182",
-      "name": "合晶",
-      "market": "TW",
-      "sector": "電子零組件",
-      "contexts": [
-        {
-          "video": "2026/04/08 (三）停戰再兩週， 這次是真的？",
-          "channel": "財女珍妮",
-          "date": "2026-04-08",
-          "text": "以看到它在X平台上面 它就拋了一個在英特爾跟馬斯克握手的照片 這種兩邊之間合作的消息 然後合作的合照一出來 市場馬上高潮 對不對 那我們之前已經有用一集影片 有跟大家分享過 Terrafeb是什麼 它是馬斯克今年最有野心 最重要的計畫之一 目標就是在德州的奧斯林建造兩座 超大型的AI晶片工廠 垂直整合晶片的設計製造封裝這些流程 來解決AI時代晶片供應的瓶頸 那它的年計算年算力的目標 是達到了1TW 也就是非常高 非常去量的一個算力的一個攻擊 那我們也知道 就是馬斯克他要做自動駕駛 人型機器人 甚至未來要在太空去建AI資料中心 你今天一定是要非常多的技術的整合 或者是你在未來 你要怎麼樣真的實現你的",
-          "matched_keyword": "合晶",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": ""
-        }
-      ],
-      "total_mentions": 1,
-      "sentiment_score": 0.5,
-      "daily": {
-        "2026-04-08": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
         }
       }
     },
@@ -22329,12 +22347,12 @@
     {
       "sector": "電子零組件",
       "market": "TW",
-      "total_mentions": 18,
+      "total_mentions": 19,
       "stock_codes": [
         "4749",
         "3264",
-        "3372",
         "6182",
+        "3372",
         "3265"
       ]
     },
