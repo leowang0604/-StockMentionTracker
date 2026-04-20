@@ -2446,11 +2446,11 @@ def _validate_gemini_stocks(
 def _gemini_extract_full_video(
     text: str,
     video_ctx: dict,
-    chunk_size: int = 450,
+    chunk_size: int = 450,  # kept for API compat, unused
 ) -> list[dict] | None:
     """
-    把整段逐字稿切塊後批次送 Gemini，匯總並去重結果。
-    回傳 list of validated hits；超過半數 chunk 失敗時回傳 None（觸發 fallback）。
+    送整集完整逐字稿給 Gemini（一次呼叫），識別所有股票提及。
+    回傳 list of validated hits；失敗時回傳 None（觸發 fallback）。
     """
     if not GEMINI_API_KEY:
         return None
@@ -2460,50 +2460,72 @@ def _gemini_extract_full_video(
 
     channel     = video_ctx.get("channel", "")
     video_title = video_ctx.get("title", "")
-    chunks      = _split_into_chunks(text, target_size=chunk_size)
 
-    all_hits: list[dict] = []
-    failed_chunks = 0
+    prompt = (
+        "你是台灣股市分析專家。以下是一整集財經 YouTube/Podcast 的完整逐字稿，"
+        "可能含有 Whisper 語音辨識錯字（例如「新英財」應為「新應材」、「漢微課」應為「漢微科」）。\n\n"
+        f"頻道：{channel}\n"
+        f"影片標題：{video_title[:80]}\n\n"
+        f"完整逐字稿：\n「{text}」\n\n"
+        "請完成以下任務：\n"
+        "1. 找出這集節目中主持人**明確提到**的所有台股或美股（需有股票討論語境）\n"
+        "2. 對每支股票判斷主持人的情緒傾向\n"
+        "3. 若某個詞看起來是 Whisper 語音辨識錯字，請給出正確的股票名稱\n\n"
+        "【重要判斷原則】\n"
+        "- 只回傳真正被討論的股票，不要因日常詞語湊巧匹配就回傳\n"
+        "- 「第一天正式上路」→ 不回傳天正國際 ✅\n"
+        "- 「甚至上游材料」→ 不回傳至上電機 ✅\n"
+        "- 「美國眾議院」→ 不回傳國眾 ✅\n"
+        "- 「台積電今天漲很多」→ 回傳台積電 ✅\n"
+        "- 中性描述（「還需要時間」「整理中」「觀察」）→ neutral，不判為 bearish\n\n"
+        "【情緒評分標準】\n"
+        "- bullish (score 0.6–0.9)：「非常看好」「目標大漲」「上車」「爆衝」「狂飆」\n"
+        "- bearish (score 0.1–0.4)：「不看好」「建議出場」「已出清」「警示」「減碼」\n"
+        "- neutral (score 0.4–0.6)：描述現況、觀察等待、需要時間、整理中\n\n"
+        "若這集完全沒有股票討論，回傳空陣列 []。\n"
+        "只回傳 JSON 陣列，不要其他文字：\n"
+        "[{\n"
+        "  \"name\": \"股票正確名稱\",\n"
+        "  \"code\": \"代號或null\",\n"
+        "  \"market\": \"TW或US或null\",\n"
+        "  \"sentiment\": \"bullish或bearish或neutral\",\n"
+        "  \"score\": 0.7,\n"
+        "  \"context\": \"原文中最相關的一句話（限60字內）\",\n"
+        "  \"whisper_original\": \"若有修正填原始錯誤詞，否則null\"\n"
+        "}]"
+    )
 
-    for i, chunk in enumerate(chunks):
-        raw = _gemini_extract_chunk(chunk, model, video_title=video_title, channel=channel)
-        if raw is None:
-            failed_chunks += 1
-            continue
-
-        validated = _validate_gemini_stocks(raw, chunk)
-        for hit in validated:
-            hit["position"] = i * chunk_size  # synthetic position (chunk index × size)
-
-        all_hits.extend(validated)
-
-    # 超過半數 chunk 失敗 → 整體視為失敗
-    if len(chunks) > 0 and failed_chunks > len(chunks) // 2:
-        print(f"  [gemini_extract] too many failures ({failed_chunks}/{len(chunks)}) → fallback", file=sys.stderr)
+    try:
+        response = _gemini_generate(model, prompt)
+        raw_text = response.text.strip()
+        if raw_text.startswith("```"):
+            raw_text = re.sub(r"^```[a-z]*\n?", "", raw_text)
+            raw_text = re.sub(r"\n?```$", "", raw_text)
+        parsed = json.loads(raw_text)
+        if not isinstance(parsed, list):
+            return None
+    except Exception as e:
+        print(f"  [gemini_extract] full-video call failed: {e}", file=sys.stderr)
         return None
 
-    # 同一支股票可能在多個 chunk 出現 → 依代號去重，合併 mention_count
+    validated = _validate_gemini_stocks(parsed, text)
+    for hit in validated:
+        hit["position"] = 0  # single call, no chunk offset
+
+    # 去重（同一支股票）
     by_code: dict[str, dict] = {}
-    for hit in all_hits:
+    for hit in validated:
         code = hit["stock_code"]
         if code not in by_code:
             by_code[code] = dict(hit)
         else:
             existing = by_code[code]
             existing["mention_count"] = existing.get("mention_count", 1) + 1
-            # 保留較長的 context
             if len(hit.get("context", "")) > len(existing.get("context", "")):
                 existing["context"] = hit["context"]
-            # 情緒取加權平均
-            existing["sentiment_score"] = round(
-                (existing["sentiment_score"] + hit["sentiment_score"]) / 2, 3
-            )
-            # 重新推算 label
-            s = existing["sentiment_score"]
-            existing["sentiment"] = "bullish" if s > 0.6 else "bearish" if s < 0.4 else "neutral"
 
     result = list(by_code.values())
-    print(f"  [gemini_extract] {len(chunks)} chunks, {failed_chunks} failed → {len(result)} stocks", file=sys.stderr)
+    print(f"  [gemini_extract] full-video → {len(result)} stocks", file=sys.stderr)
     return result
 
 
