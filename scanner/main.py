@@ -3422,17 +3422,22 @@ def merge_into_history(
                 "contexts": [],
             }
         if len(merged_stocks[code]["contexts"]) < MAX_CONTEXTS_PER_STOCK:
-            merged_stocks[code]["contexts"].append({
+            ctx_entry: dict = {
                 "video":           vt,
                 "channel":         m["channel"],
                 "date":            m["date"],
-                "text":             m["context"],
-                "matched_keyword":  m.get("matched_keyword", ""),
-                "analysis_source":  m.get("analysis_source", "titleAndDescription"),
-                "sentiment":        m.get("sentiment", "neutral"),
-                "sentiment_score":  m.get("sentiment_score", 0.5),
-                "video_url":        m.get("video_url"),
-            })
+                "text":            m["context"],
+                "matched_keyword": m.get("matched_keyword", ""),
+                "analysis_source": m.get("analysis_source", "titleAndDescription"),
+                "sentiment":       m.get("sentiment", "neutral"),
+                "sentiment_score": m.get("sentiment_score", 0.5),
+                "video_url":       m.get("video_url"),
+            }
+            if m.get("extraction_mode"):
+                ctx_entry["extraction_mode"] = m["extraction_mode"]
+            if m.get("whisper_corrected"):
+                ctx_entry["whisper_corrected"] = True
+            merged_stocks[code]["contexts"].append(ctx_entry)
 
     # Rebuild stocks_ranking with daily aggregation and sentiment_score
     stocks_ranking = []
