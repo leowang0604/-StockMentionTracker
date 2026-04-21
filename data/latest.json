@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-21T21:32:58",
+  "updated_at": "2026-04-21T21:45:10",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -19896,6 +19896,54 @@
       }
     },
     {
+      "code": "COO",
+      "name": "Cooper Companies (The)",
+      "market": "US",
+      "sector": "醫療",
+      "contexts": [
+        {
+          "video": "EP1079｜台積電休息讓中小，95家漲停板！廠務、設備、特化會輪流，PCB材料有前景，石英元件天花板？ft.操盤手 黄豐凱",
+          "channel": "兆華與股惑仔",
+          "date": "2026-04-17",
+          "text": "應該是CPO吧 對 因為昨天的台業也有講到 CPO的狀況 其實是",
+          "matched_keyword": "CPO",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
+        },
+        {
+          "video": "EP325 撞不夠才賺不夠",
+          "channel": "投資癮",
+          "date": "2026-04-19",
+          "text": "而我也知道 這一半是法輸會的關係 所以市場的焦點可能會放在CPO身上 依照上一次的法輸會來說",
+          "matched_keyword": "CPO",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
+        }
+      ],
+      "total_mentions": 2,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-04-17": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-04-19": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
       "code": "6213",
       "name": "聯茂",
       "market": "TW",
@@ -22806,36 +22854,6 @@
       }
     },
     {
-      "code": "COO",
-      "name": "Cooper Companies (The)",
-      "market": "US",
-      "sector": "醫療",
-      "contexts": [
-        {
-          "video": "EP1079｜台積電休息讓中小，95家漲停板！廠務、設備、特化會輪流，PCB材料有前景，石英元件天花板？ft.操盤手 黄豐凱",
-          "channel": "兆華與股惑仔",
-          "date": "2026-04-17",
-          "text": "應該是CPO吧 對 因為昨天的台業也有講到 CPO的狀況 其實是",
-          "matched_keyword": "CPO",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": ""
-        }
-      ],
-      "total_mentions": 1,
-      "sentiment_score": 0.5,
-      "daily": {
-        "2026-04-17": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        }
-      }
-    },
-    {
       "code": "2206",
       "name": "三陽工業",
       "market": "TW",
@@ -24634,6 +24652,66 @@
           "sentiment_score": 0.5
         }
       }
+    },
+    {
+      "code": "4938",
+      "name": "和碩",
+      "market": "TW",
+      "sector": "組裝代工",
+      "contexts": [
+        {
+          "video": "EP325 撞不夠才賺不夠",
+          "channel": "投資癮",
+          "date": "2026-04-19",
+          "text": "像在台股 像上禮拜討論的 台塑市保德綠 茂蓮台光店等等的 或是原本想要放比較長洲齊 像是合作大臉大戶經濟之類的",
+          "matched_keyword": "合作大臉",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-04-19": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
+      "code": "9934",
+      "name": "成霖",
+      "market": "TW",
+      "sector": "居家生活",
+      "contexts": [
+        {
+          "video": "EP325 撞不夠才賺不夠",
+          "channel": "投資癮",
+          "date": "2026-04-19",
+          "text": "像是油田台表格 或是成熊富財或GIS等等的 這一段時間的表現也非常的強",
+          "matched_keyword": "成熊富財",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": ""
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.7,
+      "daily": {
+        "2026-04-19": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.7
+        }
+      }
     }
   ],
   "sectors_ranking": [
@@ -24940,6 +25018,15 @@
       ]
     },
     {
+      "sector": "組裝代工",
+      "market": "TW",
+      "total_mentions": 15,
+      "stock_codes": [
+        "2317",
+        "4938"
+      ]
+    },
+    {
       "sector": "面板",
       "market": "TW",
       "total_mentions": 15,
@@ -24971,14 +25058,6 @@
         "00980A",
         "00987A",
         "00994A"
-      ]
-    },
-    {
-      "sector": "組裝代工",
-      "market": "TW",
-      "total_mentions": 14,
-      "stock_codes": [
-        "2317"
       ]
     },
     {
@@ -25043,23 +25122,23 @@
       ]
     },
     {
+      "sector": "醫療",
+      "market": "US",
+      "total_mentions": 11,
+      "stock_codes": [
+        "UNH",
+        "COO",
+        "HUM",
+        "CVS",
+        "TECH"
+      ]
+    },
+    {
       "sector": "記憶體IC",
       "market": "TW",
       "total_mentions": 10,
       "stock_codes": [
         "8299"
-      ]
-    },
-    {
-      "sector": "醫療",
-      "market": "US",
-      "total_mentions": 10,
-      "stock_codes": [
-        "UNH",
-        "HUM",
-        "CVS",
-        "TECH",
-        "COO"
       ]
     },
     {
@@ -25524,6 +25603,15 @@
       ]
     },
     {
+      "sector": "居家生活",
+      "market": "TW",
+      "total_mentions": 2,
+      "stock_codes": [
+        "2916",
+        "9934"
+      ]
+    },
+    {
       "sector": "觀光餐旅",
       "market": "TW",
       "total_mentions": 2,
@@ -25596,14 +25684,6 @@
       "total_mentions": 1,
       "stock_codes": [
         "6505"
-      ]
-    },
-    {
-      "sector": "居家生活",
-      "market": "TW",
-      "total_mentions": 1,
-      "stock_codes": [
-        "2916"
       ]
     },
     {
