@@ -3581,8 +3581,8 @@ def main() -> None:
                 detected.append((v_entry, hits, asrc, None))
 
         # ── Pass 1.5: batch Gemini ambiguous filter (keyword-mode only) ──
-        # Skipped when extraction_mode="gemini" — Gemini already validated hits inline.
-        if exmode != "gemini":
+        # Skipped when extraction_mode="gemini" or "auto" — Gemini already validated hits inline.
+        if exmode not in ("gemini", "auto"):
             detected = _batch_filter_ambiguous_hits(detected, history=history)
 
         # ── Pass 2: ONE batch Gemini sentiment call per channel ───────────
@@ -3595,8 +3595,8 @@ def main() -> None:
             sum(1 for h in hits if h.get("extraction_mode") != "gemini")
             for _, hits, _, _ in detected
         )
-        # Only run sentiment batch for keyword-sourced hits
-        if keyword_hits_count > 0:
+        # Only run sentiment batch for keyword-sourced hits (skip in auto/gemini mode)
+        if keyword_hits_count > 0 and exmode not in ("gemini", "auto"):
             ep_sentiment_input = [
                 ([h for h in hits if h.get("extraction_mode") != "gemini"], asrc)
                 for _, hits, asrc, _ in detected
