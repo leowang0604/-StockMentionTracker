@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-21T18:39:37",
+  "updated_at": "2026-04-21T19:08:21",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -9403,10 +9403,21 @@
           "sentiment": "bearish",
           "sentiment_score": 0.333,
           "video_url": ""
+        },
+        {
+          "video": "訪談特別篇_產業研究與專職交易生活 ft.田中太郎",
+          "channel": "韭菜畢業班",
+          "date": "2026-04-16",
+          "text": "時候 其實有一些入場 有在發表一些AI眼鏡出來 一定啦 超多 對 可是 你可以去上網去查feedback 好像沒有這麼熱門 沒有這麼爆發 嗯 討論區啦 就像你講的討論區 就是前面加了一個鏡頭 讓你可以拍照 可是 好像 你拿手機出來拍好像你差不多 喔確實 因為你不可能戴一個眼鏡 然後又現在又很厚重 像蘋果不是也取消掉 他們的那個智慧型眼鏡 我覺得就是都是這個區域 不過這個已經是一個確認 我相信智慧眼鏡後面一定會是一個 爆發 一定會爆發的 我覺得這很像現在那個機器人 機器人這幾天 好像又回來了一點 對 回溫了一點 但 你有興趣嗎 我覺得 可是 因為我就是 這段好微喔 我覺得這段有點危險 我覺得中端 中",
+          "matched_keyword": "蘋果",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
         }
       ],
-      "total_mentions": 12,
-      "sentiment_score": 0.657,
+      "total_mentions": 13,
+      "sentiment_score": 0.645,
       "daily": {
         "2026-03-29": {
           "mentions": 1,
@@ -9451,11 +9462,11 @@
           "sentiment_score": 0.4
         },
         "2026-04-16": {
-          "mentions": 1,
+          "mentions": 2,
           "bullish": 1,
           "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 0.6
+          "neutral": 1,
+          "sentiment_score": 0.55
         },
         "2026-04-15": {
           "mentions": 1,
@@ -15453,10 +15464,21 @@
           "sentiment": "bullish",
           "sentiment_score": 0.6,
           "video_url": ""
+        },
+        {
+          "video": "訪談特別篇_產業研究與專職交易生活 ft.田中太郎",
+          "channel": "韭菜畢業班",
+          "date": "2026-04-16",
+          "text": "不過 雖然這個故事 還是有在講 但是因為最近 好像跟著被動原件 一起漲上去的 就是因為它又是屬於半導體 所以它又跟著一起漲上去",
+          "matched_keyword": "新英財",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
         }
       ],
-      "total_mentions": 3,
-      "sentiment_score": 0.667,
+      "total_mentions": 4,
+      "sentiment_score": 0.625,
       "daily": {
         "2026-04-17": {
           "mentions": 1,
@@ -15478,6 +15500,13 @@
           "bearish": 0,
           "neutral": 0,
           "sentiment_score": 0.6
+        },
+        "2026-04-16": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
         }
       }
     },
@@ -24111,7 +24140,7 @@
     {
       "sector": "網通",
       "market": "TW",
-      "total_mentions": 16,
+      "total_mentions": 17,
       "stock_codes": [
         "2455",
         "8011",
@@ -24179,6 +24208,20 @@
       ]
     },
     {
+      "sector": "電子零組件",
+      "market": "TW",
+      "total_mentions": 14,
+      "stock_codes": [
+        "3264",
+        "4749",
+        "6182",
+        "3372",
+        "3265",
+        "6643",
+        "6261"
+      ]
+    },
+    {
       "sector": "先進封裝",
       "market": "TW",
       "total_mentions": 13,
@@ -24206,20 +24249,6 @@
         "2382",
         "6584",
         "3231"
-      ]
-    },
-    {
-      "sector": "電子零組件",
-      "market": "TW",
-      "total_mentions": 13,
-      "stock_codes": [
-        "3264",
-        "4749",
-        "6182",
-        "3372",
-        "3265",
-        "6643",
-        "6261"
       ]
     },
     {
