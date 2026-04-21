@@ -2258,6 +2258,7 @@ def analyze_sentiment(text: str) -> tuple[str, float]:
 def _validate_gemini_stocks(
     results: list[dict],
     chunk_text: str,
+    video_ctx: dict | None = None,
 ) -> list[dict]:
     """
     驗證 Gemini 回傳的股票列表，防止幻覺：
@@ -2266,6 +2267,7 @@ def _validate_gemini_stocks(
     層 3：股票名稱（或 Whisper 原始詞）確實出現在原文中
 
     回傳格式符合 _build_youtube_mentions() 期待的 hit dict。
+    拒絕的股票會寫入 skip_log 供事後診斷。
     """
     validated: list[dict] = []
 
@@ -2303,12 +2305,23 @@ def _validate_gemini_stocks(
                     resolved_code = best_code
                     resolved_name = CODE_TO_NAME.get(best_code, name)
 
+        whisper_orig = (r.get("whisper_original") or "").strip()
+
         if not resolved_code:
             print(f"  [gemini_extract] unknown stock: {name!r} → skipped", file=sys.stderr)
+            _vctx = video_ctx or {}
+            _skip_log.append({
+                "keyword": whisper_orig or name,
+                "reason":  "gemini_extraction_rejected",
+                "detail":  "無法對應任何已知股票",
+                "video_id": _vctx.get("video_id", ""),
+                "channel":  _vctx.get("channel", ""),
+                "date":     _vctx.get("date", ""),
+                "title":    _vctx.get("title", ""),
+            })
             continue
 
         # ── 防幻覺：確認名稱確實出現在原文 ────────────────────────────
-        whisper_orig = (r.get("whisper_original") or "").strip()
         stock_keywords = [kw for kw, c in STOCK_DICT.items() if c == resolved_code]
         name_appears = (
             any(kw in chunk_text for kw in stock_keywords + [name])
@@ -2331,6 +2344,16 @@ def _validate_gemini_stocks(
                         break
         if not name_appears:
             print(f"  [gemini_extract] hallucination? {resolved_code}({resolved_name}) not in chunk → skipped", file=sys.stderr)
+            _vctx = video_ctx or {}
+            _skip_log.append({
+                "keyword": whisper_orig or name,
+                "reason":  "gemini_extraction_rejected",
+                "detail":  f"名稱未出現在原文（可能幻覺）: {resolved_code}/{resolved_name}",
+                "video_id": _vctx.get("video_id", ""),
+                "channel":  _vctx.get("channel", ""),
+                "date":     _vctx.get("date", ""),
+                "title":    _vctx.get("title", ""),
+            })
             continue
 
         # ── 情緒正規化 ──────────────────────────────────────────────────
@@ -2445,7 +2468,7 @@ def _gemini_extract_full_video(
         print(f"  [gemini_extract] full-video call failed: {e}", file=sys.stderr)
         return None
 
-    validated = _validate_gemini_stocks(parsed, text)
+    validated = _validate_gemini_stocks(parsed, text, video_ctx=video_ctx)
     for hit in validated:
         hit["position"] = 0  # single call, no chunk offset
 
