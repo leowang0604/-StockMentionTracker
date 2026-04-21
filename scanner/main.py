@@ -3614,7 +3614,12 @@ def main() -> None:
                 if h.get("extraction_mode") == "gemini":
                     ep_sents.append((h.get("sentiment", "neutral"), h.get("sentiment_score", 0.5)))
                 else:
-                    ep_sents.append(next(kw_iter, ("neutral", 0.5)))
+                    kw_sent = next(kw_iter, None)
+                    if kw_sent is not None:
+                        ep_sents.append(kw_sent)
+                    else:
+                        # sentiment batch skipped (auto/gemini mode) — use local keyword rules
+                        ep_sents.append(_keyword_sentiment(h.get("context", "")))
             all_sentiments.append(ep_sents)
 
         print(f"  [sentiment] done — {gemini_hits_count} gemini / {keyword_hits_count} keyword hits")
