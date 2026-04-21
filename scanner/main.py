@@ -3381,23 +3381,27 @@ def merge_into_history(
                 "sector":   m.get("stock_sector"),
                 "contexts": [],
             }
-        if len(merged_stocks[code]["contexts"]) < MAX_CONTEXTS_PER_STOCK:
-            ctx_entry: dict = {
-                "video":           vt,
-                "channel":         m["channel"],
-                "date":            m["date"],
-                "text":            m["context"],
-                "matched_keyword": m.get("matched_keyword", ""),
-                "analysis_source": m.get("analysis_source", "titleAndDescription"),
-                "sentiment":       m.get("sentiment", "neutral"),
-                "sentiment_score": m.get("sentiment_score", 0.5),
-                "video_url":       m.get("video_url"),
-            }
-            if m.get("extraction_mode"):
-                ctx_entry["extraction_mode"] = m["extraction_mode"]
-            if m.get("whisper_corrected"):
-                ctx_entry["whisper_corrected"] = True
-            merged_stocks[code]["contexts"].append(ctx_entry)
+        ctx_entry: dict = {
+            "video":           vt,
+            "channel":         m["channel"],
+            "date":            m["date"],
+            "text":            m["context"],
+            "matched_keyword": m.get("matched_keyword", ""),
+            "analysis_source": m.get("analysis_source", "titleAndDescription"),
+            "sentiment":       m.get("sentiment", "neutral"),
+            "sentiment_score": m.get("sentiment_score", 0.5),
+            "video_url":       m.get("video_url"),
+        }
+        if m.get("extraction_mode"):
+            ctx_entry["extraction_mode"] = m["extraction_mode"]
+        if m.get("whisper_corrected"):
+            ctx_entry["whisper_corrected"] = True
+        ctxs = merged_stocks[code]["contexts"]
+        ctxs.append(ctx_entry)
+        # Sliding window: keep only the most recent MAX_CONTEXTS_PER_STOCK entries
+        if len(ctxs) > MAX_CONTEXTS_PER_STOCK:
+            ctxs.sort(key=lambda c: c.get("date", ""), reverse=True)
+            merged_stocks[code]["contexts"] = ctxs[:MAX_CONTEXTS_PER_STOCK]
 
     # Rebuild stocks_ranking with daily aggregation and sentiment_score
     stocks_ranking = []
