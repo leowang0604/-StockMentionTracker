@@ -2255,69 +2255,6 @@ def analyze_sentiment(text: str) -> tuple[str, float]:
 # Method B: Gemini LLM extraction core functions
 # ─────────────────────────────────────────────────────────────────────────────
 
-def _gemini_extract_chunk(
-    chunk: str,
-    model,
-    video_title: str = "",
-    channel: str = "",
-) -> list[dict] | None:
-    """
-    送一段逐字稿給 Gemini，同時完成：
-    1. 股票識別（不依賴關鍵字，自動處理 Whisper 錯字）
-    2. 情緒判斷（看多/看空/中性 + 0~1 分數）
-    3. Whisper 錯字修正記錄
-
-    回傳 list of hit dict，失敗回傳 None（觸發 fallback）。
-    若此段無股票討論，回傳空 list []。
-    """
-    prompt = (
-        "你是台灣股市分析專家。以下是一段財經 YouTube/Podcast 的語音辨識逐字稿，"
-        "可能含有 Whisper 語音辨識錯字（例如「新英財」應為「新應材」、「漢微課」應為「漢微科」）。\n\n"
-        f"頻道：{channel}\n"
-        f"影片標題：{video_title[:80]}\n\n"
-        f"逐字稿段落：\n「{chunk}」\n\n"
-        "請完成以下任務：\n"
-        "1. 找出這段文字中主持人**明確提到**的所有台股或美股（需有股票討論語境）\n"
-        "2. 對每支股票判斷主持人的情緒傾向\n"
-        "3. 若某個詞看起來是 Whisper 語音辨識錯字，請給出正確的股票名稱\n\n"
-        "【重要判斷原則】\n"
-        "- 只回傳真正被討論的股票，不要因日常詞語湊巧匹配就回傳\n"
-        "- 「第一天正式上路」→ 不回傳天正國際 ✅\n"
-        "- 「甚至上游材料」→ 不回傳至上電機 ✅\n"
-        "- 「美國眾議院」→ 不回傳國眾 ✅\n"
-        "- 「台積電今天漲很多」→ 回傳台積電 ✅\n"
-        "- 中性描述（「還需要時間」「整理中」「觀察」）→ neutral，不判為 bearish\n\n"
-        "【情緒評分標準】\n"
-        "- bullish (score 0.6–0.9)：「非常看好」「目標大漲」「上車」「爆衝」「狂飆」\n"
-        "- bearish (score 0.1–0.4)：「不看好」「建議出場」「已出清」「警示」「減碼」\n"
-        "- neutral (score 0.4–0.6)：描述現況、觀察等待、需要時間、整理中\n\n"
-        "若此段完全沒有股票討論，回傳空陣列 []。\n"
-        "只回傳 JSON 陣列，不要其他文字：\n"
-        "[{\n"
-        "  \"name\": \"股票正確名稱\",\n"
-        "  \"code\": \"代號或null\",\n"
-        "  \"market\": \"TW或US或null\",\n"
-        "  \"sentiment\": \"bullish或bearish或neutral\",\n"
-        "  \"score\": 0.7,\n"
-        "  \"context\": \"原文中最相關的一句話（限60字內）\",\n"
-        "  \"whisper_original\": \"若有修正填原始錯誤詞，否則null\"\n"
-        "}]"
-    )
-    try:
-        response = _gemini_generate(model, prompt)
-        text = response.text.strip()
-        if text.startswith("```"):
-            text = re.sub(r"^```[a-z]*\n?", "", text)
-            text = re.sub(r"\n?```$", "", text)
-        parsed = json.loads(text)
-        if not isinstance(parsed, list):
-            return None
-        return parsed
-    except Exception as e:
-        print(f"  [gemini_extract] chunk failed: {e}", file=sys.stderr)
-        return None
-
-
 def _validate_gemini_stocks(
     results: list[dict],
     chunk_text: str,
