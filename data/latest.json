@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-22T21:21:53",
+  "updated_at": "2026-04-22T21:32:33",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -93,6 +93,17 @@
           "analysis_source": "whisper",
           "sentiment": "bullish",
           "sentiment_score": 0.8,
+          "video_url": ""
+        },
+        {
+          "video": "EP415｜ 股市反轉的三件事",
+          "channel": "股市隱者",
+          "date": "2026-04-20",
+          "text": "但我們能做的是什麼 就是用既有的部位讓他繼續去滾 那資金還留著 等到真正一次 出現了意外的大迴盪 你手上還有錢 你還可以決定 要不要趁這個修正的時機 再去買 所以我們需要的是什麼 在我們有把握的位置做決定 不在我們沒把握的位置 承擔風險 這是我核心的思想在 現在這個價位 所以我不會跟大家說 馬上把台積電賣掉 馬上把AI股賣掉 馬上把三人賣掉 因為我不知道什麼時候最高點 但是相對高點 他有可能在更高 更相對的更高點 你不知道 所以你只要做穩 做好 然後你只要盯好幾個訊號 那如果這些訊號改變了 你可能就開始在交易上面做執行 該做的事 這樣就夠了 就很像什麼 我們在高速公路開車 前面的車突然加速 那每一",
+          "matched_keyword": "台積電",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
           "video_url": ""
         },
         {
@@ -325,17 +336,6 @@
           "sentiment": "neutral",
           "sentiment_score": 0.5,
           "video_url": null
-        },
-        {
-          "video": "EP1069｜這次伊朗沒否認，4月有好消息？昨天嚇出場，今天不敢追？熱門股全面回血，有部位但不冒險，這些ETF幫忙漲回來！ft.型男股神 陳威良",
-          "channel": "兆華與股惑仔",
-          "date": "2026-04-01",
-          "text": "股 就昨天跌破季線 就什麼都沒買到了 因為先買了 錢花下去了 更便宜了 反而心涼涼的 覺得 我還要再買嗎 就錯過了 昨天就有今天大漲 今天這個心情不好囉 昨天沒撿到的朋友 今天可能心情不好 所以照理來說 今天上漲要開心 我卻是在傲惱 為什麼昨天跌到季線 我不買 為什麼我都是在 該買的時候 無法下手買台積電 買在不對的時機點 然後雖然說以後還有機會 但是這種心情 覺得很欲足 希望聽我隨隨念 不會啊 市場會教訓 你要不要開玩笑的 我們都是在經驗裡面 對不對 你沒有撿到昨天17 我記得昨天 其實我刮到1765的台積電 Sorry 1765 雖然沒有好了 真的 我覺得 就是像你自己也提到了 搞不好 下禮拜談",
-          "matched_keyword": "2330",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": null
         }
       ],
       "total_mentions": 30,
@@ -356,11 +356,11 @@
           "sentiment_score": 0.5
         },
         "2026-04-20": {
-          "mentions": 2,
+          "mentions": 3,
           "bullish": 1,
           "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.65
+          "neutral": 2,
+          "sentiment_score": 0.6
         },
         "2026-04-19": {
           "mentions": 1,
@@ -398,10 +398,10 @@
           "sentiment_score": 0.5
         },
         "2026-04-01": {
-          "mentions": 7,
+          "mentions": 6,
           "bullish": 0,
           "bearish": 0,
-          "neutral": 7,
+          "neutral": 6,
           "sentiment_score": 0.5
         }
       }
@@ -3124,6 +3124,17 @@
           "video_url": ""
         },
         {
+          "video": "EP414｜只有魔法才能打敗魔法",
+          "channel": "股市隱者",
+          "date": "2026-04-16",
+          "text": "要怎麼下 所以我只能聽它的話 但是發現它做的大部分 真的都幫我解決問題了 所以我就不會再去懷疑它 我也懶得去思考 所以第二個風險就是思考退化 有龍蝦幫我做事以後 我有時候是能懶得自己想 遇到問題第一個反應 不是思考是去問龍蝦 或是去問chatgbt 那這個習慣久了 判斷力是會退化的 就像你每次都使用Google Map 你對於路的感覺 就會慢慢消失 這是同一件事情 因為你太依賴了 你就把原本既有的能力慢慢退化 所以這個跟第一個我剛剛講的 它會有一些 認知的評估會有問題 因為你太依賴它了 思考退化 所以你也不會去懷疑它 所以哪一天它真的出現幻覺了 有可能就是跟著它的幻覺走 那第三個風險是什麼 如果每一個人都",
+          "matched_keyword": "Google",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.0,
+          "video_url": ""
+        },
+        {
           "video": "EP653 | 🕊️",
           "channel": "股癌",
           "date": "2026-04-15",
@@ -3265,21 +3276,10 @@
           "sentiment": "bullish",
           "sentiment_score": 0.75,
           "video_url": null
-        },
-        {
-          "video": "EP214 | 台、美股重點一次說，低軌衛星產業動能，光電二極體與台股關係，定穎投控轉型，google新技術與記憶體 ？",
-          "channel": "韭菜畢業班",
-          "date": "2026-03-29",
-          "text": "果我們用 GPU主板的角度去思考的話 它應該是在第3季 2026年的第3季才會進入量產的 那ASIC跟Switch相關的產品的話 應該是在第4季的時候才會量產 所以這個是 後續大家可以去思考的一件事情 那其實ASIC相關的加速器 以及Switch這種交換機板 40x以上的 那原則上我們會去掛購 就是Google跟Meta 這兩家 所以大家也可以去注意一下 那剛剛所講到DDR-FI的話 可能就是長薪存儲 那長薪存儲就是大家最 之前每次記憶體 然後要出現一些利空的時候 像CXNT 這是大家很常聽到的一個名詞 如果有興趣的朋友 你都可以上網查一下 好 那原則上就這樣 我覺得今天這一集 就大概回到這邊 那我們節目",
-          "matched_keyword": "GOOGL",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.75,
-          "video_url": null
         }
       ],
       "total_mentions": 30,
-      "sentiment_score": 0.537,
+      "sentiment_score": 0.512,
       "daily": {
         "2026-04-22": {
           "mentions": 10,
@@ -3310,11 +3310,11 @@
           "sentiment_score": 0.5
         },
         "2026-04-16": {
-          "mentions": 1,
+          "mentions": 2,
           "bullish": 1,
-          "bearish": 0,
+          "bearish": 1,
           "neutral": 0,
-          "sentiment_score": 0.7
+          "sentiment_score": 0.35
         },
         "2026-04-15": {
           "mentions": 2,
@@ -3359,8 +3359,8 @@
           "sentiment_score": 0.2
         },
         "2026-03-29": {
-          "mentions": 3,
-          "bullish": 3,
+          "mentions": 2,
+          "bullish": 2,
           "bearish": 0,
           "neutral": 0,
           "sentiment_score": 0.75
@@ -3470,6 +3470,17 @@
           "analysis_source": "whisper",
           "sentiment": "bullish",
           "sentiment_score": 0.7,
+          "video_url": ""
+        },
+        {
+          "video": "EP414｜只有魔法才能打敗魔法",
+          "channel": "股市隱者",
+          "date": "2026-04-16",
+          "text": "不賣弄 幾乎不用Emoji 所以他分析了很多很多 但有一個很重要的東西 他看到了我的演變 他說早期我的文章是教學型 中期文章變成分析型 後期都是哲學型 越來越多人生感悟 所以他說這是一個很大的風格改變 那他當然又給我一些想法什麼的 我覺得很有趣 接下來我就是要叫他來分析我的Podcast 因為我後來Facebook就比較少在用了 那我就開始用 但是PocketGOO還是每個禮拜都會有 所以我想要讓他分析 我的講法以及能不能給我一些回饋 因為我發現 我們如果要花很多的時間 找出理出自己的這一段過程 我覺得這個 可能真的至少要一兩個月的時間 還不知道能不能理得出來 他分析了427篇文章 總共518644個字 我們",
+          "matched_keyword": "Facebook",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
           "video_url": ""
         },
         {
@@ -3691,21 +3702,10 @@
           "sentiment": "bullish",
           "sentiment_score": 1.0,
           "video_url": ""
-        },
-        {
-          "video": "EP213 | 台、美股重點一次說，台股反彈怎麼看？美股極度恐慌後的觀察重點，南俊國際與滑軌需求，設備股後勢",
-          "channel": "韭菜畢業班",
-          "date": "2026-03-25",
-          "text": "已經顧到到250億美元,那250億美元我給大家一個想像好了,就等於是5倍,那5倍就500%,所以是相對多的,那等於是他自己如果賣晶片這個業務可以OK的話,那這5年內每年可能就可以帶來150億美元的一個收入,所以我們才會看到為什麼股價在盤後的反應至少都是一個跳空往上去走,10%這樣子啊, 那當然這一次Meta跟他一起合作,Meta的粉身的反應是還好,因為最主要收回的東西應該是在ARM,Meta目前還在繼續破底當中,我覺得Meta現在比較要去注意到的東西就是他自己AI的那個打那個詐騙的東西啊,其實自己搞定一下好不好,每次打詐騙都給我錯,我跟你講最近我不是半信IG嗎,IG叫UncleWhereAreYou,",
-          "matched_keyword": "Meta",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": ""
         }
       ],
       "total_mentions": 30,
-      "sentiment_score": 0.538,
+      "sentiment_score": 0.522,
       "daily": {
         "2026-04-22": {
           "mentions": 3,
@@ -3743,11 +3743,11 @@
           "sentiment_score": 0.4
         },
         "2026-04-16": {
-          "mentions": 1,
+          "mentions": 2,
           "bullish": 1,
           "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 0.7
+          "neutral": 1,
+          "sentiment_score": 0.6
         },
         "2026-04-04": {
           "mentions": 2,
@@ -3799,11 +3799,11 @@
           "sentiment_score": 1.0
         },
         "2026-03-25": {
-          "mentions": 5,
-          "bullish": 3,
+          "mentions": 4,
+          "bullish": 2,
           "bearish": 2,
           "neutral": 0,
-          "sentiment_score": 0.72
+          "sentiment_score": 0.65
         }
       }
     },
