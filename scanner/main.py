@@ -2283,8 +2283,21 @@ def _validate_gemini_stocks(
         resolved_name: str | None = None
 
         if code and code in CODE_TO_NAME:
-            resolved_code = code
-            resolved_name = CODE_TO_NAME[code]
+            canonical = CODE_TO_NAME[code]
+            code_keywords = {kw for kw, c in STOCK_DICT.items() if c == code}
+            if name == canonical or name in code_keywords:
+                # name 與代號一致 → 直接採用
+                resolved_code = code
+                resolved_name = canonical
+            else:
+                # 代號與名稱不符（Gemini 亂配代號）→ 改以 name 查找
+                if name in NAME_TO_CODE:
+                    resolved_code = NAME_TO_CODE[name]
+                    resolved_name = name
+                elif name in STOCK_DICT:
+                    resolved_code = STOCK_DICT[name]
+                    resolved_name = CODE_TO_NAME.get(resolved_code, name)
+                # 找不到 → resolved_code 維持 None，後面會拒絕
         elif name in NAME_TO_CODE:
             resolved_code = NAME_TO_CODE[name]
             resolved_name = name
