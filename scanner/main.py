@@ -3210,7 +3210,7 @@ def _build_podcast_mentions(
     """Pass 3: 用預先計算好的 sentiments 組出 mention list。"""
     mentions = []
     for h, (label, score) in zip(hits, sentiments):
-        mentions.append({
+        mention: dict = {
             "stock_code":      h["stock_code"],
             "stock_name":      h["stock_name"],
             "stock_market":    h.get("stock_market", "TW"),
@@ -3225,7 +3225,12 @@ def _build_podcast_mentions(
             "sentiment_score": score,
             "video_url":       v_entry.get("url", ""),
             "mention_count":   h.get("mention_count", 1),
-        })
+        }
+        if h.get("extraction_mode"):
+            mention["extraction_mode"] = h["extraction_mode"]
+        if h.get("whisper_corrected"):
+            mention["whisper_corrected"] = True
+        mentions.append(mention)
     return mentions
 
 # ─────────────────────────────────────────────────────────────────────────────
