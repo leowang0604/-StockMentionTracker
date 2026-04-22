@@ -2341,18 +2341,21 @@ def _validate_gemini_stocks(
             or (whisper_orig and whisper_orig in chunk_text)
         )
         # Whisper 錯字修正場景：Gemini 給了正確名稱但未填 whisper_original，
-        # 用 Levenshtein 在 chunk 中滑動視窗找相近的詞（長度相同 ±1，距離 ≤ 2）
-        if not name_appears and len(resolved_name) >= 3:
+        # 用 Levenshtein 在 chunk 中滑動視窗找相近的詞。
+        # 2 字名稱（如鴻海、欣興）：distance ≤ 1（嚴格，避免誤判）
+        # 3 字以上：distance ≤ 2
+        if not name_appears and len(resolved_name) >= 2:
             win = len(resolved_name)
+            max_dist = 1 if win == 2 else 2
             for start in range(len(chunk_text) - win + 1):
                 window = chunk_text[start:start + win]
-                if _levenshtein(resolved_name, window) <= 2:
+                if _levenshtein(resolved_name, window) <= max_dist:
                     name_appears = True
                     break
-                # 也試 win+1 視窗
-                if start + win + 1 <= len(chunk_text):
+                # 也試 win+1 視窗（僅 3 字以上，避免 2 字過度模糊）
+                if win >= 3 and start + win + 1 <= len(chunk_text):
                     window2 = chunk_text[start:start + win + 1]
-                    if _levenshtein(resolved_name, window2) <= 2:
+                    if _levenshtein(resolved_name, window2) <= max_dist:
                         name_appears = True
                         break
         if not name_appears:
