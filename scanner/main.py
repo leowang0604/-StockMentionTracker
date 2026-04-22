@@ -2819,8 +2819,11 @@ def _detect_youtube_video(
     hits_keyword = deduplicate_hits(recognize_stocks(text, video_ctx=video_ctx))
 
     # 軌道 B：Gemini LLM 抽取（只在有足夠文字且 extraction_mode 允許時啟動）
+    # title+description fallback 不送 Gemini：內容太短、無深度討論，不值得消耗 API 額度
     hits_gemini: list[dict] | None = None
-    if extraction_mode in ("gemini", "auto") and text and len(text) > 200:
+    if (extraction_mode in ("gemini", "auto")
+            and text and len(text) > 200
+            and analysis_source != "titleAndDescription"):
         hits_gemini = _gemini_extract_full_video(text, video_ctx)
         if hits_gemini is not None:
             mode_label = "gemini" if extraction_mode == "gemini" else "auto(gemini+keyword)"
@@ -3158,7 +3161,9 @@ def _detect_podcast_episode(
     hits_keyword = deduplicate_hits(recognize_stocks(text, video_ctx=video_ctx))
 
     hits_gemini: list[dict] | None = None
-    if extraction_mode in ("gemini", "auto") and text and len(text) > 200:
+    if (extraction_mode in ("gemini", "auto")
+            and text and len(text) > 200
+            and analysis_source != "titleAndDescription"):
         hits_gemini = _gemini_extract_full_video(text, video_ctx)
 
     hits        = _merge_extraction_results(hits_keyword, hits_gemini)
