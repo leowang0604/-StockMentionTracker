@@ -2281,6 +2281,7 @@ def _validate_gemini_stocks(
         # ── 解析代號 ────────────────────────────────────────────────────
         resolved_code: str | None = None
         resolved_name: str | None = None
+        lev_resolved  = False  # 是否透過 Levenshtein 模糊比對解析
 
         if code and code in CODE_TO_NAME:
             canonical = CODE_TO_NAME[code]
@@ -2317,6 +2318,7 @@ def _validate_gemini_stocks(
                 if best_code:
                     resolved_code = best_code
                     resolved_name = CODE_TO_NAME.get(best_code, name)
+                    lev_resolved  = True
 
         whisper_orig = (r.get("whisper_original") or "").strip()
 
@@ -2336,8 +2338,11 @@ def _validate_gemini_stocks(
 
         # ── 防幻覺：確認名稱確實出現在原文 ────────────────────────────
         stock_keywords = [kw for kw, c in STOCK_DICT.items() if c == resolved_code]
+        # Levenshtein 解析時，不能把 Gemini 的 name 當作出現證據
+        # （三星電機 ≠ 三洋電，兩者只是字形相近）
+        search_names = stock_keywords if lev_resolved else stock_keywords + [name]
         name_appears = (
-            any(kw in chunk_text for kw in stock_keywords + [name])
+            any(kw in chunk_text for kw in search_names)
             or (whisper_orig and whisper_orig in chunk_text)
         )
         # Whisper 錯字修正場景：Gemini 給了正確名稱但未填 whisper_original，
