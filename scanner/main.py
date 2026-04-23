@@ -1555,6 +1555,7 @@ CONTEXT_REQUIRED: dict[str, list[str]] = {
     # 5310 天剛：KEYWORD_PATTERN_OVERRIDE 已處理「昨天剛好」，不需 CONTEXT_REQUIRED
     "5903": ["5903", "全家便利", "FamilyMart"],  # 「全家」是日常用語（全家人、全家出遊）
     "3167": ["3167", "大量電子"],               # 「大量」是日常副詞（大量資金、大量買進）
+    "2455": ["2455", "全新科技"],               # 「全新」是日常形容詞（全新的產品、全新氣氛）
     # US tickers that conflict with common terms / abbreviations
     "O":   ["Realty", "REIT", "O股"],        # "O" alone matches any standalone O in Chinese text
     "LINE": ["Lineage", "LINE股", "不動產投資"], # LINE = 通訊軟體，需要區分
