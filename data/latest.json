@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-23T20:59:36",
+  "updated_at": "2026-04-23T21:10:00",
   "stocks_ranking": [
     {
       "code": "2330",
@@ -207,6 +207,18 @@
           "video_url": ""
         },
         {
+          "video": "EP414｜只有魔法才能打敗魔法",
+          "channel": "股市隱者",
+          "date": "2026-04-16",
+          "text": "台積電今天漲很多",
+          "matched_keyword": "台積電",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
           "video": "【理財達人秀】川普變驚嚇 低軌.封測.CPO壓不住？節後搶反彈 抄投信答案？波段配短線 PCB雙面賺？台積電設備 合約負債挖寶？｜李兆華、黃豐凱、陳唯泰、陳威良2026.04.02【電視完整版】",
           "channel": "東森財經",
           "date": "2026-04-02",
@@ -326,17 +338,6 @@
           "sentiment": "neutral",
           "sentiment_score": 0.5,
           "video_url": "https://www.youtube.com/watch?v=TdLj60MYAuM"
-        },
-        {
-          "video": "【理財達人秀】猛噴1451點 川普愚人節？台積電法說 四月送分題？今天不敢追 CPO.PCB還有機會？台股轉多缺一味 2條件安心買？｜李兆華、艾綸、王建文、朱家泓2026.04.01【網路獨播版】",
-          "channel": "東森財經",
-          "date": "2026-04-01",
-          "text": "【理財達人秀】猛噴1451點 川普愚人節？台積電法說 四月送分題？今天不敢追 CPO.PCB還有機會？台股轉多缺一味 2條件安心買？｜李兆華、艾綸、王建文、朱家泓2026.04.01【網路獨播版】 貼在你身編：台積電突破下降切線穩? 鴻海破底翻? #台股#美伊戰爭#記憶體#理財達人秀(00:00) 暴漲1451點危機解除?輝達再出手 ...",
-          "matched_keyword": "台積電",
-          "analysis_source": "titleAndDescription",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "https://www.youtube.com/watch?v=OMy0hmcUqP0"
         }
       ],
       "total_mentions": 30,
@@ -392,11 +393,11 @@
           "sentiment_score": 0.5
         },
         "2026-04-16": {
-          "mentions": 3,
+          "mentions": 4,
           "bullish": 1,
           "bearish": 0,
-          "neutral": 2,
-          "sentiment_score": 0.567
+          "neutral": 3,
+          "sentiment_score": 0.55
         },
         "2026-04-02": {
           "mentions": 8,
@@ -406,10 +407,10 @@
           "sentiment_score": 0.5
         },
         "2026-04-01": {
-          "mentions": 4,
+          "mentions": 3,
           "bullish": 0,
           "bearish": 0,
-          "neutral": 4,
+          "neutral": 3,
           "sentiment_score": 0.5
         }
       }
@@ -11126,10 +11127,23 @@
           "video_url": "",
           "extraction_mode": "gemini",
           "whisper_corrected": true
+        },
+        {
+          "video": "EP414｜只有魔法才能打敗魔法",
+          "channel": "股市隱者",
+          "date": "2026-04-16",
+          "text": "這個這個AI agent 它最主要它的一個攻擊點 像是在新英財",
+          "matched_keyword": "新英財",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini",
+          "whisper_corrected": true
         }
       ],
-      "total_mentions": 14,
-      "sentiment_score": 0.557,
+      "total_mentions": 15,
+      "sentiment_score": 0.553,
       "daily": {
         "2026-04-17": {
           "mentions": 2,
@@ -11153,10 +11167,10 @@
           "sentiment_score": 0.6
         },
         "2026-04-16": {
-          "mentions": 2,
+          "mentions": 3,
           "bullish": 0,
           "bearish": 0,
-          "neutral": 2,
+          "neutral": 3,
           "sentiment_score": 0.5
         },
         "2026-04-21": {
@@ -16506,6 +16520,129 @@
       }
     },
     {
+      "code": "3402",
+      "name": "漢科",
+      "market": "TW",
+      "sector": "油電燃氣",
+      "contexts": [
+        {
+          "video": "EP1077｜台股大跨步37000點！賣飛正常，如何重新買回來？台積法說若回檔，設備好機會？PCB、CPO強恆強，被動元件真漲價？ft.報價天王 林信富",
+          "channel": "兆華與股惑仔",
+          "date": "2026-04-15",
+          "text": "今天其實 漲跌互見 可是還是有很多人很強 什麼自貿還是漲停辦 2000了 哇 自貿我從他200看2000了",
+          "matched_keyword": "自貿",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
+        },
+        {
+          "video": "EP654 | 🌵",
+          "channel": "股癌",
+          "date": "2026-04-18",
+          "text": "歡迎收聽古癌為鄉木工本集節目由New Balance贊助 天氣開始變熱,知道大家都在看機票或是去戶外走 但在那之前要先把你的裝備給配置好 很多人出國旅遊喜歡穿設計前衛外型朝到天上的話題款 那種東西穿到像是短線題材裹 穿上去那一刻可能很爽,但",
+          "matched_keyword": "漢微課",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini",
+          "whisper_corrected": true
+        },
+        {
+          "video": "EP1083｜成交量近2兆！開盤漲千點怕買不到，盤中跌700點嚇爛？981A爆百萬張成交量，多頭沒變，找Q2業績起飛股？ft.統一投顧總經理 廖婉婷",
+          "channel": "兆華與股惑仔",
+          "date": "2026-04-23",
+          "text": "漢微課",
+          "matched_keyword": "漢微課",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini",
+          "whisper_corrected": true
+        },
+        {
+          "video": "EP1080｜美伊反覆、市場懶得理？台股125家漲停，櫃買全亞股最強！氣氛好找強勢股，氣氛轉差撿ETF，配置抓對就舒坦！ft.題材獵人 林漢偉",
+          "channel": "兆華與股惑仔",
+          "date": "2026-04-20",
+          "text": "漢微課",
+          "matched_keyword": "漢微課",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini",
+          "whisper_corrected": true
+        },
+        {
+          "video": "2026/04/22(三）聯準會新局，新主席怎麼看降息？馬斯克出手，買下AI編程工具！UNH財報後大漲",
+          "channel": "財女珍妮",
+          "date": "2026-04-22",
+          "text": "所以你看到了 漢微課 或者是像 像一些 像是</h2>",
+          "matched_keyword": "漢微課",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini",
+          "whisper_corrected": true
+        },
+        {
+          "video": "EP415｜ 股市反轉的三件事",
+          "channel": "股市隱者",
+          "date": "2026-04-20",
+          "text": "各位聽眾朋友大家好 歡迎收聽股市贏者 今天呢 我們的主題叫做 股市反轉的三件事 股市反轉的三件事 呃 其實呢 最近有一些嗎 或是蠻多 我們之前其實有在這個CMN有辦一些座堂會 然後跟朋友聊天的時候 也都有人問說 欸現在台股又創新高雷 你有沒",
+          "matched_keyword": "漢微課",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.45,
+          "video_url": "",
+          "extraction_mode": "gemini",
+          "whisper_corrected": true
+        }
+      ],
+      "total_mentions": 6,
+      "sentiment_score": 0.492,
+      "daily": {
+        "2026-04-15": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-04-18": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-04-23": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-04-20": {
+          "mentions": 2,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 2,
+          "sentiment_score": 0.475
+        },
+        "2026-04-22": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
       "code": "9911",
       "name": "櫻花",
       "market": "TW",
@@ -17865,116 +18002,6 @@
           "bearish": 1,
           "neutral": 0,
           "sentiment_score": 0.3
-        }
-      }
-    },
-    {
-      "code": "3402",
-      "name": "漢科",
-      "market": "TW",
-      "sector": "油電燃氣",
-      "contexts": [
-        {
-          "video": "EP1077｜台股大跨步37000點！賣飛正常，如何重新買回來？台積法說若回檔，設備好機會？PCB、CPO強恆強，被動元件真漲價？ft.報價天王 林信富",
-          "channel": "兆華與股惑仔",
-          "date": "2026-04-15",
-          "text": "今天其實 漲跌互見 可是還是有很多人很強 什麼自貿還是漲停辦 2000了 哇 自貿我從他200看2000了",
-          "matched_keyword": "自貿",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": ""
-        },
-        {
-          "video": "EP654 | 🌵",
-          "channel": "股癌",
-          "date": "2026-04-18",
-          "text": "歡迎收聽古癌為鄉木工本集節目由New Balance贊助 天氣開始變熱,知道大家都在看機票或是去戶外走 但在那之前要先把你的裝備給配置好 很多人出國旅遊喜歡穿設計前衛外型朝到天上的話題款 那種東西穿到像是短線題材裹 穿上去那一刻可能很爽,但",
-          "matched_keyword": "漢微課",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "gemini",
-          "whisper_corrected": true
-        },
-        {
-          "video": "EP1083｜成交量近2兆！開盤漲千點怕買不到，盤中跌700點嚇爛？981A爆百萬張成交量，多頭沒變，找Q2業績起飛股？ft.統一投顧總經理 廖婉婷",
-          "channel": "兆華與股惑仔",
-          "date": "2026-04-23",
-          "text": "漢微課",
-          "matched_keyword": "漢微課",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "gemini",
-          "whisper_corrected": true
-        },
-        {
-          "video": "EP1080｜美伊反覆、市場懶得理？台股125家漲停，櫃買全亞股最強！氣氛好找強勢股，氣氛轉差撿ETF，配置抓對就舒坦！ft.題材獵人 林漢偉",
-          "channel": "兆華與股惑仔",
-          "date": "2026-04-20",
-          "text": "漢微課",
-          "matched_keyword": "漢微課",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "gemini",
-          "whisper_corrected": true
-        },
-        {
-          "video": "2026/04/22(三）聯準會新局，新主席怎麼看降息？馬斯克出手，買下AI編程工具！UNH財報後大漲",
-          "channel": "財女珍妮",
-          "date": "2026-04-22",
-          "text": "所以你看到了 漢微課 或者是像 像一些 像是</h2>",
-          "matched_keyword": "漢微課",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "gemini",
-          "whisper_corrected": true
-        }
-      ],
-      "total_mentions": 5,
-      "sentiment_score": 0.5,
-      "daily": {
-        "2026-04-15": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-04-18": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-04-23": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-04-20": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-04-22": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
         }
       }
     },
@@ -20212,6 +20239,73 @@
       }
     },
     {
+      "code": "ASML",
+      "name": "ASML",
+      "market": "US",
+      "sector": "半導體設備",
+      "contexts": [
+        {
+          "video": "2026/04/07 (二）伊朗拒停火， 油價不漲了？博通、Google擴大合作",
+          "channel": "財女珍妮",
+          "date": "2026-04-07",
+          "text": "做什麼投資 我說沒股投資啊 還是說沒股投資 那你投什麼 我小心心想說 你也問太多了吧 我就說欸很多啊 譬如說灰達啊 或者是像Apple啊 或者是像 因為我想說他可能也不知道 台積電啊 或者是台灣一些ADR嘛 結果他就說 我就說那你有投資沒股嗎 他就說有啊 我就說那你投資什麼 他就說我投資TSMC跟 ASML 我就說哇 我幸運 你知道我在那當下呢 然後聽到 他有投資台積電 你知道是 多麼 雀躍的一件事情嗎 然後就說哇 我就說TSMC is the best 我就開始跟他講說 怎麼會他那麼厲害 然後 就是會選那麼好的公司 什麼什麼之類的 然後就後來覺得 好像有點太高威了 你知道嗎 然後就趕快 好大家 他就",
+          "matched_keyword": "ASML",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.9,
+          "video_url": ""
+        },
+        {
+          "video": "2026/04/16 (四）美股創新高 ，泡沫示警？ASML財報，Tesla AI5晶片設計定案",
+          "channel": "財女珍妮",
+          "date": "2026-04-16",
+          "text": "反映這一份財報的 那你會想說這一份財報不好嗎 對不對 我們先來介紹艾斯摩爾 這家公司好了 這家公司是全球唯一 可以做EUV曝光機 然後也有人說是光科機的廠商 像是台積電 三星 英特爾 先進製程 都必須要跟他買設備 也是半導體上 有最重要的設備廠之一 那另外設備廠 我們之前有寫過文章 或介紹過的 像是應用材料 柯林研發 柯雷 這些都是市場上面 非常Hunger 或者是現在 非常受到關注的 一些半導體設備股 那這一次艾斯摩爾 他第一季的營收 是達到了87.7億歐元 年增大概是13% 盡力是27.6億歐元 年增是17% 毛利率53% 是落在採測的高端的 全部都是打敗市場的預期 更重要的是 公司全年2026的",
+          "matched_keyword": "新英財",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
+        },
+        {
+          "video": "EP415｜ 股市反轉的三件事",
+          "channel": "股市隱者",
+          "date": "2026-04-20",
+          "text": "各位聽眾朋友大家好 歡迎收聽股市贏者 今天呢 我們的主題叫做 股市反轉的三件事 股市反轉的三件事 呃 其實呢 最近有一些嗎 或是蠻多 我們之前其實有在這個CMN有辦一些座堂會 然後跟朋友聊天的時候 也都有人問說 欸現在台股又創新高雷 你有沒",
+          "matched_keyword": "ASML",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        }
+      ],
+      "total_mentions": 3,
+      "sentiment_score": 0.633,
+      "daily": {
+        "2026-04-07": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.9
+        },
+        "2026-04-16": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-04-20": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
       "code": "8047",
       "name": "星雲",
       "market": "TW",
@@ -21258,54 +21352,6 @@
           "sentiment_score": 0.8
         },
         "2026-04-13": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        }
-      }
-    },
-    {
-      "code": "ASML",
-      "name": "ASML",
-      "market": "US",
-      "sector": "半導體設備",
-      "contexts": [
-        {
-          "video": "2026/04/07 (二）伊朗拒停火， 油價不漲了？博通、Google擴大合作",
-          "channel": "財女珍妮",
-          "date": "2026-04-07",
-          "text": "做什麼投資 我說沒股投資啊 還是說沒股投資 那你投什麼 我小心心想說 你也問太多了吧 我就說欸很多啊 譬如說灰達啊 或者是像Apple啊 或者是像 因為我想說他可能也不知道 台積電啊 或者是台灣一些ADR嘛 結果他就說 我就說那你有投資沒股嗎 他就說有啊 我就說那你投資什麼 他就說我投資TSMC跟 ASML 我就說哇 我幸運 你知道我在那當下呢 然後聽到 他有投資台積電 你知道是 多麼 雀躍的一件事情嗎 然後就說哇 我就說TSMC is the best 我就開始跟他講說 怎麼會他那麼厲害 然後 就是會選那麼好的公司 什麼什麼之類的 然後就後來覺得 好像有點太高威了 你知道嗎 然後就趕快 好大家 他就",
-          "matched_keyword": "ASML",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.9,
-          "video_url": ""
-        },
-        {
-          "video": "2026/04/16 (四）美股創新高 ，泡沫示警？ASML財報，Tesla AI5晶片設計定案",
-          "channel": "財女珍妮",
-          "date": "2026-04-16",
-          "text": "反映這一份財報的 那你會想說這一份財報不好嗎 對不對 我們先來介紹艾斯摩爾 這家公司好了 這家公司是全球唯一 可以做EUV曝光機 然後也有人說是光科機的廠商 像是台積電 三星 英特爾 先進製程 都必須要跟他買設備 也是半導體上 有最重要的設備廠之一 那另外設備廠 我們之前有寫過文章 或介紹過的 像是應用材料 柯林研發 柯雷 這些都是市場上面 非常Hunger 或者是現在 非常受到關注的 一些半導體設備股 那這一次艾斯摩爾 他第一季的營收 是達到了87.7億歐元 年增大概是13% 盡力是27.6億歐元 年增是17% 毛利率53% 是落在採測的高端的 全部都是打敗市場的預期 更重要的是 公司全年2026的",
-          "matched_keyword": "新英財",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": ""
-        }
-      ],
-      "total_mentions": 2,
-      "sentiment_score": 0.7,
-      "daily": {
-        "2026-04-07": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 0.9
-        },
-        "2026-04-16": {
           "mentions": 1,
           "bullish": 0,
           "bearish": 0,
@@ -29680,7 +29726,7 @@
     {
       "sector": "電子零組件",
       "market": "TW",
-      "total_mentions": 29,
+      "total_mentions": 30,
       "stock_codes": [
         "4749",
         "3264",
@@ -30090,6 +30136,14 @@
       ]
     },
     {
+      "sector": "油電燃氣",
+      "market": "TW",
+      "total_mentions": 6,
+      "stock_codes": [
+        "3402"
+      ]
+    },
+    {
       "sector": "網通IC",
       "market": "TW",
       "total_mentions": 6,
@@ -30117,6 +30171,17 @@
         "8454",
         "6689",
         "6811"
+      ]
+    },
+    {
+      "sector": "半導體設備",
+      "market": "US",
+      "total_mentions": 6,
+      "stock_codes": [
+        "ASML",
+        "AMAT",
+        "KLAC",
+        "LRCX"
       ]
     },
     {
@@ -30201,14 +30266,6 @@
       ]
     },
     {
-      "sector": "油電燃氣",
-      "market": "TW",
-      "total_mentions": 5,
-      "stock_codes": [
-        "3402"
-      ]
-    },
-    {
       "sector": "伺服器",
       "market": "US",
       "total_mentions": 5,
@@ -30216,17 +30273,6 @@
         "DELL",
         "SMCI",
         "HPQ"
-      ]
-    },
-    {
-      "sector": "半導體設備",
-      "market": "US",
-      "total_mentions": 5,
-      "stock_codes": [
-        "ASML",
-        "AMAT",
-        "KLAC",
-        "LRCX"
       ]
     },
     {
