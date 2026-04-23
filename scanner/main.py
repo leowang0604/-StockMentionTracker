@@ -2386,7 +2386,13 @@ def _validate_gemini_stocks(
             score = 0.5
 
         ctx = (r.get("context") or "").strip()
-        if not ctx:
+        # 驗證 Gemini 提供的 context 是否真的包含這支股票的關鍵字；
+        # 若沒有（Gemini 把別支股票的段落配過來），就丟掉改用原文定位。
+        ctx_has_keyword = (
+            any(kw in ctx for kw in stock_keywords + [name, resolved_name])
+            or (whisper_orig and whisper_orig in ctx)
+        )
+        if not ctx or not ctx_has_keyword:
             # Center context on the matched term rather than using chunk start
             search_term = None
             if whisper_orig and whisper_orig in chunk_text:
