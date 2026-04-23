@@ -2398,21 +2398,22 @@ def _validate_gemini_stocks(
             any(kw in ctx for kw in stock_keywords + [name, resolved_name])
             or (whisper_orig and whisper_orig in ctx)
         )
-        if not ctx or not ctx_has_keyword:
-            # Center context on the matched term rather than using chunk start
-            search_term = None
-            if whisper_orig and whisper_orig in chunk_text:
-                search_term = whisper_orig
-            else:
-                for kw in stock_keywords + [resolved_name]:
-                    if kw in chunk_text:
-                        search_term = kw
-                        break
+        # Always re-center context on matched term in full transcript for better window size
+        search_term = None
+        if whisper_orig and whisper_orig in chunk_text:
+            search_term = whisper_orig
+        else:
+            for kw in stock_keywords + [resolved_name]:
+                if kw in chunk_text:
+                    search_term = kw
+                    break
+        if not ctx or not ctx_has_keyword or (search_term and len(ctx) < 80):
+            # Use transcript-based context when Gemini's is missing, wrong, or too short
             if search_term:
                 kw_pos = chunk_text.find(search_term)
-                ctx = chunk_text[max(0, kw_pos - 100):kw_pos + len(search_term) + 100]
+                ctx = chunk_text[max(0, kw_pos - 150):kw_pos + len(search_term) + 150]
             else:
-                ctx = chunk_text[:120]
+                ctx = chunk_text[:200]
 
         validated.append({
             "stock_code":        resolved_code,
@@ -2487,7 +2488,7 @@ def _gemini_extract_full_video(
         "  \"market\": \"TW或US或null\",\n"
         "  \"sentiment\": \"bullish或bearish或neutral\",\n"
         "  \"score\": 0.7,\n"
-        "  \"context\": \"原文中最相關的一句話（限60字內）\",\n"
+        "  \"context\": \"原文中最相關的一句話（限150字內）\",\n"
         "  \"whisper_original\": \"若有修正填原始錯誤詞，否則null\"\n"
         "}]"
     )
