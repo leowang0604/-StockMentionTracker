@@ -1537,6 +1537,22 @@ def build_stock_dict(
 # strings to appear in the surrounding context to count as a real mention.
 # ─────────────────────────────────────────────────────────────────────────────
 
+# Words that Gemini must NOT claim are Whisper misrecognitions of stock names.
+# If whisper_original matches (case-insensitive), the entry is rejected entirely.
+WHISPER_ORIG_BLACKLIST: frozenset[str] = frozenset({
+    # 疾病／醫療
+    "SARS", "COVID", "AIDS", "MERS",
+    # 通用英文縮寫
+    "SaaS", "PaaS", "IaaS", "API", "IPO",
+    "ETF", "GDP", "CPI", "PMI", "Fed",
+    "AI", "ML", "IT", "CEO", "CFO",
+    # 一般中文詞（不可能是股票誤字）
+    "時間點", "高點", "低點", "買點", "賣點",
+    "重點", "焦點", "起點", "終點",
+    # 國家／地區
+    "美國", "中國", "台灣", "日本", "韓國",
+})
+
 CONTEXT_REQUIRED: dict[str, list[str]] = {
     "AI":   ["C3", "C3.ai"],        # avoid matching generic "AI" mentions not about C3.ai
     "APP":  ["AppLovin", "APP股"],  # "APP" in TW content = 應用程式, not AppLovin ticker
@@ -2322,6 +2338,20 @@ def _validate_gemini_stocks(
                     lev_resolved  = True
 
         whisper_orig = (r.get("whisper_original") or "").strip()
+
+        # 拒絕黑名單 whisper_original（疾病名、通用縮寫等不可能是股票誤字）
+        if whisper_orig and whisper_orig.upper() in {w.upper() for w in WHISPER_ORIG_BLACKLIST}:
+            _vctx = video_ctx or {}
+            _skip_log.append({
+                "keyword": whisper_orig,
+                "reason":  "blacklisted_whisper_original",
+                "detail":  f"whisper_original={whisper_orig!r} 在黑名單中，拒絕採用 Gemini 的 {name!r} 對應",
+                "video_id": _vctx.get("video_id", ""),
+                "channel":  _vctx.get("channel", ""),
+                "date":     _vctx.get("date", ""),
+                "title":    _vctx.get("title", ""),
+            })
+            continue
 
         if not resolved_code:
             print(f"  [gemini_extract] unknown stock: {name!r} → skipped", file=sys.stderr)
