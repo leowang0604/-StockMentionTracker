@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-24T18:29:53",
+  "updated_at": "2026-04-24T18:44:31",
   "stocks_ranking": [
     {
       "code": "INTC",
@@ -11179,10 +11179,23 @@
           "sentiment_score": 0.5,
           "video_url": "",
           "extraction_mode": "gemini"
+        },
+        {
+          "video": "EP219 | 台、美股重點一次說，瘋狗行情與8 吋晶圓代工漲價循環，力積電矽電容、信驊與CPU關係，Marvell技術重點",
+          "channel": "韭菜畢業班",
+          "date": "2026-04-22",
+          "text": "那這一次的話 Google跟muffel的目標是在 2027年前完成這個mpu的設計 然後並且啟動市場 那初步規劃是200萬顆的mpu 那再來就2027年的話 會有600萬顆tpu 做產量上面的互補 那這一個東西的話 他的整體的年齡化營收的話 那年化的營收化可以到15億 那也是成長相對快速的一環",
+          "matched_keyword": "muffel",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.8,
+          "video_url": "",
+          "extraction_mode": "gemini",
+          "whisper_corrected": true
         }
       ],
-      "total_mentions": 11,
-      "sentiment_score": 0.811,
+      "total_mentions": 12,
+      "sentiment_score": 0.81,
       "daily": {
         "2026-04-01": {
           "mentions": 2,
@@ -11206,11 +11219,11 @@
           "sentiment_score": 0.5
         },
         "2026-04-22": {
-          "mentions": 1,
-          "bullish": 0,
+          "mentions": 2,
+          "bullish": 1,
           "bearish": 0,
           "neutral": 1,
-          "sentiment_score": 0.5
+          "sentiment_score": 0.65
         }
       }
     },
@@ -26169,7 +26182,7 @@
     {
       "sector": "AI晶片",
       "market": "US",
-      "total_mentions": 64,
+      "total_mentions": 65,
       "stock_codes": [
         "NVDA",
         "AMD",
