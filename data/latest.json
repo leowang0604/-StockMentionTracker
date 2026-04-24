@@ -29428,38 +29428,6 @@
       }
     },
     {
-      "code": "SNOW",
-      "name": "Snowflake",
-      "market": "US",
-      "sector": "AI軟體",
-      "contexts": [
-        {
-          "video": "2026/04/23(四)特斯拉財報，狂砸250億擴張AI與機器人版圖，以及其他重點公司的財報！",
-          "channel": "財女珍妮",
-          "date": "2026-04-23",
-          "text": "他在盤後有公佈他的財報 其實他的財報表現也是還OK的 但是我覺得SARS股 或者是這種軟體股 其實有一點衰",
-          "matched_keyword": "SARS",
-          "analysis_source": "whisper",
-          "sentiment": "bearish",
-          "sentiment_score": 0.3,
-          "video_url": "",
-          "extraction_mode": "gemini",
-          "whisper_corrected": true
-        }
-      ],
-      "total_mentions": 1,
-      "sentiment_score": 0.3,
-      "daily": {
-        "2026-04-23": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 1,
-          "neutral": 0,
-          "sentiment_score": 0.3
-        }
-      }
-    },
-    {
       "code": "VRT",
       "name": "Vertiv",
       "market": "US",
