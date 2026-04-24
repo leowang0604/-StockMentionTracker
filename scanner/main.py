@@ -2303,7 +2303,14 @@ def _validate_gemini_stocks(
         resolved_name: str | None = None
         lev_resolved  = False  # 是否透過 Levenshtein 模糊比對解析
 
-        if code and code in CODE_TO_NAME:
+        # 優先：若 whisper_original 本身已是 STOCK_DICT 的已知誤字對應
+        # 人工維護的 ALIASES 優先於 Gemini 的 name 猜測
+        whisper_orig = (r.get("whisper_original") or "").strip()
+        if whisper_orig and whisper_orig in STOCK_DICT:
+            resolved_code = STOCK_DICT[whisper_orig]
+            resolved_name = CODE_TO_NAME.get(resolved_code, whisper_orig)
+
+        if not resolved_code and code and code in CODE_TO_NAME:
             canonical = CODE_TO_NAME[code]
             code_keywords = {kw for kw, c in STOCK_DICT.items() if c == code}
             if name == canonical or name in code_keywords:
@@ -2339,8 +2346,6 @@ def _validate_gemini_stocks(
                     resolved_code = best_code
                     resolved_name = CODE_TO_NAME.get(best_code, name)
                     lev_resolved  = True
-
-        whisper_orig = (r.get("whisper_original") or "").strip()
 
         # 拒絕黑名單 whisper_original（疾病名、通用縮寫等不可能是股票誤字）
         if whisper_orig and whisper_orig.upper() in {w.upper() for w in WHISPER_ORIG_BLACKLIST}:
