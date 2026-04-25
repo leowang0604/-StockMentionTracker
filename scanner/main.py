@@ -262,8 +262,31 @@ def _load_learned_aliases() -> dict[str, str]:
     return {}
 
 
-def _save_learned_alias(wrong_keyword: str, correct_code: str) -> None:
-    """Persist a Gemini-confirmed Whisper correction and update runtime dicts."""
+def _save_learned_alias(wrong_keyword: str, correct_code: str, correct_name: str | None = None) -> None:
+    """Persist a Gemini-confirmed Whisper correction and update runtime dicts.
+
+    存入條件（全部符合才存）：
+    1. correct_code 在 CODE_TO_NAME 裡（確認是真實股票代號）
+    2. CODE_TO_NAME[correct_code] == correct_name（代號和名稱一致，防止 Gemini 亂配）
+    3. wrong_keyword 不在 STOCK_DICT（不覆蓋正式關鍵字）
+    不符合任何一條 → 拒絕存入，寫 skip_log。
+    """
+    # Condition 1: correct_code must be a known stock
+    if correct_code not in CODE_TO_NAME:
+        _skip_log.append({"keyword": wrong_keyword, "reason": "auto_learn_rejected",
+                          "detail": f"代號 {correct_code} 不在 CODE_TO_NAME"})
+        return
+    # Condition 2: code and name must match
+    if correct_name and CODE_TO_NAME.get(correct_code) != correct_name:
+        _skip_log.append({"keyword": wrong_keyword, "reason": "auto_learn_rejected",
+                          "detail": f"代號/名稱不符: {correct_code} → {CODE_TO_NAME.get(correct_code)!r} ≠ {correct_name!r}"})
+        return
+    # Condition 3: must not override an existing official keyword
+    if wrong_keyword in STOCK_DICT:
+        _skip_log.append({"keyword": wrong_keyword, "reason": "auto_learn_rejected",
+                          "detail": f"「{wrong_keyword}」已是正式關鍵字 → {STOCK_DICT[wrong_keyword]}，拒絕覆蓋"})
+        return
+
     learned = _load_learned_aliases()
     if learned.get(wrong_keyword) == correct_code:
         return  # already saved
@@ -2380,9 +2403,13 @@ def _validate_gemini_stocks(
         # Levenshtein 解析時，不能把 Gemini 的 name 當作出現證據
         # （三星電機 ≠ 三洋電，兩者只是字形相近）
         search_names = stock_keywords if lev_resolved else stock_keywords + [name]
+        # Gemini 有時回傳帶 -KY 後綴的 whisper_original（如「淮宇-KY」），
+        # 但 Whisper 逐字稿裡只有不帶後綴的版本（如「淮宇」）→ 也要嘗試去掉後綴
+        whisper_orig_bare = re.sub(r'[-－]KY$', '', whisper_orig, flags=re.IGNORECASE).strip()
         name_appears = (
             any(kw in chunk_text for kw in search_names)
             or (whisper_orig and whisper_orig in chunk_text)
+            or (whisper_orig_bare and whisper_orig_bare != whisper_orig and whisper_orig_bare in chunk_text)
         )
         # Whisper 錯字修正場景：Gemini 給了正確名稱但未填 whisper_original，
         # 用 Levenshtein 在 chunk 中滑動視窗找相近的詞。
@@ -2435,11 +2462,14 @@ def _validate_gemini_stocks(
         ctx_has_keyword = (
             any(kw in ctx for kw in stock_keywords + [name, resolved_name])
             or (whisper_orig and whisper_orig in ctx)
+            or (whisper_orig_bare and whisper_orig_bare != whisper_orig and whisper_orig_bare in ctx)
         )
         # Always re-center context on matched term in full transcript for better window size
         search_term = None
         if whisper_orig and whisper_orig in chunk_text:
             search_term = whisper_orig
+        elif whisper_orig_bare and whisper_orig_bare != whisper_orig and whisper_orig_bare in chunk_text:
+            search_term = whisper_orig_bare
         else:
             for kw in stock_keywords + [resolved_name]:
                 if kw in chunk_text:
@@ -3061,7 +3091,7 @@ def _batch_filter_ambiguous_hits(detected: list[tuple], history: dict | None = N
                 kw_is_own_code = (h["matched_keyword"] == h["stock_code"])
                 if corrected_code and corrected_code != h["stock_code"] and corrected_code in CODE_TO_NAME and not kw_is_own_code:
                     keyword = h["matched_keyword"]
-                    _save_learned_alias(keyword, corrected_code)
+                    _save_learned_alias(keyword, corrected_code, corrected_name)
                     new_h = dict(h)
                     new_h["stock_code"]   = corrected_code
                     new_h["stock_name"]   = corrected_name or CODE_TO_NAME.get(corrected_code, corrected_code)
