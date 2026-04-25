@@ -1725,8 +1725,9 @@ def recognize_stocks(text: str, video_ctx: dict | None = None) -> list[dict]:
                 continue
             seen.setdefault(code, []).append(pos)
 
-            start = max(0, pos - CONTEXT_CHARS)
-            end   = min(len(text), pos + len(keyword) + CONTEXT_CHARS)
+            # 關鍵字放在窗口前 1/3：前留 100 字、後留 200 字，確保關鍵字一定出現在 context 裡
+            start = max(0, pos - 100)
+            end   = min(len(text), pos + len(keyword) + 200)
             ctx   = text[start:end].replace("\n", " ").strip()
 
             # Validate ambiguous tickers: require specific co-occurrence in context
@@ -2196,6 +2197,28 @@ def _levenshtein(a: str, b: str) -> int:
     return prev[lb]
 
 
+def _find_keyword_pos(needle: str, haystack: str) -> int:
+    """在 haystack 中找 needle 的位置，支援 臺/台 正規化及 Levenshtein ≤ 1 模糊比對。
+    回傳在原始 haystack 中的位置，找不到則回傳 -1。"""
+    # 1. 完全比對
+    pos = haystack.find(needle)
+    if pos >= 0:
+        return pos
+    # 2. 臺/台 正規化（Whisper 常混用繁/簡體「臺」「台」）
+    norm_needle = needle.replace('臺', '台')
+    if norm_needle != needle:
+        pos = haystack.replace('臺', '台').find(norm_needle)
+        if pos >= 0:
+            return pos
+    # 3. Levenshtein ≤ 1 滑動視窗（限 ≥ 2 字的 needle）
+    win = len(needle)
+    if win >= 2:
+        for start in range(len(haystack) - win + 1):
+            if _levenshtein(needle, haystack[start:start + win]) <= 1:
+                return start
+    return -1
+
+
 def _is_ambiguous_hit(hit: dict) -> bool:
     """判斷這個 hit 是否需要 Gemini 驗證（短詞可能誤匹配子字串）"""
     # Already handled by CONTEXT_REQUIRED fast-path in recognize_stocks()
@@ -2464,22 +2487,23 @@ def _validate_gemini_stocks(
             or (whisper_orig and whisper_orig in ctx)
             or (whisper_orig_bare and whisper_orig_bare != whisper_orig and whisper_orig_bare in ctx)
         )
-        # Always re-center context on matched term in full transcript for better window size
+        # Always re-center context on matched term in full transcript for better window size.
+        # Use _find_keyword_pos for 臺/台 normalization + Levenshtein ≤ 1 fuzzy fallback.
         search_term = None
-        if whisper_orig and whisper_orig in chunk_text:
-            search_term = whisper_orig
-        elif whisper_orig_bare and whisper_orig_bare != whisper_orig and whisper_orig_bare in chunk_text:
-            search_term = whisper_orig_bare
-        else:
-            for kw in stock_keywords + [resolved_name]:
-                if kw in chunk_text:
-                    search_term = kw
-                    break
-        if not ctx or not ctx_has_keyword or (search_term and len(ctx) < 80):
+        search_pos  = -1
+        for candidate in (
+            [whisper_orig] if whisper_orig else []
+        ) + (
+            [whisper_orig_bare] if whisper_orig_bare and whisper_orig_bare != whisper_orig else []
+        ) + stock_keywords + [resolved_name]:
+            p = _find_keyword_pos(candidate, chunk_text)
+            if p >= 0:
+                search_term, search_pos = candidate, p
+                break
+        if not ctx or not ctx_has_keyword or (search_pos >= 0 and len(ctx) < 80):
             # Use transcript-based context when Gemini's is missing, wrong, or too short
-            if search_term:
-                kw_pos = chunk_text.find(search_term)
-                ctx = chunk_text[max(0, kw_pos - 150):kw_pos + len(search_term) + 150]
+            if search_pos >= 0:
+                ctx = chunk_text[max(0, search_pos - 100):search_pos + len(search_term) + 200]
             else:
                 ctx = chunk_text[:200]
 
