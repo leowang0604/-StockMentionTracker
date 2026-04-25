@@ -178,15 +178,19 @@ struct MentionContext: Codable, Identifiable {
     let analysisSource: String?
     let sentiment: String?
     let videoURL: String?
+    let extractionMode: String?   // "keyword" | "gemini"
+    let whisperCorrected: Bool?
 
     var id: String { "\(date)_\(video.prefix(20))_\(text.prefix(10))" }
 
     enum CodingKeys: String, CodingKey {
         case video, channel, date, text
-        case matchedKeyword = "matched_keyword"
-        case analysisSource = "analysis_source"
+        case matchedKeyword   = "matched_keyword"
+        case analysisSource   = "analysis_source"
         case sentiment
-        case videoURL = "video_url"
+        case videoURL         = "video_url"
+        case extractionMode   = "extraction_mode"
+        case whisperCorrected = "whisper_corrected"
     }
 
     var parsedDate: Date? {

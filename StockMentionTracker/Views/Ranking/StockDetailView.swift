@@ -304,6 +304,33 @@ struct ContextRowView: View {
                     .lineLimit(isExpanded ? nil : 1)
             }
 
+            // Extraction badges (AI 擷取 / 已修正)
+            let showGeminiBadge   = context.extractionMode == "gemini"
+            let showCorrectedBadge = context.whisperCorrected == true
+            if showGeminiBadge || showCorrectedBadge {
+                HStack(spacing: 6) {
+                    if showGeminiBadge {
+                        Text("AI 擷取")
+                            .font(.caption2.bold())
+                            .padding(.horizontal, 6).padding(.vertical, 2)
+                            .background(.blue.opacity(0.12), in: Capsule())
+                            .foregroundStyle(.blue)
+                    }
+                    if showCorrectedBadge {
+                        Text("已修正")
+                            .font(.caption2.bold())
+                            .padding(.horizontal, 6).padding(.vertical, 2)
+                            .background(.orange.opacity(0.12), in: Capsule())
+                            .foregroundStyle(.orange)
+                    }
+                    if showCorrectedBadge, let kw = context.matchedKeyword, !kw.isEmpty {
+                        Text("原文：\(kw)")
+                            .font(.caption2)
+                            .foregroundStyle(.secondary)
+                    }
+                }
+            }
+
             // Context text (expandable)
             if !context.text.isEmpty {
                 Button(action: onToggle) {

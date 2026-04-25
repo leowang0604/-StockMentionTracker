@@ -76,9 +76,11 @@ struct ChannelManagementView: View {
                     .padding()
             } else {
                 ForEach(sourcesConfig.sources) { channel in
-                    ChannelRowView(channel: channel) { active in
-                        toggleActive(channel: channel, active: active)
-                    }
+                    ChannelRowView(
+                        channel: channel,
+                        onToggle: { active in toggleActive(channel: channel, active: active) },
+                        onExtractionModeChange: { mode in setExtractionMode(channel: channel, mode: mode) }
+                    )
                     .swipeActions(edge: .trailing, allowsFullSwipe: false) {
                         Button(role: .destructive) {
                             channelToDelete = channel
@@ -216,6 +218,13 @@ struct ChannelManagementView: View {
             Task { await saveChannels() }
         }
     }
+
+    private func setExtractionMode(channel: ChannelSource, mode: String?) {
+        if let idx = sourcesConfig.sources.firstIndex(where: { $0.id == channel.id }) {
+            sourcesConfig.sources[idx].extractionMode = mode
+            Task { await saveChannels() }
+        }
+    }
 }
 
 // MARK: - Channel Row View
@@ -223,13 +232,19 @@ struct ChannelManagementView: View {
 struct ChannelRowView: View {
     let channel: ChannelSource
     let onToggle: (Bool) -> Void
+    let onExtractionModeChange: (String?) -> Void
 
     @State private var isActive: Bool
+    @State private var extractionMode: String?
 
-    init(channel: ChannelSource, onToggle: @escaping (Bool) -> Void) {
+    init(channel: ChannelSource,
+         onToggle: @escaping (Bool) -> Void,
+         onExtractionModeChange: @escaping (String?) -> Void) {
         self.channel = channel
         self.onToggle = onToggle
+        self.onExtractionModeChange = onExtractionModeChange
         self._isActive = State(initialValue: channel.active)
+        self._extractionMode = State(initialValue: channel.extractionMode)
     }
 
     var body: some View {
@@ -266,6 +281,41 @@ struct ChannelRowView: View {
 
                 Spacer()
 
+                // Extraction mode menu
+                Menu {
+                    Button {
+                        extractionMode = nil
+                        onExtractionModeChange(nil)
+                    } label: {
+                        Label("全域預設", systemImage: extractionMode == nil ? "checkmark" : "")
+                    }
+                    Button {
+                        extractionMode = "keyword"
+                        onExtractionModeChange("keyword")
+                    } label: {
+                        Label("僅關鍵字", systemImage: extractionMode == "keyword" ? "checkmark" : "")
+                    }
+                    Button {
+                        extractionMode = "auto"
+                        onExtractionModeChange("auto")
+                    } label: {
+                        Label("關鍵字 + AI", systemImage: extractionMode == "auto" ? "checkmark" : "")
+                    }
+                    Button {
+                        extractionMode = "gemini"
+                        onExtractionModeChange("gemini")
+                    } label: {
+                        Label("僅 AI", systemImage: extractionMode == "gemini" ? "checkmark" : "")
+                    }
+                } label: {
+                    Text(extractionModeLabel)
+                        .font(.caption2)
+                        .padding(.horizontal, 6).padding(.vertical, 3)
+                        .background(extractionModeColor.opacity(0.12), in: Capsule())
+                        .foregroundStyle(extractionModeColor)
+                }
+                .buttonStyle(.plain)
+
                 Toggle("", isOn: $isActive)
                     .labelsHidden()
                     .onChange(of: isActive) { _, newValue in
@@ -274,6 +324,23 @@ struct ChannelRowView: View {
             }
             .padding(.vertical, 4)
             .opacity(isActive ? 1.0 : 0.6)
+        }
+    }
+
+    private var extractionModeLabel: String {
+        switch extractionMode {
+        case "keyword": return "關鍵字"
+        case "auto":    return "關鍵字+AI"
+        case "gemini":  return "僅AI"
+        default:        return "預設"
+        }
+    }
+
+    private var extractionModeColor: Color {
+        switch extractionMode {
+        case "auto":   return .purple
+        case "gemini": return .blue
+        default:       return .secondary
         }
     }
 

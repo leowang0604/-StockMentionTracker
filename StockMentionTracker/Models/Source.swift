@@ -8,9 +8,15 @@ struct ChannelSource: Codable, Identifiable {
     let type: String       // "youtube"
     let identifier: String // YouTube Channel ID
     var active: Bool
+    var extractionMode: String?  // "keyword" | "auto" | "gemini"; nil = use global
 
     var sourceType: SourceType {
         SourceType(rawValue: type) ?? .youtube
+    }
+
+    enum CodingKeys: String, CodingKey {
+        case id, name, type, identifier, active
+        case extractionMode = "extraction_mode"
     }
 }
 
@@ -33,7 +39,7 @@ enum SourceType: String, Codable, CaseIterable {
         switch self {
         case .youtube: return "play.rectangle.fill"
         case .applePodcast: return "mic.fill"
-        case .spotify: return "music.note"
+        case .spotify: return "music.note"#imageLiteral(resourceName: "simulator_screenshot_9596E691-478D-47CD-982C-0F5180B8D1A8.png")
         }
     }
 }
@@ -42,4 +48,10 @@ enum SourceType: String, Codable, CaseIterable {
 
 struct SourcesConfig: Codable {
     var sources: [ChannelSource]
+    var globalExtractionMode: String?  // "keyword" | "auto" | "gemini"
+
+    enum CodingKeys: String, CodingKey {
+        case sources
+        case globalExtractionMode = "global_extraction_mode"
+    }
 }

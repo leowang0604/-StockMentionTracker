@@ -8,12 +8,15 @@ struct SettingsView: View {
     @State private var githubRepoInput = ""
     @State private var githubPATInput = ""
     @State private var showingClearAlert = false
+    @State private var sourcesConfig: SourcesConfig = SourcesConfig(sources: [], globalExtractionMode: nil)
+    @State private var currentSHA: String = ""
 
     var body: some View {
         NavigationStack {
             Form {
                 dataURLSection
                 githubSection
+                extractionModeSection
                 etfFilterSection
                 dataInfoSection
                 dangerZoneSection
@@ -23,8 +26,39 @@ struct SettingsView: View {
                 dataURLInput = appState.dataURL
                 githubRepoInput = appState.githubRepo
                 githubPATInput = appState.githubPAT
+                if appState.hasGitHubConfig {
+                    Task { await loadGlobalExtractionMode() }
+                }
             }
         }
+    }
+
+    private func loadGlobalExtractionMode() async {
+        guard appState.hasGitHubConfig else { return }
+        do {
+            let (config, sha) = try await GitHubService.shared.fetchSources(
+                repo: appState.githubRepo, pat: appState.githubPAT
+            )
+            sourcesConfig = config
+            currentSHA = sha
+        } catch {}
+    }
+
+    private func saveGlobalExtractionMode(_ mode: String?) async {
+        guard appState.hasGitHubConfig, !currentSHA.isEmpty else { return }
+        sourcesConfig.globalExtractionMode = mode
+        do {
+            try await GitHubService.shared.saveSources(
+                config: sourcesConfig,
+                repo: appState.githubRepo,
+                pat: appState.githubPAT,
+                sha: currentSHA
+            )
+            let (_, sha) = try await GitHubService.shared.fetchSources(
+                repo: appState.githubRepo, pat: appState.githubPAT
+            )
+            currentSHA = sha
+        } catch {}
     }
 
     // MARK: - Data URL Section
@@ -102,6 +136,29 @@ struct SettingsView: View {
         } footer: {
             Text("需要有 repo 寫入權限的 PAT，用於在「頻道管理」頁面新增/刪除掃描頻道。")
         }
+    }
+
+    // MARK: - Extraction Mode Section
+
+    private var extractionModeSection: some View {
+        Section {
+            Picker("全域偵測模式", selection: Binding(
+                get: { sourcesConfig.globalExtractionMode ?? "keyword" },
+                set: { newMode in
+                    let mode: String? = newMode == "keyword" ? nil : newMode
+                    Task { await saveGlobalExtractionMode(mode) }
+                }
+            )) {
+                Text("僅關鍵字").tag("keyword")
+                Text("關鍵字 + AI").tag("auto")
+                Text("僅 AI").tag("gemini")
+            }
+        } header: {
+            Text("股票偵測模式")
+        } footer: {
+            Text("「關鍵字 + AI」可偵測更多冷門股及修正 Whisper 錯字，但會消耗 Gemini API 額度。")
+        }
+        .disabled(!appState.hasGitHubConfig)
     }
 
     // MARK: - ETF Filter Section
