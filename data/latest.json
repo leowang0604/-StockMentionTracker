@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-25T18:20:41",
+  "updated_at": "2026-04-25T18:35:35",
   "stocks_ranking": [
     {
       "code": "INTC",
@@ -6986,10 +6986,22 @@
           "sentiment_score": 1.0,
           "video_url": "",
           "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP219 | 台、美股重點一次說，瘋狗行情與8 吋晶圓代工漲價循環，力積電矽電容、信驊與CPU關係，Marvell技術重點",
+          "channel": "韭菜畢業班",
+          "date": "2026-04-22",
+          "text": "上來是從大概50幾塊漲到 現在已經80塊又來到一個前高 我覺得相對應來說 我覺得主要的話題 我們可以先去看就是在這個 8吋的這個晶圓代工的這個市場 首先我們先注意到前面的故事 首先前面的故事是說 像是三星以及台積電 現在都是逐步淘汰一些 8吋的成熟製程的一個產線 等於是我們可以看到另外一家公司 大家有興趣的話 可以去查一下db-hi-tech 這一家公司的話是專注在 8吋的bcd特殊製程的一家公司 所以等於是加入這些產能下面的排擠 那就有可能會有這樣子的一個受惠者 它去做出接單的動作 bcd特殊製程的話 我們可以把它想像成 它就等於是做一些電源管理IC 功率元件 然後顯示驅動IC的這類 電源相關的",
+          "matched_keyword": "三星",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
         }
       ],
-      "total_mentions": 23,
-      "sentiment_score": 0.6,
+      "total_mentions": 24,
+      "sentiment_score": 0.596,
       "daily": {
         "2026-04-01": {
           "mentions": 1,
@@ -7076,11 +7088,11 @@
           "sentiment_score": 0.5
         },
         "2026-04-22": {
-          "mentions": 1,
+          "mentions": 2,
           "bullish": 1,
           "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 1.0
+          "neutral": 1,
+          "sentiment_score": 0.75
         }
       }
     },
@@ -15112,10 +15124,23 @@
           "video_url": "",
           "extraction_mode": "gemini",
           "whisper_corrected": true
+        },
+        {
+          "video": "EP218 | 台、美股重點一次說，IG回來啦！台積電法說會精華，台廠CCL產能與 愛普3D堆疊技術重點",
+          "channel": "韭菜畢業班",
+          "date": "2026-04-19",
+          "text": "哈囉,大家好,我是叔叔,這位韭菜畢業班 如果還沒追蹤我們節目的朋友的話 可以點擊一下上角 追蹤就可以在第一時間收到我們節目的官方通知 那本集節目由Binus必安官方贊助播出 那必安的話是全世界最大的加密貨幣的交易所 已經超過了3億的用戶 所以無論是市場上面的深度 產品線的完整度 易或是交易工具的多樣性 都在業界是具有領先的地位 所以如果你是想要做定期定額 或是線或交易 或是更進階的工具做一些資產上",
+          "matched_keyword": "新英財",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini",
+          "whisper_corrected": true
         }
       ],
-      "total_mentions": 5,
-      "sentiment_score": 0.54,
+      "total_mentions": 6,
+      "sentiment_score": 0.533,
       "daily": {
         "2026-04-15": {
           "mentions": 1,
@@ -15132,6 +15157,136 @@
           "sentiment_score": 0.5
         },
         "2026-04-18": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-04-19": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
+      "code": "3402",
+      "name": "漢科",
+      "market": "TW",
+      "sector": "油電燃氣",
+      "contexts": [
+        {
+          "video": "EP1077｜台股大跨步37000點！賣飛正常，如何重新買回來？台積法說若回檔，設備好機會？PCB、CPO強恆強，被動元件真漲價？ft.報價天王 林信富",
+          "channel": "兆華與股惑仔",
+          "date": "2026-04-15",
+          "text": "今天其實 漲跌互見 可是還是有很多人很強 什麼自貿還是漲停辦 2000了 哇 自貿我從他200看2000了",
+          "matched_keyword": "自貿",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
+        },
+        {
+          "video": "EP655 | 🐯",
+          "channel": "股癌",
+          "date": "2026-04-22",
+          "text": "漢微課",
+          "matched_keyword": "漢微課",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini",
+          "whisper_corrected": true
+        },
+        {
+          "video": "EP654 | 🌵",
+          "channel": "股癌",
+          "date": "2026-04-18",
+          "text": "歡迎收聽古癌為鄉木工本集節目由New Balance贊助 天氣開始變熱,知道大家都在看機票或是去戶外走 但在那之前要先把你的裝備給配置好 很多人出國旅遊喜歡穿設計前衛外型朝到天上的話題款 那種東西穿到像是短線題材裹 穿上去那一刻可能很爽,但走不到半天 腳底板就告訴你這筆交易爛透了 出門穿搭就像是要找旅辦 旅辦必須要找有潛力的長期標的 那我也說New Balance這套就像是那種優質資產 陪你日走三",
+          "matched_keyword": "漢微課",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini",
+          "whisper_corrected": true
+        },
+        {
+          "video": "EP1082｜台股不會跌的病又來了？摸到3萬8！主動式ETF變成資金永動機？選強恆強的PCB、CPO，還是回檔過的記憶體、低軌？ft.型男股神 陳威良",
+          "channel": "兆華與股惑仔",
+          "date": "2026-04-22",
+          "text": "然後因為 他之前漢微課 我們也有聊過",
+          "matched_keyword": "漢微課",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini",
+          "whisper_corrected": true
+        },
+        {
+          "video": "EP656 | 🍇",
+          "channel": "股癌",
+          "date": "2026-04-25",
+          "text": "Sunfish 那像它算是正式的 在一般的消費者 或是投資人的面前看到 就是沒有去挖消息的 可能就有現在才第一次 知道這些東西 那8T跟8i代表的東西 是Zebra Fish跟Sunfish 就是從聯發科 然後跟從Broadcom這邊去做設計的 那只是像我自己 也有一點點的小miss 就是我本來一直以為說 Training是Avago 是Broadcom去做的 那Inference才是Anti-K 後來發現我們身邊 蠻多朋友的認知 都跟我是一樣的 然後後來才知道說 原來Training是MediaTec 那當然我們需要知道的事情 就是那到底Training跟Inference 它的占比是多少 那目",
+          "matched_keyword": "漢微課",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini",
+          "whisper_corrected": true
+        },
+        {
+          "video": "EP218 | 台、美股重點一次說，IG回來啦！台積電法說會精華，台廠CCL產能與 愛普3D堆疊技術重點",
+          "channel": "韭菜畢業班",
+          "date": "2026-04-19",
+          "text": "有一半的加速 其實是有下跌的 所以等於是 就算今天你的個股 假如有下跌的話 也不要太過氣餒 就等於是還是有人的東西 它是往下去摔的 我們看到近期比較多往下去摔的 有點像是記憶體那一塊 就等於是旺鴻 南亞科 華邦電等等的 就之前的一些熱門股 反而就會進入到一個 我們講正當的休息 但是這個也是在我們早期的時候 我跟各位講過 就是比較熱門的一個族群 或者說已經漲價漲了 很多天的這種族群的話 大家就是要自己去注意一下 那個時候 回測回來就會比較兇猛一點 那再來我們可以看到 近期最多人去討論 或者說看到的一些族群 第一個一定就是一些IMP 神話家的族群 或者說玻璃纖維部的族群 或是一些IC Decide 其",
+          "matched_keyword": "漢微課",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini",
+          "whisper_corrected": true
+        }
+      ],
+      "total_mentions": 6,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-04-15": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-04-22": {
+          "mentions": 2,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 2,
+          "sentiment_score": 0.5
+        },
+        "2026-04-18": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-04-25": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-04-19": {
           "mentions": 1,
           "bullish": 0,
           "bearish": 0,
@@ -16909,109 +17064,6 @@
           "bullish": 0,
           "bearish": 0,
           "neutral": 3,
-          "sentiment_score": 0.5
-        },
-        "2026-04-25": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        }
-      }
-    },
-    {
-      "code": "3402",
-      "name": "漢科",
-      "market": "TW",
-      "sector": "油電燃氣",
-      "contexts": [
-        {
-          "video": "EP1077｜台股大跨步37000點！賣飛正常，如何重新買回來？台積法說若回檔，設備好機會？PCB、CPO強恆強，被動元件真漲價？ft.報價天王 林信富",
-          "channel": "兆華與股惑仔",
-          "date": "2026-04-15",
-          "text": "今天其實 漲跌互見 可是還是有很多人很強 什麼自貿還是漲停辦 2000了 哇 自貿我從他200看2000了",
-          "matched_keyword": "自貿",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": ""
-        },
-        {
-          "video": "EP655 | 🐯",
-          "channel": "股癌",
-          "date": "2026-04-22",
-          "text": "漢微課",
-          "matched_keyword": "漢微課",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "gemini",
-          "whisper_corrected": true
-        },
-        {
-          "video": "EP654 | 🌵",
-          "channel": "股癌",
-          "date": "2026-04-18",
-          "text": "歡迎收聽古癌為鄉木工本集節目由New Balance贊助 天氣開始變熱,知道大家都在看機票或是去戶外走 但在那之前要先把你的裝備給配置好 很多人出國旅遊喜歡穿設計前衛外型朝到天上的話題款 那種東西穿到像是短線題材裹 穿上去那一刻可能很爽,但走不到半天 腳底板就告訴你這筆交易爛透了 出門穿搭就像是要找旅辦 旅辦必須要找有潛力的長期標的 那我也說New Balance這套就像是那種優質資產 陪你日走三",
-          "matched_keyword": "漢微課",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "gemini",
-          "whisper_corrected": true
-        },
-        {
-          "video": "EP1082｜台股不會跌的病又來了？摸到3萬8！主動式ETF變成資金永動機？選強恆強的PCB、CPO，還是回檔過的記憶體、低軌？ft.型男股神 陳威良",
-          "channel": "兆華與股惑仔",
-          "date": "2026-04-22",
-          "text": "然後因為 他之前漢微課 我們也有聊過",
-          "matched_keyword": "漢微課",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "gemini",
-          "whisper_corrected": true
-        },
-        {
-          "video": "EP656 | 🍇",
-          "channel": "股癌",
-          "date": "2026-04-25",
-          "text": "Sunfish 那像它算是正式的 在一般的消費者 或是投資人的面前看到 就是沒有去挖消息的 可能就有現在才第一次 知道這些東西 那8T跟8i代表的東西 是Zebra Fish跟Sunfish 就是從聯發科 然後跟從Broadcom這邊去做設計的 那只是像我自己 也有一點點的小miss 就是我本來一直以為說 Training是Avago 是Broadcom去做的 那Inference才是Anti-K 後來發現我們身邊 蠻多朋友的認知 都跟我是一樣的 然後後來才知道說 原來Training是MediaTec 那當然我們需要知道的事情 就是那到底Training跟Inference 它的占比是多少 那目",
-          "matched_keyword": "漢微課",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "gemini",
-          "whisper_corrected": true
-        }
-      ],
-      "total_mentions": 5,
-      "sentiment_score": 0.5,
-      "daily": {
-        "2026-04-15": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-04-22": {
-          "mentions": 2,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 2,
-          "sentiment_score": 0.5
-        },
-        "2026-04-18": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
           "sentiment_score": 0.5
         },
         "2026-04-25": {
@@ -26542,7 +26594,7 @@
     {
       "sector": "其他",
       "market": "TW",
-      "total_mentions": 87,
+      "total_mentions": 88,
       "stock_codes": [
         "5007",
         "2640",
@@ -26745,18 +26797,9 @@
       ]
     },
     {
-      "sector": "手機晶片",
-      "market": "US",
-      "total_mentions": 21,
-      "stock_codes": [
-        "QCOM",
-        "ARM"
-      ]
-    },
-    {
       "sector": "電子零組件",
       "market": "TW",
-      "total_mentions": 21,
+      "total_mentions": 22,
       "stock_codes": [
         "4749",
         "6643",
@@ -26767,6 +26810,15 @@
         "6261",
         "3529",
         "8054"
+      ]
+    },
+    {
+      "sector": "手機晶片",
+      "market": "US",
+      "total_mentions": 21,
+      "stock_codes": [
+        "QCOM",
+        "ARM"
       ]
     },
     {
@@ -27104,6 +27156,14 @@
       ]
     },
     {
+      "sector": "油電燃氣",
+      "market": "TW",
+      "total_mentions": 6,
+      "stock_codes": [
+        "3402"
+      ]
+    },
+    {
       "sector": "塑膠工業",
       "market": "TW",
       "total_mentions": 6,
@@ -27188,14 +27248,6 @@
       "total_mentions": 5,
       "stock_codes": [
         "2345"
-      ]
-    },
-    {
-      "sector": "油電燃氣",
-      "market": "TW",
-      "total_mentions": 5,
-      "stock_codes": [
-        "3402"
       ]
     },
     {
