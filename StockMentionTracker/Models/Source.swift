@@ -39,7 +39,7 @@ enum SourceType: String, Codable, CaseIterable {
         switch self {
         case .youtube: return "play.rectangle.fill"
         case .applePodcast: return "mic.fill"
-        case .spotify: return "music.note"#imageLiteral(resourceName: "simulator_screenshot_9596E691-478D-47CD-982C-0F5180B8D1A8.png")
+        case .spotify: return "music.note"
         }
     }
 }
