@@ -27,7 +27,7 @@ struct ContentListView: View {
                 HStack(spacing: 10) {
                     Text("最近")
                         .font(.caption).foregroundStyle(.secondary)
-                    Slider(value: $appState.selectedDays, in: 1...90, step: 1)
+                    Slider(value: $appState.selectedDays, in: 1...60, step: 1)
                     Text("\(Int(appState.selectedDays)) 天")
                         .font(.caption.monospacedDigit())
                         .frame(width: 44, alignment: .trailing)
