@@ -2429,10 +2429,32 @@ def _validate_gemini_stocks(
         # Gemini 有時回傳帶 -KY 後綴的 whisper_original（如「淮宇-KY」），
         # 但 Whisper 逐字稿裡只有不帶後綴的版本（如「淮宇」）→ 也要嘗試去掉後綴
         whisper_orig_bare = re.sub(r'[-－]KY$', '', whisper_orig, flags=re.IGNORECASE).strip()
+
+        # whisper_orig 只有在它本身確實是 resolved_name 的轉寫錯誤時才算數。
+        # 去掉常見行業後綴後比較核心詞：「意法」vs「昇陽」(Levenshtein=2) → 不算；
+        # 「淮宇」vs「環宇」(Levenshtein=1) → 算。
+        _NAME_SUFFIXES = ("半導體", "電子", "科技", "光電", "工業", "材料", "生技", "網路", "國際")
+        def _core(s: str) -> str:
+            for sfx in _NAME_SUFFIXES:
+                if s.endswith(sfx):
+                    return s[:-len(sfx)]
+            return s
+        _whisper_core  = _core(whisper_orig_bare or whisper_orig or "")
+        _resolved_core = _core(resolved_name)
+        _whisper_close = bool(
+            whisper_orig
+            and whisper_orig in chunk_text
+            and _levenshtein(_whisper_core, _resolved_core) <= 1
+        )
+        _whisper_bare_close = bool(
+            whisper_orig_bare and whisper_orig_bare != whisper_orig
+            and whisper_orig_bare in chunk_text
+            and _levenshtein(_core(whisper_orig_bare), _resolved_core) <= 1
+        )
         name_appears = (
             any(kw in chunk_text for kw in search_names)
-            or (whisper_orig and whisper_orig in chunk_text)
-            or (whisper_orig_bare and whisper_orig_bare != whisper_orig and whisper_orig_bare in chunk_text)
+            or _whisper_close
+            or _whisper_bare_close
         )
         # Whisper 錯字修正場景：Gemini 給了正確名稱但未填 whisper_original，
         # 用 Levenshtein 在 chunk 中滑動視窗找相近的詞。
@@ -2484,8 +2506,8 @@ def _validate_gemini_stocks(
         # 若沒有（Gemini 把別支股票的段落配過來），就丟掉改用原文定位。
         ctx_has_keyword = (
             any(kw in ctx for kw in stock_keywords + [name, resolved_name])
-            or (whisper_orig and whisper_orig in ctx)
-            or (whisper_orig_bare and whisper_orig_bare != whisper_orig and whisper_orig_bare in ctx)
+            or _whisper_close and whisper_orig in ctx
+            or _whisper_bare_close and whisper_orig_bare in ctx
         )
         # Always re-center context on matched term in full transcript for better window size.
         # Use _find_keyword_pos for 臺/台 normalization + Levenshtein ≤ 1 fuzzy fallback.
