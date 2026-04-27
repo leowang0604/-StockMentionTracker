@@ -2522,12 +2522,14 @@ def _validate_gemini_stocks(
             if p >= 0:
                 search_term, search_pos = candidate, p
                 break
+        gemini_ctx = ctx  # preserve Gemini's original context as fallback
         if not ctx or not ctx_has_keyword or (search_pos >= 0 and len(ctx) < 80):
             # Use transcript-based context when Gemini's is missing, wrong, or too short
             if search_pos >= 0:
                 ctx = chunk_text[max(0, search_pos - 100):search_pos + len(search_term) + 200]
-            else:
-                ctx = chunk_text[:200]
+            elif gemini_ctx:
+                ctx = gemini_ctx  # keep Gemini's context; better than transcript intro
+            # else: ctx stays empty (no position found, no Gemini context)
 
         validated.append({
             "stock_code":        resolved_code,
