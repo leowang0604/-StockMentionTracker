@@ -304,7 +304,19 @@ def _save_learned_alias(wrong_keyword: str, correct_code: str, correct_name: str
 
 
 def _write_skip_log() -> None:
-    """Append accumulated _skip_log entries to data/skip_log_YYYY-MM-DD.json."""
+    """Append accumulated _skip_log entries to data/skip_log_YYYY-MM-DD.json.
+    Also deletes skip_log files older than 30 days."""
+    # Purge old skip_log files (> 30 days)
+    cutoff = datetime.now(timezone.utc) - timedelta(days=30)
+    for f in _SKIP_LOG_DIR.glob("skip_log_*.json"):
+        try:
+            file_date = datetime.strptime(f.stem.replace("skip_log_", ""), "%Y-%m-%d").replace(tzinfo=timezone.utc)
+            if file_date < cutoff:
+                f.unlink()
+                print(f"[scanner] Deleted old skip log: {f.name}")
+        except Exception:
+            pass
+
     if not _skip_log:
         return
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
