@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-29T21:12:14",
+  "updated_at": "2026-04-29T21:28:00",
   "stocks_ranking": [
     {
       "code": "INTC",
@@ -7943,10 +7943,22 @@
           "sentiment_score": 0.55,
           "video_url": "",
           "extraction_mode": "gemini"
+        },
+        {
+          "video": "EP326 市場喘了第一下",
+          "channel": "投資癮",
+          "date": "2026-04-26",
+          "text": "候 誰不會倒就是那些最大型的個股 那些大型全身肋骨 比較不會因為這次的影響 而直接倒閉 那更重要的是 優先選擇就是 可以那時候立即回復說 可以把關稅的附加成本 快速轉移到客戶身上 都會是優先選擇 當時台積電第一個跳出來這樣講的 而後來匯率的問題 誰控制得不錯 也是持續持有的指標跟篩選 所以用這些因素 推出到當時為什麼會全身肋骨 而不是貴買指數 這也是其中的幾個原因之一 而且要出現這種 難得爆大量下跌或無量下跌跌的時候 發現在中小型的個股是非常常見的 但發生在全身肋骨是相當少見的 所以在當時的時空背景 才會出出這樣的選擇 而全身肋骨打完之後 也打了中小型的肋骨 但在去年11月份的時候 反而是集中在一些",
+          "matched_keyword": "台達電",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
         }
       ],
-      "total_mentions": 25,
-      "sentiment_score": 0.643,
+      "total_mentions": 26,
+      "sentiment_score": 0.637,
       "daily": {
         "2026-03-31": {
           "mentions": 1,
@@ -8047,11 +8059,11 @@
           "sentiment_score": 0.5
         },
         "2026-04-26": {
-          "mentions": 1,
+          "mentions": 2,
           "bullish": 1,
           "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 0.7
+          "neutral": 1,
+          "sentiment_score": 0.6
         },
         "2026-04-28": {
           "mentions": 2,
@@ -24694,6 +24706,143 @@
       }
     },
     {
+      "code": "2609",
+      "name": "陽明",
+      "market": "TW",
+      "sector": "航運",
+      "contexts": [
+        {
+          "video": "EP1078｜要停利，還是進場？台積電法說很規矩，高標但不驚艷，設備股遇大跌值得買！下次法說前會有成果？被動元件續強中！ft.AI達人 蔡明翰",
+          "channel": "兆華與股惑仔",
+          "date": "2026-04-16",
+          "text": "要不要獲利了結 賣飛就算了 不要再跟我講 那個很多人一直跟我們分享說 他賣飛多難過 不要再難過了 這就是你自己做決定 就像我現在做決定 要自己負責 好不好 好繼續念完這位朋友 我每次都會岔題 然後他就說 因為還沒有成為我們的觀眾 跟聽眾之前 那常常賣飛 例如說 十五塊就把長榮海運賣飛 你不要難過 我陽明賣過十一塊 然後 三十塊買間點 四十塊就賣飛 所以這一次 他有瞭解達人的思維 好好的抱住載板的星星 還有剛剛講的經濟 一機也抱住了主動式的ETF 全職媽媽的 我每天接送小孩 至於接收資訊 投資也獲利 這邊的話他也有點名說 小朋友下班回來 下課 補習下課回來 會看理財達人秀 說得出來 小咪同學 名漢協",
+          "matched_keyword": "陽明",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
+        },
+        {
+          "video": "EP1081｜發哥帶IC設計衝，記憶體能回神？台股續創高沒壓力，如何兼顧行情和風險？熱門題材中沒業績的會飆，有業績的走更遠！ft.操盤手 黃豐凱",
+          "channel": "兆華與股惑仔",
+          "date": "2026-04-21",
+          "text": "是非常的多 只要破百家就知道這個盤非常非常熱鬧 不過今天漲停版的公司 就略略有一點點不同 今天發歌一馬當先 漲停版 那它的股價如果跟台積電比的話 是正式超車台積電 很有趣很有趣 而發歌的漲停 大家也就不明所以的 來了一波IC設計的連環漲停 到底整體的IC設計 因為這個族群非常非常大 這族群貫穿到 從AI到消費什麼都有 到底是漲真漲價 缺這個CPU 是不是真的缺 消費性電子相關的 也真的應該跟著漲嗎 還有當然今天記憶體有回升 因為三星宣佈 它真的滴滴R4是確定不做了 都不做了 那這樣子當然對記憶體 終於跌了那麼久 來了一個強心針 好 那到底台積電 讓出空間這件事情 台股繼續創新高這件事情 今天剛剛看",
+          "matched_keyword": "陽明",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
+          "video": "EP326 市場喘了第一下",
+          "channel": "投資癮",
+          "date": "2026-04-26",
+          "text": "麼大的彈性空間了 所以有時候在做交易的時候 不管是買方思維 還是賣方思維 你都有點帶狀的感覺 你會在這部位上面 做一些調控上跟下 當你心中會搭配你的整體鏡子裡面 去做一些調控跟觀察 但是整體的思維你會很明確的 你現在是站在買方思維 去看待這間公司 或是你站在賣方的思維 去看待這間公司 好比說 現在對我來說Intel 我現在已經轉成賣方思維了 現在市場上開始 一面倒在Intel或AMD身上 很多人在討論CPU的掌望 也很多人歸咎於 這次Intel在盤後上漲20%以上 現在的價格來到85%以上 已經創了率的新高 在這個角度來說 還不含配寫的部分 如果還原全息之後 這個價格會更高 而這禮拜 廢半指數持續",
+          "matched_keyword": "陽明",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        }
+      ],
+      "total_mentions": 3,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-04-16": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-04-21": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-04-26": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
+      "code": "2615",
+      "name": "萬海",
+      "market": "TW",
+      "sector": "航運",
+      "contexts": [
+        {
+          "video": "EP655 | 🐯",
+          "channel": "股癌",
+          "date": "2026-04-22",
+          "text": "歡迎收聽古癌,我是孟高雄本集節目由喬虎優火原理兒童寶劍系列聯名贊助。 白天操盤看著K線上衝下洗,晚上帶小孩忍受靈魂回檔,人生兩條線同時面臨壓力測試, 持骨可以震盪,但小孩健康一定要穩。 在育兒這個戰場,最忌諱像是旋骨一樣亂聽名牌亂釋偏方, 直接找雞優骨才是最實際的生存法則。 各位寧倫真憲朋友有福了,優火原理這次與育兒界台積電喬虎聯名, 推出葉皇宿綜合維他命蓋,魚油多醣體,直接幫你打包成為一檔兒童健",
+          "matched_keyword": "萬海",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
+          "video": "EP1081｜發哥帶IC設計衝，記憶體能回神？台股續創高沒壓力，如何兼顧行情和風險？熱門題材中沒業績的會飆，有業績的走更遠！ft.操盤手 黃豐凱",
+          "channel": "兆華與股惑仔",
+          "date": "2026-04-21",
+          "text": "歡迎收聽 趙華於谷 貨載第一千零八十一級 今天是二零二六年的四月二十一號 四月的傳奇還在繼續的上演中 今天台股在創歷史新高 盤中最高點是三七七八一 離這個三萬八千點 就是一個一步之遙了 一下子我們說跨到三萬六 跨到三萬七 跨到三萬八 而旗幟的收盤是上市站上三萬八千點 又創歷史新高了 盤中一度漲了八百多點 真的很強 而且今天還是以一個中小型股 帶頭的一個狀態 櫃買非常的厲害 台積電又把空間讓出來 今天上市加上櫃的上漲加速 漲停加速有到一百家 也是非常的多 只要破百家就知道這個盤非常非常熱鬧 不過今天漲停版的公司 就略略有一點點不同 今天發歌一馬當先 漲停版",
+          "matched_keyword": "萬海",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
+          "video": "EP326 市場喘了第一下",
+          "channel": "投資癮",
+          "date": "2026-04-26",
+          "text": "成功的 就是50%以上 不管你用什麼方式 但如果下跌的話 我自己心中是 我心中大概10%-30%之間 都是一個容忍值 有時候超過30%的時候 我會重新觀察我的部位有多大 就好比說 你現在的資產有100萬 你投入一間公司只有1萬塊 他跌到50% 你心中可能願意 讓他再多等一點點 但是如果你當股票 你的資金是100萬 你持有50萬 那可能跌到10% 就影響你5%的部位了 這時候心中的感覺 就完全不一樣 你就沒有這麼大的彈性空間了 所以有時候在做交易的時候 不管是買方思維 還是賣方思維 你都有點帶狀的感覺 你會在這部位上面 做一些調控上跟下 當你心中會搭配你的整體鏡子裡面 去做一些調控跟觀察 但是整體的",
+          "matched_keyword": "萬海",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        }
+      ],
+      "total_mentions": 3,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-04-22": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-04-21": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-04-26": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
       "code": "3406",
       "name": "玉晶光",
       "market": "TW",
@@ -26099,55 +26248,6 @@
       }
     },
     {
-      "code": "2609",
-      "name": "陽明",
-      "market": "TW",
-      "sector": "航運",
-      "contexts": [
-        {
-          "video": "EP1078｜要停利，還是進場？台積電法說很規矩，高標但不驚艷，設備股遇大跌值得買！下次法說前會有成果？被動元件續強中！ft.AI達人 蔡明翰",
-          "channel": "兆華與股惑仔",
-          "date": "2026-04-16",
-          "text": "要不要獲利了結 賣飛就算了 不要再跟我講 那個很多人一直跟我們分享說 他賣飛多難過 不要再難過了 這就是你自己做決定 就像我現在做決定 要自己負責 好不好 好繼續念完這位朋友 我每次都會岔題 然後他就說 因為還沒有成為我們的觀眾 跟聽眾之前 那常常賣飛 例如說 十五塊就把長榮海運賣飛 你不要難過 我陽明賣過十一塊 然後 三十塊買間點 四十塊就賣飛 所以這一次 他有瞭解達人的思維 好好的抱住載板的星星 還有剛剛講的經濟 一機也抱住了主動式的ETF 全職媽媽的 我每天接送小孩 至於接收資訊 投資也獲利 這邊的話他也有點名說 小朋友下班回來 下課 補習下課回來 會看理財達人秀 說得出來 小咪同學 名漢協",
-          "matched_keyword": "陽明",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": ""
-        },
-        {
-          "video": "EP1081｜發哥帶IC設計衝，記憶體能回神？台股續創高沒壓力，如何兼顧行情和風險？熱門題材中沒業績的會飆，有業績的走更遠！ft.操盤手 黃豐凱",
-          "channel": "兆華與股惑仔",
-          "date": "2026-04-21",
-          "text": "是非常的多 只要破百家就知道這個盤非常非常熱鬧 不過今天漲停版的公司 就略略有一點點不同 今天發歌一馬當先 漲停版 那它的股價如果跟台積電比的話 是正式超車台積電 很有趣很有趣 而發歌的漲停 大家也就不明所以的 來了一波IC設計的連環漲停 到底整體的IC設計 因為這個族群非常非常大 這族群貫穿到 從AI到消費什麼都有 到底是漲真漲價 缺這個CPU 是不是真的缺 消費性電子相關的 也真的應該跟著漲嗎 還有當然今天記憶體有回升 因為三星宣佈 它真的滴滴R4是確定不做了 都不做了 那這樣子當然對記憶體 終於跌了那麼久 來了一個強心針 好 那到底台積電 讓出空間這件事情 台股繼續創新高這件事情 今天剛剛看",
-          "matched_keyword": "陽明",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        }
-      ],
-      "total_mentions": 2,
-      "sentiment_score": 0.5,
-      "daily": {
-        "2026-04-16": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-04-21": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        }
-      }
-    },
-    {
       "code": "5289",
       "name": "宜鼎",
       "market": "TW",
@@ -26386,56 +26486,6 @@
           "sentiment_score": 0.5
         },
         "2026-04-23": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        }
-      }
-    },
-    {
-      "code": "2615",
-      "name": "萬海",
-      "market": "TW",
-      "sector": "航運",
-      "contexts": [
-        {
-          "video": "EP655 | 🐯",
-          "channel": "股癌",
-          "date": "2026-04-22",
-          "text": "歡迎收聽古癌,我是孟高雄本集節目由喬虎優火原理兒童寶劍系列聯名贊助。 白天操盤看著K線上衝下洗,晚上帶小孩忍受靈魂回檔,人生兩條線同時面臨壓力測試, 持骨可以震盪,但小孩健康一定要穩。 在育兒這個戰場,最忌諱像是旋骨一樣亂聽名牌亂釋偏方, 直接找雞優骨才是最實際的生存法則。 各位寧倫真憲朋友有福了,優火原理這次與育兒界台積電喬虎聯名, 推出葉皇宿綜合維他命蓋,魚油多醣體,直接幫你打包成為一檔兒童健",
-          "matched_keyword": "萬海",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        },
-        {
-          "video": "EP1081｜發哥帶IC設計衝，記憶體能回神？台股續創高沒壓力，如何兼顧行情和風險？熱門題材中沒業績的會飆，有業績的走更遠！ft.操盤手 黃豐凱",
-          "channel": "兆華與股惑仔",
-          "date": "2026-04-21",
-          "text": "歡迎收聽 趙華於谷 貨載第一千零八十一級 今天是二零二六年的四月二十一號 四月的傳奇還在繼續的上演中 今天台股在創歷史新高 盤中最高點是三七七八一 離這個三萬八千點 就是一個一步之遙了 一下子我們說跨到三萬六 跨到三萬七 跨到三萬八 而旗幟的收盤是上市站上三萬八千點 又創歷史新高了 盤中一度漲了八百多點 真的很強 而且今天還是以一個中小型股 帶頭的一個狀態 櫃買非常的厲害 台積電又把空間讓出來 今天上市加上櫃的上漲加速 漲停加速有到一百家 也是非常的多 只要破百家就知道這個盤非常非常熱鬧 不過今天漲停版的公司 就略略有一點點不同 今天發歌一馬當先 漲停版",
-          "matched_keyword": "萬海",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        }
-      ],
-      "total_mentions": 2,
-      "sentiment_score": 0.5,
-      "daily": {
-        "2026-04-22": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-04-21": {
           "mentions": 1,
           "bullish": 0,
           "bearish": 0,
@@ -33170,6 +33220,130 @@
           "sentiment_score": 0.5
         }
       }
+    },
+    {
+      "code": "2915",
+      "name": "潤泰全",
+      "market": "TW",
+      "sector": "貿易百貨業",
+      "contexts": [
+        {
+          "video": "EP326 市場喘了第一下",
+          "channel": "投資癮",
+          "date": "2026-04-26",
+          "text": "近一年選擇一些豬靈銀件水泥 最近在看鞋子",
+          "matched_keyword": "潤泰全",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.6,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.6,
+      "daily": {
+        "2026-04-26": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.6
+        }
+      }
+    },
+    {
+      "code": "2845",
+      "name": "遠東銀",
+      "market": "TW",
+      "sector": "金融保險業",
+      "contexts": [
+        {
+          "video": "EP326 市場喘了第一下",
+          "channel": "投資癮",
+          "date": "2026-04-26",
+          "text": "近一年選擇一些豬靈銀件水泥 最近在看鞋子",
+          "matched_keyword": "遠東銀",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.6,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.6,
+      "daily": {
+        "2026-04-26": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.6
+        }
+      }
+    },
+    {
+      "code": "1402",
+      "name": "遠東新",
+      "market": "TW",
+      "sector": "紡織纖維",
+      "contexts": [
+        {
+          "video": "EP326 市場喘了第一下",
+          "channel": "投資癮",
+          "date": "2026-04-26",
+          "text": "近一年選擇一些豬靈銀件水泥 最近在看鞋子",
+          "matched_keyword": "遠東新",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.6,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.6,
+      "daily": {
+        "2026-04-26": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.6
+        }
+      }
+    },
+    {
+      "code": "6196",
+      "name": "帆宣",
+      "market": "TW",
+      "sector": "其他電子業",
+      "contexts": [
+        {
+          "video": "EP326 市場喘了第一下",
+          "channel": "投資癮",
+          "date": "2026-04-26",
+          "text": "電的大漲 我最不認為台積電的大漲 沒有很大的意外 並不是說它大漲我預估到了 我反而是站在持有者的角度來說 我認為它的大漲對我來說是好事 只不過我認為單一因素 沒辦法造成這麼大的影響 而且我一直相信 這種宣布後的東西 它是放寬條件的其中一個因素 但在溝通的情況下 應該不少人都知道這件消息了 而從10%到25%的確 是確實放寬的一些 投信可以買進的動作 但它真的是台積電的 唯一上漲的原因嗎 我覺得沒辦法站在這個角度 去完全肯定 但是如果我是一個 要買基金的人的話 那我為什麼不買台積電 我要買那些主動性的基金 因為10%調到25%的時候 而對於這些商品有更高的期待 而不是期待 單純去買進的原型失誤的台積",
+          "matched_keyword": "帆宣",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.65,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.65,
+      "daily": {
+        "2026-04-26": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.65
+        }
+      }
     }
   ],
   "sectors_ranking": [
@@ -33280,6 +33454,15 @@
       ]
     },
     {
+      "sector": "電源供應器",
+      "market": "TW",
+      "total_mentions": 43,
+      "stock_codes": [
+        "2308",
+        "2301"
+      ]
+    },
+    {
       "sector": "PCB",
       "market": "TW",
       "total_mentions": 43,
@@ -33291,15 +33474,6 @@
         "3715",
         "3044",
         "4958"
-      ]
-    },
-    {
-      "sector": "電源供應器",
-      "market": "TW",
-      "total_mentions": 42,
-      "stock_codes": [
-        "2308",
-        "2301"
       ]
     },
     {
@@ -33462,23 +33636,23 @@
       ]
     },
     {
+      "sector": "航運",
+      "market": "TW",
+      "total_mentions": 25,
+      "stock_codes": [
+        "2605",
+        "2603",
+        "2609",
+        "2615"
+      ]
+    },
+    {
       "sector": "先進封裝",
       "market": "TW",
       "total_mentions": 24,
       "stock_codes": [
         "2449",
         "3711"
-      ]
-    },
-    {
-      "sector": "航運",
-      "market": "TW",
-      "total_mentions": 23,
-      "stock_codes": [
-        "2605",
-        "2603",
-        "2609",
-        "2615"
       ]
     },
     {
@@ -33686,6 +33860,17 @@
       ]
     },
     {
+      "sector": "金融保險業",
+      "market": "TW",
+      "total_mentions": 13,
+      "stock_codes": [
+        "2850",
+        "6005",
+        "2855",
+        "2845"
+      ]
+    },
+    {
       "sector": "資訊服務",
       "market": "TW",
       "total_mentions": 13,
@@ -33698,16 +33883,6 @@
         "6597",
         "3624",
         "6194"
-      ]
-    },
-    {
-      "sector": "金融保險業",
-      "market": "TW",
-      "total_mentions": 12,
-      "stock_codes": [
-        "2850",
-        "6005",
-        "2855"
       ]
     },
     {
@@ -33729,6 +33904,18 @@
         "3118",
         "4128",
         "3176"
+      ]
+    },
+    {
+      "sector": "紡織纖維",
+      "market": "TW",
+      "total_mentions": 11,
+      "stock_codes": [
+        "1409",
+        "1414",
+        "1423",
+        "1463",
+        "1402"
       ]
     },
     {
@@ -33760,17 +33947,6 @@
         "3017",
         "3324",
         "6208"
-      ]
-    },
-    {
-      "sector": "紡織纖維",
-      "market": "TW",
-      "total_mentions": 10,
-      "stock_codes": [
-        "1409",
-        "1414",
-        "1423",
-        "1463"
       ]
     },
     {
@@ -33953,6 +34129,19 @@
       ]
     },
     {
+      "sector": "其他電子業",
+      "market": "TW",
+      "total_mentions": 6,
+      "stock_codes": [
+        "3030",
+        "6830",
+        "2474",
+        "2464",
+        "2482",
+        "6196"
+      ]
+    },
+    {
       "sector": "玻璃陶瓷",
       "market": "TW",
       "total_mentions": 5,
@@ -34016,18 +34205,6 @@
         "SPY",
         "BE",
         "CFLT"
-      ]
-    },
-    {
-      "sector": "其他電子業",
-      "market": "TW",
-      "total_mentions": 5,
-      "stock_codes": [
-        "3030",
-        "6830",
-        "2474",
-        "2464",
-        "2482"
       ]
     },
     {
@@ -34208,6 +34385,15 @@
       ]
     },
     {
+      "sector": "貿易百貨業",
+      "market": "TW",
+      "total_mentions": 2,
+      "stock_codes": [
+        "2913",
+        "2915"
+      ]
+    },
+    {
       "sector": "FPC",
       "market": "TW",
       "total_mentions": 2,
@@ -34288,14 +34474,6 @@
       "total_mentions": 1,
       "stock_codes": [
         "1432"
-      ]
-    },
-    {
-      "sector": "貿易百貨業",
-      "market": "TW",
-      "total_mentions": 1,
-      "stock_codes": [
-        "2913"
       ]
     },
     {
