@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-29T21:28:00",
+  "updated_at": "2026-04-30T18:52:35",
   "stocks_ranking": [
     {
       "code": "INTC",
@@ -25579,7 +25579,7 @@
       "code": "DASH",
       "name": "DoorDash",
       "market": "US",
-      "sector": "零售電商",
+      "sector": "消費",
       "contexts": [
         {
           "video": "EP217 | 台、美股重點一次說，Google TPU 各代產品結構與台廠供應鏈， 台積電封裝技術進展與風險，CPO量產前注意",
@@ -26598,7 +26598,7 @@
       "code": "CHTR",
       "name": "Charter Communications",
       "market": "US",
-      "sector": "高速連接",
+      "sector": "通訊媒體",
       "contexts": [
         {
           "video": "EP649 | 💌",
@@ -33131,7 +33131,7 @@
       "code": "006205",
       "name": "富邦上証",
       "market": "TW",
-      "sector": null,
+      "sector": "ETF",
       "contexts": [
         {
           "video": "EP1086｜主動型ETF的挑戰日，機器人、記憶體、被動，低檔回暖3劍客，都還買不多？Q1季報出爐，好股票的長短戰略？ft.存股總編 謝富旭",
@@ -33342,6 +33342,37 @@
           "bearish": 0,
           "neutral": 0,
           "sentiment_score": 0.65
+        }
+      }
+    },
+    {
+      "code": "2718",
+      "name": "全心投控",
+      "market": "TW",
+      "sector": "建材營造",
+      "contexts": [
+        {
+          "video": "EP657 | 🐫",
+          "channel": "股癌",
+          "date": "2026-04-29",
+          "text": "年前 我出生的第三天 因為長道阻塞在 台大兒科動手術 當時是小兒科權威 陳秋江醫師直刀 雖然沒有機會 親自向陳醫師道謝 永遠感謝他 父親曾說 當時他走進醫院時 兩手空空滿心擔憂意要費 他一身勤奮工作 全心守護家庭 如同你聽到諾瑤呼喚你回家 拒絕在外應酬 那如今父親已經85歲 失智7年 即便忘了大部分的人 卻唯獨認得我 身為主要照顧者 雖然難過 但能夠在這個時刻陪伴他 我覺得非常的值得 是那一份父愛最好的報答 那聽到你為安哥煎熬 我想這就是當年我父親的心情 想要告訴你 這份愛是不會消失的 你的孩子長大之後 一定能夠感受到 這份長久且深沉的守護 那現在看著 父親老的像個孩子 我才凌污到人生最幸福的事情",
+          "matched_keyword": "全心",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 1.0,
+      "daily": {
+        "2026-04-29": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
         }
       }
     }
@@ -33684,6 +33715,19 @@
       ]
     },
     {
+      "sector": "消費",
+      "market": "US",
+      "total_mentions": 21,
+      "stock_codes": [
+        "CCL",
+        "DASH",
+        "GRMN",
+        "NKE",
+        "ABNB",
+        "DECK"
+      ]
+    },
+    {
       "sector": "ETF・主動型",
       "market": "TW",
       "total_mentions": 20,
@@ -33695,18 +33739,6 @@
         "00987A",
         "00994A",
         "00985A"
-      ]
-    },
-    {
-      "sector": "消費",
-      "market": "US",
-      "total_mentions": 19,
-      "stock_codes": [
-        "CCL",
-        "GRMN",
-        "NKE",
-        "ABNB",
-        "DECK"
       ]
     },
     {
@@ -33919,18 +33951,6 @@
       ]
     },
     {
-      "sector": "零售電商",
-      "market": "US",
-      "total_mentions": 11,
-      "stock_codes": [
-        "COST",
-        "DASH",
-        "BKNG",
-        "WMT",
-        "TGT"
-      ]
-    },
-    {
       "sector": "電信",
       "market": "TW",
       "total_mentions": 10,
@@ -33960,24 +33980,36 @@
       ]
     },
     {
+      "sector": "ETF",
+      "market": "TW",
+      "total_mentions": 10,
+      "stock_codes": [
+        "00830",
+        "00757",
+        "00735",
+        "00400A",
+        "00662",
+        "006205"
+      ]
+    },
+    {
+      "sector": "零售電商",
+      "market": "US",
+      "total_mentions": 9,
+      "stock_codes": [
+        "COST",
+        "BKNG",
+        "WMT",
+        "TGT"
+      ]
+    },
+    {
       "sector": "半導體設備",
       "market": "TW",
       "total_mentions": 9,
       "stock_codes": [
         "6187",
         "3131"
-      ]
-    },
-    {
-      "sector": "ETF",
-      "market": "TW",
-      "total_mentions": 9,
-      "stock_codes": [
-        "00830",
-        "00757",
-        "00735",
-        "00400A",
-        "00662"
       ]
     },
     {
@@ -34263,13 +34295,13 @@
       ]
     },
     {
-      "sector": "高速連接",
+      "sector": "通訊媒體",
       "market": "US",
       "total_mentions": 4,
       "stock_codes": [
         "CHTR",
-        "CRDO",
-        "T"
+        "SATS",
+        "VZ"
       ]
     },
     {
@@ -34349,15 +34381,6 @@
       ]
     },
     {
-      "sector": "通訊媒體",
-      "market": "US",
-      "total_mentions": 2,
-      "stock_codes": [
-        "SATS",
-        "VZ"
-      ]
-    },
-    {
       "sector": "生技製藥",
       "market": "US",
       "total_mentions": 2,
@@ -34391,6 +34414,15 @@
       "stock_codes": [
         "2913",
         "2915"
+      ]
+    },
+    {
+      "sector": "高速連接",
+      "market": "US",
+      "total_mentions": 2,
+      "stock_codes": [
+        "CRDO",
+        "T"
       ]
     },
     {
@@ -34546,6 +34578,14 @@
       "total_mentions": 1,
       "stock_codes": [
         "AMCR"
+      ]
+    },
+    {
+      "sector": "建材營造",
+      "market": "TW",
+      "total_mentions": 1,
+      "stock_codes": [
+        "2718"
       ]
     }
   ],
