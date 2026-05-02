@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-02T19:49:49",
+  "updated_at": "2026-05-02T20:45:48",
   "stocks_ranking": [
     {
       "code": "INTC",
@@ -12,6 +12,18 @@
           "channel": "股癌",
           "date": "2026-05-02",
           "text": "到180K之間 那這個是5921 就大家都知道說 它的後段跟前段都在台積電這邊做 可是走到5922 就是HUMUFISH之後呢 那目前的一個共識是 它的前段會在台積電那邊做 那可是它的後段呢 就會跑到Intel的IMIP這邊去做 所以我們才會討論到 IMIP的良率到底下 是怎麼樣的一個情形 就有這樣的討論是有 有這樣子一個事件的背景在前面 那當然如果說今天 居然說去多了一個 台積電的大將加入聯發科 會不會就是要去把這個 後段的東西給喬 其實老實說 在市場上面已經喬一陣子了 就是在media tech這邊 當然一樣這是市場的謠言 就是說 它其實是有開兩條線 就前段是台積電這邊 那後段呢 一條線就是往那個I",
+          "matched_keyword": "Intel",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
+          "video": "2026/05/01(五) 美國經濟靠AI撐住了！蘋果最強季度，閃迪為何崩潰？ #AAPL #SNDK #WDC",
+          "channel": "財女珍妮",
+          "date": "2026-05-01",
+          "text": "是一個完全不一樣的一個新時代 那我當然是很期待啦 但是現在要說 蘋果已經完全的落下陣來 或者是完全被市場淘汰 我覺得可能也會有一點延遲過早 所以我們還是近關起變 就是看蘋果在接下來 他的 Apple Intelligence 的功能 或者是他 Siri 的重建呢 可不可以更好的去發揮他的效應 甚至蘋果他的支援晶片在 AI 本地 就是推論端啊 或者是你邊緣 這就是一種邊緣裝置嘛 可不可以真的交出一個 讓用戶真正有感的東西 那市場對於他的評價 可能就會不一樣了嘛 所以我覺得蘋果現在有個數字 大家可以稍微的聽一下 就是他的研發費用 他的研發費用在這一季是 114 億 是年增了 34% 是遠高於營收 17% 的",
           "matched_keyword": "Intel",
           "analysis_source": "whisper",
           "sentiment": "neutral",
@@ -354,23 +366,19 @@
           "sentiment_score": 0.5,
           "video_url": "",
           "extraction_mode": "gemini"
-        },
-        {
-          "video": "EP1078｜要停利，還是進場？台積電法說很規矩，高標但不驚艷，設備股遇大跌值得買！下次法說前會有成果？被動元件續強中！ft.AI達人 蔡明翰",
-          "channel": "兆華與股惑仔",
-          "date": "2026-04-16",
-          "text": "跟大量的技術 跟等於說很高階的人力 去結合出來的成果 還有一個很重要的關鍵 就是經驗 那過去他們長期以來 他們的良率拉伸的經驗 這就是他們最寶貴的資產 不然前段來講 我們常常講的 你無論是資源或錢 其實以台灣的角度 我們比錢比資源 其實我們比不過美國比不過日本 這些來講都沒什麼了不起 你資本支出高 Intel沒錢沒錯 如果今天美國政府願意幫忙 其實錢都是小事 那最後其實兩個關鍵點 第一個就是很厲害的 很精良的人力 台灣就有這個比較特殊的資源 另外就是長期以來 台積電累積的這個所謂的經驗 也是不是他們快速可以複製的 所以這兩塊導致其他人來 其實我老實說 我也覺得最起碼 公司是不會提這個觀念 我覺得三五年內",
-          "matched_keyword": "Intel",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": ""
         }
       ],
       "total_mentions": 30,
       "sentiment_score": 0.656,
       "daily": {
         "2026-05-02": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-05-01": {
           "mentions": 1,
           "bullish": 0,
           "bearish": 0,
@@ -448,13 +456,6 @@
           "sentiment_score": 0.5
         },
         "2026-04-18": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-04-16": {
           "mentions": 1,
           "bullish": 0,
           "bearish": 0,
@@ -6435,6 +6436,18 @@
       "sector": "AI晶片",
       "contexts": [
         {
+          "video": "2026/05/01(五) 美國經濟靠AI撐住了！蘋果最強季度，閃迪為何崩潰？ #AAPL #SNDK #WDC",
+          "channel": "財女珍妮",
+          "date": "2026-05-01",
+          "text": "有人問說 為什麼灰達這兩天一直跌 我覺得有很多的原因 加上Google現在 大家都在講灰達 好像是AMDR Inter 才是他主要的競爭對手 但是之前Google的TPU 開始越來越紳士大 或者是他已經要把它賣出去 然後給其他的公司去做使用的時候 你覺得他最大的競爭對手是誰 同樣GPU跟S也客製化晶片 其實Google跟灰達 他們兩個就是強強相碰",
+          "matched_keyword": "AMD",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
           "video": "EP1088｜4月漲7203點，5月還有好光景？台積電回檔更好買，熱門產業絕對要有！機器人、低軌轉強，載板、CPO續飛，封測穩賺中！ft.操盤手 黃豐凱",
           "channel": "兆華與股惑仔",
           "date": "2026-04-30",
@@ -6767,22 +6780,18 @@
           "sentiment": "bullish",
           "sentiment_score": 0.7,
           "video_url": null
-        },
-        {
-          "video": "2026/03/26 (四）存儲出大事， MU, SNDK還能漲？",
-          "channel": "財女珍妮",
-          "date": "2026-03-26",
-          "text": "0指數 但是呢昨天像是必須消費類股啊 工業類股啊或者是 七大客機巨頭裡面呢 其實我覺得都還是呈現著一個上漲的局面嘛 表現最差的是誰呢美光 那就是等一下我們要講的東西以及軟體股目前呢 我覺得還是受到我們昨天講到私募信貸的一個問題吧 所以他還延續著比較弱勢的一個格局 那在半導體裡面除了揮達上漲2%之外 AMD跟英特爾他們也分別上漲了7%以上 那昨天不知道大家有沒有注意到一個消息 就是CPU的漲價 CPU荒來了 英特爾跟AMD呢他們宣告說3月要再漲價 今年已經漲了10到15% 交貨週期最長也延到了6個月左右喔 這個消息呢其實我們在滿久之前 可能一個月之前就已經有講過了 就已經有告訴大家說英特爾AMD 因為",
-          "matched_keyword": "AMD",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": ""
         }
       ],
       "total_mentions": 30,
-      "sentiment_score": 0.627,
+      "sentiment_score": 0.61,
       "daily": {
+        "2026-05-01": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
         "2026-04-30": {
           "mentions": 1,
           "bullish": 1,
@@ -6915,13 +6924,6 @@
           "bearish": 0,
           "neutral": 0,
           "sentiment_score": 0.7
-        },
-        "2026-03-26": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 1.0
         }
       }
     },
