@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-04T18:57:48",
+  "updated_at": "2026-05-04T19:11:53",
   "stocks_ranking": [
     {
       "code": "INTC",
@@ -4819,6 +4819,18 @@
           "extraction_mode": "gemini"
         },
         {
+          "video": "EP221 | 台、美股重點一次說， 台積電25%條款後的資金節奏，台達電AI Power與高階連接器，旺宏法說重點",
+          "channel": "韭菜畢業班",
+          "date": "2026-04-28",
+          "text": "一點由下而往上 這件事情其實我已經有滾動式調整過 兩次了 這一次就是 你們現在這一次聽到的 應該就是我第二次調整 對我來說這已經是 我覺得跨出了一大步 我上網查了一下 就是大概要怎麼放 好像這一次有稍微抓到 就是那個感覺了 所以大家這一集應該會看得比較舒服一點 我知道有一些 可能有一些算是一些強迫症這樣子 然後再來就是FelioPod可以對我來講 其實 其實還蠻好玩的 說真的就是 你可以看到你的這張臉 然後在那邊動來動去 然後再來就是 最近因為短眼一罵 然後也開始有一些露臉 然後就有一些身邊的好朋友們 或說家人的好朋友們 其實有認出我來 然後就是 如果平常你們認出我的的話 其實你們應該會發現 就是",
+          "matched_keyword": "微軟",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
           "video": "2026/04/27(一) 費半創紀18連漲，還能進場嗎？Intel暴漲20%，財報透露什麼？",
           "channel": "財女珍妮",
           "date": "2026-04-27",
@@ -4981,21 +4993,10 @@
           "sentiment": "bearish",
           "sentiment_score": 0.6,
           "video_url": null
-        },
-        {
-          "video": "2026/04/03 (五）美股為什麼又Ｖ轉了？終於要講微軟....為什麼跌？",
-          "channel": "財女珍妮",
-          "date": "2026-04-03",
-          "text": "去年還是前年的時候 他們是最早科技巨頭裡面 開始告訴大家說 在接下來的資本支出 有可能會趨緩的公司哦 所以最近我記得是華爾街日報嗎 還是彭博他有寫一篇文章 他就是在講微軟這個M1戶 就是他們的財務長嘛 這個財務長呢 M1戶他在微軟已經 工作了大概十幾年左右 而且我看文章裡面呢 就會寫說 很多人都覺得微軟有兩個老闆 第一個當然就是納德拉嘛 第二個就是個M1 就是他講的話 或者是他做出來的決策呢 基本上就是公司整體的一個指導方針 然後他們在前兩年的時候 就認為說 這個 算力的大局的擴張呢 可能有一點過於快速了 所以他們就想要收緊 然後有一些資料中心呢 可能就沒有積極的去做建設 然後這些東西就被別人拿走",
-          "matched_keyword": "MSFT",
-          "analysis_source": "whisper",
-          "sentiment": "bearish",
-          "sentiment_score": 0.6,
-          "video_url": null
         }
       ],
       "total_mentions": 30,
-      "sentiment_score": 0.613,
+      "sentiment_score": 0.617,
       "daily": {
         "2026-05-03": {
           "mentions": 4,
@@ -5033,11 +5034,11 @@
           "sentiment_score": 0.667
         },
         "2026-04-28": {
-          "mentions": 1,
-          "bullish": 0,
+          "mentions": 2,
+          "bullish": 1,
           "bearish": 0,
           "neutral": 1,
-          "sentiment_score": 0.5
+          "sentiment_score": 0.6
         },
         "2026-04-27": {
           "mentions": 1,
@@ -5075,9 +5076,9 @@
           "sentiment_score": 0.5
         },
         "2026-04-03": {
-          "mentions": 8,
+          "mentions": 7,
           "bullish": 0,
-          "bearish": 8,
+          "bearish": 7,
           "neutral": 0,
           "sentiment_score": 0.6
         }
