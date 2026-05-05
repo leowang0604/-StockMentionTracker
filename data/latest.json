@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-04T21:13:55",
+  "updated_at": "2026-05-05T18:57:41",
   "stocks_ranking": [
     {
       "code": "INTC",
@@ -15440,7 +15440,7 @@
       "code": "CCL",
       "name": "Carnival",
       "market": "US",
-      "sector": "消費",
+      "sector": "零售電商",
       "contexts": [
         {
           "video": "EP213 | 台、美股重點一次說，台股反彈怎麼看？美股極度恐慌後的觀察重點，南俊國際與滑軌需求，設備股後勢",
@@ -28263,7 +28263,7 @@
       "code": "DASH",
       "name": "DoorDash",
       "market": "US",
-      "sector": "消費",
+      "sector": "零售電商",
       "contexts": [
         {
           "video": "EP217 | 台、美股重點一次說，Google TPU 各代產品結構與台廠供應鏈， 台積電封裝技術進展與風險，CPO量產前注意",
@@ -29037,7 +29037,7 @@
       "code": "CHTR",
       "name": "Charter Communications",
       "market": "US",
-      "sector": "通訊媒體",
+      "sector": "高速連接",
       "contexts": [
         {
           "video": "EP649 | 💌",
@@ -34810,7 +34810,7 @@
       "code": "DECK",
       "name": "Deckers Brands",
       "market": "US",
-      "sector": "消費",
+      "sector": "零售電商",
       "contexts": [
         {
           "video": "EP656 | 🍇",
@@ -35058,7 +35058,7 @@
       "code": "T",
       "name": "AT&T",
       "market": "US",
-      "sector": "通訊媒體",
+      "sector": "高速連接",
       "contexts": [
         {
           "video": "2026/04/27(一) 費半創紀18連漲，還能進場嗎？Intel暴漲20%，財報透露什麼？",
@@ -37340,6 +37340,20 @@
       ]
     },
     {
+      "sector": "零售電商",
+      "market": "US",
+      "total_mentions": 26,
+      "stock_codes": [
+        "CCL",
+        "COST",
+        "DASH",
+        "BKNG",
+        "WMT",
+        "TGT",
+        "DECK"
+      ]
+    },
+    {
       "sector": "組裝代工",
       "market": "TW",
       "total_mentions": 25,
@@ -37390,19 +37404,6 @@
         "00927",
         "0053",
         "00947"
-      ]
-    },
-    {
-      "sector": "消費",
-      "market": "US",
-      "total_mentions": 21,
-      "stock_codes": [
-        "CCL",
-        "DASH",
-        "GRMN",
-        "NKE",
-        "ABNB",
-        "DECK"
       ]
     },
     {
@@ -37689,17 +37690,6 @@
       ]
     },
     {
-      "sector": "零售電商",
-      "market": "US",
-      "total_mentions": 9,
-      "stock_codes": [
-        "COST",
-        "BKNG",
-        "WMT",
-        "TGT"
-      ]
-    },
-    {
       "sector": "半導體設備",
       "market": "TW",
       "total_mentions": 9,
@@ -37925,17 +37915,6 @@
       ]
     },
     {
-      "sector": "通訊媒體",
-      "market": "US",
-      "total_mentions": 5,
-      "stock_codes": [
-        "CHTR",
-        "SATS",
-        "VZ",
-        "T"
-      ]
-    },
-    {
       "sector": "其他",
       "market": "US",
       "total_mentions": 5,
@@ -37979,6 +37958,26 @@
         "9940",
         "3040",
         "9927"
+      ]
+    },
+    {
+      "sector": "消費",
+      "market": "US",
+      "total_mentions": 4,
+      "stock_codes": [
+        "GRMN",
+        "NKE",
+        "ABNB"
+      ]
+    },
+    {
+      "sector": "高速連接",
+      "market": "US",
+      "total_mentions": 4,
+      "stock_codes": [
+        "CHTR",
+        "CRDO",
+        "T"
       ]
     },
     {
@@ -38069,6 +38068,15 @@
       "total_mentions": 2,
       "stock_codes": [
         "2241"
+      ]
+    },
+    {
+      "sector": "通訊媒體",
+      "market": "US",
+      "total_mentions": 2,
+      "stock_codes": [
+        "SATS",
+        "VZ"
       ]
     },
     {
@@ -38187,14 +38195,6 @@
       "total_mentions": 1,
       "stock_codes": [
         "4420"
-      ]
-    },
-    {
-      "sector": "高速連接",
-      "market": "US",
-      "total_mentions": 1,
-      "stock_codes": [
-        "CRDO"
       ]
     },
     {
