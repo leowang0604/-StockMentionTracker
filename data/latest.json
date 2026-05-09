@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-09T21:04:59",
+  "updated_at": "2026-05-09T21:17:29",
   "stocks_ranking": [
     {
       "code": "INTC",
@@ -44515,6 +44515,37 @@
           "sentiment_score": 0.8
         }
       }
+    },
+    {
+      "code": "ON Semiconductor Corporation",
+      "name": "ON Semiconductor Corporation",
+      "market": "US",
+      "sector": "半導體",
+      "contexts": [
+        {
+          "video": "EP327 遲早都要跑",
+          "channel": "投資癮",
+          "date": "2026-05-03",
+          "text": "也就是說如果 Nike 跟 IDA 出現的問題 這邊是品牌競爭的問題 如果排除品牌競爭的問題 我就會找尋供應鏈的部分 而台灣的製鞋廠有非常非常多的公司 而它們接觸的面向是 各家公司都有接觸到 不管是 ON、HOLKA、IDA、NIKE 以及一些非運動相關的機能系 它們都有接觸到 它們的優點就是 比較不會被品牌競爭力給影響到 但相對的 品牌上面的無形資產 它們也沒辦法拿到 也有可能因為這些原因 包括貫稅的部分等等的 讓股價持續下跌 但這些公司很厲害 它們會慢慢把一些廠 從中國、越南 甚至慢慢轉到印尼、印度等等的 雖然有些公司已經開始有些動作了 但要符合商地的法規、設廠 以及開始去做量展的行為 都還要",
+          "matched_keyword": "ON",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.0,
+      "daily": {
+        "2026-05-03": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 1,
+          "neutral": 0,
+          "sentiment_score": 0.0
+        }
+      }
     }
   ],
   "sectors_ranking": [
@@ -44781,13 +44812,14 @@
     {
       "sector": "半導體",
       "market": "US",
-      "total_mentions": 37,
+      "total_mentions": 38,
       "stock_codes": [
         "INTC",
         "ON",
         "TXN",
         "MCHP",
-        "ADI"
+        "ADI",
+        "ON Semiconductor Corporation"
       ]
     },
     {
