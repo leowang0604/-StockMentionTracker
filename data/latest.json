@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-09T20:10:05",
+  "updated_at": "2026-05-09T21:04:59",
   "stocks_ranking": [
     {
       "code": "INTC",
@@ -18,6 +18,18 @@
           "sentiment_score": 1.0,
           "video_url": "",
           "extraction_mode": "keyword"
+        },
+        {
+          "video": "2026/05/07(四) 財報好不漲，到底為什麼？#ETN #ANET #ARM #COHR",
+          "channel": "財女珍妮",
+          "date": "2026-05-07",
+          "text": "是又不用熬夜 然後不用花 這麼多的心力 每天上班已經很累了對不對 好 我們最後呢 來講一下 這個Arm這家公司 我到底要講Arm還是Arista 好 我先講Arm好了 因為我們在講完AMD 然後跟這個Interer之後呢 大家就或者是高通對不對 大家就會對這個CPU呢 或者是對於這一類公司呢 會感到非常有興趣 就會覺得如果今天未來CPU的 需求越來越大的話 照道理來說 也會有利於高通 或Arm這一類公司 因為他們之前都已經有講說 他們要進入到這個 可能自言晶片啊 或者是AI數據中心的領域嗎 所以這個東西呢 其實是一個長期的趨勢 但是對於AMD 對於Interer來說 他已經是一個早就 我已經身處在這邊了",
+          "matched_keyword": "Intel",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
         },
         {
           "video": "EP659 | 🦤",
@@ -354,22 +366,10 @@
           "sentiment_score": 1.0,
           "video_url": "",
           "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP657 | 🐫",
-          "channel": "股癌",
-          "date": "2026-04-29",
-          "text": "一些後段封裝 或甚至是TSM的一個利空 我覺得不是 因為簡單來講 就是馬斯克那個說法 其實是正確的 就是現在大家是非常缺產能 所以 嚴格上來說 就只是可能前面 排在一些隊伍裡面的客人 現在有機會會跑到Intel這邊來 可是還是很多客人會 持續的排隊 就是在 不管是TSM 或是一些那種強大的後段 封裝場 那如果說 他們可以開出更多產能的話 那當然 這一客人都還是有機會跑回來 再繼續下更多單 所以以目前的狀況來講 就除非我們有注意到 AI有一個 明顯的反轉之類的 那不然 在下的角度 會覺得 反正總之就是 產能要多少 那如果說 代工廠這邊給出來的話 那他就真的 可以去投多少這樣 所以這邊稍微的 跟大家分享一下",
-          "matched_keyword": "Intel",
-          "analysis_source": "whisper",
-          "sentiment": "bearish",
-          "sentiment_score": 0.333,
-          "video_url": "",
-          "extraction_mode": "keyword"
         }
       ],
       "total_mentions": 30,
-      "sentiment_score": 0.668,
+      "sentiment_score": 0.673,
       "daily": {
         "2026-05-09": {
           "mentions": 1,
@@ -377,6 +377,13 @@
           "bearish": 0,
           "neutral": 0,
           "sentiment_score": 1.0
+        },
+        "2026-05-07": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
         },
         "2026-05-06": {
           "mentions": 5,
@@ -428,11 +435,11 @@
           "sentiment_score": 0.7
         },
         "2026-04-29": {
-          "mentions": 9,
+          "mentions": 8,
           "bullish": 5,
-          "bearish": 1,
+          "bearish": 0,
           "neutral": 3,
-          "sentiment_score": 0.759
+          "sentiment_score": 0.812
         }
       }
     },
@@ -28085,6 +28092,97 @@
       }
     },
     {
+      "code": "LITE",
+      "name": "Lumentum",
+      "market": "US",
+      "sector": "光通訊",
+      "contexts": [
+        {
+          "video": "EP653 | 🕊️",
+          "channel": "股癌",
+          "date": "2026-04-15",
+          "text": "而且發現小孩也都會學大人 現在他發脾氣也都用吼的 不過又怕影響到別人 哈哈順便想問您一下 美股的前五大持股 跟抱得住的原因 方便在分享即可 愛您祝您一家健康平安 目前的持股比較大 就是CPU 然後再來就是Marvel 那CPU的話 是買Intel arm 然後跟這個AMD 那再來光通也買滿多的 像Lomantin跟Cohirin 那Cloudflare也買滿多的 還有Tesla也買滿多的 那大概就是這幾檔 是我目前比較主要的持股 那當然會再變動 然後接下來說 以目前CPU的話 我覺得應該還有機會再繼續走 可是Marvel 因為他的利多 就是我買的利多 我已經出來了 所以如果這邊他沒有繼續走的話 他很快就會掉",
+          "matched_keyword": "Lomantin",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": ""
+        },
+        {
+          "video": "2026/04/15 (三）納指10連漲， 巨頭終於要動了？AVGO, MRVL, CRDO噴出",
+          "channel": "財女珍妮",
+          "date": "2026-04-15",
+          "text": "然後還有剛剛有人在YouTube跟我講那個發音的問題，他有現在有點怪怪的",
+          "matched_keyword": "lumenton",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
+        },
+        {
+          "video": "EP1077｜台股大跨步37000點！賣飛正常，如何重新買回來？台積法說若回檔，設備好機會？PCB、CPO強恆強，被動元件真漲價？ft.報價天王 林信富",
+          "channel": "兆華與股惑仔",
+          "date": "2026-04-15",
+          "text": "你去看 這個美國的這些光通訊的股票 其實不管像是Lumatin 這個Coherent",
+          "matched_keyword": "Lumatin",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
+        },
+        {
+          "video": "2026/05/06(三) AMD狂飆，NVDA失色，LITE, ANET財報後下跌",
+          "channel": "財女珍妮",
+          "date": "2026-05-06",
+          "text": "缺貨了 缺貨就代表什麼漲價 那下一家會漲價的公司是什麼呢 就是我們從年初 就一直講到現在 而且我也是在 我們的文章 或者是我們的影片裡面 常常講到的 就是 LUMENTON 之家公司 那大家可以看到 LITE 就是他的股價代號 在昨天盤後之後呢 是財報公佈後跌了 4% 但是你說他的財報 有沒有什麼樣 太大的一個變化 或者是本質上面的改變 其實也沒有 營收達到了 8.08億美元 創下了歷史新高 年增率達到了 90% 好 你還有什麼好挑剔的 對不對 年增率達到 90% 然後營運表現非常強勁的原因 就是因為雲端 就是因為人工智慧 AI 你對於收發器的業務 對於雷射晶片這個需求 其實是非常的旺盛的 以及他金調",
+          "matched_keyword": "LITE",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "2026/05/07(四) 財報好不漲，到底為什麼？#ETN #ANET #ARM #COHR",
+          "channel": "財女珍妮",
+          "date": "2026-05-07",
+          "text": "宣佈以5億美元 買入光纖廠康寧的股票認購權 那希望呢 就是可以在美國境內先大規模的製造 先進光學連線解決方案 服務下一代的AI資料中心 所以灰打也是一直在佈局 我今天東投一點 西投一點 我們昨天講到的盧門城 或者是今天要講的Coherent 其實都是一樣 他之前也都各投了20億嘛 第一個就是我今天建立好聯盟 第二個是我確保 我未來的產能不會缺 在產能不會缺的情況之下 你才有可能可以掌握定價權 你才有可能可以讓你的營收持續的增長嘛 所以這個是昨天灰打 他一個很重要的 這個利多的消息 好 那還有一個事情 大家有發現昨天迪士尼長了8%嗎 他是昨天盤錢的財報喔 然後財報出來之後其實股價就漲 那昨天也是漲了8",
+          "matched_keyword": "盧門城",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini",
+          "whisper_corrected": true
+        }
+      ],
+      "total_mentions": 5,
+      "sentiment_score": 0.7,
+      "daily": {
+        "2026-04-15": {
+          "mentions": 3,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 2,
+          "sentiment_score": 0.667
+        },
+        "2026-05-06": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        },
+        "2026-05-07": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
       "code": "3714",
       "name": "富采",
       "market": "TW",
@@ -29321,77 +29419,6 @@
           "bearish": 0,
           "neutral": 0,
           "sentiment_score": 0.7
-        }
-      }
-    },
-    {
-      "code": "LITE",
-      "name": "Lumentum",
-      "market": "US",
-      "sector": "光通訊",
-      "contexts": [
-        {
-          "video": "EP653 | 🕊️",
-          "channel": "股癌",
-          "date": "2026-04-15",
-          "text": "而且發現小孩也都會學大人 現在他發脾氣也都用吼的 不過又怕影響到別人 哈哈順便想問您一下 美股的前五大持股 跟抱得住的原因 方便在分享即可 愛您祝您一家健康平安 目前的持股比較大 就是CPU 然後再來就是Marvel 那CPU的話 是買Intel arm 然後跟這個AMD 那再來光通也買滿多的 像Lomantin跟Cohirin 那Cloudflare也買滿多的 還有Tesla也買滿多的 那大概就是這幾檔 是我目前比較主要的持股 那當然會再變動 然後接下來說 以目前CPU的話 我覺得應該還有機會再繼續走 可是Marvel 因為他的利多 就是我買的利多 我已經出來了 所以如果這邊他沒有繼續走的話 他很快就會掉",
-          "matched_keyword": "Lomantin",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": ""
-        },
-        {
-          "video": "2026/04/15 (三）納指10連漲， 巨頭終於要動了？AVGO, MRVL, CRDO噴出",
-          "channel": "財女珍妮",
-          "date": "2026-04-15",
-          "text": "然後還有剛剛有人在YouTube跟我講那個發音的問題，他有現在有點怪怪的",
-          "matched_keyword": "lumenton",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": ""
-        },
-        {
-          "video": "EP1077｜台股大跨步37000點！賣飛正常，如何重新買回來？台積法說若回檔，設備好機會？PCB、CPO強恆強，被動元件真漲價？ft.報價天王 林信富",
-          "channel": "兆華與股惑仔",
-          "date": "2026-04-15",
-          "text": "你去看 這個美國的這些光通訊的股票 其實不管像是Lumatin 這個Coherent",
-          "matched_keyword": "Lumatin",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": ""
-        },
-        {
-          "video": "2026/05/06(三) AMD狂飆，NVDA失色，LITE, ANET財報後下跌",
-          "channel": "財女珍妮",
-          "date": "2026-05-06",
-          "text": "缺貨了 缺貨就代表什麼漲價 那下一家會漲價的公司是什麼呢 就是我們從年初 就一直講到現在 而且我也是在 我們的文章 或者是我們的影片裡面 常常講到的 就是 LUMENTON 之家公司 那大家可以看到 LITE 就是他的股價代號 在昨天盤後之後呢 是財報公佈後跌了 4% 但是你說他的財報 有沒有什麼樣 太大的一個變化 或者是本質上面的改變 其實也沒有 營收達到了 8.08億美元 創下了歷史新高 年增率達到了 90% 好 你還有什麼好挑剔的 對不對 年增率達到 90% 然後營運表現非常強勁的原因 就是因為雲端 就是因為人工智慧 AI 你對於收發器的業務 對於雷射晶片這個需求 其實是非常的旺盛的 以及他金調",
-          "matched_keyword": "LITE",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        }
-      ],
-      "total_mentions": 4,
-      "sentiment_score": 0.75,
-      "daily": {
-        "2026-04-15": {
-          "mentions": 3,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 2,
-          "sentiment_score": 0.667
-        },
-        "2026-05-06": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 1.0
         }
       }
     },
@@ -36645,6 +36672,56 @@
           "sentiment_score": 0.8
         },
         "2026-05-07": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
+      "code": "CAT",
+      "name": "Caterpillar Inc.",
+      "market": "US",
+      "sector": "工業",
+      "contexts": [
+        {
+          "video": "EP222 | 台、美股重點一次說， 美股巨頭財報總結，臻鼎-KY與mSAP需求，致茂與鴻勁的產品結構差異與互補",
+          "channel": "韭菜畢業班",
+          "date": "2026-05-03",
+          "text": "增了63% 然後是突破200億美元 然後再來就是說 他的營業利潤率的話 也是從去年的17.8% 飆升到現在32.9% 所以幾乎是近兩倍的一個翻漲 然後再來就是說 這四家巨頭是一口氣的 把2026年的總cat pass 資本支出 上週到了7251美元 這個其實是相對的漂亮的 那再來就是說 這一次其他家的營收 我們看到像微軟 年增率大約是18% 那Amazon的話 Q1是大約年增了17% 那Meta Q1大約是年增了33%附近 所以其實縱觀來講 上標的最快的 以定利潤來講的話 是Google沒有錯的 那再來就是 Google現在的在手訂單的話 現在幾乎是翻倍的一個水準 達到了一個創紀錄的 美元的4620",
+          "matched_keyword": "CAT",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "2026/05/04(一) 伊朗提談判新方案，戰爭已結束？AI續強，軟體復活了嗎 #CAT #TEAM",
+          "channel": "財女珍妮",
+          "date": "2026-05-04",
+          "text": "一嘛 通常美股啊 在禮拜五的時候 他們公佈財報的公司 數量都會比較少 而且比較不會有大型的公司 但是我個人呢 在上個禮拜很想講的一家公司 就是開拓重工 也就是Cath Banner 他的一個股價代號是CAT 在上個禮拜財報公佈之後 我們先來看他最下面的這個 股價線圖 大家有沒有看到 在上個禮拜公佈之後 他是單日大漲了10% 我看到好多人說是哦 實在是感動的痛哭流涕 好 就是你看到他那個 就是在 哦對 在財報之後呢 他股價漲的是10% 那我覺得這家公司呢 是蠻多投資人 他沒有去注意到的AI受益者 或者是基礎建設的受惠者 但是他的股價在過去一年 大家要不要看一下 漲的是多麼的漂亮 你可以看得出來 這是一",
+          "matched_keyword": "CAT",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        }
+      ],
+      "total_mentions": 2,
+      "sentiment_score": 0.75,
+      "daily": {
+        "2026-05-03": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        },
+        "2026-05-04": {
           "mentions": 1,
           "bullish": 0,
           "bearish": 0,
@@ -44347,37 +44424,6 @@
       }
     },
     {
-      "code": "CAT",
-      "name": "Caterpillar Inc.",
-      "market": "US",
-      "sector": "工業",
-      "contexts": [
-        {
-          "video": "EP222 | 台、美股重點一次說， 美股巨頭財報總結，臻鼎-KY與mSAP需求，致茂與鴻勁的產品結構差異與互補",
-          "channel": "韭菜畢業班",
-          "date": "2026-05-03",
-          "text": "增了63% 然後是突破200億美元 然後再來就是說 他的營業利潤率的話 也是從去年的17.8% 飆升到現在32.9% 所以幾乎是近兩倍的一個翻漲 然後再來就是說 這四家巨頭是一口氣的 把2026年的總cat pass 資本支出 上週到了7251美元 這個其實是相對的漂亮的 那再來就是說 這一次其他家的營收 我們看到像微軟 年增率大約是18% 那Amazon的話 Q1是大約年增了17% 那Meta Q1大約是年增了33%附近 所以其實縱觀來講 上標的最快的 以定利潤來講的話 是Google沒有錯的 那再來就是 Google現在的在手訂單的話 現在幾乎是翻倍的一個水準 達到了一個創紀錄的 美元的4620",
-          "matched_keyword": "CAT",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        }
-      ],
-      "total_mentions": 1,
-      "sentiment_score": 1.0,
-      "daily": {
-        "2026-05-03": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 1.0
-        }
-      }
-    },
-    {
       "code": "1110",
       "name": "東泥",
       "market": "TW",
@@ -45006,6 +45052,16 @@
       ]
     },
     {
+      "sector": "光通訊",
+      "market": "US",
+      "total_mentions": 18,
+      "stock_codes": [
+        "COHR",
+        "LITE",
+        "AAOI"
+      ]
+    },
+    {
       "sector": "電動車",
       "market": "TW",
       "total_mentions": 18,
@@ -45025,16 +45081,6 @@
         "CCL",
         "ABNB",
         "BKNG"
-      ]
-    },
-    {
-      "sector": "光通訊",
-      "market": "US",
-      "total_mentions": 17,
-      "stock_codes": [
-        "COHR",
-        "LITE",
-        "AAOI"
       ]
     },
     {
@@ -45196,6 +45242,18 @@
       ]
     },
     {
+      "sector": "工業",
+      "market": "US",
+      "total_mentions": 10,
+      "stock_codes": [
+        "UBER",
+        "MAS",
+        "CAT",
+        "EME",
+        "PNR"
+      ]
+    },
+    {
       "sector": "其他電子業",
       "market": "TW",
       "total_mentions": 10,
@@ -45247,18 +45305,6 @@
         "1315",
         "1305",
         "1326"
-      ]
-    },
-    {
-      "sector": "工業",
-      "market": "US",
-      "total_mentions": 9,
-      "stock_codes": [
-        "UBER",
-        "MAS",
-        "EME",
-        "PNR",
-        "CAT"
       ]
     },
     {
