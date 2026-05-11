@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-11T22:05:40",
+  "updated_at": "2026-05-11T22:19:20",
   "stocks_ranking": [
     {
       "code": "INTC",
@@ -8547,6 +8547,19 @@
           "whisper_corrected": true
         },
         {
+          "video": "EP328 公園槓桿伯",
+          "channel": "投資癮",
+          "date": "2026-05-10",
+          "text": "美股的記憶體類股 慢慢去做簡碼 也不是一寫就是那一隻而已 那做一些簡碼的行為之後 把它轉移到一些被記憶體影響的公司 像是當時有討論到 像美國的戴爾或是惠普 那台灣的話就是技嘉華碩 或是工業電腦的研華或化汗 而最近 他們第一線的族群開始輪動向上了 那大部分也創了新高 那次等順位跟第三順位 在這禮拜也恰恰開始帶量代價 不過這部分也沒有什麼太多討論的空檢 因為在過去都討論過了 現在只是驗證當時的想法對不對而已 對也不代表一定會賺錢 有時候對的也不一定賺到錢 手上也很多東西是我看對了 但是沒有來得及買 或當時沒有辦法注意到它的 現在也很多公司也往上跑了 所以有時候我也在記錄這些東西 記錄自己的交易紀錄 或",
+          "matched_keyword": "化汗",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini",
+          "whisper_corrected": true
+        },
+        {
           "video": "EP660 | 🍄‍🟫",
           "channel": "股癌",
           "date": "2026-05-09",
@@ -8909,30 +8922,17 @@
           "video_url": "",
           "extraction_mode": "gemini",
           "whisper_corrected": true
-        },
-        {
-          "video": "EP1080｜美伊反覆、市場懶得理？台股125家漲停，櫃買全亞股最強！氣氛好找強勢股，氣氛轉差撿ETF，配置抓對就舒坦！ft.題材獵人 林漢偉",
-          "channel": "兆華與股惑仔",
-          "date": "2026-04-20",
-          "text": "歡迎收聽趙懷谷貨載地1080集 今天是2026年的4月20號 台股的傳奇還在繼續的上演 我們也有看到上個禮拜五的台股業盤 是一個大噴的情況 因為當天就傳出來說 伊朗已經宣布要全面開放核母子海峽 那當然當時也會有點覺得半信半疑 然後真的嗎 怎麼突然之間就說要開放了 結果到了禮拜六應該是下午吧 就說了一切又是川普這邊單方面說 川普這個伊朗要開放 根本就沒有開放 甚至有說有通過的貨輪有被炮火打到 什麼的",
-          "matched_keyword": "新英財",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "gemini",
-          "whisper_corrected": true
         }
       ],
       "total_mentions": 30,
       "sentiment_score": 0.523,
       "daily": {
         "2026-05-10": {
-          "mentions": 1,
+          "mentions": 2,
           "bullish": 1,
           "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 0.7
+          "neutral": 1,
+          "sentiment_score": 0.6
         },
         "2026-05-09": {
           "mentions": 1,
@@ -9047,13 +9047,6 @@
           "sentiment_score": 0.7
         },
         "2026-04-21": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-04-20": {
           "mentions": 1,
           "bullish": 0,
           "bearish": 0,
@@ -38836,6 +38829,56 @@
       }
     },
     {
+      "code": "8424",
+      "name": "惠普",
+      "market": "TW",
+      "sector": "建材營造",
+      "contexts": [
+        {
+          "video": "EP1089｜5月開盤漲1800點，怕輸人，低持股、沒漲停都焦慮？多頭氣勢、熱門族群沒問題，問題在敢買誰？認清自己的最優化報酬！ft.題材獵人 林漢偉",
+          "channel": "兆華與股惑仔",
+          "date": "2026-05-04",
+          "text": "也是史上第一大 但五月的第一個交易日 我們又開始繼續刷新紀錄 今天中場上漲了一千七百七十八點 盤中又漲到一千八百點以上 量能是沒有在突破新高 可是今天的漲點是史上單日最大的漲點 上一次出現在對等關稅 川普出來喊話有沒有 然後不是所有的股票都漲停板嗎 那一天的漲點今天正式超越 可是位階不一樣 當時是不到兩萬點 那現在是四萬點 所以位階不一樣 所以漲幅是沒有那麼大 可是漲點超過了 但無論如何 我最近可能聽到的 或是您各位聽眾朋友身邊的人 在聊的都是formal 真的formal了 我們從三萬點就說formal 到現在真的是很怕自己的績效輸人 又好怕會反轉 手上的股票來不及賣 又好怕自己沒有上車 各種的",
+          "matched_keyword": "惠普",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.8,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
+          "video": "EP328 公園槓桿伯",
+          "channel": "投資癮",
+          "date": "2026-05-10",
+          "text": "那我自己當時是把美股的記憶體類股 慢慢去做簡碼 也不是一寫就是那一隻而已 那做一些簡碼的行為之後 把它轉移到一些被記憶體影響的公司 像是當時有討論到 像美國的戴爾或是惠普",
+          "matched_keyword": "惠普",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        }
+      ],
+      "total_mentions": 2,
+      "sentiment_score": 0.65,
+      "daily": {
+        "2026-05-04": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.8
+        },
+        "2026-05-10": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
       "code": "3040",
       "name": "遠見",
       "market": "TW",
@@ -45165,37 +45208,6 @@
       }
     },
     {
-      "code": "8424",
-      "name": "惠普",
-      "market": "TW",
-      "sector": "建材營造",
-      "contexts": [
-        {
-          "video": "EP1089｜5月開盤漲1800點，怕輸人，低持股、沒漲停都焦慮？多頭氣勢、熱門族群沒問題，問題在敢買誰？認清自己的最優化報酬！ft.題材獵人 林漢偉",
-          "channel": "兆華與股惑仔",
-          "date": "2026-05-04",
-          "text": "也是史上第一大 但五月的第一個交易日 我們又開始繼續刷新紀錄 今天中場上漲了一千七百七十八點 盤中又漲到一千八百點以上 量能是沒有在突破新高 可是今天的漲點是史上單日最大的漲點 上一次出現在對等關稅 川普出來喊話有沒有 然後不是所有的股票都漲停板嗎 那一天的漲點今天正式超越 可是位階不一樣 當時是不到兩萬點 那現在是四萬點 所以位階不一樣 所以漲幅是沒有那麼大 可是漲點超過了 但無論如何 我最近可能聽到的 或是您各位聽眾朋友身邊的人 在聊的都是formal 真的formal了 我們從三萬點就說formal 到現在真的是很怕自己的績效輸人 又好怕會反轉 手上的股票來不及賣 又好怕自己沒有上車 各種的",
-          "matched_keyword": "惠普",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.8,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        }
-      ],
-      "total_mentions": 1,
-      "sentiment_score": 0.8,
-      "daily": {
-        "2026-05-04": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 0.8
-        }
-      }
-    },
-    {
       "code": "9912",
       "name": "偉聯",
       "market": "TW",
@@ -46870,6 +46882,37 @@
           "sentiment_score": 0.5
         }
       }
+    },
+    {
+      "code": "6461",
+      "name": "益得",
+      "market": "TW",
+      "sector": "光電",
+      "contexts": [
+        {
+          "video": "EP328 公園槓桿伯",
+          "channel": "投資癮",
+          "date": "2026-05-10",
+          "text": "三個月都還沒有跑完 所以第一節還沒有結束 那我們接下來還有第二節 第三節跟第四節 要完整打完一整年的賽事 才算是一個稍微的暫時結束 而如果今年結束之後 下一個開始又有一個新的循環了 所以如果這段時間獲益得還不錯 那我覺得恭喜你 也要好好把握 那如果沒這麼好的 其實也不用想太多 它都是一個新的開始 那這禮拜有收到一個聽眾朋友的信件 我覺得算是長文吧 也覺得蠻有感觸的 也分享給大家 大家文章的內容是 謝謝魏德 我是從第一集開始聽 及最早開始訂閱PressRate的用戶 將一則生活自己覺得非常孤獨的 無法跟別人討論看法 別人在意的通常只是你賺多少 你賠多少 有賺時 別人只會說你因為運氣 誰誰誰就是因為買",
+          "matched_keyword": "益得",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-05-10": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
     }
   ],
   "sectors_ranking": [
@@ -47544,13 +47587,14 @@
     {
       "sector": "光電",
       "market": "TW",
-      "total_mentions": 13,
+      "total_mentions": 14,
       "stock_codes": [
         "6469",
         "3118",
         "4128",
         "3176",
-        "4111"
+        "4111",
+        "6461"
       ]
     },
     {
@@ -47958,6 +48002,16 @@
       ]
     },
     {
+      "sector": "建材營造",
+      "market": "TW",
+      "total_mentions": 5,
+      "stock_codes": [
+        "2718",
+        "8424",
+        "8080"
+      ]
+    },
+    {
       "sector": "公用事業",
       "market": "US",
       "total_mentions": 4,
@@ -48003,16 +48057,6 @@
         "2706",
         "2731",
         "2753"
-      ]
-    },
-    {
-      "sector": "建材營造",
-      "market": "TW",
-      "total_mentions": 4,
-      "stock_codes": [
-        "2718",
-        "8080",
-        "8424"
       ]
     },
     {
