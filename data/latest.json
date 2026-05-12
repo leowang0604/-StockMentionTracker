@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-12T19:39:05",
+  "updated_at": "2026-05-12T19:54:42",
   "stocks_ranking": [
     {
       "code": "INTC",
@@ -10408,9 +10408,22 @@
           "video_url": "",
           "extraction_mode": "gemini",
           "whisper_corrected": true
+        },
+        {
+          "video": "EP223 | 台、美股重點一次說， 記憶體與矽晶圓，NVIDIA設計變更對散熱族群的影響和後勢，AMD財報亮點與宜鼎產品結構",
+          "channel": "韭菜畢業班",
+          "date": "2026-05-06",
+          "text": "了 因為其實EDIM這一家公司 是這一波記憶體來 我覺得 甚至有一點超過8299的漲幅 應該算是漲幅最兇猛 我們之前有講過 它就是很大的一個代表作 我們如果說大家比較 單一去想的 可能是一開始就是 南亞科 華邦店那一包 然後到第二階段 你就是想到旺紅 然後再來的話 就是可能像是 EDIM這一塊 就大家會去比較思考 我知道有些人的順序 可能是反的 就是你想的東西 跟我想的東西不一樣的話 也沒關係 那你一定是對的 不會跟去 跟你去爭辯這一塊的東西 那我們大概把他的 營收結構跟各位聊一下 以2025年來講的話 產品的整體的結構 第一任佔了55% 那Flasher的部分的話 佔了37% 那AI Solut",
+          "matched_keyword": "漢微課",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini",
+          "whisper_corrected": true
         }
       ],
-      "total_mentions": 28,
+      "total_mentions": 29,
       "sentiment_score": 0.498,
       "daily": {
         "2026-04-22": {
@@ -10498,10 +10511,10 @@
           "sentiment_score": 0.5
         },
         "2026-05-06": {
-          "mentions": 2,
+          "mentions": 3,
           "bullish": 0,
           "bearish": 0,
-          "neutral": 2,
+          "neutral": 3,
           "sentiment_score": 0.5
         },
         "2026-05-05": {
@@ -47643,6 +47656,17 @@
       ]
     },
     {
+      "sector": "油電燃氣",
+      "market": "TW",
+      "total_mentions": 32,
+      "stock_codes": [
+        "3402",
+        "6654",
+        "3587",
+        "3541"
+      ]
+    },
+    {
       "sector": "航運",
       "market": "TW",
       "total_mentions": 32,
@@ -47651,17 +47675,6 @@
         "2603",
         "2615",
         "2609"
-      ]
-    },
-    {
-      "sector": "油電燃氣",
-      "market": "TW",
-      "total_mentions": 31,
-      "stock_codes": [
-        "3402",
-        "6654",
-        "3587",
-        "3541"
       ]
     },
     {
