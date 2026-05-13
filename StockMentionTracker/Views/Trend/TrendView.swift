@@ -476,7 +476,7 @@ struct DayMentionsSheet: View {
             List(dayContexts) { ctx in
                 ContextRowView(
                     context: ctx,
-                    highlightTerms: [stock.name, stock.code],
+                    highlightTerms: highlightTerms(for: ctx),
                     isExpanded: expandedIDs.contains(ctx.id),
                     onToggle: {
                         withAnimation(.easeInOut(duration: 0.2)) {
@@ -493,6 +493,21 @@ struct DayMentionsSheet: View {
         }
         .presentationDetents([.medium, .large])
         .presentationDragIndicator(.visible)
+    }
+
+    private func highlightTerms(for context: MentionContext) -> [String] {
+        let contextTerms = mentionHighlightTerms(
+            stockName: stock.name,
+            code: stock.code,
+            matchedKeyword: context.matchedKeyword
+        )
+        let keywordTerms = stock.contexts
+            .compactMap(\.matchedKeyword)
+            .filter { !$0.isEmpty }
+            .flatMap {
+                mentionHighlightTerms(stockName: stock.name, code: stock.code, matchedKeyword: $0)
+            }
+        return Array(Set(contextTerms + keywordTerms))
     }
 }
 

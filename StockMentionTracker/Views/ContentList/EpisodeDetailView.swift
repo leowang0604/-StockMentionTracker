@@ -4,6 +4,8 @@ struct VideoDetailView: View {
     let video: VideoScanned
     let stockEntries: [StockEntry]
 
+    @Environment(DataService.self) private var dataService
+
     @State private var expandedIDs = Set<String>()
 
     var body: some View {
@@ -41,6 +43,7 @@ struct VideoDetailView: View {
                             VideoStockRow(
                                 stock: stock,
                                 context: ctx,
+                                highlightTerms: highlightTerms(for: stock, context: ctx),
                                 isExpanded: expandedIDs.contains(ctx.id),
                                 onToggle: {
                                     withAnimation(.easeInOut(duration: 0.2)) {
@@ -79,6 +82,21 @@ struct VideoDetailView: View {
         default:         return .gray.opacity(0.12)
         }
     }
+
+    private func highlightTerms(for stock: StockEntry, context: MentionContext) -> [String] {
+        let fullContexts = dataService.scanResult.stocksRanking
+            .first { $0.code == stock.code }?.contexts ?? stock.contexts
+        let keywords = fullContexts.compactMap(\.matchedKeyword).filter { !$0.isEmpty }
+        let contextTerms = mentionHighlightTerms(
+            stockName: stock.name,
+            code: stock.code,
+            matchedKeyword: context.matchedKeyword
+        )
+        let keywordTerms = keywords.flatMap {
+            mentionHighlightTerms(stockName: stock.name, code: stock.code, matchedKeyword: $0)
+        }
+        return Array(Set(contextTerms + keywordTerms))
+    }
 }
 
 // MARK: - Stock row inside video detail
@@ -86,6 +104,7 @@ struct VideoDetailView: View {
 private struct VideoStockRow: View {
     let stock: StockEntry
     let context: MentionContext
+    let highlightTerms: [String]
     let isExpanded: Bool
     let onToggle: () -> Void
 
@@ -120,7 +139,7 @@ private struct VideoStockRow: View {
                 VStack(alignment: .leading, spacing: 4) {
                     Text("提及原文")
                         .font(.caption.weight(.medium)).foregroundStyle(.secondary)
-                    Text("…\(context.text)…")
+                    Text(highlightedMentionText("…\(context.text)…", terms: highlightTerms))
                         .font(.caption)
                         .padding(10)
                         .background(.quaternary, in: RoundedRectangle(cornerRadius: 8))

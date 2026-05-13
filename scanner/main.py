@@ -416,6 +416,49 @@ CONTEXT_PAIRS: list[tuple[str, list[str], list[str]]] = [
 BULLISH_KEYWORDS = BULLISH_STRONG | BULLISH_MILD
 BEARISH_KEYWORDS = BEARISH_STRONG | BEARISH_MILD
 
+STOCK_CONTEXT_HINTS: set[str] = {
+    "股價", "股票", "個股", "這檔", "法說", "法會", "營收", "獲利", "EPS",
+    "本益比", "毛利", "毛利率", "訂單", "出貨", "漲停", "跌停", "大漲", "大跌",
+    "創高", "創新高", "拉回", "位階", "買點", "賣點", "看多", "看空", "中性",
+    "漲價", "報價", "代工", "產能", "擴產", "庫存", "需求", "產業", "族群",
+    "題材", "估值", "市佔", "公司", "客戶", "供應鏈",
+} | BULLISH_KEYWORDS | BEARISH_KEYWORDS
+
+
+def _has_stock_context_evidence(
+    text: str,
+    *,
+    code: str = "",
+    mention_terms: list[str] | None = None,
+    window: int = 28,
+) -> bool:
+    """Whether a near-sound correction sits inside a real stock-discussion context."""
+    if not text:
+        return False
+
+    terms = [t for t in (mention_terms or []) if t]
+    if code and code in text:
+        return True
+
+    for hint in STOCK_CONTEXT_HINTS:
+        if hint not in text:
+            continue
+        if not terms:
+            return True
+        for term in terms:
+            start = 0
+            while True:
+                pos = text.find(term, start)
+                if pos < 0:
+                    break
+                lo = max(0, pos - window)
+                hi = min(len(text), pos + len(term) + window)
+                if hint in text[lo:hi]:
+                    return True
+                start = pos + len(term)
+
+    return False
+
 # ─────────────────────────────────────────────────────────────────────────────
 # US Stock built-in dictionary (Chinese/English aliases)
 # Format: (keyword_list, ticker, display_name, sector)
@@ -2209,7 +2252,7 @@ def _levenshtein(a: str, b: str) -> int:
     return prev[lb]
 
 
-def _find_keyword_pos(needle: str, haystack: str) -> int:
+def _find_keyword_pos(needle: str, haystack: str, allow_fuzzy: bool = True) -> int:
     """在 haystack 中找 needle 的位置，支援 臺/台 正規化及 Levenshtein ≤ 1 模糊比對。
     回傳在原始 haystack 中的位置，找不到則回傳 -1。"""
     # 1. 完全比對
@@ -2223,11 +2266,12 @@ def _find_keyword_pos(needle: str, haystack: str) -> int:
         if pos >= 0:
             return pos
     # 3. Levenshtein ≤ 1 滑動視窗（限 ≥ 2 字的 needle）
-    win = len(needle)
-    if win >= 2:
-        for start in range(len(haystack) - win + 1):
-            if _levenshtein(needle, haystack[start:start + win]) <= 1:
-                return start
+    if allow_fuzzy:
+        win = len(needle)
+        if win >= 2:
+            for start in range(len(haystack) - win + 1):
+                if _levenshtein(needle, haystack[start:start + win]) <= 1:
+                    return start
     return -1
 
 
@@ -2463,11 +2507,9 @@ def _validate_gemini_stocks(
             and whisper_orig_bare in chunk_text
             and _levenshtein(_core(whisper_orig_bare), _resolved_core) <= 1
         )
-        name_appears = (
-            any(kw in chunk_text for kw in search_names)
-            or _whisper_close
-            or _whisper_bare_close
-        )
+        exact_name_appears = any(kw in chunk_text for kw in search_names)
+        name_appears = exact_name_appears or _whisper_close or _whisper_bare_close
+        fuzzy_name_appears = False
         # Whisper 錯字修正場景：Gemini 給了正確名稱但未填 whisper_original，
         # 用 Levenshtein 在 chunk 中滑動視窗找相近的詞。
         # 2 字名稱（如鴻海、欣興）：distance ≤ 1（嚴格，避免誤判）
@@ -2479,12 +2521,14 @@ def _validate_gemini_stocks(
                 window = chunk_text[start:start + win]
                 if _levenshtein(resolved_name, window) <= max_dist:
                     name_appears = True
+                    fuzzy_name_appears = True
                     break
                 # 也試 win+1 視窗（僅 3 字以上，避免 2 字過度模糊）
                 if win >= 3 and start + win + 1 <= len(chunk_text):
                     window2 = chunk_text[start:start + win + 1]
                     if _levenshtein(resolved_name, window2) <= max_dist:
                         name_appears = True
+                        fuzzy_name_appears = True
                         break
         if not name_appears:
             print(f"  [gemini_extract] hallucination? {resolved_code}({resolved_name}) not in chunk → skipped", file=sys.stderr)
@@ -2525,23 +2569,70 @@ def _validate_gemini_stocks(
         # Use _find_keyword_pos for 臺/台 normalization + Levenshtein ≤ 1 fuzzy fallback.
         search_term = None
         search_pos  = -1
-        for candidate in (
-            [whisper_orig] if whisper_orig else []
+        search_candidates = (
+            [(whisper_orig, False)] if whisper_orig else []
         ) + (
-            [whisper_orig_bare] if whisper_orig_bare and whisper_orig_bare != whisper_orig else []
-        ) + stock_keywords + [resolved_name]:
-            p = _find_keyword_pos(candidate, chunk_text)
+            [(whisper_orig_bare, False)] if whisper_orig_bare and whisper_orig_bare != whisper_orig else []
+        ) + [
+            (candidate, True) for candidate in (stock_keywords + [resolved_name])
+        ]
+        for candidate, allow_fuzzy in search_candidates:
+            p = _find_keyword_pos(candidate, chunk_text, allow_fuzzy=allow_fuzzy)
             if p >= 0:
                 search_term, search_pos = candidate, p
                 break
-        gemini_ctx = ctx  # preserve Gemini's original context as fallback
+        gemini_ctx = ctx  # preserve Gemini's original context only when it clearly matches the stock
         if not ctx or not ctx_has_keyword or (search_pos >= 0 and len(ctx) < 80):
             # Use transcript-based context when Gemini's is missing, wrong, or too short
             if search_pos >= 0:
                 ctx = chunk_text[max(0, search_pos - 100):search_pos + len(search_term) + 200]
-            elif gemini_ctx:
-                ctx = gemini_ctx  # keep Gemini's context; better than transcript intro
-            # else: ctx stays empty (no position found, no Gemini context)
+            elif ctx_has_keyword and gemini_ctx:
+                ctx = gemini_ctx
+            else:
+                ctx = ""
+
+        if not ctx:
+            print(f"  [gemini_extract] context rejected for {resolved_code}({resolved_name}) — no reliable keyword-aligned excerpt", file=sys.stderr)
+            _vctx = video_ctx or {}
+            _skip_log.append({
+                "keyword": whisper_orig or name,
+                "reason":  "gemini_context_rejected",
+                "detail":  f"找不到包含股票關鍵字的可靠上下文: {resolved_code}/{resolved_name}",
+                "video_id": _vctx.get("video_id", ""),
+                "channel":  _vctx.get("channel", ""),
+                "date":     _vctx.get("date", ""),
+                "title":    _vctx.get("title", ""),
+            })
+            continue
+
+        # 對 Whisper 近音修正再補一層語境證據：
+        # 若沒有明確股票名稱，只是靠近音詞或模糊比對撐起來，
+        # 就要求 context 附近出現股票討論語境，避免把節目前言/口頭語硬修成股票。
+        relies_on_correction = bool(whisper_orig) and not exact_name_appears
+        if relies_on_correction and (_whisper_close or _whisper_bare_close or fuzzy_name_appears):
+            evidence_text = ctx or chunk_text
+            evidence_terms = [t for t in (whisper_orig, whisper_orig_bare) if t]
+            if not _has_stock_context_evidence(
+                evidence_text,
+                code=resolved_code,
+                mention_terms=evidence_terms,
+            ):
+                print(
+                    f"  [gemini_extract] whisper correction rejected for {resolved_code}({resolved_name})"
+                    " — no stock-discussion evidence near corrected term",
+                    file=sys.stderr,
+                )
+                _vctx = video_ctx or {}
+                _skip_log.append({
+                    "keyword": whisper_orig or name,
+                    "reason":  "whisper_correction_low_context",
+                    "detail":  f"近音修正缺少股票語境證據: {resolved_code}/{resolved_name}",
+                    "video_id": _vctx.get("video_id", ""),
+                    "channel":  _vctx.get("channel", ""),
+                    "date":     _vctx.get("date", ""),
+                    "title":    _vctx.get("title", ""),
+                })
+                continue
 
         validated.append({
             "stock_code":        resolved_code,
@@ -2580,7 +2671,7 @@ def _gemini_extract_full_video(
 
     prompt = (
         "你是台灣股市分析專家。以下是一整集財經 YouTube/Podcast 的完整逐字稿，"
-        "可能含有 Whisper 語音辨識錯字（例如「新英財」應為「新應材」、「漢微課」應為「漢微科」）。\n\n"
+        "可能含有 Whisper 語音辨識錯字（同音字或近音字替換）。\n\n"
         f"頻道：{channel}\n"
         f"影片標題：{video_title[:80]}\n\n"
         f"完整逐字稿：\n「{text}」\n\n"
@@ -2596,12 +2687,8 @@ def _gemini_extract_full_video(
         "- 「台積電今天漲很多」→ 回傳台積電 ✅\n"
         "- 中性描述（「還需要時間」「整理中」「觀察」）→ neutral，不判為 bearish\n\n"
         "【Whisper 誤字處理（非常重要）】\n"
-        "- 如果原文出現的詞看起來是 Whisper 語音辨識錯字，**一定要填入 whisper_original**\n"
-        "- 例如：\n"
-        "  原文「細創」→ name=\"矽創\", whisper_original=\"細創\" ✅\n"
-        "  原文「微影」→ name=\"微星\", whisper_original=\"微影\" ✅\n"
-        "  原文「漢微課」→ name=\"漢微科\", whisper_original=\"漢微課\" ✅\n"
-        "  原文「台積電」→ name=\"台積電\", whisper_original=null ✅（沒有誤字）\n"
+        "- 如果原文出現的詞看起來是 Whisper 語音辨識錯字（同音字替換），"
+        "請填入正確股票名稱，並將原文錯誤詞填入 whisper_original\n"
         "- 如果不填 whisper_original，驗證時會找不到原文對應，導致這支股票被丟棄\n"
         "- 寧願多填，不要漏填\n\n"
         "【情緒評分標準】\n"

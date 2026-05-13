@@ -16,8 +16,11 @@ struct StockDetailView: View {
         let fullContexts = dataService.scanResult.stocksRanking
             .first { $0.code == stock.code }?.contexts ?? stock.contexts
         let keywords = fullContexts.compactMap(\.matchedKeyword).filter { !$0.isEmpty }
-        let base = shortNameTerms(stock.name, stock.code, nil)
-        return Array(Set(base + keywords))
+        let base = mentionHighlightTerms(stockName: stock.name, code: stock.code)
+        let keywordTerms = keywords.flatMap {
+            mentionHighlightTerms(stockName: stock.name, code: stock.code, matchedKeyword: $0)
+        }
+        return Array(Set(base + keywordTerms))
     }
 
     private var sortedContexts: [MentionContext] {
@@ -189,49 +192,6 @@ struct StockDetailView: View {
     }
 }
 
-/// Builds highlight terms from stock name, code, and matchedKeyword.
-/// Also extracts the short name (before ", " or " Inc"/" Ltd" etc.) so that
-/// "Cloudflare, Inc." → also searches "Cloudflare".
-private func shortNameTerms(_ name: String, _ code: String, _ keyword: String?) -> [String] {
-    var terms: [String] = []
-    terms.append(name)
-    // Short name: strip English legal suffixes
-    // e.g. "Cloudflare, Inc." → "Cloudflare", "Adobe Inc." → "Adobe"
-    let commaStripped = name
-        .components(separatedBy: ",").first?
-        .trimmingCharacters(in: .whitespaces) ?? name
-    if commaStripped != name { terms.append(commaStripped) }
-    let englishSuffixes = [" Inc.", " Inc", " Corp.", " Corp", " Corporation",
-                           " LLC", " Ltd.", " Ltd", " Co.", " Holdings", " Group"]
-    let baseForSuffix = commaStripped
-    for suffix in englishSuffixes {
-        if baseForSuffix.hasSuffix(suffix) {
-            let s = String(baseForSuffix.dropLast(suffix.count)).trimmingCharacters(in: .whitespaces)
-            if s != name && s.count >= 2 { terms.append(s) }
-            break
-        }
-    }
-    // Short name: strip Chinese company suffixes repeatedly
-    // e.g. "南俊國際股份有限公司" → "南俊國際" → "南俊"
-    let chineseSuffixes = ["股份有限公司", "有限公司", "投資控股", "投控", "控股",
-                           "光電工業", "光電", "電子工業", "電子", "科技工業", "科技",
-                           "電腦", "工業", "企業", "實業", "國際"]
-    var current = name
-    outer: while true {
-        for suffix in chineseSuffixes {
-            if current.hasSuffix(suffix) {
-                current = String(current.dropLast(suffix.count))
-                if current.count >= 2 { terms.append(current) }
-                continue outer
-            }
-        }
-        break
-    }
-    terms.append(code)
-    if let kw = keyword, !kw.isEmpty { terms.append(kw) }
-    return terms.filter { !$0.isEmpty }
-}
-
 // MARK: - Context Row
 
 struct ContextRowView: View {
@@ -334,44 +294,26 @@ struct ContextRowView: View {
             // Context text (expandable)
             if !context.text.isEmpty {
                 Button(action: onToggle) {
-                    VStack(alignment: .leading, spacing: 4) {
-                        HStack {
-                            Text("提及內容")
-                                .font(.caption.weight(.medium))
-                                .foregroundStyle(.secondary)
-                            Image(systemName: isExpanded ? "chevron.up" : "chevron.down")
-                                .font(.caption2)
-                                .foregroundStyle(.secondary)
-                        }
-                        if isExpanded {
-                            Text(highlighted("…\(context.text)…"))
-                                .font(.caption)
-                                .multilineTextAlignment(.leading)
-                        }
+                    HStack {
+                        Text("提及內容")
+                            .font(.caption.weight(.medium))
+                            .foregroundStyle(.secondary)
+                        Image(systemName: isExpanded ? "chevron.up" : "chevron.down")
+                            .font(.caption2)
+                            .foregroundStyle(.secondary)
+                        Spacer(minLength: 0)
                     }
                 }
                 .buttonStyle(.plain)
+
+                if isExpanded {
+                    Text(highlightedMentionText("…\(context.text)…", terms: highlightTerms))
+                        .font(.caption)
+                        .multilineTextAlignment(.leading)
+                }
             }
         }
         .padding(.vertical, 4)
-    }
-
-    private func highlighted(_ raw: String) -> AttributedString {
-        var attributed = AttributedString(raw)
-        for term in highlightTerms where !term.isEmpty {
-            var searchFrom = raw.startIndex
-            while searchFrom < raw.endIndex,
-                  let found = raw.range(of: term, options: .caseInsensitive, range: searchFrom..<raw.endIndex) {
-                let offset = raw.distance(from: raw.startIndex, to: found.lowerBound)
-                let length = raw.distance(from: found.lowerBound, to: found.upperBound)
-                let lo = attributed.characters.index(attributed.startIndex, offsetBy: offset)
-                let hi = attributed.characters.index(lo, offsetBy: length)
-                attributed[lo..<hi].foregroundColor = .orange
-                attributed[lo..<hi].inlinePresentationIntent = .stronglyEmphasized
-                searchFrom = found.upperBound
-            }
-        }
-        return attributed
     }
 
     private var analysisColor: Color {
