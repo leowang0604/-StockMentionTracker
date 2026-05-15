@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-15T21:28:36",
+  "updated_at": "2026-05-15T21:42:02",
   "stocks_ranking": [
     {
       "code": "INTC",
@@ -3066,6 +3066,18 @@
           "extraction_mode": "gemini"
         },
         {
+          "video": "EP328 公園槓桿伯",
+          "channel": "投資癮",
+          "date": "2026-05-10",
+          "text": "是市場上是沒有任何人討論的 我自己當時是把美股的記憶體類股 慢慢去做簡碼 也不是一寫就是那一隻而已 那做一些簡碼的行為之後 把它轉移到一些被記憶體影響的公司 像是當時有討論到 像美國的戴爾或是惠普 那台灣的話就是技嘉華碩 或是工業電腦的研華或化汗 而最近 他們第一線的族群開始輪動向上了 那大部分也創了新高 那次等順位跟第三順位 在這禮拜也恰恰開始帶量代價 不過這部分也沒有什麼太多討論的空檢 因為在過去都討論過了 現在只是驗證當時的想法對不對而已 對也不代表一定會賺錢 有時候對的也不一定賺到錢 手上也很多東西是我看對了 但是沒有來得及買 或當時沒有辦法注意到它的 現在也很多公司也往上跑了 所以有時候",
+          "matched_keyword": "台積電",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
           "video": "EP660 | 🍄‍🟫",
           "channel": "股癌",
           "date": "2026-05-09",
@@ -3184,22 +3196,10 @@
           "sentiment_score": 0.5,
           "video_url": "",
           "extraction_mode": "gemini"
-        },
-        {
-          "video": "EP223 | 台、美股重點一次說， 記憶體與矽晶圓，NVIDIA設計變更對散熱族群的影響和後勢，AMD財報亮點與宜鼎產品結構",
-          "channel": "韭菜畢業班",
-          "date": "2026-05-06",
-          "text": "0的 這一個大單 然後再加上下半年 其實也會量產一些 兩奈米製程的CPU 那同時第二季的一個裁測 也是一樣 就是預期全部都是超越的 所以我們可以看到 像台灣相關的東西 我們講自貿 或是說像是日月光的 台積電的一個表現的話 也其實都會同步的 一起受惠下去 那再來就是說 這一次的第一季的財報 我們可以看到年增率 營收來看的話是38% 那EPS的話年增率是43% 那同時data center的部分的話 它是直接增加了57% 是達到了創紀錄的一個58億美元 所以也等於是目前公司的營收 跟獲利最主要的一個驅動力 也是其他CSP大廠上面的一個配合 那同時我們可以看到 AI450的MI450 不好意思口誤 AI4",
-          "matched_keyword": "台積電",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.7,
-          "video_url": "",
-          "extraction_mode": "gemini"
         }
       ],
       "total_mentions": 30,
-      "sentiment_score": 0.545,
+      "sentiment_score": 0.538,
       "daily": {
         "2026-05-15": {
           "mentions": 2,
@@ -3237,10 +3237,10 @@
           "sentiment_score": 0.5
         },
         "2026-05-10": {
-          "mentions": 1,
+          "mentions": 2,
           "bullish": 0,
           "bearish": 0,
-          "neutral": 1,
+          "neutral": 2,
           "sentiment_score": 0.5
         },
         "2026-05-09": {
@@ -3265,11 +3265,11 @@
           "sentiment_score": 0.6
         },
         "2026-05-06": {
-          "mentions": 2,
-          "bullish": 1,
+          "mentions": 1,
+          "bullish": 0,
           "bearish": 0,
           "neutral": 1,
-          "sentiment_score": 0.6
+          "sentiment_score": 0.5
         }
       }
     },
@@ -22996,10 +22996,23 @@
           "sentiment_score": 0.7,
           "video_url": "",
           "extraction_mode": "gemini"
+        },
+        {
+          "video": "EP328 公園槓桿伯",
+          "channel": "投資癮",
+          "date": "2026-05-10",
+          "text": "面上漲 不管是公營的 私營的 我自己是持有比較多公營的 我自己已經沒有私營的部分了 我會等待下一個可能的時機點 但是呢同時也看到 紅海集團開始全面上漲 聯聯集團開始全面上漲 但是市場上的焦點 應該都在聯發客身上 但我自己在聯發客上面 沒有太多的觸摸 反而是聯發客的其他類股 有作業資金上的輪動 但沒有很多 不過其實我也常常告訴自己 有些東西本來就不屬於你的 不需要強求 你沒有聯發客也沒有關係 有這麼多個股 有這麼多選擇 到現在為止呢 市場上還是有一些公司 持續輪轉 手上一些過去討論的公司 有些一年後兩年後三年後 成一個月兩個月三個月 或一週兩週三週 都慢慢在反映了 現在還是會持續做右側的輪轉 但是如果",
+          "matched_keyword": "聯發客",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini",
+          "whisper_corrected": true
         }
       ],
-      "total_mentions": 12,
-      "sentiment_score": 0.633,
+      "total_mentions": 13,
+      "sentiment_score": 0.623,
       "daily": {
         "2026-04-22": {
           "mentions": 2,
@@ -23077,6 +23090,13 @@
           "bearish": 0,
           "neutral": 0,
           "sentiment_score": 0.7
+        },
+        "2026-05-10": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
         }
       }
     },
@@ -43409,6 +43429,57 @@
       }
     },
     {
+      "code": "8050",
+      "name": "廣積",
+      "market": "TW",
+      "sector": "電腦周邊",
+      "contexts": [
+        {
+          "video": "EP1088｜4月漲7203點，5月還有好光景？台積電回檔更好買，熱門產業絕對要有！機器人、低軌轉強，載板、CPO續飛，封測穩賺中！ft.操盤手 黃豐凱",
+          "channel": "兆華與股惑仔",
+          "date": "2026-04-30",
+          "text": " 怎樣 凱哥今天有好多事情 要幫我們做解讀 對 首先就是 第一個事件是四月底了 其實大家比較關心的是 未來的這個五月 到底市場的走向 或是怎麼樣的走向 因為我們在前幾天 經過一個很大的洗刷的震盪 我們台積電突然活過來 我們突然間在說 我要不要把他的持股比例 基金可以拉到25% 那兩天其實台積電 這個航母順便從 潛水艇浮出水面 所以很多中小股就跟著下來了 可是這兩天就發覺 好像航母也沒有那麼大的威力 因為他只是浮出水面之後 他就停在這裡 他沒有積極的潛行 所以又讓很多中小股 在這兩天又開始浮出水面 所以我們簡單來講 就是說 你可以去看 那一天的大量的過程裡面 其實現在大家比較擔心是OTC 我講白了 ",
+          "matched_keyword": "廣積",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
+          "video": "EP328 公園槓桿伯",
+          "channel": "投資癮",
+          "date": "2026-05-10",
+          "text": "美股的記憶體類股 慢慢去做簡碼 也不是一寫就是那一隻而已 那做一些簡碼的行為之後 把它轉移到一些被記憶體影響的公司 像是當時有討論到 像美國的戴爾或是惠普 那台灣的話就是技嘉華碩 或是工業電腦的研華或化汗 而最近 他們第一線的族群開始輪動向上了 那大部分也創了新高 那次等順位跟第三順位 在這禮拜也恰恰開始帶量代價 不過這部分也沒有什麼太多討論的空檢 因為在過去都討論過了 現在只是驗證當時的想法對不對而已 對也不代表一定會賺錢 有時候對的也不一定賺到錢 手上也很多東西是我看對了 但是沒有來得及買 或當時沒有辦法注意到它的 現在也很多公司也往上跑了 所以有時候我也在記錄這些東西 記錄自己的交易紀錄 或",
+          "matched_keyword": "化汗",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini",
+          "whisper_corrected": true
+        }
+      ],
+      "total_mentions": 2,
+      "sentiment_score": 0.6,
+      "daily": {
+        "2026-04-30": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.7
+        },
+        "2026-05-10": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
       "code": "3040",
       "name": "遠見",
       "market": "TW",
@@ -48596,37 +48667,6 @@
       }
     },
     {
-      "code": "8050",
-      "name": "廣積",
-      "market": "TW",
-      "sector": "電腦周邊",
-      "contexts": [
-        {
-          "video": "EP1088｜4月漲7203點，5月還有好光景？台積電回檔更好買，熱門產業絕對要有！機器人、低軌轉強，載板、CPO續飛，封測穩賺中！ft.操盤手 黃豐凱",
-          "channel": "兆華與股惑仔",
-          "date": "2026-04-30",
-          "text": " 怎樣 凱哥今天有好多事情 要幫我們做解讀 對 首先就是 第一個事件是四月底了 其實大家比較關心的是 未來的這個五月 到底市場的走向 或是怎麼樣的走向 因為我們在前幾天 經過一個很大的洗刷的震盪 我們台積電突然活過來 我們突然間在說 我要不要把他的持股比例 基金可以拉到25% 那兩天其實台積電 這個航母順便從 潛水艇浮出水面 所以很多中小股就跟著下來了 可是這兩天就發覺 好像航母也沒有那麼大的威力 因為他只是浮出水面之後 他就停在這裡 他沒有積極的潛行 所以又讓很多中小股 在這兩天又開始浮出水面 所以我們簡單來講 就是說 你可以去看 那一天的大量的過程裡面 其實現在大家比較擔心是OTC 我講白了 ",
-          "matched_keyword": "廣積",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.7,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        }
-      ],
-      "total_mentions": 1,
-      "sentiment_score": 0.7,
-      "daily": {
-        "2026-04-30": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 0.7
-        }
-      }
-    },
-    {
       "code": "ADI",
       "name": "ADI",
       "market": "US",
@@ -52088,6 +52128,15 @@
       ]
     },
     {
+      "sector": "手機晶片",
+      "market": "TW",
+      "total_mentions": 43,
+      "stock_codes": [
+        "2454",
+        "3034"
+      ]
+    },
+    {
       "sector": "半導體",
       "market": "US",
       "total_mentions": 42,
@@ -52098,15 +52147,6 @@
         "MCHP",
         "ADI",
         "ON Semiconductor Corporation"
-      ]
-    },
-    {
-      "sector": "手機晶片",
-      "market": "TW",
-      "total_mentions": 42,
-      "stock_codes": [
-        "2454",
-        "3034"
       ]
     },
     {
@@ -52828,12 +52868,12 @@
     {
       "sector": "電腦周邊",
       "market": "TW",
-      "total_mentions": 8,
+      "total_mentions": 9,
       "stock_codes": [
         "3483",
+        "8050",
         "3088",
         "6161",
-        "8050",
         "6188",
         "3349",
         "3272"
