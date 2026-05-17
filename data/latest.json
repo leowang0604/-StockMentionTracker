@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-17T18:58:24",
+  "updated_at": "2026-05-17T20:18:46",
   "stocks_ranking": [
     {
       "code": "INTC",
@@ -8159,6 +8159,18 @@
           "extraction_mode": "gemini"
         },
         {
+          "video": "EP1096｜CPI衝高嚇倒美股，台、韓股挺得住？現在進場長期投資可以嗎，怎麼做？熱門股重挫原因不一樣，題材對，洗洗就會上？ft.型男股神 陳威良",
+          "channel": "兆華與股惑仔",
+          "date": "2026-05-13",
+          "text": " 就是通膨有可能會煞傷 激進的成長率 這是一個 但如果既然是以知之事實 那它是不是 會有嚴重的煞傷力 我想今天的台股韓股 就表現了相當大的抗性 好今天我們中場只下跌了523點 中間有個很好用的工具叫做台積電 因為台積電 這段時間沒有隨著大盤創高 但是你拉它一下 加上我們講的產業都在輪動 大哥輪流做 二哥也輪流做的情況下 台股就顯著是一種 有點跌不下去 我們來賓剛剛有形容叫互相抵消 那韓股今天猛 韓股開低走高 中場是收漲的 好我先來歡迎今天的來賓 今天來賓是我們的 行男 古生 威亮哥 趙娃好 大家好 好今天是不是本來在盤中 其實我有在想說 如果跌到1000多點 我要撿東西 可是又沒有 台股有一點點 就",
+          "matched_keyword": "台達電",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
           "video": "EP1095｜不用羨慕朋友賺很多，但自問有沒有核心部位？台積電問題不是掉單，是訂單太擠了！00403A大溢價，追高了怎麼辦？ft.AI達人 蔡明翰",
           "channel": "兆華與股惑仔",
           "date": "2026-05-12",
@@ -8486,21 +8498,10 @@
           "sentiment": "bullish",
           "sentiment_score": 0.8,
           "video_url": null
-        },
-        {
-          "video": "EP1070｜川普演講繼續打伊朗！連假要關注的變化？台積電會到16字頭？櫃買型態依舊強勢，熱門中小股回檔守月線是買點？ft.操盤手 黃豐凱",
-          "channel": "兆華與股惑仔",
-          "date": "2026-04-02",
-          "text": "升的趙子龍 應該是這樣 這樣趙子龍 我們的台積電 現在有點像是劉備 但是不是說 它是扶不起的阿斗 不是 是劉備就比較溫 因為它受國際局勢左右 所以劉備也要想比較多 他如果這時候拉 是不是代表 他就不理川普了 他那樣能夠拉多遠 所以我覺得 台積電其實它是 它有瞻前顧後 它有在看整個市場的結構 但我覺得台達電相對來講 它有受到散熱的需求 電力的需求 它就是穩穩地往上走 我個人也覺得台積電 這段時間 它會來回跑 所以也會跟大家分享說 這個17字頭的台積電 相對它的價錢 就是比較合理的入手價 那前兩天還有到 甚至最低點 前一波最低點 以期貨來說 它有到17 我記得1740還多少 那前兩天有到1760 那只要",
-          "matched_keyword": "2308",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.8,
-          "video_url": null
         }
       ],
       "total_mentions": 30,
-      "sentiment_score": 0.638,
+      "sentiment_score": 0.628,
       "daily": {
         "2026-05-14": {
           "mentions": 1,
@@ -8508,6 +8509,13 @@
           "bearish": 0,
           "neutral": 0,
           "sentiment_score": 0.7
+        },
+        "2026-05-13": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
         },
         "2026-05-12": {
           "mentions": 2,
@@ -8650,8 +8658,8 @@
           "sentiment_score": 0.7
         },
         "2026-04-02": {
-          "mentions": 5,
-          "bullish": 5,
+          "mentions": 4,
+          "bullish": 4,
           "bearish": 0,
           "neutral": 0,
           "sentiment_score": 0.8
@@ -40835,6 +40843,138 @@
       }
     },
     {
+      "code": "2354",
+      "name": "鴻準",
+      "market": "TW",
+      "sector": "組裝代工",
+      "contexts": [
+        {
+          "video": "EP221 | 台、美股重點一次說， 台積電25%條款後的資金節奏，台達電AI Power與高階連接器，旺宏法說重點",
+          "channel": "韭菜畢業班",
+          "date": "2026-04-28",
+          "text": "都是 我覺得之後可以跟大家討論 所以大家如果有興趣的朋友 可以到資訊欄裡面 幫我填寫一下那個問卷 那我們今天節目一開始 可以跟各位來聊的就是 現在其實以胎骨的角度來看 在上一次我們講完ETF 25%的標準之後 我們可以看到台積電是在 隔一天馬上先跳空往上去漲 然後漲了大概3.6% 雖然最後尾盤是有殺下來 但是開盤的時候速速是非常強勁的 然後再來我們可以看到 第二個交易日 就是它宣布完 24號宣布完這個條款之後 第二個交易日其實它是 呈現一個下跌的 然後其實我覺得這個地方 可以跟各位來講一個比較重點的事情 我們其實大家如果說有去看我IG的話 就會知道我有錄一個端音 然後那個端音主要就是在講說 台積電",
+          "matched_keyword": "鴻準",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.8,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
+          "video": "EP1093｜盤中洗一下，兩股力量撐著，Q3才休息？台積電營收月減，IC龍頭股來補漲？載板、CPO、散熱震盪看法？操盤手 黃豐凱",
+          "channel": "兆華與股惑仔",
+          "date": "2026-05-08",
+          "text": "感覺好像是一直在 一直在潑冷水 散熱就是本來很熱 然後現在一直被潑冷水 就一直在降溫東 但是 我們要看的就是說 第一個我們來看的是建設 這件事情 對建設到底有沒有很大的影響 我覺得要看到六月份 就是 鴻海最終的市場的結果 現在大家講說 他可能要退回一片市了 但是其實鴻海還在 做兩片市的努力 所以如果鴻海 兩片市的良率沒有到很差 我覺得NVIDIA還是會堅持 要繼續做下去 這個就是產業在推進 產業推進的過程裡面 其實都會有一些難度 就好像我們現在在看 所謂的 COAS的晶片竅區的問題 他有因為竅區 他就說我不做 沒有 他就想辦法改良 所以產生很多新的公司出來 例如說什麼三泰式 硬能 這些股價就冒出來",
+          "matched_keyword": "鴻準",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
+          "video": "EP1096｜CPI衝高嚇倒美股，台、韓股挺得住？現在進場長期投資可以嗎，怎麼做？熱門股重挫原因不一樣，題材對，洗洗就會上？ft.型男股神 陳威良",
+          "channel": "兆華與股惑仔",
+          "date": "2026-05-13",
+          "text": "越來越明顯 你覺得會不會在基本裡面上面 台股會呈現有點動能趨緩的狀態 確實因為這個目前 大概從3月4月營收表現在看 大幅度的成長 已經是變成說市場的基本要求 所以只要稍微 低於原本市場 已經上修過後的標準 那可能稍微只是 這個數字差了一點點 對 那股價就會劇烈反應 因為畢竟大家也看到 4月以來這一波的急漲 很多個股真的是用那種 70度的養腳 快速的一個上漲 所以我覺得AI股裡面 當然先前除了業績好 讓他們股價推升之外 還有一個很重要的原因就是 本一比也都大幅度提高了 所以本一比提高的前提就是 市場是極度的有信心 極度的樂觀 認為就是像剛剛趙豪提到的 類似像不管是貿聯 或者說像聯亞這些公司 你就是要",
+          "matched_keyword": "鴻準",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        }
+      ],
+      "total_mentions": 3,
+      "sentiment_score": 0.6,
+      "daily": {
+        "2026-04-28": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.8
+        },
+        "2026-05-08": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-05-13": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
+      "code": "2324",
+      "name": "仁寶",
+      "market": "TW",
+      "sector": "組裝代工",
+      "contexts": [
+        {
+          "video": "EP225 | 台、美股重點一次說，消費性電腦與緯穎展望，康寧與AAOI長約發酵，聽眾QA",
+          "channel": "韭菜畢業班",
+          "date": "2026-05-13",
+          "text": "應該是5月12號的時候 它是有開法說會的 那這一個法說會 我們可以跟各位大家來聊一下 然後順便看一下 後續的一些 我覺得消費性電腦的一些展望 就不會特別在跟大家聊一些 已經很熱門的族群 像今天才公佈的訓練 它光單月就已經30幾塊的EPS 那單季就是60幾塊 68塊 我們在RELS上面其實有講到 所以訓練基本上EPS 接下來會非常的暴力 那我認為 像南亞科的EPS 應該也會非常的暴力 但是非常暴力的前提之下 那當然E-Ding這一家公司 其實也是非常的暴力 我們今天就是腦袋強到什麼 就跟各位來聊一下 這個東西就等於是 它開出來之後 市場願不願意去買單 這其實就是一件非常重要的事情 我們舉個例子來講好",
+          "matched_keyword": "訓練",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": "",
+          "extraction_mode": "gemini",
+          "whisper_corrected": true
+        },
+        {
+          "video": "EP662 | ⛑️",
+          "channel": "股癌",
+          "date": "2026-05-16",
+          "text": "太會影響到實際操作的體驗 如果只有人在國外 NordVPN也可以切換回台灣的IP 連接熟悉的網站或是常用的服務 使用上會更加的順暢 像我自己在使用一些被鎖區軟體 或是說你今天在海外要回來 台灣去領手遊的寶物的話 使用NordVPN都非常方便 而且現在NordVPN不只是支援手機平板跟電腦 也支援Smart TV跟Apple Vision Pro 一個障礙到最多可以同時使用於時台裝置 不論是在家或是外出都能夠靈活使用 下次要透過我們資訊欄的專屬連結 然後大概一個月前有聽眾在QA問說 校長資本最近有什麼新的動作 那時候是跟大家講說 因為可能大家聽我們節目聽習慣會知道說 好像我們可能在開年的時候在講低軌",
+          "matched_keyword": "仁寶",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
+          "video": "EP1096｜CPI衝高嚇倒美股，台、韓股挺得住？現在進場長期投資可以嗎，怎麼做？熱門股重挫原因不一樣，題材對，洗洗就會上？ft.型男股神 陳威良",
+          "channel": "兆華與股惑仔",
+          "date": "2026-05-13",
+          "text": "時候 你就坐著等也是可以的 沒錯 因為我們之前有講到 比較落後的族群叫被動元件 但今天被動元件在盤面上 就相對還是抗跌 比較慢漲的 它也比較抗跌 但也有最近漲多的 今天可能就比較 吃了一個壓力 像例如光寶殼好了 怪我會今天上到跌停板 你說有沒有什麼樣奇怪的事情 沒有 就是前幾天連續的 有三根停板這件事情 真的漲得有點多 對不對 那像我們講發哥 發哥漲到有可能 從5分鐘 如果在漲的話 要變20分鐘分判 所以他今天也就順勢 做一下回檔休息 連電因為intel的事情 大漲 那現在intel昨天晚上是休息的 所以今天連電也順勢回檔 感覺上今天回檔的公司 不太會讓大家覺得 好像出了什麼狀況 你只會有一個感覺",
+          "matched_keyword": "仁寶",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.3,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        }
+      ],
+      "total_mentions": 3,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-05-13": {
+          "mentions": 2,
+          "bullish": 1,
+          "bearish": 1,
+          "neutral": 0,
+          "sentiment_score": 0.5
+        },
+        "2026-05-16": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
       "code": "CDNS",
       "name": "Cadence Design Systems",
       "market": "US",
@@ -43088,56 +43228,6 @@
       }
     },
     {
-      "code": "2354",
-      "name": "鴻準",
-      "market": "TW",
-      "sector": "組裝代工",
-      "contexts": [
-        {
-          "video": "EP221 | 台、美股重點一次說， 台積電25%條款後的資金節奏，台達電AI Power與高階連接器，旺宏法說重點",
-          "channel": "韭菜畢業班",
-          "date": "2026-04-28",
-          "text": "都是 我覺得之後可以跟大家討論 所以大家如果有興趣的朋友 可以到資訊欄裡面 幫我填寫一下那個問卷 那我們今天節目一開始 可以跟各位來聊的就是 現在其實以胎骨的角度來看 在上一次我們講完ETF 25%的標準之後 我們可以看到台積電是在 隔一天馬上先跳空往上去漲 然後漲了大概3.6% 雖然最後尾盤是有殺下來 但是開盤的時候速速是非常強勁的 然後再來我們可以看到 第二個交易日 就是它宣布完 24號宣布完這個條款之後 第二個交易日其實它是 呈現一個下跌的 然後其實我覺得這個地方 可以跟各位來講一個比較重點的事情 我們其實大家如果說有去看我IG的話 就會知道我有錄一個端音 然後那個端音主要就是在講說 台積電",
-          "matched_keyword": "鴻準",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.8,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        },
-        {
-          "video": "EP1093｜盤中洗一下，兩股力量撐著，Q3才休息？台積電營收月減，IC龍頭股來補漲？載板、CPO、散熱震盪看法？操盤手 黃豐凱",
-          "channel": "兆華與股惑仔",
-          "date": "2026-05-08",
-          "text": "感覺好像是一直在 一直在潑冷水 散熱就是本來很熱 然後現在一直被潑冷水 就一直在降溫東 但是 我們要看的就是說 第一個我們來看的是建設 這件事情 對建設到底有沒有很大的影響 我覺得要看到六月份 就是 鴻海最終的市場的結果 現在大家講說 他可能要退回一片市了 但是其實鴻海還在 做兩片市的努力 所以如果鴻海 兩片市的良率沒有到很差 我覺得NVIDIA還是會堅持 要繼續做下去 這個就是產業在推進 產業推進的過程裡面 其實都會有一些難度 就好像我們現在在看 所謂的 COAS的晶片竅區的問題 他有因為竅區 他就說我不做 沒有 他就想辦法改良 所以產生很多新的公司出來 例如說什麼三泰式 硬能 這些股價就冒出來",
-          "matched_keyword": "鴻準",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        }
-      ],
-      "total_mentions": 2,
-      "sentiment_score": 0.65,
-      "daily": {
-        "2026-04-28": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 0.8
-        },
-        "2026-05-08": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        }
-      }
-    },
-    {
       "code": "6526",
       "name": "達發",
       "market": "TW",
@@ -44922,57 +45012,6 @@
           "bearish": 0,
           "neutral": 1,
           "sentiment_score": 0.45
-        }
-      }
-    },
-    {
-      "code": "2324",
-      "name": "仁寶",
-      "market": "TW",
-      "sector": "組裝代工",
-      "contexts": [
-        {
-          "video": "EP225 | 台、美股重點一次說，消費性電腦與緯穎展望，康寧與AAOI長約發酵，聽眾QA",
-          "channel": "韭菜畢業班",
-          "date": "2026-05-13",
-          "text": "應該是5月12號的時候 它是有開法說會的 那這一個法說會 我們可以跟各位大家來聊一下 然後順便看一下 後續的一些 我覺得消費性電腦的一些展望 就不會特別在跟大家聊一些 已經很熱門的族群 像今天才公佈的訓練 它光單月就已經30幾塊的EPS 那單季就是60幾塊 68塊 我們在RELS上面其實有講到 所以訓練基本上EPS 接下來會非常的暴力 那我認為 像南亞科的EPS 應該也會非常的暴力 但是非常暴力的前提之下 那當然E-Ding這一家公司 其實也是非常的暴力 我們今天就是腦袋強到什麼 就跟各位來聊一下 這個東西就等於是 它開出來之後 市場願不願意去買單 這其實就是一件非常重要的事情 我們舉個例子來講好",
-          "matched_keyword": "訓練",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.7,
-          "video_url": "",
-          "extraction_mode": "gemini",
-          "whisper_corrected": true
-        },
-        {
-          "video": "EP662 | ⛑️",
-          "channel": "股癌",
-          "date": "2026-05-16",
-          "text": "太會影響到實際操作的體驗 如果只有人在國外 NordVPN也可以切換回台灣的IP 連接熟悉的網站或是常用的服務 使用上會更加的順暢 像我自己在使用一些被鎖區軟體 或是說你今天在海外要回來 台灣去領手遊的寶物的話 使用NordVPN都非常方便 而且現在NordVPN不只是支援手機平板跟電腦 也支援Smart TV跟Apple Vision Pro 一個障礙到最多可以同時使用於時台裝置 不論是在家或是外出都能夠靈活使用 下次要透過我們資訊欄的專屬連結 然後大概一個月前有聽眾在QA問說 校長資本最近有什麼新的動作 那時候是跟大家講說 因為可能大家聽我們節目聽習慣會知道說 好像我們可能在開年的時候在講低軌",
-          "matched_keyword": "仁寶",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        }
-      ],
-      "total_mentions": 2,
-      "sentiment_score": 0.6,
-      "daily": {
-        "2026-05-13": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 0.7
-        },
-        "2026-05-16": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
         }
       }
     },
@@ -53660,6 +53699,37 @@
           "sentiment_score": 0.5
         }
       }
+    },
+    {
+      "code": "8043",
+      "name": "蜜望實",
+      "market": "TW",
+      "sector": "資訊服務",
+      "contexts": [
+        {
+          "video": "EP1098｜創高變殺盤？輝達新高、台積電技術論壇怎麼沒幫助？載板、CPO大跌，廣達季報中槍，台積處分世界，對誰能有信心？ft.操盤手 黃豐凱",
+          "channel": "兆華與股惑仔",
+          "date": "2026-05-15",
+          "text": "被動雲間 日電帽對不對 日電帽 今天還是有一個代表 蜜望石 雖然信長點大跌 是因為二十分鐘分盤也漲多 所以代表這些火種 大家可以從 長的裡面看火種 還有大家一直很期待 會要漲的歷程 今天是不是也有表態",
+          "matched_keyword": "蜜望石",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-05-15": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
     }
   ],
   "sectors_ranking": [
@@ -54025,6 +54095,18 @@
       ]
     },
     {
+      "sector": "組裝代工",
+      "market": "TW",
+      "total_mentions": 39,
+      "stock_codes": [
+        "2317",
+        "2354",
+        "2324",
+        "2392",
+        "4938"
+      ]
+    },
+    {
       "sector": "CPO光通訊",
       "market": "TW",
       "total_mentions": 39,
@@ -54052,18 +54134,6 @@
         "MU",
         "WDC",
         "STX"
-      ]
-    },
-    {
-      "sector": "組裝代工",
-      "market": "TW",
-      "total_mentions": 37,
-      "stock_codes": [
-        "2317",
-        "2392",
-        "2354",
-        "2324",
-        "4938"
       ]
     },
     {
@@ -54232,7 +54302,7 @@
     {
       "sector": "資訊服務",
       "market": "TW",
-      "total_mentions": 25,
+      "total_mentions": 26,
       "stock_codes": [
         "6274",
         "6597",
@@ -54248,7 +54318,8 @@
         "3597",
         "8182",
         "3520",
-        "6210"
+        "6210",
+        "8043"
       ]
     },
     {
