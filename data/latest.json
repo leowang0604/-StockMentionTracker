@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-17T20:18:46",
+  "updated_at": "2026-05-17T21:06:18",
   "stocks_ranking": [
     {
       "code": "INTC",
@@ -45065,6 +45065,56 @@
       }
     },
     {
+      "code": "T",
+      "name": "AT&T",
+      "market": "US",
+      "sector": "高速連接",
+      "contexts": [
+        {
+          "video": "2026/04/27(一) 費半創紀18連漲，還能進場嗎？Intel暴漲20%，財報透露什麼？",
+          "channel": "財女珍妮",
+          "date": "2026-04-27",
+          "text": "你說Verizon就是VZ 或者是AT&T 他股價代號是T 跟T-Mobile T-M-US 這些積極 這些電信商非常積極的 再去做一些 5G的寬頻吃到飽 然後把無限去 把入手機月費 或什麼之類的",
+          "matched_keyword": "AT&T",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
+          "video": "2026/05/13(三) 通膨升溫，川習會前半導體跳水？#ASTS #CRCL",
+          "channel": "財女珍妮",
+          "date": "2026-05-13",
+          "text": "切換到太空的訊號 你不用換手機 不用換信卡 不用下載任何的 App 就可以去達到這件事情 那他的商業模式呢 是 B2 B2C 就是他不是直接賣給消費者 他是跟全球超過 60 家的電信業者合作 包括了 AT&T ARISON 這些 樂天啊 這一類的電信商 然後把這些衛星呢 覆蓋 然後用加購的方案 去賣給自己的用戶 然後收益在跟這些公司去做對拆 所以這些電信商 他當然他的 客戶就是消費者 可是呢 他上面他使用的就是 AST 他的一個產品跟服務 目前合作的電信商用戶加起來呢 有超過了 30 億人 簽約的承諾收入 也已經超過了 12 億美元 那公司還在說 我未來呢 還會繼續發射衛星 然後希望可以 更大的去覆蓋",
+          "matched_keyword": "AT&T",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        }
+      ],
+      "total_mentions": 2,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-04-27": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-05-13": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
       "code": "3040",
       "name": "遠見",
       "market": "TW",
@@ -48678,37 +48728,6 @@
           "date": "2026-04-27",
           "text": "會反轉的問題 他是一個趨勢一直往前 我的技術一直往前延伸 然後我的這個5G 替代方案 競爭對手都已經開始 站穩腳跟 然後獲取更多用戶 你的試戰率流失之後 你要怎麼樣去把他救回來 其實就會比較難 那你說Verizon就是VZ 或者是AT&T 他股價代號是T 跟T-Mobile T-M-US 這些積極 這些電信商非常積極的 再去做一些 5G的寬頻吃到飽 然後把無限去 把入手機月費 或什麼之類的 這個大家台灣人 都很熟悉的 對不對 所以就直接去切到 他的 直接原本的用戶群 那你說另外一塊好了 就是串流媒體的部分 你說我今天 我本身我可以有一些 串流媒體的業務啊 對不對 那現在呢 是不是也可以去作為我 去吸引客戶的",
           "matched_keyword": "Verizon",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        }
-      ],
-      "total_mentions": 1,
-      "sentiment_score": 0.5,
-      "daily": {
-        "2026-04-27": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        }
-      }
-    },
-    {
-      "code": "T",
-      "name": "AT&T",
-      "market": "US",
-      "sector": "高速連接",
-      "contexts": [
-        {
-          "video": "2026/04/27(一) 費半創紀18連漲，還能進場嗎？Intel暴漲20%，財報透露什麼？",
-          "channel": "財女珍妮",
-          "date": "2026-04-27",
-          "text": "你說Verizon就是VZ 或者是AT&T 他股價代號是T 跟T-Mobile T-M-US 這些積極 這些電信商非常積極的 再去做一些 5G的寬頻吃到飽 然後把無限去 把入手機月費 或什麼之類的",
-          "matched_keyword": "AT&T",
           "analysis_source": "whisper",
           "sentiment": "neutral",
           "sentiment_score": 0.5,
@@ -54877,6 +54896,16 @@
       ]
     },
     {
+      "sector": "高速連接",
+      "market": "US",
+      "total_mentions": 5,
+      "stock_codes": [
+        "CHTR",
+        "T",
+        "CRDO"
+      ]
+    },
+    {
       "sector": "其他",
       "market": "US",
       "total_mentions": 5,
@@ -54947,16 +54976,6 @@
         "GRMN",
         "NKE",
         "ABNB"
-      ]
-    },
-    {
-      "sector": "高速連接",
-      "market": "US",
-      "total_mentions": 4,
-      "stock_codes": [
-        "CHTR",
-        "CRDO",
-        "T"
       ]
     },
     {
