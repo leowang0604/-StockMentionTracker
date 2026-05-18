@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-17T21:18:46",
+  "updated_at": "2026-05-18T19:37:42",
   "stocks_ranking": [
     {
       "code": "INTC",
@@ -20846,7 +20846,7 @@
       "code": "CCL",
       "name": "Carnival",
       "market": "US",
-      "sector": "消費電子",
+      "sector": "消費",
       "contexts": [
         {
           "video": "EP213 | 台、美股重點一次說，台股反彈怎麼看？美股極度恐慌後的觀察重點，南俊國際與滑軌需求，設備股後勢",
@@ -41169,7 +41169,7 @@
       "code": "CDNS",
       "name": "Cadence Design Systems",
       "market": "US",
-      "sector": "企業軟體",
+      "sector": "科技",
       "contexts": [
         {
           "video": "EP649 | 💌",
@@ -41484,7 +41484,7 @@
       "code": "DASH",
       "name": "DoorDash",
       "market": "US",
-      "sector": "零售電商",
+      "sector": "消費",
       "contexts": [
         {
           "video": "EP217 | 台、美股重點一次說，Google TPU 各代產品結構與台廠供應鏈， 台積電封裝技術進展與風險，CPO量產前注意",
@@ -41813,7 +41813,7 @@
       "code": "CHTR",
       "name": "Charter Communications",
       "market": "US",
-      "sector": "高速連接",
+      "sector": "通訊媒體",
       "contexts": [
         {
           "video": "EP649 | 💌",
@@ -45218,7 +45218,7 @@
       "code": "T",
       "name": "AT&T",
       "market": "US",
-      "sector": "高速連接",
+      "sector": "通訊媒體",
       "contexts": [
         {
           "video": "2026/04/27(一) 費半創紀18連漲，還能進場嗎？Intel暴漲20%，財報透露什麼？",
@@ -47108,7 +47108,7 @@
       "code": "EA",
       "name": "Electronic Arts",
       "market": "US",
-      "sector": "串流媒體",
+      "sector": "通訊媒體",
       "contexts": [
         {
           "video": "訪談特別篇_產業研究與專職交易生活 ft.田中太郎",
@@ -47498,7 +47498,7 @@
       "code": "BIIB",
       "name": "Biogen",
       "market": "US",
-      "sector": "生技製藥",
+      "sector": "醫療",
       "contexts": [
         {
           "video": "2026/04/16 (四）美股創新高 ，泡沫示警？ASML財報，Tesla AI5晶片設計定案",
@@ -47888,7 +47888,7 @@
       "code": "BKNG",
       "name": "Booking Holdings",
       "market": "US",
-      "sector": "零售電商",
+      "sector": "消費",
       "contexts": [
         {
           "video": "EP653 | 🕊️",
@@ -48815,7 +48815,7 @@
       "code": "DECK",
       "name": "Deckers Brands",
       "market": "US",
-      "sector": "零售電商",
+      "sector": "消費",
       "contexts": [
         {
           "video": "EP656 | 🍇",
@@ -50403,7 +50403,7 @@
       "code": "ADI",
       "name": "ADI",
       "market": "US",
-      "sector": "半導體",
+      "sector": "科技",
       "contexts": [
         {
           "video": "2026/05/05(二) Palantir為什麼不漲？#PLTR #ON #NVDA #MU",
@@ -51677,7 +51677,7 @@
       "code": "DDOG",
       "name": "Datadog",
       "market": "US",
-      "sector": "企業軟體",
+      "sector": "科技",
       "contexts": [
         {
           "video": "2026/05/08(五)美股下跌還能買嗎？ #ANET #DDOG #FTNT",
@@ -52887,7 +52887,7 @@
       "code": "GLW",
       "name": "Corning Inc.",
       "market": "US",
-      "sector": "光通訊",
+      "sector": "科技",
       "contexts": [
         {
           "video": "EP225 | 台、美股重點一次說，消費性電腦與緯穎展望，康寧與AAOI長約發酵，聽眾QA",
@@ -54269,15 +54269,6 @@
       ]
     },
     {
-      "sector": "消費電子",
-      "market": "US",
-      "total_mentions": 46,
-      "stock_codes": [
-        "AAPL",
-        "CCL"
-      ]
-    },
-    {
       "sector": "金融",
       "market": "US",
       "total_mentions": 44,
@@ -54308,13 +54299,12 @@
     {
       "sector": "半導體",
       "market": "US",
-      "total_mentions": 42,
+      "total_mentions": 41,
       "stock_codes": [
         "INTC",
         "TXN",
         "ON",
         "MCHP",
-        "ADI",
         "ON Semiconductor Corporation"
       ]
     },
@@ -54523,6 +54513,14 @@
       ]
     },
     {
+      "sector": "消費電子",
+      "market": "US",
+      "total_mentions": 30,
+      "stock_codes": [
+        "AAPL"
+      ]
+    },
+    {
       "sector": "記憶體IC",
       "market": "TW",
       "total_mentions": 30,
@@ -54555,6 +54553,20 @@
         "1444",
         "1455",
         "1457"
+      ]
+    },
+    {
+      "sector": "科技",
+      "market": "US",
+      "total_mentions": 27,
+      "stock_codes": [
+        "SNDK",
+        "CDNS",
+        "INTU",
+        "TER",
+        "ADI",
+        "DDOG",
+        "GLW"
       ]
     },
     {
@@ -54593,6 +54605,20 @@
       ]
     },
     {
+      "sector": "消費",
+      "market": "US",
+      "total_mentions": 24,
+      "stock_codes": [
+        "CCL",
+        "DASH",
+        "GRMN",
+        "NKE",
+        "ABNB",
+        "BKNG",
+        "DECK"
+      ]
+    },
+    {
       "sector": "電動車",
       "market": "TW",
       "total_mentions": 23,
@@ -54614,24 +54640,26 @@
       ]
     },
     {
-      "sector": "科技",
-      "market": "US",
-      "total_mentions": 22,
-      "stock_codes": [
-        "SNDK",
-        "INTU",
-        "TER"
-      ]
-    },
-    {
       "sector": "光通訊",
       "market": "US",
-      "total_mentions": 21,
+      "total_mentions": 20,
       "stock_codes": [
         "COHR",
         "LITE",
-        "AAOI",
-        "GLW"
+        "AAOI"
+      ]
+    },
+    {
+      "sector": "醫療",
+      "market": "US",
+      "total_mentions": 19,
+      "stock_codes": [
+        "TECH",
+        "UNH",
+        "HUM",
+        "CVS",
+        "BIIB",
+        "CI"
       ]
     },
     {
@@ -54654,18 +54682,6 @@
         "8011",
         "3025",
         "6561"
-      ]
-    },
-    {
-      "sector": "醫療",
-      "market": "US",
-      "total_mentions": 18,
-      "stock_codes": [
-        "TECH",
-        "UNH",
-        "HUM",
-        "CVS",
-        "CI"
       ]
     },
     {
@@ -54752,16 +54768,6 @@
       ]
     },
     {
-      "sector": "串流媒體",
-      "market": "US",
-      "total_mentions": 14,
-      "stock_codes": [
-        "NFLX",
-        "DIS",
-        "EA"
-      ]
-    },
-    {
       "sector": "ETF・高股息",
       "market": "TW",
       "total_mentions": 14,
@@ -54805,16 +54811,12 @@
       ]
     },
     {
-      "sector": "零售電商",
+      "sector": "串流媒體",
       "market": "US",
       "total_mentions": 13,
       "stock_codes": [
-        "COST",
-        "DASH",
-        "BKNG",
-        "WMT",
-        "TGT",
-        "DECK"
+        "NFLX",
+        "DIS"
       ]
     },
     {
@@ -54995,6 +54997,16 @@
       ]
     },
     {
+      "sector": "零售電商",
+      "market": "US",
+      "total_mentions": 9,
+      "stock_codes": [
+        "COST",
+        "WMT",
+        "TGT"
+      ]
+    },
+    {
       "sector": "半導體",
       "market": "TW",
       "total_mentions": 9,
@@ -55004,17 +55016,6 @@
         "3362",
         "6125",
         "5371"
-      ]
-    },
-    {
-      "sector": "企業軟體",
-      "market": "US",
-      "total_mentions": 9,
-      "stock_codes": [
-        "ADBE",
-        "CDNS",
-        "IBM",
-        "DDOG"
       ]
     },
     {
@@ -55081,11 +55082,32 @@
       ]
     },
     {
+      "sector": "通訊媒體",
+      "market": "US",
+      "total_mentions": 7,
+      "stock_codes": [
+        "CHTR",
+        "T",
+        "SATS",
+        "EA",
+        "VZ"
+      ]
+    },
+    {
       "sector": "AI晶片",
       "market": "TW",
       "total_mentions": 6,
       "stock_codes": [
         "6462"
+      ]
+    },
+    {
+      "sector": "企業軟體",
+      "market": "US",
+      "total_mentions": 6,
+      "stock_codes": [
+        "ADBE",
+        "IBM"
       ]
     },
     {
@@ -55145,16 +55167,6 @@
       "stock_codes": [
         "2618",
         "2610"
-      ]
-    },
-    {
-      "sector": "高速連接",
-      "market": "US",
-      "total_mentions": 5,
-      "stock_codes": [
-        "CHTR",
-        "T",
-        "CRDO"
       ]
     },
     {
@@ -55221,16 +55233,6 @@
       ]
     },
     {
-      "sector": "消費",
-      "market": "US",
-      "total_mentions": 4,
-      "stock_codes": [
-        "GRMN",
-        "NKE",
-        "ABNB"
-      ]
-    },
-    {
       "sector": "觀光餐旅",
       "market": "TW",
       "total_mentions": 4,
@@ -55266,16 +55268,6 @@
       "stock_codes": [
         "1104",
         "1110"
-      ]
-    },
-    {
-      "sector": "生技製藥",
-      "market": "US",
-      "total_mentions": 3,
-      "stock_codes": [
-        "MRNA",
-        "BIIB",
-        "LLY"
       ]
     },
     {
@@ -55324,12 +55316,12 @@
       ]
     },
     {
-      "sector": "通訊媒體",
+      "sector": "生技製藥",
       "market": "US",
       "total_mentions": 2,
       "stock_codes": [
-        "SATS",
-        "VZ"
+        "MRNA",
+        "LLY"
       ]
     },
     {
@@ -55397,6 +55389,14 @@
       "total_mentions": 1,
       "stock_codes": [
         "4420"
+      ]
+    },
+    {
+      "sector": "高速連接",
+      "market": "US",
+      "total_mentions": 1,
+      "stock_codes": [
+        "CRDO"
       ]
     },
     {
