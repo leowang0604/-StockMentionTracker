@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-18T22:05:51",
+  "updated_at": "2026-05-18T22:18:10",
   "stocks_ranking": [
     {
       "code": "INTC",
@@ -54892,6 +54892,99 @@
           "sentiment_score": 0.5
         }
       }
+    },
+    {
+      "code": "9921",
+      "name": "巨大",
+      "market": "TW",
+      "sector": "電動車",
+      "contexts": [
+        {
+          "video": "EP329 市場裡光彩奪目",
+          "channel": "投資癮",
+          "date": "2026-05-17",
+          "text": "偶的東西的時候 你可能會被其他競爭都給淘汰 但傳產類股比較不太一樣 因為大型的幾間就那幾間 真正的對手是消價競爭 大家比較擔心是消價競爭的問題 所以他們轉移的效果比較慢一些些 而且目前腳踏車類股 這種巨大實施的過場股之後 其他相關的個股 像是美麗達、達芳或貴猛 在這一兩週 表現也比較強勁一點點 但是他們都是比較弱勢的個股 其實他們表現的強勁 我認為還是要花一段時間 才可以慢慢消掉上面的壓力 所以這邊的東西 可能會拉長一點點 目前看起來不會太過於積極 只會慢慢的去等待 順便等到我哪一天 是真的想要練三鐵的時候 開始要買腳踏車的時候 再做進一步研究的時候 再跟大家好好地分享 總之我還是很推薦大家 去找",
+          "matched_keyword": "巨大",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-05-17": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
+      "code": "9914",
+      "name": "美利達",
+      "market": "TW",
+      "sector": "運動休閒",
+      "contexts": [
+        {
+          "video": "EP329 市場裡光彩奪目",
+          "channel": "投資癮",
+          "date": "2026-05-17",
+          "text": " 但傳產類股比較不太一樣 因為大型的幾間就那幾間 真正的對手是消價競爭 大家比較擔心是消價競爭的問題 所以他們轉移的效果比較慢一些些 而且目前腳踏車類股 這種巨大實施的過場股之後 其他相關的個股 像是美麗達、達芳或貴猛 在這一兩週 表現也比較強勁一點點 但是他們都是比較弱勢的個股 其實他們表現的強勁 我認為還是要花一段時間 才可以慢慢消掉上面的壓力 所以這邊的東西 可能會拉長一點點 目前看起來不會太過於積極 只會慢慢的去等待 順便等到我哪一天 是真的想要練三鐵的時候 開始要買腳踏車的時候 再做進一步研究的時候 再跟大家好好地分享 總之我還是很推薦大家 去找一些退休製作可以做的事情 不要真的等到退休那",
+          "matched_keyword": "美利達",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-05-17": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
+      "code": "8163",
+      "name": "達方",
+      "market": "TW",
+      "sector": "電腦及週邊設備業",
+      "contexts": [
+        {
+          "video": "EP329 市場裡光彩奪目",
+          "channel": "投資癮",
+          "date": "2026-05-17",
+          "text": "口按門鈴 那如果打開是我那個朋友的話 我就問他要不要去幹嘛 去打籃球還是怎麼樣的 但是如果打開門是他爸爸媽媽 我就直接跑掉 我小時候就是很奇怪的 但是不是惡作劇 是真的我在找這個朋友 只是我不知道用什麼方式可以找這個朋友 所以我們國中那個時期 大多數人相處的方式應該是這個模式 我不知道其他人怎麼樣 因為那個時候的我們年代是沒有手機的 網路也不肯像現在這麼的發達 以前網路都是用撥接的 那你只要一撥接通上的時候 你的電話就不能打 所以如果我媽來講電話的時候 我的網路就會斷掉 但還好我爸媽不太講電話了 所以這一點還好 只不過撥接的費用對我們家來說 是有點負擔的 所以那個時候是完全被限制了 不然就是只能去",
+          "matched_keyword": "達方",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-05-17": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
     }
   ],
   "sectors_ranking": [
@@ -55144,7 +55237,7 @@
     {
       "sector": "電腦及週邊設備業",
       "market": "TW",
-      "total_mentions": 50,
+      "total_mentions": 51,
       "stock_codes": [
         "2376",
         "2357",
@@ -55159,7 +55252,8 @@
         "3515",
         "6928",
         "2395",
-        "3005"
+        "3005",
+        "8163"
       ]
     },
     {
@@ -55516,13 +55610,14 @@
     {
       "sector": "電動車",
       "market": "TW",
-      "total_mentions": 23,
+      "total_mentions": 24,
       "stock_codes": [
         "2204",
         "3665",
         "2231",
         "1536",
-        "1319"
+        "1319",
+        "9921"
       ]
     },
     {
@@ -56179,6 +56274,16 @@
       ]
     },
     {
+      "sector": "運動休閒",
+      "market": "TW",
+      "total_mentions": 3,
+      "stock_codes": [
+        "1432",
+        "9904",
+        "9914"
+      ]
+    },
+    {
       "sector": "貿易百貨業",
       "market": "TW",
       "total_mentions": 3,
@@ -56220,15 +56325,6 @@
       "stock_codes": [
         "MRNA",
         "LLY"
-      ]
-    },
-    {
-      "sector": "運動休閒",
-      "market": "TW",
-      "total_mentions": 2,
-      "stock_codes": [
-        "1432",
-        "9904"
       ]
     },
     {
