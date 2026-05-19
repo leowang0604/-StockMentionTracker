@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-19T19:49:04",
+  "updated_at": "2026-05-19T20:08:37",
   "stocks_ranking": [
     {
       "code": "INTC",
@@ -13157,10 +13157,22 @@
           "sentiment_score": 0.7,
           "video_url": "",
           "extraction_mode": "gemini"
+        },
+        {
+          "video": "EP226 | 台、美股重點一次說，Intel EMIB與各大巨頭關係，Nebius 產品與優缺點，輝達財報後勢展望",
+          "channel": "韭菜畢業班",
+          "date": "2026-05-17",
+          "text": "有講到 就是最近的一個下跌 就會很容易下到一些 槓桿開很大的人 或者是說上一波在領漲的東西 大部分其實都是一些千金類股 這個是我們在上一次 我們的Live Talk直播的時候有講到 就是一些像臺光電 臺達電 或者是說像聯發科 擁置科技術 我只是想到就舉例一下 或者說像旺戲 那其實都是一些已經千元以上的 那這個千元以上 其實也不是只有1000元 2000元 有些人都已經可能是4、5000元了 那他們開始在說修正的時候 假設你今天自己的一些 主動式ETF 或者是說持有的這些個股 裡面有吃到這些成分的話 他可能就會變成 比較偏下跌的主要的藥膠 那再來就是可以看到 最近其實很多東西他 一殺的時候 還是殺了",
+          "matched_keyword": "廣達",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
         }
       ],
-      "total_mentions": 29,
-      "sentiment_score": 0.595,
+      "total_mentions": 30,
+      "sentiment_score": 0.592,
       "daily": {
         "2026-03-29": {
           "mentions": 1,
@@ -13336,6 +13348,13 @@
           "bearish": 0,
           "neutral": 0,
           "sentiment_score": 0.7
+        },
+        "2026-05-17": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
         }
       }
     },
@@ -55185,7 +55204,7 @@
     {
       "sector": "伺服器",
       "market": "TW",
-      "total_mentions": 63,
+      "total_mentions": 64,
       "stock_codes": [
         "2382",
         "2377",
