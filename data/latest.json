@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-19T21:30:03",
+  "updated_at": "2026-05-19T22:20:32",
   "stocks_ranking": [
     {
       "code": "INTC",
@@ -2895,6 +2895,18 @@
           "extraction_mode": "gemini"
         },
         {
+          "video": "2026/05/19(二) SpaceX上市，是特斯拉利空？STX大跌，存儲一起遭殃",
+          "channel": "財女珍妮",
+          "date": "2026-05-19",
+          "text": "就可以分成很多版塊了嘛 從基礎建設模型 那模型現在可能在美國 還沒有那麼多的公司上市 那在今年可能還會有更重大的 然後到軟體的部分 也就是在最末端 你要怎麼樣去做應用 然後華人遜的五層蛋糕 現在又被台積電拉出來 又有一個三層蛋糕 我們在上個禮拜五的時候嗎 就已經有把它跟大家做一個 比較基礎的一個介紹 然後大家也可以再回過去看 所以如果用這樣子的方式 你就可以比較找到 未來五到十年 我們的趨勢應該是在哪邊 然後要怎麼樣去找到 在這個趨勢裡面 比較強勢的公司 我覺得這個是很重要的 好 那我們再來看一下 昨天S&P 500指數裡面的 單日漲跌幅 也可以看到目前 科技股表現的就是比較弱 昨天科技巨頭門 除",
+          "matched_keyword": "台積電",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
           "video": "EP1099｜美債殖利率衝，美股壓力大？盤中回檔1000點，測4萬點正常？PCB、CPO何時能撿，被動、機器人接棒好事，台積下一檔賣誰？ft.題材獵人 林漢偉",
           "channel": "兆華與股惑仔",
           "date": "2026-05-18",
@@ -3229,29 +3241,17 @@
           "sentiment_score": 0.5,
           "video_url": "",
           "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP660 | 🍄‍🟫",
-          "channel": "股癌",
-          "date": "2026-05-09",
-          "text": "然後打電話進去罵人 就說你不可以讓他亂處置東西 你這樣處置那麼大的票 這不是什麼小鬼股 這個是大票的東西 那你把流動性給抽掉的話 你今天抽掉一個發歌 然後你抽掉一個什麼散熱場 那你之後如果 有一天假設台積電表演變標股 你把台積電流動性抽掉 那這市場還要玩 所以就是開始有看到一些報導 不再討論說 他們會去確認到底處置 或是說警告股 是不是有可能那個機制可以做調整 我在想 是因為我們國家政府的一個思維 他一定不會想要說 那我們乾脆就把整個縣市一拔掉 他應該就是 OK那以後可能市值多大的東西 我們就不會去做限制 因為我們相信說在裡面的價格 是更加理性的 他不會像一些那種小縣的股票 有可能是有些人他狂買 或",
-          "matched_keyword": "台積電",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
         }
       ],
       "total_mentions": 30,
-      "sentiment_score": 0.525,
+      "sentiment_score": 0.542,
       "daily": {
         "2026-05-19": {
-          "mentions": 1,
-          "bullish": 0,
+          "mentions": 2,
+          "bullish": 1,
           "bearish": 0,
           "neutral": 1,
-          "sentiment_score": 0.5
+          "sentiment_score": 0.75
         },
         "2026-05-18": {
           "mentions": 2,
@@ -3317,11 +3317,11 @@
           "sentiment_score": 0.5
         },
         "2026-05-09": {
-          "mentions": 4,
+          "mentions": 3,
           "bullish": 0,
           "bearish": 1,
-          "neutral": 3,
-          "sentiment_score": 0.375
+          "neutral": 2,
+          "sentiment_score": 0.333
         }
       }
     },
@@ -4286,6 +4286,18 @@
       "sector": "雲端/AI",
       "contexts": [
         {
+          "video": "2026/05/19(二) SpaceX上市，是特斯拉利空？STX大跌，存儲一起遭殃",
+          "channel": "財女珍妮",
+          "date": "2026-05-19",
+          "text": "今天呢 如果我可以服務更多人 然後我可以 收購道明尼 他本身呢 維吉尼亞州大家都知道 是數據中心的一個 非常重要的一個位置點 就是因為在這邊呢 他是 數據中心最密集的一個點 微軟啊 Google 啊 Amazon 其實都有大量的設施在這邊 那我是不是就可以去整合這些資源 然後可以去強化我的成本效率 然後讓我在未來 我的獲利能力也可以因此而提升 所以我不會覺得這對於 Next Era 來說其實是一個壞事 我覺得是一個好事 只是你在中間的整合過程當中 你還是會有一些時間上面的考量嘛 所以其實如果你去看新世紀 他過去一直都是一個還不錯的成長股 那昨天跌了之後呢 確實也是還在年線上面 所以我覺得大家對這個收購 可",
+          "matched_keyword": "Amazon",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
           "video": "2026/05/18(一) 殖利率破5%，美股又要跌了嗎？輝達要當救世主，Cerebras上市，成最大競爭對手？",
           "channel": "財女珍妮",
           "date": "2026-05-18",
@@ -4632,23 +4644,18 @@
           "sentiment_score": 1.0,
           "video_url": "",
           "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP220 | 台、美股重點一次說， ETF投資上限25%與台股關係，亞馬遜Amazon 算力供應鏈， CPU漲價與Intel財報",
-          "channel": "韭菜畢業班",
-          "date": "2026-04-26",
-          "text": "們隨便舉個例子來講 好像是6669為營的話 他其實也是在近期 之前其實都沒有在 往上一直在去創高 但是反而現在低位階 相關的東西的話 他其實就會開始被縱使到 那我們再先去把 龍頭再跟各位來複習一下 以Amazon來看的話 他最近的投資的話 就是Antropi 那Antropi的話 他投資的是美金250億 然後再來就是Antropi的話 他其實在未來10年都有承諾 要跟AWS採購算力相關的資源 那這一個交易的話 是美金的1000億 好那其實在CAPS來看的話 AWS其實也並沒有太縮縮 他會超過2000億的 這個美金的投資 那再來就是說 他是現在整體的算力的話 Chanian2跟Chanian3的算力的話 已",
-          "matched_keyword": "Amazon",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
         }
       ],
       "total_mentions": 30,
-      "sentiment_score": 0.594,
+      "sentiment_score": 0.577,
       "daily": {
+        "2026-05-19": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
         "2026-05-18": {
           "mentions": 1,
           "bullish": 1,
@@ -4762,8 +4769,8 @@
           "sentiment_score": 0.5
         },
         "2026-04-26": {
-          "mentions": 2,
-          "bullish": 2,
+          "mentions": 1,
+          "bullish": 1,
           "bearish": 0,
           "neutral": 0,
           "sentiment_score": 1.0
@@ -4776,6 +4783,18 @@
       "market": "US",
       "sector": "雲端/AI",
       "contexts": [
+        {
+          "video": "2026/05/19(二) SpaceX上市，是特斯拉利空？STX大跌，存儲一起遭殃",
+          "channel": "財女珍妮",
+          "date": "2026-05-19",
+          "text": "是很重要的 好 那我們再來看一下 昨天S&P 500指數裡面的 單日漲跌幅 也可以看到目前 科技股表現的就是比較弱 昨天科技巨頭門 除了微軟還有層 然後Google是守在平盤的附近 之外 其實像美光 假股文 設備股 或者是存儲類股 甚至像一些光通 你可以看到昨天光通 它其實表現的 也是比較弱勢一點的 都是之前漲很多的股票 你說GV 或者是像 開拓重工 它其實也是 之前也是一直不斷的創高 但是這一類股票 如果創高 像是工業類股 我們也講過不要追高 因為它永遠都會讓你有上車的機會 所以科技股昨天是最慘的 那我們就 從科技股這邊 然後來安撫一下大家的情緒 來告訴大家 為什麼昨天 像是存儲類股 像是特斯拉的",
+          "matched_keyword": "OpenAI",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
         {
           "video": "EP1099｜美債殖利率衝，美股壓力大？盤中回檔1000點，測4萬點正常？PCB、CPO何時能撿，被動、機器人接棒好事，台積下一檔賣誰？ft.題材獵人 林漢偉",
           "channel": "兆華與股惑仔",
@@ -5126,23 +5145,18 @@
           "video_url": "",
           "extraction_mode": "gemini",
           "whisper_corrected": true
-        },
-        {
-          "video": "2026/04/22(三）聯準會新局，新主席怎麼看降息？馬斯克出手，買下AI編程工具！UNH財報後大漲",
-          "channel": "財女珍妮",
-          "date": "2026-04-22",
-          "text": "有在談了 昨天的公告呢 只是把它搬上檯面而已 那對我來說 以投資的角度 我們就是一定要看嘛 就是 欸 今年有很多的大事要發佈 比如說 SpaceX 今年要 IPO 或者是像 Anthrop 或者是像 OpenAI 其實他們今年都是要 IPO 然後都是大家睜大眼睛看的 如果收購真的成真的話 是不是可以幫他在上市故事裡面 在他未來在 AI 這一條路上面 有更多的資產加分享 就是大家對於他的期待會更多嘛 那另外呢就是 這個 Google 呢 前一天呢 也才被爆料或點名呢 在 AI 編程這個部分呢 好像也已經有一點落後囉 所以接下來他是不是也要好好的開始努力 因為這一場就是一個永無止息 不會停下來的戰爭嘛 比如說",
-          "matched_keyword": "OpenAI",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "gemini"
         }
       ],
       "total_mentions": 30,
       "sentiment_score": 0.593,
       "daily": {
+        "2026-05-19": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
         "2026-05-18": {
           "mentions": 2,
           "bullish": 1,
@@ -5256,11 +5270,11 @@
           "sentiment_score": 0.7
         },
         "2026-04-22": {
-          "mentions": 3,
+          "mentions": 2,
           "bullish": 1,
           "bearish": 0,
-          "neutral": 2,
-          "sentiment_score": 0.6
+          "neutral": 1,
+          "sentiment_score": 0.65
         }
       }
     },
@@ -5270,6 +5284,19 @@
       "market": "US",
       "sector": "雲端/AI",
       "contexts": [
+        {
+          "video": "2026/05/19(二) SpaceX上市，是特斯拉利空？STX大跌，存儲一起遭殃",
+          "channel": "財女珍妮",
+          "date": "2026-05-19",
+          "text": "快的速度在成長 我今天呢 如果我可以服務更多人 然後我可以 收購道明尼 他本身呢 維吉尼亞州大家都知道 是數據中心的一個 非常重要的一個位置點 就是因為在這邊呢 他是 數據中心最密集的一個點 微軟啊 Google 啊 Amazon 其實都有大量的設施在這邊 那我是不是就可以去整合這些資源 然後可以去強化我的成本效率 然後讓我在未來 我的獲利能力也可以因此而提升 所以我不會覺得這對於 Next Era 來說其實是一個壞事 我覺得是一個好事 只是你在中間的整合過程當中 你還是會有一些時間上面的考量嘛 所以其實如果你去看新世紀 他過去一直都是一個還不錯的成長股 那昨天跌了之後呢 確實也是還在年線上面 所以我覺得",
+          "matched_keyword": "假股文",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini",
+          "whisper_corrected": true
+        },
         {
           "video": "EP1099｜美債殖利率衝，美股壓力大？盤中回檔1000點，測4萬點正常？PCB、CPO何時能撿，被動、機器人接棒好事，台積下一檔賣誰？ft.題材獵人 林漢偉",
           "channel": "兆華與股惑仔",
@@ -5617,23 +5644,18 @@
           "sentiment_score": 0.4,
           "video_url": "",
           "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP222 | 台、美股重點一次說， 美股巨頭財報總結，臻鼎-KY與mSAP需求，致茂與鴻勁的產品結構差異與互補",
-          "channel": "韭菜畢業班",
-          "date": "2026-05-03",
-          "text": "其實我目前看起來 Google表現還是算挺不錯的 那其他家的話 我們就之後再聊 我覺得今天算是先給大家一個 敲門專頁告訴大家說 資本支出看起來 這次的表現還是算挺不錯的 然後再加上如果說大家是看的是 Google相關的話題 或是說推理Ci相關的一個話題的話 那其實就會直接連帶的影響到一些 先進封裝或是說一些存儲的晶片 那存儲的晶片的話 現在大家可能會去比較注意到 都是美股相關的 因為美股相關 最近的表現其實是相對的強勢 反而到了台股的話 他們可能聯動性就會稍微降低一下 這個也是我們之前有大致上提過 就等於是你現在如果看美股漲價 然後趕快隔天做台股的話 可能就會導致說 他資金上面其實沒有這麼的集中 他並不是",
-          "matched_keyword": "Google",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
         }
       ],
       "total_mentions": 30,
-      "sentiment_score": 0.573,
+      "sentiment_score": 0.557,
       "daily": {
+        "2026-05-19": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
         "2026-05-18": {
           "mentions": 4,
           "bullish": 2,
@@ -5705,11 +5727,11 @@
           "sentiment_score": 0.7
         },
         "2026-05-03": {
-          "mentions": 7,
-          "bullish": 3,
+          "mentions": 6,
+          "bullish": 2,
           "bearish": 1,
           "neutral": 3,
-          "sentiment_score": 0.7
+          "sentiment_score": 0.65
         }
       }
     },
@@ -5728,6 +5750,18 @@
           "analysis_source": "whisper",
           "sentiment": "bullish",
           "sentiment_score": 0.667,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "2026/05/19(二) SpaceX上市，是特斯拉利空？STX大跌，存儲一起遭殃",
+          "channel": "財女珍妮",
+          "date": "2026-05-19",
+          "text": "得這個是很重要的 好 那我們再來看一下 昨天S&P 500指數裡面的 單日漲跌幅 也可以看到目前 科技股表現的就是比較弱 昨天科技巨頭門 除了微軟還有層 然後Google是守在平盤的附近 之外 其實像美光 假股文 設備股 或者是存儲類股 甚至像一些光通 你可以看到昨天光通 它其實表現的 也是比較弱勢一點的 都是之前漲很多的股票 你說GV 或者是像 開拓重工 它其實也是 之前也是一直不斷的創高 但是這一類股票 如果創高 像是工業類股 我們也講過不要追高 因為它永遠都會讓你有上車的機會 所以科技股昨天是最慘的 那我們就 從科技股這邊 然後來安撫一下大家的情緒 來告訴大家 為什麼昨天 像是存儲類股 像是",
+          "matched_keyword": "美光",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
           "video_url": "",
           "extraction_mode": "keyword"
         },
@@ -6068,29 +6102,17 @@
           "sentiment_score": 0.5,
           "video_url": "",
           "extraction_mode": "gemini"
-        },
-        {
-          "video": "EP1082｜台股不會跌的病又來了？摸到3萬8！主動式ETF變成資金永動機？選強恆強的PCB、CPO，還是回檔過的記憶體、低軌？ft.型男股神 陳威良",
-          "channel": "兆華與股惑仔",
-          "date": "2026-04-22",
-          "text": "相信之下 可能也比較凌亂 所以怎麼去評估這個產業 可能是另外拿出來看 我個人習慣通常是認為 就是記憶體既然是一個 國際化的產業 國際指標股跟台股 它會產生連動 所以通常我都會先是 習慣去看一下 包括像美光 海力士 Sandisk 凱霞 這幾兩個股的走勢 如果說他們都在彎頭往下 那我覺得當然 台股要逆勢走高 這幾乎是不太可能 但反過來現在的情況是什麼 除了美光是接近 歷史高之外 那另外剛剛提到的三檔個股 在近期都先後 已經先改寫歷史新高價了 所以其實反過來看 我們台灣相關的記憶體個股 其實往往很容易變成是 漲的時候或許會超漲 但跌的時候 一下子又跌得比人家深 跌過頭了 所以現在我們記憶體 已經從原本",
-          "matched_keyword": "美光",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.7,
-          "video_url": "",
-          "extraction_mode": "gemini"
         }
       ],
       "total_mentions": 30,
-      "sentiment_score": 0.587,
+      "sentiment_score": 0.597,
       "daily": {
         "2026-05-19": {
-          "mentions": 1,
-          "bullish": 1,
+          "mentions": 2,
+          "bullish": 2,
           "bearish": 0,
           "neutral": 0,
-          "sentiment_score": 0.667
+          "sentiment_score": 0.834
         },
         "2026-05-18": {
           "mentions": 2,
@@ -6196,13 +6218,6 @@
           "bearish": 0,
           "neutral": 1,
           "sentiment_score": 0.5
-        },
-        "2026-04-22": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 0.7
         }
       }
     },
@@ -6212,6 +6227,18 @@
       "market": "US",
       "sector": "電動車",
       "contexts": [
+        {
+          "video": "2026/05/19(二) SpaceX上市，是特斯拉利空？STX大跌，存儲一起遭殃",
+          "channel": "財女珍妮",
+          "date": "2026-05-19",
+          "text": "事嘛 或者是我自己在腦補 或者是我自己在想像一個 未來有可能發展的情境 但是我自己也會 沒事的時候就會思考說 那這個可能性是多大 到底合不合理啊 機率大概是多少啊 如果真的是這樣的話 那是不是對於目前特斯拉的股價 我們就會必須 可以重新的評估看看 你的資金 鋪險上面呢 或者是你在未來 你是不是可以先留一點現金 然後看看情況是怎麼樣 然後你再來做一個佈局 所以我也非常歡迎大家 可以在留言的地方告訴我 到底實際呢 你們覺得特斯拉 到底會不會受到 SPACX他上市 IPO 的影響呢 而導致他的股價 承受比較大的壓力 而沒有辦法有進一步上工 然後重新去掀起反彈的一個好角 好 那最後呢 本來想要講這個 nex",
+          "matched_keyword": "Tesla",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.3,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
         {
           "video": "EP226 | 台、美股重點一次說，Intel EMIB與各大巨頭關係，Nebius 產品與優缺點，輝達財報後勢展望",
           "channel": "韭菜畢業班",
@@ -6547,22 +6574,18 @@
           "sentiment": "bearish",
           "sentiment_score": 0.7,
           "video_url": null
-        },
-        {
-          "video": "2026/04/03 (五）美股為什麼又Ｖ轉了？終於要講微軟....為什麼跌？",
-          "channel": "財女珍妮",
-          "date": "2026-04-03",
-          "text": "他公佈了 2026年第一季的交車數字 是35.8萬輛左右 那如果你今天一看 去跟去年相比的話 還是有年成長的百分之六左右 好像也不是到那麼的差嗎 可是呢 這個數字是低於華爾街分析室的預估的 整整差的將近有8000輛左右 這個落差呢 就是造成市場上面 負面反應很重要的一個關鍵因素 雖然我們常常都在講 特斯拉的交車數 他車賣的好不好 已經不是特斯拉估值最大的一個 決定性因素了 但是因為他的主業 他主要的收入來源呢 還是靠賣車嘛 所以每一次只要這個消息出來的時候呢 也會被重新的拿出來 去炒作一番 不管是往上還是往下 那你真的要看特斯拉的話 其實還是看他未來的 自家車 自家集成車以及他的機器人嘛 好 那這個",
-          "matched_keyword": "TSLA",
-          "analysis_source": "whisper",
-          "sentiment": "bearish",
-          "sentiment_score": 0.7,
-          "video_url": null
         }
       ],
       "total_mentions": 30,
-      "sentiment_score": 0.537,
+      "sentiment_score": 0.523,
       "daily": {
+        "2026-05-19": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 1,
+          "neutral": 0,
+          "sentiment_score": 0.3
+        },
         "2026-05-17": {
           "mentions": 1,
           "bullish": 0,
@@ -6697,9 +6720,9 @@
           "sentiment_score": 0.1
         },
         "2026-04-03": {
-          "mentions": 2,
+          "mentions": 1,
           "bullish": 0,
-          "bearish": 2,
+          "bearish": 1,
           "neutral": 0,
           "sentiment_score": 0.7
         }
@@ -33824,6 +33847,118 @@
       }
     },
     {
+      "code": "STX",
+      "name": "Seagate",
+      "market": "US",
+      "sector": "記憶體",
+      "contexts": [
+        {
+          "video": "2026/04/07 (二）伊朗拒停火， 油價不漲了？博通、Google擴大合作",
+          "channel": "財女珍妮",
+          "date": "2026-04-07",
+          "text": "就說A和未來呢 在先進製程啊 先進晶片上面呢 可以帶來獲利的大躍進之外 像是CGEDC解 或者是C部數據WDC 這幾家公司呢 在昨天的表現也是非常的好的 原因就是因為Morgan Stanley 在禮拜一的時候 重申對於這兩支股票的增持評級 其中呢 CGEDC有讀者告訴我 說要講股票代號嘛 對不對 STX 他認為呢 他在硬碟市場呢 可以成為這個首選的股票 首選的公司之一 讓他的股價大漲了6.4% 盤中是創下了收盤的歷史新高 所以這兩家公司呢 其實他們本來就是競爭對手 那他們在股價的表現上面呢 其實也算是還蠻同步的 你如果今天認為 在未來存儲的需求會增加 不管今天是冷數據啊 硬數據啊 冷數據啊 熱數據",
+          "matched_keyword": "STX",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.75,
+          "video_url": ""
+        },
+        {
+          "video": "2026/04/29(三) 美股爲什麼又跌了？#GLW #CLS #STX 財報",
+          "channel": "財女珍妮",
+          "date": "2026-04-29",
+          "text": "去調出很多的資料 然後還要再把它存下來 那這些呢 都是讓存儲的廠商 它在接下來 會非常受惠的一個原因 那你要說現在好 那其他兩家公司 比如說我們剛剛講的 兩家公司也都很好啊 也都處於上漲啊 那為什麼 Seagate 它就沒有辦法 就是拉回 給大家上車 或者是怎麼樣 其實它在之前呢 它也是有整理過一段時間 然後才衝上去的嘛 那如果你問我說 喔 它現在跳空大漲 那我要不要去追它 欸 它沒有下跌啊 對不對 它力空還是反應力空 它沒有力多反應力多 它沒有力多用力空來反應 那我覺得你現在去追高 一定是風險比較大了嘛 就是你今天你去former 那你一定是承受比較大的風險 你怎麼知道它會不會開高走低 或者是接下來兩天",
+          "matched_keyword": "C 給",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.8,
+          "video_url": "",
+          "extraction_mode": "gemini",
+          "whisper_corrected": true
+        },
+        {
+          "video": "EP660 | 🍄‍🟫",
+          "channel": "股癌",
+          "date": "2026-05-09",
+          "text": "remark 我給了一個小評論 就是我們認為說 嗯 這個東西還太早 但如果那時候就買CPU的話 那我們現在就更放鬆 但後面其實大家都有去追廣 每個人都有廣 只是說那時候買的話 絕對是最甜的 所以這次就希望 可以再把握到一些機會 所以回掛我們剛剛上面 講的這個話題 其實Invidia的這個 有些東西怎麼停線 去改料的 因為現在你已經看到一些X的帳號 都開始跑出來寫了 所以他已經算是相當程度的 去傳播出去 那你說那些東西可不可以 進去超低 最近有一些在Telegram裡面的 聽眾會想要tag我 然後去問我一些看法 那其實這裡面的幾檔標的 有些是我自己本身也是 蠻喜歡的 但我在這個時間點 我就會說我拒絕",
+          "matched_keyword": "希捷",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.3,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
+          "video": "2026/05/19(二) SpaceX上市，是特斯拉利空？STX大跌，存儲一起遭殃",
+          "channel": "財女珍妮",
+          "date": "2026-05-19",
+          "text": "因為它永遠都會讓你有上車的機會 所以科技股昨天是最慘的 那我們就 從科技股這邊 然後來安撫一下大家的情緒 來告訴大家 為什麼昨天 像是存儲類股 像是特斯拉的股價表現 會這麼差 好 我們先來看 C結就是StX 這家公司 它昨天跌了將近有7%左右 那C結他的執行長 Dev Mosley 他在昨天一場 JP Morgan舉辦的 法人說明會上 他有講出了一句話 有可能是這一句話 觸發了大家的敏感神經 這句話的大意就是 如果我們把團隊都拿去 就是都請他們去 建新廠去擴廠的話 其實是一個非常耗時的工程 等今天 新的廠房蓋好了 然後產能出來的時候呢 那個時間點 需求的高峰 有可能已經過了 所以我們公司呢 現在寧願",
+          "matched_keyword": "STX",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "2026/05/19(二) SpaceX上市，是特斯拉利空？STX大跌，存儲一起遭殃",
+          "channel": "財女珍妮",
+          "date": "2026-05-19",
+          "text": "這些過去都會有 比較大的一個循環性嗎 現在是因為 ai 讓他的循環性 讓他對景氣的敏感性 沒有那麼大 還在一個上升的趨勢走起 所謂的 超級存儲的一個循環走起嗎 可是你總是要為未來 為與籌謀啊 所以 Seagate 他現在的目標是什麼呢 他透過最新的技術就是 HAMR 的熱輔助詞 熱輔助詞記錄的技術 然後把每個硬碟儲存的密度 從 3TB 去推進到 4TB 5TB 用密度的提升 這件事情呢 來作為擴充產能的替代 所以我今天我的規格提升了 我的存儲 我的記錄的這個速度的 或者是空間呢 都可以大幅的增加的話 那我就不需要蓋更多的廠 來供應更多的容量啊 所以這件事情 你反而你聽到現在你就會覺得 欸 那管理成績是很聰",
+          "matched_keyword": "Seagate",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "2026/05/19(二) SpaceX上市，是特斯拉利空？STX大跌，存儲一起遭殃",
+          "channel": "財女珍妮",
+          "date": "2026-05-19",
+          "text": "可以去 做這樣子的推進 然後我的整個成本結構 是不會改變的 那這樣子不是可以 更好地去提升公司的利潤率嗎 所以我覺得呢 在財務面上面 或者是在策略面上面 其實這個反而是一個利多 而不是一個利空 因為 Seagate 他現在他的毛利率 大概也是有 70% 左右嘛 而且公司也說 這個未來是可以持續的 他們到 2028 年 預估可以達到 200 億美元的營收規模 所以當 大家都認為這樣子 或者是當過去 大家都已經一直 pricing 這件事情 到股價上面的時候 你可以看到他的股價 是一直沿著五日先去走 非常陡峭的 基本上已經是一個 將近 這是幾度啊 70 欸 七八十度的這個斜率嗎 所以呢 他已經 有一點乖離過大",
+          "matched_keyword": "Seagate",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.667,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        }
+      ],
+      "total_mentions": 6,
+      "sentiment_score": 0.67,
+      "daily": {
+        "2026-04-07": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.75
+        },
+        "2026-04-29": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.8
+        },
+        "2026-05-09": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 1,
+          "neutral": 0,
+          "sentiment_score": 0.3
+        },
+        "2026-05-19": {
+          "mentions": 3,
+          "bullish": 2,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.722
+        }
+      }
+    },
+    {
       "code": "3211",
       "name": "順達",
       "market": "TW",
@@ -38799,6 +38934,92 @@
       }
     },
     {
+      "code": "BLK",
+      "name": "BlackRock",
+      "market": "US",
+      "sector": "金融",
+      "contexts": [
+        {
+          "video": "2026/03/25 (三）私募信貸風暴未完，軟體股再崩潰",
+          "channel": "財女珍妮",
+          "date": "2026-03-25",
+          "text": "人想要領了 大概15億左右出來 最後只拿回了 7.3億而已 然後像還有Ares 這個私募基金 也是一樣 反正你現在看到 我講的這些名字 其實都是一樣 就是我今天只有 5%的一個 最高的輸回申請限制 但是每一個 現在都超過了 一倍以上 然後呢 就讓市場更緊張說 這些高進職的機構 這些那麼有名的 像之前BlackRock 或什麼之類的 其實都是一樣 都是面臨到流動性的問題 我在短時間之內 為什麼這麼多人 要把錢去頂出去 然後也是因為這樣 在這個禮拜 目的也把 KKR管理的一個叫做 Friture Start 一個基金的評級 他直接去降到了垃圾級 降到垃圾級 那你今天是不是很多資金 他也會因為這樣 而被撤除 不管你今",
+          "matched_keyword": "BlackRock",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
+        },
+        {
+          "video": "2026/04/15 (三）納指10連漲， 巨頭終於要動了？AVGO, MRVL, CRDO噴出",
+          "channel": "財女珍妮",
+          "date": "2026-04-15",
+          "text": "貝萊德拉 那個花旗啊 還有像是捷匹摩根 摩根大通呢 其實都是上漲的",
+          "matched_keyword": "貝萊德拉",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
+        },
+        {
+          "video": "2026/05/13(三) 通膨升溫，川習會前半導體跳水？#ASTS #CRCL",
+          "channel": "財女珍妮",
+          "date": "2026-05-13",
+          "text": "個說法 或者是一個故事 那這個故事要怎麼樣 可以讓他更穩固呢 就是他的投資人陣容 所以如果你去看 Circle 他的一個簡報的話 他會告訴你說 有很多機構的錢 都已經進場了 比如說 S6Z 或者是像 BlackRock 或者是像洲際交易所 或者是像 ARC Investing 就是 ARC 基金嘛 他們都願意把自己的品牌 或者是你可以看到 都是非常大型的公司 去跟 Circle 的 ARC 去綁在一起 那覆蓋的就是傳統的資產管理公司 交易所 避險基金什麼的 然後他們的代幣分配呢 是 Circle 自己保留 25% 然後高達 60% 去用於生態息的補貼 空頭基地即化 然後希望可以讓這個網路 更快速的去去中心化 也",
+          "matched_keyword": "BlackRock",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "2026/05/19(二) SpaceX上市，是特斯拉利空？STX大跌，存儲一起遭殃",
+          "channel": "財女珍妮",
+          "date": "2026-05-19",
+          "text": "我們看到這些電力股 其實主要還是圍繞的 AI 再去做運轉 那 現在已經演變到了就是很多的公司 比如說像 Coastalation 他之前去 花了很多的錢去 併購了這個 Cowpile 身家公司 然後 BlackRock 跟 很多的這個 基金或者是跟 就是就有募集資金 然後也去收購這個 AES 就是 你會看到這些電力啊 公司也他現在就是處在一個 合併跟收購的階段 因為他想要 去擴大他自己的 競爭優勢跟互成合的時候 他就必須要靠這個手段 其實是最快的 那 Next Era 就是 新世紀能源呢 他昨天是以 670 億美元 去收購了道比尼 這家公司 然後合併之後 會成為全國最大 受監管 公用事業公司 那服務的客戶呢 會",
+          "matched_keyword": "BlackRock",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        }
+      ],
+      "total_mentions": 4,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-03-25": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-04-15": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-05-13": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-05-19": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
       "code": "5475",
       "name": "德宏",
       "market": "TW",
@@ -40740,75 +40961,6 @@
       }
     },
     {
-      "code": "STX",
-      "name": "Seagate",
-      "market": "US",
-      "sector": "記憶體",
-      "contexts": [
-        {
-          "video": "2026/04/07 (二）伊朗拒停火， 油價不漲了？博通、Google擴大合作",
-          "channel": "財女珍妮",
-          "date": "2026-04-07",
-          "text": "就說A和未來呢 在先進製程啊 先進晶片上面呢 可以帶來獲利的大躍進之外 像是CGEDC解 或者是C部數據WDC 這幾家公司呢 在昨天的表現也是非常的好的 原因就是因為Morgan Stanley 在禮拜一的時候 重申對於這兩支股票的增持評級 其中呢 CGEDC有讀者告訴我 說要講股票代號嘛 對不對 STX 他認為呢 他在硬碟市場呢 可以成為這個首選的股票 首選的公司之一 讓他的股價大漲了6.4% 盤中是創下了收盤的歷史新高 所以這兩家公司呢 其實他們本來就是競爭對手 那他們在股價的表現上面呢 其實也算是還蠻同步的 你如果今天認為 在未來存儲的需求會增加 不管今天是冷數據啊 硬數據啊 冷數據啊 熱數據",
-          "matched_keyword": "STX",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.75,
-          "video_url": ""
-        },
-        {
-          "video": "2026/04/29(三) 美股爲什麼又跌了？#GLW #CLS #STX 財報",
-          "channel": "財女珍妮",
-          "date": "2026-04-29",
-          "text": "去調出很多的資料 然後還要再把它存下來 那這些呢 都是讓存儲的廠商 它在接下來 會非常受惠的一個原因 那你要說現在好 那其他兩家公司 比如說我們剛剛講的 兩家公司也都很好啊 也都處於上漲啊 那為什麼 Seagate 它就沒有辦法 就是拉回 給大家上車 或者是怎麼樣 其實它在之前呢 它也是有整理過一段時間 然後才衝上去的嘛 那如果你問我說 喔 它現在跳空大漲 那我要不要去追它 欸 它沒有下跌啊 對不對 它力空還是反應力空 它沒有力多反應力多 它沒有力多用力空來反應 那我覺得你現在去追高 一定是風險比較大了嘛 就是你今天你去former 那你一定是承受比較大的風險 你怎麼知道它會不會開高走低 或者是接下來兩天",
-          "matched_keyword": "C 給",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.8,
-          "video_url": "",
-          "extraction_mode": "gemini",
-          "whisper_corrected": true
-        },
-        {
-          "video": "EP660 | 🍄‍🟫",
-          "channel": "股癌",
-          "date": "2026-05-09",
-          "text": "remark 我給了一個小評論 就是我們認為說 嗯 這個東西還太早 但如果那時候就買CPU的話 那我們現在就更放鬆 但後面其實大家都有去追廣 每個人都有廣 只是說那時候買的話 絕對是最甜的 所以這次就希望 可以再把握到一些機會 所以回掛我們剛剛上面 講的這個話題 其實Invidia的這個 有些東西怎麼停線 去改料的 因為現在你已經看到一些X的帳號 都開始跑出來寫了 所以他已經算是相當程度的 去傳播出去 那你說那些東西可不可以 進去超低 最近有一些在Telegram裡面的 聽眾會想要tag我 然後去問我一些看法 那其實這裡面的幾檔標的 有些是我自己本身也是 蠻喜歡的 但我在這個時間點 我就會說我拒絕",
-          "matched_keyword": "希捷",
-          "analysis_source": "whisper",
-          "sentiment": "bearish",
-          "sentiment_score": 0.3,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        }
-      ],
-      "total_mentions": 3,
-      "sentiment_score": 0.617,
-      "daily": {
-        "2026-04-07": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 0.75
-        },
-        "2026-04-29": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 0.8
-        },
-        "2026-05-09": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 1,
-          "neutral": 0,
-          "sentiment_score": 0.3
-        }
-      }
-    },
-    {
       "code": "2439",
       "name": "美律",
       "market": "TW",
@@ -41075,73 +41227,6 @@
           "bearish": 0,
           "neutral": 0,
           "sentiment_score": 0.7
-        },
-        "2026-05-13": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        }
-      }
-    },
-    {
-      "code": "BLK",
-      "name": "BlackRock",
-      "market": "US",
-      "sector": "金融",
-      "contexts": [
-        {
-          "video": "2026/03/25 (三）私募信貸風暴未完，軟體股再崩潰",
-          "channel": "財女珍妮",
-          "date": "2026-03-25",
-          "text": "人想要領了 大概15億左右出來 最後只拿回了 7.3億而已 然後像還有Ares 這個私募基金 也是一樣 反正你現在看到 我講的這些名字 其實都是一樣 就是我今天只有 5%的一個 最高的輸回申請限制 但是每一個 現在都超過了 一倍以上 然後呢 就讓市場更緊張說 這些高進職的機構 這些那麼有名的 像之前BlackRock 或什麼之類的 其實都是一樣 都是面臨到流動性的問題 我在短時間之內 為什麼這麼多人 要把錢去頂出去 然後也是因為這樣 在這個禮拜 目的也把 KKR管理的一個叫做 Friture Start 一個基金的評級 他直接去降到了垃圾級 降到垃圾級 那你今天是不是很多資金 他也會因為這樣 而被撤除 不管你今",
-          "matched_keyword": "BlackRock",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": ""
-        },
-        {
-          "video": "2026/04/15 (三）納指10連漲， 巨頭終於要動了？AVGO, MRVL, CRDO噴出",
-          "channel": "財女珍妮",
-          "date": "2026-04-15",
-          "text": "貝萊德拉 那個花旗啊 還有像是捷匹摩根 摩根大通呢 其實都是上漲的",
-          "matched_keyword": "貝萊德拉",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": ""
-        },
-        {
-          "video": "2026/05/13(三) 通膨升溫，川習會前半導體跳水？#ASTS #CRCL",
-          "channel": "財女珍妮",
-          "date": "2026-05-13",
-          "text": "個說法 或者是一個故事 那這個故事要怎麼樣 可以讓他更穩固呢 就是他的投資人陣容 所以如果你去看 Circle 他的一個簡報的話 他會告訴你說 有很多機構的錢 都已經進場了 比如說 S6Z 或者是像 BlackRock 或者是像洲際交易所 或者是像 ARC Investing 就是 ARC 基金嘛 他們都願意把自己的品牌 或者是你可以看到 都是非常大型的公司 去跟 Circle 的 ARC 去綁在一起 那覆蓋的就是傳統的資產管理公司 交易所 避險基金什麼的 然後他們的代幣分配呢 是 Circle 自己保留 25% 然後高達 60% 去用於生態息的補貼 空頭基地即化 然後希望可以讓這個網路 更快速的去去中心化 也",
-          "matched_keyword": "BlackRock",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        }
-      ],
-      "total_mentions": 3,
-      "sentiment_score": 0.5,
-      "daily": {
-        "2026-03-25": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-04-15": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
         },
         "2026-05-13": {
           "mentions": 1,
@@ -55425,6 +55510,37 @@
           "sentiment_score": 0.7
         }
       }
+    },
+    {
+      "code": "8367",
+      "name": "建新國際",
+      "market": "TW",
+      "sector": "航運業",
+      "contexts": [
+        {
+          "video": "2026/05/19(二) SpaceX上市，是特斯拉利空？STX大跌，存儲一起遭殃",
+          "channel": "財女珍妮",
+          "date": "2026-05-19",
+          "text": "的執行長 Dev Mosley 他在昨天一場 JP Morgan舉辦的 法人說明會上 他有講出了一句話 有可能是這一句話 觸發了大家的敏感神經 這句話的大意就是 如果我們把團隊都拿去 就是都請他們去 建新廠去擴廠的話 其實是一個非常耗時的工程 等今天 新的廠房蓋好了 然後產能出來的時候呢 那個時間點 需求的高峰 有可能已經過了 所以我們公司呢 現在寧願把資源集中在 現有設備的技術提升上面 這個聽起來是很合理的商業邏輯 如果今天你是一個 經營者 你一定要看比較長期的 企業 他的長期展望 或者是景氣的一個循環 所以呢 如果你覺得 現在呢 我們有可能 再大幅的去擴張的話 會變成未來的負擔 會變成未來產能",
+          "matched_keyword": "建新",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-05-19": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
     }
   ],
   "sectors_ranking": [
@@ -55726,18 +55842,9 @@
       ]
     },
     {
-      "sector": "手機晶片",
-      "market": "TW",
-      "total_mentions": 44,
-      "stock_codes": [
-        "2454",
-        "3034"
-      ]
-    },
-    {
       "sector": "金融",
       "market": "US",
-      "total_mentions": 44,
+      "total_mentions": 45,
       "stock_codes": [
         "GS",
         "MS",
@@ -55751,6 +55858,15 @@
         "COIN",
         "AIG",
         "C"
+      ]
+    },
+    {
+      "sector": "手機晶片",
+      "market": "TW",
+      "total_mentions": 44,
+      "stock_codes": [
+        "2454",
+        "3034"
       ]
     },
     {
@@ -55797,6 +55913,16 @@
       ]
     },
     {
+      "sector": "記憶體",
+      "market": "US",
+      "total_mentions": 40,
+      "stock_codes": [
+        "MU",
+        "STX",
+        "WDC"
+      ]
+    },
+    {
       "sector": "組裝代工",
       "market": "TW",
       "total_mentions": 39,
@@ -55816,16 +55942,6 @@
         "0050",
         "006208",
         "00921"
-      ]
-    },
-    {
-      "sector": "記憶體",
-      "market": "US",
-      "total_mentions": 37,
-      "stock_codes": [
-        "MU",
-        "WDC",
-        "STX"
       ]
     },
     {
@@ -56628,6 +56744,18 @@
       ]
     },
     {
+      "sector": "航運業",
+      "market": "TW",
+      "total_mentions": 5,
+      "stock_codes": [
+        "2634",
+        "2636",
+        "2633",
+        "2617",
+        "8367"
+      ]
+    },
+    {
       "sector": "鋼鐵工業",
       "market": "TW",
       "total_mentions": 4,
@@ -56689,17 +56817,6 @@
         "1219",
         "1234",
         "1203"
-      ]
-    },
-    {
-      "sector": "航運業",
-      "market": "TW",
-      "total_mentions": 4,
-      "stock_codes": [
-        "2634",
-        "2636",
-        "2633",
-        "2617"
       ]
     },
     {
@@ -61324,6 +61441,25 @@
         "3081",
         "META",
         "SNDK"
+      ],
+      "analysis_source": "whisper",
+      "thumbnail_url": null
+    },
+    {
+      "video_id": "88bab77a-e510-443c-bf76-4da9dc093fce",
+      "title": "2026/05/19(二) SpaceX上市，是特斯拉利空？STX大跌，存儲一起遭殃",
+      "channel": "財女珍妮",
+      "date": "2026-05-19",
+      "stocks_found": [
+        "STX",
+        "MSFT",
+        "8367",
+        "MU",
+        "AMZN",
+        "BLK",
+        "2330",
+        "TSLA",
+        "GOOGL"
       ],
       "analysis_source": "whisper",
       "thumbnail_url": null
