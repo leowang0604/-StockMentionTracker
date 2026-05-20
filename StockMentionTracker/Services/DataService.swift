@@ -20,7 +20,9 @@ class DataService {
     }
 
     func fetchLatest(from urlString: String) async {
-        guard !urlString.isEmpty, let url = URL(string: urlString) else {
+        guard !urlString.isEmpty,
+              let baseURL = URL(string: urlString),
+              let url = freshURL(from: baseURL) else {
             errorMessage = "GitHub Raw URL 未設定"
             return
         }
@@ -29,7 +31,13 @@ class DataService {
         errorMessage = nil
 
         do {
-            let (data, response) = try await URLSession.shared.data(from: url)
+            var request = URLRequest(url: url)
+            request.cachePolicy = .reloadIgnoringLocalCacheData
+            request.timeoutInterval = 30
+            request.setValue("no-cache", forHTTPHeaderField: "Cache-Control")
+            request.setValue("no-cache", forHTTPHeaderField: "Pragma")
+
+            let (data, response) = try await URLSession.shared.data(for: request)
             guard (response as? HTTPURLResponse)?.statusCode == 200 else {
                 throw URLError(.badServerResponse)
             }
@@ -86,5 +94,16 @@ class DataService {
         guard let data = try? Data(contentsOf: cacheURL),
               let result = try? JSONDecoder().decode(ScanResult.self, from: data) else { return }
         scanResult = result
+    }
+
+    private func freshURL(from baseURL: URL) -> URL? {
+        guard var components = URLComponents(url: baseURL, resolvingAgainstBaseURL: false) else {
+            return nil
+        }
+        var queryItems = components.queryItems ?? []
+        queryItems.removeAll { $0.name == "_ts" }
+        queryItems.append(URLQueryItem(name: "_ts", value: String(Int(Date().timeIntervalSince1970))))
+        components.queryItems = queryItems
+        return components.url
     }
 }

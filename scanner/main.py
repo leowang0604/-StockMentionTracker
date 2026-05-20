@@ -2275,6 +2275,32 @@ def _find_keyword_pos(needle: str, haystack: str, allow_fuzzy: bool = True) -> i
     return -1
 
 
+def _contains_only_cjk(text: str) -> bool:
+    return bool(text) and all(
+        0x3400 <= ord(ch) <= 0x9FFF or 0xF900 <= ord(ch) <= 0xFAFF
+        for ch in text
+    )
+
+
+def _conflicting_exact_keyword_hits(
+    text: str,
+    *,
+    exclude_code: str,
+    min_len: int = 3,
+) -> list[tuple[str, str]]:
+    hits: list[tuple[str, str]] = []
+    for kw, code in STOCK_DICT.items():
+        if code == exclude_code or len(kw) < min_len:
+            continue
+        if kw not in text:
+            continue
+        if kw == code:
+            continue
+        hits.append((kw, code))
+    hits.sort(key=lambda item: len(item[0]), reverse=True)
+    return hits
+
+
 def _is_ambiguous_hit(hit: dict) -> bool:
     """判斷這個 hit 是否需要 Gemini 驗證（短詞可能誤匹配子字串）"""
     # Already handled by CONTEXT_REQUIRED fast-path in recognize_stocks()
@@ -2510,13 +2536,13 @@ def _validate_gemini_stocks(
         exact_name_appears = any(kw in chunk_text for kw in search_names)
         name_appears = exact_name_appears or _whisper_close or _whisper_bare_close
         fuzzy_name_appears = False
+        is_short_cjk_name = _contains_only_cjk(resolved_name) and len(resolved_name) <= 3
         # Whisper 錯字修正場景：Gemini 給了正確名稱但未填 whisper_original，
         # 用 Levenshtein 在 chunk 中滑動視窗找相近的詞。
-        # 2 字名稱（如鴻海、欣興）：distance ≤ 1（嚴格，避免誤判）
-        # 3 字以上：distance ≤ 2
-        if not name_appears and len(resolved_name) >= 2:
+        # 2 字中文股名太容易誤撞，因此這裡只放行 3 字以上名稱。
+        if not name_appears and len(resolved_name) >= 3:
             win = len(resolved_name)
-            max_dist = 1 if win == 2 else 2
+            max_dist = 2
             for start in range(len(chunk_text) - win + 1):
                 window = chunk_text[start:start + win]
                 if _levenshtein(resolved_name, window) <= max_dist:
@@ -2530,6 +2556,31 @@ def _validate_gemini_stocks(
                         name_appears = True
                         fuzzy_name_appears = True
                         break
+        # 若短中文名本身沒有 exact 命中，但 chunk 裡已有別支股票的 exact keyword，
+        # 優先相信 exact keyword，避免像「波諾威」被另一支兩字股票模糊誤配。
+        if is_short_cjk_name and not exact_name_appears and not whisper_orig:
+            conflicting_hits = _conflicting_exact_keyword_hits(
+                chunk_text,
+                exclude_code=resolved_code,
+            )
+            if conflicting_hits:
+                strongest_kw, strongest_code = conflicting_hits[0]
+                print(
+                    f"  [gemini_extract] short-name conflict for {resolved_code}({resolved_name})"
+                    f" — exact keyword {strongest_kw!r} already maps to {strongest_code}",
+                    file=sys.stderr,
+                )
+                _vctx = video_ctx or {}
+                _skip_log.append({
+                    "keyword": name,
+                    "reason":  "gemini_short_name_conflict",
+                    "detail":  f"短股名缺少 exact 命中，且原文已有其他股票關鍵字: {strongest_kw}->{strongest_code}",
+                    "video_id": _vctx.get("video_id", ""),
+                    "channel":  _vctx.get("channel", ""),
+                    "date":     _vctx.get("date", ""),
+                    "title":    _vctx.get("title", ""),
+                })
+                continue
         if not name_appears:
             print(f"  [gemini_extract] hallucination? {resolved_code}({resolved_name}) not in chunk → skipped", file=sys.stderr)
             _vctx = video_ctx or {}
