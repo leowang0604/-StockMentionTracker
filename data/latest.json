@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-20T21:52:54",
+  "updated_at": "2026-05-20T22:43:22",
   "stocks_ranking": [
     {
       "code": "INTC",
@@ -30,6 +30,19 @@
           "sentiment_score": 0.6,
           "video_url": "",
           "extraction_mode": "gemini"
+        },
+        {
+          "video": "2026/05/20(三) Google能超越輝達嗎？ Google I/O 大亮點",
+          "channel": "財女珍妮",
+          "date": "2026-05-20",
+          "text": " 市值是一度逼近了5兆美元 所以我們今天採用這個標題嘛 就說Google會不會 就是去超越回答成為市值網吧 因為大家現在都覺得 Google感覺好像才是 回答最大的禁敵 我們都常常講AMD啊 或者是講Inter啊 其實它都只是小卡博通啊 對不對 可是如果今天 Google它的TPU 或者是它在未來整個 全戰士的AI的基礎建設 然後到服務到應用端呢 都可以越來越向外擴展的話 搞不好其實 它才是回答 最大最大的競爭對手 但是呢 昨天Google他舉行了 股價沒有正面反應 反而最後是下跌了2.3% 為什麼呢 我們先來講 一個就是在 這個產品發佈的同一天 然後我早上也有在 我早上也有在Facebook上面 昨天",
+          "matched_keyword": "Inter",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini",
+          "whisper_corrected": true
         },
         {
           "video": "EP1100｜後悔3月低點買不夠，又怕這次真崩盤，怎麼做？通膨和AI成長的平衡點在哪裡？主動ETF殺高價股，台股幸好有台積電！ft.型男股神 陳威良",
@@ -355,29 +368,17 @@
           "sentiment_score": 0.5,
           "video_url": "",
           "extraction_mode": "keyword"
-        },
-        {
-          "video": "2026/05/04(一) 伊朗提談判新方案，戰爭已結束？AI續強，軟體復活了嗎 #CAT #TEAM",
-          "channel": "財女珍妮",
-          "date": "2026-05-04",
-          "text": "或者是有像是電力 或者是有像是光通這些股票",
-          "matched_keyword": "Intel",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.7,
-          "video_url": "",
-          "extraction_mode": "gemini"
         }
       ],
       "total_mentions": 30,
-      "sentiment_score": 0.547,
+      "sentiment_score": 0.54,
       "daily": {
         "2026-05-20": {
-          "mentions": 2,
+          "mentions": 3,
           "bullish": 1,
           "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.55
+          "neutral": 2,
+          "sentiment_score": 0.533
         },
         "2026-05-19": {
           "mentions": 1,
@@ -464,11 +465,11 @@
           "sentiment_score": 0.417
         },
         "2026-05-04": {
-          "mentions": 2,
-          "bullish": 1,
+          "mentions": 1,
+          "bullish": 0,
           "bearish": 0,
           "neutral": 1,
-          "sentiment_score": 0.6
+          "sentiment_score": 0.5
         }
       }
     },
@@ -985,6 +986,19 @@
           "extraction_mode": "keyword"
         },
         {
+          "video": "2026/05/20(三) Google能超越輝達嗎？ Google I/O 大亮點",
+          "channel": "財女珍妮",
+          "date": "2026-05-20",
+          "text": "以我們今天採用這個標題嘛 就說Google會不會 就是去超越回答成為市值網吧 因為大家現在都覺得 Google感覺好像才是 回答最大的禁敵 我們都常常講AMD啊 或者是講Inter啊 其實它都只是小卡博通啊 對不對 可是如果今天 Google它的TPU 或者是它在未來整個 全戰士的AI的基礎建設 然後到服務到應用端呢 都可以越來越向外擴展的話 搞不好其實 它才是回答 最大最大的競爭對手 但是呢 昨天Google他舉行了 股價沒有正面反應 反而最後是下跌了2.3% 為什麼呢 我們先來講 一個就是在 這個產品發佈的同一天 然後我早上也有在 我早上也有在Facebook上面 昨天早上分享的一個消息 就是",
+          "matched_keyword": "博通",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini",
+          "whisper_corrected": true
+        },
+        {
           "video": "2026/05/18(一) 殖利率破5%，美股又要跌了嗎？輝達要當救世主，Cerebras上市，成最大競爭對手？",
           "channel": "財女珍妮",
           "date": "2026-05-18",
@@ -1294,27 +1308,16 @@
           "sentiment": "neutral",
           "sentiment_score": 0.45,
           "video_url": ""
-        },
-        {
-          "video": "EP653 | 🕊️",
-          "channel": "股癌",
-          "date": "2026-04-15",
-          "text": "簡易一點的東西去丟給別人做 去分工 專業分工 同時可能在一些原物料的採購上面 我有自己的 一個溢價的權利 而且他可能一次可以買 蠻大的一個量 也可以或許可以拿到蠻不錯的價格 所以他是很有動機去推進這條線 除非什麼除非就是說 可能在MTK這邊做出來的晶片的表現 是不合預期 那就有可能會在 加速的去往博通給收斂 但如果說今天是 做出來的表現很好玩 其實可以蠻期待在 下一代的HUMUFISH 應該就會放到更大的一個量 所以簡單來說 就是如果你可以在 ZBRFISH這邊看到一個很好的表現 那就可以去 算是有七八成的把握 那HUMUFISH就會表現得非常好 那今天在節目上有跟大家聊到說 我們有注意到 在H",
-          "matched_keyword": "博通",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.45,
-          "video_url": ""
         }
       ],
       "total_mentions": 30,
-      "sentiment_score": 0.524,
+      "sentiment_score": 0.526,
       "daily": {
         "2026-05-20": {
-          "mentions": 3,
+          "mentions": 4,
           "bullish": 0,
           "bearish": 0,
-          "neutral": 3,
+          "neutral": 4,
           "sentiment_score": 0.5
         },
         "2026-05-18": {
@@ -1444,10 +1447,10 @@
           "sentiment_score": 0.7
         },
         "2026-04-15": {
-          "mentions": 3,
+          "mentions": 2,
           "bullish": 0,
           "bearish": 0,
-          "neutral": 3,
+          "neutral": 2,
           "sentiment_score": 0.45
         }
       }
@@ -1469,6 +1472,18 @@
           "sentiment_score": 0.5,
           "video_url": "",
           "extraction_mode": "keyword"
+        },
+        {
+          "video": "2026/05/20(三) Google能超越輝達嗎？ Google I/O 大亮點",
+          "channel": "財女珍妮",
+          "date": "2026-05-20",
+          "text": "樣 AI就是現在最瞭解你的那個人 好 我們剛剛講完 就是軟體的部分 模型的部分 那還有沒有一些硬體的部分呢 當然就是重中之重 就是未來的趨勢 就是AI智慧眼鏡 那大家之前講智慧眼鏡的時候 都會想說 那Meta這個Reban的眼鏡 就是雷鵬的眼鏡 一定是市場上面賣最好 或者是大家興趣最高 然後表現得好像也還不錯的 一個眼鏡 但是Google他這一次 他也跟這個 Warby Parker 還有Gentlemaster 就是這麼有名的牌子 對不對 去直接他們合作去設計 這個智慧眼鏡 所以你可以看到很多的影片上面 就有去 有一些是介紹啊 或者是Google 他們在自己的開發者大會上面 他們也有去 有影片嘛 就",
+          "matched_keyword": "Meta",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
         },
         {
           "video": "EP1100｜後悔3月低點買不夠，又怕這次真崩盤，怎麼做？通膨和AI成長的平衡點在哪裡？主動ETF殺高價股，台股幸好有台積電！ft.型男股神 陳威良",
@@ -1808,28 +1823,16 @@
           "sentiment_score": 0.5,
           "video_url": "",
           "extraction_mode": "keyword"
-        },
-        {
-          "video": "2026/05/01(五) 美國經濟靠AI撐住了！蘋果最強季度，閃迪為何崩潰？ #AAPL #SNDK #WDC",
-          "channel": "財女珍妮",
-          "date": "2026-05-01",
-          "text": "的投資呢 他的報酬是通過廣告的效益去呈現的 也就是他是投資在他自己既有的業務上面 他的用戶互動啊 或者是我今天我的AI的獨立應用這個東西 他並沒有很明確 或者是你可以說 他真的是落後了對手 所以我覺得Meta 他主要的本業廣告是沒有太大的問題的 只是現在呢 市場對於AI稍前 可是你沒有直接的B2B的變現模式 因為對於企業來說 B2B一定是最好賺的嘛 你如果是對消費者 消費者現在 可能都還是一個拖油瓶而已 他就沒有辦法帶來很好的這個效益 或者是我們的貢獻實還是太小了 沒有辦法為這些公司呢 帶來很顯著的一個營收或獲利的增長 所以就可以看到為什麼昨天 像是Google漲了快到10% 亞馬遜呢是開到之後走低",
-          "matched_keyword": "Meta",
-          "analysis_source": "whisper",
-          "sentiment": "bearish",
-          "sentiment_score": 0.3,
-          "video_url": "",
-          "extraction_mode": "gemini"
         }
       ],
       "total_mentions": 30,
-      "sentiment_score": 0.517,
+      "sentiment_score": 0.523,
       "daily": {
         "2026-05-20": {
-          "mentions": 1,
+          "mentions": 2,
           "bullish": 0,
           "bearish": 0,
-          "neutral": 1,
+          "neutral": 2,
           "sentiment_score": 0.5
         },
         "2026-05-19": {
@@ -1936,13 +1939,6 @@
           "bearish": 1,
           "neutral": 1,
           "sentiment_score": 0.25
-        },
-        "2026-05-01": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 1,
-          "neutral": 0,
-          "sentiment_score": 0.3
         }
       }
     },
@@ -3340,6 +3336,18 @@
           "extraction_mode": "keyword"
         },
         {
+          "video": "2026/05/20(三) Google能超越輝達嗎？ Google I/O 大亮點",
+          "channel": "財女珍妮",
+          "date": "2026-05-20",
+          "text": "鏡 市場應該就是比較正向一對 就會覺得說 真的 就是我們現在每一家公司 都已經開始去出智慧眼鏡 那就表示說智慧眼鏡這個東西 在接下來呢 有可能就是 這個競爭最激烈 然後市場參與者也會越更多的一塊 像是蘋果不是也說 他也要出這種智慧眼鏡嘛 然後要更輕薄的啊 最好是不要粗框啊對不對 如果是細框戴起來也比較輕 像我平常我也是比較喜歡 戴那種細框的眼鏡 因為我不知道為什麼 我戴任何的眼鏡 不管今天是輕還是重 我的鼻樑上面都會有那個鼻印 就是他就會壓在我的鼻子上面 所以呢我每次只要把眼鏡拿掉的時候 我就會看到鼻子旁邊會有兩個 就是非常重的鼻印 那如果今天是膠框的話 那他的鼻印就會更重 所以我有時候很不喜歡戴",
+          "matched_keyword": "Apple",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
           "video": "EP1099｜美債殖利率衝，美股壓力大？盤中回檔1000點，測4萬點正常？PCB、CPO何時能撿，被動、機器人接棒好事，台積下一檔賣誰？ft.題材獵人 林漢偉",
           "channel": "兆華與股惑仔",
           "date": "2026-05-18",
@@ -3674,28 +3682,16 @@
           "sentiment_score": 0.5,
           "video_url": "",
           "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP1091｜再爆1.8兆量，台股洗完續強，放心的理由？載板回檔給機會，記憶體超強財報+法說續攻，散熱集體跌停，這次有大事？ft.產業隊長 張捷",
-          "channel": "兆華與股惑仔",
-          "date": "2026-05-06",
-          "text": "機會 對 大家找我機會 星星當然也很好 因為他最多回答 星星是最容易被騙 開玩笑 星星以前被 英特爾騙擴大廠 那這次也跟回答 也擴大廠 可是這次成功了 英特爾也席來了 所以星星是喜歡大擴廠 然後以前被蘋果騙 不要說騙 因為我們台廠本來就 數命就是要幫人家擴廠 所以星星業績也不錯 那 緊縮是因為很多記憶體的 BT載板 是的 所以三個 各個都能打 好 那 散熱這件事情我回來講 microchannel力 就是所謂的microchannel力 在軍熱片上面做維通道 力的就是軍熱片 那 軍熱片就比較爽 我們講microchannel力 這個東西本來就沒有被用 是 那 建設這一陣子長的兩個題材 現在少一隻腳",
-          "matched_keyword": "蘋果",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
         }
       ],
       "total_mentions": 30,
-      "sentiment_score": 0.583,
+      "sentiment_score": 0.566,
       "daily": {
         "2026-05-20": {
-          "mentions": 1,
+          "mentions": 2,
           "bullish": 0,
           "bearish": 0,
-          "neutral": 1,
+          "neutral": 2,
           "sentiment_score": 0.5
         },
         "2026-05-18": {
@@ -3776,11 +3772,11 @@
           "sentiment_score": 0.25
         },
         "2026-05-06": {
-          "mentions": 6,
-          "bullish": 3,
+          "mentions": 5,
+          "bullish": 2,
           "bearish": 0,
           "neutral": 3,
-          "sentiment_score": 0.75
+          "sentiment_score": 0.7
         }
       }
     },
@@ -3801,6 +3797,19 @@
           "sentiment_score": 0.5,
           "video_url": "",
           "extraction_mode": "gemini"
+        },
+        {
+          "video": "2026/05/20(三) Google能超越輝達嗎？ Google I/O 大亮點",
+          "channel": "財女珍妮",
+          "date": "2026-05-20",
+          "text": "他可以提供的這個算力 其實相當於是一座中型城市的用電量 是真的完全就是 重工業級別的佈局 不是說我今天還是給你成立一個 小公司小打小鬧 試試水溫不是這樣子 其實這個新公司的目標 非常的明確 就是直接跟CoalRef 或者是Nebius這一類 新世代雲端公司 Neocloud的業者 我覺得就直接打對台了嘛 對不對 我今天就是靠這個算力需求爆炸 然後快速的崛起 然後提供算力 然後底層呢 他們其實依賴的是誰 他們的晶片 像我們常常講 CoalRef就是 揮達了親兒子嘛 然後現在揮達也有投資的Nebius 或者是我們之前講到的Iron 這幾家公司 也都是提供算力服務的 結果現在 Google他自己也來成立一個 雲端",
+          "matched_keyword": "回答",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini",
+          "whisper_corrected": true
         },
         {
           "video": "EP1099｜美債殖利率衝，美股壓力大？盤中回檔1000點，測4萬點正常？PCB、CPO何時能撿，被動、機器人接棒好事，台積下一檔賣誰？ft.題材獵人 林漢偉",
@@ -4144,28 +4153,16 @@
           "sentiment_score": 0.5,
           "video_url": "",
           "extraction_mode": "gemini"
-        },
-        {
-          "video": "2026/04/29(三) 美股爲什麼又跌了？#GLW #CLS #STX 財報",
-          "channel": "財女珍妮",
-          "date": "2026-04-29",
-          "text": "情 然後覺得 我AI又不行了 現在AI就是泡沫要算了 但是確實 你直接跟OpenAI算力 去做直接掛購的公司 比如說像Oracle 就是甲骨文 CoreWeef 或者是像AMD 或者是像博通 或者是像NVIDIA 灰達 其實都是有下跌的嘛 灰達是OpenAI 最大的財務支持者之一 所以他也是OpenAI 整個崛起過程當中 GPU主要的供應方 所以對於OpenAI 算力採購可能會縮減的消息 那灰達也不可能全身而退 但是我覺得灰達 你接下來還要看 這個禮拜公布財報的公司 他們的一個表現 資本支出 需求怎麼樣 我覺得也很重要 那另外AMD 它跌的比較多嘛 我記得AMD 昨天是跌的 大概有兩三個percent以上",
-          "matched_keyword": "輝達",
-          "analysis_source": "whisper",
-          "sentiment": "bearish",
-          "sentiment_score": 0.3,
-          "video_url": "",
-          "extraction_mode": "gemini"
         }
       ],
       "total_mentions": 30,
-      "sentiment_score": 0.592,
+      "sentiment_score": 0.598,
       "daily": {
         "2026-05-20": {
-          "mentions": 1,
+          "mentions": 2,
           "bullish": 0,
           "bearish": 0,
-          "neutral": 1,
+          "neutral": 2,
           "sentiment_score": 0.5
         },
         "2026-05-18": {
@@ -4274,11 +4271,11 @@
           "sentiment_score": 0.667
         },
         "2026-04-29": {
-          "mentions": 2,
+          "mentions": 1,
           "bullish": 0,
-          "bearish": 1,
+          "bearish": 0,
           "neutral": 1,
-          "sentiment_score": 0.4
+          "sentiment_score": 0.5
         }
       }
     },
@@ -5336,6 +5333,18 @@
           "extraction_mode": "gemini"
         },
         {
+          "video": "2026/05/20(三) Google能超越輝達嗎？ Google I/O 大亮點",
+          "channel": "財女珍妮",
+          "date": "2026-05-20",
+          "text": "的一個路徑 然後還有Agent 他所涉及的安全跟信任成本 那你在未來這個東西是風險 但是我覺得這個風險 相對於他成長的這個 所帶來的報酬 你看他的風暴比 其實也是 我覺得是非常巨大的一個不對稱的 所以Google他昨天下跌 我覺得也不代表什麼 啊長那麼多 啊你是還想要他怎樣 對不對 都已經跳空上漲 然後又再繼續創高 然後五日線都在這邊了 下面月線其實還有一小段距離 那你根本不用說是更長期的均線 所以這麼短的時間 然後有一個這麼大的一個反彈 那今天就算有修正個10% 我覺得應該都還是在可接受的範圍 我覺得大家也不用過度的恐慌啊 什麼東西都是有漲有跌 那我們希望就是 漲多了之後回檔 正常的回檔 最好不要超過1",
+          "matched_keyword": "Google",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
           "video": "2026/05/19(二) SpaceX上市，是特斯拉利空？STX大跌，存儲一起遭殃",
           "channel": "財女珍妮",
           "date": "2026-05-19",
@@ -5635,29 +5644,17 @@
           "sentiment_score": 0.5,
           "video_url": "",
           "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP222 | 台、美股重點一次說， 美股巨頭財報總結，臻鼎-KY與mSAP需求，致茂與鴻勁的產品結構差異與互補",
-          "channel": "韭菜畢業班",
-          "date": "2026-05-03",
-          "text": "週我們一樣 跟各位來聊一下 這一次財報到底公布了哪些事情 然後稍微集大成一下 告訴大家說 現在要去注意的幾個環節 那我們先回顧一下上週 其實大多數 我們看到像是Amazon 或是說Meta 微軟 以及Google 這幾家其實一起公布他的財報 那其中表現的最好的就是 Google是直接上漲了大約10%附近 那其他的表現就沒有像Google 來得這麼的好 那總結我們先可以看到 這一次的Google 相關的營收的話 是年增了63% 然後是突破200億美元 然後再來就是說 他的營業利潤率的話 也是從去年的17.8% 飆升到現在32.9% 所以幾乎是近兩倍的一個翻漲 然後再來就是說 這四家巨頭是一口氣的 把2026",
-          "matched_keyword": "Google",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
         }
       ],
       "total_mentions": 30,
-      "sentiment_score": 0.577,
+      "sentiment_score": 0.567,
       "daily": {
         "2026-05-20": {
-          "mentions": 4,
-          "bullish": 2,
+          "mentions": 5,
+          "bullish": 3,
           "bearish": 0,
           "neutral": 2,
-          "sentiment_score": 0.75
+          "sentiment_score": 0.74
         },
         "2026-05-19": {
           "mentions": 1,
@@ -5737,11 +5734,11 @@
           "sentiment_score": 0.7
         },
         "2026-05-03": {
-          "mentions": 2,
-          "bullish": 1,
+          "mentions": 1,
+          "bullish": 0,
           "bearish": 0,
           "neutral": 1,
-          "sentiment_score": 0.75
+          "sentiment_score": 0.5
         }
       }
     },
@@ -5757,6 +5754,18 @@
           "date": "2026-05-20",
           "text": "有沒有成長 可是在世界上 IC設計 就是非常非常重要的存在 對 所以你如果 大廠多 如果你回去看 記憶體的初期 他也不敢這樣給目標夾 但是後面就 後面 進入AI超級循環 已經不是原本的記憶體了 而且有美光 有Sandisk 還有India 還有CG 還有海力士三星 就他在國際上面的大廠 真的蠻多的 對 剛還有日古還有凱霞 跟詭異般的存在 日古凱霞一天的陳交金額 是五六千億 然後第二名 可能是一千億吧 是 好 所以其實國巨 在全世界也排得上前三 但我這邊也斗膽的問一下 你覺得外資對國巨 他們有一點點怕 因為我之前 在國巨廠上之前 我有跟我的聽眾分享 我以前覺得最牛的是日月光 對不對 日光上來 可是我",
           "matched_keyword": "美光",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
+          "video": "2026/05/20(三) Google能超越輝達嗎？ Google I/O 大亮點",
+          "channel": "財女珍妮",
+          "date": "2026-05-20",
+          "text": "因為現在真的 市場上面有還滿多的不確定性的 好 那如果排除了 這個消費類股 就是大家比較不care的類股 那我們來看左邊 就是比較偏向科技股的部分 突然被自己的口水降到 好 科技股雖然有反彈 但是像是美光 或者是英特爾昨天 股價也都有反彈3% 但是大家有看到 英特爾最近的表現嗎 今年英特爾他的漲幅 他的股價走勢 真的是還滿戲劇性的 我們從3月底 就是整個大盤 或者是你說英特爾跟著大盤 開始大反彈 然後有很多新的 利多消息出來的時候 從3月底到5月時期 大概就一個多月的時間 英特爾的股價漲了 超過200% 然後最近5天 跌掉了16% 感覺好像也還好啦 就是你漲了兩倍 漲了兩三倍 然後你再跌個16% ",
+          "matched_keyword": "Micron",
           "analysis_source": "whisper",
           "sentiment": "neutral",
           "sentiment_score": 0.5,
@@ -6100,28 +6109,16 @@
           "sentiment_score": 0.7,
           "video_url": "",
           "extraction_mode": "gemini"
-        },
-        {
-          "video": "EP221 | 台、美股重點一次說， 台積電25%條款後的資金節奏，台達電AI Power與高階連接器，旺宏法說重點",
-          "channel": "韭菜畢業班",
-          "date": "2026-04-28",
-          "text": " 這也有可能 一或是另外一個可能 就是說之前其實有一些東西 他已經漲的算高了 然後那個賣壓出來 剛好搭配這個消息 其實他的賣壓就會變得很重 我們在近期其實 也都有看到類似的一個畫面出現 然後就像是一些 光通或是前陣子的記憶體 其實也都差不多的 但是如果我們今天是用 產業的角度去思考這件事情的話 其實兩個還是非常的強 只是就是市場買不買單 就是很重視金流 或是說氣氛值的 主要的一個問題 所以我們上一集有講到 國水的部分的話 大家可以把它用另外一層思維 就想說他其實是分批進去 然後他不是馬上的 我今天就是直接丟個 一千億兩千億進去 節目一開始我覺得 可以先跟各位聊的這一件事情 這個比較重要一點 好 那",
-          "matched_keyword": "美光",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "gemini"
         }
       ],
       "total_mentions": 30,
       "sentiment_score": 0.597,
       "daily": {
         "2026-05-20": {
-          "mentions": 1,
+          "mentions": 2,
           "bullish": 0,
           "bearish": 0,
-          "neutral": 1,
+          "neutral": 2,
           "sentiment_score": 0.5
         },
         "2026-05-19": {
@@ -6223,11 +6220,11 @@
           "sentiment_score": 0.667
         },
         "2026-04-28": {
-          "mentions": 2,
+          "mentions": 1,
           "bullish": 1,
           "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.6
+          "neutral": 0,
+          "sentiment_score": 0.7
         }
       }
     },
@@ -6745,6 +6742,18 @@
       "sector": "AI晶片",
       "contexts": [
         {
+          "video": "2026/05/20(三) Google能超越輝達嗎？ Google I/O 大亮點",
+          "channel": "財女珍妮",
+          "date": "2026-05-20",
+          "text": "實也已經漲了25% 市值是一度逼近了5兆美元 所以我們今天採用這個標題嘛 就說Google會不會 就是去超越回答成為市值網吧 因為大家現在都覺得 Google感覺好像才是 回答最大的禁敵 我們都常常講AMD啊 或者是講Inter啊 其實它都只是小卡博通啊 對不對 可是如果今天 Google它的TPU 或者是它在未來整個 全戰士的AI的基礎建設 然後到服務到應用端呢 都可以越來越向外擴展的話 搞不好其實 它才是回答 最大最大的競爭對手 但是呢 昨天Google他舉行了 股價沒有正面反應 反而最後是下跌了2.3% 為什麼呢 我們先來講 一個就是在 這個產品發佈的同一天 然後我早上也有在 我早上也有在Fa",
+          "matched_keyword": "AMD",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
           "video": "2026/05/18(一) 殖利率破5%，美股又要跌了嗎？輝達要當救世主，Cerebras上市，成最大競爭對手？",
           "channel": "財女珍妮",
           "date": "2026-05-18",
@@ -7091,23 +7100,18 @@
           "sentiment_score": 0.5,
           "video_url": "",
           "extraction_mode": "gemini"
-        },
-        {
-          "video": "EP1085｜4萬現身！新政策對台積電是利多，但全體評價再提升更重要！資金流往大權值，砍PCB上游、矽光子，進記憶體、BBU？ft.題材獵人 林漢偉",
-          "channel": "兆華與股惑仔",
-          "date": "2026-04-27",
-          "text": "以大家會覺得說 可能這個南亞科 也未來會起身到 跟所謂的三大巨頭 並升到打入到AIS 伺服器的記憶體 所以今天它是最先往上 掌銀板做一個表態的動作 那第二件事情是 上個禮拜 我們講這個 inter, AMD, AMO 這些股價創價率 性高的帶動 也就是說現在市場 對於AI推論這件事情的一個 這個產業趨勢越來越明確 那AI推論很重要的一個晶片 就所謂CPU的晶片 那CPU晶片 當然負責未來在推理部分 更大的一個所謂的 相關的容量的負債 工作的負債 那大家如果有煮過電腦 一定知道 你去買電腦 一定是這個CPU晶片 搭配多少的DRAM的記憶體 也代表說其實在CPU運算當中 HBM反而不是它最重要的一個 搭",
-          "matched_keyword": "AMD",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "gemini"
         }
       ],
       "total_mentions": 30,
       "sentiment_score": 0.558,
       "daily": {
+        "2026-05-20": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
         "2026-05-18": {
           "mentions": 1,
           "bullish": 0,
@@ -7221,13 +7225,6 @@
           "sentiment_score": 0.4
         },
         "2026-04-28": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-04-27": {
           "mentions": 1,
           "bullish": 0,
           "bearish": 0,
@@ -55978,6 +55975,37 @@
           "sentiment_score": 0.5
         }
       }
+    },
+    {
+      "code": "BX",
+      "name": "Blackstone Inc.",
+      "market": "US",
+      "sector": "金融",
+      "contexts": [
+        {
+          "video": "2026/05/20(三) Google能超越輝達嗎？ Google I/O 大亮點",
+          "channel": "財女珍妮",
+          "date": "2026-05-20",
+          "text": "正面反應 反而最後是下跌了2.3% 為什麼呢 我們先來講 一個就是在 這個產品發佈的同一天 然後我早上也有在 我早上也有在Facebook上面 昨天早上分享的一個消息 就是Google呢 他跟私募巨頭Blackstone 他宣布合資成立一家 全新的AI雲端公司 那設立在美國的境內 那主要的業務是什麼呢 就是算力及服務的業務 簡單說就是Google 把他的TPU晶片 跟資料中心打包起來 以訂閱制直接賣給企業的客戶 那Blackstone在這一筆交易裡面呢 他也承諾投入50億美元的 初始股本 目標呢 是在2027年讓第一批 500萬瓦的資料中心的容量 可以上線 之後就可以在大幅度的擴張 那你知道這個規模有多大嗎 就是",
+          "matched_keyword": "Blackstone",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.0,
+      "daily": {
+        "2026-05-20": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 1,
+          "neutral": 0,
+          "sentiment_score": 0.0
+        }
+      }
     }
   ],
   "sectors_ranking": [
@@ -56282,7 +56310,7 @@
     {
       "sector": "金融",
       "market": "US",
-      "total_mentions": 45,
+      "total_mentions": 46,
       "stock_codes": [
         "GS",
         "MS",
@@ -56295,7 +56323,8 @@
         "MA",
         "COIN",
         "AIG",
-        "C"
+        "C",
+        "BX"
       ]
     },
     {
@@ -61970,6 +61999,25 @@
         "3045",
         "8042",
         "3443"
+      ],
+      "analysis_source": "whisper",
+      "thumbnail_url": null
+    },
+    {
+      "video_id": "973c31b3-e8f8-4513-8217-d4f20f5610c3",
+      "title": "2026/05/20(三) Google能超越輝達嗎？ Google I/O 大亮點",
+      "channel": "財女珍妮",
+      "date": "2026-05-20",
+      "stocks_found": [
+        "META",
+        "AVGO",
+        "AAPL",
+        "MU",
+        "NVDA",
+        "BX",
+        "GOOGL",
+        "AMD",
+        "INTC"
       ],
       "analysis_source": "whisper",
       "thumbnail_url": null
