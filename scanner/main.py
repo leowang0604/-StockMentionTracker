@@ -633,6 +633,12 @@ for _kws, _ticker, _name, _sector in _US_STOCKS_DATA:
     for _kw in _kws:
         US_KEYWORD_TO_CODE[_kw] = _ticker
 
+# Built-in US tickers/keywords that are too generic in financial speech or normal English.
+# Keep company names, but do not index these bare tokens as standalone stock keywords.
+_AMBIGUOUS_US_KEYWORDS = {
+    "TECH",
+}
+
 # Canonical US sector labels — Gemini must pick from this list for consistency
 US_SECTORS: list[str] = sorted(set(s for _, _, _, s in _US_STOCKS_DATA))
 
@@ -1515,6 +1521,8 @@ def build_stock_dict(
     for kw, ticker in US_KEYWORD_TO_CODE.items():
         if re.match(r'^[A-Za-z]$', kw):
             continue  # single-letter tickers cause too many false positives in Chinese text
+        if kw.upper() in _AMBIGUOUS_US_KEYWORDS:
+            continue  # generic English terms like "tech" create too many false positives
         stock_dict[kw] = ticker
     for ticker, info in US_CODE_TO_INFO.items():
         if ticker not in code_to_name:
