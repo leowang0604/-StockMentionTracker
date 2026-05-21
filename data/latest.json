@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-20T22:56:02",
+  "updated_at": "2026-05-21T19:41:50",
   "stocks_ranking": [
     {
       "code": "INTC",
@@ -27609,7 +27609,7 @@
       "code": "TECH",
       "name": "Bio-Techne",
       "market": "US",
-      "sector": "醫療",
+      "sector": "生技製藥",
       "contexts": [
         {
           "video": "EP653 | 🕊️",
@@ -42752,7 +42752,7 @@
       "code": "CDNS",
       "name": "Cadence Design Systems",
       "market": "US",
-      "sector": "科技",
+      "sector": "企業軟體",
       "contexts": [
         {
           "video": "EP649 | 💌",
@@ -43067,7 +43067,7 @@
       "code": "DASH",
       "name": "DoorDash",
       "market": "US",
-      "sector": "消費",
+      "sector": "零售電商",
       "contexts": [
         {
           "video": "EP217 | 台、美股重點一次說，Google TPU 各代產品結構與台廠供應鏈， 台積電封裝技術進展與風險，CPO量產前注意",
@@ -49131,7 +49131,7 @@
       "code": "BIIB",
       "name": "Biogen",
       "market": "US",
-      "sector": "醫療",
+      "sector": "生技製藥",
       "contexts": [
         {
           "video": "2026/04/16 (四）美股創新高 ，泡沫示警？ASML財報，Tesla AI5晶片設計定案",
@@ -49521,7 +49521,7 @@
       "code": "BKNG",
       "name": "Booking Holdings",
       "market": "US",
-      "sector": "消費",
+      "sector": "零售電商",
       "contexts": [
         {
           "video": "EP653 | 🕊️",
@@ -51943,7 +51943,7 @@
       "code": "ADI",
       "name": "ADI",
       "market": "US",
-      "sector": "科技",
+      "sector": "半導體",
       "contexts": [
         {
           "video": "2026/05/05(二) Palantir為什麼不漲？#PLTR #ON #NVDA #MU",
@@ -53217,7 +53217,7 @@
       "code": "DDOG",
       "name": "Datadog",
       "market": "US",
-      "sector": "企業軟體",
+      "sector": "網路安全",
       "contexts": [
         {
           "video": "2026/05/08(五)美股下跌還能買嗎？ #ANET #DDOG #FTNT",
@@ -54427,7 +54427,7 @@
       "code": "GLW",
       "name": "Corning Inc.",
       "market": "US",
-      "sector": "科技",
+      "sector": "光通訊",
       "contexts": [
         {
           "video": "EP225 | 台、美股重點一次說，消費性電腦與緯穎展望，康寧與AAOI長約發酵，聽眾QA",
@@ -56360,12 +56360,13 @@
     {
       "sector": "半導體",
       "market": "US",
-      "total_mentions": 41,
+      "total_mentions": 42,
       "stock_codes": [
         "INTC",
         "TXN",
         "ON",
         "MCHP",
+        "ADI",
         "ON Semiconductor Corporation"
       ]
     },
@@ -56578,19 +56579,6 @@
       ]
     },
     {
-      "sector": "科技",
-      "market": "US",
-      "total_mentions": 29,
-      "stock_codes": [
-        "SNDK",
-        "CDNS",
-        "INTU",
-        "TER",
-        "ADI",
-        "GLW"
-      ]
-    },
-    {
       "sector": "紡織纖維",
       "market": "TW",
       "total_mentions": 28,
@@ -56620,17 +56608,13 @@
       ]
     },
     {
-      "sector": "消費",
+      "sector": "科技",
       "market": "US",
-      "total_mentions": 24,
+      "total_mentions": 25,
       "stock_codes": [
-        "CCL",
-        "DASH",
-        "GRMN",
-        "NKE",
-        "ABNB",
-        "BKNG",
-        "DECK"
+        "SNDK",
+        "INTU",
+        "TER"
       ]
     },
     {
@@ -56656,26 +56640,26 @@
       ]
     },
     {
-      "sector": "醫療",
+      "sector": "消費",
       "market": "US",
       "total_mentions": 21,
       "stock_codes": [
-        "TECH",
-        "UNH",
-        "HUM",
-        "CVS",
-        "BIIB",
-        "CI"
+        "CCL",
+        "GRMN",
+        "NKE",
+        "ABNB",
+        "DECK"
       ]
     },
     {
       "sector": "光通訊",
       "market": "US",
-      "total_mentions": 20,
+      "total_mentions": 21,
       "stock_codes": [
         "COHR",
         "LITE",
-        "AAOI"
+        "AAOI",
+        "GLW"
       ]
     },
     {
@@ -56696,11 +56680,12 @@
     {
       "sector": "網路安全",
       "market": "US",
-      "total_mentions": 18,
+      "total_mentions": 19,
       "stock_codes": [
         "NET",
         "CRWD",
         "OKTA",
+        "DDOG",
         "FTNT"
       ]
     },
@@ -56853,6 +56838,17 @@
       ]
     },
     {
+      "sector": "生技製藥",
+      "market": "US",
+      "total_mentions": 13,
+      "stock_codes": [
+        "TECH",
+        "MRNA",
+        "BIIB",
+        "LLY"
+      ]
+    },
+    {
       "sector": "資訊服務業",
       "market": "TW",
       "total_mentions": 13,
@@ -56872,6 +56868,18 @@
       "stock_codes": [
         "6488",
         "8028"
+      ]
+    },
+    {
+      "sector": "零售電商",
+      "market": "US",
+      "total_mentions": 12,
+      "stock_codes": [
+        "COST",
+        "DASH",
+        "BKNG",
+        "WMT",
+        "TGT"
       ]
     },
     {
@@ -56953,6 +56961,17 @@
       ]
     },
     {
+      "sector": "醫療",
+      "market": "US",
+      "total_mentions": 10,
+      "stock_codes": [
+        "UNH",
+        "HUM",
+        "CVS",
+        "CI"
+      ]
+    },
+    {
       "sector": "半導體設備",
       "market": "TW",
       "total_mentions": 10,
@@ -57017,16 +57036,6 @@
       ]
     },
     {
-      "sector": "零售電商",
-      "market": "US",
-      "total_mentions": 9,
-      "stock_codes": [
-        "COST",
-        "WMT",
-        "TGT"
-      ]
-    },
-    {
       "sector": "半導體",
       "market": "TW",
       "total_mentions": 9,
@@ -57067,6 +57076,16 @@
       ]
     },
     {
+      "sector": "企業軟體",
+      "market": "US",
+      "total_mentions": 8,
+      "stock_codes": [
+        "ADBE",
+        "CDNS",
+        "IBM"
+      ]
+    },
+    {
       "sector": "數位雲端",
       "market": "TW",
       "total_mentions": 8,
@@ -57089,16 +57108,6 @@
         "3557",
         "9924",
         "2941"
-      ]
-    },
-    {
-      "sector": "企業軟體",
-      "market": "US",
-      "total_mentions": 7,
-      "stock_codes": [
-        "ADBE",
-        "IBM",
-        "DDOG"
       ]
     },
     {
@@ -57347,15 +57356,6 @@
       "stock_codes": [
         "8440",
         "3551"
-      ]
-    },
-    {
-      "sector": "生技製藥",
-      "market": "US",
-      "total_mentions": 2,
-      "stock_codes": [
-        "MRNA",
-        "LLY"
       ]
     },
     {
