@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-22T19:38:42",
+  "updated_at": "2026-05-22T19:56:59",
   "stocks_ranking": [
     {
       "code": "INTC",
@@ -47338,6 +47338,57 @@
       }
     },
     {
+      "code": "EME",
+      "name": "Emcor",
+      "market": "US",
+      "sector": "工業",
+      "contexts": [
+        {
+          "video": "2026/04/28(二)AI戰場重組誰是贏家？微軟OpenAI分手了。OpenAI手機要找高通跟聯發科？",
+          "channel": "財女珍妮",
+          "date": "2026-04-28",
+          "text": "但是因為前面講的opening來講太久了 所以我今天在做簡報的時候 就覺得說我今天一定是講不完 不過沒關係 留著明天再講 大家就明天再來看 好不好 就是我們現在來講Encore 因為我覺得他是跟先進風裝啊 然後跟這個台積電啊 或者是跟現在AIR有更大的一個關係",
+          "matched_keyword": "Encore",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.45,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
+          "video": "EP226 | 台、美股重點一次說，Intel EMIB與各大巨頭關係，Nebius 產品與優缺點，輝達財報後勢展望",
+          "channel": "韭菜畢業班",
+          "date": "2026-05-17",
+          "text": "見的 那再來就是Apple 那我覺得就是看這幾個東西 後續的一個發展 那Amazon我覺得可以去 比較去注意到的東西的話 他的Testing的話 要嘛可能也是會給 我們看到的歷程 或者是說我們會看到 Encur 或SE 可能也會有我們講的 測試相關的利多 我覺得這個也是可以市場 先去注意到的東西 總之我覺得 emip的部分的話 我後續還是會持續的看一下 但是可能股價還是回個 15%到20% 我自己會很喜歡 就是我真的很喜歡 每股這種大爆殺下來 沒有人屌的時候 然後明明就它是有故事的時候 我們舉個例子來講 像是之前的B1也是一樣 B1之前也是有下殺過一陣子 像2025年的11月底 然後一路下殺到2025年",
+          "matched_keyword": "Encur",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini",
+          "whisper_corrected": true
+        }
+      ],
+      "total_mentions": 2,
+      "sentiment_score": 0.475,
+      "daily": {
+        "2026-04-28": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.45
+        },
+        "2026-05-17": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
       "code": "3040",
       "name": "遠見",
       "market": "TW",
@@ -51684,37 +51735,6 @@
           "bearish": 1,
           "neutral": 0,
           "sentiment_score": 0.0
-        }
-      }
-    },
-    {
-      "code": "EME",
-      "name": "Emcor",
-      "market": "US",
-      "sector": "工業",
-      "contexts": [
-        {
-          "video": "2026/04/28(二)AI戰場重組誰是贏家？微軟OpenAI分手了。OpenAI手機要找高通跟聯發科？",
-          "channel": "財女珍妮",
-          "date": "2026-04-28",
-          "text": "但是因為前面講的opening來講太久了 所以我今天在做簡報的時候 就覺得說我今天一定是講不完 不過沒關係 留著明天再講 大家就明天再來看 好不好 就是我們現在來講Encore 因為我覺得他是跟先進風裝啊 然後跟這個台積電啊 或者是跟現在AIR有更大的一個關係",
-          "matched_keyword": "Encore",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.45,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        }
-      ],
-      "total_mentions": 1,
-      "sentiment_score": 0.45,
-      "daily": {
-        "2026-04-28": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.45
         }
       }
     },
@@ -56316,6 +56336,38 @@
           "sentiment_score": 0.7
         }
       }
+    },
+    {
+      "code": "6190",
+      "name": "萬泰科",
+      "market": "TW",
+      "sector": "電子通路",
+      "contexts": [
+        {
+          "video": "EP227 | 台、美股重點一次說，載板與高毛利訂單觀察，國巨與被動元件，聯電成熟製程與電源管理IC關係",
+          "channel": "韭菜畢業班",
+          "date": "2026-05-20",
+          "text": "關的話題 我們可以看到 有些復甦的一個感覺出來了 特別是如果說我們講到 這些車用 我們要從哪裡去看到它的復甦 然後我就可以去看一些通路商 就IC通路商的話 最近表現還算是挺不錯的 我們舉個例子來講 像文宴 然後或者說像大連大 其實IC的通路商 都是有慢慢的突破上去了 如果說講到文宴這一家公司的話 其實我們可以看到 它法售會其實是有 把毛利率往上去調的 主要去調的原因的話 是因為它有看到一些 歐美市場 一些半導體的零組件 成本往上去走 所以同時看到一些工業 車用相關的一個話題 也是持續的發酵 確實是有單進來了 再來加上其實我們可以看到一些 車用相關的一些二級體 其實他們的最近的股價 或是說市場上面的",
+          "matched_keyword": "文宴",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini",
+          "whisper_corrected": true
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-05-20": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
     }
   ],
   "sectors_ranking": [
@@ -57256,6 +57308,31 @@
       ]
     },
     {
+      "sector": "工業",
+      "market": "US",
+      "total_mentions": 11,
+      "stock_codes": [
+        "UBER",
+        "MAS",
+        "CAT",
+        "EME",
+        "PNR"
+      ]
+    },
+    {
+      "sector": "電子通路",
+      "market": "TW",
+      "total_mentions": 11,
+      "stock_codes": [
+        "3163",
+        "6263",
+        "3221",
+        "4905",
+        "3363",
+        "6190"
+      ]
+    },
+    {
       "sector": "IC測試",
       "market": "TW",
       "total_mentions": 10,
@@ -57310,30 +57387,6 @@
         "4739",
         "1730",
         "4764"
-      ]
-    },
-    {
-      "sector": "工業",
-      "market": "US",
-      "total_mentions": 10,
-      "stock_codes": [
-        "UBER",
-        "MAS",
-        "CAT",
-        "EME",
-        "PNR"
-      ]
-    },
-    {
-      "sector": "電子通路",
-      "market": "TW",
-      "total_mentions": 10,
-      "stock_codes": [
-        "3163",
-        "6263",
-        "3221",
-        "4905",
-        "3363"
       ]
     },
     {
