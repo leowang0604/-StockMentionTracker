@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-24T20:58:52",
+  "updated_at": "2026-05-24T21:55:08",
   "stocks_ranking": [
     {
       "code": "INTC",
@@ -3978,6 +3978,18 @@
           "whisper_corrected": true
         },
         {
+          "video": "2026/05/18(一) 殖利率破5%，美股又要跌了嗎？輝達要當救世主，Cerebras上市，成最大競爭對手？",
+          "channel": "財女珍妮",
+          "date": "2026-05-18",
+          "text": "哈囉 大家好 我是Janny 今天繼續來跟大家分享美股近期的大小事 今天是2026年的5月18號禮拜一 將來跟大家分享的主題是 直立率破5% 美股又要疊了嗎? 以及 輝達是不是可以再次扮演救世主的角色 還有 Serebras Serebras 上市 是不是成為他最大的競爭對手 如果你每天都在這邊 跟我們一起追市場 拆產業 看趨勢的話 那在節目開始之前 幫我按個讚 訂閱 開啟小鈴鐺 這些動作對我來說非常的重要 也可以讓更多人看到這個節目 支持我們持續跟大家分享 最新的財經資訊 一起在投資制裁路上 持續的前進 昨天晚上要睡覺之前 就覺得我自己的喉嚨 感覺好像有點怪怪的",
+          "matched_keyword": "輝達",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.75,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
           "video": "EP226 | 台、美股重點一次說，Intel EMIB與各大巨頭關係，Nebius 產品與優缺點，輝達財報後勢展望",
           "channel": "韭菜畢業班",
           "date": "2026-05-17",
@@ -4221,22 +4233,10 @@
           "sentiment_score": 1.0,
           "video_url": "",
           "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP222 | 台、美股重點一次說， 美股巨頭財報總結，臻鼎-KY與mSAP需求，致茂與鴻勁的產品結構差異與互補",
-          "channel": "韭菜畢業班",
-          "date": "2026-05-03",
-          "text": "比已經高達了 78% 那再來就是紅鏡 其實在 ASIC 相關的一些 SLT 的 系統級測試的話 市場他們自己就講出來 就是佔距的到 6 到 7 成的市佔率 那 SLT 的客戶結構 以字帽來講的話 從 NVIDIA 單一個客戶 到現在 像 AMD 跟 Google 其實都有導入 這個也是目前兩個 一個算大力多的狀態 那 所以我們會講到 假如講字帽的話 我們就會講 像是一些量測設備 跟一些 CPO 的這種測試的 一個狀態的話 會是兩個大主軸 那像是講紅鏡的話 我們就會去講它的溫控分選機 以及 CPO 的光電同測 這種機台 其實也都會去注意一下 那其實大家就會講說 AZ 兩家在做的事情 我不覺得他們是在 互相打",
-          "matched_keyword": "NVIDIA",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
         }
       ],
       "total_mentions": 30,
-      "sentiment_score": 0.618,
+      "sentiment_score": 0.627,
       "daily": {
         "2026-05-24": {
           "mentions": 1,
@@ -4274,11 +4274,11 @@
           "sentiment_score": 0.5
         },
         "2026-05-18": {
-          "mentions": 1,
-          "bullish": 1,
+          "mentions": 2,
+          "bullish": 2,
           "bearish": 0,
           "neutral": 0,
-          "sentiment_score": 0.65
+          "sentiment_score": 0.7
         },
         "2026-05-17": {
           "mentions": 1,
@@ -4349,13 +4349,6 @@
           "bearish": 0,
           "neutral": 0,
           "sentiment_score": 1.0
-        },
-        "2026-05-03": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
         }
       }
     },
@@ -9410,6 +9403,18 @@
           "extraction_mode": "gemini"
         },
         {
+          "video": "2026/05/18(一) 殖利率破5%，美股又要跌了嗎？輝達要當救世主，Cerebras上市，成最大競爭對手？",
+          "channel": "財女珍妮",
+          "date": "2026-05-18",
+          "text": "不是技術廚師 我記得他好像是商業廚師 但是 因為他之前有非常多的創業經驗 而且也是有在伺服器啊 相關的領域去做 所以他後來呢 就帶著一群 就是本來就有這個工程底子 就是 AI技術底子的工程師呢 然後去創意一頁 然後就說 我們要做一件以前從來沒有人 達到過的事情 就是我不切 我要把整片晶圓 直接做成一顆晶片 所以你可以看到 這個是Surabras他的一個晶片 然後這個是 灰達他的B200 所以你看兩個大小是差了非常多的 那過去在技術上面呢 大家都覺得說 這個東西完全是不可能嘛 但是他們就是做到了 這個產品呢 就叫做 Weber Scale Engine 就是晶圓規模引擎 WSE 然後現階段呢 也是真",
+          "matched_keyword": "創意",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
           "video": "EP662 | ⛑️",
           "channel": "股癌",
           "date": "2026-05-16",
@@ -9727,21 +9732,10 @@
           "sentiment": "bearish",
           "sentiment_score": 0.2,
           "video_url": null
-        },
-        {
-          "video": "EP1068｜9個多月來首破季線！清明崩盤的既視感？油價危機是黑天鵝，還是多頭回檔必經之路？資金夠撿一點，資金少等一下？ft.選股教練 陳唯泰",
-          "channel": "兆華與股惑仔",
-          "date": "2026-03-31",
-          "text": "後再問有沒有替代方案的時候 我可能就會告訴大家 四星ky不是沒有單 是他的單被delay了 可是被delay當然就是一個警訊 怎麼會被delay呢 但是被delay好歹還是有 如果今天風吹得很強的時候 事實上後面四星ky 有沒有稍微起來 是有的 它也是從2008 2009 有漲到過3500 可是後來創意就下去了嘛 因為 資金就是這樣 有喜歡新的對象了嘛 更喜歡記憶體了 對不對 更喜歡細光子了 更喜歡PCB了 更喜歡誰了 更喜歡很多的東西了 總之資金沒有那麼喜歡IP了 那創意有沒有在繳出 更厲害的新的訊息給大家 甚至最近有個新聞 不曉得有沒有看到 講到ARM 他們自己做IP也要做晶片 就是現在大家變",
-          "matched_keyword": "3443",
-          "analysis_source": "whisper",
-          "sentiment": "bearish",
-          "sentiment_score": 0.2,
-          "video_url": null
         }
       ],
       "total_mentions": 30,
-      "sentiment_score": 0.554,
+      "sentiment_score": 0.564,
       "daily": {
         "2026-05-20": {
           "mentions": 1,
@@ -9751,11 +9745,11 @@
           "sentiment_score": 1.0
         },
         "2026-05-18": {
-          "mentions": 1,
+          "mentions": 2,
           "bullish": 0,
           "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.45
+          "neutral": 2,
+          "sentiment_score": 0.475
         },
         "2026-05-16": {
           "mentions": 1,
@@ -9884,9 +9878,9 @@
           "sentiment_score": 0.7
         },
         "2026-03-31": {
-          "mentions": 4,
+          "mentions": 3,
           "bullish": 0,
-          "bearish": 4,
+          "bearish": 3,
           "neutral": 0,
           "sentiment_score": 0.2
         }
@@ -48215,6 +48209,55 @@
       }
     },
     {
+      "code": "COIN",
+      "name": "Coinbase",
+      "market": "US",
+      "sector": "金融",
+      "contexts": [
+        {
+          "video": "2026/03/27 (五）殖利率飆、美債危險，川普急了嗎？",
+          "channel": "財女珍妮",
+          "date": "2026-03-27",
+          "text": "我覺得你現在去街道的 應該是你比較可以看得到這家公司 他未來整個發展的前景的 你不要去買那種不確定性太高的 那到底發生什麼事情呢 其實觸發circle跌幅的 是美國國會流出來的一個 法案的草案的一個 一個消息 就是 因為我們要先講一下好了 就是circle 他到底是怎麼賺錢的嗎 我們之前其實有講過Coinbase 大家如果有去看Coinbase的文章 或者是我們有提到Coinbase的話 你就會知道 Coinbase跟circle 他去發行這個USDC呢 其實是有蠻大的一個關聯性 或者是你可以看到 他們兩個就是一起合作 去推出了USDC 就是美元穩定幣 所以circle 他其實不是靠加密貨幣在賺錢的 他其實",
+          "matched_keyword": "Coinbase",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
+        },
+        {
+          "video": "2026/05/21(四) 輝達財報後還能漲嗎？SpaceX S1終於出爐 #NVDA #SPCX",
+          "channel": "財女珍妮",
+          "date": "2026-05-21",
+          "text": "所以呢 我覺得看一下聯準會這一次的會議計要 到底有什麼樣重要的重點 不好意思 我眼睛突然瞄到就是留言的地方 有人說 為什麼小真的指數 跟我在Apple Stock看的指數不一樣 其實我的指數是看這個Coin Fee 我覺得每一個數據員 或者是他在早上 他在講那個指數的時候 可能會有一點差異 或者是有時候我會看一下這個附圖 所以在每一個 我覺得應該是不會差到太大 所以如果大家覺得有疑慮的話 你還是可以到各個網站去 然後稍微再double check 一下 好 那我們再回來到這個會議計要裡面 這一份計要是包圍主席 最後一次主持會議的記錄 因為新任的聯準會主席 凱文沃許他在禮拜五的時候 就要宣誓就職 感覺",
+          "matched_keyword": "COIN",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        }
+      ],
+      "total_mentions": 2,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-03-27": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-05-21": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
       "code": "3040",
       "name": "遠見",
       "market": "TW",
@@ -48811,36 +48854,6 @@
           "bearish": 0,
           "neutral": 0,
           "sentiment_score": 1.0
-        }
-      }
-    },
-    {
-      "code": "COIN",
-      "name": "Coinbase",
-      "market": "US",
-      "sector": "金融",
-      "contexts": [
-        {
-          "video": "2026/03/27 (五）殖利率飆、美債危險，川普急了嗎？",
-          "channel": "財女珍妮",
-          "date": "2026-03-27",
-          "text": "我覺得你現在去街道的 應該是你比較可以看得到這家公司 他未來整個發展的前景的 你不要去買那種不確定性太高的 那到底發生什麼事情呢 其實觸發circle跌幅的 是美國國會流出來的一個 法案的草案的一個 一個消息 就是 因為我們要先講一下好了 就是circle 他到底是怎麼賺錢的嗎 我們之前其實有講過Coinbase 大家如果有去看Coinbase的文章 或者是我們有提到Coinbase的話 你就會知道 Coinbase跟circle 他去發行這個USDC呢 其實是有蠻大的一個關聯性 或者是你可以看到 他們兩個就是一起合作 去推出了USDC 就是美元穩定幣 所以circle 他其實不是靠加密貨幣在賺錢的 他其實",
-          "matched_keyword": "Coinbase",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": ""
-        }
-      ],
-      "total_mentions": 1,
-      "sentiment_score": 0.5,
-      "daily": {
-        "2026-03-27": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
         }
       }
     },
@@ -57443,7 +57456,7 @@
     {
       "sector": "金融",
       "market": "US",
-      "total_mentions": 50,
+      "total_mentions": 51,
       "stock_codes": [
         "GS",
         "MS",
