@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-24T22:10:53",
+  "updated_at": "2026-05-25T19:04:34",
   "stocks_ranking": [
     {
       "code": "INTC",
@@ -33277,6 +33277,144 @@
       }
     },
     {
+      "code": "KLAC",
+      "name": "KLA",
+      "market": "US",
+      "sector": "半導體設備",
+      "contexts": [
+        {
+          "video": "2026/04/16 (四）美股創新高 ，泡沫示警？ASML財報，Tesla AI5晶片設計定案",
+          "channel": "財女珍妮",
+          "date": "2026-04-16",
+          "text": "那另外設備廠 我們之前有寫過文章 或介紹過的 像是應用材料啊 柯林研發啊 柯雷啊 這些呢 都是市場上面非常Hung的",
+          "matched_keyword": "柯林研發",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
+        },
+        {
+          "video": "EP225 | 台、美股重點一次說，消費性電腦與緯穎展望，康寧與AAOI長約發酵，聽眾QA",
+          "channel": "韭菜畢業班",
+          "date": "2026-05-13",
+          "text": "大 或是說近期選股才進去的人 會受到一些傷 甚至有可能會講是大傷 因為如果你今天是操作是選擇權 或是說權證 期貨等等的 就是槓桿比較大一點的東西 其實都會受到影響 因為我們看到像 前陣子非常強勢的聯發科 在進入五分盤處置之後 其實也是首度的看到一些休息 但是說真的人家從1600塊 爬到現在已經3900塊 然後休息一下 休息的幅度大概也才連續兩天 就大概一根疊停 但是說真的 就人家噴那麼快 之前甚至還有一隻鎖 我覺得最近的回測 是應該是會抱持一個 比較健康一點的態度去思考 雖然我會在稅上面 或是說我會在IG的專區上面 會說大家一起來發發的紙箱 但大家都說是開玩笑的 但是也跟各位講 我在下禮拜三的話 ",
+          "matched_keyword": "RKLB",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.8,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
+          "video": "EP661 | 🚲",
+          "channel": "股癌",
+          "date": "2026-05-13",
+          "text": "以現在的角度來說 你說這一波波段 大概從33000點 我覺得價錢指數 那一路噴到大概4萬2000多 那現在才回到4萬1300多 今年其實老實說 也在跌一趴多 那當然 看到蠻多人有一些中小 或是一些那種科技股的話 會覺得比較痛一點 但真的是拉出成本太遠 所以我自己稍微觀察一下 身邊的朋友 滿少人有去做調整 很少 只有一些 我覺得可能已經賺到會怕的 就開始把東西賣掉 但以我自己來講 我也沒有去做過多的調整 因為真的拉太遠了 所以都還可以再等一下 說不定大家都要等 然後就一路回回到 看誰先撐不住之類的 那當然我們還是會去把一些 就像盤面上的狀態 先分析清楚 然後才會知道說 後面該怎麼樣規劃 那首先以台國",
+          "matched_keyword": "MLCC",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
+          "video": "2026/05/11(一) 財報、非農超預期，科技股再創高！#RKLB升空 #NET財報",
+          "channel": "財女珍妮",
+          "date": "2026-05-11",
+          "text": "Hello 大家好我是捷妮 今天繼續來跟大家分享美股近期的大小事 今天是2026年的5月11號禮拜一 今天要來跟大家分享的主題是 財報非農都超預期 科技股也在創新高 以及我們常常講到的一家 火箭股Rocky Lab 它也是升空大漲的34% 你還可以在現在去追高這支股票嗎 如果你每天都在這邊 跟我們一起追市場 拆產業看趨勢的話 那在節目開始之前 幫我們按個讚 訂閱開啟小鈴鐺 這些動作對我來說非常的重要 也可以讓更多人看到這個節目 支持我們持續跟大家分享 最新的財經諮詢 一起在投資這條路上持續的前進 先來看一下昨天美股收盤的表現 禮拜五啦 道瓊公園指",
+          "matched_keyword": "RKLB",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.8,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
+          "video": "2026/05/14(四) 川普訪中，利多還利空，官員喊升息？#CRWV #NBIS",
+          "channel": "財女珍妮",
+          "date": "2026-05-14",
+          "text": " 進入到我們的財報環節 其實大家好像已經開始 對於財報有一點免疫了 因為科技巨頭都已經公布完財報了嘛 只剩下回答 但是我們已經還是在講很多 我自己很喜歡的 有在關注的 或者是有持有的公司 那上個禮拜 Cole Reef他有公布 他最新一季的財報嘛 那公布之後 他的股價其實在那天是大跌的 但是因為我有說 就是5月13號的時候 Nebius他會公布他最新的財報 兩家呢 都是NeoCloud 就是新型的雲端服務商 所以我就想說 好 那我就再等一等 因為兩家公司其實都是我 自己持有的公司 所以我就說 好 那到今天呢 再來跟大家分享 這兩家公司到底在現階段 他的營運表現是怎麼樣 那我自己其實是 Cole Reef持有的比",
+          "matched_keyword": "Cole Reef",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini",
+          "whisper_corrected": true
+        },
+        {
+          "video": "EP663 | 🦘",
+          "channel": "股癌",
+          "date": "2026-05-20",
+          "text": "的變化 你不一定會覺得 甚至是 我跟你講 就算你的物價 是停在原本的地方 但隨著你變有錢 你的眼睛就是會往上看 你以前去巴黎 導駐一個晚上八千 乾 超爽 太奢了吧 奢爆 現在你在訂 一個晚上四萬塊的 VLA 之後還會再更貴 Morticon 所以 人都是這樣子 就是你如果 可以把物欲限制 在某個範圍內的話 其實很多人都已經 所謂的財務自由 那為什麼很難自由的原因 是因為 你就有很多新的事情要做 你會去租更好的飯店 你開始去買一些什麼 名貴紅酒 或什麼的 所以你就會覺得說 嗯 理論上我變有錢了 我已經變的是 十年前我不敢想像的一個位置 但是我怎麼好像 沒有很充實 我沒有像可能不知道 十年前 然後第一次",
+          "matched_keyword": "MLCC",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.8,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
+          "video": "EP664 | 🐟",
+          "channel": "股癌",
+          "date": "2026-05-23",
+          "text": "n的一個體制 我可以跟著 一磚到錢的時候 Corruption is great 我超愛Corruption 當我可能沒有辦法 去了解處置股 馬的為什麼要包含東西 流動性抽掉 像最近其實那個什麼 聯發科跟那個建策 一個是上去 一個是下去 但都是有處置 那其實我了解 就是有蠻多法人 都打電話去幹人家 所以才會出新聞說 他們要去演你處置的制度 因為你這麼大的票 一堆國際法人在買的 你竟然關人家廁所 那個其實讓超多人很不爽 那一般 可能小展無據講 就沒有人要屌你 可是這些大外資去講 可能就有用 所以說不定後面 真的會去調出一些 新的東西 那我目前對於這個 機制的想法 就以前我也是很不喜歡 那現在是中心 ",
+          "matched_keyword": "MLCC",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.8,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        }
+      ],
+      "total_mentions": 7,
+      "sentiment_score": 0.7,
+      "daily": {
+        "2026-04-16": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-05-13": {
+          "mentions": 2,
+          "bullish": 2,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.75
+        },
+        "2026-05-11": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.8
+        },
+        "2026-05-14": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-05-20": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.8
+        },
+        "2026-05-23": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.8
+        }
+      }
+    },
+    {
       "code": "6462",
       "name": "神盾",
       "market": "TW",
@@ -34895,125 +35033,6 @@
           "bearish": 0,
           "neutral": 1,
           "sentiment_score": 0.722
-        }
-      }
-    },
-    {
-      "code": "KLAC",
-      "name": "KLA",
-      "market": "US",
-      "sector": "半導體設備",
-      "contexts": [
-        {
-          "video": "2026/04/16 (四）美股創新高 ，泡沫示警？ASML財報，Tesla AI5晶片設計定案",
-          "channel": "財女珍妮",
-          "date": "2026-04-16",
-          "text": "那另外設備廠 我們之前有寫過文章 或介紹過的 像是應用材料啊 柯林研發啊 柯雷啊 這些呢 都是市場上面非常Hung的",
-          "matched_keyword": "柯林研發",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": ""
-        },
-        {
-          "video": "EP225 | 台、美股重點一次說，消費性電腦與緯穎展望，康寧與AAOI長約發酵，聽眾QA",
-          "channel": "韭菜畢業班",
-          "date": "2026-05-13",
-          "text": "大 或是說近期選股才進去的人 會受到一些傷 甚至有可能會講是大傷 因為如果你今天是操作是選擇權 或是說權證 期貨等等的 就是槓桿比較大一點的東西 其實都會受到影響 因為我們看到像 前陣子非常強勢的聯發科 在進入五分盤處置之後 其實也是首度的看到一些休息 但是說真的人家從1600塊 爬到現在已經3900塊 然後休息一下 休息的幅度大概也才連續兩天 就大概一根疊停 但是說真的 就人家噴那麼快 之前甚至還有一隻鎖 我覺得最近的回測 是應該是會抱持一個 比較健康一點的態度去思考 雖然我會在稅上面 或是說我會在IG的專區上面 會說大家一起來發發的紙箱 但大家都說是開玩笑的 但是也跟各位講 我在下禮拜三的話 ",
-          "matched_keyword": "RKLB",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.8,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        },
-        {
-          "video": "EP661 | 🚲",
-          "channel": "股癌",
-          "date": "2026-05-13",
-          "text": "以現在的角度來說 你說這一波波段 大概從33000點 我覺得價錢指數 那一路噴到大概4萬2000多 那現在才回到4萬1300多 今年其實老實說 也在跌一趴多 那當然 看到蠻多人有一些中小 或是一些那種科技股的話 會覺得比較痛一點 但真的是拉出成本太遠 所以我自己稍微觀察一下 身邊的朋友 滿少人有去做調整 很少 只有一些 我覺得可能已經賺到會怕的 就開始把東西賣掉 但以我自己來講 我也沒有去做過多的調整 因為真的拉太遠了 所以都還可以再等一下 說不定大家都要等 然後就一路回回到 看誰先撐不住之類的 那當然我們還是會去把一些 就像盤面上的狀態 先分析清楚 然後才會知道說 後面該怎麼樣規劃 那首先以台國",
-          "matched_keyword": "MLCC",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.7,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        },
-        {
-          "video": "2026/05/11(一) 財報、非農超預期，科技股再創高！#RKLB升空 #NET財報",
-          "channel": "財女珍妮",
-          "date": "2026-05-11",
-          "text": "Hello 大家好我是捷妮 今天繼續來跟大家分享美股近期的大小事 今天是2026年的5月11號禮拜一 今天要來跟大家分享的主題是 財報非農都超預期 科技股也在創新高 以及我們常常講到的一家 火箭股Rocky Lab 它也是升空大漲的34% 你還可以在現在去追高這支股票嗎 如果你每天都在這邊 跟我們一起追市場 拆產業看趨勢的話 那在節目開始之前 幫我們按個讚 訂閱開啟小鈴鐺 這些動作對我來說非常的重要 也可以讓更多人看到這個節目 支持我們持續跟大家分享 最新的財經諮詢 一起在投資這條路上持續的前進 先來看一下昨天美股收盤的表現 禮拜五啦 道瓊公園指",
-          "matched_keyword": "RKLB",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.8,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        },
-        {
-          "video": "2026/05/14(四) 川普訪中，利多還利空，官員喊升息？#CRWV #NBIS",
-          "channel": "財女珍妮",
-          "date": "2026-05-14",
-          "text": " 進入到我們的財報環節 其實大家好像已經開始 對於財報有一點免疫了 因為科技巨頭都已經公布完財報了嘛 只剩下回答 但是我們已經還是在講很多 我自己很喜歡的 有在關注的 或者是有持有的公司 那上個禮拜 Cole Reef他有公布 他最新一季的財報嘛 那公布之後 他的股價其實在那天是大跌的 但是因為我有說 就是5月13號的時候 Nebius他會公布他最新的財報 兩家呢 都是NeoCloud 就是新型的雲端服務商 所以我就想說 好 那我就再等一等 因為兩家公司其實都是我 自己持有的公司 所以我就說 好 那到今天呢 再來跟大家分享 這兩家公司到底在現階段 他的營運表現是怎麼樣 那我自己其實是 Cole Reef持有的比",
-          "matched_keyword": "Cole Reef",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "gemini",
-          "whisper_corrected": true
-        },
-        {
-          "video": "EP663 | 🦘",
-          "channel": "股癌",
-          "date": "2026-05-20",
-          "text": "的變化 你不一定會覺得 甚至是 我跟你講 就算你的物價 是停在原本的地方 但隨著你變有錢 你的眼睛就是會往上看 你以前去巴黎 導駐一個晚上八千 乾 超爽 太奢了吧 奢爆 現在你在訂 一個晚上四萬塊的 VLA 之後還會再更貴 Morticon 所以 人都是這樣子 就是你如果 可以把物欲限制 在某個範圍內的話 其實很多人都已經 所謂的財務自由 那為什麼很難自由的原因 是因為 你就有很多新的事情要做 你會去租更好的飯店 你開始去買一些什麼 名貴紅酒 或什麼的 所以你就會覺得說 嗯 理論上我變有錢了 我已經變的是 十年前我不敢想像的一個位置 但是我怎麼好像 沒有很充實 我沒有像可能不知道 十年前 然後第一次",
-          "matched_keyword": "MLCC",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.8,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        }
-      ],
-      "total_mentions": 6,
-      "sentiment_score": 0.683,
-      "daily": {
-        "2026-04-16": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-05-13": {
-          "mentions": 2,
-          "bullish": 2,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 0.75
-        },
-        "2026-05-11": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 0.8
-        },
-        "2026-05-14": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-05-20": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 0.8
         }
       }
     },
@@ -40381,6 +40400,94 @@
       }
     },
     {
+      "code": "IBM",
+      "name": "IBM",
+      "market": "US",
+      "sector": "企業軟體",
+      "contexts": [
+        {
+          "video": "EP657 | 🐫",
+          "channel": "股癌",
+          "date": "2026-04-29",
+          "text": "那時候記憶體 那時候我們跟大家分享說一個 蠻大膽的假設 大家看起來是市場有些人去買單 這個我自己是沒有買單 但有些人去買單 那時候我們說法是說 因為在記憶體漲的時候 就理論上大家知道最缺的東西什麼是 HBM 這個是在 D-RAM 的方面 然後在 SSD 這邊 在 NAND 的方面 最缺的東西是 ESSD 7A級使用的 那結果在弱乾的時間範圍內 其實大家注意到說 很多的標股是產生在 可能一般人沒有想像到的地方 也就是所謂的被排擠的地方 那結果是在 D-RAM 的漲價 是非常的猛烈 特別是像 D3 D4 的漲價 或甚至像是 NOR 的漲價 那再來在 NAND 這邊的 你看 MLC NAND 的漲價 然後",
+          "matched_keyword": "HBM",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
+          "video": "EP661 | 🚲",
+          "channel": "股癌",
+          "date": "2026-05-13",
+          "text": "他們要去往 更高規格的東西做 然後把一些低的東西丟出來 那就導致說價格 有一個變化產生 所以我覺得其實 整體的邏輯都是差不多的 簡單來說是高規格的東西 現在是一些世界大廠 他們要去真實的 去讓那時候的HBM一樣 那一些低規格的東西 他們就沒空去做 或是會退出來 然後就會丟給大家 所以其實台系的一些MLCC大廠 它的故事比較偏向 是說就是一個排擠效應 當然他們也有做進去 AI的一些料號 這是說可能最缺 缺到爆炸的那個最高階的是 在日本跟韓國人的手上 那只是這個排擠的效應 也是不容小序 所以MLCC的狀態 就是我們知道說 在接下來應該都還是會持續的 看到一些漲價的情形發生 那最近的話就是鋁電容 在過去幾",
+          "matched_keyword": "HBM",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
+          "video": "EP228 | 台、美股重點一次說，Cisco AI基建訂單上修，Nokia與光通訊，Rubin機櫃BOM漲價，愛普矽電容缺口",
+          "channel": "韭菜畢業班",
+          "date": "2026-05-24",
+          "text": "了哪些族群 還了哪些個股 其實他也會動得非常的快 我們舉個例子來講好了 像是量子電腦相關的一些個股 其實在禮拜五的時候 都衝得非常快 我們舉個例子講RGTI 或者是說像是QBTS 然後這幾家公司或者是IBM 甚至是IONQ 這幾家公司就是我們比較 腦袋直線想的量子電腦的時候 我們就會想到的一些各國公司 我們先骨血不論說它的 基本面如何 或說pricing的程度是怎樣 但是至少 它是一個很跟題材面的東西 或說很跟消息面的東西 它就一起的往上去衝 那其實川普的這張金嘴 還有點到的東西說真的 在今年來看的話 真的是滿有蹊蹺性的 我們講intel好了 或者是說我們看到最近 他也有去做一些oracle 那其實",
+          "matched_keyword": "IBM",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
+          "video": "EP664 | 🐟",
+          "channel": "股癌",
+          "date": "2026-05-23",
+          "text": "偏空的東西 但是就是一定有雜魚 是一起被帶上去的 然後那有些雜魚被帶上去 老實講 我們現在也不敢直接去點名 人家雜魚為什麼 因為很多時候會超出你的想像 就來說一些那種垃圾的料 像以前我們大家都會講說 HBM是最好的吧 然後那 DDR4 DDR3 那很多是那種廢少的東西 就大家不一定用到 可是等到大家全部都往最高端的方向去沖的時候 有時候那些第一端的東西 它反而開始給你媽瘋狂漲價 類似說 DDR4 DDR5 那個毛利數字跑贏HBM 然後你真的會嚇到 就大家都知道說HBM是最貴最好的 就沒想到你去賣一些那種 Legacy 的東西 它的價格下竟然變得是最甜的 所以這些劇本也是有可能會發生 那只是我們還是喜",
+          "matched_keyword": "HBM",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        }
+      ],
+      "total_mentions": 4,
+      "sentiment_score": 0.65,
+      "daily": {
+        "2026-04-29": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.7
+        },
+        "2026-05-13": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.7
+        },
+        "2026-05-24": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-05-23": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.7
+        }
+      }
+    },
+    {
       "code": "5475",
       "name": "德宏",
       "market": "TW",
@@ -43669,75 +43776,6 @@
       }
     },
     {
-      "code": "IBM",
-      "name": "IBM",
-      "market": "US",
-      "sector": "企業軟體",
-      "contexts": [
-        {
-          "video": "EP657 | 🐫",
-          "channel": "股癌",
-          "date": "2026-04-29",
-          "text": "那時候記憶體 那時候我們跟大家分享說一個 蠻大膽的假設 大家看起來是市場有些人去買單 這個我自己是沒有買單 但有些人去買單 那時候我們說法是說 因為在記憶體漲的時候 就理論上大家知道最缺的東西什麼是 HBM 這個是在 D-RAM 的方面 然後在 SSD 這邊 在 NAND 的方面 最缺的東西是 ESSD 7A級使用的 那結果在弱乾的時間範圍內 其實大家注意到說 很多的標股是產生在 可能一般人沒有想像到的地方 也就是所謂的被排擠的地方 那結果是在 D-RAM 的漲價 是非常的猛烈 特別是像 D3 D4 的漲價 或甚至像是 NOR 的漲價 那再來在 NAND 這邊的 你看 MLC NAND 的漲價 然後",
-          "matched_keyword": "HBM",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.7,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        },
-        {
-          "video": "EP661 | 🚲",
-          "channel": "股癌",
-          "date": "2026-05-13",
-          "text": "他們要去往 更高規格的東西做 然後把一些低的東西丟出來 那就導致說價格 有一個變化產生 所以我覺得其實 整體的邏輯都是差不多的 簡單來說是高規格的東西 現在是一些世界大廠 他們要去真實的 去讓那時候的HBM一樣 那一些低規格的東西 他們就沒空去做 或是會退出來 然後就會丟給大家 所以其實台系的一些MLCC大廠 它的故事比較偏向 是說就是一個排擠效應 當然他們也有做進去 AI的一些料號 這是說可能最缺 缺到爆炸的那個最高階的是 在日本跟韓國人的手上 那只是這個排擠的效應 也是不容小序 所以MLCC的狀態 就是我們知道說 在接下來應該都還是會持續的 看到一些漲價的情形發生 那最近的話就是鋁電容 在過去幾",
-          "matched_keyword": "HBM",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.7,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        },
-        {
-          "video": "EP228 | 台、美股重點一次說，Cisco AI基建訂單上修，Nokia與光通訊，Rubin機櫃BOM漲價，愛普矽電容缺口",
-          "channel": "韭菜畢業班",
-          "date": "2026-05-24",
-          "text": "了哪些族群 還了哪些個股 其實他也會動得非常的快 我們舉個例子來講好了 像是量子電腦相關的一些個股 其實在禮拜五的時候 都衝得非常快 我們舉個例子講RGTI 或者是說像是QBTS 然後這幾家公司或者是IBM 甚至是IONQ 這幾家公司就是我們比較 腦袋直線想的量子電腦的時候 我們就會想到的一些各國公司 我們先骨血不論說它的 基本面如何 或說pricing的程度是怎樣 但是至少 它是一個很跟題材面的東西 或說很跟消息面的東西 它就一起的往上去衝 那其實川普的這張金嘴 還有點到的東西說真的 在今年來看的話 真的是滿有蹊蹺性的 我們講intel好了 或者是說我們看到最近 他也有去做一些oracle 那其實",
-          "matched_keyword": "IBM",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        }
-      ],
-      "total_mentions": 3,
-      "sentiment_score": 0.633,
-      "daily": {
-        "2026-04-29": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 0.7
-        },
-        "2026-05-13": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 0.7
-        },
-        "2026-05-24": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        }
-      }
-    },
-    {
       "code": "2481",
       "name": "強茂",
       "market": "TW",
@@ -43878,7 +43916,7 @@
       "code": "CDNS",
       "name": "Cadence Design Systems",
       "market": "US",
-      "sector": "科技",
+      "sector": "企業軟體",
       "contexts": [
         {
           "video": "EP649 | 💌",
@@ -50208,7 +50246,7 @@
       "code": "EA",
       "name": "Electronic Arts",
       "market": "US",
-      "sector": "通訊媒體",
+      "sector": "串流媒體",
       "contexts": [
         {
           "video": "訪談特別篇_產業研究與專職交易生活 ft.田中太郎",
@@ -54561,7 +54599,7 @@
       "code": "DDOG",
       "name": "Datadog",
       "market": "US",
-      "sector": "科技",
+      "sector": "企業軟體",
       "contexts": [
         {
           "video": "2026/05/08(五)美股下跌還能買嗎？ #ANET #DDOG #FTNT",
@@ -58022,20 +58060,6 @@
       ]
     },
     {
-      "sector": "科技",
-      "market": "US",
-      "total_mentions": 30,
-      "stock_codes": [
-        "SNDK",
-        "CDNS",
-        "INTU",
-        "TER",
-        "ADI",
-        "DDOG",
-        "GLW"
-      ]
-    },
-    {
       "sector": "紡織纖維",
       "market": "TW",
       "total_mentions": 28,
@@ -58050,6 +58074,18 @@
         "1444",
         "1455",
         "1457"
+      ]
+    },
+    {
+      "sector": "科技",
+      "market": "US",
+      "total_mentions": 27,
+      "stock_codes": [
+        "SNDK",
+        "INTU",
+        "TER",
+        "ADI",
+        "GLW"
       ]
     },
     {
@@ -58304,10 +58340,11 @@
     {
       "sector": "串流媒體",
       "market": "US",
-      "total_mentions": 13,
+      "total_mentions": 14,
       "stock_codes": [
         "NFLX",
-        "DIS"
+        "DIS",
+        "EA"
       ]
     },
     {
@@ -58318,6 +58355,18 @@
         "DELL",
         "HPQ",
         "SMCI"
+      ]
+    },
+    {
+      "sector": "半導體設備",
+      "market": "US",
+      "total_mentions": 13,
+      "stock_codes": [
+        "KLAC",
+        "ASML",
+        "AMAT",
+        "LRCX",
+        "ONTO"
       ]
     },
     {
@@ -58336,18 +58385,6 @@
       "stock_codes": [
         "6187",
         "3131"
-      ]
-    },
-    {
-      "sector": "半導體設備",
-      "market": "US",
-      "total_mentions": 12,
-      "stock_codes": [
-        "KLAC",
-        "ASML",
-        "AMAT",
-        "LRCX",
-        "ONTO"
       ]
     },
     {
@@ -58435,6 +58472,17 @@
         "4905",
         "3363",
         "6190"
+      ]
+    },
+    {
+      "sector": "企業軟體",
+      "market": "US",
+      "total_mentions": 11,
+      "stock_codes": [
+        "ADBE",
+        "IBM",
+        "CDNS",
+        "DDOG"
       ]
     },
     {
@@ -58549,15 +58597,6 @@
       ]
     },
     {
-      "sector": "企業軟體",
-      "market": "US",
-      "total_mentions": 7,
-      "stock_codes": [
-        "ADBE",
-        "IBM"
-      ]
-    },
-    {
       "sector": "液冷/電網",
       "market": "US",
       "total_mentions": 7,
@@ -58576,18 +58615,6 @@
         "RTX",
         "BA",
         "LMT"
-      ]
-    },
-    {
-      "sector": "通訊媒體",
-      "market": "US",
-      "total_mentions": 7,
-      "stock_codes": [
-        "CHTR",
-        "T",
-        "SATS",
-        "EA",
-        "VZ"
       ]
     },
     {
@@ -58633,6 +58660,17 @@
         "9927",
         "6625",
         "6464"
+      ]
+    },
+    {
+      "sector": "通訊媒體",
+      "market": "US",
+      "total_mentions": 6,
+      "stock_codes": [
+        "CHTR",
+        "T",
+        "SATS",
+        "VZ"
       ]
     },
     {
