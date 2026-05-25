@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-25T20:41:06",
+  "updated_at": "2026-05-25T21:22:17",
   "stocks_ranking": [
     {
       "code": "INTC",
@@ -7,6 +7,19 @@
       "market": "US",
       "sector": "半導體",
       "contexts": [
+        {
+          "video": "2026/05/25(一) 川普不急，美股很急！#DELL #QCOM #WMT",
+          "channel": "財女珍妮",
+          "date": "2026-05-25",
+          "text": "滿好的 好 那以成分股來看好了 上個禮拜基本上 我覺得廣度看起來是還OK的 但是揮達呢 在上個禮拜公佈財報之後 持續的回吐 你今天如果跟其他的半導體來比的話 其他公司表現很好 對不對 像是AMD 像是英特爾 像是高通 其實表現的都很好 甚至揮達的好Margie 就是他們的合作夥伴 Deo 或者是HP 他們其實也都表現得很好 為什麼揮達表現得不好呢 其實我覺得就是之前的預期 反應在股價上面了 可是你現在去看揮達的股價 你真的會覺得很貴嗎 以前我們在講 Google 在講博通 在講很多公司 甚至我在上一個月 就兩個月前 我有寫過Deo公司的股價 的那個分析文章 其實很多現在 你看起來表現很好的公司 可能",
+          "matched_keyword": "英特爾",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": "",
+          "extraction_mode": "gemini",
+          "whisper_corrected": true
+        },
         {
           "video": "EP228 | 台、美股重點一次說，Cisco AI基建訂單上修，Nokia與光通訊，Rubin機櫃BOM漲價，愛普矽電容缺口",
           "channel": "韭菜畢業班",
@@ -358,23 +371,18 @@
           "sentiment_score": 0.0,
           "video_url": "",
           "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP1090｜美伊吵也不怕，不休息的台股要硬買嗎？散戶開槓桿會爆掉嗎？下跌敢撿的人，上漲更有底氣進場？手中不動的持股如何處理？ft.AI達人 蔡明翰",
-          "channel": "兆華與股惑仔",
-          "date": "2026-05-05",
-          "text": "說 會有點壓力 如果你今天不接我的單 你今天漲我的價 我今天好像 完全沒有辦法制衡你 那當然我們都會說 intel跟三星 在先進製程上面的能力 是輸台積電的 但是還是會有這樣的一個 例如說大客戶加持 intel美國政府加持 對不對 三星現在記憶體賺的寶寶的 有能力再來做更多的投入 這件事情 到底在檯面上 我們該怎麼評斷 是一直覺得台積電 會保持這個領先嗎 就等於是整個AI裡面 我們剛剛講黑天 我們也不知道什麼 但是以目前發展的態勢 有沒有哪一件事情 是會讓你有點擔心的 我覺得 我自己個人看法 我覺得先進製程 這種東西真的是幾不來的 這個要變化 我覺得單位不是天也不是約 理論上最基本來講 用年的角度 你就",
-          "matched_keyword": "Intel",
-          "analysis_source": "whisper",
-          "sentiment": "bearish",
-          "sentiment_score": 0.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
         }
       ],
       "total_mentions": 30,
-      "sentiment_score": 0.52,
+      "sentiment_score": 0.543,
       "daily": {
+        "2026-05-25": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.7
+        },
         "2026-05-24": {
           "mentions": 2,
           "bullish": 0,
@@ -488,9 +496,9 @@
           "sentiment_score": 0.72
         },
         "2026-05-05": {
-          "mentions": 2,
+          "mentions": 1,
           "bullish": 0,
-          "bearish": 2,
+          "bearish": 1,
           "neutral": 0,
           "sentiment_score": 0.0
         }
@@ -513,6 +521,19 @@
           "sentiment_score": 0.7,
           "video_url": "",
           "extraction_mode": "gemini"
+        },
+        {
+          "video": "2026/05/25(一) 川普不急，美股很急！#DELL #QCOM #WMT",
+          "channel": "財女珍妮",
+          "date": "2026-05-25",
+          "text": "經有上去 但是也不是超級貴那一種 但是我自己是沒有高通 就是但是我覺得 就是如果你今天你真的 它可以照管理成所 預想的這個方向去走的話 我覺得它還是蠻有機會的 對 然後像你可以看到ARMRA 或者是像聯發科 其實我覺得也都是 在這樣子的一個預期之下 然後去支撐它們的股價的表現 像這兩天 大家又可以看到聯發科的這個 目標恰 就是有分析時 對於它未來的一個表現 不管是在它的TPU上面 就是跟Google的合作上面 或者是它在未來的市場上面 其實都開始有蠻多 不一樣就是更偏樂觀的一個聲音 所以這兩個人家公司 是今天可以來跟大家分享 最後可以來講一下沃爾瑪 為什麼要講沃爾瑪呢 是因為如果今天經濟不好的話 那",
+          "matched_keyword": "聯發科",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": "",
+          "extraction_mode": "gemini",
+          "whisper_corrected": true
         },
         {
           "video": "EP330 現在先別學投資",
@@ -849,26 +870,14 @@
           "sentiment_score": 0.5,
           "video_url": "",
           "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP1091｜再爆1.8兆量，台股洗完續強，放心的理由？載板回檔給機會，記憶體超強財報+法說續攻，散熱集體跌停，這次有大事？ft.產業隊長 張捷",
-          "channel": "兆華與股惑仔",
-          "date": "2026-05-06",
-          "text": "實在上個禮拜 上上禮拜就已經限端你 然後例如說群年 千張大戶增加六個人 上上禮拜 好 那其實已經沒人在問了 其實大家就覺得 因為你看 那個 你的封測也一直漲啊 設備也一直漲啊 然後台積電也一直漲 甚至聯發科都漲 大家會發現可用之兵很多 結果呢 記憶體被氣爐比息 可是呢 我們節目還是說 是 對 他們的獲利很好 加上美光海力是這麼強 完全真實 總到輪到 還有惠蓉 群聯對應惠蓉 是 所以其實呢 有時候我自己覺得 其實 有一點像是這個 資金的輪動 資金的輪動 那這一次來講的話呢 記憶體我剛剛講的 這個幾個禮拜 兩個禮拜前 兩個禮拜前其實 籌碼就已經限端你 而且後天 群聯跟怡鼎都要開法說 昨天是華邦電法說 今",
-          "matched_keyword": "聯發科",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
         }
       ],
       "total_mentions": 30,
-      "sentiment_score": 0.579,
+      "sentiment_score": 0.586,
       "daily": {
         "2026-05-25": {
-          "mentions": 1,
-          "bullish": 1,
+          "mentions": 2,
+          "bullish": 2,
           "bearish": 0,
           "neutral": 0,
           "sentiment_score": 0.7
@@ -972,11 +981,11 @@
           "sentiment_score": 0.7
         },
         "2026-05-06": {
-          "mentions": 4,
+          "mentions": 3,
           "bullish": 2,
           "bearish": 0,
-          "neutral": 2,
-          "sentiment_score": 0.7
+          "neutral": 1,
+          "sentiment_score": 0.767
         }
       }
     },
@@ -986,6 +995,18 @@
       "market": "US",
       "sector": "AI網路",
       "contexts": [
+        {
+          "video": "2026/05/25(一) 川普不急，美股很急！#DELL #QCOM #WMT",
+          "channel": "財女珍妮",
+          "date": "2026-05-25",
+          "text": "合作夥伴 Deo 或者是HP 他們其實也都表現得很好 為什麼揮達表現得不好呢 其實我覺得就是之前的預期 反應在股價上面了 可是你現在去看揮達的股價 你真的會覺得很貴嗎 以前我們在講 Google 在講博通 在講很多公司 甚至我在上一個月 就兩個月前 我有寫過Deo公司的股價 的那個分析文章 其實很多現在 你看起來表現很好的公司 可能他們在上一季的時候 表現的其實都不怎麼樣 他們的股價可能都還在打底 可能都還在比較低檔 那這個時候 如果你有注意到他 你發現 未來可能有一些成長機會的話 是不是等他反彈的時候 你就不用去追高了 你就不用去formal了 所以平常有在聽直播 對不對 有在聽我們分享 或者是",
+          "matched_keyword": "博通",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
         {
           "video": "2026/05/21(四) 輝達財報後還能漲嗎？SpaceX S1終於出爐 #NVDA #SPCX",
           "channel": "財女珍妮",
@@ -1335,22 +1356,18 @@
           "sentiment": "bullish",
           "sentiment_score": 0.7,
           "video_url": ""
-        },
-        {
-          "video": "EP653 | 🕊️",
-          "channel": "股癌",
-          "date": "2026-04-15",
-          "text": "er的話 他會考慮去多發哥跟空高通 那當然我們對高通的朋友 沒有任何的惡意 我們聽眾就是各方科技的人士都有 我們只是分享說 這個市場上觀察到的一些東西 不說高通在AM有去做投入 只是發哥可能意外的去 打下了一塊 然後這個市場有趣的地方在於說 我們知道說明年可能在晶片的 貸客設計裡面 很猛的一方玩家是博通 只是說在博通這邊 像之前跟大家聊過說 TPU是怎麼樣運作 那博通這邊就是我直接去幫你設計 整個晶片 然後幫你說去採購你的HBM 那可是這跟發哥的合作是 這個Mandai是由Google自己去做 那發哥就做IO 然後到下一代會再做一個Memory Buffer 所以他就是 幫他做除了主晶片以外的東西",
-          "matched_keyword": "博通",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.45,
-          "video_url": ""
         }
       ],
       "total_mentions": 30,
-      "sentiment_score": 0.528,
+      "sentiment_score": 0.529,
       "daily": {
+        "2026-05-25": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
         "2026-05-21": {
           "mentions": 1,
           "bullish": 0,
@@ -1490,13 +1507,6 @@
           "bearish": 0,
           "neutral": 0,
           "sentiment_score": 0.7
-        },
-        "2026-04-15": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.45
         }
       }
     },
@@ -3955,6 +3965,19 @@
           "extraction_mode": "keyword"
         },
         {
+          "video": "2026/05/25(一) 川普不急，美股很急！#DELL #QCOM #WMT",
+          "channel": "財女珍妮",
+          "date": "2026-05-25",
+          "text": "業端啊 然後到現在的AI 他可能跟幾萬家的大型企業 都有超過10年的採購合約 那他們有說最近一季又新增了 1000家的這個 AI Factor的那個客戶 就是你今天你要做AI工廠嘛 大家有沒有想到那個黃仁勳 他的五成蛋糕 底層電力 然後晶片再來就是基礎建設 基礎建設裡面 其實就是有AI工廠的這個部分 所以你看像企業莉萊 莉萊做藥物研發的 他對AI怎麼可能會熟悉呢 對不對 所以呢他當然就會去找一些 可以幫他去整合啊 導入的公司 Honey World 三星電子之類的 那所以這個就是他在企業端 已經跟雲非常久所帶來的 這個競爭優勢 我覺得算是一種品牌優勢吧 如果你真的要把他歸雷的話 那第二個就是供應鏈的",
+          "matched_keyword": "揮達",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini",
+          "whisper_corrected": true
+        },
+        {
           "video": "EP228 | 台、美股重點一次說，Cisco AI基建訂單上修，Nokia與光通訊，Rubin機櫃BOM漲價，愛普矽電容缺口",
           "channel": "韭菜畢業班",
           "date": "2026-05-24",
@@ -4249,29 +4272,17 @@
           "sentiment_score": 0.5,
           "video_url": "",
           "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP1093｜盤中洗一下，兩股力量撐著，Q3才休息？台積電營收月減，IC龍頭股來補漲？載板、CPO、散熱震盪看法？操盤手 黃豐凱",
-          "channel": "兆華與股惑仔",
-          "date": "2026-05-08",
-          "text": "這件事情 對建設到底有沒有很大的影響 我覺得要看到六月份 就是 鴻海最終的市場的結果 現在大家講說 他可能要退回一片市了 但是其實鴻海還在 做兩片市的努力 所以如果鴻海 兩片市的良率沒有到很差 我覺得NVIDIA還是會堅持 要繼續做下去 這個就是產業在推進 產業推進的過程裡面 其實都會有一些難度 就好像我們現在在看 所謂的 COAS的晶片竅區的問題 他有因為竅區 他就說我不做 沒有 他就想辦法改良 所以產生很多新的公司出來 例如說什麼三泰式 硬能 這些股價就冒出來了 就冒出來了 所以一樣 他在往這過程裡面走的時候 當然因為你 之前給了他一個 認為完全沒問題 所以他股價評價加拉高了 你現在開始覺得他有問題",
-          "matched_keyword": "NVIDIA",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
         }
       ],
       "total_mentions": 30,
       "sentiment_score": 0.667,
       "daily": {
         "2026-05-25": {
-          "mentions": 5,
+          "mentions": 6,
           "bullish": 2,
           "bearish": 0,
-          "neutral": 3,
-          "sentiment_score": 0.7
+          "neutral": 4,
+          "sentiment_score": 0.667
         },
         "2026-05-24": {
           "mentions": 2,
@@ -4358,10 +4369,10 @@
           "sentiment_score": 0.5
         },
         "2026-05-08": {
-          "mentions": 2,
+          "mentions": 1,
           "bullish": 0,
           "bearish": 0,
-          "neutral": 2,
+          "neutral": 1,
           "sentiment_score": 0.5
         }
       }
@@ -4372,6 +4383,18 @@
       "market": "US",
       "sector": "雲端/AI",
       "contexts": [
+        {
+          "video": "2026/05/25(一) 川普不急，美股很急！#DELL #QCOM #WMT",
+          "channel": "財女珍妮",
+          "date": "2026-05-25",
+          "text": "已經占他整體營業利潤的三分之一了 也就是說這個比例 放在任何的傳統零售身上 包括沃爾瑪自己 如果你今天你還是一樣 就是單純的一個零售行業的話 其實你的估值是不可能那麼高的 但是因為沃爾瑪他也知道 你看亞馬遜已經先做給你看 我有個開源會員 然後我今天我可以 這個好事多 CASCO可以用這個付費的會員 對不對 然後我還可以 因為有人要來我這邊買東西 然後我可以重點式的去投放廣告 我可以跟目標導向的去提高轉換率 所以這兩條業務呢 他的毛利率是遠高於傳統零售的 然後等於是在我本來很低毛利 低應潤的實體的零售基礎上呢 長出了一個高毛利的廣告平台 跟SARS的訂閱用戶 所以為什麼之前 大家對於沃爾瑪的估值寵孤",
+          "matched_keyword": "亞馬遜",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
         {
           "video": "2026/05/21(四) 輝達財報後還能漲嗎？SpaceX S1終於出爐 #NVDA #SPCX",
           "channel": "財女珍妮",
@@ -4719,23 +4742,18 @@
           "sentiment_score": 0.5,
           "video_url": "",
           "extraction_mode": "keyword"
-        },
-        {
-          "video": "2026/04/28(二)AI戰場重組誰是贏家？微軟OpenAI分手了。OpenAI手機要找高通跟聯發科？",
-          "channel": "財女珍妮",
-          "date": "2026-04-28",
-          "text": "ercent吧 所以我覺得這件事情就是 不是很意外 因為從過去很多的 一些種種的跡象 或者是我們這樣一路走來呢 其實我們都已經看到很多的東西 很多的一些訊好了 再加上anthropic跟Google跟amazon之間呢 其實他也有類似的多雲架構嘛 那你不可能 anthropic已經走向這條路了 然後openly還死守在這邊 他一定也會希望他可以擴展的更快 他可以擁有更多的算力 然後擁有更好的這個模型的能力 然後可以去獲取更多的客戶 所以我覺得大家在看微軟的時候呢 其實呢 就是可以去思考一下 就是你今天你要有反彈 當然是ok的 就是很多人都覺得說 欸微軟在近期呢 他的股價表現其實也還算是不錯嘛 因為雖然我們",
-          "matched_keyword": "Amazon",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
         }
       ],
       "total_mentions": 30,
       "sentiment_score": 0.561,
       "daily": {
+        "2026-05-25": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
         "2026-05-21": {
           "mentions": 1,
           "bullish": 0,
@@ -4856,10 +4874,10 @@
           "sentiment_score": 0.5
         },
         "2026-04-28": {
-          "mentions": 3,
+          "mentions": 2,
           "bullish": 0,
           "bearish": 0,
-          "neutral": 3,
+          "neutral": 2,
           "sentiment_score": 0.5
         }
       }
@@ -5390,6 +5408,42 @@
           "extraction_mode": "gemini"
         },
         {
+          "video": "2026/05/25(一) 川普不急，美股很急！#DELL #QCOM #WMT",
+          "channel": "財女珍妮",
+          "date": "2026-05-25",
+          "text": "gie 就是他們的合作夥伴 Deo 或者是HP 他們其實也都表現得很好 為什麼揮達表現得不好呢 其實我覺得就是之前的預期 反應在股價上面了 可是你現在去看揮達的股價 你真的會覺得很貴嗎 以前我們在講 Google 在講博通 在講很多公司 甚至我在上一個月 就兩個月前 我有寫過Deo公司的股價 的那個分析文章 其實很多現在 你看起來表現很好的公司 可能他們在上一季的時候 表現的其實都不怎麼樣 他們的股價可能都還在打底 可能都還在比較低檔 那這個時候 如果你有注意到他 你發現 未來可能有一些成長機會的話 是不是等他反彈的時候 你就不用去追高了 你就不用去formal了 所以平常有在聽直播 對不對 有在聽我們分",
+          "matched_keyword": "Google",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "2026/05/25(一) 川普不急，美股很急！#DELL #QCOM #WMT",
+          "channel": "財女珍妮",
+          "date": "2026-05-25",
+          "text": "後讓客戶呢 可以直接的 就是去使用 然後甚至在現在AI agent呢 他們也有推出了 相應的這個Agentic AI的 硬體的相關的設備 然後讓這個AI agent 可以跑在企業自己的設備上面 然後跟Google啊 Panetier啊 SpaceX都有把AI模型 去帶進到企業的內網裡面 所以今天 對喔 他不是那個 你要說他是賣鏟子的人 因為我們都會講 揮打他就是賣鏟子的人嘛 他就是最顯眼的受益者 可是Deal他做的呢 是把揮打的GPU 去轉化成企業 可以直接部署的 完整的方案 就有一點類似 你今天你做完鏟子 你賣鏟子 然後你還是需要有一個 經銷商或者是商人 來幫你呢 把這個鏟子呢 可以 有更好的一個普及能",
+          "matched_keyword": "Google",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "2026/05/25(一) 川普不急，美股很急！#DELL #QCOM #WMT",
+          "channel": "財女珍妮",
+          "date": "2026-05-25",
+          "text": "或者是像聯發科 其實我覺得也都是 在這樣子的一個預期之下 然後去支撐它們的股價的表現 像這兩天 大家又可以看到聯發科的這個 目標恰 就是有分析時 對於它未來的一個表現 不管是在它的TPU上面 就是跟Google的合作上面 或者是它在未來的市場上面 其實都開始有蠻多 不一樣就是更偏樂觀的一個聲音 所以這兩個人家公司 是今天可以來跟大家分享 最後可以來講一下沃爾瑪 為什麼要講沃爾瑪呢 是因為如果今天經濟不好的話 那我們剛剛講到這些AI 其實都有可能在最後 都會開始慢慢的趨緩 然後變成 拉低股市很重要的關鍵 所以像我們在看金融股財報 在看沃爾瑪零售業的財報的時候 其實我們就是要去看 公司他們 對於這種最敏感的",
+          "matched_keyword": "Google",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
           "video": "EP330 現在先別學投資",
           "channel": "投資癮",
           "date": "2026-05-24",
@@ -5701,52 +5755,16 @@
           "sentiment_score": 0.5,
           "video_url": "",
           "extraction_mode": "gemini"
-        },
-        {
-          "video": "EP661 | 🚲",
-          "channel": "股癌",
-          "date": "2026-05-13",
-          "text": "因為我朋友每次都會丟給我 那個賬號就是 只要疊就會出來講說什麼 他又在出貨了 你看他收割 追蹤我分點 不是 他自賬了是不是 你覺得我他媽 我全部錢都放同一個分點 我也知道你們知道我的分點是什麼 其實Google知道說 你們會查我的分點 當我是白痴是不是 然後他們就 你看他在收割別人 其實不是 因為那些分點裡面 也會有別人的存在 然後再來就是 每次跌下來 就在那邊一直狂喜 狂幹狂罵 然後現在罵 全部都在右上角 全部都噴超遠的 這些人也不會出來道歉 他們就換一個賬號 所以我真的很討厭這種 就是這樣不要來問我單一表弟 我盡量都要避免 像上次我不小心在那邊講說 這個我覺得台積電 這個投信這樣搞下去 這個蠻有機會",
-          "matched_keyword": "Google",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.7,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        },
-        {
-          "video": "EP225 | 台、美股重點一次說，消費性電腦與緯穎展望，康寧與AAOI長約發酵，聽眾QA",
-          "channel": "韭菜畢業班",
-          "date": "2026-05-13",
-          "text": "的表現 其實已經算是表現得非常的好 它從2026年的2月底 到目前我們講5月 它其實連續上漲了3個月 我不知道大家有沒有發現這一件事情 你要說好像是應該是2個月 所以就是一起往上去走 然後再加上現在 Google一起合作的一些產品的話 我覺得就是連帶的影響到 非常多的東西 其實我們的老姑 老Google其實 算是一直在影響的方面面 我們也是很多東西 都是被他與陸軍沾起來 也是非常的開心 好 所以再來就是說 還有另外一件事就是說 現在除了記憶體這件事情 大家還可以去注意到另外一件事情 就是CPU相關的價格 其實也是在往上去走 所以等於是 像華碩的話 他就會把他存貨金額 拉到2470億元以上 那他就是要確保這",
-          "matched_keyword": "Google",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.7,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        },
-        {
-          "video": "2026/05/13(三) 通膨升溫，川習會前半導體跳水？#ASTS #CRCL",
-          "channel": "財女珍妮",
-          "date": "2026-05-13",
-          "text": "維是一定要的 但是過度的悲觀跟恐慌 會讓你做出 你有可能會後悔的決定 所以我們還是盡觀其變 那我們來看一下 S&P500指數昨天單日的漲跌幅 欸我這張圖是不是 喔沒有 我沒有忘了換 因為昨天我們看到 Google是表現的比較差一點的嘛 好昨天呢也是漲跌互見 但是呢 完全類股是風雲變色 在前一天的時候 我們看到半導體的表現是很好的 然後其他傳產啊 或者是 非科技業的股票表現的就會比較差 昨天呢 S&P500指數裡面 也是大概一半漲一半跌 但是科技巨頭跟半導體 表現的就很差 所以整個大盤就被拉下來 那費城半導體指數 昨天是表現最差的一個類股 但是今年以來呢 還是漲幅達到了百分之六十以上 所以你說 如果已經漲了",
-          "matched_keyword": "Google",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
         }
       ],
       "total_mentions": 30,
-      "sentiment_score": 0.617,
+      "sentiment_score": 0.603,
       "daily": {
         "2026-05-25": {
-          "mentions": 1,
+          "mentions": 4,
           "bullish": 0,
           "bearish": 0,
-          "neutral": 1,
+          "neutral": 4,
           "sentiment_score": 0.5
         },
         "2026-05-24": {
@@ -5818,13 +5836,6 @@
           "bearish": 0,
           "neutral": 1,
           "sentiment_score": 0.5
-        },
-        "2026-05-13": {
-          "mentions": 3,
-          "bullish": 2,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.633
         }
       }
     },
@@ -6849,6 +6860,19 @@
           "extraction_mode": "gemini"
         },
         {
+          "video": "2026/05/25(一) 川普不急，美股很急！#DELL #QCOM #WMT",
+          "channel": "財女珍妮",
+          "date": "2026-05-25",
+          "text": "你發現很多公司跌了 你要挑的第一種股票是什麼 就是AI股 因為AI股才是你可以確定 它是有長線發展機會的 如果今天沒有AI 沒有基礎建設 沒有這些AI敘事的話 那你說之前的回答 然後後來的Intel AMD 現在的高通ARMA 或者是一些軟體股 現在也有比較顯著的反彈了 都是跟AI有關的 今天沒有AI感覺好 像市場會不會變成一坦死水 我覺得也是有這個可能 然後上個禮拜 公佈財報的War 其實他公佈財報之後的股價表現 也會也是蠻差的 我們等一下可以稍微來聊一下這個問題 因為你也不能只看 就是跟AI相關的公司 好 有人說FORMAL 現在上個禮拜我又因為FORMAL 然後大漲又再衝一波什麼 我覺得這種心",
+          "matched_keyword": "AMD",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": "",
+          "extraction_mode": "gemini",
+          "whisper_corrected": true
+        },
+        {
           "video": "EP664 | 🐟",
           "channel": "股癌",
           "date": "2026-05-23",
@@ -7183,29 +7207,17 @@
           "sentiment_score": 0.65,
           "video_url": "",
           "extraction_mode": "gemini"
-        },
-        {
-          "video": "2026/05/01(五) 美國經濟靠AI撐住了！蘋果最強季度，閃迪為何崩潰？ #AAPL #SNDK #WDC",
-          "channel": "財女珍妮",
-          "date": "2026-05-01",
-          "text": "有人問說 為什麼灰達這兩天一直跌 我覺得有很多的原因 加上Google現在 大家都在講灰達 好像是AMDR Inter 才是他主要的競爭對手 但是之前Google的TPU 開始越來越紳士大 或者是他已經要把它賣出去 然後給其他的公司去做使用的時候 你覺得他最大的競爭對手是誰 同樣GPU跟S也客製化晶片 其實Google跟灰達 他們兩個就是強強相碰",
-          "matched_keyword": "AMD",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "gemini"
         }
       ],
       "total_mentions": 30,
-      "sentiment_score": 0.565,
+      "sentiment_score": 0.572,
       "daily": {
         "2026-05-25": {
-          "mentions": 1,
-          "bullish": 0,
+          "mentions": 2,
+          "bullish": 1,
           "bearish": 0,
           "neutral": 1,
-          "sentiment_score": 0.5
+          "sentiment_score": 0.6
         },
         "2026-05-23": {
           "mentions": 1,
@@ -7325,13 +7337,6 @@
           "bearish": 0,
           "neutral": 1,
           "sentiment_score": 0.575
-        },
-        "2026-05-01": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
         }
       }
     },
@@ -7873,6 +7878,18 @@
           "extraction_mode": "gemini"
         },
         {
+          "video": "2026/05/25(一) 川普不急，美股很急！#DELL #QCOM #WMT",
+          "channel": "財女珍妮",
+          "date": "2026-05-25",
+          "text": "設 基礎建設裡面 其實就是有AI工廠的這個部分 所以你看像企業莉萊 莉萊做藥物研發的 他對AI怎麼可能會熟悉呢 對不對 所以呢他當然就會去找一些 可以幫他去整合啊 導入的公司 Honey World 三星電子之類的 那所以這個就是他在企業端 已經跟雲非常久所帶來的 這個競爭優勢 我覺得算是一種品牌優勢吧 如果你真的要把他歸雷的話 那第二個就是供應鏈的 規模的這個溢價權 加上競爭對手呢 其實大家可以看到 美超尾或者是像HPE 他其實在過去這一段時間 我覺得他的表現 或者是美超尾就不用講了嘛 還遇到很多這個公司治理啊 然後管制的一些指控啊 然後這個叫什麼 訴訟之類的 所以他的股價呢 直接就是一直往下",
+          "matched_keyword": "三星",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
           "video": "EP228 | 台、美股重點一次說，Cisco AI基建訂單上修，Nokia與光通訊，Rubin機櫃BOM漲價，愛普矽電容缺口",
           "channel": "韭菜畢業班",
           "date": "2026-05-24",
@@ -8207,28 +8224,16 @@
           "sentiment_score": 0.75,
           "video_url": "",
           "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP1081｜發哥帶IC設計衝，記憶體能回神？台股續創高沒壓力，如何兼顧行情和風險？熱門題材中沒業績的會飆，有業績的走更遠！ft.操盤手 黃豐凱",
-          "channel": "兆華與股惑仔",
-          "date": "2026-04-21",
-          "text": "環漲停 到底整體的IC設計 因為這個族群非常非常大 這族群貫穿到 從AI到消費什麼都有 到底是漲真漲價 缺這個CPU 是不是真的缺 消費性電子相關的 也真的應該跟著漲嗎 還有當然今天記憶體有回升 因為三星宣布 它真的迪迪亞而佛 是確定不做了都不做了 那這樣子當然對記憶體 終於跌了那麼久 來了一個強心針 好 那到底台積電 讓出空間這件事情 台股繼續創新高這件事情 今天剛剛看到 籌碼外資的空單還降 今天反而沒有返向加空單 台股到底要 要開到哪裡去 開到哪裡去 先來歡迎今天的來賓 今天來的是我們的 國家級基金操盤手 黃豐凱 凱哥 大家好 那個上禮拜來 有特別跟大家講說 可以去買凱哥的書 已經快絕版了 結",
-          "matched_keyword": "三星",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
         }
       ],
       "total_mentions": 30,
       "sentiment_score": 0.582,
       "daily": {
         "2026-05-25": {
-          "mentions": 1,
+          "mentions": 2,
           "bullish": 0,
           "bearish": 0,
-          "neutral": 1,
+          "neutral": 2,
           "sentiment_score": 0.5
         },
         "2026-05-24": {
@@ -8328,13 +8333,6 @@
           "bearish": 0,
           "neutral": 1,
           "sentiment_score": 0.75
-        },
-        "2026-04-21": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
         }
       }
     },
@@ -15482,10 +15480,23 @@
           "sentiment_score": 0.5,
           "video_url": "",
           "extraction_mode": "gemini"
+        },
+        {
+          "video": "2026/05/25(一) 川普不急，美股很急！#DELL #QCOM #WMT",
+          "channel": "財女珍妮",
+          "date": "2026-05-25",
+          "text": "跌了 你要挑的第一種股票是什麼 就是AI股 因為AI股才是你可以確定 它是有長線發展機會的 如果今天沒有AI 沒有基礎建設 沒有這些AI敘事的話 那你說之前的回答 然後後來的Intel AMD 現在的高通ARMA 或者是一些軟體股 現在也有比較顯著的反彈了 都是跟AI有關的 今天沒有AI感覺好 像市場會不會變成一坦死水 我覺得也是有這個可能 然後上個禮拜 公佈財報的War 其實他公佈財報之後的股價表現 也會也是蠻差的 我們等一下可以稍微來聊一下這個問題 因為你也不能只看 就是跟AI相關的公司 好 有人說FORMAL 現在上個禮拜我又因為FORMAL 然後大漲又再衝一波什麼 我覺得這種心態其實很正常",
+          "matched_keyword": "高通",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": "",
+          "extraction_mode": "gemini",
+          "whisper_corrected": true
         }
       ],
-      "total_mentions": 27,
-      "sentiment_score": 0.544,
+      "total_mentions": 28,
+      "sentiment_score": 0.55,
       "daily": {
         "2026-03-30": {
           "mentions": 1,
@@ -15626,6 +15637,13 @@
           "bearish": 0,
           "neutral": 1,
           "sentiment_score": 0.5
+        },
+        "2026-05-25": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.7
         }
       }
     },
@@ -16387,10 +16405,23 @@
           "sentiment_score": 0.5,
           "video_url": "",
           "extraction_mode": "keyword"
+        },
+        {
+          "video": "2026/05/25(一) 川普不急，美股很急！#DELL #QCOM #WMT",
+          "channel": "財女珍妮",
+          "date": "2026-05-25",
+          "text": " 我覺得其實 雖然已經有上去 但是也不是超級貴那一種 但是我自己是沒有高通 就是但是我覺得 就是如果你今天你真的 它可以照管理成所 預想的這個方向去走的話 我覺得它還是蠻有機會的 對 然後像你可以看到ARMRA 或者是像聯發科 其實我覺得也都是 在這樣子的一個預期之下 然後去支撐它們的股價的表現 像這兩天 大家又可以看到聯發科的這個 目標恰 就是有分析時 對於它未來的一個表現 不管是在它的TPU上面 就是跟Google的合作上面 或者是它在未來的市場上面 其實都開始有蠻多 不一樣就是更偏樂觀的一個聲音 所以這兩個人家公司 是今天可以來跟大家分享 最後可以來講一下沃爾瑪 為什麼要講沃爾瑪呢 是因為如果今天",
+          "matched_keyword": "ARMRA",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": "",
+          "extraction_mode": "gemini",
+          "whisper_corrected": true
         }
       ],
-      "total_mentions": 26,
-      "sentiment_score": 0.614,
+      "total_mentions": 27,
+      "sentiment_score": 0.617,
       "daily": {
         "2026-04-04": {
           "mentions": 4,
@@ -16489,6 +16520,13 @@
           "bearish": 0,
           "neutral": 1,
           "sentiment_score": 0.5
+        },
+        "2026-05-25": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.7
         }
       }
     },
@@ -44505,6 +44543,75 @@
       }
     },
     {
+      "code": "GEV",
+      "name": "GE Vernova",
+      "market": "US",
+      "sector": "液冷/電網",
+      "contexts": [
+        {
+          "video": "2026/03/24 (二）川普TACO， 反彈該跑？輝達(NVDA) 佈局電力",
+          "channel": "財女珍妮",
+          "date": "2026-03-24",
+          "text": "供綠電子 散熱管理 電網軟體 軟體就是你在系統端的部分 你不能只是提供設備而已 你今天你還要有系統 可以去做控制 可以去做調配調度 我覺得這個才是很重要的 以及在書店設備的部分 我現在第一個想到 當然除了我們剛剛講到 什麼AES Constellation 或者是Vistra這些公司之外 我覺得像是GEV 其實也是 而且GEV就是GEV Renovable 他其實也不只是 我今天就是賣什麼 電力設備給你 我今天也是有搭配軟體 然後讓你可以去做進行整合 所以我覺得在這邊 其實未來又是一個AI 或者是技術軟體 會掌握更高的主導權 或者是主共權的地方 因為電力的需缺 電力的需缺其實是一個問題 但是電力的需",
+          "matched_keyword": "GEV",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
+        },
+        {
+          "video": "2026/04/23(四)特斯拉財報，狂砸250億擴張AI與機器人版圖，以及其他重點公司的財報！",
+          "channel": "財女珍妮",
+          "date": "2026-04-23",
+          "text": "家知道 我現在就是 我的800V我的業人 然後我接下來這個營收任列 大概差不多是這個樣子的話 我覺得 它的股價短期的動能 可能就會可以稍微的休息一下下 所以這個是提供給大家做一個參考 好另外一家公司是GE Vernova 這個應該也是大家很熟悉的公司吧 如果你已經常常在看我們的節目了 那GE Vernova是做什麼的呢 就是全球電力系統的領導公司之一 那它昨天的股價也是大漲了14% 那主要的產品呢 包括的像是燃氣的渦輪級嘛 然後還有像是高壓直流系統啊 還有現在表現比較差的這個風力發電 因為傳補上來之後就說 欸這個風力發電呢 實在是沒有 然後就是討厭對不對 所以呢 它這個很多的風力發電公司呢 其實表現人都不怎麼樣 ",
+          "matched_keyword": "GE Vernova",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.8,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
+          "video": "2026/05/25(一) 川普不急，美股很急！#DELL #QCOM #WMT",
+          "channel": "財女珍妮",
+          "date": "2026-05-25",
+          "text": "之後 也讓他們在股價下跌 估值到比較合理階段的時候 他們的資金 可能也會有一些新的 佈局的資金進來 所以大家也可以去參考 我覺得這一類 就是在未來可能三年 五年 都還是看得到 它具體需求的東西 你說像G.E. Vernova 或者是我們之前講到的 這個 Xperia 他們其實都有講到 他們的訂單 不是今年的產能被訂完 不是需求已經排到明年 是已經把他們的指引 都拉到二零二八年了 說到二零二八年 訂單都是一個滿載的狀況 也讓他們的股價 在過去這一段時間 表現得是很好嘛 那比較弱的是誰呢 大家可以看到這一塊 這一塊就是必須消費類 那我覺得跟 這個沃爾瑪有比較大的一個關係 好 所以今天呢 其實我覺得沒有太特別 就是真的那種",
+          "matched_keyword": "G.E. Vernova",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": "",
+          "extraction_mode": "gemini",
+          "whisper_corrected": true
+        }
+      ],
+      "total_mentions": 3,
+      "sentiment_score": 0.667,
+      "daily": {
+        "2026-03-24": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-04-23": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.8
+        },
+        "2026-05-25": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.7
+        }
+      }
+    },
+    {
       "code": "CDNS",
       "name": "Cadence Design Systems",
       "market": "US",
@@ -44996,55 +45103,6 @@
           "bearish": 0,
           "neutral": 2,
           "sentiment_score": 0.5
-        }
-      }
-    },
-    {
-      "code": "GEV",
-      "name": "GE Vernova",
-      "market": "US",
-      "sector": "液冷/電網",
-      "contexts": [
-        {
-          "video": "2026/03/24 (二）川普TACO， 反彈該跑？輝達(NVDA) 佈局電力",
-          "channel": "財女珍妮",
-          "date": "2026-03-24",
-          "text": "供綠電子 散熱管理 電網軟體 軟體就是你在系統端的部分 你不能只是提供設備而已 你今天你還要有系統 可以去做控制 可以去做調配調度 我覺得這個才是很重要的 以及在書店設備的部分 我現在第一個想到 當然除了我們剛剛講到 什麼AES Constellation 或者是Vistra這些公司之外 我覺得像是GEV 其實也是 而且GEV就是GEV Renovable 他其實也不只是 我今天就是賣什麼 電力設備給你 我今天也是有搭配軟體 然後讓你可以去做進行整合 所以我覺得在這邊 其實未來又是一個AI 或者是技術軟體 會掌握更高的主導權 或者是主共權的地方 因為電力的需缺 電力的需缺其實是一個問題 但是電力的需",
-          "matched_keyword": "GEV",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": ""
-        },
-        {
-          "video": "2026/04/23(四)特斯拉財報，狂砸250億擴張AI與機器人版圖，以及其他重點公司的財報！",
-          "channel": "財女珍妮",
-          "date": "2026-04-23",
-          "text": "家知道 我現在就是 我的800V我的業人 然後我接下來這個營收任列 大概差不多是這個樣子的話 我覺得 它的股價短期的動能 可能就會可以稍微的休息一下下 所以這個是提供給大家做一個參考 好另外一家公司是GE Vernova 這個應該也是大家很熟悉的公司吧 如果你已經常常在看我們的節目了 那GE Vernova是做什麼的呢 就是全球電力系統的領導公司之一 那它昨天的股價也是大漲了14% 那主要的產品呢 包括的像是燃氣的渦輪級嘛 然後還有像是高壓直流系統啊 還有現在表現比較差的這個風力發電 因為傳補上來之後就說 欸這個風力發電呢 實在是沒有 然後就是討厭對不對 所以呢 它這個很多的風力發電公司呢 其實表現人都不怎麼樣 ",
-          "matched_keyword": "GE Vernova",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.8,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        }
-      ],
-      "total_mentions": 2,
-      "sentiment_score": 0.65,
-      "daily": {
-        "2026-03-24": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-04-23": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 0.8
         }
       }
     },
@@ -49106,6 +49164,157 @@
       }
     },
     {
+      "code": "SMCI",
+      "name": "Super Micro",
+      "market": "US",
+      "sector": "伺服器",
+      "contexts": [
+        {
+          "video": "2026/03/23 (一）美股不行，馬斯克Terafab能行嗎？ #TSLA #SPACEX",
+          "channel": "財女珍妮",
+          "date": "2026-03-23",
+          "text": "率 同樣的配息的水準之下呢 大家就會去想啦 那哪一個 這個風險可能是比較低的 就會有一個機會 成本的考量上面 所以你可以看到 我覺得在上禮拜五呢 是整個有一點無差別的 就是今天不管是哪一個類股 他的表現都會比較差的 那表現更差的呢 其實大家可以看到 就是漲多的 比如說像存儲啊 或者是我們可以講到 美超微電腦 在上個禮拜五我們直播之前呢 就有聽眾就有問到說 欸今天會講美超微嗎 我老實說 我覺得美超微這家公司 基本上可以從你的觀察名單之內 淘汰了 OK 你為什麼那麼多的伺服器 廠商 或者是那麼多的AI相關類股 你就要單練一支花呢 欸我完全不是在嗆哦 其實我們之前就已經講過 其實我覺得大家關注美超微是 很理",
+          "matched_keyword": "超微電腦",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
+        },
+        {
+          "video": "2026/05/25(一) 川普不急，美股很急！#DELL #QCOM #WMT",
+          "channel": "財女珍妮",
+          "date": "2026-05-25",
+          "text": "ah blah的 反正這個 就是在利多之中 還是有很多的雜音 利空出現 但是在最近 市場上面整個敘事 或者是對於Dale 或者是HPE 或者是像美超微好了 就是之前的這個 有一些內控世界的這個美超微 SMCI 他們都表現得相當的強勁 像是Dale 他在上個禮拜五的時候 上漲的幅度是達到了17% 那光是5月 Dale他就漲了41% 今年累計的漲幅 已經達到了135% 所以呢 我們之前在寫Dale的時候 他大概兩個月前 大概也是在3月附近左右 大家有沒有看到 我們常常講一個 很重要的事情 今天我自己在看一家公司的股票 我當然會先看這家公司 他的長期趨勢怎麼樣 他現在是處在哪一個產業的賽道上面 如果是一個在",
+          "matched_keyword": "美超尾",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.3,
+          "video_url": "",
+          "extraction_mode": "gemini",
+          "whisper_corrected": true
+        }
+      ],
+      "total_mentions": 2,
+      "sentiment_score": 0.4,
+      "daily": {
+        "2026-03-23": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-05-25": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 1,
+          "neutral": 0,
+          "sentiment_score": 0.3
+        }
+      }
+    },
+    {
+      "code": "WMT",
+      "name": "Walmart",
+      "market": "US",
+      "sector": "零售電商",
+      "contexts": [
+        {
+          "video": "2026/04/22(三）聯準會新局，新主席怎麼看降息？馬斯克出手，買下AI編程工具！UNH財報後大漲",
+          "channel": "財女珍妮",
+          "date": "2026-04-22",
+          "text": "以呢 這件事情 你說對於相關的一些藥廠 甚至是如果我現在 可以開藥給我的客戶 你也不只是減肥藥啊 可能很多的一些慢性病廚房啊 或者是相關的藥品啊 他都可以擁有決策權 或者是控制權嘛 像是同一個禮拜呢 沃爾瑪就是沃爾瑪呢 也透過 也宣佈透過他的 BetaCare 的平台呢 去提供了 GLP-1 的支援服務 所以你看 從電商藥局 然後到初級醫療 然後到我的病患的管理 我在療程管理上面呢 其實他可能是擁有一個更大的市場 去擠壓到了 裡萊跟諾河諾德的表現 所以你要說裡萊跟諾河諾德 當然我今天是藥廠 但是如果現在在這種網路非常暢行 AI 非常暢行的 世界 你沒有辦法掌握平台的入口權的話 其實我覺得相對應來說",
+          "matched_keyword": "沃爾瑪",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "2026/05/25(一) 川普不急，美股很急！#DELL #QCOM #WMT",
+          "channel": "財女珍妮",
+          "date": "2026-05-25",
+          "text": "把他們的指引 都拉到二零二八年了 說到二零二八年 訂單都是一個滿載的狀況 也讓他們的股價 在過去這一段時間 表現得是很好嘛 那比較弱的是誰呢 大家可以看到這一塊 這一塊就是必須消費類 那我覺得跟 這個沃爾瑪有比較大的一個關係 好 所以今天呢 其實我覺得沒有太特別 就是真的那種 爆發性很誇張的事件 但是有三家公司 我覺得可以來跟大家做一個分享 第一家公司呢 就是上個禮拜五 S&P 500指數裡面 漲幅第一名的公司嘛 那第二名 等一下我們也會講 那第一名呢 是誰呢 就是之前川普投顧 曾經喊過的一家公司 Dale 那為什麼這個 Dale的股價呢 會突然的漲那麼多 其實Dale之前 他就已經是這個 伺服器供",
+          "matched_keyword": "沃爾瑪",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini",
+          "whisper_corrected": true
+        }
+      ],
+      "total_mentions": 2,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-04-22": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-05-25": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
+      "code": "TGT",
+      "name": "Target",
+      "market": "US",
+      "sector": "零售電商",
+      "contexts": [
+        {
+          "video": "EP656 | 🍇",
+          "channel": "股癌",
+          "date": "2026-04-25",
+          "text": "你不要去預設高點 因為有時候會長到 你難以想像的一個劇情 那所以我們會盡量去 把心中的一個劇本 就是說我本來是給你20倍 我現在各位給你25倍 我各位給你30倍 我各位自己在心中 發一個比較高的一個 target price 甚至我可不可以直接給你 給到2028、2029 因為我已經看得到 你在2028、2029的一個業績了嘛 那所以在上漲方式下 我們就有機會去把 就是自己心目中的一個 TP 給上修 那當然這個 TP 跟券商的 TP 理論上要有一定程度的差距 就要說如果券商的 TP 都已經喊得比我自己心中 想的 TP 來的高 那這個東西可能就沒有買得必要 因為代表市場上 可能大家都充分預期了 所以我現在的",
+          "matched_keyword": "Target",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "2026/05/25(一) 川普不急，美股很急！#DELL #QCOM #WMT",
+          "channel": "財女珍妮",
+          "date": "2026-05-25",
+          "text": "說長廠啊 偶爾也會有這種大拍賣 大跳樓的時候 然後你再去 他大跌到年限附近的時候 再去做買進 那種長遠的公司 其實你都還是可以報的更久的 所以我覺得偶爾嘛 他為什麼他的估值可以相對於 比如說我們講到 target 或者是想到 什麼其他的一些百貨 會比較好的原因 就是因為他們一直不斷的 在導入新的技術 當你有導入新的技術的時候 市場對於你的看法 就會有一點不同了 所以我們來看一下 現在偶爾嘛 他的一個估值 大概是到了40倍左右嘛 相比於過去幾年 大概是在30倍左右 其實是有比較明顯的提升 如果他可以回到 比較均值的部分的話 我會覺得是比較好的 這個佈局的機會啦 但是當然你還是要去 衡量機會成本 就是欸 如果",
+          "matched_keyword": "Target",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        }
+      ],
+      "total_mentions": 2,
+      "sentiment_score": 1.0,
+      "daily": {
+        "2026-04-25": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        },
+        "2026-05-25": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        }
+      }
+    },
+    {
       "code": "3040",
       "name": "遠見",
       "market": "TW",
@@ -49847,36 +50056,6 @@
       "sentiment_score": 0.5,
       "daily": {
         "2026-03-24": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        }
-      }
-    },
-    {
-      "code": "SMCI",
-      "name": "Super Micro",
-      "market": "US",
-      "sector": "伺服器",
-      "contexts": [
-        {
-          "video": "2026/03/23 (一）美股不行，馬斯克Terafab能行嗎？ #TSLA #SPACEX",
-          "channel": "財女珍妮",
-          "date": "2026-03-23",
-          "text": "率 同樣的配息的水準之下呢 大家就會去想啦 那哪一個 這個風險可能是比較低的 就會有一個機會 成本的考量上面 所以你可以看到 我覺得在上禮拜五呢 是整個有一點無差別的 就是今天不管是哪一個類股 他的表現都會比較差的 那表現更差的呢 其實大家可以看到 就是漲多的 比如說像存儲啊 或者是我們可以講到 美超微電腦 在上個禮拜五我們直播之前呢 就有聽眾就有問到說 欸今天會講美超微嗎 我老實說 我覺得美超微這家公司 基本上可以從你的觀察名單之內 淘汰了 OK 你為什麼那麼多的伺服器 廠商 或者是那麼多的AI相關類股 你就要單練一支花呢 欸我完全不是在嗆哦 其實我們之前就已經講過 其實我覺得大家關注美超微是 很理",
-          "matched_keyword": "超微電腦",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": ""
-        }
-      ],
-      "total_mentions": 1,
-      "sentiment_score": 0.5,
-      "daily": {
-        "2026-03-23": {
           "mentions": 1,
           "bullish": 0,
           "bearish": 0,
@@ -52277,37 +52456,6 @@
       }
     },
     {
-      "code": "WMT",
-      "name": "Walmart",
-      "market": "US",
-      "sector": "零售電商",
-      "contexts": [
-        {
-          "video": "2026/04/22(三）聯準會新局，新主席怎麼看降息？馬斯克出手，買下AI編程工具！UNH財報後大漲",
-          "channel": "財女珍妮",
-          "date": "2026-04-22",
-          "text": "以呢 這件事情 你說對於相關的一些藥廠 甚至是如果我現在 可以開藥給我的客戶 你也不只是減肥藥啊 可能很多的一些慢性病廚房啊 或者是相關的藥品啊 他都可以擁有決策權 或者是控制權嘛 像是同一個禮拜呢 沃爾瑪就是沃爾瑪呢 也透過 也宣佈透過他的 BetaCare 的平台呢 去提供了 GLP-1 的支援服務 所以你看 從電商藥局 然後到初級醫療 然後到我的病患的管理 我在療程管理上面呢 其實他可能是擁有一個更大的市場 去擠壓到了 裡萊跟諾河諾德的表現 所以你要說裡萊跟諾河諾德 當然我今天是藥廠 但是如果現在在這種網路非常暢行 AI 非常暢行的 世界 你沒有辦法掌握平台的入口權的話 其實我覺得相對應來說",
-          "matched_keyword": "沃爾瑪",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        }
-      ],
-      "total_mentions": 1,
-      "sentiment_score": 0.5,
-      "daily": {
-        "2026-04-22": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        }
-      }
-    },
-    {
       "code": "5880",
       "name": "合庫金",
       "market": "TW",
@@ -52397,37 +52545,6 @@
           "bearish": 0,
           "neutral": 1,
           "sentiment_score": 0.5
-        }
-      }
-    },
-    {
-      "code": "TGT",
-      "name": "Target",
-      "market": "US",
-      "sector": "零售電商",
-      "contexts": [
-        {
-          "video": "EP656 | 🍇",
-          "channel": "股癌",
-          "date": "2026-04-25",
-          "text": "你不要去預設高點 因為有時候會長到 你難以想像的一個劇情 那所以我們會盡量去 把心中的一個劇本 就是說我本來是給你20倍 我現在各位給你25倍 我各位給你30倍 我各位自己在心中 發一個比較高的一個 target price 甚至我可不可以直接給你 給到2028、2029 因為我已經看得到 你在2028、2029的一個業績了嘛 那所以在上漲方式下 我們就有機會去把 就是自己心目中的一個 TP 給上修 那當然這個 TP 跟券商的 TP 理論上要有一定程度的差距 就要說如果券商的 TP 都已經喊得比我自己心中 想的 TP 來的高 那這個東西可能就沒有買得必要 因為代表市場上 可能大家都充分預期了 所以我現在的",
-          "matched_keyword": "Target",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        }
-      ],
-      "total_mentions": 1,
-      "sentiment_score": 1.0,
-      "daily": {
-        "2026-04-25": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 1.0
         }
       }
     },
@@ -58056,6 +58173,38 @@
           "sentiment_score": 0.5
         }
       }
+    },
+    {
+      "code": "HPE",
+      "name": "HPE",
+      "market": "US",
+      "sector": "伺服器",
+      "contexts": [
+        {
+          "video": "2026/05/25(一) 川普不急，美股很急！#DELL #QCOM #WMT",
+          "channel": "財女珍妮",
+          "date": "2026-05-25",
+          "text": "覺得 你是不是需要消價競爭 為了滿足大客戶 所以你就必須要讓利給他 blah blah的 反正這個 就是在利多之中 還是有很多的雜音 利空出現 但是在最近 市場上面整個敘事 或者是對於Dale 或者是HPE 或者是像美超微好了 就是之前的這個 有一些內控世界的這個美超微 SMCI 他們都表現得相當的強勁 像是Dale 他在上個禮拜五的時候 上漲的幅度是達到了17% 那光是5月 Dale他就漲了41% 今年累計的漲幅 已經達到了135% 所以呢 我們之前在寫Dale的時候 他大概兩個月前 大概也是在3月附近左右 大家有沒有看到 我們常常講一個 很重要的事情 今天我自己在看一家公司的股票 我當然會先看這",
+          "matched_keyword": "HPE",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.3,
+          "video_url": "",
+          "extraction_mode": "gemini",
+          "whisper_corrected": true
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.3,
+      "daily": {
+        "2026-05-25": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 1,
+          "neutral": 0,
+          "sentiment_score": 0.3
+        }
+      }
     }
   ],
   "sectors_ranking": [
@@ -58303,6 +58452,15 @@
       ]
     },
     {
+      "sector": "手機晶片",
+      "market": "US",
+      "total_mentions": 55,
+      "stock_codes": [
+        "QCOM",
+        "ARM"
+      ]
+    },
+    {
       "sector": "AI設計",
       "market": "TW",
       "total_mentions": 53,
@@ -58321,15 +58479,6 @@
         "3711",
         "2449",
         "8150"
-      ]
-    },
-    {
-      "sector": "手機晶片",
-      "market": "US",
-      "total_mentions": 53,
-      "stock_codes": [
-        "QCOM",
-        "ARM"
       ]
     },
     {
@@ -58771,6 +58920,17 @@
       ]
     },
     {
+      "sector": "伺服器",
+      "market": "US",
+      "total_mentions": 17,
+      "stock_codes": [
+        "DELL",
+        "HPQ",
+        "SMCI",
+        "HPE"
+      ]
+    },
+    {
       "sector": "光電",
       "market": "TW",
       "total_mentions": 17,
@@ -58880,16 +59040,6 @@
         "6838",
         "1795",
         "6861"
-      ]
-    },
-    {
-      "sector": "伺服器",
-      "market": "US",
-      "total_mentions": 15,
-      "stock_codes": [
-        "DELL",
-        "HPQ",
-        "SMCI"
       ]
     },
     {
@@ -59011,6 +59161,16 @@
       ]
     },
     {
+      "sector": "零售電商",
+      "market": "US",
+      "total_mentions": 11,
+      "stock_codes": [
+        "COST",
+        "WMT",
+        "TGT"
+      ]
+    },
+    {
       "sector": "化學工業",
       "market": "TW",
       "total_mentions": 11,
@@ -59114,16 +59274,6 @@
       ]
     },
     {
-      "sector": "零售電商",
-      "market": "US",
-      "total_mentions": 9,
-      "stock_codes": [
-        "COST",
-        "WMT",
-        "TGT"
-      ]
-    },
-    {
       "sector": "半導體",
       "market": "TW",
       "total_mentions": 9,
@@ -59158,6 +59308,17 @@
       ]
     },
     {
+      "sector": "液冷/電網",
+      "market": "US",
+      "total_mentions": 8,
+      "stock_codes": [
+        "VRT",
+        "GEV",
+        "PWR",
+        "ETN"
+      ]
+    },
+    {
       "sector": "居家生活",
       "market": "TW",
       "total_mentions": 8,
@@ -59177,17 +59338,6 @@
       "stock_codes": [
         "1102",
         "1101"
-      ]
-    },
-    {
-      "sector": "液冷/電網",
-      "market": "US",
-      "total_mentions": 7,
-      "stock_codes": [
-        "VRT",
-        "GEV",
-        "PWR",
-        "ETN"
       ]
     },
     {
@@ -64285,6 +64435,31 @@
         "MU",
         "00935",
         "AMD"
+      ],
+      "analysis_source": "whisper",
+      "thumbnail_url": null
+    },
+    {
+      "video_id": "31069afe-4878-425e-ac81-0782b3eab1d6",
+      "title": "2026/05/25(一) 川普不急，美股很急！#DELL #QCOM #WMT",
+      "channel": "財女珍妮",
+      "date": "2026-05-25",
+      "stocks_found": [
+        "QCOM",
+        "AMZN",
+        "GOOGL",
+        "ARM",
+        "AVGO",
+        "NVDA",
+        "GEV",
+        "5007",
+        "TGT",
+        "2454",
+        "WMT",
+        "INTC",
+        "AMD",
+        "SMCI",
+        "HPE"
       ],
       "analysis_source": "whisper",
       "thumbnail_url": null
