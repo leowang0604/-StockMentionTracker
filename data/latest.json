@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-25T19:04:34",
+  "updated_at": "2026-05-25T19:20:12",
   "stocks_ranking": [
     {
       "code": "INTC",
@@ -43913,6 +43913,76 @@
       }
     },
     {
+      "code": "3036",
+      "name": "文曄",
+      "market": "TW",
+      "sector": "電子通路業",
+      "contexts": [
+        {
+          "video": "EP1077｜台股大跨步37000點！賣飛正常，如何重新買回來？台積法說若回檔，設備好機會？PCB、CPO強恆強，被動元件真漲價？ft.報價天王 林信富",
+          "channel": "兆華與股惑仔",
+          "date": "2026-04-15",
+          "text": "另外像是這個 聯貿 我們之前講過一家 比較利基型的CCL 是騰輝電子 那也從100漲到現在150了",
+          "matched_keyword": "騰輝電子",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": ""
+        },
+        {
+          "video": "EP221 | 台、美股重點一次說， 台積電25%條款後的資金節奏，台達電AI Power與高階連接器，旺宏法說重點",
+          "channel": "韭菜畢業班",
+          "date": "2026-04-28",
+          "text": "事情 就大概是這樣子 我覺得最近就 持續的看一下 產業上面的變化 我可能還是會去定一下 跟封測有相關的東西 特別是SLT相關的東西 最近比較會去看的 光通的話 最近就是面臨一些修正 之前比較熱門的 像文貌 或者是說我們的小波波 其實最近開始在休息 我覺得也是一件好事 就畢竟之前衝太快了 好 那就希望大家開開心心 就這樣子 希望這一集 我的這一個 現在你們如果是在看 video podcast的話 現在時時刻 我希望大家 我們是平行的 我們不是遊下上的 我希望這一集有改善 就這樣 拜拜",
+          "matched_keyword": "文貌",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini",
+          "whisper_corrected": true
+        },
+        {
+          "video": "EP227 | 台、美股重點一次說，載板與高毛利訂單觀察，國巨與被動元件，聯電成熟製程與電源管理IC關係",
+          "channel": "韭菜畢業班",
+          "date": "2026-05-20",
+          "text": "舉個例子來講 像文宴 然後或者說像大連大 其實IC的通路商 都是有慢慢的突破上去了 如果說講到文宴這一家公司的話 其實我們可以看到 它法售會其實是有 把毛利率往上去調的 主要去調的原因的話 是因為它有看到一些 歐美市場 一些半導體的零組件 成本往上去走",
+          "matched_keyword": "文宴",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini",
+          "whisper_corrected": true
+        }
+      ],
+      "total_mentions": 3,
+      "sentiment_score": 0.567,
+      "daily": {
+        "2026-04-15": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.7
+        },
+        "2026-04-28": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-05-20": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
       "code": "CDNS",
       "name": "Cadence Design Systems",
       "market": "US",
@@ -45070,56 +45140,6 @@
           "bearish": 0,
           "neutral": 0,
           "sentiment_score": 0.834
-        }
-      }
-    },
-    {
-      "code": "3036",
-      "name": "文曄",
-      "market": "TW",
-      "sector": "電子通路業",
-      "contexts": [
-        {
-          "video": "EP1077｜台股大跨步37000點！賣飛正常，如何重新買回來？台積法說若回檔，設備好機會？PCB、CPO強恆強，被動元件真漲價？ft.報價天王 林信富",
-          "channel": "兆華與股惑仔",
-          "date": "2026-04-15",
-          "text": "另外像是這個 聯貿 我們之前講過一家 比較利基型的CCL 是騰輝電子 那也從100漲到現在150了",
-          "matched_keyword": "騰輝電子",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.7,
-          "video_url": ""
-        },
-        {
-          "video": "EP221 | 台、美股重點一次說， 台積電25%條款後的資金節奏，台達電AI Power與高階連接器，旺宏法說重點",
-          "channel": "韭菜畢業班",
-          "date": "2026-04-28",
-          "text": "事情 就大概是這樣子 我覺得最近就 持續的看一下 產業上面的變化 我可能還是會去定一下 跟封測有相關的東西 特別是SLT相關的東西 最近比較會去看的 光通的話 最近就是面臨一些修正 之前比較熱門的 像文貌 或者是說我們的小波波 其實最近開始在休息 我覺得也是一件好事 就畢竟之前衝太快了 好 那就希望大家開開心心 就這樣子 希望這一集 我的這一個 現在你們如果是在看 video podcast的話 現在時時刻 我希望大家 我們是平行的 我們不是遊下上的 我希望這一集有改善 就這樣 拜拜",
-          "matched_keyword": "文貌",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "gemini",
-          "whisper_corrected": true
-        }
-      ],
-      "total_mentions": 2,
-      "sentiment_score": 0.6,
-      "daily": {
-        "2026-04-15": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 0.7
-        },
-        "2026-04-28": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
         }
       }
     },
@@ -58618,6 +58638,18 @@
       ]
     },
     {
+      "sector": "電子通路業",
+      "market": "TW",
+      "total_mentions": 7,
+      "stock_codes": [
+        "3036",
+        "8112",
+        "3702",
+        "2414",
+        "5434"
+      ]
+    },
+    {
       "sector": "AI晶片",
       "market": "TW",
       "total_mentions": 6,
@@ -58671,18 +58703,6 @@
         "T",
         "SATS",
         "VZ"
-      ]
-    },
-    {
-      "sector": "電子通路業",
-      "market": "TW",
-      "total_mentions": 6,
-      "stock_codes": [
-        "3036",
-        "8112",
-        "3702",
-        "2414",
-        "5434"
       ]
     },
     {
