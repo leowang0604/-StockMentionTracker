@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-25T21:33:55",
+  "updated_at": "2026-05-26T20:17:50",
   "stocks_ranking": [
     {
       "code": "INTC",
@@ -118,6 +118,18 @@
           "video_url": "",
           "extraction_mode": "gemini",
           "whisper_corrected": true
+        },
+        {
+          "video": "EP663 | 🦘",
+          "channel": "股癌",
+          "date": "2026-05-20",
+          "text": "司 它也是在那一段時間 你就不知道 什麼就市場 就不喜歡它 可是後來當這個 Google的 TPU 變成是舞台正中央的時候 因為大家知道說 它的那個東西 就是埋在 栽板裡面的電容 反正就是 他們稱為 Integraded Passive Device 那像這個東西 就是因為Google的 大量的曝光 大家注意到 就是再一次這個資金又回來 所以前面 可能比較軟的東西 都是有機會 但是為什麼會在 這一波跟大家分享 就是除了一方面是因為 東西真的拉很遠 所以像我們身邊蠻多人 我都注意到 大家沒有刻意再調步 因為拉太遠 大家Don't F***ing Care 然後再來就是 我認為就是一些 可能現在看起來 是被",
+          "matched_keyword": "Intel",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.4,
+          "video_url": "",
+          "extraction_mode": "gemini"
         },
         {
           "video": "EP1100｜後悔3月低點買不夠，又怕這次真崩盤，怎麼做？通膨和AI成長的平衡點在哪裡？主動ETF殺高價股，台股幸好有台積電！ft.型男股神 陳威良",
@@ -359,22 +371,10 @@
           "sentiment_score": 0.8,
           "video_url": "",
           "extraction_mode": "gemini"
-        },
-        {
-          "video": "EP1090｜美伊吵也不怕，不休息的台股要硬買嗎？散戶開槓桿會爆掉嗎？下跌敢撿的人，上漲更有底氣進場？手中不動的持股如何處理？ft.AI達人 蔡明翰",
-          "channel": "兆華與股惑仔",
-          "date": "2026-05-05",
-          "text": "空間 但是相對來講 就避免掉你追在最高點的風險 是 那當然最近 有一些新聞 每次傳出來 我們都會說 台積電沒問題 為什麼又這麼講呢 因為像昨天蘋果就有提到 他還是想要培養 所謂的第二供應商 所以他去找intel 也找三星 想要做合作 這市場就是這樣子 如果先進製程 永遠都只有一家可以做 當然對所謂的客戶來說 會有點壓力 如果你今天不接我的單 你今天漲我的價 我今天好像 完全沒有辦法制衡你 那當然我們都會說 intel跟三星 在先進製程上面的能力 是輸台積電的 但是還是會有這樣的一個 例如說大客戶加持 intel美國政府加持 對不對 三星現在記憶體賺的寶寶的 有能力再來做更多的投入 這件事情 到底在檯面上",
-          "matched_keyword": "Intel",
-          "analysis_source": "whisper",
-          "sentiment": "bearish",
-          "sentiment_score": 0.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
         }
       ],
       "total_mentions": 30,
-      "sentiment_score": 0.543,
+      "sentiment_score": 0.557,
       "daily": {
         "2026-05-25": {
           "mentions": 1,
@@ -412,11 +412,11 @@
           "sentiment_score": 0.5
         },
         "2026-05-20": {
-          "mentions": 3,
+          "mentions": 4,
           "bullish": 1,
           "bearish": 0,
-          "neutral": 2,
-          "sentiment_score": 0.533
+          "neutral": 3,
+          "sentiment_score": 0.5
         },
         "2026-05-19": {
           "mentions": 1,
@@ -494,13 +494,6 @@
           "bearish": 0,
           "neutral": 2,
           "sentiment_score": 0.72
-        },
-        "2026-05-05": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 1,
-          "neutral": 0,
-          "sentiment_score": 0.0
         }
       }
     },
@@ -22135,7 +22128,7 @@
       "code": "CCL",
       "name": "Carnival",
       "market": "US",
-      "sector": "消費",
+      "sector": "金融",
       "contexts": [
         {
           "video": "EP213 | 台、美股重點一次說，台股反彈怎麼看？美股極度恐慌後的觀察重點，南俊國際與滑軌需求，設備股後勢",
@@ -51347,7 +51340,7 @@
       "code": "BIIB",
       "name": "Biogen",
       "market": "US",
-      "sector": "醫療",
+      "sector": "生技製藥",
       "contexts": [
         {
           "video": "2026/04/16 (四）美股創新高 ，泡沫示警？ASML財報，Tesla AI5晶片設計定案",
@@ -51737,7 +51730,7 @@
       "code": "BKNG",
       "name": "Booking Holdings",
       "market": "US",
-      "sector": "消費",
+      "sector": "零售電商",
       "contexts": [
         {
           "video": "EP653 | 🕊️",
@@ -54035,7 +54028,7 @@
       "code": "ADI",
       "name": "ADI",
       "market": "US",
-      "sector": "科技",
+      "sector": "半導體",
       "contexts": [
         {
           "video": "2026/05/05(二) Palantir為什麼不漲？#PLTR #ON #NVDA #MU",
@@ -55278,7 +55271,7 @@
       "code": "DDOG",
       "name": "Datadog",
       "market": "US",
-      "sector": "企業軟體",
+      "sector": "網路安全",
       "contexts": [
         {
           "video": "2026/05/08(五)美股下跌還能買嗎？ #ANET #DDOG #FTNT",
@@ -56426,7 +56419,7 @@
       "code": "GLW",
       "name": "Corning Inc.",
       "market": "US",
-      "sector": "科技",
+      "sector": "光通訊",
       "contexts": [
         {
           "video": "EP225 | 台、美股重點一次說，消費性電腦與緯穎展望，康寧與AAOI長約發酵，聽眾QA",
@@ -58166,7 +58159,7 @@
       "code": "00660",
       "name": "元大歐洲50",
       "market": "TW",
-      "sector": null,
+      "sector": "ETF",
       "contexts": [
         {
           "video": "EP1104｜黃仁勳來台、美伊真和談，台股瘋創高！動能、低接都可以等到創新高，主動、被動ETF各有優點，誰是AI相對落後股？ft.題材獵人 林漢偉",
@@ -58427,6 +58420,28 @@
       ]
     },
     {
+      "sector": "金融",
+      "market": "US",
+      "total_mentions": 68,
+      "stock_codes": [
+        "CCL",
+        "GS",
+        "MS",
+        "BAC",
+        "JPM",
+        "V",
+        "BLK",
+        "CB",
+        "CME",
+        "MA",
+        "BX",
+        "COIN",
+        "AIG",
+        "C",
+        "BRK.B"
+      ]
+    },
+    {
       "sector": "伺服器",
       "market": "TW",
       "total_mentions": 65,
@@ -58501,27 +58516,6 @@
       ]
     },
     {
-      "sector": "金融",
-      "market": "US",
-      "total_mentions": 52,
-      "stock_codes": [
-        "GS",
-        "MS",
-        "BAC",
-        "JPM",
-        "V",
-        "BLK",
-        "CB",
-        "CME",
-        "MA",
-        "BX",
-        "COIN",
-        "AIG",
-        "C",
-        "BRK.B"
-      ]
-    },
-    {
       "sector": "電機機械",
       "market": "TW",
       "total_mentions": 50,
@@ -58580,12 +58574,13 @@
     {
       "sector": "半導體",
       "market": "US",
-      "total_mentions": 41,
+      "total_mentions": 42,
       "stock_codes": [
         "INTC",
         "TXN",
         "ON",
         "MCHP",
+        "ADI",
         "ON Semiconductor Corporation"
       ]
     },
@@ -58818,18 +58813,6 @@
       ]
     },
     {
-      "sector": "科技",
-      "market": "US",
-      "total_mentions": 27,
-      "stock_codes": [
-        "SNDK",
-        "INTU",
-        "TER",
-        "ADI",
-        "GLW"
-      ]
-    },
-    {
       "sector": "ETF・科技",
       "market": "TW",
       "total_mentions": 27,
@@ -58843,17 +58826,13 @@
       ]
     },
     {
-      "sector": "消費",
+      "sector": "科技",
       "market": "US",
-      "total_mentions": 24,
+      "total_mentions": 25,
       "stock_codes": [
-        "CCL",
-        "DASH",
-        "GRMN",
-        "NKE",
-        "ABNB",
-        "BKNG",
-        "DECK"
+        "SNDK",
+        "INTU",
+        "TER"
       ]
     },
     {
@@ -58870,6 +58849,22 @@
       ]
     },
     {
+      "sector": "ETF",
+      "market": "TW",
+      "total_mentions": 23,
+      "stock_codes": [
+        "00830",
+        "00403A",
+        "00757",
+        "00735",
+        "00400A",
+        "00662",
+        "006205",
+        "00752",
+        "00660"
+      ]
+    },
+    {
       "sector": "食品",
       "market": "TW",
       "total_mentions": 22,
@@ -58879,51 +58874,37 @@
       ]
     },
     {
-      "sector": "ETF",
-      "market": "TW",
-      "total_mentions": 22,
-      "stock_codes": [
-        "00830",
-        "00403A",
-        "00757",
-        "00735",
-        "00400A",
-        "00662",
-        "006205",
-        "00752"
-      ]
-    },
-    {
       "sector": "光通訊",
       "market": "US",
-      "total_mentions": 21,
+      "total_mentions": 22,
       "stock_codes": [
         "COHR",
         "LITE",
-        "AAOI"
+        "AAOI",
+        "GLW"
       ]
     },
     {
       "sector": "醫療",
       "market": "US",
-      "total_mentions": 21,
+      "total_mentions": 20,
       "stock_codes": [
         "TECH",
         "UNH",
         "HUM",
         "CVS",
-        "BIIB",
         "CI"
       ]
     },
     {
       "sector": "網路安全",
       "market": "US",
-      "total_mentions": 18,
+      "total_mentions": 19,
       "stock_codes": [
         "NET",
         "CRWD",
         "OKTA",
+        "DDOG",
         "FTNT"
       ]
     },
@@ -59122,6 +59103,17 @@
       ]
     },
     {
+      "sector": "零售電商",
+      "market": "US",
+      "total_mentions": 12,
+      "stock_codes": [
+        "COST",
+        "WMT",
+        "TGT",
+        "BKNG"
+      ]
+    },
+    {
       "sector": "半導體設備",
       "market": "TW",
       "total_mentions": 12,
@@ -59180,16 +59172,6 @@
       ]
     },
     {
-      "sector": "零售電商",
-      "market": "US",
-      "total_mentions": 11,
-      "stock_codes": [
-        "COST",
-        "WMT",
-        "TGT"
-      ]
-    },
-    {
       "sector": "化學工業",
       "market": "TW",
       "total_mentions": 11,
@@ -59225,17 +59207,6 @@
         "4905",
         "3363",
         "6190"
-      ]
-    },
-    {
-      "sector": "企業軟體",
-      "market": "US",
-      "total_mentions": 11,
-      "stock_codes": [
-        "ADBE",
-        "IBM",
-        "CDNS",
-        "DDOG"
       ]
     },
     {
@@ -59276,6 +59247,16 @@
       "stock_codes": [
         "3260",
         "2451"
+      ]
+    },
+    {
+      "sector": "企業軟體",
+      "market": "US",
+      "total_mentions": 10,
+      "stock_codes": [
+        "ADBE",
+        "IBM",
+        "CDNS"
       ]
     },
     {
@@ -59379,6 +59360,18 @@
         "3702",
         "2414",
         "5434"
+      ]
+    },
+    {
+      "sector": "消費",
+      "market": "US",
+      "total_mentions": 7,
+      "stock_codes": [
+        "DASH",
+        "GRMN",
+        "NKE",
+        "ABNB",
+        "DECK"
       ]
     },
     {
@@ -59543,6 +59536,16 @@
       ]
     },
     {
+      "sector": "生技製藥",
+      "market": "US",
+      "total_mentions": 3,
+      "stock_codes": [
+        "MRNA",
+        "BIIB",
+        "LLY"
+      ]
+    },
+    {
       "sector": "運動休閒",
       "market": "TW",
       "total_mentions": 3,
@@ -59593,15 +59596,6 @@
       "stock_codes": [
         "8440",
         "3551"
-      ]
-    },
-    {
-      "sector": "生技製藥",
-      "market": "US",
-      "total_mentions": 2,
-      "stock_codes": [
-        "MRNA",
-        "LLY"
       ]
     },
     {
