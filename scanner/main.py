@@ -2006,6 +2006,22 @@ _GEMINI_RPM_LIMIT      = 12    # stay under free-tier 15 RPM
 _GEMINI_RPD_WARN_AT    = 16    # warn at 80% of 20 RPD free-tier limit (gemini-2.5-flash-lite)
 _GEMINI_CALLS_WINDOW:  list[float] = []  # timestamps within last 60 s
 _GEMINI_CALLS_SESSION: int = 0           # total calls this scan run
+_GEMINI_SECOND_PASS_LIMIT = 3            # sparse episode-level second pass cap per scan run
+_GEMINI_SECOND_PASS_SESSION = 0
+
+_SECOND_PASS_TOPIC_SECTORS: dict[str, tuple[str, ...]] = {
+    "載板": ("PCB載板", "PCB", "CCL"),
+    "ABF": ("PCB載板", "PCB"),
+    "PCB": ("PCB載板", "PCB", "CCL"),
+    "CPO": ("PCB載板", "PCB", "CCL", "網通IC"),
+    "被動": ("被動元件",),
+    "被動元件": ("被動元件",),
+    "電源管理": ("電源IC", "晶圓代工"),
+    "電源管理IC": ("電源IC", "晶圓代工"),
+    "PMIC": ("電源IC", "晶圓代工"),
+    "8 吋": ("晶圓代工", "電源IC"),
+    "8吋": ("晶圓代工", "電源IC"),
+}
 
 
 def _gemini_today_count() -> int:
@@ -2839,6 +2855,166 @@ def _merge_extraction_results(
     return merged
 
 
+def _merge_additional_hits(base_hits: list[dict], extra_hits: list[dict] | None) -> list[dict]:
+    """Merge extra hits into an existing hit list, preferring Gemini-quality fields."""
+    if not extra_hits:
+        return base_hits
+
+    merged_by_code: dict[str, dict] = {h["stock_code"]: dict(h) for h in base_hits}
+    ordered_codes = [h["stock_code"] for h in base_hits]
+
+    for h in extra_hits:
+        code = h["stock_code"]
+        existing = merged_by_code.get(code)
+        if not existing:
+            merged_by_code[code] = dict(h)
+            ordered_codes.append(code)
+            continue
+
+        merged = dict(existing)
+        if len(h.get("context", "")) > len(existing.get("context", "")):
+            merged["context"] = h["context"]
+        if h.get("extraction_mode") == "gemini":
+            for field in ("sentiment", "sentiment_score", "matched_keyword", "whisper_corrected", "stock_name", "stock_market", "stock_sector"):
+                if field in h and h[field] not in (None, ""):
+                    merged[field] = h[field]
+            merged["extraction_mode"] = "gemini"
+        merged_by_code[code] = merged
+
+    return [merged_by_code[code] for code in ordered_codes]
+
+
+def _second_pass_candidate_codes(
+    text: str,
+    title: str,
+    hits: list[dict],
+    *,
+    max_candidates: int = 12,
+) -> list[str]:
+    title_upper = title.upper()
+    text_upper = text.upper()
+    sector_pool: set[str] = set()
+
+    for topic, sectors in _SECOND_PASS_TOPIC_SECTORS.items():
+        topic_upper = topic.upper()
+        if topic in title or topic_upper in title_upper or topic in text[:1200] or topic_upper in text_upper[:1200]:
+            sector_pool.update(sectors)
+
+    for h in hits:
+        if h.get("stock_market") == "TW":
+            sector = h.get("stock_sector")
+            if sector in {"PCB載板", "PCB", "CCL", "被動元件", "電源IC", "晶圓代工", "網通IC"}:
+                sector_pool.add(sector)
+
+    if not sector_pool:
+        return []
+
+    existing_codes = {h["stock_code"] for h in hits}
+    candidate_codes: list[str] = []
+    for code, sector in STOCK_SECTOR.items():
+        if code in existing_codes or sector not in sector_pool:
+            continue
+        candidate_codes.append(code)
+
+    candidate_codes.sort(key=lambda code: (STOCK_SECTOR.get(code, ""), CODE_TO_NAME.get(code, code)))
+    return candidate_codes[:max_candidates]
+
+
+def _should_run_sparse_second_pass(
+    text: str,
+    title: str,
+    hits: list[dict],
+    candidate_codes: list[str],
+) -> bool:
+    if not GEMINI_API_KEY or not candidate_codes:
+        return False
+    if _GEMINI_SECOND_PASS_SESSION >= _GEMINI_SECOND_PASS_LIMIT:
+        return False
+    if _gemini_today_count() >= (_GEMINI_RPD_WARN_AT - 2):
+        return False
+    if len(text) < 1200:
+        return False
+    if len(hits) > 8:
+        return False
+    tw_hits = [h for h in hits if h.get("stock_market") == "TW"]
+    if not (1 <= len(tw_hits) <= 5):
+        return False
+    title_upper = title.upper()
+    if not any(topic in title or topic.upper() in title_upper for topic in _SECOND_PASS_TOPIC_SECTORS):
+        return False
+    return True
+
+
+def _gemini_extract_candidates_in_video(
+    text: str,
+    video_ctx: dict,
+    candidate_codes: list[str],
+) -> list[dict] | None:
+    if not GEMINI_API_KEY or not candidate_codes:
+        return None
+    model = _get_gemini_model()
+    if not model:
+        return None
+
+    items = []
+    for code in candidate_codes:
+        name = CODE_TO_NAME.get(code)
+        if not name:
+            continue
+        market = STOCK_MARKET.get(code, "TW")
+        sector = STOCK_SECTOR.get(code, "")
+        items.append(f"- {code} {name}" + (f" ({market}/{sector})" if sector else f" ({market})"))
+    if not items:
+        return None
+
+    channel = video_ctx.get("channel", "")
+    video_title = video_ctx.get("title", "")
+    prompt = (
+        "你是台灣股市分析專家。以下是一集財經節目的完整逐字稿，"
+        "請只在候選股票清單內補抓這集明確提到的股票。不要回傳候選清單以外的股票。\n\n"
+        f"頻道：{channel}\n"
+        f"影片標題：{video_title[:100]}\n\n"
+        "候選股票清單：\n"
+        + "\n".join(items)
+        + "\n\n完整逐字稿：\n"
+        f"「{text}」\n\n"
+        "回傳規則：\n"
+        "- 只回傳這集明確提到且有股票討論語境的候選股票\n"
+        "- 若只是一般詞彙、類股名稱、產業泛稱，不要回傳\n"
+        "- 若原文是 Whisper 近音錯字，請填 whisper_original\n"
+        "- 不要回傳候選清單以外的股票\n"
+        "- 若沒有任何候選股票被提到，回傳 []\n\n"
+        "只回傳 JSON 陣列：\n"
+        "[{\n"
+        "  \"name\": \"股票正確名稱\",\n"
+        "  \"code\": \"代號\",\n"
+        "  \"market\": \"TW或US或null\",\n"
+        "  \"sentiment\": \"bullish或bearish或neutral\",\n"
+        "  \"score\": 0.6,\n"
+        "  \"context\": \"原文中最相關的一句話（限150字內）\",\n"
+        "  \"whisper_original\": \"若有修正填原始錯誤詞，否則null\"\n"
+        "}]"
+    )
+
+    try:
+        response = _gemini_generate(model, prompt)
+        text_out = response.text.strip()
+        if text_out.startswith("```"):
+            text_out = re.sub(r"^```[a-z]*\n?", "", text_out)
+            text_out = re.sub(r"\n?```$", "", text_out)
+        parsed = json.loads(text_out)
+        if not isinstance(parsed, list):
+            return None
+        validated = _validate_gemini_stocks(parsed, text, video_ctx=video_ctx)
+        allowed = set(candidate_codes)
+        result = [h for h in validated if h.get("stock_code") in allowed]
+        print(f"  [gemini_extract] sparse second-pass → {len(result)} stocks", file=sys.stderr)
+        return result
+    except Exception as e:
+        print(f"  [gemini_extract] sparse second-pass failed: {e}", file=sys.stderr)
+        return None
+
+
 # ─────────────────────────────────────────────────────────────────────────────
 # YouTube — channel video listing
 # ─────────────────────────────────────────────────────────────────────────────
@@ -3142,6 +3318,14 @@ def _detect_youtube_video(
             print(f"  [extract] {mode_label} → {len(hits_gemini)} stocks from Gemini", file=sys.stderr)
 
     hits        = _merge_extraction_results(hits_keyword, hits_gemini)
+    global _GEMINI_SECOND_PASS_SESSION
+    if extraction_mode in ("gemini", "auto") and text:
+        candidate_codes = _second_pass_candidate_codes(text, title, hits)
+        if _should_run_sparse_second_pass(text, title, hits, candidate_codes):
+            _GEMINI_SECOND_PASS_SESSION += 1
+            extra_hits = _gemini_extract_candidates_in_video(text, video_ctx, candidate_codes)
+            if extra_hits:
+                hits = _merge_additional_hits(hits, extra_hits)
     stock_codes = list({h["stock_code"] for h in hits})
 
     video_entry = {
@@ -3479,6 +3663,14 @@ def _detect_podcast_episode(
         hits_gemini = _gemini_extract_full_video(text, video_ctx)
 
     hits        = _merge_extraction_results(hits_keyword, hits_gemini)
+    global _GEMINI_SECOND_PASS_SESSION
+    if extraction_mode in ("gemini", "auto") and text:
+        candidate_codes = _second_pass_candidate_codes(text, title, hits)
+        if _should_run_sparse_second_pass(text, title, hits, candidate_codes):
+            _GEMINI_SECOND_PASS_SESSION += 1
+            extra_hits = _gemini_extract_candidates_in_video(text, video_ctx, candidate_codes)
+            if extra_hits:
+                hits = _merge_additional_hits(hits, extra_hits)
     stock_codes = list({h["stock_code"] for h in hits})
 
     # Debug: check if known watch-keywords appear in text but weren't detected
