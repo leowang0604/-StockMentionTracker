@@ -2376,6 +2376,34 @@ def _conflicting_exact_keyword_hits(
     return hits
 
 
+def _nearby_other_stock_keyword(
+    term: str,
+    *,
+    exclude_code: str,
+) -> tuple[str, str] | None:
+    """Find another stock whose CJK keyword is a much closer Whisper correction."""
+    if not term or not _contains_only_cjk(term):
+        return None
+
+    best: tuple[str, str, int] | None = None
+    for kw, code in STOCK_DICT.items():
+        if code == exclude_code or kw == code:
+            continue
+        if len(kw) < 2 or not _contains_only_cjk(kw):
+            continue
+        if abs(len(kw) - len(term)) > 1:
+            continue
+        dist = _levenshtein(term, kw)
+        if dist > 1:
+            continue
+        if best is None or dist < best[2] or (dist == best[2] and len(kw) > len(best[0])):
+            best = (kw, code, dist)
+
+    if best is None:
+        return None
+    return best[0], best[1]
+
+
 def _is_ambiguous_hit(hit: dict) -> bool:
     """判斷這個 hit 是否需要 Gemini 驗證（短詞可能誤匹配子字串）"""
     # Already handled by CONTEXT_REQUIRED fast-path in recognize_stocks()
@@ -2637,6 +2665,30 @@ def _validate_gemini_stocks(
                         break
         # 若短中文名本身沒有 exact 命中，但 chunk 裡已有別支股票的 exact keyword，
         # 優先相信 exact keyword，避免像「波諾威」被另一支兩字股票模糊誤配。
+        if whisper_orig and not exact_name_appears and fuzzy_name_appears:
+            nearby_other = _nearby_other_stock_keyword(
+                whisper_orig_bare or whisper_orig,
+                exclude_code=resolved_code,
+            )
+            if nearby_other:
+                strongest_kw, strongest_code = nearby_other
+                print(
+                    f"  [gemini_extract] whisper correction conflict for {resolved_code}({resolved_name})"
+                    f" — {whisper_orig!r} is closer to {strongest_kw!r}->{strongest_code}",
+                    file=sys.stderr,
+                )
+                _vctx = video_ctx or {}
+                _skip_log.append({
+                    "keyword": whisper_orig,
+                    "reason":  "whisper_correction_conflict",
+                    "detail":  f"原文近似其他股票關鍵字，拒絕模糊修正: {whisper_orig}->{resolved_code}/{resolved_name}; closer={strongest_kw}->{strongest_code}",
+                    "video_id": _vctx.get("video_id", ""),
+                    "channel":  _vctx.get("channel", ""),
+                    "date":     _vctx.get("date", ""),
+                    "title":    _vctx.get("title", ""),
+                })
+                continue
+
         if is_short_cjk_name and not exact_name_appears and not whisper_orig:
             conflicting_hits = _conflicting_exact_keyword_hits(
                 chunk_text,
