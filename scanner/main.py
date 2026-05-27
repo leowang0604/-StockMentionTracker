@@ -424,6 +424,57 @@ STOCK_CONTEXT_HINTS: set[str] = {
     "題材", "估值", "市佔", "公司", "客戶", "供應鏈",
 } | BULLISH_KEYWORDS | BEARISH_KEYWORDS
 
+PROMOTIONAL_CONTEXT_HINTS: set[str] = {
+    "資訊欄", "連結", "點擊", "選購", "購買", "優惠", "優惠碼", "折扣",
+    "抽獎", "禮盒", "試吃", "贊助", "業配", "訂閱", "按讚", "小鈴鐺",
+    "留言", "問卷", "填寫", "粉絲", "聽眾朋友", "下載", "登入",
+}
+
+# Alias 內有些是產業/產品詞。這些詞可協助召回，但不能單獨證明某支股票
+# 真的被討論；尤其出現在資訊欄、抽獎、連結等宣傳段落時容易造成誤判。
+GENERIC_INDUSTRY_MENTION_TERMS: set[str] = {
+    "工業電腦", "電腦周邊", "被動元件", "電源管理", "電源管理IC",
+    "載板", "PCB", "ABF", "CPO", "記憶體", "機器人", "晶圓代工",
+    "半導體設備", "半導體材料", "電子通路", "金融類股", "光通訊", "網通",
+}
+
+
+def _has_promotional_context(text: str) -> bool:
+    return any(hint in text for hint in PROMOTIONAL_CONTEXT_HINTS)
+
+
+def _is_generic_industry_mention(term: str) -> bool:
+    return (term or "").strip() in GENERIC_INDUSTRY_MENTION_TERMS
+
+
+def _has_exact_stock_identity_evidence(
+    text: str,
+    *,
+    code: str,
+    resolved_name: str,
+    stock_keywords: list[str],
+) -> bool:
+    """True when the excerpt contains the stock's own name/code/non-generic alias."""
+    if not text:
+        return False
+
+    identity_terms = {code, resolved_name}
+    for kw in stock_keywords:
+        if not kw or _is_generic_industry_mention(kw):
+            continue
+        if len(kw) < 2:
+            continue
+        identity_terms.add(kw)
+
+    return any(term and term in text for term in identity_terms)
+
+
+def _is_short_ascii_us_identity(code: str, resolved_name: str) -> bool:
+    return (
+        STOCK_MARKET.get(code) == "US"
+        and bool(re.fullmatch(r"[A-Za-z0-9.\-]{2,4}", resolved_name or ""))
+    )
+
 
 def _has_stock_context_evidence(
     text: str,
@@ -517,7 +568,7 @@ _US_STOCKS_DATA: list[tuple[list[str], str, str, str]] = [
     # ── 半導體設備 ──────────────────────────────────────────────────────────────
     (["應用材料", "Applied Materials", "AMAT"],        "AMAT",  "Applied Materials",  "半導體設備"),
     (["科林研發", "Lam Research", "LRCX"],             "LRCX",  "Lam Research",       "半導體設備"),
-    (["科磊", "KLA", "KLAC"],                          "KLAC",  "KLA",                "半導體設備"),
+    (["科磊", "柯雷", "科雷", "KLA", "KLAC"],          "KLAC",  "KLA",                "半導體設備"),
     (["ASML"],                                         "ASML",  "ASML",               "半導體設備"),
     (["Onto Innovation", "ONTO"],                      "ONTO",  "Onto Innovation",    "半導體設備"),
     # ── 記憶體 ──────────────────────────────────────────────────────────────────
@@ -2564,7 +2615,11 @@ def _validate_gemini_stocks(
         # Whisper 錯字修正場景：Gemini 給了正確名稱但未填 whisper_original，
         # 用 Levenshtein 在 chunk 中滑動視窗找相近的詞。
         # 2 字中文股名太容易誤撞，因此這裡只放行 3 字以上名稱。
-        if not name_appears and len(resolved_name) >= 3:
+        if (
+            not name_appears
+            and len(resolved_name) >= 3
+            and not _is_short_ascii_us_identity(resolved_code, resolved_name)
+        ):
             win = len(resolved_name)
             max_dist = 2
             for start in range(len(chunk_text) - win + 1):
@@ -2673,6 +2728,60 @@ def _validate_gemini_stocks(
                 "keyword": whisper_orig or name,
                 "reason":  "gemini_context_rejected",
                 "detail":  f"找不到包含股票關鍵字的可靠上下文: {resolved_code}/{resolved_name}",
+                "video_id": _vctx.get("video_id", ""),
+                "channel":  _vctx.get("channel", ""),
+                "date":     _vctx.get("date", ""),
+                "title":    _vctx.get("title", ""),
+            })
+            continue
+
+        matched_term = (whisper_orig or name).strip()
+        if (
+            _is_generic_industry_mention(matched_term)
+            and _has_promotional_context(ctx)
+            and not _has_exact_stock_identity_evidence(
+                ctx,
+                code=resolved_code,
+                resolved_name=resolved_name,
+                stock_keywords=stock_keywords,
+            )
+        ):
+            print(
+                f"  [gemini_extract] generic industry term rejected for {resolved_code}({resolved_name})"
+                " — promotional context without stock identity evidence",
+                file=sys.stderr,
+            )
+            _vctx = video_ctx or {}
+            _skip_log.append({
+                "keyword": matched_term,
+                "reason":  "generic_industry_promo_context",
+                "detail":  f"泛產業詞出現在宣傳/資訊欄段落，且缺少股票名或代號證據: {resolved_code}/{resolved_name}",
+                "video_id": _vctx.get("video_id", ""),
+                "channel":  _vctx.get("channel", ""),
+                "date":     _vctx.get("date", ""),
+                "title":    _vctx.get("title", ""),
+            })
+            continue
+
+        if (
+            _is_short_ascii_us_identity(resolved_code, resolved_name)
+            and not _has_exact_stock_identity_evidence(
+                ctx,
+                code=resolved_code,
+                resolved_name=resolved_name,
+                stock_keywords=stock_keywords,
+            )
+        ):
+            print(
+                f"  [gemini_extract] short US identity rejected for {resolved_code}({resolved_name})"
+                " — missing exact ticker/company evidence",
+                file=sys.stderr,
+            )
+            _vctx = video_ctx or {}
+            _skip_log.append({
+                "keyword": matched_term,
+                "reason":  "short_us_identity_missing",
+                "detail":  f"短英文美股缺少明確股票名/代號/alias 證據: {resolved_code}/{resolved_name}",
                 "video_id": _vctx.get("video_id", ""),
                 "channel":  _vctx.get("channel", ""),
                 "date":     _vctx.get("date", ""),
