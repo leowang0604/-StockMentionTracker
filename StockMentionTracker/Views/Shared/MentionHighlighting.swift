@@ -77,7 +77,7 @@ private func containsOnlyCJK(_ text: String) -> Bool {
 private func shouldFuzzyMatch(_ term: String) -> Bool {
     let normalized = normalizedHighlightSource(term)
     let count = normalized.count
-    return containsOnlyCJK(normalized) && (2...4).contains(count)
+    return containsOnlyCJK(normalized) && (3...4).contains(count)
 }
 
 private func oneCharOff(_ lhs: String, _ rhs: String) -> Bool {
