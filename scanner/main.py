@@ -2404,6 +2404,28 @@ def _nearby_other_stock_keyword(
     return best[0], best[1]
 
 
+_COMMON_STOCK_NAME_SUFFIXES = (
+    "半導體", "電子", "科技", "光電", "工業", "材料", "生技", "網路", "國際",
+)
+
+
+def _strip_common_stock_suffix(name: str) -> str:
+    for suffix in _COMMON_STOCK_NAME_SUFFIXES:
+        if name.endswith(suffix):
+            return name[:-len(suffix)]
+    return name
+
+
+def _is_plausible_fuzzy_stock_name_match(candidate: str, resolved_name: str) -> bool:
+    """Avoid matching unrelated companies that only share a generic suffix."""
+    candidate_core = _strip_common_stock_suffix(candidate)
+    resolved_core = _strip_common_stock_suffix(resolved_name)
+    if candidate_core != candidate or resolved_core != resolved_name:
+        if candidate_core and resolved_core:
+            return _levenshtein(candidate_core, resolved_core) <= 1
+    return True
+
+
 def _is_ambiguous_hit(hit: dict) -> bool:
     """判斷這個 hit 是否需要 Gemini 驗證（短詞可能誤匹配子字串）"""
     # Already handled by CONTEXT_REQUIRED fast-path in recognize_stocks()
@@ -2618,12 +2640,8 @@ def _validate_gemini_stocks(
         # whisper_orig 只有在它本身確實是 resolved_name 的轉寫錯誤時才算數。
         # 去掉常見行業後綴後比較核心詞：「意法」vs「昇陽」(Levenshtein=2) → 不算；
         # 「淮宇」vs「環宇」(Levenshtein=1) → 算。
-        _NAME_SUFFIXES = ("半導體", "電子", "科技", "光電", "工業", "材料", "生技", "網路", "國際")
         def _core(s: str) -> str:
-            for sfx in _NAME_SUFFIXES:
-                if s.endswith(sfx):
-                    return s[:-len(sfx)]
-            return s
+            return _strip_common_stock_suffix(s)
         _whisper_core  = _core(whisper_orig_bare or whisper_orig or "")
         _resolved_core = _core(resolved_name)
         _whisper_close = bool(
@@ -2652,14 +2670,20 @@ def _validate_gemini_stocks(
             max_dist = 2
             for start in range(len(chunk_text) - win + 1):
                 window = chunk_text[start:start + win]
-                if _levenshtein(resolved_name, window) <= max_dist:
+                if (
+                    _levenshtein(resolved_name, window) <= max_dist
+                    and _is_plausible_fuzzy_stock_name_match(window, resolved_name)
+                ):
                     name_appears = True
                     fuzzy_name_appears = True
                     break
                 # 也試 win+1 視窗（僅 3 字以上，避免 2 字過度模糊）
                 if win >= 3 and start + win + 1 <= len(chunk_text):
                     window2 = chunk_text[start:start + win + 1]
-                    if _levenshtein(resolved_name, window2) <= max_dist:
+                    if (
+                        _levenshtein(resolved_name, window2) <= max_dist
+                        and _is_plausible_fuzzy_stock_name_match(window2, resolved_name)
+                    ):
                         name_appears = True
                         fuzzy_name_appears = True
                         break
