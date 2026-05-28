@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-27T22:28:02",
+  "updated_at": "2026-05-28T20:16:52",
   "stocks_ranking": [
     {
       "code": "INTC",
@@ -52158,7 +52158,7 @@
       "code": "BIIB",
       "name": "Biogen",
       "market": "US",
-      "sector": "醫療",
+      "sector": "生技製藥",
       "contexts": [
         {
           "video": "2026/04/16 (四）美股創新高 ，泡沫示警？ASML財報，Tesla AI5晶片設計定案",
@@ -55996,7 +55996,7 @@
       "code": "DDOG",
       "name": "Datadog",
       "market": "US",
-      "sector": "科技",
+      "sector": "企業軟體",
       "contexts": [
         {
           "video": "2026/05/08(五)美股下跌還能買嗎？ #ANET #DDOG #FTNT",
@@ -59710,14 +59710,13 @@
     {
       "sector": "科技",
       "market": "US",
-      "total_mentions": 30,
+      "total_mentions": 29,
       "stock_codes": [
         "SNDK",
         "CDNS",
         "INTU",
         "TER",
         "ADI",
-        "DDOG",
         "GLW"
       ]
     },
@@ -59816,13 +59815,12 @@
     {
       "sector": "醫療",
       "market": "US",
-      "total_mentions": 21,
+      "total_mentions": 20,
       "stock_codes": [
         "TECH",
         "UNH",
         "HUM",
         "CVS",
-        "BIIB",
         "CI"
       ]
     },
@@ -60215,6 +60213,16 @@
       ]
     },
     {
+      "sector": "企業軟體",
+      "market": "US",
+      "total_mentions": 9,
+      "stock_codes": [
+        "ADBE",
+        "IBM",
+        "DDOG"
+      ]
+    },
+    {
       "sector": "居家生活",
       "market": "TW",
       "total_mentions": 9,
@@ -60225,15 +60233,6 @@
         "3557",
         "9924",
         "2941"
-      ]
-    },
-    {
-      "sector": "企業軟體",
-      "market": "US",
-      "total_mentions": 8,
-      "stock_codes": [
-        "ADBE",
-        "IBM"
       ]
     },
     {
@@ -60454,6 +60453,16 @@
       ]
     },
     {
+      "sector": "生技製藥",
+      "market": "US",
+      "total_mentions": 3,
+      "stock_codes": [
+        "MRNA",
+        "BIIB",
+        "LLY"
+      ]
+    },
+    {
       "sector": "運動休閒",
       "market": "TW",
       "total_mentions": 3,
@@ -60514,15 +60523,6 @@
       "stock_codes": [
         "8440",
         "3551"
-      ]
-    },
-    {
-      "sector": "生技製藥",
-      "market": "US",
-      "total_mentions": 2,
-      "stock_codes": [
-        "MRNA",
-        "LLY"
       ]
     },
     {
