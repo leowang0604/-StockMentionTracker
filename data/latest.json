@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-29T21:48:29",
+  "updated_at": "2026-05-29T22:52:56",
   "stocks_ranking": [
     {
       "code": "INTC",
@@ -16,6 +16,18 @@
           "analysis_source": "whisper",
           "sentiment": "neutral",
           "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "2026/05/29(五) 川普投顧再發威，DELL大漲40%",
+          "channel": "財女珍妮",
+          "date": "2026-05-29",
+          "text": "說川普的政府要入股 而且預算請求是暴增了240倍 那這個華爾街日報 如果大家有訂閱的話 你可以去看整個全文 川普政府的 目前正在跟很多加美國的無人機場商 去洽談資金的協議 你看看到過往 除了我們知道Intel有漲很多之外 其實川普他也有入股一些稀土公司 相關的一些 反正就是他們想要重點扶植的產業 如果今天政府可以去取得 這些公司的股權的話 那未來這些公司 就好像有一個很巨大的靠山 我可能不需要怕我沒有訂單 我的營收可持續性是比較有確認的 然後甚至 因為我沒有資金的約束 我在擴張上面 或者是我在創新上面 也可以有比較大的突破 政府對於很多的產業 現在都是從買產品升級成投資公司 讓資本市場 也對這些公司有",
+          "matched_keyword": "Intel",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
           "video_url": "",
           "extraction_mode": "keyword"
         },
@@ -359,29 +371,17 @@
           "sentiment_score": 0.7,
           "video_url": "",
           "extraction_mode": "gemini"
-        },
-        {
-          "video": "EP224 | 台、美股重點一次說，群聯與SanDisk財報看法，元太毛利率大幅躍升？台積電2奈米GAA架構與新應材",
-          "channel": "韭菜畢業班",
-          "date": "2026-05-10",
-          "text": "EB電他這一次有講出來 他有去握有這個 IMIB-T的這個技術 那也就是說 如果大家去看的是載板的話 一定會去看的就是台灣的幾家 像是星星、南電、景碩這樣子 但我會認為他比較像是 這一塊餅 就我們講的intel這一塊餅 他比較像是大家一起吃 那如果大家一起吃的前提之下 就不會有A往上去走 B一定往下去摔的 這一件事情發生 所以大家可以去關注的東西 我覺得會比較偏向是 接下來如果說intel有一些合作廠商 已經有經驗的一些廠商 他可能就會因此 我覺得會有可能有一些故事性 可以去講 那我覺得不會是 台A降B的劇本 然後那就給大家 留給大家思考一下 如果說有什麼更新的話 我們再跟各位講一下 那我覺得這一集講的",
-          "matched_keyword": "Intel",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
         }
       ],
       "total_mentions": 30,
-      "sentiment_score": 0.48,
+      "sentiment_score": 0.497,
       "daily": {
         "2026-05-29": {
-          "mentions": 1,
-          "bullish": 0,
+          "mentions": 2,
+          "bullish": 1,
           "bearish": 0,
           "neutral": 1,
-          "sentiment_score": 0.5
+          "sentiment_score": 0.75
         },
         "2026-05-28": {
           "mentions": 1,
@@ -494,13 +494,6 @@
           "bearish": 0,
           "neutral": 1,
           "sentiment_score": 0.6
-        },
-        "2026-05-10": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
         }
       }
     },
@@ -4416,6 +4409,30 @@
           "extraction_mode": "keyword"
         },
         {
+          "video": "2026/05/29(五) 川普投顧再發威，DELL大漲40%",
+          "channel": "財女珍妮",
+          "date": "2026-05-29",
+          "text": "天你財報出來之後 又與預期的也很多 可是沒有漲 對不對 給出指引的很好的也有很多 但是也沒有漲 為什麼Snowflag它可以不一樣 原因就是因為在這次財報裡面 還公布了一項非常重要的消息 就是它宣布跟亞馬遜 就是AWS 簽訂了一份5年60億美元的新合約 這個金額是超過了 2023年就合約的兩倍以上 在這個合約內容裡面 包括了亞馬遜 它承諾擴大這個合作 然後還有加速推進企業AI的應用 然後包括了你今天要怎麼樣 運算 AI的服務相關 就是從底層就是基礎建設 然後一直到應用端 它其實都會包含在這個裡面 所以才讓Snowflag它去 把它的營收上調 然後也去上調它的獲利能力 執行長就有在財報會議上面就有講",
+          "matched_keyword": "亞馬遜",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "2026/05/29(五) 川普投顧再發威，DELL大漲40%",
+          "channel": "財女珍妮",
+          "date": "2026-05-29",
+          "text": "是從底層就是基礎建設 然後一直到應用端 它其實都會包含在這個裡面 所以才讓Snowflag它去 把它的營收上調 然後也去上調它的獲利能力 執行長就有在財報會議上面就有講 他說這一份合約其實是可以 幫助亞馬遜去提高它自己的成本效率的 也可以幫助我們去擴大自己的市場 我們昨天不是有講到嗎 其實Snowflag跟亞馬遜就是AWS 它們其實之間是有競爭關係的 因為亞馬遜AWS 它自己也有它自己的資料存儲的產品 那你今天就要想 為什麼Snowflag它要給亞馬遜 這麼大的一個訂單 或者是為什麼它要跟它去做合作 原因就是因為我今天可以用更好的成本 去取得我的算力跟我的GPU 對不對 我今天可以去降低我AI產品",
+          "matched_keyword": "亞馬遜",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
           "video": "2026/05/28(四) 台積電創高，費半漲不動？",
           "channel": "財女珍妮",
           "date": "2026-05-28",
@@ -4738,41 +4755,17 @@
           "sentiment_score": 0.5,
           "video_url": "",
           "extraction_mode": "gemini"
-        },
-        {
-          "video": "EP1088｜4月漲7203點，5月還有好光景？台積電回檔更好買，熱門產業絕對要有！機器人、低軌轉強，載板、CPO續飛，封測穩賺中！ft.操盤手 黃豐凱",
-          "channel": "兆華與股惑仔",
-          "date": "2026-04-30",
-          "text": "開上去 然後現貨開盤也是 原因當然是因為 在美國有這個四大CSP雲端業者 公布財報 那因為是盤後公布 所以會參考他們盤後的股價表現 那其中Google 他的盤後表現是相當好的 因為他的財報非常的優異 亞馬遜也還不錯 只有Meta稍微弱易些些 總而言之 在這樣的機率之下 我們就開高了 開高出來的話 大家就覺得 哇 這個4月非常熱鬧 那第二個戲劇性 自然就是在尾盤了 尾盤突然之間爬全之谷 一個沙尾 所以中場反而是下跌了376點 今天的高低點落差 是921點 921點的一個政府 在這個4月的最後一個交易日 但無論如何 歷經了3月的低潮期 4月長了7000點 希望大家都有在4月 多多少少 是一個獲利的狀態 ",
-          "matched_keyword": "亞馬遜",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        },
-        {
-          "video": "2026/04/30(四) FED最大分歧，巨頭財報穩了？#GOOG #AMZN #MSFT #META #TER #NXPI",
-          "channel": "財女珍妮",
-          "date": "2026-04-30",
-          "text": "給大家參考 因為每一家公司 其實他目前講的敘事 或者是講的一個 成長的一個方向 或者是他們在 資本支出策略上面 其實都有不一樣 但你說這幾家公司 我最喜歡哪一家 其實我個人還是比較喜歡 Google跟Amazon 然後Meta 我是覺得它是有機會的 但是現在就還沒有太大的動 然後我自己從去年 其實對於微軟 就一直是處在一個 比較保守的狀況 就是沒有去碰這家公司 那這只是我個人的偏好而已 那大家如果有自己的偏好的話 其實也可以分享給我 然後或者是你可以告訴我 你對這家公司的看法是什麼 大家都可以互相的交流 然後彼此的教學相長 就是多討論才會有 更多的靈感激發 好 那今天就先跟大家分享這邊 如果想要了解美股的",
-          "matched_keyword": "Amazon",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.75,
-          "video_url": "",
-          "extraction_mode": "gemini"
         }
       ],
       "total_mentions": 30,
-      "sentiment_score": 0.577,
+      "sentiment_score": 0.569,
       "daily": {
         "2026-05-29": {
-          "mentions": 1,
+          "mentions": 3,
           "bullish": 1,
           "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 1.0
+          "neutral": 2,
+          "sentiment_score": 0.667
         },
         "2026-05-28": {
           "mentions": 1,
@@ -4899,13 +4892,6 @@
           "bearish": 0,
           "neutral": 1,
           "sentiment_score": 0.5
-        },
-        "2026-04-30": {
-          "mentions": 2,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.625
         }
       }
     },
@@ -4915,6 +4901,19 @@
       "market": "US",
       "sector": "雲端/AI",
       "contexts": [
+        {
+          "video": "2026/05/29(五) 川普投顧再發威，DELL大漲40%",
+          "channel": "財女珍妮",
+          "date": "2026-05-29",
+          "text": "美元 我覺得這個消息 其實對於AI相關類股 也是非常大的一個振奮 因為就表示現在AI的行情 或者是需求還是非常的熱 市場才會給他的估值到這麼高 而且這是史上第一次 Anthorbic他的估值 是超過了Open AIO 所以大家現在是不是都想說 這個Cloth Coal 或者是像是Colework 其實都是很多的企業端 或者是變現速度比較快的客戶 他對於Anthorbic 他的貢獻其實是比較大的 反正我覺得除了SpaceX 他要上市 然後他會是史上最大的IPO之外 下半年 Anthorbic或者是Open AI 他的一個上市 其實也會帶給市場 我覺得更多不一樣的想像 或者是資金的一個投入 所以這也是我們之前一直",
+          "matched_keyword": "Open AIO",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": "",
+          "extraction_mode": "gemini",
+          "whisper_corrected": true
+        },
         {
           "video": "2026/05/28(四) 台積電創高，費半漲不動？",
           "channel": "財女珍妮",
@@ -5262,23 +5261,18 @@
           "sentiment_score": 0.5,
           "video_url": "",
           "extraction_mode": "gemini"
-        },
-        {
-          "video": "2026/04/28(二)AI戰場重組誰是贏家？微軟OpenAI分手了。OpenAI手機要找高通跟聯發科？",
-          "channel": "財女珍妮",
-          "date": "2026-04-28",
-          "text": "斷的 那我們當然我們要為我們自己 國家的這個公司呢 要有信心 就像我們有台積電 然後我們有聯發科 我們有很多很好的公司 好怎麼會突然講到這邊 好另外一個重磅消息呢 也是跟 Open AI 有關 那就是微軟跟 Open AI 去宣布修改了 雙方的合作協議 這件事情讓微軟呢 昨天可以說是小疊 那為什麼不是大疊呢 因為通常有這種消息 大家都會覺得哇 微軟又要末日了對不對 然後你今天這個 你的大客戶 或是你重要合作夥伴 他今天不是只依賴你而已 你們的互相依存度變低的話 那會不會影響到你未來的營收跟獲利 但是呢 我覺得這個早就已經是 市場上面預料到的事情了 因為今天不只是 Open AI 其他的公司 其實也",
-          "matched_keyword": "微軟",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "gemini"
         }
       ],
       "total_mentions": 30,
-      "sentiment_score": 0.587,
+      "sentiment_score": 0.593,
       "daily": {
+        "2026-05-29": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.7
+        },
         "2026-05-28": {
           "mentions": 1,
           "bullish": 0,
@@ -5404,13 +5398,6 @@
           "bearish": 0,
           "neutral": 4,
           "sentiment_score": 0.667
-        },
-        "2026-04-28": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
         }
       }
     },
@@ -5441,6 +5428,78 @@
           "analysis_source": "whisper",
           "sentiment": "neutral",
           "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "【主題專訪】車禍後保險公司「無法幫你要」的兩筆錢 ft. PAMO車禍線上律師施尚宏律師",
+          "channel": "財女珍妮",
+          "date": "2026-05-29",
+          "text": "吞不下這口氣 因為我自己就有這樣的敬業 對啊 那你的保險公司 除了幫你把車修好之外 你的保險公司 會把那筆價差賠給你嗎 不會 所以你就要自己去跟別人要 那自己去跟別人要 你沒有我的話 那你要怎麼辦 你Google啊 欸 我這樣真的不太了解 就是保險公司跟我要了 可是他並沒有去 想到我在未來要賣車的時候 這個差價 這個真的是 我在當下可能也不會想到 我可以舉個例子好了 你就是要請司機師來幫我 講一下我當初到底做錯了什麼 或者是遺漏了什麼 就是有一次我也是在新一區 然後有 以前是成品啦 那邊可以直接左轉 但是他沒有左轉燈 然後就在下大雨的時候 然後我就是左轉 可是對象車道呢 有一個是右轉到等他直走 直走一過來",
+          "matched_keyword": "Google",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "【主題專訪】車禍後保險公司「無法幫你要」的兩筆錢 ft. PAMO車禍線上律師施尚宏律師",
+          "channel": "財女珍妮",
+          "date": "2026-05-29",
+          "text": "去醫院找一個雙人 你才發現他把骨頭斷了 對不對 那這個時候怎麼辦 死無對證嗎 不會 你一定受不了 直接回頭去告那個人 你一定驗不下這口氣的 你一定會覺得說 老子我手斷了 怎麼可以這樣 就放過他呢 趕快Google一下怎麼辦 Google就大家就教你說 你就告人家一個招式討厭 對方就會出來 你就可以跟對方要錢 這樣子 對吧 你就會這麼做 所以你的真正最好的做法 我都會跟我的客戶講 就算不管你什麼時候 你打給我 我就會跟人家說 先生 那我建議你這樣 遇到這類型的案件的時候 你傳個訊息給對方 為什麼呢 你訊息裡面你就要寫說 我是今天跟你發生 車禍的誰誰誰 時尚宏律師 時尚宏 那我們兩個 在當下的時候 我們有談妥",
+          "matched_keyword": "Google",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "【主題專訪】車禍後保險公司「無法幫你要」的兩筆錢 ft. PAMO車禍線上律師施尚宏律師",
+          "channel": "財女珍妮",
+          "date": "2026-05-29",
+          "text": "家 簡單來講就是在 就跟以前的工程師 創業一樣 他們在創業的過程當中 產品可能還沒有賣 那些工程師要幹嘛 要先接外泡 所以對我來講 我還是要先 不斷地打官司 所以大家要確定 我們要打官司是很簡單 上網Google嗎 直接去 直接去司法院的 裁判處系統 輸入我的名字 看看我有沒有打官司 那就知道了 因為我不可能什麼 官司都沒打 然後在這邊跟大家講 官司要怎麼打 不可能是這個樣子 我覺得我們現在 講到這個律師的 商業模式或產業 其實因為 我們自己是做投資的 然後在這個產業上面 現在有一個 非常大的變化就是AI 所以我也蠻想知道 就是對這個產業 會不會帶來一些衝擊 或者是集會 比如說我之前在訪問一個 軟體的代理",
+          "matched_keyword": "Google",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "【主題專訪】車禍後保險公司「無法幫你要」的兩筆錢 ft. PAMO車禍線上律師施尚宏律師",
+          "channel": "財女珍妮",
+          "date": "2026-05-29",
+          "text": "但你的案件是你的 所以你會怎麼做 你要找律師 你要怎麼找 我要找那種就是 剛好那個頂域最有名的 你錯了 你要找律師 你根本不可能找到 那個什麼領域最有名 因為你根本不知道 這個領域到底誰最有名 你只會Google搜尋的時候 一堆下廣告個人達到你 是 我還以為那是最有名的 那是最有名的嗎 怎麼可能 或者是電視上常出現 電視上常出現 可是有點太貴了 所以這個不就是廣告嗎 對不對 你只會被廣告洗 是 果然還是律師比較 所以當你真的 想要找律師的時候 你知道大部分的人是怎麼做嗎 找人介紹 你一定都是靠找人介紹 為什麼 因為找人介紹 起碼這個人可能曾經找過這個律師 得到滿好的結果 所以他推薦 所以呢 那你來找我 大",
+          "matched_keyword": "Google",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "【主題專訪】車禍後保險公司「無法幫你要」的兩筆錢 ft. PAMO車禍線上律師施尚宏律師",
+          "channel": "財女珍妮",
+          "date": "2026-05-29",
+          "text": "他一步一步 帶你怎麼做 最後你上一次場 最後都有可能 但有一個東西 永遠絕對不了 就是你跟我說話的時候的 那種溫度感 你這個會蠻難處理掉的 原因是因為 在現在的AI就是 良誘不起 所以你有時候上網 Google的時候 你不一定能夠找到 你要的或者是 真正正確的答案 你會發現 你有時候Google玩的時候 奇怪 怎麼昨天Google 我用這樣的關鍵字是我贏 我怎麼今天又換個方式 站在對方的立場 Google怎麼又是對方贏 到底我贏還是對方贏 你會confuse 所以你這個時候 你會需要一個律師 來告訴你說 這個東西可能要怎麼做 但我覺得最重要 這一類型 有遊戲規則的這種產業 我覺得被取代 我覺得都是早晚的",
+          "matched_keyword": "Google",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "【主題專訪】車禍後保險公司「無法幫你要」的兩筆錢 ft. PAMO車禍線上律師施尚宏律師",
+          "channel": "財女珍妮",
+          "date": "2026-05-29",
+          "text": "比較困難的 或者是像學法語 或者是這種 你不熟悉的東西 交給專業來做 我覺得一定會是比較好的 我覺得這也是對自己的一種投資 把自己的人生的時間 花在研究每一股怎麼投資 可能還比去那邊出事的時候 在那邊Google一直爬文 來得有效率多 你Google爬文爬一個小時 還不如直接打給你10分鐘 對 時間打過10分鐘 你就有答案了 因為答案就在這裡 對啊 那因為今天 我們就覺得就像很 就很開心能夠有機會 就來到這邊 就認識Jenny的這個聽眾 所以我們特別還有提供折扣 對 有 大家如果 對這個車禍線上律師 有興趣的話 給自己一個最安心的保障 韓女爭 你聽眾的折扣碼 J1 NGY 2026 還可以1200塊 再想",
+          "matched_keyword": "Google",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
           "video_url": "",
           "extraction_mode": "keyword"
         },
@@ -5707,89 +5766,16 @@
           "sentiment_score": 0.5,
           "video_url": "",
           "extraction_mode": "gemini"
-        },
-        {
-          "video": "EP663 | 🦘",
-          "channel": "股癌",
-          "date": "2026-05-20",
-          "text": "的意志力 直接去把這件事情做好 那那真的是最厲害的 像那時候 我戒煙的一個騎士點 也是因為就突然有一段時間 身體就不想抽 因為不知道為什麼 然後就 一不做一不休乾脆把它戒掉 那時候還超擔心 因為上網去google 就查到說什麼很多 肺癌患者確診前 其實他們都是戒煙的 因為身體已經告訴他不能抽菸了 所以那時候他超級緊張 那一樣 就是可能自己注意到一些那種 健康的 sign在生活中出現 不知道有時候去懷疑 那種突然已經看到什麼到家 會跟你講說什麼 你生命中開始出現一些 你要知道你每個訊號 都是有理由的 你突然間就想要去做某一件事情 你就是要去做那件事情 因為可能會引來 下一個發展之類 就是你突然間可能看到很多",
-          "matched_keyword": "Google",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP663 | 🦘",
-          "channel": "股癌",
-          "date": "2026-05-20",
-          "text": "是不喜歡的東西 大家想要去閃躲 但只要我們持續看到在產品線上面 覺得說像載板 你還是有新的故事存在 那當然在市場上對應的 我們就不會去點說是哪一家公司 反正總之就大家可能都有機會 講夠誰家 或者說可能Google這樣子做 那別人也會想要學他這樣子做 都還是會有一些後續的可能性 所以我會認為說像以下的老AI 那時候大概提一下 就是我也覺得說現在可能 進去街道會稍微危險一點 因為這個市場的資金確實有去做一些變動 但是可能等到未來的某段時間 回頭看你會發現 覺得說這個Invidia 它其實根本就 還是按照自己的Romap在推進 它只是這一代的量產 可能沒有用到本來大家認為 會出來的某一個產品 它只是後面會出現",
-          "matched_keyword": "Google",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP663 | 🦘",
-          "channel": "股癌",
-          "date": "2026-05-20",
-          "text": "次的會被拿到市場的中央裡面 那我覺得比較經典的就是像是 前陣子 那時候我聊一家公司叫AP Memory 然後就是IPO 那像這家公司 他也是在那一段時間 就不知道什麼就市場就不喜歡他 可是後來當這個 Google的TPU 變成是舞台正中央的時候 因為大家知道說 他的那個東西就是埋在 宅板裡面的電容 反正就是他們稱為 Integragrative Passive Device 那像這個東西 就是因為Google的大量的曝光 大家注意到 就是再一次這個自行用回來 所以前面可能比較軟的東西 都是有機會會在後面復活 所以這也是為什麼 會在這一波跟大家分享 就除了一方面是因為 東西真的拉很遠 所以像我們身邊蠻多人",
-          "matched_keyword": "Google",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP1101｜外資看台股5萬、聯發科5000元，為何只給國巨最高650元？外資報告解密，從金流看台股熱門族群，不擔心！ft.外資捕手 不魯",
-          "channel": "兆華與股惑仔",
-          "date": "2026-05-20",
-          "text": "股 韓股 就相對熱 日股就有部分熱 然後美股如果 當然是整體的 這個美育局勢 沒有那麼嚴峻的時候 美股也是熱在 所謂的高科技股上面 那明天的話 有揮打的財報 即將要公佈 那今天 應該說今天的凌晨 就是Google的 這個開發者大會 這些其實都在提醒大家 在AI的路上 這些大廠 都還是持續的做投入 昨天我們有邀請一位來賓 就是以前的 國泰投信董事長張錫 來上節目 我就有跟他 逼問他現在 東海大學教財務金融系 多頭總司令 而且那個 對 沒錯 叫多頭總司令 而且因為他的教課內容 我覺得超級實物的 就是例如說教大家 你現在來自主ETF 真的喔 對 然後做資產配置規劃 讓他來評論 然後教大家 如何成為一個 稱職的這",
-          "matched_keyword": "Google",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        },
-        {
-          "video": "2026/05/20(三) Google能超越輝達嗎？ Google I/O 大亮點",
-          "channel": "財女珍妮",
-          "date": "2026-05-20",
-          "text": "的一個路徑 然後還有Agent 他所涉及的安全跟信任成本 那你在未來這個東西是風險 但是我覺得這個風險 相對於他成長的這個 所帶來的報酬 你看他的風暴比 其實也是 我覺得是非常巨大的一個不對稱的 所以Google他昨天下跌 我覺得也不代表什麼 啊長那麼多 啊你是還想要他怎樣 對不對 都已經跳空上漲 然後又再繼續創高 然後五日線都在這邊了 下面月線其實還有一小段距離 那你根本不用說是更長期的均線 所以這麼短的時間 然後有一個這麼大的一個反彈 那今天就算有修正個10% 我覺得應該都還是在可接受的範圍 我覺得大家也不用過度的恐慌啊 什麼東西都是有漲有跌 那我們希望就是 漲多了之後回檔 正常的回檔 最好不要超過1",
-          "matched_keyword": "Google",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.7,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        },
-        {
-          "video": "2026/05/19(二) SpaceX上市，是特斯拉利空？STX大跌，存儲一起遭殃",
-          "channel": "財女珍妮",
-          "date": "2026-05-19",
-          "text": "快的速度在成長 我今天呢 如果我可以服務更多人 然後我可以 收購道明尼 他本身呢 維吉尼亞州大家都知道 是數據中心的一個 非常重要的一個位置點 就是因為在這邊呢 他是 數據中心最密集的一個點 微軟啊 Google 啊 Amazon 其實都有大量的設施在這邊 那我是不是就可以去整合這些資源 然後可以去強化我的成本效率 然後讓我在未來 我的獲利能力也可以因此而提升 所以我不會覺得這對於 Next Era 來說其實是一個壞事 我覺得是一個好事 只是你在中間的整合過程當中 你還是會有一些時間上面的考量嘛 所以其實如果你去看新世紀 他過去一直都是一個還不錯的成長股 那昨天跌了之後呢 確實也是還在年線上面 所以我覺得",
-          "matched_keyword": "假股文",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "gemini",
-          "whisper_corrected": true
         }
       ],
       "total_mentions": 30,
-      "sentiment_score": 0.597,
+      "sentiment_score": 0.557,
       "daily": {
         "2026-05-29": {
-          "mentions": 2,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 2,
+          "mentions": 8,
+          "bullish": 1,
+          "bearish": 1,
+          "neutral": 6,
           "sentiment_score": 0.5
         },
         "2026-05-28": {
@@ -5840,20 +5826,6 @@
           "bearish": 0,
           "neutral": 1,
           "sentiment_score": 0.833
-        },
-        "2026-05-20": {
-          "mentions": 5,
-          "bullish": 3,
-          "bearish": 0,
-          "neutral": 2,
-          "sentiment_score": 0.74
-        },
-        "2026-05-19": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
         }
       }
     },
@@ -42506,6 +42478,87 @@
       }
     },
     {
+      "code": "2504",
+      "name": "國產",
+      "market": "TW",
+      "sector": "建材營造業",
+      "contexts": [
+        {
+          "video": "2026/05/15 (五) 輝達一週漲20%，創高還能追？台積電又喊三層蛋糕",
+          "channel": "財女珍妮",
+          "date": "2026-05-15",
+          "text": "你今天完全不去碰這個市場 你就已經有一種輸家心態的感覺 你今天進入到市場 如果你真的夠強的話 你怎麼可能會被別人取代呢 可是你現在完全不進入 那你就等於是推動別人 有更多的動機 然後可以去鞏固他們自己國產的勢力 那等到人家成熟的時候 你要再擠進去就已經比較困難了 所以這件事情 在接下來會不會有更多的改變 這個也是我們可以去思考的一個問題 或者是我們也可以去期待的一個問題 那更進一步呢 路透有報導說 兩國正在商討一個300億美元的關稅框架 也就是雙方各自列出大概300億美元的商品 在不涉及國家安全的前提下 互相降稅 再加上川普宣布 中國會同意採購200架波音飛機 我是沒有看昨天波音的股價有沒有漲 大",
+          "matched_keyword": "國產",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP329 市場裡光彩奪目",
+          "channel": "投資癮",
+          "date": "2026-05-17",
+          "text": "00萬 但你現在可能又夠用了 在3年後、5年後、10年後 你的家庭出現了一些變化 不管是變好或變壞 都有可能影響這3000萬的變化 當然你的慾望變大 你的3000萬也看起來縮小 像我自己如果開的是一個國產車 那如果哪一天換了跑車的時候 或進口車的時候 我的3000萬看起來就非常的小 所以它會隨著你的慾望的變化 這個數字的相對值也會持續的變化 所以後來我就慢慢去改成是 追求人生的一些生活體驗 累積那些點數 當然前提還是要持續讓自己的資產增加 但退休這件事情 真的不是只有單單錢的問題 它的生活條件 它的生活配置其實都是新的挑戰 我現在自己希望還是維持這個平衡 持續做自己喜歡的交易 因為它的靜態活動 也",
+          "matched_keyword": "國產",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "【主題專訪】車禍後保險公司「無法幫你要」的兩筆錢 ft. PAMO車禍線上律師施尚宏律師",
+          "channel": "財女珍妮",
+          "date": "2026-05-29",
+          "text": "範圍 我覺得這邊 還會衍生到一個問題 因為剛剛你有講到嘛 就是這種案件其實有的時候 後續處理的時間點會比較長 那像我爸之前 有遇到過一個問題 就是他確實也是跟別人想撞 是別人來撞他 然後剛好對方開的是國產車 那我爸剛好開的是進口車 那大家可能都會覺得 開進口車的人 可能經濟環境會比較好一點 他本來就是 然後剛好被撞的是我爸 然後進口車前面 整個頭也是又派起 然後就是整個就撞壞 然後可是對方的車 他沒有什麼樣的一些損失 所以後來就要針對 我爸這個損失去做離陪 對方就會一直私底下 打電話給我爸 就說 就是他們也是蠻辛苦的 然後附加實作 可能媽媽有就是 身體不方便啊怎樣怎樣 然後是不是可以 在索賠的部分",
+          "matched_keyword": "國產",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "2026/05/29(五) 川普投顧再發威，DELL大漲40%",
+          "channel": "財女珍妮",
+          "date": "2026-05-29",
+          "text": "採購的話 那中間這個落差 你要怎麼樣去做個名評 我覺得也是之後再來看的時候 或者是之後有時間 我們再來針對個股來做一個分享 然後再來跟大家做一個比較細節的邏輯 總之這個大方向 就是美國的無人機自主化跟國產化 就是一個長期的政策方向 而且現在就是從採購升級成政府的入股 那大家如果有興趣的話 我覺得可以把它去列到 你自己的觀察清單裡面 好我看到有人說 今天賭柴包選了MongolDB沒有選Dale 對 因為大家會覺得軟體股 昨天有Snowflake 然後就會覺得 那照道理來說 這種時機點 應該是去賭軟體會比較好 沒想到硬體 就給你一個更大的驚喜 然後讓你直接真的是措手不及 好那我們再來看一下 我們剛剛講",
+          "matched_keyword": "國產",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        }
+      ],
+      "total_mentions": 4,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-05-15": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-05-17": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-05-29": {
+          "mentions": 2,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 2,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
       "code": "5475",
       "name": "德宏",
       "market": "TW",
@@ -46080,6 +46133,75 @@
       }
     },
     {
+      "code": "6152",
+      "name": "百一",
+      "market": "TW",
+      "sector": "通信網路業",
+      "contexts": [
+        {
+          "video": "EP656 | 🍇",
+          "channel": "股癌",
+          "date": "2026-04-25",
+          "text": "朋友講 那有些朋友也會跟我講說 聽起來是很不錯 但如果說外資到或怎麼辦 如果說後面可能開出來的 概念是不是太好怎麼辦 當然就是每個人 都有各自的考量 這就是投資有趣的地方 如果說大家的想法 都是百分之百一樣的話 那市場就會手掌貼 因為就等於沒有人賣東西給你 就是因為有人賣東西 他不看好他也賣 或者說他覺得就漲到這邊 他才賣給你 所以市場有一些想法 不一樣是很正常的 那當然這個東西 你家看起來是 他大幅的健保 就理論上 這個感覺是一個人多的地方 但實際上我相信應該是 蠻多人看到台積電家 會想把自己的手上東西丟掉 他就會覺得說 最近漲太快 然後想要把他丟掉 但其實我覺得這個 資金跟政策面帶的一個影響",
+          "matched_keyword": "百一",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP1096｜CPI衝高嚇倒美股，台、韓股挺得住？現在進場長期投資可以嗎，怎麼做？熱門股重挫原因不一樣，題材對，洗洗就會上？ft.型男股神 陳威良",
+          "channel": "兆華與股惑仔",
+          "date": "2026-05-13",
+          "text": "歡迎收聽趙華與古霍在第一千零九十六集 今天是二零二六年的五月十三號 今天台股終於跌了 也不是說都不會跌啦 但前幾天他的震盪 雖然是上下大概都有九百一千點 但最後通常跌的不多 今天盤中跌的算比較多一點 尤其是昨天如果看夜盤 夜盤有一度跌到九百多點 就是近千點 我想說 終於有一點 像樣的跌點出現了 那因為昨天是公佈了所謂的CPI 這個 消費者物價指數 那也不是很意外啦 因為三月的時候我們就是面臨到了 這個每一站針碼油價暴漲啊 所以三月的CPI 勢必應該是要往上跑的 3.8% 比起在上一個月的3.3%是明顯的增長 我想大家都會有點擔心的是 到底我們",
+          "matched_keyword": "百一",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "【主題專訪】車禍後保險公司「無法幫你要」的兩筆錢 ft. PAMO車禍線上律師施尚宏律師",
+          "channel": "財女珍妮",
+          "date": "2026-05-29",
+          "text": "了他想要怎麼幫你 賠越多越好嗎 還是賠越少越好 當然是賠越少越好 賠越少越好 那你的目標是什麼 我希望可以拿到 你的目標是越快處理完越好 對 對不對 那越快處理完越好 跟賠越少越好 這兩個利益 百分之百一致嗎 不一定 對保險公司來講 如果時間拖長一點 他可以賠少一點 那他就會選擇 把時間拖長一點 對吧 因為對他來講 錢最重要 但對你來講不是 對你來講時間最重要 那保險公司身上 整間保險公司身上可能 兩萬個案子 他插你一件嗎 他不插 所以他就會把它擺著 所以這時候利益就會有衝突 你就會想要問 再來還有另外一個東西就是 抽案件如果有人受傷的話 那 你要面對刑事責任 保險公司會幫你去關嗎 不會 不會 那",
+          "matched_keyword": "百一",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        }
+      ],
+      "total_mentions": 3,
+      "sentiment_score": 0.667,
+      "daily": {
+        "2026-04-25": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        },
+        "2026-05-13": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-05-29": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
       "code": "CDNS",
       "name": "Cadence Design Systems",
       "market": "US",
@@ -48833,56 +48955,6 @@
       }
     },
     {
-      "code": "6152",
-      "name": "百一",
-      "market": "TW",
-      "sector": "通信網路業",
-      "contexts": [
-        {
-          "video": "EP656 | 🍇",
-          "channel": "股癌",
-          "date": "2026-04-25",
-          "text": "朋友講 那有些朋友也會跟我講說 聽起來是很不錯 但如果說外資到或怎麼辦 如果說後面可能開出來的 概念是不是太好怎麼辦 當然就是每個人 都有各自的考量 這就是投資有趣的地方 如果說大家的想法 都是百分之百一樣的話 那市場就會手掌貼 因為就等於沒有人賣東西給你 就是因為有人賣東西 他不看好他也賣 或者說他覺得就漲到這邊 他才賣給你 所以市場有一些想法 不一樣是很正常的 那當然這個東西 你家看起來是 他大幅的健保 就理論上 這個感覺是一個人多的地方 但實際上我相信應該是 蠻多人看到台積電家 會想把自己的手上東西丟掉 他就會覺得說 最近漲太快 然後想要把他丟掉 但其實我覺得這個 資金跟政策面帶的一個影響",
-          "matched_keyword": "百一",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP1096｜CPI衝高嚇倒美股，台、韓股挺得住？現在進場長期投資可以嗎，怎麼做？熱門股重挫原因不一樣，題材對，洗洗就會上？ft.型男股神 陳威良",
-          "channel": "兆華與股惑仔",
-          "date": "2026-05-13",
-          "text": "歡迎收聽趙華與古霍在第一千零九十六集 今天是二零二六年的五月十三號 今天台股終於跌了 也不是說都不會跌啦 但前幾天他的震盪 雖然是上下大概都有九百一千點 但最後通常跌的不多 今天盤中跌的算比較多一點 尤其是昨天如果看夜盤 夜盤有一度跌到九百多點 就是近千點 我想說 終於有一點 像樣的跌點出現了 那因為昨天是公佈了所謂的CPI 這個 消費者物價指數 那也不是很意外啦 因為三月的時候我們就是面臨到了 這個每一站針碼油價暴漲啊 所以三月的CPI 勢必應該是要往上跑的 3.8% 比起在上一個月的3.3%是明顯的增長 我想大家都會有點擔心的是 到底我們",
-          "matched_keyword": "百一",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        }
-      ],
-      "total_mentions": 2,
-      "sentiment_score": 0.75,
-      "daily": {
-        "2026-04-25": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 1.0
-        },
-        "2026-05-13": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        }
-      }
-    },
-    {
       "code": "6278",
       "name": "台表科",
       "market": "TW",
@@ -49719,56 +49791,6 @@
           "bearish": 0,
           "neutral": 0,
           "sentiment_score": 1.0
-        },
-        "2026-05-17": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        }
-      }
-    },
-    {
-      "code": "2504",
-      "name": "國產",
-      "market": "TW",
-      "sector": "建材營造業",
-      "contexts": [
-        {
-          "video": "2026/05/15 (五) 輝達一週漲20%，創高還能追？台積電又喊三層蛋糕",
-          "channel": "財女珍妮",
-          "date": "2026-05-15",
-          "text": "你今天完全不去碰這個市場 你就已經有一種輸家心態的感覺 你今天進入到市場 如果你真的夠強的話 你怎麼可能會被別人取代呢 可是你現在完全不進入 那你就等於是推動別人 有更多的動機 然後可以去鞏固他們自己國產的勢力 那等到人家成熟的時候 你要再擠進去就已經比較困難了 所以這件事情 在接下來會不會有更多的改變 這個也是我們可以去思考的一個問題 或者是我們也可以去期待的一個問題 那更進一步呢 路透有報導說 兩國正在商討一個300億美元的關稅框架 也就是雙方各自列出大概300億美元的商品 在不涉及國家安全的前提下 互相降稅 再加上川普宣布 中國會同意採購200架波音飛機 我是沒有看昨天波音的股價有沒有漲 大",
-          "matched_keyword": "國產",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP329 市場裡光彩奪目",
-          "channel": "投資癮",
-          "date": "2026-05-17",
-          "text": "00萬 但你現在可能又夠用了 在3年後、5年後、10年後 你的家庭出現了一些變化 不管是變好或變壞 都有可能影響這3000萬的變化 當然你的慾望變大 你的3000萬也看起來縮小 像我自己如果開的是一個國產車 那如果哪一天換了跑車的時候 或進口車的時候 我的3000萬看起來就非常的小 所以它會隨著你的慾望的變化 這個數字的相對值也會持續的變化 所以後來我就慢慢去改成是 追求人生的一些生活體驗 累積那些點數 當然前提還是要持續讓自己的資產增加 但退休這件事情 真的不是只有單單錢的問題 它的生活條件 它的生活配置其實都是新的挑戰 我現在自己希望還是維持這個平衡 持續做自己喜歡的交易 因為它的靜態活動 也",
-          "matched_keyword": "國產",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        }
-      ],
-      "total_mentions": 2,
-      "sentiment_score": 0.5,
-      "daily": {
-        "2026-05-15": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
         },
         "2026-05-17": {
           "mentions": 1,
@@ -51028,6 +51050,108 @@
           "bearish": 0,
           "neutral": 0,
           "sentiment_score": 0.7
+        }
+      }
+    },
+    {
+      "code": "ZS",
+      "name": "Zscaler",
+      "market": "US",
+      "sector": "網路安全",
+      "contexts": [
+        {
+          "video": "2026/05/28(四) 台積電創高，費半漲不動？",
+          "channel": "財女珍妮",
+          "date": "2026-05-28",
+          "text": "你會看到每一家公司 它的大致的內部的結構 都是這樣 但是如果你今天自由現金流下滑的話 那就表示你公司在財務面 在財務體質上面就會被扣分 那股價當然 就不會有比較好的這個反應 所以你可以看到現在呢 其實Zsigler 它還是在一個下降的格局 就是我自己是不喜歡買這種 就是你明顯可以看得出來 你根本不需要用任何的腦 你只要用你的眼睛一看 就知道它在下跌的股票 我就不會去買 那什麼時候會是有一些這種例外呢 就是如果它今天打底 就是你的底部型 它已經很明顯 有上上突破 占回年限 那我才會比較積極 即便是它現在還是在一個 看起來是下滑 因為至少你已經破壞了 你現有的下跌格局了嘛 但是Zsigler是家公司完全看不出來",
+          "matched_keyword": "Zsigler",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.3,
+          "video_url": "",
+          "extraction_mode": "gemini",
+          "whisper_corrected": true
+        },
+        {
+          "video": "2026/05/29(五) 川普投顧再發威，DELL大漲40%",
+          "channel": "財女珍妮",
+          "date": "2026-05-29",
+          "text": "賭三起身就好了 我今天如果可以在越多的平台上面 讓客戶去選擇我的產品的話 那我就可以有更好的一個發展跟表現 所以確實你看Snowflag 他在跳漲了之後 他已經是逆轉了他目前 他的一個下降趨勢 那昨天Zscaler也有讀者在問我說 我看的話感覺這邊是一個小底 那我今天往上的話 感覺就是一個突破 但是我覺得 就是你跳漲之後 像Snowflag也是一樣 你今天在這邊 你有沒有可能直接去挑戰前高 我覺得機率是比較低的 但是你今天站上連線之後 你在這邊去做震盪 他可以延續上漲格局 那你在這邊就是一個風險可控 所以你不需要在跳漲30%的時候 去墜高 有的時候就是你今天 他跳漲之後 他有的時候會回測 他回測缺口 回測連",
+          "matched_keyword": "Zscaler",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        }
+      ],
+      "total_mentions": 2,
+      "sentiment_score": 0.4,
+      "daily": {
+        "2026-05-28": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 1,
+          "neutral": 0,
+          "sentiment_score": 0.3
+        },
+        "2026-05-29": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
+      "code": "SNOW",
+      "name": "Snowflake",
+      "market": "US",
+      "sector": "AI軟體",
+      "contexts": [
+        {
+          "video": "2026/05/28(四) 台積電創高，費半漲不動？",
+          "channel": "財女珍妮",
+          "date": "2026-05-28",
+          "text": "我今天 我用這種機會成本的考量 我放在別的地方 可以漲個10% 20% 我放在你這邊 可能要等兩劑 然後才會有10% 那我當然也不會 現在就把資金放進來嘛 好 我發現現在已經9點 但是如果我要再繼續講Snowflag的話 其實會有一點過長 但是我覺得Snowflag 算是昨天在軟體股裡面 表現非常好的一家公司 因為他在盤後大漲了30% 那公司營收跟獲利 其實也是持續的加速 但是我覺得最重要的一件事情是 因為他跟亞馬遜有簽訂一個 5年的合約 其實我覺得這個東西很有趣 我們明天可以再繼續講 就是因為如果你今天去看的話 其實Snowflag跟亞馬遜 跟AWS 其實本質上面 他們是有競爭的關係的 因為他們都有 他們自",
+          "matched_keyword": "Snowflag",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": "",
+          "extraction_mode": "gemini",
+          "whisper_corrected": true
+        },
+        {
+          "video": "2026/05/29(五) 川普投顧再發威，DELL大漲40%",
+          "channel": "財女珍妮",
+          "date": "2026-05-29",
+          "text": "向 而且現在就是從採購升級成政府的入股 那大家如果有興趣的話 我覺得可以把它去列到 你自己的觀察清單裡面 好我看到有人說 今天賭柴包選了MongolDB沒有選Dale 對 因為大家會覺得軟體股 昨天有Snowflake 然後就會覺得 那照道理來說 這種時機點 應該是去賭軟體會比較好 沒想到硬體 就給你一個更大的驚喜 然後讓你直接真的是措手不及 好那我們再來看一下 我們剛剛講到免疫戰爭 然後講到政策力多 那昨天其實有一個蠻重要的數據 那我們在這邊來跟大家做分享 就是PCE個人消費物價指數的表現 其實經濟數據出來 我覺得看起來是沒有到那麼好看 為什麼外面突然有喇叭那麼大聲 好那這一次呢 這個PCE的通膨是連準會 最",
+          "matched_keyword": "Snowflake",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.8,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        }
+      ],
+      "total_mentions": 2,
+      "sentiment_score": 0.75,
+      "daily": {
+        "2026-05-28": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.7
+        },
+        "2026-05-29": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.8
         }
       }
     },
@@ -59896,70 +60020,6 @@
       }
     },
     {
-      "code": "ZS",
-      "name": "Zscaler",
-      "market": "US",
-      "sector": "網路安全",
-      "contexts": [
-        {
-          "video": "2026/05/28(四) 台積電創高，費半漲不動？",
-          "channel": "財女珍妮",
-          "date": "2026-05-28",
-          "text": "你會看到每一家公司 它的大致的內部的結構 都是這樣 但是如果你今天自由現金流下滑的話 那就表示你公司在財務面 在財務體質上面就會被扣分 那股價當然 就不會有比較好的這個反應 所以你可以看到現在呢 其實Zsigler 它還是在一個下降的格局 就是我自己是不喜歡買這種 就是你明顯可以看得出來 你根本不需要用任何的腦 你只要用你的眼睛一看 就知道它在下跌的股票 我就不會去買 那什麼時候會是有一些這種例外呢 就是如果它今天打底 就是你的底部型 它已經很明顯 有上上突破 占回年限 那我才會比較積極 即便是它現在還是在一個 看起來是下滑 因為至少你已經破壞了 你現有的下跌格局了嘛 但是Zsigler是家公司完全看不出來",
-          "matched_keyword": "Zsigler",
-          "analysis_source": "whisper",
-          "sentiment": "bearish",
-          "sentiment_score": 0.3,
-          "video_url": "",
-          "extraction_mode": "gemini",
-          "whisper_corrected": true
-        }
-      ],
-      "total_mentions": 1,
-      "sentiment_score": 0.3,
-      "daily": {
-        "2026-05-28": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 1,
-          "neutral": 0,
-          "sentiment_score": 0.3
-        }
-      }
-    },
-    {
-      "code": "SNOW",
-      "name": "Snowflake",
-      "market": "US",
-      "sector": "AI軟體",
-      "contexts": [
-        {
-          "video": "2026/05/28(四) 台積電創高，費半漲不動？",
-          "channel": "財女珍妮",
-          "date": "2026-05-28",
-          "text": "我今天 我用這種機會成本的考量 我放在別的地方 可以漲個10% 20% 我放在你這邊 可能要等兩劑 然後才會有10% 那我當然也不會 現在就把資金放進來嘛 好 我發現現在已經9點 但是如果我要再繼續講Snowflag的話 其實會有一點過長 但是我覺得Snowflag 算是昨天在軟體股裡面 表現非常好的一家公司 因為他在盤後大漲了30% 那公司營收跟獲利 其實也是持續的加速 但是我覺得最重要的一件事情是 因為他跟亞馬遜有簽訂一個 5年的合約 其實我覺得這個東西很有趣 我們明天可以再繼續講 就是因為如果你今天去看的話 其實Snowflag跟亞馬遜 跟AWS 其實本質上面 他們是有競爭的關係的 因為他們都有 他們自",
-          "matched_keyword": "Snowflag",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.7,
-          "video_url": "",
-          "extraction_mode": "gemini",
-          "whisper_corrected": true
-        }
-      ],
-      "total_mentions": 1,
-      "sentiment_score": 0.7,
-      "daily": {
-        "2026-05-28": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 0.7
-        }
-      }
-    },
-    {
       "code": "2207",
       "name": "和泰車",
       "market": "TW",
@@ -60083,6 +60143,37 @@
           "bearish": 0,
           "neutral": 1,
           "sentiment_score": 0.5
+        }
+      }
+    },
+    {
+      "code": "DLTR",
+      "name": "Dollar Tree",
+      "market": "US",
+      "sector": "民生消費",
+      "contexts": [
+        {
+          "video": "2026/05/29(五) 川普投顧再發威，DELL大漲40%",
+          "channel": "財女珍妮",
+          "date": "2026-05-29",
+          "text": "是現在大家對於降息的這個 機率期待 其實已經降到了非常非常低了 好 所以我們如果從那個數據 去拉到S&P500指數來看的話 你也可以看到 昨天零售業 其實也有一些公司公佈財報 比如說BuySmart Dollar Tree 或者是CurrBuy貨 都公佈財報 都是超過市場預期 而且都有漲 但是如果你去看 這些公司 他在接下來 他對於未來的前景的話 其實他們也會講 就是你消費者確實是還在花錢 但是你現在 你的錢已經集中到一些必須消費品 或者是我真的必須買的 我必須投資 我必須要增加生產力的地方 而不是一些收持品 或者是比較昂貴的東西 比較高價的東西 如果這個東西 再繼續延續下去的話 他們也會講 低收入的美國人 在月底",
+          "matched_keyword": "Dollar Tree",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.0,
+      "daily": {
+        "2026-05-29": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 1,
+          "neutral": 0,
+          "sentiment_score": 0.0
         }
       }
     }
@@ -60758,6 +60849,19 @@
       ]
     },
     {
+      "sector": "網路安全",
+      "market": "US",
+      "total_mentions": 21,
+      "stock_codes": [
+        "NET",
+        "ZS",
+        "CRWD",
+        "OKTA",
+        "DDOG",
+        "FTNT"
+      ]
+    },
+    {
       "sector": "光通訊",
       "market": "US",
       "total_mentions": 21,
@@ -60777,19 +60881,6 @@
         "HUM",
         "CVS",
         "CI"
-      ]
-    },
-    {
-      "sector": "網路安全",
-      "market": "US",
-      "total_mentions": 20,
-      "stock_codes": [
-        "NET",
-        "CRWD",
-        "OKTA",
-        "DDOG",
-        "FTNT",
-        "ZS"
       ]
     },
     {
@@ -60845,6 +60936,22 @@
       ]
     },
     {
+      "sector": "建材營造業",
+      "market": "TW",
+      "total_mentions": 18,
+      "stock_codes": [
+        "2516",
+        "1453",
+        "2504",
+        "2511",
+        "2524",
+        "5521",
+        "2501",
+        "9906",
+        "1438"
+      ]
+    },
+    {
       "sector": "金融保險業",
       "market": "TW",
       "total_mentions": 17,
@@ -60854,6 +60961,23 @@
         "2855",
         "2845",
         "2849"
+      ]
+    },
+    {
+      "sector": "通信網路業",
+      "market": "TW",
+      "total_mentions": 17,
+      "stock_codes": [
+        "6285",
+        "2439",
+        "6152",
+        "3380",
+        "3311",
+        "2498",
+        "2321",
+        "3062",
+        "6674",
+        "2424"
       ]
     },
     {
@@ -60895,39 +61019,6 @@
       ]
     },
     {
-      "sector": "通信網路業",
-      "market": "TW",
-      "total_mentions": 16,
-      "stock_codes": [
-        "6285",
-        "2439",
-        "6152",
-        "3380",
-        "3311",
-        "2498",
-        "2321",
-        "3062",
-        "6674",
-        "2424"
-      ]
-    },
-    {
-      "sector": "建材營造業",
-      "market": "TW",
-      "total_mentions": 16,
-      "stock_codes": [
-        "2516",
-        "1453",
-        "2504",
-        "2511",
-        "2524",
-        "5521",
-        "2501",
-        "9906",
-        "1438"
-      ]
-    },
-    {
       "sector": "生技醫療業",
       "market": "TW",
       "total_mentions": 16,
@@ -60941,6 +61032,16 @@
         "6838",
         "1795",
         "6861"
+      ]
+    },
+    {
+      "sector": "AI軟體",
+      "market": "US",
+      "total_mentions": 15,
+      "stock_codes": [
+        "AI",
+        "SNOW",
+        "PLTR"
       ]
     },
     {
@@ -60974,16 +61075,6 @@
         "1309",
         "1312",
         "1304"
-      ]
-    },
-    {
-      "sector": "AI軟體",
-      "market": "US",
-      "total_mentions": 14,
-      "stock_codes": [
-        "AI",
-        "PLTR",
-        "SNOW"
       ]
     },
     {
@@ -61242,6 +61333,15 @@
       ]
     },
     {
+      "sector": "民生消費",
+      "market": "US",
+      "total_mentions": 7,
+      "stock_codes": [
+        "SYY",
+        "DLTR"
+      ]
+    },
+    {
       "sector": "水泥",
       "market": "TW",
       "total_mentions": 7,
@@ -61278,14 +61378,6 @@
       "total_mentions": 6,
       "stock_codes": [
         "6462"
-      ]
-    },
-    {
-      "sector": "民生消費",
-      "market": "US",
-      "total_mentions": 6,
-      "stock_codes": [
-        "SYY"
       ]
     },
     {
@@ -66568,6 +66660,36 @@
         "2317",
         "MRVL",
         "3501"
+      ],
+      "analysis_source": "whisper",
+      "thumbnail_url": null
+    },
+    {
+      "video_id": "334757bc-5c23-4f5a-b738-37df12f07a4d",
+      "title": "【主題專訪】車禍後保險公司「無法幫你要」的兩筆錢 ft. PAMO車禍線上律師施尚宏律師",
+      "channel": "財女珍妮",
+      "date": "2026-05-29",
+      "stocks_found": [
+        "2504",
+        "GOOGL",
+        "6152"
+      ],
+      "analysis_source": "whisper",
+      "thumbnail_url": null
+    },
+    {
+      "video_id": "1a3d96ad-b00e-45bf-85b4-48b26dd1f9de",
+      "title": "2026/05/29(五) 川普投顧再發威，DELL大漲40%",
+      "channel": "財女珍妮",
+      "date": "2026-05-29",
+      "stocks_found": [
+        "INTC",
+        "2504",
+        "MSFT",
+        "ZS",
+        "AMZN",
+        "SNOW",
+        "DLTR"
       ],
       "analysis_source": "whisper",
       "thumbnail_url": null
