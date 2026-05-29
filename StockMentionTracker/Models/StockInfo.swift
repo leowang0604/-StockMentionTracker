@@ -177,6 +177,7 @@ struct MentionContext: Codable, Identifiable {
     let matchedKeyword: String?
     let analysisSource: String?
     let sentiment: String?
+    let sentimentScore: Double?
     let videoURL: String?
     let extractionMode: String?   // "keyword" | "gemini"
     let whisperCorrected: Bool?
@@ -188,6 +189,7 @@ struct MentionContext: Codable, Identifiable {
         case matchedKeyword   = "matched_keyword"
         case analysisSource   = "analysis_source"
         case sentiment
+        case sentimentScore   = "sentiment_score"
         case videoURL         = "video_url"
         case extractionMode   = "extraction_mode"
         case whisperCorrected = "whisper_corrected"

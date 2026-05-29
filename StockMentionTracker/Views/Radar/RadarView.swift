@@ -8,28 +8,47 @@ struct RadarView: View {
         dataService.scanResult.stocksRanking
     }
 
-    // 看多共識: sentiment_score > 0.7 AND mentions in selected window >= 2
-    private var bullishConsensus: [StockEntry] {
+    private func recentContexts(_ stock: StockEntry) -> [MentionContext] {
         let cutoff = appState.cutoffDate
-        return allStocks.filter { stock in
-            guard let score = stock.sentimentScore else { return false }
-            let recentCount = stock.contexts.filter {
-                ($0.parsedDate ?? .distantPast) >= cutoff
-            }.count
-            return score > 0.7 && recentCount >= 2
-        }.sorted { ($0.sentimentScore ?? 0) > ($1.sentimentScore ?? 0) }
+        return stock.contexts.filter {
+            ($0.parsedDate ?? .distantPast) >= cutoff
+        }
     }
 
-    // 看空共識: sentiment_score < 0.3 AND mentions in selected window >= 2
-    private var bearishConsensus: [StockEntry] {
-        let cutoff = appState.cutoffDate
+    private func recentEpisodeCount(_ stock: StockEntry) -> Int {
+        Set(recentContexts(stock).map { "\($0.channel ?? "")_\($0.video)" }).count
+    }
+
+    private func contextSentimentScore(_ context: MentionContext) -> Double? {
+        if let score = context.sentimentScore { return score }
+        switch context.sentiment {
+        case "bullish": return 0.7
+        case "bearish": return 0.3
+        case "neutral": return 0.5
+        default:        return nil
+        }
+    }
+
+    private func recentSentimentScore(_ stock: StockEntry) -> Double? {
+        let scores = recentContexts(stock).compactMap(contextSentimentScore)
+        guard !scores.isEmpty else { return nil }
+        return scores.reduce(0, +) / Double(scores.count)
+    }
+
+    // 看多共識: recent sentiment_score >= 0.7 AND recent episodes >= 2
+    private var bullishConsensus: [StockEntry] {
         return allStocks.filter { stock in
-            guard let score = stock.sentimentScore else { return false }
-            let recentCount = stock.contexts.filter {
-                ($0.parsedDate ?? .distantPast) >= cutoff
-            }.count
-            return score < 0.3 && recentCount >= 2
-        }.sorted { ($0.sentimentScore ?? 1) < ($1.sentimentScore ?? 1) }
+            guard let score = recentSentimentScore(stock) else { return false }
+            return score >= 0.7 && recentEpisodeCount(stock) >= 2
+        }.sorted { (recentSentimentScore($0) ?? 0) > (recentSentimentScore($1) ?? 0) }
+    }
+
+    // 看空共識: recent sentiment_score <= 0.3 AND recent episodes >= 2
+    private var bearishConsensus: [StockEntry] {
+        return allStocks.filter { stock in
+            guard let score = recentSentimentScore(stock) else { return false }
+            return score <= 0.3 && recentEpisodeCount(stock) >= 2
+        }.sorted { (recentSentimentScore($0) ?? 1) < (recentSentimentScore($1) ?? 1) }
     }
 
     // 區間提及次數：使用 selectedDays 為窗口大小
@@ -97,10 +116,10 @@ struct RadarView: View {
                     icon: "arrow.up.circle.fill",
                     color: .green,
                     stocks: bullishConsensus,
-                    emptyHint: "目前無看多股票（需情緒 > 70% 且近期提及 ≥ 2 次）",
+                    emptyHint: "目前無看多股票（需近期情緒 ≥ 70% 且近期提及 ≥ 2 集）",
                     subtitle: { stock in
-                        let score = stock.sentimentScore.map { String(format: "%.0f%%", $0 * 100) } ?? ""
-                        return "看多 \(score) · \(stock.episodeCount) 集提及"
+                        let score = recentSentimentScore(stock).map { String(format: "%.0f%%", $0 * 100) } ?? ""
+                        return "看多 \(score) · 近期 \(recentEpisodeCount(stock)) 集"
                     }
                 )
                 radarSection(
@@ -108,10 +127,10 @@ struct RadarView: View {
                     icon: "arrow.down.circle.fill",
                     color: .red,
                     stocks: bearishConsensus,
-                    emptyHint: "目前無看空股票（需情緒 < 30% 且近期提及 ≥ 2 次）",
+                    emptyHint: "目前無看空股票（需近期情緒 ≤ 30% 且近期提及 ≥ 2 集）",
                     subtitle: { stock in
-                        let score = stock.sentimentScore.map { String(format: "%.0f%%", (1 - $0) * 100) } ?? ""
-                        return "看空 \(score) · \(stock.episodeCount) 集提及"
+                        let score = recentSentimentScore(stock).map { String(format: "%.0f%%", (1 - $0) * 100) } ?? ""
+                        return "看空 \(score) · 近期 \(recentEpisodeCount(stock)) 集"
                     }
                 )
                 radarSection(
@@ -176,13 +195,12 @@ struct RadarView: View {
             } else {
                 ForEach(stocks.prefix(10)) { stock in
                     NavigationLink {
-                        let cutoff = appState.cutoffDate
-                        let ctxs = stock.contexts.filter { ($0.parsedDate ?? .distantPast) >= cutoff }
+                        let ctxs = recentContexts(stock)
                         let filtered = StockEntry(
                             code: stock.code, name: stock.name,
                             market: stock.market, sector: stock.sector,
                             totalMentions: ctxs.count, contexts: ctxs,
-                            sentimentScore: stock.sentimentScore, daily: stock.daily
+                            sentimentScore: recentSentimentScore(stock), daily: stock.daily
                         )
                         StockDetailView(stock: filtered)
                     } label: {
