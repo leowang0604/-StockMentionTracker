@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-28T22:36:49",
+  "updated_at": "2026-05-29T20:13:21",
   "stocks_ranking": [
     {
       "code": "INTC",
@@ -45755,7 +45755,7 @@
       "code": "CDNS",
       "name": "Cadence Design Systems",
       "market": "US",
-      "sector": "科技",
+      "sector": "企業軟體",
       "contexts": [
         {
           "video": "EP649 | 💌",
@@ -50997,7 +50997,7 @@
       "code": "ABNB",
       "name": "Airbnb",
       "market": "US",
-      "sector": "消費",
+      "sector": "零售電商",
       "contexts": [
         {
           "video": "2026/04/02 (四）史上最大IPO， SpaceX 要來了！",
@@ -52227,7 +52227,7 @@
       "code": "EA",
       "name": "Electronic Arts",
       "market": "US",
-      "sector": "通訊媒體",
+      "sector": "串流媒體",
       "contexts": [
         {
           "video": "訪談特別篇_產業研究與專職交易生活 ft.田中太郎",
@@ -52977,7 +52977,7 @@
       "code": "BKNG",
       "name": "Booking Holdings",
       "market": "US",
-      "sector": "消費",
+      "sector": "零售電商",
       "contexts": [
         {
           "video": "EP653 | 🕊️",
@@ -55182,7 +55182,7 @@
       "code": "ADI",
       "name": "ADI",
       "market": "US",
-      "sector": "科技",
+      "sector": "半導體",
       "contexts": [
         {
           "video": "2026/05/05(二) Palantir為什麼不漲？#PLTR #ON #NVDA #MU",
@@ -56394,7 +56394,7 @@
       "code": "DDOG",
       "name": "Datadog",
       "market": "US",
-      "sector": "企業軟體",
+      "sector": "網路安全",
       "contexts": [
         {
           "video": "2026/05/08(五)美股下跌還能買嗎？ #ANET #DDOG #FTNT",
@@ -59959,6 +59959,19 @@
       ]
     },
     {
+      "sector": "半導體",
+      "market": "US",
+      "total_mentions": 42,
+      "stock_codes": [
+        "INTC",
+        "TXN",
+        "ON",
+        "MCHP",
+        "ADI",
+        "ON Semiconductor Corporation"
+      ]
+    },
+    {
       "sector": "ETF・主動型",
       "market": "TW",
       "total_mentions": 42,
@@ -59970,18 +59983,6 @@
         "00987A",
         "00980A",
         "00994A"
-      ]
-    },
-    {
-      "sector": "半導體",
-      "market": "US",
-      "total_mentions": 41,
-      "stock_codes": [
-        "INTC",
-        "TXN",
-        "ON",
-        "MCHP",
-        "ON Semiconductor Corporation"
       ]
     },
     {
@@ -60170,19 +60171,6 @@
       ]
     },
     {
-      "sector": "科技",
-      "market": "US",
-      "total_mentions": 29,
-      "stock_codes": [
-        "SNDK",
-        "CDNS",
-        "INTU",
-        "TER",
-        "ADI",
-        "GLW"
-      ]
-    },
-    {
       "sector": "紡織纖維",
       "market": "TW",
       "total_mentions": 28,
@@ -60213,17 +60201,14 @@
       ]
     },
     {
-      "sector": "消費",
+      "sector": "科技",
       "market": "US",
-      "total_mentions": 25,
+      "total_mentions": 26,
       "stock_codes": [
-        "CCL",
-        "DASH",
-        "GRMN",
-        "DECK",
-        "NKE",
-        "ABNB",
-        "BKNG"
+        "SNDK",
+        "INTU",
+        "TER",
+        "GLW"
       ]
     },
     {
@@ -60237,6 +60222,18 @@
         "1536",
         "1319",
         "9921"
+      ]
+    },
+    {
+      "sector": "消費",
+      "market": "US",
+      "total_mentions": 23,
+      "stock_codes": [
+        "CCL",
+        "DASH",
+        "GRMN",
+        "DECK",
+        "NKE"
       ]
     },
     {
@@ -60275,6 +60272,19 @@
       ]
     },
     {
+      "sector": "網路安全",
+      "market": "US",
+      "total_mentions": 20,
+      "stock_codes": [
+        "NET",
+        "CRWD",
+        "OKTA",
+        "DDOG",
+        "FTNT",
+        "ZS"
+      ]
+    },
+    {
       "sector": "醫療",
       "market": "US",
       "total_mentions": 20,
@@ -60284,18 +60294,6 @@
         "HUM",
         "CVS",
         "CI"
-      ]
-    },
-    {
-      "sector": "網路安全",
-      "market": "US",
-      "total_mentions": 19,
-      "stock_codes": [
-        "NET",
-        "CRWD",
-        "OKTA",
-        "FTNT",
-        "ZS"
       ]
     },
     {
@@ -60459,6 +60457,16 @@
       ]
     },
     {
+      "sector": "串流媒體",
+      "market": "US",
+      "total_mentions": 15,
+      "stock_codes": [
+        "NFLX",
+        "DIS",
+        "EA"
+      ]
+    },
+    {
       "sector": "塑膠工業",
       "market": "TW",
       "total_mentions": 15,
@@ -60483,12 +60491,15 @@
       ]
     },
     {
-      "sector": "串流媒體",
+      "sector": "零售電商",
       "market": "US",
       "total_mentions": 14,
       "stock_codes": [
-        "NFLX",
-        "DIS"
+        "COST",
+        "WMT",
+        "TGT",
+        "ABNB",
+        "BKNG"
       ]
     },
     {
@@ -60501,16 +60512,6 @@
         "AMAT",
         "LRCX",
         "ONTO"
-      ]
-    },
-    {
-      "sector": "零售電商",
-      "market": "US",
-      "total_mentions": 12,
-      "stock_codes": [
-        "COST",
-        "WMT",
-        "TGT"
       ]
     },
     {
@@ -60598,6 +60599,16 @@
       ]
     },
     {
+      "sector": "企業軟體",
+      "market": "US",
+      "total_mentions": 11,
+      "stock_codes": [
+        "IBM",
+        "ADBE",
+        "CDNS"
+      ]
+    },
+    {
       "sector": "工業",
       "market": "US",
       "total_mentions": 11,
@@ -60639,16 +60650,6 @@
       "stock_codes": [
         "3260",
         "2451"
-      ]
-    },
-    {
-      "sector": "企業軟體",
-      "market": "US",
-      "total_mentions": 10,
-      "stock_codes": [
-        "IBM",
-        "ADBE",
-        "DDOG"
       ]
     },
     {
@@ -60776,18 +60777,6 @@
       ]
     },
     {
-      "sector": "通訊媒體",
-      "market": "US",
-      "total_mentions": 7,
-      "stock_codes": [
-        "CHTR",
-        "T",
-        "SATS",
-        "EA",
-        "VZ"
-      ]
-    },
-    {
       "sector": "AI晶片",
       "market": "TW",
       "total_mentions": 6,
@@ -60801,6 +60790,17 @@
       "total_mentions": 6,
       "stock_codes": [
         "SYY"
+      ]
+    },
+    {
+      "sector": "通訊媒體",
+      "market": "US",
+      "total_mentions": 6,
+      "stock_codes": [
+        "CHTR",
+        "T",
+        "SATS",
+        "VZ"
       ]
     },
     {
