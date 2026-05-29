@@ -458,9 +458,15 @@ def _has_exact_stock_identity_evidence(
     if not text:
         return False
 
-    identity_terms = {code, resolved_name}
+    identity_terms = {resolved_name}
+    if code in CONTEXT_REQUIRED:
+        identity_terms.update(CONTEXT_REQUIRED[code])
+    else:
+        identity_terms.add(code)
     for kw in stock_keywords:
         if not kw or _is_generic_industry_mention(kw):
+            continue
+        if code in CONTEXT_REQUIRED and kw not in CONTEXT_REQUIRED[code]:
             continue
         if len(kw) < 2:
             continue
@@ -613,7 +619,7 @@ _US_STOCKS_DATA: list[tuple[list[str], str, str, str]] = [
     (["Palantir", "PLTR"],                             "PLTR",  "Palantir",           "AI軟體"),
     (["Snowflake", "SNOW"],                            "SNOW",  "Snowflake",          "AI軟體"),
     (["MongoDB", "MDB"],                               "MDB",   "MongoDB",            "AI軟體"),
-    (["C3.ai", "AI"],                                  "AI",    "C3.ai",              "AI軟體"),
+    (["C3.ai", "C3 AI", "C3"],                         "AI",    "C3.ai",              "AI軟體"),
     (["UiPath", "PATH"],                               "PATH",  "UiPath",             "AI軟體"),
     # ── 網路安全 ────────────────────────────────────────────────────────────────
     (["Cloudflare", "NET"],                            "NET",   "Cloudflare",         "網路安全"),
@@ -2658,6 +2664,40 @@ def _validate_gemini_stocks(
         name_appears = exact_name_appears or _whisper_close or _whisper_bare_close
         fuzzy_name_appears = False
         is_short_cjk_name = _contains_only_cjk(resolved_name) and len(resolved_name) <= 3
+        if whisper_orig:
+            nearby_other = _nearby_other_stock_keyword(
+                whisper_orig_bare or whisper_orig,
+                exclude_code=resolved_code,
+            )
+            if nearby_other:
+                strongest_kw, strongest_code = nearby_other
+                strongest_name = CODE_TO_NAME.get(strongest_code, strongest_kw)
+                if exact_name_appears:
+                    print(
+                        f"  [gemini_extract] whisper correction remapped"
+                        f" — {whisper_orig!r} is closer to {strongest_kw!r}->{strongest_code}"
+                        f" than {resolved_code}({resolved_name})",
+                        file=sys.stderr,
+                    )
+                    resolved_code = strongest_code
+                    resolved_name = strongest_name
+                    name = resolved_name
+                    stock_keywords = [kw for kw, c in STOCK_DICT.items() if c == resolved_code]
+                    search_names = stock_keywords + [resolved_name]
+                    _resolved_core = _core(resolved_name)
+                    _whisper_close = bool(
+                        whisper_orig
+                        and whisper_orig in chunk_text
+                        and _levenshtein(_whisper_core, _resolved_core) <= 1
+                    )
+                    _whisper_bare_close = bool(
+                        whisper_orig_bare and whisper_orig_bare != whisper_orig
+                        and whisper_orig_bare in chunk_text
+                        and _levenshtein(_core(whisper_orig_bare), _resolved_core) <= 1
+                    )
+                    exact_name_appears = any(kw in chunk_text for kw in search_names)
+                    name_appears = exact_name_appears or _whisper_close or _whisper_bare_close
+                    is_short_cjk_name = _contains_only_cjk(resolved_name) and len(resolved_name) <= 3
         # Whisper 錯字修正場景：Gemini 給了正確名稱但未填 whisper_original，
         # 用 Levenshtein 在 chunk 中滑動視窗找相近的詞。
         # 2 字中文股名太容易誤撞，因此這裡只放行 3 字以上名稱。
@@ -2810,6 +2850,27 @@ def _validate_gemini_stocks(
                 "title":    _vctx.get("title", ""),
             })
             continue
+
+        if resolved_code in CONTEXT_REQUIRED:
+            required_terms = CONTEXT_REQUIRED[resolved_code]
+            if not any(term in ctx for term in required_terms):
+                needed = "/".join(required_terms)
+                print(
+                    f"  [gemini_extract] context-required rejected for {resolved_code}({resolved_name})"
+                    f" — missing required evidence: {needed}",
+                    file=sys.stderr,
+                )
+                _vctx = video_ctx or {}
+                _skip_log.append({
+                    "keyword": whisper_orig or name,
+                    "reason":  "gemini_context_required",
+                    "detail":  f"缺少必要身份證據: {needed}",
+                    "video_id": _vctx.get("video_id", ""),
+                    "channel":  _vctx.get("channel", ""),
+                    "date":     _vctx.get("date", ""),
+                    "title":    _vctx.get("title", ""),
+                })
+                continue
 
         matched_term = (whisper_orig or name).strip()
         if (

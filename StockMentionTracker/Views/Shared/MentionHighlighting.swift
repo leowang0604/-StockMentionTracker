@@ -1,5 +1,12 @@
 import SwiftUI
 
+private let ambiguousStandaloneTickerHighlightCodes: Set<String> = ["AI"]
+
+private func isAmbiguousStandaloneTicker(_ term: String, code: String) -> Bool {
+    ambiguousStandaloneTickerHighlightCodes.contains(code.uppercased())
+        && term.caseInsensitiveCompare(code) == .orderedSame
+}
+
 /// Builds highlight terms from stock name, code, and matchedKeyword.
 /// Also extracts shorter legal/company-name variants for display matching.
 func mentionHighlightTerms(stockName name: String, code: String, matchedKeyword: String? = nil) -> [String] {
@@ -38,9 +45,13 @@ func mentionHighlightTerms(stockName name: String, code: String, matchedKeyword:
         break
     }
 
-    terms.append(code)
+    if !isAmbiguousStandaloneTicker(code, code: code) {
+        terms.append(code)
+    }
     if let matchedKeyword, !matchedKeyword.isEmpty {
-        terms.append(matchedKeyword)
+        if !isAmbiguousStandaloneTicker(matchedKeyword, code: code) {
+            terms.append(matchedKeyword)
+        }
     }
 
     let withTaiwanVariants = terms.flatMap { term -> [String] in
