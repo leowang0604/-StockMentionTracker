@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-30T18:45:33",
+  "updated_at": "2026-05-30T19:00:34",
   "stocks_ranking": [
     {
       "code": "INTC",
@@ -51422,6 +51422,57 @@
       }
     },
     {
+      "code": "1795",
+      "name": "美時",
+      "market": "TW",
+      "sector": "生技醫療業",
+      "contexts": [
+        {
+          "video": "EP1094｜蘋果1.8奈米找英特爾，擔心台積電的時候都是買點？記憶體猛攻，三星罷工成關鍵？低軌衛星漲UFO概念？ft.題材獵人 林漢偉",
+          "channel": "兆華與股惑仔",
+          "date": "2026-05-11",
+          "text": "有兩三個百分點 那台積電怎麼了 我想這個是很多人 在這一兩天又開始擔心起來了 那我剛剛有跟今天的來賓聊說 哇 我們從台積電擔心當年 intel有嗆他 三奈米我會比你領先 二奈米我會比他領先 到台積電去美國設廠 覺得會被強迫一定要投資intel 技術會被intel偷走 可能要怎麼樣A 可能要怎麼樣B 結果現在呢 現在之前擔心的事情 其實都沒有發生 那最新的就是說 因為美國政府其實非常明白 大力扶植intel 那上禮拜已經傳出來 蘋果有部分的訂單要轉到intel 那今天又繼續發酵 說因為這個東西 可能是在1.8奈米上面 算是蠻先進製程的 會搶走台積電的訂單 到底要不要擔心 好 總之 今天會來講一下 台",
+          "matched_keyword": "美時",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.45,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
+          "video": "EP229 | 台、美股重點一次說，美光HBM長約與估值重估，Google TPU帶動聯發科，功率半導體漲價與ABF、玻璃基板後勢",
+          "channel": "韭菜畢業班",
+          "date": "2026-05-27",
+          "text": "重視了 那當然宅板部分也是一樣 然後再來的話我們可以看到 因為我們現在講話的同時是 5月26號晚上11點53分附近 還沒有過夜 但是其實每一股有開一點點時間了 然後再來就是說 最主要的重心可以看到 像美觀的部分 其實又算是上漲了一個十幾% 就等於是跳空上漲 然後再來就是一些 低軌衛星相關的東西 或者是說像是一些 CPU相關的一些題材 其實都是持續的在網上勾引的 這個我覺得在 我們前幾次的時候 就有跟各位講過 這些東西其實我覺得算是 把市場上面的風頭 搶得還蠻多的 然後等於是台股跟美股 其實都有所表現 好 但是我覺得這個地方 每次往上去漲 然後連續四五根的前提之下的時候 我們都會請大家 就是稍微要注",
+          "matched_keyword": "美觀",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.8,
+          "video_url": "",
+          "extraction_mode": "gemini",
+          "whisper_corrected": true
+        }
+      ],
+      "total_mentions": 2,
+      "sentiment_score": 0.625,
+      "daily": {
+        "2026-05-11": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.45
+        },
+        "2026-05-27": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.8
+        }
+      }
+    },
+    {
       "code": "3040",
       "name": "遠見",
       "market": "TW",
@@ -58917,37 +58968,6 @@
       }
     },
     {
-      "code": "1795",
-      "name": "美時",
-      "market": "TW",
-      "sector": "生技醫療業",
-      "contexts": [
-        {
-          "video": "EP1094｜蘋果1.8奈米找英特爾，擔心台積電的時候都是買點？記憶體猛攻，三星罷工成關鍵？低軌衛星漲UFO概念？ft.題材獵人 林漢偉",
-          "channel": "兆華與股惑仔",
-          "date": "2026-05-11",
-          "text": "有兩三個百分點 那台積電怎麼了 我想這個是很多人 在這一兩天又開始擔心起來了 那我剛剛有跟今天的來賓聊說 哇 我們從台積電擔心當年 intel有嗆他 三奈米我會比你領先 二奈米我會比他領先 到台積電去美國設廠 覺得會被強迫一定要投資intel 技術會被intel偷走 可能要怎麼樣A 可能要怎麼樣B 結果現在呢 現在之前擔心的事情 其實都沒有發生 那最新的就是說 因為美國政府其實非常明白 大力扶植intel 那上禮拜已經傳出來 蘋果有部分的訂單要轉到intel 那今天又繼續發酵 說因為這個東西 可能是在1.8奈米上面 算是蠻先進製程的 會搶走台積電的訂單 到底要不要擔心 好 總之 今天會來講一下 台",
-          "matched_keyword": "美時",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.45,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        }
-      ],
-      "total_mentions": 1,
-      "sentiment_score": 0.45,
-      "daily": {
-        "2026-05-11": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.45
-        }
-      }
-    },
-    {
       "code": "2610",
       "name": "華航",
       "market": "TW",
@@ -61306,6 +61326,22 @@
       ]
     },
     {
+      "sector": "生技醫療業",
+      "market": "TW",
+      "total_mentions": 17,
+      "stock_codes": [
+        "4746",
+        "4736",
+        "1720",
+        "1786",
+        "1795",
+        "4771",
+        "1731",
+        "6838",
+        "6861"
+      ]
+    },
+    {
       "sector": "電信",
       "market": "TW",
       "total_mentions": 16,
@@ -61324,22 +61360,6 @@
         "00900",
         "00713",
         "00929"
-      ]
-    },
-    {
-      "sector": "生技醫療業",
-      "market": "TW",
-      "total_mentions": 16,
-      "stock_codes": [
-        "4746",
-        "4736",
-        "1720",
-        "1786",
-        "4771",
-        "1731",
-        "6838",
-        "1795",
-        "6861"
       ]
     },
     {
