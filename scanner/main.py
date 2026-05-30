@@ -134,7 +134,7 @@ ALIASES: dict[str, str] = {
     # 被動元件
     "國巨": "2327", "YAGEO": "2327",
     "華新科": "2492",
-    "禾伸堂": "3026",
+    "禾伸堂": "3026", "和聲堂": "3026", "禾申堂": "3026",
     "奇力新": "2456",
     # 組裝代工
     "Foxconn": "2317", "Hon Hai": "2317", "富士康": "2317",
@@ -785,7 +785,7 @@ TW_STOCK_SECTORS: dict[str, str] = {
     "2885": "金融", "2886": "金融", "2887": "金融", "2888": "金融",
     "2890": "金融", "2891": "金融", "2892": "金融", "5880": "金融",
     # ── 生技新藥 ────────────────────────────────────────────────────────────────
-    "4180": "生技",     "6547": "生技",     "4174": "生技",     "4168": "生技",
+    "4105": "生技",     "4180": "生技",     "6547": "生技",     "4174": "生技",     "4168": "生技",
     "6785": "生技",
     # ── 醫材 ────────────────────────────────────────────────────────────────────
     "1565": "醫材",     "4106": "醫材",     "4107": "醫材",
@@ -847,6 +847,7 @@ SECTOR_KEYWORDS: dict[str, list[str]] = {
     "PCB":         ["PCB", "印刷電路板", "多層板", "HDI"],
     "被動元件":    ["MLCC", "電容", "電阻", "電感", "被動元件", "積層陶瓷"],
     "組裝代工":    ["EMS", "ODM", "代工組裝", "鴻海", "和碩"],
+    "汽車":        ["汽車零組件", "汽車零件", "車用零件", "車用", "AM零件"],
     "電動車":      ["電動車", "EV", "電池", "BMS", "充電樁", "純電", "續航"],
     "太陽能":      ["太陽能", "光電", "綠能", "儲能", "PERC", "TOPCon"],
     "風電":        ["風電", "離岸風電", "風機", "葉片"],
@@ -870,6 +871,108 @@ CODE_TO_NAME: dict[str, str] = {}
 NAME_TO_CODE: dict[str, str] = {}  # reverse lookup: any known name/keyword → code
 STOCK_MARKET: dict[str, str] = {}  # code → "TW" or "US"
 STOCK_SECTOR: dict[str, str] = {}  # code → sector name
+
+# Strong sector signals for conservative Gemini correction validation.
+# Keep this intentionally small: generic words such as AI/材料/題材 are too broad.
+_SECTOR_CONTEXT_FAMILIES: dict[str, dict[str, set[str]]] = {
+    "汽車": {
+        "sectors": {"汽車", "電動車", "電動車零件", "電動車電池", "充電樁"},
+        "keywords": {"汽車零組件", "汽車零件", "車用零件", "車用", "AM零件", "電動車"},
+    },
+    "被動元件": {
+        "sectors": {"被動元件"},
+        "keywords": {"被動元件", "MLCC", "電容", "電阻", "電感", "積層陶瓷"},
+    },
+    "生技製藥": {
+        "sectors": {"生技", "醫材", "生技製藥", "醫療"},
+        "keywords": {"製藥", "藥品", "藥廠", "新藥", "生技", "臨床", "FDA", "TFDA"},
+    },
+}
+
+# Whisper errors that are only safe inside a strong sector context.
+_CONTEXTUAL_WHISPER_ALIASES: dict[str, dict[str, str]] = {
+    "汽車": {
+        "耿頂": "1524", "耿頂梯": "1524",
+        "威西": "1522",
+        "地堡": "6605",
+    },
+}
+
+
+def _context_sector_families(text: str) -> set[str]:
+    return {
+        family
+        for family, config in _SECTOR_CONTEXT_FAMILIES.items()
+        if any(keyword in text for keyword in config["keywords"])
+    }
+
+
+def _context_sector_scores(text: str) -> dict[str, int]:
+    """Weak sector evidence for diagnostics and future candidate ranking only."""
+    scores: dict[str, int] = {}
+    for sector, keywords in SECTOR_KEYWORDS.items():
+        score = sum(1 for keyword in keywords if keyword in text)
+        if score:
+            scores[sector] = score
+    return scores
+
+
+def _format_context_sector_scores(text: str) -> str:
+    scores = _context_sector_scores(text)
+    ranked = sorted(scores.items(), key=lambda item: (-item[1], item[0]))
+    return ", ".join(f"{sector}:{score}" for sector, score in ranked[:5]) or "none"
+
+
+def _stock_sector_families(code: str) -> set[str]:
+    sector = STOCK_SECTOR.get(code, "")
+    return {
+        family
+        for family, config in _SECTOR_CONTEXT_FAMILIES.items()
+        if sector in config["sectors"]
+    }
+
+
+def _has_strong_sector_mismatch(text: str, code: str) -> bool:
+    context_families = _context_sector_families(text)
+    stock_families = _stock_sector_families(code)
+    return bool(context_families and stock_families and not context_families & stock_families)
+
+
+def _sector_aware_nearby_stock_keyword(
+    term: str,
+    *,
+    exclude_code: str,
+    text: str,
+) -> tuple[str, str] | None:
+    """Find one nearby-name stock whose sector fits strong surrounding evidence."""
+    if (
+        not term
+        or term in STOCK_DICT
+        or not _contains_only_cjk(term)
+        or not _has_strong_sector_mismatch(text, exclude_code)
+    ):
+        return None
+
+    context_families = _context_sector_families(text)
+    candidates: dict[str, tuple[str, int]] = {}
+    for kw, code in STOCK_DICT.items():
+        if code == exclude_code or kw == code:
+            continue
+        if len(kw) < 2 or not _contains_only_cjk(kw):
+            continue
+        if abs(len(kw) - len(term)) > 1:
+            continue
+        dist = _levenshtein(term, kw)
+        if dist > 1 or not context_families & _stock_sector_families(code):
+            continue
+        current = candidates.get(code)
+        if current is None or dist < current[1] or (dist == current[1] and len(kw) > len(current[0])):
+            candidates[code] = (kw, dist)
+
+    if len(candidates) != 1:
+        return None
+    code, (kw, _) = next(iter(candidates.items()))
+    return kw, code
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Taiwan stock industry mapping — fetched from TWSE ISIN page
@@ -1801,8 +1904,12 @@ def recognize_stocks(text: str, video_ctx: dict | None = None) -> list[dict]:
     hits: list[dict] = []
     seen: dict[str, list[int]] = {}  # code → [positions]
     _vctx = video_ctx or {}
+    recognition_dict = dict(STOCK_DICT)
+    for family in _context_sector_families(text):
+        for alias, code in _CONTEXTUAL_WHISPER_ALIASES.get(family, {}).items():
+            recognition_dict.setdefault(alias, code)
 
-    for keyword, code in STOCK_DICT.items():
+    for keyword, code in recognition_dict.items():
         # Use word boundaries for ASCII-starting keywords (avoids partial matches)
         if re.match(r"^[A-Za-z]", keyword):
             # Case-insensitive: Whisper may transcribe Intel/intel/INTEL interchangeably
@@ -2664,6 +2771,45 @@ def _validate_gemini_stocks(
         name_appears = exact_name_appears or _whisper_close or _whisper_bare_close
         fuzzy_name_appears = False
         is_short_cjk_name = _contains_only_cjk(resolved_name) and len(resolved_name) <= 3
+        sector_source_term = whisper_orig_bare or whisper_orig or name
+        sector_nearby = _sector_aware_nearby_stock_keyword(
+            sector_source_term,
+            exclude_code=resolved_code,
+            text=chunk_text,
+        )
+        if sector_nearby:
+            strongest_kw, strongest_code = sector_nearby
+            strongest_name = CODE_TO_NAME.get(strongest_code, strongest_kw)
+            print(
+                f"  [gemini_extract] sector-aware remap"
+                f" — {sector_source_term!r} fits {strongest_kw!r}->{strongest_code}"
+                f" better than {resolved_code}({resolved_name});"
+                f" weak sectors={_format_context_sector_scores(chunk_text)}",
+                file=sys.stderr,
+            )
+            if not whisper_orig:
+                whisper_orig = sector_source_term
+                whisper_orig_bare = sector_source_term
+                _whisper_core = _core(sector_source_term)
+            resolved_code = strongest_code
+            resolved_name = strongest_name
+            name = resolved_name
+            stock_keywords = [kw for kw, c in STOCK_DICT.items() if c == resolved_code]
+            search_names = stock_keywords + [resolved_name]
+            _resolved_core = _core(resolved_name)
+            _whisper_close = bool(
+                whisper_orig
+                and whisper_orig in chunk_text
+                and _levenshtein(_whisper_core, _resolved_core) <= 1
+            )
+            _whisper_bare_close = bool(
+                whisper_orig_bare and whisper_orig_bare != whisper_orig
+                and whisper_orig_bare in chunk_text
+                and _levenshtein(_core(whisper_orig_bare), _resolved_core) <= 1
+            )
+            exact_name_appears = any(kw in chunk_text for kw in search_names)
+            name_appears = exact_name_appears or _whisper_close or _whisper_bare_close
+            is_short_cjk_name = _contains_only_cjk(resolved_name) and len(resolved_name) <= 3
         if whisper_orig:
             nearby_other = _nearby_other_stock_keyword(
                 whisper_orig_bare or whisper_orig,
@@ -2844,6 +2990,28 @@ def _validate_gemini_stocks(
                 "keyword": whisper_orig or name,
                 "reason":  "gemini_context_rejected",
                 "detail":  f"找不到包含股票關鍵字的可靠上下文: {resolved_code}/{resolved_name}",
+                "video_id": _vctx.get("video_id", ""),
+                "channel":  _vctx.get("channel", ""),
+                "date":     _vctx.get("date", ""),
+                "title":    _vctx.get("title", ""),
+            })
+            continue
+
+        if whisper_orig and not exact_name_appears and _has_strong_sector_mismatch(ctx, resolved_code):
+            print(
+                f"  [gemini_extract] sector mismatch rejected for {resolved_code}({resolved_name})"
+                f" — correction {whisper_orig!r} conflicts with surrounding sector evidence;"
+                f" weak sectors={_format_context_sector_scores(ctx)}",
+                file=sys.stderr,
+            )
+            _vctx = video_ctx or {}
+            _skip_log.append({
+                "keyword": whisper_orig,
+                "reason":  "whisper_correction_sector_mismatch",
+                "detail":  (
+                    f"近音修正與附近強產業語境衝突: {whisper_orig}->{resolved_code}/{resolved_name}; "
+                    f"weak_sectors={_format_context_sector_scores(ctx)}"
+                ),
                 "video_id": _vctx.get("video_id", ""),
                 "channel":  _vctx.get("channel", ""),
                 "date":     _vctx.get("date", ""),
