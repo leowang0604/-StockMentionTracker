@@ -84,6 +84,9 @@ jobs:
         env:
           YT_COOKIES: ${{ secrets.YOUTUBE_COOKIES }}
 
+      - name: Run scanner regression tests
+        run: python -m unittest scanner/tests/test_validator_regressions.py -v
+
       - name: Run scanner
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
@@ -112,6 +115,7 @@ jobs:
           git add data/etf_names_cache.json 2>/dev/null || true
           git add data/gemini_usage.json 2>/dev/null || true
           git add data/learned_aliases.json 2>/dev/null || true
+          git add data/alias_candidates.json 2>/dev/null || true
           git add data/skip_log_*.json 2>/dev/null || true
           echo "=== staged diff stat ==="
           git diff --staged --stat

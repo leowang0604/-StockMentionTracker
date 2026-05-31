@@ -111,7 +111,7 @@ curl -s -H "Authorization: token $TOKEN" \
 重要 log 標記：
 - `[scanner]` — 整體流程
 - `[gemini_extract]` — Gemini 提取結果
-- `[auto-learn]` — 新增自動學習的 Whisper 修正
+- `[alias-candidate]` — 新增待審核的 Whisper 修正候選
 - `[SKIP]` — 被過濾掉的誤判
 - `[tw_industry]` — 台股產業分類更新
 
@@ -282,9 +282,15 @@ git commit -m "fix: remove false positive for XXXX"
 git push
 ```
 
+### 檢查 Whisper alias 候選
+
+`data/alias_candidates.json` 會記錄 Gemini 與 validator 發現的 Whisper 修正候選、信心分數、不同集數證據與最近上下文。Scanner 不會因為單次猜測就自動升級為永久 alias。
+
+人工確認後，才將候選加入 `scanner/main.py` 的 `ALIASES` 或 `data/learned_aliases.json`。
+
 ### 清空 learned_aliases.json
 
-`data/learned_aliases.json` 是 Gemini 自動學習的 Whisper 修正對應。若懷疑有錯誤的對應：
+`data/learned_aliases.json` 是人工確認後保留的 Whisper 修正對應。若懷疑有錯誤的對應：
 
 ```bash
 echo "{}" > data/learned_aliases.json
@@ -403,7 +409,7 @@ curl -s "https://raw.githubusercontent.com/leowang0604/-StockMentionTracker/main
 1. 先看 context（iOS app 點進去看「提及內容」）
 2. 判斷是哪種誤判：
    - Context 完全不相關 → Gemini 幻覺（加 CONTEXT_REQUIRED）
-   - Context 是另一支股票的討論 → 可能是 learned_aliases.json 有錯誤對應（清空它）
+   - Context 是另一支股票的討論 → 先檢查 alias_candidates.json 與 learned_aliases.json
    - 關鍵字是日常詞 → 加 CONTEXT_REQUIRED 或 KEYWORD_PATTERN_OVERRIDE
 3. 修改後 commit + push，觸發一次測試掃描確認
 
@@ -463,7 +469,8 @@ YouTube 在 GitHub Actions 的 IP 上封鎖了部分請求，這是已知限制�
 | `scanner/main.py` | 主掃描程式，所有邏輯都在這 |
 | `scanner/sources.json` | 頻道清單，唯一需要常修改的設定檔 |
 | `data/latest.json` | 最新掃描結果（自動更新） |
-| `data/learned_aliases.json` | Gemini 自動學習的 Whisper 修正（可清空） |
+| `data/alias_candidates.json` | 待人工審核的 Whisper 修正候選 |
+| `data/learned_aliases.json` | 人工確認後保留的 Whisper 修正（可清空） |
 | `data/skip_log_YYYY-MM-DD.json` | 每日過濾記錄，診斷用 |
 | `data/gemini_usage.json` | Gemini API 用量追蹤 |
 | `data/stocks.json` | 台股清單快取（30 天更新一次） |

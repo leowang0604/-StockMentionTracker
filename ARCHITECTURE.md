@@ -25,7 +25,8 @@ StockMentionTracker/
 ├── data/
 │   ├── latest.json          # 掃描結果（Scanner 輸出，iOS App 讀取）
 │   ├── stocks.json          # 台股清單快取
-│   ├── learned_aliases.json # Gemini 自動學習的 Whisper 錯字對應（auto-generated）
+│   ├── alias_candidates.json # 待人工審核的 Whisper 錯字候選（auto-generated）
+│   ├── learned_aliases.json # 人工確認後保留的 Whisper 錯字對應
 │   └── gemini_usage.json    # Gemini API 每日使用量追蹤（auto-generated）
 ├── .github/
 │   └── workflows/
@@ -94,7 +95,7 @@ Pass 1.5：跨影片批次 Gemini ambiguous filter（一個 channel 一起送）
     - 每批最多 20 個 hits 合成一次 Gemini 呼叫
     - Prompt 標註每個 hit 的來源影片標題
     - 回傳 per-hit JSON: {is_stock, corrected_code, corrected_name}
-    - 若 corrected_code 非空 → auto-save 到 learned_aliases.json
+    - 若 corrected_code 非空 → 記錄到 alias_candidates.json，待人工審核
 
 Pass 2：批次情緒分析（一個 channel 一次呼叫）
   _batch_channel_sentiments()
@@ -121,12 +122,12 @@ Pass 3：組合輸出，存入 data/latest.json
 
 **注意**：同一 UTC 日只能跑一次完整掃描。排程在 UTC 17:00（台灣凌晨 01:00），若當天再手動觸發測試會爆 quota。
 
-### 3.4 Auto-learned Aliases
+### 3.4 Whisper Alias 候選池
 
 - `_load_learned_aliases()` 在 `build_stock_dict()` 啟動時載入
-- `_save_learned_alias(wrong, code, name)` 在 Gemini 確認 Whisper 錯字後寫入
-- 格式：`{"台波": "1802", "光盛": "6442", ...}`
-- 優點：Whisper 錯字自動累積，不需每次手動加 ALIASES
+- `_record_alias_candidate()` 將 Gemini 與 validator 發現的新錯字寫入 `alias_candidates.json`
+- 候選會保留信心分數、不同集數證據與最近上下文
+- Scanner 不會自動升級候選；人工確認後才加入 `ALIASES` 或 `learned_aliases.json`
 
 ### 3.5 已知誤報防護規則（截至 2026-04-15）
 
@@ -252,6 +253,6 @@ curl -X POST \
 ## 七、TODO / 待觀察
 
 - [ ] 明天觸發短測試，確認 `_batch_filter_ambiguous_hits` Gemini 呼叫次數降到預期的 3-4 次
-- [ ] 觀察 auto-learn 是否在後續掃描中正確套用 learned_aliases.json
+- [ ] 觀察 alias_candidates.json 的候選分數與不同集數證據是否合理
 - [ ] 評估是否需要增加更多 CONTEXT_REQUIRED 規則（視 false positive 出現頻率）
 - [ ] 拼音比對（Pinyin matching）：已評估風險太高（「時間點」→尖點），暫不實作

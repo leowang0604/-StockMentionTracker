@@ -51,6 +51,7 @@ STOCKS_CACHE_FILE    = Path(__file__).parent.parent / "data" / "stocks.json"
 TW_INDUSTRY_CACHE_FILE = Path(__file__).parent.parent / "data" / "tw_industry_cache.json"
 ETF_NAMES_CACHE_FILE   = Path(__file__).parent.parent / "data" / "etf_names_cache.json"
 LEARNED_ALIASES_FILE = Path(__file__).parent.parent / "data" / "learned_aliases.json"
+ALIAS_CANDIDATES_FILE = Path(__file__).parent.parent / "data" / "alias_candidates.json"
 GEMINI_USAGE_FILE    = Path(__file__).parent.parent / "data" / "gemini_usage.json"
 _SKIP_LOG_DIR        = Path(__file__).parent.parent / "data"
 
@@ -245,8 +246,8 @@ ALIASES: dict[str, str] = {
 }
 
 # Keywords known to be Whisper transcription errors — sent to Gemini for
-# validation and auto-correction. New entries are added automatically when
-# Gemini detects a correction (see _save_learned_alias).
+# validation and correction. Newly proposed entries go to alias_candidates.json
+# for review instead of being promoted automatically.
 WHISPER_ALIAS_KEYWORDS: set[str] = {
     "波諾威", "台波", "光盛", "台澳", "連帽", "連貌", "紅塑", "宏塑", "維印",
 }
@@ -262,8 +263,166 @@ def _load_learned_aliases() -> dict[str, str]:
     return {}
 
 
+def _load_alias_candidates() -> dict[str, dict]:
+    """Load review-only Whisper correction candidates."""
+    try:
+        if ALIAS_CANDIDATES_FILE.exists():
+            data = json.loads(ALIAS_CANDIDATES_FILE.read_text(encoding="utf-8"))
+            return data if isinstance(data, dict) else {}
+    except Exception:
+        pass
+    return {}
+
+
+def _alias_candidate_score(
+    wrong_keyword: str,
+    correct_code: str,
+    correct_name: str,
+    context: str,
+) -> tuple[int, list[str]]:
+    """Score a proposed Whisper correction without promoting it to a permanent alias."""
+    score = 0
+    reasons: list[str] = []
+    wrong_keyword = wrong_keyword.strip()
+    correct_name = correct_name.strip()
+
+    if correct_code in CODE_TO_NAME:
+        score += 20
+        reasons.append("known_stock_code")
+    if CODE_TO_NAME.get(correct_code) == correct_name:
+        score += 15
+        reasons.append("code_name_match")
+    if wrong_keyword and wrong_keyword in context:
+        score += 15
+        reasons.append("original_in_context")
+
+    if wrong_keyword and correct_name:
+        dist = _levenshtein(
+            _strip_common_stock_suffix(wrong_keyword),
+            _strip_common_stock_suffix(correct_name),
+        )
+        if dist <= 1:
+            score += 25
+            reasons.append("name_distance<=1")
+        elif dist == 2:
+            score += 12
+            reasons.append("name_distance=2")
+
+    if _has_stock_context_evidence(
+        context,
+        code=correct_code,
+        mention_terms=[wrong_keyword],
+    ):
+        score += 15
+        reasons.append("stock_context")
+    if correct_code and correct_code in context:
+        score += 20
+        reasons.append("code_in_context")
+
+    stock_sector = STOCK_SECTOR.get(correct_code, "")
+    if stock_sector and _context_sector_scores(context).get(stock_sector):
+        score += 8
+        reasons.append("weak_sector_match")
+    context_families = _context_sector_families(context)
+    stock_families = _stock_sector_families(correct_code)
+    if context_families and stock_families:
+        if context_families & stock_families:
+            score += 12
+            reasons.append("strong_sector_match")
+        else:
+            score -= 30
+            reasons.append("strong_sector_mismatch")
+
+    if wrong_keyword.upper() in {w.upper() for w in WHISPER_ORIG_BLACKLIST}:
+        score -= 50
+        reasons.append("blacklisted_original")
+
+    return max(0, min(score, 100)), reasons
+
+
+def _record_alias_candidate(
+    wrong_keyword: str,
+    correct_code: str,
+    correct_name: str | None,
+    *,
+    context: str = "",
+    video_ctx: dict | None = None,
+    source: str,
+) -> None:
+    """Persist a review candidate. This intentionally does not modify learned aliases."""
+    wrong_keyword = (wrong_keyword or "").strip()
+    correct_code = (correct_code or "").strip()
+    canonical_name = CODE_TO_NAME.get(correct_code, "")
+    correct_name = (correct_name or canonical_name).strip()
+    if (
+        not wrong_keyword
+        or not correct_code
+        or wrong_keyword in STOCK_DICT
+        or correct_code not in CODE_TO_NAME
+        or canonical_name != correct_name
+    ):
+        return
+
+    score, reasons = _alias_candidate_score(
+        wrong_keyword,
+        correct_code,
+        correct_name,
+        context,
+    )
+    vctx = video_ctx or {}
+    video_id = (vctx.get("video_id") or "").strip()
+    key = f"{wrong_keyword}|{correct_code}"
+    candidates = _load_alias_candidates()
+    entry = candidates.get(key, {})
+    video_ids = set(entry.get("video_ids", []))
+    if video_id:
+        video_ids.add(video_id)
+    evidence = entry.get("evidence", [])
+    sample = {
+        "video_id": video_id,
+        "channel": vctx.get("channel", ""),
+        "date": vctx.get("date", ""),
+        "title": vctx.get("title", ""),
+        "source": source,
+        "score": score,
+        "reasons": reasons,
+        "context": context[:300],
+    }
+    if sample not in evidence:
+        evidence.append(sample)
+    max_score = max(score, entry.get("max_score", 0))
+    confidence = "high" if max_score >= 70 else "medium" if max_score >= 45 else "low"
+    candidates[key] = {
+        "wrong_keyword": wrong_keyword,
+        "correct_code": correct_code,
+        "correct_name": correct_name,
+        "confidence": confidence,
+        "max_score": max_score,
+        "observations": entry.get("observations", 0) + 1,
+        "distinct_videos": len(video_ids),
+        "video_ids": sorted(video_ids),
+        "evidence": evidence[-5:],
+        "updated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S"),
+    }
+    try:
+        ALIAS_CANDIDATES_FILE.write_text(
+            json.dumps(candidates, ensure_ascii=False, indent=2), encoding="utf-8"
+        )
+        print(
+            f"  [alias-candidate] 「{wrong_keyword}」→ {correct_code}({correct_name})"
+            f" score={score} confidence={confidence}",
+            file=sys.stderr,
+        )
+    except Exception as e:
+        print(f"  [alias-candidate] 儲存失敗: {e}", file=sys.stderr)
+
+
 def _save_learned_alias(wrong_keyword: str, correct_code: str, correct_name: str | None = None) -> None:
-    """Persist a Gemini-confirmed Whisper correction and update runtime dicts.
+    """Persist an explicitly approved Whisper correction and update runtime dicts.
+
+    Reserved for a future manual-review promotion flow. Scanner paths must record
+    review candidates with _record_alias_candidate() instead of calling this
+    helper automatically.
 
     存入條件（全部符合才存）：
     1. correct_code 在 CODE_TO_NAME 裡（確認是真實股票代號）
@@ -1763,7 +1922,7 @@ def build_stock_dict(
         if code not in stock_market:
             stock_market[code] = "TW"
 
-    # ── Auto-learned Whisper corrections (persisted from previous Gemini calls) ─
+    # ── Approved Whisper corrections (promoted after review) ────────────────────
     for alias, code in _load_learned_aliases().items():
         stock_dict[alias] = code
         WHISPER_ALIAS_KEYWORDS.add(alias)
@@ -3123,6 +3282,16 @@ def _validate_gemini_stocks(
                 })
                 continue
 
+        if whisper_orig:
+            _record_alias_candidate(
+                whisper_orig,
+                resolved_code,
+                resolved_name,
+                context=ctx,
+                video_ctx=video_ctx,
+                source="full_video_validator",
+            )
+
         validated.append({
             "stock_code":        resolved_code,
             "stock_name":        resolved_name,
@@ -3895,7 +4064,20 @@ def _batch_filter_ambiguous_hits(detected: list[tuple], history: dict | None = N
                 kw_is_own_code = (h["matched_keyword"] == h["stock_code"])
                 if corrected_code and corrected_code != h["stock_code"] and corrected_code in CODE_TO_NAME and not kw_is_own_code:
                     keyword = h["matched_keyword"]
-                    _save_learned_alias(keyword, corrected_code, corrected_name)
+                    v_entry = result[d_idx][0]
+                    _record_alias_candidate(
+                        keyword,
+                        corrected_code,
+                        corrected_name,
+                        context=h.get("context", ""),
+                        video_ctx={
+                            "video_id": v_entry.get("video_id", ""),
+                            "channel": v_entry.get("channel", ""),
+                            "date": v_entry.get("date", ""),
+                            "title": v_entry.get("title", ""),
+                        },
+                        source="batch_ambiguous_filter",
+                    )
                     new_h = dict(h)
                     new_h["stock_code"]   = corrected_code
                     new_h["stock_name"]   = corrected_name or CODE_TO_NAME.get(corrected_code, corrected_code)
