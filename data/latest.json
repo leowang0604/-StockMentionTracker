@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-30T21:33:03",
+  "updated_at": "2026-05-31T18:47:25",
   "stocks_ranking": [
     {
       "code": "INTC",
@@ -46621,7 +46621,7 @@
       "code": "CDNS",
       "name": "Cadence Design Systems",
       "market": "US",
-      "sector": "AI軟體",
+      "sector": "企業軟體",
       "contexts": [
         {
           "video": "EP649 | 💌",
@@ -47166,7 +47166,7 @@
       "code": "CHTR",
       "name": "Charter Communications",
       "market": "US",
-      "sector": "高速連接",
+      "sector": "通訊媒體",
       "contexts": [
         {
           "video": "EP649 | 💌",
@@ -50021,7 +50021,7 @@
       "code": "T",
       "name": "AT&T",
       "market": "US",
-      "sector": "高速連接",
+      "sector": "通訊媒體",
       "contexts": [
         {
           "video": "2026/04/27(一) 費半創紀18連漲，還能進場嗎？Intel暴漲20%，財報透露什麼？",
@@ -51073,7 +51073,7 @@
       "code": "DECK",
       "name": "Deckers Brands",
       "market": "US",
-      "sector": "零售電商",
+      "sector": "消費",
       "contexts": [
         {
           "video": "EP656 | 🍇",
@@ -57221,7 +57221,7 @@
       "code": "DDOG",
       "name": "Datadog",
       "market": "US",
-      "sector": "AI軟體",
+      "sector": "企業軟體",
       "contexts": [
         {
           "video": "2026/05/08(五)美股下跌還能買嗎？ #ANET #DDOG #FTNT",
@@ -61243,6 +61243,19 @@
       ]
     },
     {
+      "sector": "消費",
+      "market": "US",
+      "total_mentions": 24,
+      "stock_codes": [
+        "CCL",
+        "DASH",
+        "GRMN",
+        "DECK",
+        "NKE",
+        "ABNB"
+      ]
+    },
+    {
       "sector": "ETF",
       "market": "TW",
       "total_mentions": 23,
@@ -61265,18 +61278,6 @@
       "stock_codes": [
         "1216",
         "1201"
-      ]
-    },
-    {
-      "sector": "消費",
-      "market": "US",
-      "total_mentions": 22,
-      "stock_codes": [
-        "CCL",
-        "DASH",
-        "GRMN",
-        "NKE",
-        "ABNB"
       ]
     },
     {
@@ -61311,18 +61312,6 @@
         "HUM",
         "CVS",
         "CI"
-      ]
-    },
-    {
-      "sector": "AI軟體",
-      "market": "US",
-      "total_mentions": 19,
-      "stock_codes": [
-        "AI",
-        "SNOW",
-        "CDNS",
-        "DDOG",
-        "PLTR"
       ]
     },
     {
@@ -61464,6 +61453,16 @@
       ]
     },
     {
+      "sector": "AI軟體",
+      "market": "US",
+      "total_mentions": 16,
+      "stock_codes": [
+        "AI",
+        "SNOW",
+        "PLTR"
+      ]
+    },
+    {
       "sector": "ETF・高股息",
       "market": "TW",
       "total_mentions": 16,
@@ -61495,18 +61494,6 @@
       ]
     },
     {
-      "sector": "零售電商",
-      "market": "US",
-      "total_mentions": 15,
-      "stock_codes": [
-        "COST",
-        "WMT",
-        "TGT",
-        "DECK",
-        "BKNG"
-      ]
-    },
-    {
       "sector": "塑膠工業",
       "market": "TW",
       "total_mentions": 15,
@@ -61518,6 +61505,17 @@
         "1309",
         "1312",
         "1304"
+      ]
+    },
+    {
+      "sector": "零售電商",
+      "market": "US",
+      "total_mentions": 13,
+      "stock_codes": [
+        "COST",
+        "WMT",
+        "TGT",
+        "BKNG"
       ]
     },
     {
@@ -61553,6 +61551,17 @@
       "stock_codes": [
         "6187",
         "3131"
+      ]
+    },
+    {
+      "sector": "企業軟體",
+      "market": "US",
+      "total_mentions": 12,
+      "stock_codes": [
+        "IBM",
+        "ADBE",
+        "CDNS",
+        "DDOG"
       ]
     },
     {
@@ -61698,15 +61707,6 @@
       ]
     },
     {
-      "sector": "企業軟體",
-      "market": "US",
-      "total_mentions": 9,
-      "stock_codes": [
-        "IBM",
-        "ADBE"
-      ]
-    },
-    {
       "sector": "液冷/電網",
       "market": "US",
       "total_mentions": 9,
@@ -61824,22 +61824,23 @@
       ]
     },
     {
+      "sector": "通訊媒體",
+      "market": "US",
+      "total_mentions": 6,
+      "stock_codes": [
+        "CHTR",
+        "T",
+        "SATS",
+        "VZ"
+      ]
+    },
+    {
       "sector": "航空",
       "market": "TW",
       "total_mentions": 5,
       "stock_codes": [
         "2618",
         "2610"
-      ]
-    },
-    {
-      "sector": "高速連接",
-      "market": "US",
-      "total_mentions": 5,
-      "stock_codes": [
-        "CHTR",
-        "T",
-        "CRDO"
       ]
     },
     {
@@ -62012,15 +62013,6 @@
       ]
     },
     {
-      "sector": "通訊媒體",
-      "market": "US",
-      "total_mentions": 2,
-      "stock_codes": [
-        "SATS",
-        "VZ"
-      ]
-    },
-    {
       "sector": "油電燃氣業",
       "market": "TW",
       "total_mentions": 2,
@@ -62060,6 +62052,14 @@
       "total_mentions": 1,
       "stock_codes": [
         "4420"
+      ]
+    },
+    {
+      "sector": "高速連接",
+      "market": "US",
+      "total_mentions": 1,
+      "stock_codes": [
+        "CRDO"
       ]
     },
     {
