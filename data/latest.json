@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-31T20:19:40",
+  "updated_at": "2026-05-31T21:21:13",
   "stocks_ranking": [
     {
       "code": "INTC",
@@ -60912,6 +60912,37 @@
           "sentiment_score": 0.7
         }
       }
+    },
+    {
+      "code": "MDB",
+      "name": "MongoDB",
+      "market": "US",
+      "sector": "AI軟體",
+      "contexts": [
+        {
+          "video": "2026/05/29(五) 川普投顧再發威，DELL大漲40%",
+          "channel": "財女珍妮",
+          "date": "2026-05-29",
+          "text": " 就是美國的無人機自主化跟國產化 就是一個長期的政策方向 而且現在就是從採購升級成政府的入股 那大家如果有興趣的話 我覺得可以把它去列到 你自己的觀察清單裡面 好我看到有人說 今天賭柴包選了MongolDB沒有選Dale 對 因為大家會覺得軟體股 昨天有Snowflake 然後就會覺得 那照道理來說 這種時機點 應該是去賭軟體會比較好 沒想到硬體 就給你一個更大的驚喜 然後讓你直接真的是措手不及 好那我們再來看一下 我們剛剛講到免疫戰爭 然後講到政策力多 那昨天其實有一個蠻重要的數據 那我們在這邊來跟大家做分享 就是PCE個人消費物價指數的表現 其實經濟數據出來 我覺得看起來是沒有到那麼好看 為什麼",
+          "matched_keyword": "MongoDB",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-05-29": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
     }
   ],
   "sectors_ranking": [
@@ -61704,6 +61735,17 @@
       ]
     },
     {
+      "sector": "AI軟體",
+      "market": "US",
+      "total_mentions": 17,
+      "stock_codes": [
+        "AI",
+        "SNOW",
+        "PLTR",
+        "MDB"
+      ]
+    },
+    {
       "sector": "通信網路業",
       "market": "TW",
       "total_mentions": 17,
@@ -61760,16 +61802,6 @@
       "stock_codes": [
         "3045",
         "2412"
-      ]
-    },
-    {
-      "sector": "AI軟體",
-      "market": "US",
-      "total_mentions": 16,
-      "stock_codes": [
-        "AI",
-        "SNOW",
-        "PLTR"
       ]
     },
     {
