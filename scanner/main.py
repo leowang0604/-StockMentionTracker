@@ -97,7 +97,7 @@ ALIASES: dict[str, str] = {
     "Quanta": "2382", "廣達": "2382",
     "Wistron": "3231", "緯創": "3231",
     "Inventec": "2356", "英業達": "2356",
-    "緯穎": "6669", "Wiwynn": "6669",
+    "緯穎": "6669", "Wiwynn": "6669", "維印": "6669",
     "勤誠": "8210",
     "川湖": "2059",
     # 電源
@@ -248,7 +248,7 @@ ALIASES: dict[str, str] = {
 # validation and auto-correction. New entries are added automatically when
 # Gemini detects a correction (see _save_learned_alias).
 WHISPER_ALIAS_KEYWORDS: set[str] = {
-    "波諾威", "台波", "光盛", "台澳", "連帽", "連貌", "紅塑", "宏塑",
+    "波諾威", "台波", "光盛", "台澳", "連帽", "連貌", "紅塑", "宏塑", "維印",
 }
 
 
@@ -2692,13 +2692,13 @@ def _validate_gemini_stocks(
                     resolved_code = STOCK_DICT[name]
                     resolved_name = CODE_TO_NAME.get(resolved_code, name)
                 # 找不到 → resolved_code 維持 None，後面會拒絕
-        elif name in NAME_TO_CODE:
+        elif not resolved_code and name in NAME_TO_CODE:
             resolved_code = NAME_TO_CODE[name]
             resolved_name = name
-        elif name in STOCK_DICT:
+        elif not resolved_code and name in STOCK_DICT:
             resolved_code = STOCK_DICT[name]
             resolved_name = CODE_TO_NAME.get(resolved_code, name)
-        else:
+        elif not resolved_code:
             # Levenshtein 模糊比對（只對 ≥3 字名稱）
             if len(name) >= 3:
                 best_code, best_dist = None, 3
@@ -2810,7 +2810,7 @@ def _validate_gemini_stocks(
             exact_name_appears = any(kw in chunk_text for kw in search_names)
             name_appears = exact_name_appears or _whisper_close or _whisper_bare_close
             is_short_cjk_name = _contains_only_cjk(resolved_name) and len(resolved_name) <= 3
-        if whisper_orig:
+        if whisper_orig and whisper_orig not in STOCK_DICT:
             nearby_other = _nearby_other_stock_keyword(
                 whisper_orig_bare or whisper_orig,
                 exclude_code=resolved_code,
