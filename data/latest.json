@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-31T21:37:21",
+  "updated_at": "2026-06-01T21:56:34",
   "stocks_ranking": [
     {
       "code": "INTC",
@@ -5620,6 +5620,18 @@
           "extraction_mode": "keyword"
         },
         {
+          "video": "EP665 | 🌸",
+          "channel": "股癌",
+          "date": "2026-05-27",
+          "text": "跟他講正確的方式 他也不一定可以做 因為他可能也不靠這一個 所以有可能你也是這樣子的人 王豪就想成這樣子 那當然 我們盡量就是 知道一件事情 反正你任何的投資 都是先用線股去搞 線股做得好 你就可以 谷歌悠哲旗 就是把那個 騎我槓桿打開來 那發現又做得不錯 那你可能就是真的天選之人 但我還是建議大家都慢慢來 反正你先把一個 沒有槓桿的工具玩熟 你才去放他槓桿 就類似說 你今天去做某一種新的投入 你不會說你什麼都不會 然後你就去開一個 不知道什麼火鍋餐廳 然後投3000萬吧 你總是可能前面先做一些 餐飲的東西 發現自己有料 再去加碼 所以他其實跟人生的邏輯很像 就是你總是要先發現 你有一些線索 你真",
+          "matched_keyword": "谷歌",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
           "video": "EP1104｜黃仁勳來台、美伊真和談，台股瘋創高！動能、低接都可以等到創新高，主動、被動ETF各有優點，誰是AI相對落後股？ft.題材獵人 林漢偉",
           "channel": "兆華與股惑仔",
           "date": "2026-05-25",
@@ -5774,18 +5786,6 @@
           "sentiment_score": 0.5,
           "video_url": "",
           "extraction_mode": "gemini"
-        },
-        {
-          "video": "EP1102｜輝達財報證明AI沒問題，客戶更分散，台股直接衝！再遇到回測，一定要有信心！多數族群都回暖，主動ETF領先群6%起？ft.AI達人 蔡明翰",
-          "channel": "兆華與股惑仔",
-          "date": "2026-05-21",
-          "text": "相對來講 第一 我覺得投資機會 第二呢 剛好這個投資人比較 需要信心 對 需要信心 或不知道怎麼做的時候 可以跟大家多分享 是 但很不信喔 今天一來就大漲 其實我也有點小意外 因為前一天我記得是這個 Google 對不對 這個產品開發大會喔 那本來也希望 Google 可以再添一些柴火 但是看來整體的氣氛不是很好 不過我那時候也有提到一件事情 Google 其實長在前面 他前面長一大段了 那新產品開發 兩個事情嘛 一個Gemini的進化 還包含了很多軟體的運用 還有 Google 眼鏡 Google的 Google Glass 是最早的一代 AI 眼鏡 當時沒有怎麼想 大名大放 沒有普及 那現在在推成初心",
-          "matched_keyword": "Google",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
         }
       ],
       "total_mentions": 30,
@@ -5820,11 +5820,11 @@
           "sentiment_score": 0.5
         },
         "2026-05-27": {
-          "mentions": 5,
-          "bullish": 1,
+          "mentions": 6,
+          "bullish": 2,
           "bearish": 0,
           "neutral": 4,
-          "sentiment_score": 0.6
+          "sentiment_score": 0.667
         },
         "2026-05-25": {
           "mentions": 4,
@@ -5853,13 +5853,6 @@
           "bearish": 0,
           "neutral": 1,
           "sentiment_score": 0.5
-        },
-        "2026-05-21": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 1.0
         }
       }
     },
@@ -33402,6 +33395,168 @@
       }
     },
     {
+      "code": "CRM",
+      "name": "Salesforce",
+      "market": "US",
+      "sector": "雲端/AI",
+      "contexts": [
+        {
+          "video": "EP644 | 🦇",
+          "channel": "股癌",
+          "date": "2026-03-14",
+          "text": "軟體的放空報告也是 就發在他媽最低點 然後後來像是Pentium 或是Cloud Flare或是Cloud Stripe 就是我自己有在追蹤的飯軟體股 那這個蠻多都已經漲回去 有些甚至已經是回到零軸了 就是他根本就已經不是在水下了 那當然也有一些軟體股真的下去了 就要說像Adobe就真的下去 然後像CRM就真的還躺在地上 那我覺得就是說 你盡量不要用這種 很一言以必之的 方式去評論事情 那當然 有時候我們可以用一言以必之的方式 去讓人家快速的了解狀態 可是問題是 如果你今天要賺錢要分析的話 就像你不會講說什麼硬體股 就全部都是一包 我就問你嘛 廣達跟硬夜達是一樣的東西嗎 台積電跟連電是一樣的東西嗎",
+          "matched_keyword": "CRM",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
+        },
+        {
+          "video": "2026/03/25 (三）私募信貸風暴未完，軟體股再崩潰",
+          "channel": "財女珍妮",
+          "date": "2026-03-25",
+          "text": "在市場的恐慌 開始發酵的時候 你如果達到了5%的贖回上限 甚至是更多 超過10%好了 你面臨的壓力 就會非常非常大的 像是阿波羅 像是我們等一下會講到的 Cliff Water 或什麼之類的 其實都是這一段時間 市場上面的主角 那這個擔憂 就直接衝擊到了 昨天市場上面的軟體股 比如說DataDoc Salesforce Surface Now into Workday 這些公司 跌幅可能都有達到 5%以上 甚至是像 科技顧問公司 比如說Garner 或什麼之類的 其實他的股價 也是下跌得非常多了 好 所以我們就從最大的開始 說起好了 最大的其實是規模 大概有330億美元的 Cliff Water 那他是美國 第二",
+          "matched_keyword": "Salesforce",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.0,
+          "video_url": ""
+        },
+        {
+          "video": "2026/04/09 (四）停戰不同調，  META翻身？",
+          "channel": "財女珍妮",
+          "date": "2026-04-09",
+          "text": "的股價表現 其實還是特別差的 這些股票 就是軟體股裡面的 不是資安 資安昨天已經 感受到救贖的感覺了 因為 後來發現Anthorbi 他公布了 最新的Methus 資安的疑慮 或者是 取代的疑慮 其實已經變成是合作 而不是取代 而不是競爭 所以讓他們的股價 鬆了一口氣 但是 像是Pantyr 或者是Salesforce 或者是Service 或者是Intuit 為什麼這些公司的股價 又再繼續的下跌 感覺好像還是沒有 度過那個 AI造成SARS末日的 這種威脅論 或者是這種 恐慌的情緒當中 好 我們先講Pantyr好了 因為Pantyr 他昨天是跌了 那其中一個原因呢 其實如果大家早上 有在滑X的習慣的話 就會看到",
+          "matched_keyword": "Salesforce",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.2,
+          "video_url": ""
+        },
+        {
+          "video": "2026/04/23(四)特斯拉財報，狂砸250億擴張AI與機器人版圖，以及其他重點公司的財報！",
+          "channel": "財女珍妮",
+          "date": "2026-04-23",
+          "text": "以我覺得大家 是可以再去關注這一家公司的 好 那軟體板塊 其實昨天也上昭嘛 但是 我們今天不會講到 軟體股的財報 但是我覺得 就是你知道人就是勢多嘛 我覺得有點欺負 我就覺得說 還是提醒一下好了 就是Surface 那就是也是軟體的大 規模大的公司之一 他在盤後有公佈他的財報 其實他的財報表現也是還OK的 但是我覺得SARS股 或者是這種軟體股 其實有一點衰 就是之前在AI agent出來之後 就是有人說AI末日 就在財報出來之後 但他對於AI末日這件事情 感覺恐懼已經沒有那麼深了 可是卻因為中東的衝突 然後跟Surface 那有自己的收購案的影響呢 然後讓他對於前景 是比較保守的 他表示說 中東地區的訂單",
+          "matched_keyword": "Surface",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.3,
+          "video_url": "",
+          "extraction_mode": "gemini",
+          "whisper_corrected": true
+        },
+        {
+          "video": "2026/05/04(一) 伊朗提談判新方案，戰爭已結束？AI續強，軟體復活了嗎 #CAT #TEAM",
+          "channel": "財女珍妮",
+          "date": "2026-05-04",
+          "text": "度 你今天不只是單純的定位一個席位而已 你是根據使用量 他這個東西就會變成一個浮動的 那這個邏輯 其實我們在之前 我們有訪問一元力的執行長 就是 Kevin 他其實就有講到了 那因為一元力 他是台灣 Salesforce 的代理商 所以他們也有面對到這樣的問題 他那個時候就有提到 他說這些客戶呢 你現在在商業模式 定價模式改變了之後 第一個是他的財務 他比較難去預估說 那我的預算到底要抓多少 也是在這個阻礙之下呢 他們會認為 讓他們的客戶在考慮期的時候 變得比以前還要更長 因為這是一個新的東西 你必須要更好地去評估 所以對於當下來說 對於他們來說 可能是一個算是負面的消息 或者是你今天像微軟 或者是像 很多之前的",
+          "matched_keyword": "Salesforce",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP658 | 🪿",
+          "channel": "股癌",
+          "date": "2026-05-02",
+          "text": "的這些公司 會比較有機會 因為他比較可以去做到 大破大利 如果今天是專業經理人的話 他們可能會一直想要去守住 既有的東西 導致他是可能沒有辦法去 跟上時代 然後在一個快速變動的時代裡面 會被淘汰掉 那Salesforce也很快的就導入 Agentforce 然後以及他們現在的 Headless的一個架構 總之就是以前你可能需要去 登入Salesforce 去做到一個企業所需要的功能 那現在不太需要 現在你就是全部都簡化成為 像是大家去使用AI一樣 一個對話框 那就可以去完成Neutral的任務 那在這裡面 他一樣可以找到他 賺到錢的一個管道跟方式 特別是手上有現金 可以去做資用的話 那他們可能pivot的速度 是",
+          "matched_keyword": "Salesforce",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
+          "video": "2026/05/28(四) 台積電創高，費半漲不動？",
+          "channel": "財女珍妮",
+          "date": "2026-05-28",
+          "text": "人看到這個節目 支持我們持續跟大家分享 最新的財經資訊 一起在投資這條路上 持續的前進 好我今天沒有露臉 不是因為沒有人按讚 是因為早上財報有一點多 實在是有一點來不及 因為大家都知道 比如說馬費歐 Salesforce這些公司 都是蠻多人可能有持有 或者是很有興趣的公司 所以也是想要在早上 把它介紹完 然後讓大家可以在早上 上班的時間 或者是有空的時候 就可以知道發生了什麼事情 先來看一下 昨天美股收盤的表現 到窮工業指數是上漲0.4% 漲了182點 收在50644點 創下的歷史新高 所以如果今天收盤創高的話 那延續前幾天 也有創高的情況 多頭的趨勢樂觀的氛圍 是沒有太大改變的 標普500指數是 漲不到0.03",
+          "matched_keyword": "Salesforce",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
+          "video": "EP666 | 🍐",
+          "channel": "股癌",
+          "date": "2026-05-30",
+          "text": "當然我覺得 最核心的理由 當然不是因為說什麼 Dario或是說 Sam他們的一個論述的改變 就導致整個軟體骨上去 我覺得最後面 都還是靠成績去做證明 那不然說像一些 公司派的強硬態度 你有注意到說 像Salesforce 他搞了一個 真正上網 record high的一個buyback 他就狂買股票 你們覺得我公司很爛 是不是 媽老是狂買 我就用行動證明給你看 我狂賣我自己的股票 再來我們也注意到 像是ServiceNow的老闆 也是跟大家講說 就是外面的那些AI論述 就是全部都是講錯的 其實他的公司 是在一個非常大的順風上面 然後也是靠成績 慢慢的去證明 最近像是什麼 Octa或是Snowflake 都是開出極",
+          "matched_keyword": "Salesforce",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        }
+      ],
+      "total_mentions": 8,
+      "sentiment_score": 0.375,
+      "daily": {
+        "2026-03-14": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-03-25": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 1,
+          "neutral": 0,
+          "sentiment_score": 0.0
+        },
+        "2026-04-09": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 1,
+          "neutral": 0,
+          "sentiment_score": 0.2
+        },
+        "2026-04-23": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 1,
+          "neutral": 0,
+          "sentiment_score": 0.3
+        },
+        "2026-05-04": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-05-02": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-05-28": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-05-30": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
       "code": "1806",
       "name": "冠軍",
       "market": "TW",
@@ -35365,149 +35520,6 @@
           "bearish": 1,
           "neutral": 0,
           "sentiment_score": 0.0
-        }
-      }
-    },
-    {
-      "code": "CRM",
-      "name": "Salesforce",
-      "market": "US",
-      "sector": "雲端/AI",
-      "contexts": [
-        {
-          "video": "EP644 | 🦇",
-          "channel": "股癌",
-          "date": "2026-03-14",
-          "text": "軟體的放空報告也是 就發在他媽最低點 然後後來像是Pentium 或是Cloud Flare或是Cloud Stripe 就是我自己有在追蹤的飯軟體股 那這個蠻多都已經漲回去 有些甚至已經是回到零軸了 就是他根本就已經不是在水下了 那當然也有一些軟體股真的下去了 就要說像Adobe就真的下去 然後像CRM就真的還躺在地上 那我覺得就是說 你盡量不要用這種 很一言以必之的 方式去評論事情 那當然 有時候我們可以用一言以必之的方式 去讓人家快速的了解狀態 可是問題是 如果你今天要賺錢要分析的話 就像你不會講說什麼硬體股 就全部都是一包 我就問你嘛 廣達跟硬夜達是一樣的東西嗎 台積電跟連電是一樣的東西嗎",
-          "matched_keyword": "CRM",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": ""
-        },
-        {
-          "video": "2026/03/25 (三）私募信貸風暴未完，軟體股再崩潰",
-          "channel": "財女珍妮",
-          "date": "2026-03-25",
-          "text": "在市場的恐慌 開始發酵的時候 你如果達到了5%的贖回上限 甚至是更多 超過10%好了 你面臨的壓力 就會非常非常大的 像是阿波羅 像是我們等一下會講到的 Cliff Water 或什麼之類的 其實都是這一段時間 市場上面的主角 那這個擔憂 就直接衝擊到了 昨天市場上面的軟體股 比如說DataDoc Salesforce Surface Now into Workday 這些公司 跌幅可能都有達到 5%以上 甚至是像 科技顧問公司 比如說Garner 或什麼之類的 其實他的股價 也是下跌得非常多了 好 所以我們就從最大的開始 說起好了 最大的其實是規模 大概有330億美元的 Cliff Water 那他是美國 第二",
-          "matched_keyword": "Salesforce",
-          "analysis_source": "whisper",
-          "sentiment": "bearish",
-          "sentiment_score": 0.0,
-          "video_url": ""
-        },
-        {
-          "video": "2026/04/09 (四）停戰不同調，  META翻身？",
-          "channel": "財女珍妮",
-          "date": "2026-04-09",
-          "text": "的股價表現 其實還是特別差的 這些股票 就是軟體股裡面的 不是資安 資安昨天已經 感受到救贖的感覺了 因為 後來發現Anthorbi 他公布了 最新的Methus 資安的疑慮 或者是 取代的疑慮 其實已經變成是合作 而不是取代 而不是競爭 所以讓他們的股價 鬆了一口氣 但是 像是Pantyr 或者是Salesforce 或者是Service 或者是Intuit 為什麼這些公司的股價 又再繼續的下跌 感覺好像還是沒有 度過那個 AI造成SARS末日的 這種威脅論 或者是這種 恐慌的情緒當中 好 我們先講Pantyr好了 因為Pantyr 他昨天是跌了 那其中一個原因呢 其實如果大家早上 有在滑X的習慣的話 就會看到",
-          "matched_keyword": "Salesforce",
-          "analysis_source": "whisper",
-          "sentiment": "bearish",
-          "sentiment_score": 0.2,
-          "video_url": ""
-        },
-        {
-          "video": "2026/04/23(四)特斯拉財報，狂砸250億擴張AI與機器人版圖，以及其他重點公司的財報！",
-          "channel": "財女珍妮",
-          "date": "2026-04-23",
-          "text": "以我覺得大家 是可以再去關注這一家公司的 好 那軟體板塊 其實昨天也上昭嘛 但是 我們今天不會講到 軟體股的財報 但是我覺得 就是你知道人就是勢多嘛 我覺得有點欺負 我就覺得說 還是提醒一下好了 就是Surface 那就是也是軟體的大 規模大的公司之一 他在盤後有公佈他的財報 其實他的財報表現也是還OK的 但是我覺得SARS股 或者是這種軟體股 其實有一點衰 就是之前在AI agent出來之後 就是有人說AI末日 就在財報出來之後 但他對於AI末日這件事情 感覺恐懼已經沒有那麼深了 可是卻因為中東的衝突 然後跟Surface 那有自己的收購案的影響呢 然後讓他對於前景 是比較保守的 他表示說 中東地區的訂單",
-          "matched_keyword": "Surface",
-          "analysis_source": "whisper",
-          "sentiment": "bearish",
-          "sentiment_score": 0.3,
-          "video_url": "",
-          "extraction_mode": "gemini",
-          "whisper_corrected": true
-        },
-        {
-          "video": "2026/05/04(一) 伊朗提談判新方案，戰爭已結束？AI續強，軟體復活了嗎 #CAT #TEAM",
-          "channel": "財女珍妮",
-          "date": "2026-05-04",
-          "text": "度 你今天不只是單純的定位一個席位而已 你是根據使用量 他這個東西就會變成一個浮動的 那這個邏輯 其實我們在之前 我們有訪問一元力的執行長 就是 Kevin 他其實就有講到了 那因為一元力 他是台灣 Salesforce 的代理商 所以他們也有面對到這樣的問題 他那個時候就有提到 他說這些客戶呢 你現在在商業模式 定價模式改變了之後 第一個是他的財務 他比較難去預估說 那我的預算到底要抓多少 也是在這個阻礙之下呢 他們會認為 讓他們的客戶在考慮期的時候 變得比以前還要更長 因為這是一個新的東西 你必須要更好地去評估 所以對於當下來說 對於他們來說 可能是一個算是負面的消息 或者是你今天像微軟 或者是像 很多之前的",
-          "matched_keyword": "Salesforce",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP658 | 🪿",
-          "channel": "股癌",
-          "date": "2026-05-02",
-          "text": "的這些公司 會比較有機會 因為他比較可以去做到 大破大利 如果今天是專業經理人的話 他們可能會一直想要去守住 既有的東西 導致他是可能沒有辦法去 跟上時代 然後在一個快速變動的時代裡面 會被淘汰掉 那Salesforce也很快的就導入 Agentforce 然後以及他們現在的 Headless的一個架構 總之就是以前你可能需要去 登入Salesforce 去做到一個企業所需要的功能 那現在不太需要 現在你就是全部都簡化成為 像是大家去使用AI一樣 一個對話框 那就可以去完成Neutral的任務 那在這裡面 他一樣可以找到他 賺到錢的一個管道跟方式 特別是手上有現金 可以去做資用的話 那他們可能pivot的速度 是",
-          "matched_keyword": "Salesforce",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        },
-        {
-          "video": "2026/05/28(四) 台積電創高，費半漲不動？",
-          "channel": "財女珍妮",
-          "date": "2026-05-28",
-          "text": "人看到這個節目 支持我們持續跟大家分享 最新的財經資訊 一起在投資這條路上 持續的前進 好我今天沒有露臉 不是因為沒有人按讚 是因為早上財報有一點多 實在是有一點來不及 因為大家都知道 比如說馬費歐 Salesforce這些公司 都是蠻多人可能有持有 或者是很有興趣的公司 所以也是想要在早上 把它介紹完 然後讓大家可以在早上 上班的時間 或者是有空的時候 就可以知道發生了什麼事情 先來看一下 昨天美股收盤的表現 到窮工業指數是上漲0.4% 漲了182點 收在50644點 創下的歷史新高 所以如果今天收盤創高的話 那延續前幾天 也有創高的情況 多頭的趨勢樂觀的氛圍 是沒有太大改變的 標普500指數是 漲不到0.03",
-          "matched_keyword": "Salesforce",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        }
-      ],
-      "total_mentions": 7,
-      "sentiment_score": 0.357,
-      "daily": {
-        "2026-03-14": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-03-25": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 1,
-          "neutral": 0,
-          "sentiment_score": 0.0
-        },
-        "2026-04-09": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 1,
-          "neutral": 0,
-          "sentiment_score": 0.2
-        },
-        "2026-04-23": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 1,
-          "neutral": 0,
-          "sentiment_score": 0.3
-        },
-        "2026-05-04": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-05-02": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-05-28": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
         }
       }
     },
@@ -38674,6 +38686,123 @@
       }
     },
     {
+      "code": "DIS",
+      "name": "Disney",
+      "market": "US",
+      "sector": "串流媒體",
+      "contexts": [
+        {
+          "video": "EP649 | 💌",
+          "channel": "股癌",
+          "date": "2026-04-01",
+          "text": "還是來個寶可夢公仔 比較便宜實在小孩也 沒錯 這位兄弟講的東西 就是我們送位家長 很多時候會 他也不能夠說是一個問題 但最後面你會意識到說 這個是我異鄉情願 就是你會覺得說 小朋友一定要什麼 之前跟大家分享過 就是你可能帶下去一個 不知道 就是很貴的遊樂設施之類的 可是你特地重金 帶他飛去日本 什麼Disney Land 然後他給你 整趟都在哭 隨便舉例 反而是你可能在機場 後機的時候 旁邊有一個小玩具店 然後小朋友在那邊玩得超開心 所以你就會發現說 就是小朋友要的東西 真的很簡單 不像網路幹文說 女人要的很簡單 沒有 女人要的東西蠻難的 那小朋友要的東西 真的很簡單 這個是真的很簡單 所以一些那種 就是",
+          "matched_keyword": "DIS",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": null
+        },
+        {
+          "video": "EP645 | 🎱",
+          "channel": "股癌",
+          "date": "2026-03-18",
+          "text": "愛你 這位妹妹的意思 就是說 是不是越摳的人 才可以當有錢人 不是 不一定 因為像我自己也是有 訂艾爾達 艾爾達好像是一次付三年 我其實也是沒有什麼在看 像WBC 就是人家跟我講說 這場很好看 那我就把它打開來看一下 所以就是放在那邊 我會對訂閱 像絕來說 最近也很少在看 Prime Video或是Disney 就比較少看 可是我都會放著 那這跟有錢與否 我覺得也沒有什麼關係 就是你知道 每個人的注意力 都是有限的 下的娛樂態度 有限可能就不想要在這個地方花錢 那當然絕對不要去看 盜版的東西 我還是覺得說 要盡量支持正版 其實以前我們小時候 都是看一堆盜版的東西 沒有辦法 因為那時候真的是像 那個什麼 是",
+          "matched_keyword": "Disney",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
+        },
+        {
+          "video": "EP657 | 🐫",
+          "channel": "股癌",
+          "date": "2026-04-29",
+          "text": "主動型ETF 那不知道大家有什麼印象 這個一兩年前是高股息ETF 那時候真的就是無腦買高股息ETF 就會噴 然後成份股也都會噴 那再往前的話 不知道大家還記不記得 ARKK 那我講這個 當然不是要去 DIS腰磁金木 因為腰磁金木的選股 我自己都非常喜歡 那個像是我自己會喜歡的選股 那只能夠說就是 反正很多時候 就是江山帶有才人出來 我們當然喜歡說腰磁金木 可以忘個十年 然後擊敗巴菲特的這個賭約之類的 那當然實際上 按照過往的經驗 就是你要長期的贏大盤 真的是一個很不容易的事情 那你說要不要 我們就自己 跑去買這個大盤或是台積電車 為什麼要買這個東西 那你是這樣子覺得 你就可以這樣子做 那你如果覺得說",
+          "matched_keyword": "DIS",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "2026/05/07(四) 財報好不漲，到底為什麼？#ETN #ANET #ARM #COHR",
+          "channel": "財女珍妮",
+          "date": "2026-05-07",
+          "text": "確保 我未來的產能不會缺 在產能不會缺的情況之下 你才有可能可以掌握定價權 你才有可能可以讓你的營收持續的增長嘛 所以這個是昨天灰打 他一個很重要的 這個利多的消息 好 那還有一個事情 大家有發現昨天迪士尼長了8%嗎 他是昨天盤錢的財報喔 然後財報出來之後其實股價就漲 那昨天也是漲了8%左右 那也不知道大家有沒有去看這個 穿著Prada的惡魔 因為他已經是20年前的片了嘛 我跟你講 電影院裡面超多人 就是我假日的時候跟我朋友去看 然後超多人都要去看這部片 然後我覺得這一次呢 其實除了就是 當然我們大家都是在回歸20年前 這個安海社會啊 或者是美人島 就是他們幾個主角 他們在這個戲裡面 或者是在這個非",
+          "matched_keyword": "迪士尼",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "2026/05/07(四) 財報好不漲，到底為什麼？#ETN #ANET #ARM #COHR",
+          "channel": "財女珍妮",
+          "date": "2026-05-07",
+          "text": "ssning的這個 新片 我忘記他的電影名稱是什麼 內部片也很好看 然後我直接就是在電影院裡面落淚 因為我覺得很感人 好 所以就是跟大家分享一下 近期呢 我覺得有蠻多好的電影 然後大家可以進去看 然後迪士尼也是 有提到這個 Tranquil Parada的惡魔嘛 然後也有提到他們 整體的一個營運狀況呢 其實有改善 所以就積極的股價上漲 但是沒有人care 好不好 迪士尼不是AI股 所以不要理他對不對 我們接下來呢 就是繼續講 我們要講的東西 好 因為今天很多財報 我本來是想要講這個 SpaceX跟 Enthorbita的一個合作 因為他就是提供他 所有的算力嘛 但是 因為我覺得時間應該是美湖 所以我",
+          "matched_keyword": "迪士尼",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP666 | 🍐",
+          "channel": "股癌",
+          "date": "2026-05-30",
+          "text": "點是 就是你現在已經看到表態 那你敢不敢再跟著 再拘逐推 就類似說 你看到老AI表態 你要不要再拘逐推 那我就講我的意見 就是我覺得這些東西 其實都是好的 我們本來就不會在它 可能攀著的時候 我就去亂DIS他或什麼的 那只是 就是你還是會有一個輕重緩急 就類似說 一樣是被動員間 你會選擇去壓 你覺得它可能是 在後面會更缺的東西 拉長看 最終都是會回到基本面 那哪個東西 可能是在後面漲價 會漲最多的 可能是毛利藥身 會是最高的 或是最缺乏的 或是房間裡面的大象 就是大家可能隱約知道 有一個東西在那 可是真的還沒有注意到 那可能就會是大家想要去 專注的一個重點 所以下的盤面 我個人認為 反正就是一個 非",
+          "matched_keyword": "DIS",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        }
+      ],
+      "total_mentions": 6,
+      "sentiment_score": 0.667,
+      "daily": {
+        "2026-04-01": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-03-18": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-04-29": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-05-07": {
+          "mentions": 2,
+          "bullish": 2,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        },
+        "2026-05-30": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
       "code": "3211",
       "name": "順達",
       "market": "TW",
@@ -38943,104 +39072,6 @@
           "bearish": 0,
           "neutral": 0,
           "sentiment_score": 0.7
-        }
-      }
-    },
-    {
-      "code": "DIS",
-      "name": "Disney",
-      "market": "US",
-      "sector": "串流媒體",
-      "contexts": [
-        {
-          "video": "EP649 | 💌",
-          "channel": "股癌",
-          "date": "2026-04-01",
-          "text": "還是來個寶可夢公仔 比較便宜實在小孩也 沒錯 這位兄弟講的東西 就是我們送位家長 很多時候會 他也不能夠說是一個問題 但最後面你會意識到說 這個是我異鄉情願 就是你會覺得說 小朋友一定要什麼 之前跟大家分享過 就是你可能帶下去一個 不知道 就是很貴的遊樂設施之類的 可是你特地重金 帶他飛去日本 什麼Disney Land 然後他給你 整趟都在哭 隨便舉例 反而是你可能在機場 後機的時候 旁邊有一個小玩具店 然後小朋友在那邊玩得超開心 所以你就會發現說 就是小朋友要的東西 真的很簡單 不像網路幹文說 女人要的很簡單 沒有 女人要的東西蠻難的 那小朋友要的東西 真的很簡單 這個是真的很簡單 所以一些那種 就是",
-          "matched_keyword": "DIS",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": null
-        },
-        {
-          "video": "EP645 | 🎱",
-          "channel": "股癌",
-          "date": "2026-03-18",
-          "text": "愛你 這位妹妹的意思 就是說 是不是越摳的人 才可以當有錢人 不是 不一定 因為像我自己也是有 訂艾爾達 艾爾達好像是一次付三年 我其實也是沒有什麼在看 像WBC 就是人家跟我講說 這場很好看 那我就把它打開來看一下 所以就是放在那邊 我會對訂閱 像絕來說 最近也很少在看 Prime Video或是Disney 就比較少看 可是我都會放著 那這跟有錢與否 我覺得也沒有什麼關係 就是你知道 每個人的注意力 都是有限的 下的娛樂態度 有限可能就不想要在這個地方花錢 那當然絕對不要去看 盜版的東西 我還是覺得說 要盡量支持正版 其實以前我們小時候 都是看一堆盜版的東西 沒有辦法 因為那時候真的是像 那個什麼 是",
-          "matched_keyword": "Disney",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": ""
-        },
-        {
-          "video": "EP657 | 🐫",
-          "channel": "股癌",
-          "date": "2026-04-29",
-          "text": "主動型ETF 那不知道大家有什麼印象 這個一兩年前是高股息ETF 那時候真的就是無腦買高股息ETF 就會噴 然後成份股也都會噴 那再往前的話 不知道大家還記不記得 ARKK 那我講這個 當然不是要去 DIS腰磁金木 因為腰磁金木的選股 我自己都非常喜歡 那個像是我自己會喜歡的選股 那只能夠說就是 反正很多時候 就是江山帶有才人出來 我們當然喜歡說腰磁金木 可以忘個十年 然後擊敗巴菲特的這個賭約之類的 那當然實際上 按照過往的經驗 就是你要長期的贏大盤 真的是一個很不容易的事情 那你說要不要 我們就自己 跑去買這個大盤或是台積電車 為什麼要買這個東西 那你是這樣子覺得 你就可以這樣子做 那你如果覺得說",
-          "matched_keyword": "DIS",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "2026/05/07(四) 財報好不漲，到底為什麼？#ETN #ANET #ARM #COHR",
-          "channel": "財女珍妮",
-          "date": "2026-05-07",
-          "text": "確保 我未來的產能不會缺 在產能不會缺的情況之下 你才有可能可以掌握定價權 你才有可能可以讓你的營收持續的增長嘛 所以這個是昨天灰打 他一個很重要的 這個利多的消息 好 那還有一個事情 大家有發現昨天迪士尼長了8%嗎 他是昨天盤錢的財報喔 然後財報出來之後其實股價就漲 那昨天也是漲了8%左右 那也不知道大家有沒有去看這個 穿著Prada的惡魔 因為他已經是20年前的片了嘛 我跟你講 電影院裡面超多人 就是我假日的時候跟我朋友去看 然後超多人都要去看這部片 然後我覺得這一次呢 其實除了就是 當然我們大家都是在回歸20年前 這個安海社會啊 或者是美人島 就是他們幾個主角 他們在這個戲裡面 或者是在這個非",
-          "matched_keyword": "迪士尼",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "2026/05/07(四) 財報好不漲，到底為什麼？#ETN #ANET #ARM #COHR",
-          "channel": "財女珍妮",
-          "date": "2026-05-07",
-          "text": "ssning的這個 新片 我忘記他的電影名稱是什麼 內部片也很好看 然後我直接就是在電影院裡面落淚 因為我覺得很感人 好 所以就是跟大家分享一下 近期呢 我覺得有蠻多好的電影 然後大家可以進去看 然後迪士尼也是 有提到這個 Tranquil Parada的惡魔嘛 然後也有提到他們 整體的一個營運狀況呢 其實有改善 所以就積極的股價上漲 但是沒有人care 好不好 迪士尼不是AI股 所以不要理他對不對 我們接下來呢 就是繼續講 我們要講的東西 好 因為今天很多財報 我本來是想要講這個 SpaceX跟 Enthorbita的一個合作 因為他就是提供他 所有的算力嘛 但是 因為我覺得時間應該是美湖 所以我",
-          "matched_keyword": "迪士尼",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        }
-      ],
-      "total_mentions": 5,
-      "sentiment_score": 0.7,
-      "daily": {
-        "2026-04-01": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-03-18": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-04-29": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-05-07": {
-          "mentions": 2,
-          "bullish": 2,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 1.0
         }
       }
     },
@@ -47553,7 +47584,7 @@
       "code": "DASH",
       "name": "DoorDash",
       "market": "US",
-      "sector": "消費",
+      "sector": "零售電商",
       "contexts": [
         {
           "video": "EP217 | 台、美股重點一次說，Google TPU 各代產品結構與台廠供應鏈， 台積電封裝技術進展與風險，CPO量產前注意",
@@ -51540,7 +51571,7 @@
       "code": "DECK",
       "name": "Deckers Brands",
       "market": "US",
-      "sector": "消費",
+      "sector": "零售電商",
       "contexts": [
         {
           "video": "EP656 | 🍇",
@@ -56795,7 +56826,7 @@
       "code": "ADI",
       "name": "ADI",
       "market": "US",
-      "sector": "半導體",
+      "sector": "科技",
       "contexts": [
         {
           "video": "2026/05/05(二) Palantir為什麼不漲？#PLTR #ON #NVDA #MU",
@@ -59093,7 +59124,7 @@
       "code": "GLW",
       "name": "Corning Inc.",
       "market": "US",
-      "sector": "科技",
+      "sector": "光通訊",
       "contexts": [
         {
           "video": "EP225 | 台、美股重點一次說，消費性電腦與緯穎展望，康寧與AAOI長約發酵，聽眾QA",
@@ -61362,13 +61393,75 @@
           "sentiment_score": 0.5
         }
       }
+    },
+    {
+      "code": "NOW",
+      "name": "ServiceNow",
+      "market": "US",
+      "sector": "科技",
+      "contexts": [
+        {
+          "video": "EP666 | 🍐",
+          "channel": "股癌",
+          "date": "2026-05-30",
+          "text": "esforce 他搞了一個 真正上網 record high的一個buyback 他就狂買股票 你們覺得我公司很爛 是不是 媽老是狂買 我就用行動證明給你看 我狂賣我自己的股票 再來我們也注意到 像是ServiceNow的老闆 也是跟大家講說 就是外面的那些AI論述 就是全部都是講錯的 其實他的公司 是在一個非常大的順風上面 然後也是靠成績 慢慢的去證明 最近像是什麼 Octa或是Snowflake 都是開出極好的成績 那就告訴大家說 其實AI是幫這些軟體 去做加分 他不是一個扣分項 那當然一定會有人去舉出說 有哪一些軟體 他可能致敬是摔到爛掉的 可是那個道理 我們講過 他跟硬體一樣 或者說晶圓代購一樣 你也不是",
+          "matched_keyword": "ServiceNow",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-05-30": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
+      "code": "5522",
+      "name": "遠雄",
+      "market": "TW",
+      "sector": "其他",
+      "contexts": [
+        {
+          "video": "EP665 | 🌸",
+          "channel": "股癌",
+          "date": "2026-05-27",
+          "text": "我老婆甚至跟我講說 在受到去的話 我就真的會看起來 頭很大一顆子 因為我天生頭就比較大 然後下身體又變小 所以就就蠻好笑的 那之後有一些發現 再跟大家分享 那下面會是Timo 孟公大 你好 第一次在劉遠雄被念到 我們也跟太太 正在經歷備孕的階段 希望可以加入妮卵症一些 那目前就在醫院間 來來回合做檢查 太太的身體 因為這些藥物的關係 狀態 積極服務 身心跟工作都被影響到 那希望可以跟觀音大許願 讓寶寶來到我們的身邊 即使未來會很辛苦 我們也願意 那之後寶寶如果真的來報到 會固定去基金 會認養一個孩子 直到孩子長大成年 那希望孟公可以用 noir的聲音說 弟弟妹妹 快去找小竹 他們報到呦 謝謝阿姨大",
+          "matched_keyword": "遠雄",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-05-27": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
     }
   ],
   "sectors_ranking": [
     {
       "sector": "其他",
       "market": "TW",
-      "total_mentions": 155,
+      "total_mentions": 156,
       "stock_codes": [
         "5007",
         "1473",
@@ -61404,13 +61497,14 @@
         "8936",
         "1459",
         "1108",
-        "7777"
+        "7777",
+        "5522"
       ]
     },
     {
       "sector": "雲端/AI",
       "market": "US",
-      "total_mentions": 149,
+      "total_mentions": 150,
       "stock_codes": [
         "META",
         "AMZN",
@@ -61733,19 +61827,6 @@
       ]
     },
     {
-      "sector": "半導體",
-      "market": "US",
-      "total_mentions": 42,
-      "stock_codes": [
-        "INTC",
-        "TXN",
-        "ON",
-        "MCHP",
-        "ADI",
-        "ON Semiconductor Corporation"
-      ]
-    },
-    {
       "sector": "組裝代工",
       "market": "TW",
       "total_mentions": 42,
@@ -61797,6 +61878,18 @@
         "6282",
         "3501",
         "6133"
+      ]
+    },
+    {
+      "sector": "半導體",
+      "market": "US",
+      "total_mentions": 41,
+      "stock_codes": [
+        "INTC",
+        "TXN",
+        "ON",
+        "MCHP",
+        "ON Semiconductor Corporation"
       ]
     },
     {
@@ -61980,12 +62073,13 @@
     {
       "sector": "科技",
       "market": "US",
-      "total_mentions": 26,
+      "total_mentions": 27,
       "stock_codes": [
         "SNDK",
         "INTU",
         "TER",
-        "GLW"
+        "ADI",
+        "NOW"
       ]
     },
     {
@@ -62000,19 +62094,6 @@
         "1319",
         "9921",
         "6605"
-      ]
-    },
-    {
-      "sector": "消費",
-      "market": "US",
-      "total_mentions": 24,
-      "stock_codes": [
-        "CCL",
-        "DASH",
-        "GRMN",
-        "DECK",
-        "NKE",
-        "ABNB"
       ]
     },
     {
@@ -62041,6 +62122,17 @@
       ]
     },
     {
+      "sector": "光通訊",
+      "market": "US",
+      "total_mentions": 22,
+      "stock_codes": [
+        "COHR",
+        "LITE",
+        "AAOI",
+        "GLW"
+      ]
+    },
+    {
       "sector": "網路安全",
       "market": "US",
       "total_mentions": 21,
@@ -62050,16 +62142,6 @@
         "CRWD",
         "OKTA",
         "FTNT"
-      ]
-    },
-    {
-      "sector": "光通訊",
-      "market": "US",
-      "total_mentions": 21,
-      "stock_codes": [
-        "COHR",
-        "LITE",
-        "AAOI"
       ]
     },
     {
@@ -62083,6 +62165,17 @@
         "HPQ",
         "SMCI",
         "HPE"
+      ]
+    },
+    {
+      "sector": "消費",
+      "market": "US",
+      "total_mentions": 20,
+      "stock_codes": [
+        "CCL",
+        "GRMN",
+        "NKE",
+        "ABNB"
       ]
     },
     {
@@ -62183,6 +62276,19 @@
       ]
     },
     {
+      "sector": "零售電商",
+      "market": "US",
+      "total_mentions": 17,
+      "stock_codes": [
+        "COST",
+        "DASH",
+        "WMT",
+        "TGT",
+        "DECK",
+        "BKNG"
+      ]
+    },
+    {
       "sector": "其他電子業",
       "market": "TW",
       "total_mentions": 17,
@@ -62225,6 +62331,16 @@
       ]
     },
     {
+      "sector": "串流媒體",
+      "market": "US",
+      "total_mentions": 16,
+      "stock_codes": [
+        "NFLX",
+        "DIS",
+        "EA"
+      ]
+    },
+    {
       "sector": "ETF・高股息",
       "market": "TW",
       "total_mentions": 16,
@@ -62243,16 +62359,6 @@
       "stock_codes": [
         "6488",
         "8028"
-      ]
-    },
-    {
-      "sector": "串流媒體",
-      "market": "US",
-      "total_mentions": 15,
-      "stock_codes": [
-        "NFLX",
-        "DIS",
-        "EA"
       ]
     },
     {
@@ -62282,17 +62388,6 @@
         "5880",
         "2886",
         "2890"
-      ]
-    },
-    {
-      "sector": "零售電商",
-      "market": "US",
-      "total_mentions": 13,
-      "stock_codes": [
-        "COST",
-        "WMT",
-        "TGT",
-        "BKNG"
       ]
     },
     {
