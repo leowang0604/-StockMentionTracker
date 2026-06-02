@@ -1144,6 +1144,14 @@ _SECTOR_CONTEXT_FAMILIES: dict[str, dict[str, set[str]]] = {
         "sectors": {"生技", "醫材", "生技製藥", "醫療"},
         "keywords": {"製藥", "藥品", "藥廠", "新藥", "生技", "臨床", "FDA", "TFDA"},
     },
+    "CPO光通訊": {
+        "sectors": {"CPO光通訊", "光通訊"},
+        "keywords": {
+            "CPO", "CPU", "光通訊", "矽光子", "西光子", "細光子",
+            "光模組", "光纖", "800G", "1.6T", "聯亞", "光聖", "光盛",
+            "上詮", "波若威", "波羅威",
+        },
+    },
 }
 
 # Whisper errors that are only safe inside a strong sector context.
@@ -1152,6 +1160,9 @@ _CONTEXTUAL_WHISPER_ALIASES: dict[str, dict[str, str]] = {
         "耿頂": "1524", "耿頂梯": "1524",
         "威西": "1522",
         "地堡": "6605",
+    },
+    "CPO光通訊": {
+        "聯軍": "3450", "聯均": "3450", "連軍": "3450",
     },
 }
 

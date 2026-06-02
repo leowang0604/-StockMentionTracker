@@ -158,6 +158,15 @@ class ValidatorRegressionTests(unittest.TestCase):
         _, reasons = self.scanner._alias_candidate_score("紅海", "2615", "萬海", "紅海最近上漲。")
         self.assertIn("phonetic_conflict", reasons)
 
+    def test_lianjun_only_matches_lianjun_in_cpo_context(self):
+        cpo_text = "CPO族群裡面光盛和聯亞先休息，但是聯軍這些開始補漲。"
+        hits = self.scanner.recognize_stocks(cpo_text)
+        self.assertIn("3450", [hit["stock_code"] for hit in hits])
+
+        ordinary_text = "這次AI聯軍一起推出新服務，大家都很期待。"
+        hits = self.scanner.recognize_stocks(ordinary_text)
+        self.assertNotIn("3450", [hit["stock_code"] for hit in hits])
+
 
 if __name__ == "__main__":
     unittest.main()
