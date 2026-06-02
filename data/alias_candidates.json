@@ -198,37 +198,6 @@
     ],
     "wrong_keyword" : "台塑市保"
   },
-  "圍影|6637" : {
-    "confidence" : "high",
-    "correct_code" : "6637",
-    "correct_name" : "醫影",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "兆華與股惑仔",
-        "context" : "已經提到他的AI 占比刀了快要四成 所以大家就聯想到 聯想到 這個相關的AI伺服器的組裝 好像有他的機會存在 所以戴爾跟惠普 都穿到一起進高之後 大家就回頭來看 洪海好委屈 廣達現在位階就很甜 那偽創圍影 看起來好像沒有漲到 甚至所謂的 音樂達 微星 技嘉 現在比較委屈 應該是這個達達的神達 沒有漲到 神達 或者是剛剛講到 音樂達 神達這種的 還有就是今天會漲停的人保 跟宏基 這個人保和宏基 真的是不是撈了一個寂寞 今天都漲停了 對 所以我就代表說 這個在這種行情 那麼弱弱的時候 真的很多股票都可以等到 他發動的時間點 那你說這種股票 如果你之前沒有純股買他 你怎麼可能會追到他 一根漲停板 兩",
-        "date" : "2026-05-25",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "name_distance<=1",
-          "stock_context"
-        ],
-        "score" : 90,
-        "source" : "full_video_validator",
-        "title" : "EP1104｜黃仁勳來台、美伊真和談，台股瘋創高！動能、低接都可以等到創新高，主動、被動ETF各有優點，誰是AI相對落後股？ft.題材獵人 林漢偉",
-        "video_id" : "af536dd4-0e40-4002-98d2-81fe88bf177b"
-      }
-    ],
-    "max_score" : 90,
-    "observations" : 1,
-    "updated_at" : "2026-05-31T20:19:38",
-    "video_ids" : [
-      "af536dd4-0e40-4002-98d2-81fe88bf177b"
-    ],
-    "wrong_keyword" : "圍影"
-  },
   "尾創|3231" : {
     "confidence" : "high",
     "correct_code" : "3231",
