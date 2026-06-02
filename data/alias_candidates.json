@@ -59,36 +59,6 @@
     ],
     "wrong_keyword" : "Zehler"
   },
-  "光寶殼|2301" : {
-    "confidence" : "high",
-    "correct_code" : "2301",
-    "correct_name" : "光寶科",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "兆華與股惑仔",
-        "context" : "上有細光子 他身上有很多PCB 就是有很多是綜合性題材 小明知道 小明常常幫我們找一些 多題材的東西 對不對 像今天盤面上 我覺得有個東西也算是大部隊 他比較分散就是電力 電力我們都可以看到台大電 像光寶殼 其實這兩天的表現也不錯 他可能擴散出去 就會到重電 所有的電源供應器 跟電油關的被動元件 它也算是一個圍繞的電 那今天誰起來 其實今天是重電鼓 就是跌升 今天就起來接 但是重電鼓的小問題 也是他們這個量體比較小 除非整體的1516族群都起來 可是因為現在看起來 大家還是只看重電四熊 這個電線電纜股 大家並沒有要 全部讓他們起來的意思 因為他們畢竟是穿纏股 所以小明講的觀察資金流向 我覺得非",
-        "date" : "2026-05-27",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "name_distance<=1"
-        ],
-        "score" : 75,
-        "source" : "full_video_validator",
-        "title" : "EP1106｜又漲了5000點，整理持股、思考出場策略，不是急的時候！被動關不住，記憶體資金回歸，台積電分紅要搞定！ft.紀緯明 小明同學",
-        "video_id" : "391c3eb0-f683-4801-8ff2-700bfa07d648"
-      }
-    ],
-    "max_score" : 75,
-    "observations" : 1,
-    "updated_at" : "2026-05-31T19:42:35",
-    "video_ids" : [
-      "391c3eb0-f683-4801-8ff2-700bfa07d648"
-    ],
-    "wrong_keyword" : "光寶殼"
-  },
   "台光天|2383" : {
     "confidence" : "high",
     "correct_code" : "2383",
