@@ -180,37 +180,6 @@
     ],
     "wrong_keyword" : "灰膽"
   },
-  "發哥|2454" : {
-    "confidence" : "high",
-    "correct_code" : "2454",
-    "correct_name" : "聯發科",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "兆華與股惑仔",
-        "context" : "就至少200開始起這樣子 他說其實以他們科技來說 這已經算是很厲害了 他說但是還是被MV挖走了 我說當然當然 現在MV是王道 人家黃仁詢都說 我去那水你又沒回來嗎 我去那水 去這間你又沒回來嗎 但幸好發哥的股價大漲之後 應該對於 流人有一定的幫助 希望是這樣子 我要講的是 那現在的選擇 又從大家可能以前 不敢買的小標股 又回到了正宗的大型股 所以我們的選擇很多 像我今天看 漲的比較多的ETF 不是主動型 是誰 像0052這一種的 你說台一店這幾天沒有大漲 對 但他第二權重大的鴻海 第三權重大的發哥是好的 所以他最近就漲這些 所以0052在今天是 他叫富邦科技 今天整體科技股在動的時候 佔權重的",
-        "date" : "2026-05-29",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "name_distance=2",
-          "stock_context"
-        ],
-        "score" : 77,
-        "source" : "full_video_validator",
-        "title" : "EP1108｜DELL財報爆衝、兆元宴吃飽，緯創、鴻海、廣達齊漲停，老AI變新火種！下週電腦展開跑，多頭延續到何時？ft.操盤手 黃豐凱",
-        "video_id" : "af36eacf-8c25-4895-b394-74e28a5f81e7"
-      }
-    ],
-    "max_score" : 77,
-    "observations" : 2,
-    "updated_at" : "2026-05-31T19:16:42",
-    "video_ids" : [
-      "af36eacf-8c25-4895-b394-74e28a5f81e7"
-    ],
-    "wrong_keyword" : "發哥"
-  },
   "臺灣50全股|0050" : {
     "confidence" : "medium",
     "correct_code" : "0050",
