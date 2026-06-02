@@ -414,5 +414,35 @@
       }
     ],
     "updated_at": "2026-06-01T22:07:12"
+  },
+  "灰膽|AMZN": {
+    "wrong_keyword": "灰膽",
+    "correct_code": "AMZN",
+    "correct_name": "Amazon",
+    "confidence": "medium",
+    "max_score": 65,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "b8a9ad87-d83d-4ad9-94bf-fee01ddde4be"
+    ],
+    "evidence": [
+      {
+        "video_id": "b8a9ad87-d83d-4ad9-94bf-fee01ddde4be",
+        "channel": "財女珍妮",
+        "date": "2026-06-01",
+        "title": "2026/06/01(一) COMPUTEX出狠招，輝達還能漲嗎？",
+        "source": "full_video_validator",
+        "score": 65,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "stock_context"
+        ],
+        "context": "數據如果 真的有出現鬆動的話呢 那就是比較大的一個 在經濟上面數據的一個變化 好 那我們來看一下 S&P500指數的單日漲跌幅好了 我剛剛不是有講到 就是科技巨頭 其實不是一個全面性的反彈 比如說像是灰膽 Google Amazon 或者是特斯拉 其實都是下跌 而且下跌的幅度也不算小 但是呢 如果你去看 像博通 微軟 其實股價的漲幅就還蠻高的 蠻漂亮的 那非必需消費呢 也是因為市場都在創高嘛 所以整個防禦型的板塊呢 它的資金就往比較風險型的板塊去走 這一波硬體 或者是這一波AI行情 現在到底走到哪邊了 我們在上個禮拜的時候 有跟大家講 其實如果你現在去看基礎建設 基礎建設還是在持續進行當中 但"
+      }
+    ],
+    "updated_at": "2026-06-02T00:23:25"
   }
 }
