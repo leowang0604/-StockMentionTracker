@@ -149,36 +149,5 @@
       "cc65e950-dd93-4d1d-a414-e73e4c732401"
     ],
     "wrong_keyword" : "萬序"
-  },
-  "金保|6133" : {
-    "confidence" : "high",
-    "correct_code" : "6133",
-    "correct_name" : "金橋",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "兆華與股惑仔",
-        "context" : "再回來 你就放手讓他走 那有一些反而是 你可以等著他輪動的時候 會有一些發動的機會 就比方說你最近看到一些 老AI股票 開始加速的補漲 比方說像鷹夜達 從上禮拜五到今天 連續兩根漲停板 那所謂的人保 金保 那都跟這個 黃鷹鷹 27號要去這個 輝達動土典禮有關 因為他的鄰居 就是金人寶集團的大樓 所以看起來這個 北市科相關附近的概念股 其實都非常的熱絡 除了這個金寶人保 鷹夜達 甚至說你可以看到 市電 一些所謂的 什麼相關的市零開發 這些我覺得相關的土地資產股票 也都會因為這樣一個想像題材 而有發動的機會 所以大致上來講 我覺得現在盤面上 真的叫做百花齊放 你說哪一個族群不好 我覺得其實也沒有看",
-        "date" : "2026-05-25",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "name_distance<=1",
-          "stock_context"
-        ],
-        "score" : 90,
-        "source" : "full_video_validator",
-        "title" : "EP1104｜黃仁勳來台、美伊真和談，台股瘋創高！動能、低接都可以等到創新高，主動、被動ETF各有優點，誰是AI相對落後股？ft.題材獵人 林漢偉",
-        "video_id" : "af536dd4-0e40-4002-98d2-81fe88bf177b"
-      }
-    ],
-    "max_score" : 90,
-    "observations" : 1,
-    "updated_at" : "2026-05-31T20:19:38",
-    "video_ids" : [
-      "af536dd4-0e40-4002-98d2-81fe88bf177b"
-    ],
-    "wrong_keyword" : "金保"
   }
 }
