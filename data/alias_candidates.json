@@ -210,36 +210,5 @@
       "af536dd4-0e40-4002-98d2-81fe88bf177b"
     ],
     "wrong_keyword" : "金保"
-  },
-  "黃幫店|2344" : {
-    "confidence" : "high",
-    "correct_code" : "2344",
-    "correct_name" : "華邦電",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "兆華與股惑仔",
-        "context" : "個時候 我想達人們也講得沒有錯 就是所謂的DDR4報價比較嚴 就是沒有一直往上走了 停滯下來了 那個時候 其實台灣的記憶體股票 錢是比較流出來的 不要小看記憶體 記憶體裡面是有台灣50的大公司 南亞科黃幫店是漲到 都變成台灣50了 所以他們這個族群的錢是多的 那自然就要找到相對應的族群 那太小的族群 有時候延續性就比較不強 例如說機器人好了 我們沒有看蛋機器人 但機器人其實 如果他們全體動起來 為那量也是大的 但是因為他們那時候就零星點貨 所以也許還沒有辦法 容納這麼大的資金過去 後來是被動元件順利接棒 所以當然我們等一下也會講 機器人沒有看蛋 6月的 Computex 展 很有機會讓這個族群",
-        "date" : "2026-05-27",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "stock_context",
-          "weak_sector_match"
-        ],
-        "score" : 73,
-        "source" : "full_video_validator",
-        "title" : "EP1106｜又漲了5000點，整理持股、思考出場策略，不是急的時候！被動關不住，記憶體資金回歸，台積電分紅要搞定！ft.紀緯明 小明同學",
-        "video_id" : "391c3eb0-f683-4801-8ff2-700bfa07d648"
-      }
-    ],
-    "max_score" : 73,
-    "observations" : 1,
-    "updated_at" : "2026-05-31T19:42:35",
-    "video_ids" : [
-      "391c3eb0-f683-4801-8ff2-700bfa07d648"
-    ],
-    "wrong_keyword" : "黃幫店"
   }
 }
