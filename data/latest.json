@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-02T01:32:51",
+  "updated_at": "2026-06-02T01:55:25",
   "stocks_ranking": [
     {
       "code": "INTC",
@@ -20129,10 +20129,22 @@
           "sentiment_score": 0.45,
           "video_url": "",
           "extraction_mode": "gemini"
+        },
+        {
+          "video": "EP331 軟硬兼具",
+          "channel": "投資癮",
+          "date": "2026-05-31",
+          "text": "這一塊 反而是原本的持有者在考慮 要不要減碼或市場的震盪程度 去做一些斟酌的轉換 而且這些相關的族群 大多數都已經創了新高了 像是萬泰哥跟他的指控是萬序 在上禮拜就創了粒子新高了 而且他現在是深達科 華通跟宏觀 也都是創了新高的位置 所以這個發展就讓他自然發展 然後靜靜的去觀察 我覺得這個夢很漂亮 我覺得外太高的能源資源 是無限想像的空間 也清楚這樣馬斯克這個人 很會做夢 但是很會造夢 只是因為目前市場的資金 還是太過於需要 太過於稀缺了 我需要拿這些資金去做右側交易 或是一些左側安排 整個資產配置上面 還沒有想要把資金放到Space身上 有些朋友會用法輪激進去參與 我沒有太多的意見跟想法 現在市",
+          "matched_keyword": "華通",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
         }
       ],
-      "total_mentions": 21,
-      "sentiment_score": 0.552,
+      "total_mentions": 22,
+      "sentiment_score": 0.55,
       "daily": {
         "2026-03-27": {
           "mentions": 1,
@@ -20259,6 +20271,13 @@
           "bearish": 0,
           "neutral": 1,
           "sentiment_score": 0.45
+        },
+        "2026-05-31": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
         }
       }
     },
@@ -23654,6 +23673,315 @@
       }
     },
     {
+      "code": "NET",
+      "name": "Cloudflare",
+      "market": "US",
+      "sector": "網路安全",
+      "contexts": [
+        {
+          "video": "EP648 | 🦆",
+          "channel": "股癌",
+          "date": "2026-03-28",
+          "text": "在Markerman 也就是蓬勃這邊的人 他有提到說 根據消息人士 蘋果後來會開放這些模型 可以去串在它的series 也就是說 可能在interface這邊還是series 只是背後會去連接的是 其他家的模型 這個就符合我們對蘋果的 一個敘事邏輯 就是我認為說 它是一個在AI時代 它有點類似 像是Cloudflare這樣的一個角色 只是非常便宜的Cloudflare 它可以去 做收取過路費的行為 然後外加 因為它掌握了大量的用戶 而且它現在要去切 中低價的手機跟筆電 這代表的意思是說 它可以打進去教育市場 或是以前 就是那些比較價格敏感的客人 所以當之前全部都被你收進來之後 它雖然現在是去 向Google支付模",
+          "matched_keyword": "Cloudflare",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
+        },
+        {
+          "video": "EP653 | 🕊️",
+          "channel": "股癌",
+          "date": "2026-04-15",
+          "text": "脾氣也都用吼的 不過又怕影響到別人 哈哈順便想問您一下 美股的前五大持股 跟抱得住的原因 方便在分享即可 愛您祝您一家健康平安 目前的持股比較大 就是CPU 然後再來就是Marvel 那CPU的話 是買Intel arm 然後跟這個AMD 那再來光通也買滿多的 像Lomantin跟Cohirin 那Cloudflare也買滿多的 還有Tesla也買滿多的 那大概就是這幾檔 是我目前比較主要的持股 那當然會再變動 然後接下來說 以目前CPU的話 我覺得應該還有機會再繼續走 可是Marvel 因為他的利多 就是我買的利多 我已經出來了 所以如果這邊他沒有繼續走的話 他很快就會掉出我的主要持股 所以會去做一些調整 為什",
+          "matched_keyword": "Cloudflare",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.45,
+          "video_url": ""
+        },
+        {
+          "video": "2026/04/14 (二）海峽封鎖，美股利空出盡還是逃命？ 甲骨文ORCL大漲，閃迪進NQ100",
+          "channel": "財女珍妮",
+          "date": "2026-04-14",
+          "text": "地執行的，而不是口號。     🤍 每天早上8:30 跟大家分享投資市場大小事  🤍 訂閱Jenny 財經分析專欄：https://reurl.cc/YqOVrl  【追蹤各大平台最新資訊】  🤍 IG： / jcinsightgroup  🤍Threads：https://www.threads.net/@jcinsightgroup  🤍 FB： / jcinsightgroup  🤍 Podcast：財女珍妮：https://reurl.cc/XRWqYR  🤍 著作《美股投資學》：https://reurl.cc/A2k4eK     ✅ 美股財報分析 ✅  👉 Gemini 逼近、算力成本",
+          "matched_keyword": "NET",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
+        },
+        {
+          "video": "2026/04/13 (一）談判破裂，美國為何反封鎖荷姆茲海峽？",
+          "channel": "財女珍妮",
+          "date": "2026-04-13",
+          "text": "地執行的，而不是口號。     🤍 每天早上8:30 跟大家分享投資市場大小事  🤍 訂閱Jenny 財經分析專欄：https://reurl.cc/YqOVrl  【追蹤各大平台最新資訊】  🤍 IG： / jcinsightgroup  🤍Threads：https://www.threads.net/@jcinsightgroup  🤍 FB： / jcinsightgroup  🤍 Podcast：財女珍妮：https://reurl.cc/XRWqYR  🤍 著作《美股投資學》：https://reurl.cc/A2k4eK     ✅ 美股財報分析 ✅  👉 Gemini 逼近、算力成本",
+          "matched_keyword": "NET",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
+        },
+        {
+          "video": "2026/04/16 (四）美股創新高 ，泡沫示警？ASML財報，Tesla AI5晶片設計定案",
+          "channel": "財女珍妮",
+          "date": "2026-04-16",
+          "text": "地執行的，而不是口號。     🤍 每天早上8:30 跟大家分享投資市場大小事  🤍 訂閱Jenny 財經分析專欄：https://reurl.cc/YqOVrl  【追蹤各大平台最新資訊】  🤍 IG： / jcinsightgroup  🤍Threads：https://www.threads.net/@jcinsightgroup  🤍 FB： / jcinsightgroup  🤍 Podcast：財女珍妮：https://reurl.cc/XRWqYR  🤍 著作《美股投資學》：https://reurl.cc/A2k4eK     ✅ 美股財報分析 ✅  👉 Gemini 逼近、算力成本",
+          "matched_keyword": "NET",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
+        },
+        {
+          "video": "2026/04/15 (三）納指10連漲， 巨頭終於要動了？AVGO, MRVL, CRDO噴出",
+          "channel": "財女珍妮",
+          "date": "2026-04-15",
+          "text": "地執行的，而不是口號。     🤍 每天早上8:30 跟大家分享投資市場大小事  🤍 訂閱Jenny 財經分析專欄：https://reurl.cc/YqOVrl  【追蹤各大平台最新資訊】  🤍 IG： / jcinsightgroup  🤍Threads：https://www.threads.net/@jcinsightgroup  🤍 FB： / jcinsightgroup  🤍 Podcast：財女珍妮：https://reurl.cc/XRWqYR  🤍 著作《美股投資學》：https://reurl.cc/A2k4eK     ✅ 美股財報分析 ✅  👉 Gemini 逼近、算力成本",
+          "matched_keyword": "NET",
+          "analysis_source": "titleAndDescription",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
+        },
+        {
+          "video": "2026/05/01(五) 美國經濟靠AI撐住了！蘋果最強季度，閃迪為何崩潰？ #AAPL #SNDK #WDC",
+          "channel": "財女珍妮",
+          "date": "2026-05-01",
+          "text": "交貨 那這五份合約呢 已經涵蓋了下一個財年 超過三分之一的出貨量 現在都還在談更多的合約 所以這個合約呢 他就是要告訴我們 這些數字其實都是真的 那我們再進一步去看 為什麼AI資料中心 會需要這麼多的net 其實背後呢 有一個邏輯 就是你今天你大型語言模型 在做推論的時候 比如說 像我們現在從訓練 去轉移到AI agent 然後需要更多的 處理啊 資料的量能 也越來越大的時候 其中暫存大量 這些暫存呢 中間的這個資料呢 其實有一個叫做KV Catch的東西 他就是隨著模型越來越大 任務越來越複雜的時候 你這些資料呈現指數化的增長 你對於低延遲 高密度的 這個 儲存的需求也會越來越強 所以未來呢 其實",
+          "matched_keyword": "NET",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP658 | 🪿",
+          "channel": "股癌",
+          "date": "2026-05-02",
+          "text": "那 Alessian 雖然他 不是我喜歡的公司 那我自己也不會去持有他 那可是注意到 因為他算是在市長裡面 跟 check 一樣 就是大家都覺得說 你一定會死掉的東西 他不像是 可能像我們自己喜歡的 Cloudflare 或是 Cloudstrike Parentier 他是可能在 不管是有去結合硬體 然後或者是 因為他有很多的垂直整個 他有很多的弄好 甚至某個程度上 像以前大家去嘴 Parentier 是喜歡去嘴他說 他根本就不是軟體公司 他是一個顧問公司 那你要知道那時候 大家去講他是顧問公司 是為了要打擊他 因為那時候如果是軟體公司的話 他可以去作用 比較高的一個固執 因為可能在未來的一個金流 是可以比較有",
+          "matched_keyword": "Cloudflare",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
+          "video": "EP659 | 🦤",
+          "channel": "股癌",
+          "date": "2026-05-06",
+          "text": "的都會好 但是你已經開始注意到 特別是 我覺得像我們節目去提到 自己喜歡的軟體 這當然是不知道自吹 但你回頭看一下 像我們特別喜歡的 CrossRide 或是Planetier 或是這個 這個叫什麼 CloudFlare 就是他們在過去陣子 其實Earth Day 有兩家是陣的 直達Planetier 還是附的 還是在水下 但相較於一些Software 它可能是已經碟料 40% 50% 甚至是有碟料 60% 70%的 那他們是相對撐得住的 所以我覺得這裡面 要傳達的一個概念就是 你沒有辦法很 籠統的去聽市場的 某一種說法 然後就把 投資這件事情做好 你要有自己的一些判斷 那這個判斷不代表 你一定是會對 就是一定會",
+          "matched_keyword": "Cloudflare",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP1092｜美伊和平利多用掉了，下一個刺激市場的會是降息？投信一定要買，低位階、有權值的被動元件、老AI、電源來了！ft.股科大夫 容逸燊",
+          "channel": "兆華與股惑仔",
+          "date": "2026-05-07",
+          "text": "300了 那這個狀況下 去搶這種跌升反彈 而且是已經反彈上來的記憶體 就會稍微比較辛苦些些 因為畢竟整個族群都還是連動了 像我們節目的觀眾朋友 聽眾朋友都非常的專業 你會分得清楚 DDR4 DDR5 Net Flash 模組的哪一些是做哪一個區塊的 但是很多的朋友說實在 他搞不清楚 記憶體到底什麼是做什麼 他可能看到記憶體就買了 他也不知道說 這公司到底是做哪個區塊的 細項是什麼 所以目前如果要切入記憶體的話 建議還是往 跟AI未來會有相關的 像是899群聯 未來在做AI的硬碟 如果採用SSD的時候 那確實是會使用到 在他的Net Flash 那另外像是 這個4967實權 那麼也是股價創高了 那也是",
+          "matched_keyword": "NET",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP1092｜美伊和平利多用掉了，下一個刺激市場的會是降息？投信一定要買，低位階、有權值的被動元件、老AI、電源來了！ft.股科大夫 容逸燊",
+          "channel": "兆華與股惑仔",
+          "date": "2026-05-07",
+          "text": "他也不知道說 這公司到底是做哪個區塊的 細項是什麼 所以目前如果要切入記憶體的話 建議還是往 跟AI未來會有相關的 像是899群聯 未來在做AI的硬碟 如果採用SSD的時候 那確實是會使用到 在他的Net Flash 那另外像是 這個4967實權 那麼也是股價創高了 那也是呢 未來轉向DDR5這個區塊 也會跟這個比較有聯動的關係 那麼像三一海利市 他們也不是完全做 產能都在HBM 那在DDR5部分 也是呢 未來是下一個世代的這個產品 只是從去年的第四季到今年 台灣的DDR4 因為剛好有這樣子一個產品空窗期 所以天使地理人何可以這樣子標 那可是如果未來DDR4 逐漸轉移到DDR5的時候呢 我覺得如果",
+          "matched_keyword": "NET",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "2026/05/08(五)美股下跌還能買嗎？ #ANET #DDOG #FTNT",
+          "channel": "財女珍妮",
+          "date": "2026-05-08",
+          "text": "是 反而是大家更關注 或者是更多人持有的一家公司 不過這也不代表他的 基本面有差啦 就是有變換 我覺得我們在 之後有時間的時候 再來跟大家做分享 我們今天就先來講 這個FTNT這家公司 那FORCE NET 它是全球最大的 網路跟資安設備廠之一 所以如果你今天呢 你要去看這家公司的話 你就可以知道 公司在做什麼的 比如說我就是賣防火牆啊 SD1啊 或者是SASE 就是SASE這一類的資安的產品 那它的模式是什麼呢 你最好就是你有硬體的產品 然後再加上一個長期訂閱服務 所以你先把東西賣給人家之後 你後續還可以賺一些 維護啊教育訓練的錢啊 所以你可以把它想像成是 企業網路的這個 門位 就是這個管理員 然",
+          "matched_keyword": "Cloudflare",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.3,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
+          "video": "EP224 | 台、美股重點一次說，群聯與SanDisk財報看法，元太毛利率大幅躍升？台積電2奈米GAA架構與新應材",
+          "channel": "韭菜畢業班",
+          "date": "2026-05-10",
+          "text": "er的 這個高容量的一個需求 所以整體的產品 一起組合一起往上 去驅動的前提之下 然後再來就是 它有預估 Q4 會開始 出貨 QLC 然後再來就是 HBM 相關的產品的話 在 2026 年底 會推出 NET 的實體 它在推估 Q4 的營收的話 給出來的概賴 又是比前一季的水準 還要提高 同時毛利率的部分 是維持在了 八成相對的高檔 這個八成真的不是開玩笑 特別是還是在這一個產業 那真的是很誇張的一個數字 那再來就是說 Q4 的營收的話 可能可以推升到 80 億美元附近 當然上元 我知道每個人看的地方 都不太相同 那我這個地方 我是覺得 大概是到 80 億美元附近 所以我們可以看到 這一次 就是一起往",
+          "matched_keyword": "NET",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP328 公園槓桿伯",
+          "channel": "投資癮",
+          "date": "2026-05-10",
+          "text": "馬斯或是灰狼 我不知道 但是雷霆不管對誰 我都覺得非常的精彩 所以在配置的組合概念上面 有點像球員的感覺 而這個組合 目前還沒有很明確的東西 但是慢慢的去收集這些軟體類果 但是會開始慢慢去注意 上一拜Cloudflare下跌了20幾% 市長是說 公布的第一季財報之後 收益跟營收超過市場預期 而且還上調公司的全年展望 不過同時也宣布要裁了20%的員工 沒辦法很確定市場是反映他 市場的價格爬升到一定的程度 而來一個回檔 公司的裁員的問題 但身為一個投資人的角度 刺激市場的投資人的角度來說 Air的應用的確會影響到一些人的工作 這是肯定的 但是他不會取代所有人的工作 所以裁員的問題對員工當然不好 但對於自己本身來說 可",
+          "matched_keyword": "Cloudflare",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
+          "video": "2026/05/11(一) 財報、非農超預期，科技股再創高！#RKLB升空 #NET財報",
+          "channel": "財女珍妮",
+          "date": "2026-05-11",
+          "text": "顯的一個現象 好 那我們來看一下 上個禮拜到底是什麼東西在漲 其實禮拜五的時候表現最好的 還是我們看到的半導體 還是我們看到的科技股 那軟體其實就是有漲有跌 就是像資安股其實表現也不錯 但是公布財報的Club Fair 它的股價直接是崩跌了24% 這個是我們等一下會講到的 以及還有一些其他公布財報的公司 我們都會一一的在跟大家做分享 但是你可以看到在這一塊 最綠最利的這一塊 像是灰達上漲的1.8% Apple上漲了2.1%左右之外 AMD或者是你可以看到 Inter上漲的幅度都是超過10% 美光上漲了15% 高通上漲了8% 最近也是達到CPU的題材 數據中心AI的題材 以及博通也是上漲了4% 還有在設備股的部分",
+          "matched_keyword": "Club Fair",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.3,
+          "video_url": "",
+          "extraction_mode": "gemini",
+          "whisper_corrected": true
+        },
+        {
+          "video": "EP666 | 🍐",
+          "channel": "股癌",
+          "date": "2026-05-30",
+          "text": "它前面有一個infra的建制潮 就那時候OEM ODM超級噴 EMS噴到天上去 那後來呢就換成是software這邊 就注意到每股軟體股噴到天上去 像那時候Pientier是20幾直接噴到100多 那Cloudflare什麼翻倍 Cloudstrike就是一堆軟體都直接射出去 那後來呢 就是開始出現說AI可能會去 取代工作啊 取代軟體啊 這樣的一個論述之後 又重新的去洗牌 再次的前跑去硬體 那只是在2025那時候 最火紅的硬體其實是光通 光通是2025可能一個最大的表現 後來一路到了2026之後呢 那現在又再次的資金重新的去回到一些 所謂的老AI 老ODM OEM 然後一進了 現在我們又看到說資金跑去軟體 那我個",
+          "matched_keyword": "Cloudflare",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
+          "video": "EP331 軟硬兼具",
+          "channel": "投資癮",
+          "date": "2026-05-31",
+          "text": "就會挖挖腳 他覺得那邊很臭 或是看到車子亂串 或是沒有關注紅綠燈的時候 就不願意出門的人 所以每個人的接受度 會完全不同 但是有天早上 還是有一些文化衝擊 有天早上在外灘跑步的時候 有點在前面看到一個net散步 走著走著 他突然間旁邊尿尿 這一幕有嚇到 而仔細一看 他應該算是一個正常的人 正常的大人 可能三三幾歲左右 所以他突然間在旁邊 直接小便的這件事情 有嚇到我 我自己就把他當作文化差異的一部分 那其他像是很多的建築 有點像看歷史的感覺 我自己喜歡到一個地方 偏研究那邊科技產業 研究那邊的車子 鞋子 還有品牌 而更多時候 有看他的文化跟歷史 對我來說就是一個新的挑戰 新的初學者的感覺 也算是一個",
+          "matched_keyword": "NET",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        }
+      ],
+      "total_mentions": 17,
+      "sentiment_score": 0.544,
+      "daily": {
+        "2026-03-28": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-04-15": {
+          "mentions": 2,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 2,
+          "sentiment_score": 0.475
+        },
+        "2026-04-14": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-04-13": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-04-16": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-05-01": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-05-02": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-05-06": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-05-07": {
+          "mentions": 2,
+          "bullish": 2,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        },
+        "2026-05-08": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 1,
+          "neutral": 0,
+          "sentiment_score": 0.3
+        },
+        "2026-05-10": {
+          "mentions": 2,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 2,
+          "sentiment_score": 0.5
+        },
+        "2026-05-11": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 1,
+          "neutral": 0,
+          "sentiment_score": 0.3
+        },
+        "2026-05-30": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.7
+        },
+        "2026-05-31": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
       "code": "1409",
       "name": "新纖",
       "market": "TW",
@@ -24813,296 +25141,6 @@
           "bearish": 0,
           "neutral": 1,
           "sentiment_score": 0.5
-        }
-      }
-    },
-    {
-      "code": "NET",
-      "name": "Cloudflare",
-      "market": "US",
-      "sector": "網路安全",
-      "contexts": [
-        {
-          "video": "EP648 | 🦆",
-          "channel": "股癌",
-          "date": "2026-03-28",
-          "text": "在Markerman 也就是蓬勃這邊的人 他有提到說 根據消息人士 蘋果後來會開放這些模型 可以去串在它的series 也就是說 可能在interface這邊還是series 只是背後會去連接的是 其他家的模型 這個就符合我們對蘋果的 一個敘事邏輯 就是我認為說 它是一個在AI時代 它有點類似 像是Cloudflare這樣的一個角色 只是非常便宜的Cloudflare 它可以去 做收取過路費的行為 然後外加 因為它掌握了大量的用戶 而且它現在要去切 中低價的手機跟筆電 這代表的意思是說 它可以打進去教育市場 或是以前 就是那些比較價格敏感的客人 所以當之前全部都被你收進來之後 它雖然現在是去 向Google支付模",
-          "matched_keyword": "Cloudflare",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": ""
-        },
-        {
-          "video": "EP653 | 🕊️",
-          "channel": "股癌",
-          "date": "2026-04-15",
-          "text": "脾氣也都用吼的 不過又怕影響到別人 哈哈順便想問您一下 美股的前五大持股 跟抱得住的原因 方便在分享即可 愛您祝您一家健康平安 目前的持股比較大 就是CPU 然後再來就是Marvel 那CPU的話 是買Intel arm 然後跟這個AMD 那再來光通也買滿多的 像Lomantin跟Cohirin 那Cloudflare也買滿多的 還有Tesla也買滿多的 那大概就是這幾檔 是我目前比較主要的持股 那當然會再變動 然後接下來說 以目前CPU的話 我覺得應該還有機會再繼續走 可是Marvel 因為他的利多 就是我買的利多 我已經出來了 所以如果這邊他沒有繼續走的話 他很快就會掉出我的主要持股 所以會去做一些調整 為什",
-          "matched_keyword": "Cloudflare",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.45,
-          "video_url": ""
-        },
-        {
-          "video": "2026/04/14 (二）海峽封鎖，美股利空出盡還是逃命？ 甲骨文ORCL大漲，閃迪進NQ100",
-          "channel": "財女珍妮",
-          "date": "2026-04-14",
-          "text": "地執行的，而不是口號。     🤍 每天早上8:30 跟大家分享投資市場大小事  🤍 訂閱Jenny 財經分析專欄：https://reurl.cc/YqOVrl  【追蹤各大平台最新資訊】  🤍 IG： / jcinsightgroup  🤍Threads：https://www.threads.net/@jcinsightgroup  🤍 FB： / jcinsightgroup  🤍 Podcast：財女珍妮：https://reurl.cc/XRWqYR  🤍 著作《美股投資學》：https://reurl.cc/A2k4eK     ✅ 美股財報分析 ✅  👉 Gemini 逼近、算力成本",
-          "matched_keyword": "NET",
-          "analysis_source": "titleAndDescription",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": ""
-        },
-        {
-          "video": "2026/04/13 (一）談判破裂，美國為何反封鎖荷姆茲海峽？",
-          "channel": "財女珍妮",
-          "date": "2026-04-13",
-          "text": "地執行的，而不是口號。     🤍 每天早上8:30 跟大家分享投資市場大小事  🤍 訂閱Jenny 財經分析專欄：https://reurl.cc/YqOVrl  【追蹤各大平台最新資訊】  🤍 IG： / jcinsightgroup  🤍Threads：https://www.threads.net/@jcinsightgroup  🤍 FB： / jcinsightgroup  🤍 Podcast：財女珍妮：https://reurl.cc/XRWqYR  🤍 著作《美股投資學》：https://reurl.cc/A2k4eK     ✅ 美股財報分析 ✅  👉 Gemini 逼近、算力成本",
-          "matched_keyword": "NET",
-          "analysis_source": "titleAndDescription",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": ""
-        },
-        {
-          "video": "2026/04/16 (四）美股創新高 ，泡沫示警？ASML財報，Tesla AI5晶片設計定案",
-          "channel": "財女珍妮",
-          "date": "2026-04-16",
-          "text": "地執行的，而不是口號。     🤍 每天早上8:30 跟大家分享投資市場大小事  🤍 訂閱Jenny 財經分析專欄：https://reurl.cc/YqOVrl  【追蹤各大平台最新資訊】  🤍 IG： / jcinsightgroup  🤍Threads：https://www.threads.net/@jcinsightgroup  🤍 FB： / jcinsightgroup  🤍 Podcast：財女珍妮：https://reurl.cc/XRWqYR  🤍 著作《美股投資學》：https://reurl.cc/A2k4eK     ✅ 美股財報分析 ✅  👉 Gemini 逼近、算力成本",
-          "matched_keyword": "NET",
-          "analysis_source": "titleAndDescription",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": ""
-        },
-        {
-          "video": "2026/04/15 (三）納指10連漲， 巨頭終於要動了？AVGO, MRVL, CRDO噴出",
-          "channel": "財女珍妮",
-          "date": "2026-04-15",
-          "text": "地執行的，而不是口號。     🤍 每天早上8:30 跟大家分享投資市場大小事  🤍 訂閱Jenny 財經分析專欄：https://reurl.cc/YqOVrl  【追蹤各大平台最新資訊】  🤍 IG： / jcinsightgroup  🤍Threads：https://www.threads.net/@jcinsightgroup  🤍 FB： / jcinsightgroup  🤍 Podcast：財女珍妮：https://reurl.cc/XRWqYR  🤍 著作《美股投資學》：https://reurl.cc/A2k4eK     ✅ 美股財報分析 ✅  👉 Gemini 逼近、算力成本",
-          "matched_keyword": "NET",
-          "analysis_source": "titleAndDescription",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": ""
-        },
-        {
-          "video": "2026/05/01(五) 美國經濟靠AI撐住了！蘋果最強季度，閃迪為何崩潰？ #AAPL #SNDK #WDC",
-          "channel": "財女珍妮",
-          "date": "2026-05-01",
-          "text": "交貨 那這五份合約呢 已經涵蓋了下一個財年 超過三分之一的出貨量 現在都還在談更多的合約 所以這個合約呢 他就是要告訴我們 這些數字其實都是真的 那我們再進一步去看 為什麼AI資料中心 會需要這麼多的net 其實背後呢 有一個邏輯 就是你今天你大型語言模型 在做推論的時候 比如說 像我們現在從訓練 去轉移到AI agent 然後需要更多的 處理啊 資料的量能 也越來越大的時候 其中暫存大量 這些暫存呢 中間的這個資料呢 其實有一個叫做KV Catch的東西 他就是隨著模型越來越大 任務越來越複雜的時候 你這些資料呈現指數化的增長 你對於低延遲 高密度的 這個 儲存的需求也會越來越強 所以未來呢 其實",
-          "matched_keyword": "NET",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP658 | 🪿",
-          "channel": "股癌",
-          "date": "2026-05-02",
-          "text": "那 Alessian 雖然他 不是我喜歡的公司 那我自己也不會去持有他 那可是注意到 因為他算是在市長裡面 跟 check 一樣 就是大家都覺得說 你一定會死掉的東西 他不像是 可能像我們自己喜歡的 Cloudflare 或是 Cloudstrike Parentier 他是可能在 不管是有去結合硬體 然後或者是 因為他有很多的垂直整個 他有很多的弄好 甚至某個程度上 像以前大家去嘴 Parentier 是喜歡去嘴他說 他根本就不是軟體公司 他是一個顧問公司 那你要知道那時候 大家去講他是顧問公司 是為了要打擊他 因為那時候如果是軟體公司的話 他可以去作用 比較高的一個固執 因為可能在未來的一個金流 是可以比較有",
-          "matched_keyword": "Cloudflare",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        },
-        {
-          "video": "EP659 | 🦤",
-          "channel": "股癌",
-          "date": "2026-05-06",
-          "text": "的都會好 但是你已經開始注意到 特別是 我覺得像我們節目去提到 自己喜歡的軟體 這當然是不知道自吹 但你回頭看一下 像我們特別喜歡的 CrossRide 或是Planetier 或是這個 這個叫什麼 CloudFlare 就是他們在過去陣子 其實Earth Day 有兩家是陣的 直達Planetier 還是附的 還是在水下 但相較於一些Software 它可能是已經碟料 40% 50% 甚至是有碟料 60% 70%的 那他們是相對撐得住的 所以我覺得這裡面 要傳達的一個概念就是 你沒有辦法很 籠統的去聽市場的 某一種說法 然後就把 投資這件事情做好 你要有自己的一些判斷 那這個判斷不代表 你一定是會對 就是一定會",
-          "matched_keyword": "Cloudflare",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP1092｜美伊和平利多用掉了，下一個刺激市場的會是降息？投信一定要買，低位階、有權值的被動元件、老AI、電源來了！ft.股科大夫 容逸燊",
-          "channel": "兆華與股惑仔",
-          "date": "2026-05-07",
-          "text": "300了 那這個狀況下 去搶這種跌升反彈 而且是已經反彈上來的記憶體 就會稍微比較辛苦些些 因為畢竟整個族群都還是連動了 像我們節目的觀眾朋友 聽眾朋友都非常的專業 你會分得清楚 DDR4 DDR5 Net Flash 模組的哪一些是做哪一個區塊的 但是很多的朋友說實在 他搞不清楚 記憶體到底什麼是做什麼 他可能看到記憶體就買了 他也不知道說 這公司到底是做哪個區塊的 細項是什麼 所以目前如果要切入記憶體的話 建議還是往 跟AI未來會有相關的 像是899群聯 未來在做AI的硬碟 如果採用SSD的時候 那確實是會使用到 在他的Net Flash 那另外像是 這個4967實權 那麼也是股價創高了 那也是",
-          "matched_keyword": "NET",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP1092｜美伊和平利多用掉了，下一個刺激市場的會是降息？投信一定要買，低位階、有權值的被動元件、老AI、電源來了！ft.股科大夫 容逸燊",
-          "channel": "兆華與股惑仔",
-          "date": "2026-05-07",
-          "text": "他也不知道說 這公司到底是做哪個區塊的 細項是什麼 所以目前如果要切入記憶體的話 建議還是往 跟AI未來會有相關的 像是899群聯 未來在做AI的硬碟 如果採用SSD的時候 那確實是會使用到 在他的Net Flash 那另外像是 這個4967實權 那麼也是股價創高了 那也是呢 未來轉向DDR5這個區塊 也會跟這個比較有聯動的關係 那麼像三一海利市 他們也不是完全做 產能都在HBM 那在DDR5部分 也是呢 未來是下一個世代的這個產品 只是從去年的第四季到今年 台灣的DDR4 因為剛好有這樣子一個產品空窗期 所以天使地理人何可以這樣子標 那可是如果未來DDR4 逐漸轉移到DDR5的時候呢 我覺得如果",
-          "matched_keyword": "NET",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "2026/05/08(五)美股下跌還能買嗎？ #ANET #DDOG #FTNT",
-          "channel": "財女珍妮",
-          "date": "2026-05-08",
-          "text": "是 反而是大家更關注 或者是更多人持有的一家公司 不過這也不代表他的 基本面有差啦 就是有變換 我覺得我們在 之後有時間的時候 再來跟大家做分享 我們今天就先來講 這個FTNT這家公司 那FORCE NET 它是全球最大的 網路跟資安設備廠之一 所以如果你今天呢 你要去看這家公司的話 你就可以知道 公司在做什麼的 比如說我就是賣防火牆啊 SD1啊 或者是SASE 就是SASE這一類的資安的產品 那它的模式是什麼呢 你最好就是你有硬體的產品 然後再加上一個長期訂閱服務 所以你先把東西賣給人家之後 你後續還可以賺一些 維護啊教育訓練的錢啊 所以你可以把它想像成是 企業網路的這個 門位 就是這個管理員 然",
-          "matched_keyword": "Cloudflare",
-          "analysis_source": "whisper",
-          "sentiment": "bearish",
-          "sentiment_score": 0.3,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        },
-        {
-          "video": "EP224 | 台、美股重點一次說，群聯與SanDisk財報看法，元太毛利率大幅躍升？台積電2奈米GAA架構與新應材",
-          "channel": "韭菜畢業班",
-          "date": "2026-05-10",
-          "text": "er的 這個高容量的一個需求 所以整體的產品 一起組合一起往上 去驅動的前提之下 然後再來就是 它有預估 Q4 會開始 出貨 QLC 然後再來就是 HBM 相關的產品的話 在 2026 年底 會推出 NET 的實體 它在推估 Q4 的營收的話 給出來的概賴 又是比前一季的水準 還要提高 同時毛利率的部分 是維持在了 八成相對的高檔 這個八成真的不是開玩笑 特別是還是在這一個產業 那真的是很誇張的一個數字 那再來就是說 Q4 的營收的話 可能可以推升到 80 億美元附近 當然上元 我知道每個人看的地方 都不太相同 那我這個地方 我是覺得 大概是到 80 億美元附近 所以我們可以看到 這一次 就是一起往",
-          "matched_keyword": "NET",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP328 公園槓桿伯",
-          "channel": "投資癮",
-          "date": "2026-05-10",
-          "text": "馬斯或是灰狼 我不知道 但是雷霆不管對誰 我都覺得非常的精彩 所以在配置的組合概念上面 有點像球員的感覺 而這個組合 目前還沒有很明確的東西 但是慢慢的去收集這些軟體類果 但是會開始慢慢去注意 上一拜Cloudflare下跌了20幾% 市長是說 公布的第一季財報之後 收益跟營收超過市場預期 而且還上調公司的全年展望 不過同時也宣布要裁了20%的員工 沒辦法很確定市場是反映他 市場的價格爬升到一定的程度 而來一個回檔 公司的裁員的問題 但身為一個投資人的角度 刺激市場的投資人的角度來說 Air的應用的確會影響到一些人的工作 這是肯定的 但是他不會取代所有人的工作 所以裁員的問題對員工當然不好 但對於自己本身來說 可",
-          "matched_keyword": "Cloudflare",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        },
-        {
-          "video": "2026/05/11(一) 財報、非農超預期，科技股再創高！#RKLB升空 #NET財報",
-          "channel": "財女珍妮",
-          "date": "2026-05-11",
-          "text": "顯的一個現象 好 那我們來看一下 上個禮拜到底是什麼東西在漲 其實禮拜五的時候表現最好的 還是我們看到的半導體 還是我們看到的科技股 那軟體其實就是有漲有跌 就是像資安股其實表現也不錯 但是公布財報的Club Fair 它的股價直接是崩跌了24% 這個是我們等一下會講到的 以及還有一些其他公布財報的公司 我們都會一一的在跟大家做分享 但是你可以看到在這一塊 最綠最利的這一塊 像是灰達上漲的1.8% Apple上漲了2.1%左右之外 AMD或者是你可以看到 Inter上漲的幅度都是超過10% 美光上漲了15% 高通上漲了8% 最近也是達到CPU的題材 數據中心AI的題材 以及博通也是上漲了4% 還有在設備股的部分",
-          "matched_keyword": "Club Fair",
-          "analysis_source": "whisper",
-          "sentiment": "bearish",
-          "sentiment_score": 0.3,
-          "video_url": "",
-          "extraction_mode": "gemini",
-          "whisper_corrected": true
-        },
-        {
-          "video": "EP666 | 🍐",
-          "channel": "股癌",
-          "date": "2026-05-30",
-          "text": "它前面有一個infra的建制潮 就那時候OEM ODM超級噴 EMS噴到天上去 那後來呢就換成是software這邊 就注意到每股軟體股噴到天上去 像那時候Pientier是20幾直接噴到100多 那Cloudflare什麼翻倍 Cloudstrike就是一堆軟體都直接射出去 那後來呢 就是開始出現說AI可能會去 取代工作啊 取代軟體啊 這樣的一個論述之後 又重新的去洗牌 再次的前跑去硬體 那只是在2025那時候 最火紅的硬體其實是光通 光通是2025可能一個最大的表現 後來一路到了2026之後呢 那現在又再次的資金重新的去回到一些 所謂的老AI 老ODM OEM 然後一進了 現在我們又看到說資金跑去軟體 那我個",
-          "matched_keyword": "Cloudflare",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.7,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        }
-      ],
-      "total_mentions": 16,
-      "sentiment_score": 0.547,
-      "daily": {
-        "2026-03-28": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-04-15": {
-          "mentions": 2,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 2,
-          "sentiment_score": 0.475
-        },
-        "2026-04-14": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-04-13": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-04-16": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-05-01": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-05-02": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-05-06": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-05-07": {
-          "mentions": 2,
-          "bullish": 2,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 1.0
-        },
-        "2026-05-08": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 1,
-          "neutral": 0,
-          "sentiment_score": 0.3
-        },
-        "2026-05-10": {
-          "mentions": 2,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 2,
-          "sentiment_score": 0.5
-        },
-        "2026-05-11": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 1,
-          "neutral": 0,
-          "sentiment_score": 0.3
-        },
-        "2026-05-30": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 0.7
         }
       }
     },
@@ -34083,6 +34121,160 @@
       }
     },
     {
+      "code": "6187",
+      "name": "萬潤",
+      "market": "TW",
+      "sector": "半導體設備",
+      "contexts": [
+        {
+          "video": "EP1067｜跌不深又漲不動，清明節前的矛盾？記憶體能反彈嗎？設備要選跌深廠務還是飛天CoWos？低軌、矽光子就是顯學！ft.題材獵人 林漢偉",
+          "channel": "兆華與股惑仔",
+          "date": "2026-03-30",
+          "text": "所以目前來看 我覺得這個族群 應該沒有太大的問題 那像剛剛提到的 風策族群的話 但你一手看 就看晶圓電跟綠月光 這樣當我覺得是當中的 指標性的股票 但因為他們現在 都是外資在調節 所以股價我覺得走勢比較偏弱 那再往下來看的話 可能就可以看到有分成 基底風策 有一些可能跟所謂的 西光子風策有關的 其實萬潤也是沾到西光子 就是西光子跑到設備 跑到風策這樣子 對 所以我覺得大家可以從這方向去看 那不管說基底的風策 最近我覺得股價比較委屈 不然像浮茂科 歷程等等的 那我覺得可能特別 可以看到浮茂科 為什麼可以看浮茂科 就是因為納瓷科 得到四大咖的私募 所以大致上來講 可以知道納瓷科 未來的訂單的能見度很高",
+          "matched_keyword": "6187",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": null
+        },
+        {
+          "video": "EP1064｜美伊和談是真的？台積法說前，設備股先創新高！中國巨石壓不倒PCB？博通再助攻矽光子！來市場，是要賺錢的！ft.紀緯明 小明同學",
+          "channel": "兆華與股惑仔",
+          "date": "2026-03-25",
+          "text": "不知道該怎麼說 我是很看好設備的 那我們也知道 四月台一店 還要再開一個法說會 那法說會是這樣子 如果法說會前漲很多 那可能大家就會覺得 比較利多出勁 可是因為這一次 是法說會前有點震盪 那大家 台積電沒有創高 台積電從2000塊下來了 可是設備股就變成 大家資金的一個火力集中低 紅素今天漲停之外 萬潤君華致貿目的 真的數不完 可是如果說那麼多漲停跟創高 那現在介入會不會太慢 我覺得不會 因為當然第一個 你龍頭股你還是得選自己喜歡的 那我自己這一波 我其實最關注的竟然是萬潤 萬潤 萬潤曾經也跌到過 三四百給人家買 對啊 上個月 其實還在三百多四百 那股價今天已經要到千金股了 拉長英文 不要擔心 9",
+          "matched_keyword": "萬潤",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": ""
+        },
+        {
+          "video": "EP1064｜美伊和談是真的？台積法說前，設備股先創新高！中國巨石壓不倒PCB？博通再助攻矽光子！來市場，是要賺錢的！ft.紀緯明 小明同學",
+          "channel": "兆華與股惑仔",
+          "date": "2026-03-25",
+          "text": "會前 台積電沒動 那就不會有像那種 什麼美光財報公布 已經先漲了 公布前先漲 變成利多處境 我反而認為台積電 現在沒漲 對於這些設備 或對於整個半導體供應鏈 會是一個保護 因為龍頭大哥 反正就坐正在這 我跌到這 我在跌一定有人敢買 那這個時候設備股的股性 反而在這個時候拖銀而出 像我們講 為什麼會看萬潤 你當然Colus 一定拖離不了他 那像紅素來講的話 我覺得濕濕製程的部分 這個在2.5滴的先進封裝 跟3滴的先進封裝都會用到 特別是在現在2.5滴 用量超級大 因為大家要想像 簡單這樣講好了 Colus這件事情 就有點像是把前段的製程 再重新再封裝這個部分 再重新拿來做一次 你所有的顯影曝光 這些",
+          "matched_keyword": "萬潤",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": ""
+        },
+        {
+          "video": "EP217 | 台、美股重點一次說，Google TPU 各代產品結構與台廠供應鏈， 台積電封裝技術進展與風險，CPO量產前注意",
+          "channel": "韭菜畢業班",
+          "date": "2026-04-12",
+          "text": "該要傳過去的 這些光能量 少掉了非常大一塊 那也就是說掉 EDB 的話 你大概只剩下 79% 附近 你掉了 21% 的一個功率 所以大概我覺得 邏輯上我覺得可以跟各位這樣講 所以等於是 CPU 為什麼會這麼重要的原因 這個我覺得是一定要大家去注意到的東西 其實我們看到 相關的一些供應鏈 我們舉例像是萬潤 或是說像是 細品其實都是 我覺得大家會去注意到的東西 好 那我們今天這一集 大概把一些 我覺得可以跟各位補充的話題 再聊一下 然後如果你們對於這一集 有什麼想法的話 也歡迎可能在 YouTube 上面留言告訴我 或是說在Podcast 可能告訴我 然後提問也都OK 我覺得就是歡迎大家 當然就是帶著",
+          "matched_keyword": "萬潤",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
+        },
+        {
+          "video": "EP654 | 🌵",
+          "channel": "股癌",
+          "date": "2026-04-18",
+          "text": "歡迎收聽古癌為鄉木工本集節目由New Balance贊助 天氣開始變熱,知道大家都在看機票或是去戶外走 但在那之前要先把你的裝備給配置好 很多人出國旅遊喜歡穿設計前衛外型朝到天上的話題款 那種東西穿到像是短線題材裹 穿上去那一刻可能很爽,但走不到半天 腳底板就告訴你這筆交易爛透了 出門穿搭就像是要找旅辦 旅辦必須要找有潛力的長期標的 那我也說New Balance這套就像是那種優質資產 陪你日走三",
+          "matched_keyword": "萬潤",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.65,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
+          "video": "EP1085｜4萬現身！新政策對台積電是利多，但全體評價再提升更重要！資金流往大權值，砍PCB上游、矽光子，進記憶體、BBU？ft.題材獵人 林漢偉",
+          "channel": "兆華與股惑仔",
+          "date": "2026-04-27",
+          "text": "會是 你接下來的一些選股方向 所以目前我們從今天盤面上 大家這樣可以看到 雖然說下跌加速很多 但更集中 就是像剛剛提到的一些 半導野設備材料股票 像今天的星雲 紅塑 君華 都是出現重挫的一個情況 甚至萬潤等等 還有華景電 基本上一整頭拉股的股票 都拉回來 那CPU股票 當然是這個更嚴重的一個災情 是 對 因為連亞上全 波羅威光盛 一大堆的一些 你所熟能想的西光澤股票 今天很多都是跌領板或重挫 那也就代表說 我覺得資金在這些所謂的 漲太多的高本益股的修正 可能都大家必須要接下來要留意到了 如果他們出現了 所謂的一個高檔 投信連賣兩天三天 而且越賣越多 那我覺得如果說 你之前沒有買到半導野設備材料 或",
+          "matched_keyword": "萬潤",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.2,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
+          "video": "EP1103｜Google、輝達、AMD，一棒接一棒讓台灣漲？創收盤新高，泡沫和基本面的平衡，封測還行！投資沒有報酬率最大化，只有最適合！ft.選股教練 陳唯泰",
+          "channel": "兆華與股惑仔",
+          "date": "2026-05-22",
+          "text": "玻璃機板的這個二隊 已經有出現了 包括像是 前鋒 主球賽快到了 前鋒 群創 然後這個現在這個 左翼 歷程也出來了 然後右翼 這個是那個日月光 然後後面還有很多這種所謂的 封測的設備廠商 ok 那包括像萬潤 還有像是那個紅塑 星雲 天啊 還有那個什麼 月塵 月塵 月塵 哇 今天幾乎所有的這個 跟這種所謂先進封裝 跟玻璃機板相關的公司 甚至連ABF載板 全部都大漲 所以我真的覺得說 今天讓我覺得有一點點興奮 有點口不擇言 原因是因為 我又看到了就是 台灣的科技業 尤其是在辦導體封測業 他們的一個實力 是 坦白講 因為我不是功課的 那我們剛好昨天 有請這個曲博來上課 前天吧 曲博是好容易在網路上 一起大",
+          "matched_keyword": "萬潤",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
+          "video": "EP331 軟硬兼具",
+          "channel": "投資癮",
+          "date": "2026-05-31",
+          "text": " 除非你現在是空守者或放空者 才會開始有點擔心或琢磨這一塊 反而是原本的持有者在考慮 要不要減碼或市場的震盪程度 去做一些斟酌的轉換 而且這些相關的族群 大多數都已經創了新高了 像是萬泰哥跟他的指控是萬序 在上禮拜就創了粒子新高了 而且他現在是深達科 華通跟宏觀 也都是創了新高的位置 所以這個發展就讓他自然發展 然後靜靜的去觀察 我覺得這個夢很漂亮 我覺得外太高的能源資源 是無限想像的空間 也清楚這樣馬斯克這個人 很會做夢 但是很會造夢 只是因為目前市場的資金 還是太過於需要 太過於稀缺了 我需要拿這些資金去做右側交易 或是一些左側安排 整個資產配置上面 還沒有想要把資金放到Space身上 有些朋",
+          "matched_keyword": "萬序",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": "",
+          "extraction_mode": "gemini",
+          "whisper_corrected": true
+        }
+      ],
+      "total_mentions": 8,
+      "sentiment_score": 0.681,
+      "daily": {
+        "2026-03-30": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.7
+        },
+        "2026-03-25": {
+          "mentions": 2,
+          "bullish": 2,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        },
+        "2026-04-12": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-04-18": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.65
+        },
+        "2026-04-27": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 1,
+          "neutral": 0,
+          "sentiment_score": 0.2
+        },
+        "2026-05-22": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.7
+        },
+        "2026-05-31": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.7
+        }
+      }
+    },
+    {
       "code": "1806",
       "name": "冠軍",
       "market": "TW",
@@ -35522,140 +35714,6 @@
           "bearish": 0,
           "neutral": 1,
           "sentiment_score": 0.5
-        }
-      }
-    },
-    {
-      "code": "6187",
-      "name": "萬潤",
-      "market": "TW",
-      "sector": "半導體設備",
-      "contexts": [
-        {
-          "video": "EP1067｜跌不深又漲不動，清明節前的矛盾？記憶體能反彈嗎？設備要選跌深廠務還是飛天CoWos？低軌、矽光子就是顯學！ft.題材獵人 林漢偉",
-          "channel": "兆華與股惑仔",
-          "date": "2026-03-30",
-          "text": "所以目前來看 我覺得這個族群 應該沒有太大的問題 那像剛剛提到的 風策族群的話 但你一手看 就看晶圓電跟綠月光 這樣當我覺得是當中的 指標性的股票 但因為他們現在 都是外資在調節 所以股價我覺得走勢比較偏弱 那再往下來看的話 可能就可以看到有分成 基底風策 有一些可能跟所謂的 西光子風策有關的 其實萬潤也是沾到西光子 就是西光子跑到設備 跑到風策這樣子 對 所以我覺得大家可以從這方向去看 那不管說基底的風策 最近我覺得股價比較委屈 不然像浮茂科 歷程等等的 那我覺得可能特別 可以看到浮茂科 為什麼可以看浮茂科 就是因為納瓷科 得到四大咖的私募 所以大致上來講 可以知道納瓷科 未來的訂單的能見度很高",
-          "matched_keyword": "6187",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.7,
-          "video_url": null
-        },
-        {
-          "video": "EP1064｜美伊和談是真的？台積法說前，設備股先創新高！中國巨石壓不倒PCB？博通再助攻矽光子！來市場，是要賺錢的！ft.紀緯明 小明同學",
-          "channel": "兆華與股惑仔",
-          "date": "2026-03-25",
-          "text": "不知道該怎麼說 我是很看好設備的 那我們也知道 四月台一店 還要再開一個法說會 那法說會是這樣子 如果法說會前漲很多 那可能大家就會覺得 比較利多出勁 可是因為這一次 是法說會前有點震盪 那大家 台積電沒有創高 台積電從2000塊下來了 可是設備股就變成 大家資金的一個火力集中低 紅素今天漲停之外 萬潤君華致貿目的 真的數不完 可是如果說那麼多漲停跟創高 那現在介入會不會太慢 我覺得不會 因為當然第一個 你龍頭股你還是得選自己喜歡的 那我自己這一波 我其實最關注的竟然是萬潤 萬潤 萬潤曾經也跌到過 三四百給人家買 對啊 上個月 其實還在三百多四百 那股價今天已經要到千金股了 拉長英文 不要擔心 9",
-          "matched_keyword": "萬潤",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": ""
-        },
-        {
-          "video": "EP1064｜美伊和談是真的？台積法說前，設備股先創新高！中國巨石壓不倒PCB？博通再助攻矽光子！來市場，是要賺錢的！ft.紀緯明 小明同學",
-          "channel": "兆華與股惑仔",
-          "date": "2026-03-25",
-          "text": "會前 台積電沒動 那就不會有像那種 什麼美光財報公布 已經先漲了 公布前先漲 變成利多處境 我反而認為台積電 現在沒漲 對於這些設備 或對於整個半導體供應鏈 會是一個保護 因為龍頭大哥 反正就坐正在這 我跌到這 我在跌一定有人敢買 那這個時候設備股的股性 反而在這個時候拖銀而出 像我們講 為什麼會看萬潤 你當然Colus 一定拖離不了他 那像紅素來講的話 我覺得濕濕製程的部分 這個在2.5滴的先進封裝 跟3滴的先進封裝都會用到 特別是在現在2.5滴 用量超級大 因為大家要想像 簡單這樣講好了 Colus這件事情 就有點像是把前段的製程 再重新再封裝這個部分 再重新拿來做一次 你所有的顯影曝光 這些",
-          "matched_keyword": "萬潤",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": ""
-        },
-        {
-          "video": "EP217 | 台、美股重點一次說，Google TPU 各代產品結構與台廠供應鏈， 台積電封裝技術進展與風險，CPO量產前注意",
-          "channel": "韭菜畢業班",
-          "date": "2026-04-12",
-          "text": "該要傳過去的 這些光能量 少掉了非常大一塊 那也就是說掉 EDB 的話 你大概只剩下 79% 附近 你掉了 21% 的一個功率 所以大概我覺得 邏輯上我覺得可以跟各位這樣講 所以等於是 CPU 為什麼會這麼重要的原因 這個我覺得是一定要大家去注意到的東西 其實我們看到 相關的一些供應鏈 我們舉例像是萬潤 或是說像是 細品其實都是 我覺得大家會去注意到的東西 好 那我們今天這一集 大概把一些 我覺得可以跟各位補充的話題 再聊一下 然後如果你們對於這一集 有什麼想法的話 也歡迎可能在 YouTube 上面留言告訴我 或是說在Podcast 可能告訴我 然後提問也都OK 我覺得就是歡迎大家 當然就是帶著",
-          "matched_keyword": "萬潤",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": ""
-        },
-        {
-          "video": "EP654 | 🌵",
-          "channel": "股癌",
-          "date": "2026-04-18",
-          "text": "歡迎收聽古癌為鄉木工本集節目由New Balance贊助 天氣開始變熱,知道大家都在看機票或是去戶外走 但在那之前要先把你的裝備給配置好 很多人出國旅遊喜歡穿設計前衛外型朝到天上的話題款 那種東西穿到像是短線題材裹 穿上去那一刻可能很爽,但走不到半天 腳底板就告訴你這筆交易爛透了 出門穿搭就像是要找旅辦 旅辦必須要找有潛力的長期標的 那我也說New Balance這套就像是那種優質資產 陪你日走三",
-          "matched_keyword": "萬潤",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.65,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        },
-        {
-          "video": "EP1085｜4萬現身！新政策對台積電是利多，但全體評價再提升更重要！資金流往大權值，砍PCB上游、矽光子，進記憶體、BBU？ft.題材獵人 林漢偉",
-          "channel": "兆華與股惑仔",
-          "date": "2026-04-27",
-          "text": "會是 你接下來的一些選股方向 所以目前我們從今天盤面上 大家這樣可以看到 雖然說下跌加速很多 但更集中 就是像剛剛提到的一些 半導野設備材料股票 像今天的星雲 紅塑 君華 都是出現重挫的一個情況 甚至萬潤等等 還有華景電 基本上一整頭拉股的股票 都拉回來 那CPU股票 當然是這個更嚴重的一個災情 是 對 因為連亞上全 波羅威光盛 一大堆的一些 你所熟能想的西光澤股票 今天很多都是跌領板或重挫 那也就代表說 我覺得資金在這些所謂的 漲太多的高本益股的修正 可能都大家必須要接下來要留意到了 如果他們出現了 所謂的一個高檔 投信連賣兩天三天 而且越賣越多 那我覺得如果說 你之前沒有買到半導野設備材料 或",
-          "matched_keyword": "萬潤",
-          "analysis_source": "whisper",
-          "sentiment": "bearish",
-          "sentiment_score": 0.2,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        },
-        {
-          "video": "EP1103｜Google、輝達、AMD，一棒接一棒讓台灣漲？創收盤新高，泡沫和基本面的平衡，封測還行！投資沒有報酬率最大化，只有最適合！ft.選股教練 陳唯泰",
-          "channel": "兆華與股惑仔",
-          "date": "2026-05-22",
-          "text": "玻璃機板的這個二隊 已經有出現了 包括像是 前鋒 主球賽快到了 前鋒 群創 然後這個現在這個 左翼 歷程也出來了 然後右翼 這個是那個日月光 然後後面還有很多這種所謂的 封測的設備廠商 ok 那包括像萬潤 還有像是那個紅塑 星雲 天啊 還有那個什麼 月塵 月塵 月塵 哇 今天幾乎所有的這個 跟這種所謂先進封裝 跟玻璃機板相關的公司 甚至連ABF載板 全部都大漲 所以我真的覺得說 今天讓我覺得有一點點興奮 有點口不擇言 原因是因為 我又看到了就是 台灣的科技業 尤其是在辦導體封測業 他們的一個實力 是 坦白講 因為我不是功課的 那我們剛好昨天 有請這個曲博來上課 前天吧 曲博是好容易在網路上 一起大",
-          "matched_keyword": "萬潤",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.7,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        }
-      ],
-      "total_mentions": 7,
-      "sentiment_score": 0.679,
-      "daily": {
-        "2026-03-30": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 0.7
-        },
-        "2026-03-25": {
-          "mentions": 2,
-          "bullish": 2,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 1.0
-        },
-        "2026-04-12": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-04-18": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 0.65
-        },
-        "2026-04-27": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 1,
-          "neutral": 0,
-          "sentiment_score": 0.2
-        },
-        "2026-05-22": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 0.7
         }
       }
     },
@@ -52934,6 +52992,108 @@
       }
     },
     {
+      "code": "2441",
+      "name": "超豐",
+      "market": "TW",
+      "sector": "半導體業",
+      "contexts": [
+        {
+          "video": "EP227 | 台、美股重點一次說，載板與高毛利訂單觀察，國巨與被動元件，聯電成熟製程與電源管理IC關係",
+          "channel": "韭菜畢業班",
+          "date": "2026-05-20",
+          "text": "為他其實把 我們剛剛講到這個資本支出 他花了500億 500億裡面 他其實是有300億高達60% 他其實是要砸在FOPP的 這個產能的擴充 那其實如果我們講說 歷程的話 我們就會去看他其他子公司 像是超豐 因為他其他101到151的話 去統治一些子公司 這個我覺得大家可以 額外去注意到的東西 但這不是我們今天的一個話題 如果我們今天講到 FOPP的這件事情的話 等於是他也有買下有達的廠房 然後改成他自己的P12廠 因為P11廠的話本來就是繼續擴充 FOPP這件事情的產線 再來就是說 如果說我們看到 FOPP這件事情的話 我們會去盯的東西 另外一個比較重要的東西 就是良率 那良率的話 目前看起來歷程",
+          "matched_keyword": "超豐",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP331 軟硬兼具",
+          "channel": "投資癮",
+          "date": "2026-05-31",
+          "text": "思就是說 現在的市場雖然有極大量 但同時看到極小的賣量 而兩者相扶之下 才會造成多的 這麼容易有這些個股 直接鎖到掌聽板 而這些都還是大型全程類股 至於手上像歷程 也是連續鎖了四根掌聽板 而它的指控是超豐 也是持續創新高 而鴻海這個東西 跟零發科一樣 自己是沒有太多的桌膜在裡面 但是相對的 鴻海集團真的太大了 可以從鴻海集團裡面各股 去找一些有機會的東西 而當時連發科連續掌聽的時候 我自己也承認 我沒有在連發科的太多的桌膜 因為自己長街持有 不會比較大的圈的類股身上 主要還是台積電跟大力光身上 不過大力光在這段時間 也來到新高的位置點 雖然還沒有到歷史新高 但是歷史新高 大概只差20多%而已 那光",
+          "matched_keyword": "超豐",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        }
+      ],
+      "total_mentions": 2,
+      "sentiment_score": 0.6,
+      "daily": {
+        "2026-05-20": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-05-31": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.7
+        }
+      }
+    },
+    {
+      "code": "6190",
+      "name": "萬泰科",
+      "market": "TW",
+      "sector": "電子通路",
+      "contexts": [
+        {
+          "video": "EP227 | 台、美股重點一次說，載板與高毛利訂單觀察，國巨與被動元件，聯電成熟製程與電源管理IC關係",
+          "channel": "韭菜畢業班",
+          "date": "2026-05-20",
+          "text": "關的話題 我們可以看到 有些復甦的一個感覺出來了 特別是如果說我們講到 這些車用 我們要從哪裡去看到它的復甦 然後我就可以去看一些通路商 就IC通路商的話 最近表現還算是挺不錯的 我們舉個例子來講 像文宴 然後或者說像大連大 其實IC的通路商 都是有慢慢的突破上去了 如果說講到文宴這一家公司的話 其實我們可以看到 它法售會其實是有 把毛利率往上去調的 主要去調的原因的話 是因為它有看到一些 歐美市場 一些半導體的零組件 成本往上去走 所以同時看到一些工業 車用相關的一個話題 也是持續的發酵 確實是有單進來了 再來加上其實我們可以看到一些 車用相關的一些二級體 其實他們的最近的股價 或是說市場上面的",
+          "matched_keyword": "文宴",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini",
+          "whisper_corrected": true
+        },
+        {
+          "video": "EP331 軟硬兼具",
+          "channel": "投資癮",
+          "date": "2026-05-31",
+          "text": "該不會有太多的想法 除非你現在是空守者或放空者 才會開始有點擔心或琢磨這一塊 反而是原本的持有者在考慮 要不要減碼或市場的震盪程度 去做一些斟酌的轉換 而且這些相關的族群 大多數都已經創了新高了 像是萬泰哥跟他的指控是萬序 在上禮拜就創了粒子新高了 而且他現在是深達科 華通跟宏觀 也都是創了新高的位置 所以這個發展就讓他自然發展 然後靜靜的去觀察 我覺得這個夢很漂亮 我覺得外太高的能源資源 是無限想像的空間 也清楚這樣馬斯克這個人 很會做夢 但是很會造夢 只是因為目前市場的資金 還是太過於需要 太過於稀缺了 我需要拿這些資金去做右側交易 或是一些左側安排 整個資產配置上面 還沒有想要把資金放到Spa",
+          "matched_keyword": "萬泰哥",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.6,
+          "video_url": "",
+          "extraction_mode": "gemini",
+          "whisper_corrected": true
+        }
+      ],
+      "total_mentions": 2,
+      "sentiment_score": 0.55,
+      "daily": {
+        "2026-05-20": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-05-31": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.6
+        }
+      }
+    },
+    {
       "code": "3040",
       "name": "遠見",
       "market": "TW",
@@ -60803,37 +60963,6 @@
       }
     },
     {
-      "code": "2441",
-      "name": "超豐",
-      "market": "TW",
-      "sector": "半導體業",
-      "contexts": [
-        {
-          "video": "EP227 | 台、美股重點一次說，載板與高毛利訂單觀察，國巨與被動元件，聯電成熟製程與電源管理IC關係",
-          "channel": "韭菜畢業班",
-          "date": "2026-05-20",
-          "text": "為他其實把 我們剛剛講到這個資本支出 他花了500億 500億裡面 他其實是有300億高達60% 他其實是要砸在FOPP的 這個產能的擴充 那其實如果我們講說 歷程的話 我們就會去看他其他子公司 像是超豐 因為他其他101到151的話 去統治一些子公司 這個我覺得大家可以 額外去注意到的東西 但這不是我們今天的一個話題 如果我們今天講到 FOPP的這件事情的話 等於是他也有買下有達的廠房 然後改成他自己的P12廠 因為P11廠的話本來就是繼續擴充 FOPP這件事情的產線 再來就是說 如果說我們看到 FOPP這件事情的話 我們會去盯的東西 另外一個比較重要的東西 就是良率 那良率的話 目前看起來歷程",
-          "matched_keyword": "超豐",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        }
-      ],
-      "total_mentions": 1,
-      "sentiment_score": 0.5,
-      "daily": {
-        "2026-05-20": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        }
-      }
-    },
-    {
       "code": "8183",
       "name": "精星",
       "market": "TW",
@@ -60862,38 +60991,6 @@
           "bearish": 0,
           "neutral": 0,
           "sentiment_score": 0.7
-        }
-      }
-    },
-    {
-      "code": "6190",
-      "name": "萬泰科",
-      "market": "TW",
-      "sector": "電子通路",
-      "contexts": [
-        {
-          "video": "EP227 | 台、美股重點一次說，載板與高毛利訂單觀察，國巨與被動元件，聯電成熟製程與電源管理IC關係",
-          "channel": "韭菜畢業班",
-          "date": "2026-05-20",
-          "text": "關的話題 我們可以看到 有些復甦的一個感覺出來了 特別是如果說我們講到 這些車用 我們要從哪裡去看到它的復甦 然後我就可以去看一些通路商 就IC通路商的話 最近表現還算是挺不錯的 我們舉個例子來講 像文宴 然後或者說像大連大 其實IC的通路商 都是有慢慢的突破上去了 如果說講到文宴這一家公司的話 其實我們可以看到 它法售會其實是有 把毛利率往上去調的 主要去調的原因的話 是因為它有看到一些 歐美市場 一些半導體的零組件 成本往上去走 所以同時看到一些工業 車用相關的一個話題 也是持續的發酵 確實是有單進來了 再來加上其實我們可以看到一些 車用相關的一些二級體 其實他們的最近的股價 或是說市場上面的",
-          "matched_keyword": "文宴",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "gemini",
-          "whisper_corrected": true
-        }
-      ],
-      "total_mentions": 1,
-      "sentiment_score": 0.5,
-      "daily": {
-        "2026-05-20": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
         }
       }
     },
@@ -62002,7 +62099,7 @@
     {
       "sector": "半導體業",
       "market": "TW",
-      "total_mentions": 97,
+      "total_mentions": 98,
       "stock_codes": [
         "4919",
         "8016",
@@ -62021,6 +62118,7 @@
         "2329",
         "6526",
         "4961",
+        "2441",
         "3686",
         "5269",
         "6719",
@@ -62030,8 +62128,7 @@
         "2436",
         "7769",
         "3592",
-        "6789",
-        "2441"
+        "6789"
       ]
     },
     {
@@ -62133,7 +62230,7 @@
     {
       "sector": "PCB",
       "market": "TW",
-      "total_mentions": 72,
+      "total_mentions": 73,
       "stock_codes": [
         "8358",
         "2313",
@@ -62605,6 +62702,18 @@
       ]
     },
     {
+      "sector": "網路安全",
+      "market": "US",
+      "total_mentions": 22,
+      "stock_codes": [
+        "NET",
+        "ZS",
+        "CRWD",
+        "OKTA",
+        "FTNT"
+      ]
+    },
+    {
       "sector": "光通訊",
       "market": "US",
       "total_mentions": 22,
@@ -62625,18 +62734,6 @@
         "HUM",
         "CVS",
         "CI"
-      ]
-    },
-    {
-      "sector": "網路安全",
-      "market": "US",
-      "total_mentions": 21,
-      "stock_codes": [
-        "NET",
-        "ZS",
-        "CRWD",
-        "OKTA",
-        "FTNT"
       ]
     },
     {
@@ -62864,6 +62961,15 @@
     },
     {
       "sector": "半導體設備",
+      "market": "TW",
+      "total_mentions": 13,
+      "stock_codes": [
+        "6187",
+        "3131"
+      ]
+    },
+    {
+      "sector": "半導體設備",
       "market": "US",
       "total_mentions": 13,
       "stock_codes": [
@@ -62872,6 +62978,20 @@
         "AMAT",
         "LRCX",
         "ONTO"
+      ]
+    },
+    {
+      "sector": "電子通路",
+      "market": "TW",
+      "total_mentions": 13,
+      "stock_codes": [
+        "3163",
+        "6263",
+        "6190",
+        "3221",
+        "4905",
+        "3363",
+        "3095"
       ]
     },
     {
@@ -62886,15 +63006,6 @@
         "1611",
         "1623",
         "1604"
-      ]
-    },
-    {
-      "sector": "半導體設備",
-      "market": "TW",
-      "total_mentions": 12,
-      "stock_codes": [
-        "6187",
-        "3131"
       ]
     },
     {
@@ -62919,20 +63030,6 @@
         "EME",
         "PNR",
         "FAST"
-      ]
-    },
-    {
-      "sector": "電子通路",
-      "market": "TW",
-      "total_mentions": 12,
-      "stock_codes": [
-        "3163",
-        "6263",
-        "3221",
-        "4905",
-        "3363",
-        "6190",
-        "3095"
       ]
     },
     {
