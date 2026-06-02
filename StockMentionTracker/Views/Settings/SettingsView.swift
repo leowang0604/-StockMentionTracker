@@ -16,6 +16,7 @@ struct SettingsView: View {
             Form {
                 dataURLSection
                 githubSection
+                aliasReviewSection
                 extractionModeSection
                 etfFilterSection
                 dataInfoSection
@@ -30,6 +31,21 @@ struct SettingsView: View {
                     Task { await loadGlobalExtractionMode() }
                 }
             }
+        }
+    }
+
+    private var aliasReviewSection: some View {
+        Section {
+            NavigationLink {
+                AliasReviewView()
+            } label: {
+                Label("Alias 候選審核", systemImage: "checklist")
+            }
+            .disabled(!appState.hasGitHubConfig)
+        } header: {
+            Text("Whisper 錯字學習")
+        } footer: {
+            Text("人工確認 Gemini 建議。接受後才會套用到後續掃描；拒絕後不再重複顯示相同建議。")
         }
     }
 

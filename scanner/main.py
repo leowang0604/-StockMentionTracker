@@ -52,6 +52,7 @@ TW_INDUSTRY_CACHE_FILE = Path(__file__).parent.parent / "data" / "tw_industry_ca
 ETF_NAMES_CACHE_FILE   = Path(__file__).parent.parent / "data" / "etf_names_cache.json"
 LEARNED_ALIASES_FILE = Path(__file__).parent.parent / "data" / "learned_aliases.json"
 ALIAS_CANDIDATES_FILE = Path(__file__).parent.parent / "data" / "alias_candidates.json"
+REJECTED_ALIASES_FILE = Path(__file__).parent.parent / "data" / "rejected_aliases.json"
 GEMINI_USAGE_FILE    = Path(__file__).parent.parent / "data" / "gemini_usage.json"
 _SKIP_LOG_DIR        = Path(__file__).parent.parent / "data"
 
@@ -274,6 +275,17 @@ def _load_alias_candidates() -> dict[str, dict]:
     return {}
 
 
+def _load_rejected_aliases() -> dict[str, dict]:
+    """Load manually rejected Whisper correction candidates."""
+    try:
+        if REJECTED_ALIASES_FILE.exists():
+            data = json.loads(REJECTED_ALIASES_FILE.read_text(encoding="utf-8"))
+            return data if isinstance(data, dict) else {}
+    except Exception:
+        pass
+    return {}
+
+
 def _alias_candidate_score(
     wrong_keyword: str,
     correct_code: str,
@@ -360,6 +372,7 @@ def _record_alias_candidate(
         or wrong_keyword in STOCK_DICT
         or correct_code not in CODE_TO_NAME
         or canonical_name != correct_name
+        or f"{wrong_keyword}|{correct_code}" in _load_rejected_aliases()
     ):
         return
 

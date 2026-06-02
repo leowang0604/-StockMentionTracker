@@ -11,6 +11,11 @@ actor GitHubService {
         let sha: String
     }
 
+    struct JSONFile<Value: Codable> {
+        let value: Value
+        let sha: String?
+    }
+
     /// Read sources.json from GitHub repo
     func fetchSources(repo: String, pat: String) async throws -> (config: SourcesConfig, sha: String) {
         let url = try apiURL(repo: repo, path: "scanner/sources.json")
@@ -53,6 +58,76 @@ actor GitHubService {
             "content": base64Content,
             "sha": sha
         ]
+        request.httpBody = try JSONSerialization.data(withJSONObject: body)
+
+        let (_, response) = try await URLSession.shared.data(for: request)
+        guard let httpResponse = response as? HTTPURLResponse,
+              (200...201).contains(httpResponse.statusCode) else {
+            let code = (response as? HTTPURLResponse)?.statusCode ?? -1
+            throw GitHubError.saveFailedWithCode(code)
+        }
+    }
+
+    /// Read a JSON file from the configured GitHub repo.
+    func fetchJSON<Value: Codable>(
+        _ type: Value.Type,
+        repo: String,
+        pat: String,
+        path: String,
+        defaultValue: Value? = nil
+    ) async throws -> JSONFile<Value> {
+        let url = try apiURL(repo: repo, path: path)
+        var request = URLRequest(url: url)
+        request.setValue("token \(pat)", forHTTPHeaderField: "Authorization")
+        request.setValue("application/vnd.github.v3+json", forHTTPHeaderField: "Accept")
+        request.setValue("no-cache", forHTTPHeaderField: "Cache-Control")
+        request.cachePolicy = .reloadIgnoringLocalCacheData
+
+        let (data, response) = try await URLSession.shared.data(for: request)
+        let statusCode = (response as? HTTPURLResponse)?.statusCode ?? -1
+        if statusCode == 404, let defaultValue {
+            return JSONFile(value: defaultValue, sha: nil)
+        }
+        guard statusCode == 200 else {
+            throw GitHubError.notFound
+        }
+
+        let fileContent = try JSONDecoder().decode(FileContent.self, from: data)
+        let cleaned = fileContent.content.replacingOccurrences(of: "\n", with: "")
+        guard let contentData = Data(base64Encoded: cleaned) else {
+            throw GitHubError.decodeFailed
+        }
+        return JSONFile(
+            value: try JSONDecoder().decode(Value.self, from: contentData),
+            sha: fileContent.sha
+        )
+    }
+
+    /// Create or update a JSON file in the configured GitHub repo.
+    func saveJSON<Value: Codable>(
+        _ value: Value,
+        repo: String,
+        pat: String,
+        path: String,
+        sha: String?,
+        message: String
+    ) async throws {
+        let url = try apiURL(repo: repo, path: path)
+        var request = URLRequest(url: url)
+        request.httpMethod = "PUT"
+        request.setValue("token \(pat)", forHTTPHeaderField: "Authorization")
+        request.setValue("application/vnd.github.v3+json", forHTTPHeaderField: "Accept")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
+        var body: [String: Any] = [
+            "message": message,
+            "content": try encoder.encode(value).base64EncodedString()
+        ]
+        if let sha {
+            body["sha"] = sha
+        }
         request.httpBody = try JSONSerialization.data(withJSONObject: body)
 
         let (_, response) = try await URLSession.shared.data(for: request)

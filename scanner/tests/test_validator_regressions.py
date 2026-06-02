@@ -89,12 +89,16 @@ class ValidatorRegressionTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmpdir:
             candidates_path = Path(tmpdir) / "alias_candidates.json"
             learned_path = Path(tmpdir) / "learned_aliases.json"
+            rejected_path = Path(tmpdir) / "rejected_aliases.json"
             candidates_path.write_text("{}", encoding="utf-8")
             learned_path.write_text("{}", encoding="utf-8")
+            rejected_path.write_text("{}", encoding="utf-8")
             old_candidates = self.scanner.ALIAS_CANDIDATES_FILE
             old_learned = self.scanner.LEARNED_ALIASES_FILE
+            old_rejected = self.scanner.REJECTED_ALIASES_FILE
             self.scanner.ALIAS_CANDIDATES_FILE = candidates_path
             self.scanner.LEARNED_ALIASES_FILE = learned_path
+            self.scanner.REJECTED_ALIASES_FILE = rejected_path
             try:
                 hits = self.validate(
                     {
@@ -110,6 +114,7 @@ class ValidatorRegressionTests(unittest.TestCase):
             finally:
                 self.scanner.ALIAS_CANDIDATES_FILE = old_candidates
                 self.scanner.LEARNED_ALIASES_FILE = old_learned
+                self.scanner.REJECTED_ALIASES_FILE = old_rejected
 
             self.assertEqual([hit["stock_code"] for hit in hits], ["6669"])
             candidates = json.loads(candidates_path.read_text(encoding="utf-8"))
@@ -117,6 +122,31 @@ class ValidatorRegressionTests(unittest.TestCase):
             self.assertIn("緯印|6669", candidates)
             self.assertEqual(candidates["緯印|6669"]["confidence"], "high")
             self.assertEqual(learned, {})
+
+    def test_rejected_whisper_correction_is_not_queued_again(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            candidates_path = Path(tmpdir) / "alias_candidates.json"
+            rejected_path = Path(tmpdir) / "rejected_aliases.json"
+            candidates_path.write_text("{}", encoding="utf-8")
+            rejected_path.write_text('{"紅海|2615": {}}', encoding="utf-8")
+            old_candidates = self.scanner.ALIAS_CANDIDATES_FILE
+            old_rejected = self.scanner.REJECTED_ALIASES_FILE
+            self.scanner.ALIAS_CANDIDATES_FILE = candidates_path
+            self.scanner.REJECTED_ALIASES_FILE = rejected_path
+            try:
+                self.scanner._record_alias_candidate(
+                    "紅海",
+                    "2615",
+                    "萬海",
+                    context="紅海最近上漲。",
+                    source="regression-test",
+                )
+            finally:
+                self.scanner.ALIAS_CANDIDATES_FILE = old_candidates
+                self.scanner.REJECTED_ALIASES_FILE = old_rejected
+
+            candidates = json.loads(candidates_path.read_text(encoding="utf-8"))
+            self.assertEqual(candidates, {})
 
 
 if __name__ == "__main__":
