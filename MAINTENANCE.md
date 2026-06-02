@@ -475,3 +475,32 @@ YouTube 在 GitHub Actions 的 IP 上封鎖了部分請求，這是已知限制�
 | `data/gemini_usage.json` | Gemini API 用量追蹤 |
 | `data/stocks.json` | 台股清單快取（30 天更新一次） |
 | `.github/workflows/daily_scan.yml` | GitHub Actions 排程設定 |
+# Offline Phonetic Alias Benchmark
+
+Use the offline benchmark before connecting pronunciation scoring to the
+production scanner. It reads `data/stocks.json` and curated fixtures only. It
+does not call Gemini, modify scanner output, or promote aliases.
+
+```bash
+python -m pip install -r scanner/tools/requirements-benchmark.txt
+python scanner/tools/benchmark_phonetic_aliases.py
+```
+
+The curated positive and negative cases live in:
+
+```text
+scanner/tests/fixtures/phonetic_alias_cases.json
+```
+
+Initial baseline with six confirmed Chinese Whisper variants:
+
+```text
+baseline Top-1: 3/6
+phonetic Top-1: 5/6
+baseline Top-3: 3/6
+phonetic Top-3: 6/6
+negative Top-1 failures: 0/4
+```
+
+Pronunciation should remain a candidate-ranking signal. Do not use it alone to
+promote aliases automatically.

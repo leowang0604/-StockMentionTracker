@@ -1,0 +1,66 @@
+{
+  "positive_cases": [
+    {
+      "wrong_keyword": "維印",
+      "expected_code": "6669",
+      "expected_name": "緯穎",
+      "note": "Previously observed Whisper variant"
+    },
+    {
+      "wrong_keyword": "圍影",
+      "expected_code": "6669",
+      "expected_name": "緯穎",
+      "note": "Should prefer 緯穎 over the Gemini suggestion 醫影"
+    },
+    {
+      "wrong_keyword": "尾創",
+      "expected_code": "3231",
+      "expected_name": "緯創",
+      "note": "Observed in EP1108"
+    },
+    {
+      "wrong_keyword": "黃幫店",
+      "expected_code": "2344",
+      "expected_name": "華邦電",
+      "note": "Observed Whisper variant"
+    },
+    {
+      "wrong_keyword": "光寶殼",
+      "expected_code": "2301",
+      "expected_name": "光寶科",
+      "note": "Observed Whisper variant"
+    },
+    {
+      "wrong_keyword": "台光天",
+      "expected_code": "2383",
+      "expected_name": "台光電",
+      "note": "Observed Whisper variant"
+    }
+  ],
+  "negative_cases": [
+    {
+      "wrong_keyword": "紅海",
+      "must_not_match_code": "2615",
+      "must_not_match_name": "萬海",
+      "note": "Context was likely 鴻海, not shipping stock 萬海"
+    },
+    {
+      "wrong_keyword": "美觀",
+      "must_not_match_code": "1795",
+      "must_not_match_name": "美時",
+      "note": "Context was likely 美光, not pharmaceutical stock 美時"
+    },
+    {
+      "wrong_keyword": "金保",
+      "must_not_match_code": "6133",
+      "must_not_match_name": "金橋",
+      "note": "Potential context-driven mismatch"
+    },
+    {
+      "wrong_keyword": "Nerbis",
+      "must_not_match_code": "2376",
+      "must_not_match_name": "技嘉",
+      "note": "Likely an English company mention near 技嘉, not an alias for 技嘉"
+    }
+  ]
+}
