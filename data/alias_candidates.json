@@ -198,37 +198,6 @@
     ],
     "wrong_keyword" : "台塑市保"
   },
-  "尾創|3231" : {
-    "confidence" : "high",
-    "correct_code" : "3231",
-    "correct_name" : "緯創",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "兆華與股惑仔",
-        "context" : "尤其是紅海 廣達 尾創 哇塞 你要看到這三巨頭 同時漲停 真的是非常非常罕見 營業達也漲停對不對 技嘉一度漲停 還有這個仁寶接近漲停 太誇張了 我們這些老AI全職股 輕儀色的在趙元彥之後漲停 這真的是非常非常少見",
-        "date" : "2026-05-29",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "name_distance<=1",
-          "stock_context"
-        ],
-        "score" : 90,
-        "source" : "full_video_validator",
-        "title" : "EP1108｜DELL財報爆衝、兆元宴吃飽，緯創、鴻海、廣達齊漲停，老AI變新火種！下週電腦展開跑，多頭延續到何時？ft.操盤手 黃豐凱",
-        "video_id" : "af36eacf-8c25-4895-b394-74e28a5f81e7"
-      }
-    ],
-    "max_score" : 90,
-    "observations" : 1,
-    "updated_at" : "2026-05-31T19:16:42",
-    "video_ids" : [
-      "af36eacf-8c25-4895-b394-74e28a5f81e7"
-    ],
-    "wrong_keyword" : "尾創"
-  },
   "灰膽|AMZN" : {
     "confidence" : "medium",
     "correct_code" : "AMZN",
