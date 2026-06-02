@@ -292,5 +292,36 @@
       }
     ],
     "updated_at": "2026-06-02T23:21:14"
+  },
+  "invdr|NVDA": {
+    "wrong_keyword": "invdr",
+    "correct_code": "NVDA",
+    "correct_name": "NVIDIA",
+    "confidence": "medium",
+    "max_score": 65,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "cc65e950-dd93-4d1d-a414-e73e4c732401"
+    ],
+    "evidence": [
+      {
+        "video_id": "cc65e950-dd93-4d1d-a414-e73e4c732401",
+        "channel": "投資癮",
+        "date": "2026-05-31",
+        "title": "EP331 軟硬兼具",
+        "source": "full_video_validator",
+        "score": 65,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "stock_context"
+        ],
+        "context": "候 稍微慢一點慢一點 直到我的部位降到一定程度 降到剩下成本的時候 就會先暫停看一下 重新觀察市場的變化 我自己認為 在盤整的時候 盡量不要去做加碼的動作 盤整突破 再做下一波動作 像這陣子也有討論到invdr的部分 從財報公布之後 市場連續下跌 但目前的位置還在月線附近 在長期的區域身上 沒有太大的改變 像這禮拜黃鑫新區來台灣行銷 而整個照原業的所有工資 大部分的工資點到一些代工廠 在週末的時候直接掌聽 最有趣的地方就是 掌聽的部分 在鎖價的時候 量能沒有很大 就以鴻海來說 我在盤中看到鴻海的掌聽板的價格 委託價格 依照過往的經驗判斷 應該至少幾千張 甚至幾萬張 才可以把鴻海鎖在掌聽板 但這"
+      }
+    ],
+    "phonetic_candidates": [],
+    "updated_at": "2026-06-02T23:37:39"
   }
 }
