@@ -1,9 +1,15 @@
 {
   "Zehler|ZS": {
-    "confidence": "medium",
+    "wrong_keyword": "Zehler",
     "correct_code": "ZS",
     "correct_name": "Zscaler",
+    "confidence": "medium",
+    "max_score": 65,
+    "observations": 2,
     "distinct_videos": 1,
+    "video_ids": [
+      "664a9673-8607-43b0-a5cf-ab03e4d1faf0"
+    ],
     "evidence": [
       {
         "channel": "財女珍妮",
@@ -21,13 +27,8 @@
         "video_id": "664a9673-8607-43b0-a5cf-ab03e4d1faf0"
       }
     ],
-    "max_score": 65,
-    "observations": 1,
-    "updated_at": "2026-05-31T20:59:45",
-    "video_ids": [
-      "664a9673-8607-43b0-a5cf-ab03e4d1faf0"
-    ],
-    "wrong_keyword": "Zehler"
+    "phonetic_candidates": [],
+    "updated_at": "2026-06-02T23:21:14"
   },
   "台塑市保|1301": {
     "confidence": "medium",
@@ -174,5 +175,122 @@
       }
     ],
     "updated_at": "2026-06-02T21:06:38"
+  },
+  "Vertip|VRT": {
+    "wrong_keyword": "Vertip",
+    "correct_code": "VRT",
+    "correct_name": "Vertiv",
+    "confidence": "high",
+    "max_score": 90,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "f4a134ad-943c-48c7-8cf3-08ee5bfc7e4b"
+    ],
+    "evidence": [
+      {
+        "video_id": "f4a134ad-943c-48c7-8cf3-08ee5bfc7e4b",
+        "channel": "財女珍妮",
+        "date": "2026-06-02",
+        "title": "2026/06/02(二) 一天漲6％，輝達還能繼續漲嗎？#NVDA",
+        "source": "full_video_validator",
+        "score": 90,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "stock_context"
+        ],
+        "context": "比如說像Vertip 其實在之前也非常的強勁 但是近期的股價 也是有一點休息的味道 但是如果他回測到 月線回測到季線的時候 是不是也可以在 慢慢的去做一些分皮的佈局"
+      }
+    ],
+    "phonetic_candidates": [],
+    "updated_at": "2026-06-02T22:32:03"
+  },
+  "SNAP|NTAP": {
+    "wrong_keyword": "SNAP",
+    "correct_code": "NTAP",
+    "correct_name": "NetApp",
+    "confidence": "high",
+    "max_score": 85,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "b8a9ad87-d83d-4ad9-94bf-fee01ddde4be"
+    ],
+    "evidence": [
+      {
+        "video_id": "b8a9ad87-d83d-4ad9-94bf-fee01ddde4be",
+        "channel": "財女珍妮",
+        "date": "2026-06-01",
+        "title": "2026/06/01(一) COMPUTEX出狠招，輝達還能漲嗎？",
+        "source": "full_video_validator",
+        "score": 85,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "stock_context",
+          "code_in_context"
+        ],
+        "context": "回 比如說 我可能有回測 缺口或者是 比較長期的均線 比如說月線的時候 年 10日線的時候 我再去做分批的佈局 然後先去兼一點資金 因為有資金在裡面 你才可以去關注這家公司 他未來的表現 好 另外一個SNAP 就是NTAP這家公司 這家公司也是很妙 因為過去大家可能會覺得 它是一家硬體的公司 而且它也是有歷經過 網路泡沫的嘛 那在成績了 大概有20幾年之後 股價終於回到2000年的高點了 那NTAP它是做什麼的呢 它是一家企業資料基礎 架構跟存儲的公司 它的核心 現在已經不是在做什麼 消費性的硬體 然後在賣設備 這一類 它現在主要就是幫企業 去管理保護它的 流通的資料 大量的資料 然後特別是聚"
+      }
+    ],
+    "phonetic_candidates": [],
+    "updated_at": "2026-06-02T22:40:40"
+  },
+  "馬費歐|MRVL": {
+    "wrong_keyword": "馬費歐",
+    "correct_code": "MRVL",
+    "correct_name": "Marvell",
+    "confidence": "medium",
+    "max_score": 65,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "664a9673-8607-43b0-a5cf-ab03e4d1faf0"
+    ],
+    "evidence": [
+      {
+        "video_id": "664a9673-8607-43b0-a5cf-ab03e4d1faf0",
+        "channel": "財女珍妮",
+        "date": "2026-05-28",
+        "title": "2026/05/28(四) 台積電創高，費半漲不動？",
+        "source": "full_video_validator",
+        "score": 65,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "stock_context"
+        ],
+        "context": "以讓更多人看到這個節目 支持我們持續跟大家分享 最新的財經資訊 一起在投資這條路上 持續的前進 好我今天沒有露臉 不是因為沒有人按讚 是因為早上財報有一點多 實在是有一點來不及 因為大家都知道 比如說馬費歐 Salesforce這些公司 都是蠻多人可能有持有 或者是很有興趣的公司 所以也是想要在早上 把它介紹完 然後讓大家可以在早上 上班的時間 或者是有空的時候 就可以知道發生了什麼事情 先來看一下 昨天美股收盤的表現 到窮工業指數是上漲0.4% 漲了182點 收在50644點 創下的歷史新高 所以如果今天收盤創高的話 那延續前幾天 也有創高的情況 多頭的趨勢樂觀的氛圍 是沒有太大改變的 標普"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3516",
+        "name": "亞帝歐",
+        "score": 0.488,
+        "phonetic_similarity": 0.571,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "2916",
+        "name": "滿心",
+        "score": 0.279,
+        "phonetic_similarity": 0.429,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "3339",
+        "name": "泰谷",
+        "score": 0.279,
+        "phonetic_similarity": 0.429,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-06-02T23:21:14"
   }
 }
