@@ -1,34 +1,4 @@
 {
-  "Nerbis|2376" : {
-    "confidence" : "medium",
-    "correct_code" : "2376",
-    "correct_name" : "技嘉",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "韭菜畢業班",
-        "context" : "那我們 上一集 上集有講到Nerbis的時候 其實我們 提到的一家 台股的供應鏈就是技嘉 那技嘉其實 是有跟他合作 也就是說 幫他做組裝的部分 那看起來 技嘉現在也是 一起往上去談的",
-        "date" : "2026-05-31",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "stock_context"
-        ],
-        "score" : 65,
-        "source" : "full_video_validator",
-        "title" : "EP230 | 台、美股重點一次說，Dell AI Server財報超預期，NVIDIA Computex展主軸AI PC，被動元件實際需求",
-        "video_id" : "12f46126-6bbd-4627-b0c4-de49fbd4a256"
-      }
-    ],
-    "max_score" : 65,
-    "observations" : 1,
-    "updated_at" : "2026-06-01T22:07:12",
-    "video_ids" : [
-      "12f46126-6bbd-4627-b0c4-de49fbd4a256"
-    ],
-    "wrong_keyword" : "Nerbis"
-  },
   "Zehler|ZS" : {
     "confidence" : "medium",
     "correct_code" : "ZS",
