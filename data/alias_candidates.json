@@ -211,37 +211,6 @@
     ],
     "wrong_keyword" : "發哥"
   },
-  "美觀|1795" : {
-    "confidence" : "high",
-    "correct_code" : "1795",
-    "correct_name" : "美時",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "韭菜畢業班",
-        "context" : "重視了 那當然宅板部分也是一樣 然後再來的話我們可以看到 因為我們現在講話的同時是 5月26號晚上11點53分附近 還沒有過夜 但是其實每一股有開一點點時間了 然後再來就是說 最主要的重心可以看到 像美觀的部分 其實又算是上漲了一個十幾% 就等於是跳空上漲 然後再來就是一些 低軌衛星相關的東西 或者是說像是一些 CPU相關的一些題材 其實都是持續的在網上勾引的 這個我覺得在 我們前幾次的時候 就有跟各位講過 這些東西其實我覺得算是 把市場上面的風頭 搶得還蠻多的 然後等於是台股跟美股 其實都有所表現 好 但是我覺得這個地方 每次往上去漲 然後連續四五根的前提之下的時候 我們都會請大家 就是稍微",
-        "date" : "2026-05-27",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "name_distance<=1",
-          "stock_context"
-        ],
-        "score" : 90,
-        "source" : "full_video_validator",
-        "title" : "EP229 | 台、美股重點一次說，美光HBM長約與估值重估，Google TPU帶動聯發科，功率半導體漲價與ABF、玻璃基板後勢",
-        "video_id" : "f4da052d-0438-48e5-9557-882ec4c4b080"
-      }
-    ],
-    "max_score" : 90,
-    "observations" : 1,
-    "updated_at" : "2026-05-31T19:03:18",
-    "video_ids" : [
-      "f4da052d-0438-48e5-9557-882ec4c4b080"
-    ],
-    "wrong_keyword" : "美觀"
-  },
   "臺灣50全股|0050" : {
     "confidence" : "medium",
     "correct_code" : "0050",
