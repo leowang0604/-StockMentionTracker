@@ -59,37 +59,6 @@
     ],
     "wrong_keyword" : "Zehler"
   },
-  "台光天|2383" : {
-    "confidence" : "high",
-    "correct_code" : "2383",
-    "correct_name" : "台光電",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "兆華與股惑仔",
-        "context" : "的時候 建議基本部位 那一旦長上去就變得很難追 所以你會發現到 在上個禮拜三台幣結算的時候 很多股票是破月線 甚至有破記線的 那經過也才從上禮拜四禮拜五 到今天三天而已 很多股票直接創下新高 像你看到台光天這樣的現行 上禮拜三是壓低結算 直接破了月線關卡 那今天就直接創下一個歷史的新高 所以我覺得現在的盤面上來講 就是在整個族群 沒有看到太大的敗象 任何族群都有一些 多方倫敦的機會 甚至今天你看到連中鋼 因為中鋼都漲停辦了 前一陣子是不是股東會 對 然後老闆也有點不開心是不是 好像是那個台泥被罵得比較慘 台泥 台泥 不會中鋼是台泥 台泥 對 那中鋼還好 那中鋼今天題材說 它有一個所謂超薄型的鋼",
-        "date" : "2026-05-25",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "name_distance=2",
-          "stock_context"
-        ],
-        "score" : 77,
-        "source" : "full_video_validator",
-        "title" : "EP1104｜黃仁勳來台、美伊真和談，台股瘋創高！動能、低接都可以等到創新高，主動、被動ETF各有優點，誰是AI相對落後股？ft.題材獵人 林漢偉",
-        "video_id" : "af536dd4-0e40-4002-98d2-81fe88bf177b"
-      }
-    ],
-    "max_score" : 77,
-    "observations" : 1,
-    "updated_at" : "2026-05-31T20:19:38",
-    "video_ids" : [
-      "af536dd4-0e40-4002-98d2-81fe88bf177b"
-    ],
-    "wrong_keyword" : "台光天"
-  },
   "台塑市保|1301" : {
     "confidence" : "medium",
     "correct_code" : "1301",
