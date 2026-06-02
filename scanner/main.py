@@ -26,6 +26,12 @@ from pathlib import Path
 import requests
 import yt_dlp
 
+try:
+    from pypinyin import Style, lazy_pinyin
+except ImportError:
+    Style = None
+    lazy_pinyin = None
+
 # ─────────────────────────────────────────────────────────────────────────────
 # Configuration
 # ─────────────────────────────────────────────────────────────────────────────
@@ -286,11 +292,70 @@ def _load_rejected_aliases() -> dict[str, dict]:
     return {}
 
 
+def _phonetic_key(text: str) -> str:
+    """Return tone-less Mandarin pinyin, or an empty string when unavailable."""
+    if lazy_pinyin is None or Style is None or not re.search(r"[\u3400-\u9fff]", text):
+        return ""
+    return "".join(
+        lazy_pinyin(
+            text,
+            style=Style.NORMAL,
+            errors=lambda chars: list(chars),
+        )
+    ).lower()
+
+
+def _similarity(left: str, right: str) -> float:
+    if not left or not right:
+        return 0.0
+    return 1.0 - _levenshtein(left, right) / max(len(left), len(right))
+
+
+def _phonetic_alias_candidates(wrong_keyword: str, limit: int = 3) -> list[dict]:
+    """Rank TW stock names by pronunciation for review diagnostics only."""
+    wrong_phonetic = _phonetic_key(wrong_keyword)
+    if not wrong_phonetic:
+        return []
+
+    global _PHONETIC_STOCK_INDEX
+    if _PHONETIC_STOCK_INDEX is None:
+        _PHONETIC_STOCK_INDEX = _build_phonetic_stock_index()
+
+    candidates: list[dict] = []
+    for code, name, name_phonetic in _PHONETIC_STOCK_INDEX:
+        phonetic_similarity = _similarity(wrong_phonetic, name_phonetic)
+        text_similarity = _similarity(wrong_keyword, name)
+        score = 0.35 * text_similarity + 0.65 * phonetic_similarity
+        candidates.append({
+            "code": code,
+            "name": name,
+            "score": round(score, 3),
+            "phonetic_similarity": round(phonetic_similarity, 3),
+            "text_similarity": round(text_similarity, 3),
+        })
+    return sorted(candidates, key=lambda item: (-item["score"], item["code"], item["name"]))[:limit]
+
+
+def _build_phonetic_stock_index() -> list[tuple[str, str, str]]:
+    """Build the review-only TW pronunciation index once per scanner run."""
+    if lazy_pinyin is None:
+        return []
+    index: list[tuple[str, str, str]] = []
+    for code, name in CODE_TO_NAME.items():
+        if STOCK_MARKET.get(code) != "TW" or not re.search(r"[\u3400-\u9fff]", name):
+            continue
+        phonetic = _phonetic_key(name)
+        if phonetic:
+            index.append((code, name, phonetic))
+    return index
+
+
 def _alias_candidate_score(
     wrong_keyword: str,
     correct_code: str,
     correct_name: str,
     context: str,
+    phonetic_candidates: list[dict] | None = None,
 ) -> tuple[int, list[str]]:
     """Score a proposed Whisper correction without promoting it to a permanent alias."""
     score = 0
@@ -319,6 +384,22 @@ def _alias_candidate_score(
         elif dist == 2:
             score += 12
             reasons.append("name_distance=2")
+
+    phonetic_candidates = phonetic_candidates or _phonetic_alias_candidates(wrong_keyword)
+    phonetic_codes = [candidate["code"] for candidate in phonetic_candidates]
+    if phonetic_codes and phonetic_codes[0] == correct_code:
+        score += 20
+        reasons.append("phonetic_top1")
+    elif correct_code in phonetic_codes:
+        score += 10
+        reasons.append("phonetic_top3")
+    if (
+        phonetic_candidates
+        and phonetic_candidates[0]["code"] != correct_code
+        and phonetic_candidates[0]["score"] >= 0.70
+    ):
+        score -= 15
+        reasons.append("phonetic_conflict")
 
     if _has_stock_context_evidence(
         context,
@@ -376,11 +457,13 @@ def _record_alias_candidate(
     ):
         return
 
+    phonetic_candidates = _phonetic_alias_candidates(wrong_keyword)
     score, reasons = _alias_candidate_score(
         wrong_keyword,
         correct_code,
         correct_name,
         context,
+        phonetic_candidates,
     )
     vctx = video_ctx or {}
     video_id = (vctx.get("video_id") or "").strip()
@@ -415,6 +498,7 @@ def _record_alias_candidate(
         "distinct_videos": len(video_ids),
         "video_ids": sorted(video_ids),
         "evidence": evidence[-5:],
+        "phonetic_candidates": phonetic_candidates,
         "updated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S"),
     }
     try:
@@ -1043,6 +1127,7 @@ CODE_TO_NAME: dict[str, str] = {}
 NAME_TO_CODE: dict[str, str] = {}  # reverse lookup: any known name/keyword → code
 STOCK_MARKET: dict[str, str] = {}  # code → "TW" or "US"
 STOCK_SECTOR: dict[str, str] = {}  # code → sector name
+_PHONETIC_STOCK_INDEX: list[tuple[str, str, str]] | None = None
 
 # Strong sector signals for conservative Gemini correction validation.
 # Keep this intentionally small: generic words such as AI/材料/題材 are too broad.
@@ -4602,7 +4687,7 @@ def main() -> None:
     )
 
     # ── Build dynamic stock dictionary ────────────────────────────────────
-    global STOCK_DICT, CODE_TO_NAME, NAME_TO_CODE, STOCK_MARKET, STOCK_SECTOR
+    global STOCK_DICT, CODE_TO_NAME, NAME_TO_CODE, STOCK_MARKET, STOCK_SECTOR, _PHONETIC_STOCK_INDEX
     print("[scanner] Fetching Taiwan stock list…")
     stocks = fetch_stock_list()
     print("[scanner] Fetching TW industry map…")
@@ -4615,6 +4700,7 @@ def main() -> None:
     sp500_only = [s for s in dynamic_us if s.get("sector") != "其他"]  # S&P 500 has sector
     extra_us = enrich_us_stocks_with_gemini(sp500_candidates=sp500_only)
     STOCK_DICT, CODE_TO_NAME, STOCK_MARKET, STOCK_SECTOR, NAME_TO_CODE = build_stock_dict(stocks, extra_us, dynamic_us, tw_industry_map, etf_full_names)
+    _PHONETIC_STOCK_INDEX = _build_phonetic_stock_index()
 
     # Merge cached sectors into STOCK_SECTOR, but TW_STOCK_SECTORS always wins
     cached_sectors = load_sectors_cache()
@@ -4624,6 +4710,7 @@ def main() -> None:
     us_count = sum(1 for v in STOCK_MARKET.values() if v == "US")
     tw_count = sum(1 for v in STOCK_MARKET.values() if v == "TW")
     print(f"[scanner] Stock dict ready — {len(STOCK_DICT)} keywords | TW: {tw_count}, US: {us_count}")
+    print(f"[scanner] Phonetic review index ready — {len(_PHONETIC_STOCK_INDEX)} TW names")
 
     sources, sources_config = load_sources()
     active_sources = [s for s in sources if s.get("active", True)]

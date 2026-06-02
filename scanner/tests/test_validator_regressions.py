@@ -148,6 +148,16 @@ class ValidatorRegressionTests(unittest.TestCase):
             candidates = json.loads(candidates_path.read_text(encoding="utf-8"))
             self.assertEqual(candidates, {})
 
+    def test_phonetic_review_candidates_prefer_hon_hai_for_homophone(self):
+        if self.scanner.lazy_pinyin is None:
+            self.skipTest("pypinyin is not installed")
+        self.scanner._PHONETIC_STOCK_INDEX = None
+        candidates = self.scanner._phonetic_alias_candidates("紅海")
+        self.assertEqual(candidates[0]["code"], "2317")
+        self.assertEqual(candidates[0]["name"], "鴻海")
+        _, reasons = self.scanner._alias_candidate_score("紅海", "2615", "萬海", "紅海最近上漲。")
+        self.assertIn("phonetic_conflict", reasons)
+
 
 if __name__ == "__main__":
     unittest.main()

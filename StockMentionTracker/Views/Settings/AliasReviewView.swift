@@ -82,6 +82,19 @@ struct AliasReviewView: View {
                 .font(.caption)
                 .foregroundStyle(.secondary)
 
+            if let phoneticCandidates = candidate.phoneticCandidates, !phoneticCandidates.isEmpty {
+                VStack(alignment: .leading, spacing: 3) {
+                    Text("發音接近")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                    Text(phoneticCandidates.map {
+                        "\($0.name) \($0.code) \(Int($0.score * 100))%"
+                    }.joined(separator: " · "))
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
+            }
+
             if let evidence = candidate.evidence.last {
                 if !evidence.title.isEmpty {
                     Text(evidence.title)

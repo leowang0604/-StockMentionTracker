@@ -29,7 +29,7 @@ cd -StockMentionTracker
 ### 安裝 Python 依賴
 
 ```bash
-pip install "yt-dlp>=2025.1.1" requests "youtube-transcript-api>=1.0.0" google-genai
+pip install "yt-dlp>=2025.1.1" requests "youtube-transcript-api>=1.0.0" google-genai "pypinyin>=0.53,<1"
 # 若要跑 Whisper（轉錄 Podcast 音訊）
 pip install faster-whisper==1.1.1
 ```
@@ -504,3 +504,12 @@ negative Top-1 failures: 0/4
 
 Pronunciation should remain a candidate-ranking signal. Do not use it alone to
 promote aliases automatically.
+
+The production scanner uses the same pronunciation score conservatively:
+
+- it builds a TW stock pronunciation index in memory once per scan;
+- it adds pronunciation evidence to alias-candidate confidence;
+- it stores the closest three names in `data/alias_candidates.json`;
+- the App review page shows these names for human review.
+
+Pronunciation does not automatically change detected stocks or approve aliases.

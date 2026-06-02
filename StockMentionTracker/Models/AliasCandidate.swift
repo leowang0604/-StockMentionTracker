@@ -10,6 +10,7 @@ struct AliasCandidate: Codable, Identifiable {
     let distinctVideos: Int
     let videoIDs: [String]
     let evidence: [AliasEvidence]
+    let phoneticCandidates: [PhoneticAliasCandidate]?
     let updatedAt: String
 
     var id: String { "\(wrongKeyword)|\(correctCode)" }
@@ -22,7 +23,24 @@ struct AliasCandidate: Codable, Identifiable {
         case maxScore = "max_score"
         case distinctVideos = "distinct_videos"
         case videoIDs = "video_ids"
+        case phoneticCandidates = "phonetic_candidates"
         case updatedAt = "updated_at"
+    }
+}
+
+struct PhoneticAliasCandidate: Codable, Identifiable {
+    let code: String
+    let name: String
+    let score: Double
+    let phoneticSimilarity: Double
+    let textSimilarity: Double
+
+    var id: String { code }
+
+    enum CodingKeys: String, CodingKey {
+        case code, name, score
+        case phoneticSimilarity = "phonetic_similarity"
+        case textSimilarity = "text_similarity"
     }
 }
 
