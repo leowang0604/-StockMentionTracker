@@ -1,123 +1,178 @@
 {
-  "Zehler|ZS" : {
-    "confidence" : "medium",
-    "correct_code" : "ZS",
-    "correct_name" : "Zscaler",
-    "distinct_videos" : 1,
-    "evidence" : [
+  "Zehler|ZS": {
+    "confidence": "medium",
+    "correct_code": "ZS",
+    "correct_name": "Zscaler",
+    "distinct_videos": 1,
+    "evidence": [
       {
-        "channel" : "財女珍妮",
-        "context" : " 可是軟體的部分 你說以後會不會慢慢的開始 有一些新的成長機會啊 或者是長多了 你想要去做換股的時候 你可能也會從軟體股去找 畢竟他們現在的估值 有些真的看起來都是還蠻低的 那我們先講第一家公司 就是Zehler這家公司 那他其實呢 是跟網路安全資安有關的 好那昨天呢 他大跌了大概有超過30%以上 順便也拉 就是直接把 像是Pelotov啊 CrossTrack這些呢 全部都直接拉下來 這兩家公司大概有跌了3%以上 好那為什麼 Zehler他會跌這麼多呢 你說這份財報有不好嗎 其實他的營收跟獲利 都是優於市場預期的 而且公司也有導入AI啊 然後他的累積訂單呢 其實他的AR啊 或者是他的這個 年",
-        "date" : "2026-05-28",
-        "reasons" : [
+        "channel": "財女珍妮",
+        "context": " 可是軟體的部分 你說以後會不會慢慢的開始 有一些新的成長機會啊 或者是長多了 你想要去做換股的時候 你可能也會從軟體股去找 畢竟他們現在的估值 有些真的看起來都是還蠻低的 那我們先講第一家公司 就是Zehler這家公司 那他其實呢 是跟網路安全資安有關的 好那昨天呢 他大跌了大概有超過30%以上 順便也拉 就是直接把 像是Pelotov啊 CrossTrack這些呢 全部都直接拉下來 這兩家公司大概有跌了3%以上 好那為什麼 Zehler他會跌這麼多呢 你說這份財報有不好嗎 其實他的營收跟獲利 都是優於市場預期的 而且公司也有導入AI啊 然後他的累積訂單呢 其實他的AR啊 或者是他的這個 年",
+        "date": "2026-05-28",
+        "reasons": [
           "known_stock_code",
           "code_name_match",
           "original_in_context",
           "stock_context"
         ],
-        "score" : 65,
-        "source" : "full_video_validator",
-        "title" : "2026\/05\/28(四) 台積電創高，費半漲不動？",
-        "video_id" : "664a9673-8607-43b0-a5cf-ab03e4d1faf0"
+        "score": 65,
+        "source": "full_video_validator",
+        "title": "2026/05/28(四) 台積電創高，費半漲不動？",
+        "video_id": "664a9673-8607-43b0-a5cf-ab03e4d1faf0"
       }
     ],
-    "max_score" : 65,
-    "observations" : 1,
-    "updated_at" : "2026-05-31T20:59:45",
-    "video_ids" : [
+    "max_score": 65,
+    "observations": 1,
+    "updated_at": "2026-05-31T20:59:45",
+    "video_ids": [
       "664a9673-8607-43b0-a5cf-ab03e4d1faf0"
     ],
-    "wrong_keyword" : "Zehler"
+    "wrong_keyword": "Zehler"
   },
-  "台塑市保|1301" : {
-    "confidence" : "medium",
-    "correct_code" : "1301",
-    "correct_name" : "台塑",
-    "distinct_videos" : 1,
-    "evidence" : [
+  "台塑市保|1301": {
+    "confidence": "medium",
+    "correct_code": "1301",
+    "correct_name": "台塑",
+    "distinct_videos": 1,
+    "evidence": [
       {
-        "channel" : "投資癮",
-        "context" : " 加上那個時候 美國銀行的倒閉 製造市場的恐慌 而成為當時金融類國的喜歡 所以從配息這件事情 公網的聽眾朋友應該都清楚明白 它並不是一個絕對壞事 它甚至可以逼出一些長期投資人 其實在近一點的例子 就像台塑市保一樣 南亞當時也討論到沒有配息 而逼出一些長期投資人 所以那時候才說30年河東 30年河西 製造自己的金河 而這禮拜的南亞 也來到收盤的新高了 我自己是沒有太多的動作 也沒有太多的想法 畢竟台塑市保是南亞可最大的股東 在記憶體的趨勢還沒有趨緩跟放緩之前 我都沒有太多想要變動的地方 只能持續的觀察 而再也再次證明 其實鼓勵這件事情是給大多數人喜歡的 但對於交易者來說 還是要做評估跟判斷 所以",
-        "date" : "2026-05-31",
-        "reasons" : [
+        "channel": "投資癮",
+        "context": " 加上那個時候 美國銀行的倒閉 製造市場的恐慌 而成為當時金融類國的喜歡 所以從配息這件事情 公網的聽眾朋友應該都清楚明白 它並不是一個絕對壞事 它甚至可以逼出一些長期投資人 其實在近一點的例子 就像台塑市保一樣 南亞當時也討論到沒有配息 而逼出一些長期投資人 所以那時候才說30年河東 30年河西 製造自己的金河 而這禮拜的南亞 也來到收盤的新高了 我自己是沒有太多的動作 也沒有太多的想法 畢竟台塑市保是南亞可最大的股東 在記憶體的趨勢還沒有趨緩跟放緩之前 我都沒有太多想要變動的地方 只能持續的觀察 而再也再次證明 其實鼓勵這件事情是給大多數人喜歡的 但對於交易者來說 還是要做評估跟判斷 所以",
+        "date": "2026-05-31",
+        "reasons": [
           "known_stock_code",
           "code_name_match",
           "original_in_context",
           "name_distance=2"
         ],
-        "score" : 62,
-        "source" : "full_video_validator",
-        "title" : "EP331 軟硬兼具",
-        "video_id" : "cc65e950-dd93-4d1d-a414-e73e4c732401"
+        "score": 62,
+        "source": "full_video_validator",
+        "title": "EP331 軟硬兼具",
+        "video_id": "cc65e950-dd93-4d1d-a414-e73e4c732401"
       }
     ],
-    "max_score" : 62,
-    "observations" : 2,
-    "updated_at" : "2026-06-02T01:55:25",
-    "video_ids" : [
+    "max_score": 62,
+    "observations": 2,
+    "updated_at": "2026-06-02T01:55:25",
+    "video_ids": [
       "cc65e950-dd93-4d1d-a414-e73e4c732401"
     ],
-    "wrong_keyword" : "台塑市保"
+    "wrong_keyword": "台塑市保"
   },
-  "臺灣50全股|0050" : {
-    "confidence" : "medium",
-    "correct_code" : "0050",
-    "correct_name" : "元大台灣50",
-    "distinct_videos" : 1,
-    "evidence" : [
+  "臺灣50全股|0050": {
+    "confidence": "medium",
+    "correct_code": "0050",
+    "correct_name": "元大台灣50",
+    "distinct_videos": 1,
+    "evidence": [
       {
-        "channel" : "兆華與股惑仔",
-        "context" : "不妨透過一天的方式幫你追 不管是市值型 或是說這種所謂的 不然被動是我主動式的 現在來看 我們講盤面上輪到 這些大型股在表態的時候 你只要透過一天去買 都能夠買到盤面上 輪動漲零百的股票 像剛剛提到 臺灣50全股當中 今天有很多檔也是漲零百 所以你就不會感覺到 怎麼別人股票漲零百 我都沒有 其實你去看他成份股 既然有漲停的 你心情就會好一些了 確實 但是各股各股的魅力 這個我們也明白 所以上禮拜 可能跟大家比較多的分享是 包括到今天其實也是 其實這段時間的盤 他適合右側 他也適合左側 我覺得這是一個最好的情況 怎麼會這麼說 因為他波動大 所以如果今天你是一個 右側動能派的 其實每天都有非常多的",
-        "date" : "2026-05-25",
-        "reasons" : [
+        "channel": "兆華與股惑仔",
+        "context": "不妨透過一天的方式幫你追 不管是市值型 或是說這種所謂的 不然被動是我主動式的 現在來看 我們講盤面上輪到 這些大型股在表態的時候 你只要透過一天去買 都能夠買到盤面上 輪動漲零百的股票 像剛剛提到 臺灣50全股當中 今天有很多檔也是漲零百 所以你就不會感覺到 怎麼別人股票漲零百 我都沒有 其實你去看他成份股 既然有漲停的 你心情就會好一些了 確實 但是各股各股的魅力 這個我們也明白 所以上禮拜 可能跟大家比較多的分享是 包括到今天其實也是 其實這段時間的盤 他適合右側 他也適合左側 我覺得這是一個最好的情況 怎麼會這麼說 因為他波動大 所以如果今天你是一個 右側動能派的 其實每天都有非常多的",
+        "date": "2026-05-25",
+        "reasons": [
           "known_stock_code",
           "code_name_match",
           "original_in_context",
           "stock_context"
         ],
-        "score" : 65,
-        "source" : "full_video_validator",
-        "title" : "EP1104｜黃仁勳來台、美伊真和談，台股瘋創高！動能、低接都可以等到創新高，主動、被動ETF各有優點，誰是AI相對落後股？ft.題材獵人 林漢偉",
-        "video_id" : "af536dd4-0e40-4002-98d2-81fe88bf177b"
+        "score": 65,
+        "source": "full_video_validator",
+        "title": "EP1104｜黃仁勳來台、美伊真和談，台股瘋創高！動能、低接都可以等到創新高，主動、被動ETF各有優點，誰是AI相對落後股？ft.題材獵人 林漢偉",
+        "video_id": "af536dd4-0e40-4002-98d2-81fe88bf177b"
       }
     ],
-    "max_score" : 65,
-    "observations" : 1,
-    "updated_at" : "2026-05-31T20:19:38",
-    "video_ids" : [
+    "max_score": 65,
+    "observations": 1,
+    "updated_at": "2026-05-31T20:19:38",
+    "video_ids": [
       "af536dd4-0e40-4002-98d2-81fe88bf177b"
     ],
-    "wrong_keyword" : "臺灣50全股"
+    "wrong_keyword": "臺灣50全股"
   },
-  "萬序|6187" : {
-    "confidence" : "high",
-    "correct_code" : "6187",
-    "correct_name" : "萬潤",
-    "distinct_videos" : 1,
-    "evidence" : [
+  "萬序|6187": {
+    "confidence": "high",
+    "correct_code": "6187",
+    "correct_name": "萬潤",
+    "distinct_videos": 1,
+    "evidence": [
       {
-        "channel" : "投資癮",
-        "context" : " 除非你現在是空守者或放空者 才會開始有點擔心或琢磨這一塊 反而是原本的持有者在考慮 要不要減碼或市場的震盪程度 去做一些斟酌的轉換 而且這些相關的族群 大多數都已經創了新高了 像是萬泰哥跟他的指控是萬序 在上禮拜就創了粒子新高了 而且他現在是深達科 華通跟宏觀 也都是創了新高的位置 所以這個發展就讓他自然發展 然後靜靜的去觀察 我覺得這個夢很漂亮 我覺得外太高的能源資源 是無限想像的空間 也清楚這樣馬斯克這個人 很會做夢 但是很會造夢 只是因為目前市場的資金 還是太過於需要 太過於稀缺了 我需要拿這些資金去做右側交易 或是一些左側安排 整個資產配置上面 還沒有想要把資金放到Space身上 有",
-        "date" : "2026-05-31",
-        "reasons" : [
+        "channel": "投資癮",
+        "context": " 除非你現在是空守者或放空者 才會開始有點擔心或琢磨這一塊 反而是原本的持有者在考慮 要不要減碼或市場的震盪程度 去做一些斟酌的轉換 而且這些相關的族群 大多數都已經創了新高了 像是萬泰哥跟他的指控是萬序 在上禮拜就創了粒子新高了 而且他現在是深達科 華通跟宏觀 也都是創了新高的位置 所以這個發展就讓他自然發展 然後靜靜的去觀察 我覺得這個夢很漂亮 我覺得外太高的能源資源 是無限想像的空間 也清楚這樣馬斯克這個人 很會做夢 但是很會造夢 只是因為目前市場的資金 還是太過於需要 太過於稀缺了 我需要拿這些資金去做右側交易 或是一些左側安排 整個資產配置上面 還沒有想要把資金放到Space身上 有",
+        "date": "2026-05-31",
+        "reasons": [
           "known_stock_code",
           "code_name_match",
           "original_in_context",
           "name_distance<=1",
           "stock_context"
         ],
-        "score" : 90,
-        "source" : "full_video_validator",
-        "title" : "EP331 軟硬兼具",
-        "video_id" : "cc65e950-dd93-4d1d-a414-e73e4c732401"
+        "score": 90,
+        "source": "full_video_validator",
+        "title": "EP331 軟硬兼具",
+        "video_id": "cc65e950-dd93-4d1d-a414-e73e4c732401"
       }
     ],
-    "max_score" : 90,
-    "observations" : 1,
-    "updated_at" : "2026-06-02T01:55:24",
-    "video_ids" : [
+    "max_score": 90,
+    "observations": 1,
+    "updated_at": "2026-06-02T01:55:24",
+    "video_ids": [
       "cc65e950-dd93-4d1d-a414-e73e4c732401"
     ],
-    "wrong_keyword" : "萬序"
+    "wrong_keyword": "萬序"
+  },
+  "美觀|6568": {
+    "wrong_keyword": "美觀",
+    "correct_code": "6568",
+    "correct_name": "宏觀",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "f4da052d-0438-48e5-9557-882ec4c4b080"
+    ],
+    "evidence": [
+      {
+        "video_id": "f4da052d-0438-48e5-9557-882ec4c4b080",
+        "channel": "韭菜畢業班",
+        "date": "2026-05-27",
+        "title": "EP229 | 台、美股重點一次說，美光HBM長約與估值重估，Google TPU帶動聯發科，功率半導體漲價與ABF、玻璃基板後勢",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "重視了 那當然宅板部分也是一樣 然後再來的話我們可以看到 因為我們現在講話的同時是 5月26號晚上11點53分附近 還沒有過夜 但是其實每一股有開一點點時間了 然後再來就是說 最主要的重心可以看到 像美觀的部分 其實又算是上漲了一個十幾% 就等於是跳空上漲 然後再來就是一些 低軌衛星相關的東西 或者是說像是一些 CPU相關的一些題材 其實都是持續的在網上勾引的 這個我覺得在 我們前幾次的時候 就有跟各位講過 這些東西其實我覺得算是 把市場上面的風頭 搶得還蠻多的 然後等於是台股跟美股 其實都有所表現 好 但是我覺得這個地方 每次往上去漲 然後連續四五根的前提之下的時候 我們都會請大家 就是稍微"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "6568",
+        "name": "宏觀",
+        "score": 0.5,
+        "phonetic_similarity": 0.5,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "5321",
+        "name": "美而快",
+        "score": 0.478,
+        "phonetic_similarity": 0.556,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "3285",
+        "name": "微端",
+        "score": 0.464,
+        "phonetic_similarity": 0.714,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-06-02T21:06:38"
   }
 }
