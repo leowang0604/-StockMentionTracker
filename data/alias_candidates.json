@@ -29,54 +29,6 @@
     ],
     "wrong_keyword" : "Nerbis"
   },
-  "Snowflag|SNOW" : {
-    "confidence" : "high",
-    "correct_code" : "SNOW",
-    "correct_name" : "Snowflake",
-    "distinct_videos" : 2,
-    "evidence" : [
-      {
-        "channel" : "財女珍妮",
-        "context" : "是你自己本身有沒有在用 當你有在用 讓你旁邊的人也一直在持續著 在使用AI這個工具的時候 那你就是需要大量的算力 你就是需要更多基礎建設 然後去延伸到模型跟延伸到應用 所以我們來講一下 昨天沒有講完的Snowflag這家公司 因為它昨天就是最後收盤 是大漲了36% 然後它在這一季 第一個我們在看高速成長股的時候 會看的就是隱收成長率 這個我們講過很多次 那Snowflag它這一次的隱收成長率 是達到了34% 然後是連續三季都是有加速的 之前是從大概20幾 然後到現在 然後已經變成30幾 所以如果它今天已經超過30了 表示我今天我處在的 就是一個增長非常大的產業賽道上面 那它的金調整後美股盈餘 ",
-        "date" : "2026-05-29",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "name_distance=2",
-          "stock_context"
-        ],
-        "score" : 77,
-        "source" : "full_video_validator",
-        "title" : "2026\/05\/29(五) 川普投顧再發威，DELL大漲40%",
-        "video_id" : "1a3d96ad-b00e-45bf-85b4-48b26dd1f9de"
-      },
-      {
-        "channel" : "財女珍妮",
-        "context" : "我今天 我用這種機會成本的考量 我放在別的地方 可以漲個10% 20% 我放在你這邊 可能要等兩劑 然後才會有10% 那我當然也不會 現在就把資金放進來嘛 好 我發現現在已經9點 但是如果我要再繼續講Snowflag的話 其實會有一點過長 但是我覺得Snowflag 算是昨天在軟體股裡面 表現非常好的一家公司 因為他在盤後大漲了30% 那公司營收跟獲利 其實也是持續的加速 但是我覺得最重要的一件事情是 因為他跟亞馬遜有簽訂一個 5年的合約 其實我覺得這個東西很有趣 我們明天可以再繼續講 就是因為如果你今天去看的話 其實Snowflag跟亞馬遜 跟AWS 其實本質上面 他們是有競爭的關係的 因為",
-        "date" : "2026-05-28",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "name_distance=2",
-          "stock_context"
-        ],
-        "score" : 77,
-        "source" : "full_video_validator",
-        "title" : "2026\/05\/28(四) 台積電創高，費半漲不動？",
-        "video_id" : "664a9673-8607-43b0-a5cf-ab03e4d1faf0"
-      }
-    ],
-    "max_score" : 77,
-    "observations" : 2,
-    "updated_at" : "2026-05-31T20:59:48",
-    "video_ids" : [
-      "1a3d96ad-b00e-45bf-85b4-48b26dd1f9de",
-      "664a9673-8607-43b0-a5cf-ab03e4d1faf0"
-    ],
-    "wrong_keyword" : "Snowflag"
-  },
   "Zehler|ZS" : {
     "confidence" : "medium",
     "correct_code" : "ZS",
