@@ -323,5 +323,60 @@
     ],
     "phonetic_candidates": [],
     "updated_at": "2026-06-02T23:37:39"
+  },
+  "為聖|2231": {
+    "wrong_keyword": "為聖",
+    "correct_code": "2231",
+    "correct_name": "為升",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "fd5d4766-183d-4ed9-8d68-958c50d8e730"
+    ],
+    "evidence": [
+      {
+        "video_id": "fd5d4766-183d-4ed9-8d68-958c50d8e730",
+        "channel": "股癌",
+        "date": "2026-05-30",
+        "title": "EP666 | 🍐",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "歡迎收聽古來為聖夢宮本集節目由直村秀贊助 想要在延遲這塊穩定獲利 需要直村秀的這些組合助你避開暗沉讓延遲一路漲停 第一個先講全新上市的開光小紅噴 第一眼就被他吸睛的紅色液體給吸引 簡單說這一隻是樁龍的漲停板鎖死 小紅噴細緻的霧耗水露可以在臉上形成一層保護膜 出油出汗都能確保你的樁龍維持在高檔不跳空 第一早噴完直接愛上這一罐 連我這種直男都可以發現臉今天特別亮 不過上次之前有時候做完指甲都不知道的尷尬 小紅噴一噴一"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2231",
+        "name": "為升",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "2467",
+        "name": "志聖",
+        "score": 0.663,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "2388",
+        "name": "威盛",
+        "score": 0.65,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-06-03T21:01:07"
   }
 }
