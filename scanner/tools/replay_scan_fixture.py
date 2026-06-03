@@ -3,7 +3,7 @@
 
 This is intentionally offline: no YouTube, no Whisper, and no Gemini calls.
 It imports scanner/main.py, rebuilds the stock dictionaries, runs
-recognize_stocks(), and checks must_include / must_exclude expectations.
+recognize_stocks(), and checks stock-code and matched-keyword expectations.
 """
 
 from __future__ import annotations
@@ -95,6 +95,11 @@ def run_case(scanner, case_id: str, expected: dict) -> tuple[bool, list[str]]:
             enable_phonetic_discovery=bool(expected.get("enable_phonetic_discovery")),
         ))
         codes = {hit["stock_code"] for hit in hits}
+        keywords = {
+            (hit.get("matched_keyword") or "").strip()
+            for hit in hits
+            if (hit.get("matched_keyword") or "").strip()
+        }
         candidates = json.loads(scanner.ALIAS_CANDIDATES_FILE.read_text(encoding="utf-8"))
 
     errors: list[str] = []
@@ -107,10 +112,18 @@ def run_case(scanner, case_id: str, expected: dict) -> tuple[bool, list[str]]:
     for key in expected.get("expected_candidates", []):
         if key not in candidates:
             errors.append(f"missing expected alias candidate {key}")
+    for keyword in expected.get("must_highlight", []):
+        if keyword not in keywords:
+            errors.append(f"missing expected matched_keyword {keyword!r}")
+    for keyword in expected.get("must_not_highlight", []):
+        if keyword in keywords:
+            errors.append(f"unexpected matched_keyword {keyword!r}")
 
     if errors:
         found = ", ".join(sorted(codes)) or "none"
         errors.append(f"found codes: {found}")
+        found_keywords = ", ".join(sorted(keywords)) or "none"
+        errors.append(f"found matched_keywords: {found_keywords}")
     return not errors, errors
 
 

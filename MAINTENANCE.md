@@ -552,3 +552,14 @@ scanner/tests/fixtures/expected_mentions.json
 新增 regression 的方式：先把有問題的逐字稿片段存成
 `transcripts/<case_id>.txt`，再到 `expected_mentions.json` 補上預期的
 `must_include`、`must_exclude`，以及可選的 `expected_candidates`。
+
+若要檢查 App highlight 會亮到哪個詞，可加：
+
+```json
+{
+  "must_highlight": ["聯均"],
+  "must_not_highlight": ["有一"]
+}
+```
+
+這兩個欄位檢查的是 scanner hit 裡的 `matched_keyword`。

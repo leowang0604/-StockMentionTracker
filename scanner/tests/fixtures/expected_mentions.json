@@ -3,7 +3,9 @@
     "description": "CPO 語境中，Whisper 的「聯軍」應該補到聯鈞；光聖也應被抓到。",
     "enable_phonetic_discovery": true,
     "must_include": ["3450", "6442"],
-    "must_exclude": ["4905", "9962"]
+    "must_exclude": ["4905", "9962"],
+    "must_highlight": ["聯軍", "光盛"],
+    "must_not_highlight": ["有一"]
   },
   "heshentang_context": {
     "description": "被動元件語境中，和聲堂應透過已學 alias 解析為禾伸堂。",
@@ -11,39 +13,46 @@
       "和聲堂": "3026"
     },
     "must_include": ["3026"],
-    "must_exclude": ["2207"]
+    "must_exclude": ["2207"],
+    "must_highlight": ["和聲堂"]
   },
   "phonetic_lianjun_discovery": {
     "description": "股票語境中的未知近音詞「聯均」應補當次命中並寫入候選。",
     "enable_phonetic_discovery": true,
     "must_include": ["3450"],
     "must_exclude": ["4905"],
+    "must_highlight": ["聯均"],
     "expected_candidates": ["聯均|3450"]
   },
   "non_stock_lianjun": {
     "description": "非股票語境的 AI 聯軍不應被發音 discovery 誤補為聯鈞。",
     "enable_phonetic_discovery": true,
-    "must_exclude": ["3450"]
+    "must_exclude": ["3450"],
+    "must_not_highlight": ["聯軍"]
   },
   "c3_ai_common": {
     "description": "一般 AI 伺服器語境不應被抓成 C3.ai。",
-    "must_exclude": ["AI"]
+    "must_exclude": ["AI"],
+    "must_not_highlight": ["AI", "C3.ai"]
   },
   "newpu_false_positive": {
     "description": "Whisper 的「新普生家庭」不是新普股票。",
     "enable_phonetic_discovery": true,
-    "must_exclude": ["6121"]
+    "must_exclude": ["6121"],
+    "must_not_highlight": ["新普"]
   },
   "shengyang_false_positive": {
     "description": "一般大尺寸需求討論不應被抓成昇陽半導體。",
     "enable_phonetic_discovery": true,
-    "must_exclude": ["8028"]
+    "must_exclude": ["8028"],
+    "must_not_highlight": ["昇陽半導體"]
   },
   "wantai_learned_alias": {
     "description": "人工確認後的文宴 alias 應解析為萬泰科。",
     "learned_aliases": {
       "文宴": "6190"
     },
-    "must_include": ["6190"]
+    "must_include": ["6190"],
+    "must_highlight": ["文宴"]
   }
 }
