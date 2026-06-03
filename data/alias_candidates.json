@@ -378,5 +378,420 @@
       }
     ],
     "updated_at": "2026-06-03T21:01:07"
+  },
+  "壓力|1514": {
+    "wrong_keyword": "壓力",
+    "correct_code": "1514",
+    "correct_name": "亞力",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "46e8bc5b-ad08-4f91-95cb-e3c89a845d91"
+    ],
+    "evidence": [
+      {
+        "video_id": "46e8bc5b-ad08-4f91-95cb-e3c89a845d91",
+        "channel": "韭菜畢業班",
+        "date": "2026-06-03",
+        "title": "EP231 | 台、美股重點一次說，Computex 展後各大公司說法，Marvell 800G光模組量產，AI工廠模組化後的台股供應鏈",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "工作久坐,忙碌沒喝水,連親密時都覺得尷尬有壓力嗎? 私密守護關鍵在成分與計量 葡萄王美好關係,集結頂規的曼月梅A型元花金素65毫克 與低甘露糖1000毫克,加上三大專利一生菌260億 與日本式的萃取,幫你把關尷尬異味,展現清爽氣息 每天兩包,守護你的所有美好關係 嗨大家好,我是叔叔,這裡是九彩畢業班 如果你沒追蹤我們節目的朋友的話,可以點擊一下上角 所以之後你就可以在第一線收到我們節目的官方通知 如果你今天是看YouTube的朋友的話,也可以"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "1514",
+        "name": "亞力",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "8996",
+        "name": "高力",
+        "score": 0.565,
+        "phonetic_similarity": 0.6,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "1464",
+        "name": "得力",
+        "score": 0.5,
+        "phonetic_similarity": 0.5,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-06-03T21:09:54"
+  },
+  "金像殿|2368": {
+    "wrong_keyword": "金像殿",
+    "correct_code": "2368",
+    "correct_name": "金像電",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "46e8bc5b-ad08-4f91-95cb-e3c89a845d91"
+    ],
+    "evidence": [
+      {
+        "video_id": "46e8bc5b-ad08-4f91-95cb-e3c89a845d91",
+        "channel": "韭菜畢業班",
+        "date": "2026-06-03",
+        "title": "EP231 | 台、美股重點一次說，Computex 展後各大公司說法，Marvell 800G光模組量產，AI工廠模組化後的台股供應鏈",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": " 然後毛利的部分 我覺得倒是還好 就算可能下降一點 甚至如果不降反升的話 那他就有可能 可以有一個蠻強大的 一個動能存在 目前我們還可以看到 幾件事情 就是一些擴產的話題 那擴產的話題的話 不外乎 像金像殿 或者說像是 自幫以及台藥 這些東西都是有一些 擴產的話題存在 甚至我們早期調的一些增底 只要有一些擴產存在 然後再來就是說 我們可以看到以金像殿來看的話 泰國廠的這些粵產等級 較上個季度來說的話 已經是翻倍了 然後再來就是自幫 它其實可以看到擴產的 預期其實是相對的積極的 還有看到另外一家 就是像季家這一家公司 那季家這一家公司的話 我們之前會把它跟nervous 掛鉤在一起 就是nerv"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2368",
+        "name": "金像電",
+        "score": 0.883,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "8042",
+        "name": "金山電",
+        "score": 0.604,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "2491",
+        "name": "吉祥全",
+        "score": 0.488,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-06-03T21:10:16"
+  },
+  "台藥|6274": {
+    "wrong_keyword": "台藥",
+    "correct_code": "6274",
+    "correct_name": "台燿",
+    "confidence": "high",
+    "max_score": 85,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "46e8bc5b-ad08-4f91-95cb-e3c89a845d91"
+    ],
+    "evidence": [
+      {
+        "video_id": "46e8bc5b-ad08-4f91-95cb-e3c89a845d91",
+        "channel": "韭菜畢業班",
+        "date": "2026-06-03",
+        "title": "EP231 | 台、美股重點一次說，Computex 展後各大公司說法，Marvell 800G光模組量產，AI工廠模組化後的台股供應鏈",
+        "source": "full_video_validator",
+        "score": 85,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top3",
+          "phonetic_conflict",
+          "stock_context"
+        ],
+        "context": "還好 就算可能下降一點 甚至如果不降反升的話 那他就有可能 可以有一個蠻強大的 一個動能存在 目前我們還可以看到 幾件事情 就是一些擴產的話題 那擴產的話題的話 不外乎 像金像殿 或者說像是 自幫以及台藥 這些東西都是有一些 擴產的話題存在 甚至我們早期調的一些增底 只要有一些擴產存在 然後再來就是說 我們可以看到以金像殿來看的話 泰國廠的這些粵產等級 較上個季度來說的話 已經是翻倍了 然後再來就是自幫 它其實可以看到擴產的 預期其實是相對的積極的 還有看到另外一家 就是像季家這一家公司 那季家這一家公司的話 我們之前會把它跟nervous 掛鉤在一起 就是nervous的發展下 它勢必是會存"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "4746",
+        "name": "台耀",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "6274",
+        "name": "台燿",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "2340",
+        "name": "台亞",
+        "score": 0.717,
+        "phonetic_similarity": 0.833,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-06-03T21:10:16"
+  },
+  "群一證|6005": {
+    "wrong_keyword": "群一證",
+    "correct_code": "6005",
+    "correct_name": "群益證",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "46e8bc5b-ad08-4f91-95cb-e3c89a845d91"
+    ],
+    "evidence": [
+      {
+        "video_id": "46e8bc5b-ad08-4f91-95cb-e3c89a845d91",
+        "channel": "韭菜畢業班",
+        "date": "2026-06-03",
+        "title": "EP231 | 台、美股重點一次說，Computex 展後各大公司說法，Marvell 800G光模組量產，AI工廠模組化後的台股供應鏈",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "個產業的指數化 最近的這個證券的這個指數化 它基本上是直接一直往上去 然後一直滾量一直滾量上去 那如果用一些大家比較 就是平常用的什麼技術面 它已經高檔動畫很久了 你隨便舉例好了 像是康和證、紅園證、群一證 智和證、統一證 它們基本上都是一直在往上去衝 就是很強勢 那當然這些東西不是我自己喜歡的 但我知道有一派人會是 就乾脆去把資金卡在這邊 因為成交量是一個而事實 就是大家一直滾量上去 所以手續費絕對會是越收越高 你可以看到最近有蠻多人就會PO 他們自己的那個收的稅 就替國家做了多少次 就是往上去衝 但是我覺得同樣的 他們也有可能賺到更大額的報酬 只是就是這個東西 就大家可以去注意一下 好當然"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "6005",
+        "name": "群益證",
+        "score": 0.883,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "2855",
+        "name": "統一證",
+        "score": 0.706,
+        "phonetic_similarity": 0.727,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "6016",
+        "name": "康和證",
+        "score": 0.471,
+        "phonetic_similarity": 0.545,
+        "text_similarity": 0.333
+      }
+    ],
+    "updated_at": "2026-06-03T21:10:16"
+  },
+  "光搭|2338": {
+    "wrong_keyword": "光搭",
+    "correct_code": "2338",
+    "correct_name": "光罩",
+    "confidence": "high",
+    "max_score": 90,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "12f46126-6bbd-4627-b0c4-de49fbd4a256"
+    ],
+    "evidence": [
+      {
+        "video_id": "12f46126-6bbd-4627-b0c4-de49fbd4a256",
+        "channel": "韭菜畢業班",
+        "date": "2026-05-31",
+        "title": "EP230 | 台、美股重點一次說，Dell AI Server財報超預期，NVIDIA Computex展主軸AI PC，被動元件實際需求",
+        "source": "full_video_validator",
+        "score": 90,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "stock_context"
+        ],
+        "context": "太差 當然我們可以看到 跟PCE有相關的東西 在禮拜五的時候 是一起往上去從的 然後再來就是一些 看到跟伺服器這三個字 有關係的東西 也都一起往上去走的 而且這個走其實 幾乎是收一根漲停 我們看到像 光搭 尾創機 都是久違的跳空 往上去漲 然後收漲停 再來就是華碩 其實華碩我們在 前面幾集的時候 我跟各位聊過 他法碩會的時候 其實是有透露出一點點 就是小氛圍 那個氣氛是有帶到的 但是我們看到現在 反應是蠻快的 好那我們講到 像電腦相關的東西 或是說伺服器 主動用相關的東西 我覺得一開始 可以跟各位來聊的東西 就是Dale這一家公司 那Dale這一家公司 其實我對他算是 感覺是不差的 因為其實大"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3666",
+        "name": "光耀",
+        "score": 0.663,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "2382",
+        "name": "廣達",
+        "score": 0.65,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "5381",
+        "name": "光譜",
+        "score": 0.639,
+        "phonetic_similarity": 0.714,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-06-03T21:18:35"
+  },
+  "尾創機|3231": {
+    "wrong_keyword": "尾創機",
+    "correct_code": "3231",
+    "correct_name": "緯創",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "12f46126-6bbd-4627-b0c4-de49fbd4a256"
+    ],
+    "evidence": [
+      {
+        "video_id": "12f46126-6bbd-4627-b0c4-de49fbd4a256",
+        "channel": "韭菜畢業班",
+        "date": "2026-05-31",
+        "title": "EP230 | 台、美股重點一次說，Dell AI Server財報超預期，NVIDIA Computex展主軸AI PC，被動元件實際需求",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "phonetic_top1",
+          "stock_context",
+          "weak_sector_match"
+        ],
+        "context": "當然我們可以看到 跟PCE有相關的東西 在禮拜五的時候 是一起往上去從的 然後再來就是一些 看到跟伺服器這三個字 有關係的東西 也都一起往上去走的 而且這個走其實 幾乎是收一根漲停 我們看到像 光搭 尾創機 都是久違的跳空 往上去漲 然後收漲停 再來就是華碩 其實華碩我們在 前面幾集的時候 我跟各位聊過 他法碩會的時候 其實是有透露出一點點 就是小氛圍 那個氣氛是有帶到的 但是我們看到現在 反應是蠻快的 好那我們講到 像電腦相關的東西 或是說伺服器 主動用相關的東西 我覺得一開始 可以跟各位來聊的東西 就是Dale這一家公司 那Dale這一家公司 其實我對他算是 感覺是不差的 因為其實大家 如"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3231",
+        "name": "緯創",
+        "score": 0.648,
+        "phonetic_similarity": 0.818,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "3443",
+        "name": "創意",
+        "score": 0.53,
+        "phonetic_similarity": 0.636,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "6722",
+        "name": "輝創",
+        "score": 0.53,
+        "phonetic_similarity": 0.636,
+        "text_similarity": 0.333
+      }
+    ],
+    "updated_at": "2026-06-03T21:18:35"
+  },
+  "法碩會|2357": {
+    "wrong_keyword": "法碩會",
+    "correct_code": "2357",
+    "correct_name": "華碩",
+    "confidence": "high",
+    "max_score": 72,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "12f46126-6bbd-4627-b0c4-de49fbd4a256"
+    ],
+    "evidence": [
+      {
+        "video_id": "12f46126-6bbd-4627-b0c4-de49fbd4a256",
+        "channel": "韭菜畢業班",
+        "date": "2026-05-31",
+        "title": "EP230 | 台、美股重點一次說，Dell AI Server財報超預期，NVIDIA Computex展主軸AI PC，被動元件實際需求",
+        "source": "full_video_validator",
+        "score": 72,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "phonetic_top3"
+        ],
+        "context": "個字 有關係的東西 也都一起往上去走的 而且這個走其實 幾乎是收一根漲停 我們看到像 光搭 尾創機 都是久違的跳空 往上去漲 然後收漲停 再來就是華碩 其實華碩我們在 前面幾集的時候 我跟各位聊過 他法碩會的時候 其實是有透露出一點點 就是小氛圍 那個氣氛是有帶到的 但是我們看到現在 反應是蠻快的 好那我們講到 像電腦相關的東西 或是說伺服器 主動用相關的東西 我覺得一開始 可以跟各位來聊的東西 就是Dale這一家公司 那Dale這一家公司 其實我對他算是 感覺是不差的 因為其實大家 如果說有看我們以前 做選擇群 玩得比較開心的 那一段時間的時候 其實有一家公司 也就是Dale Dale一直印"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3691",
+        "name": "碩禾",
+        "score": 0.478,
+        "phonetic_similarity": 0.556,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "2357",
+        "name": "華碩",
+        "score": 0.406,
+        "phonetic_similarity": 0.444,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "3338",
+        "name": "泰碩",
+        "score": 0.406,
+        "phonetic_similarity": 0.444,
+        "text_similarity": 0.333
+      }
+    ],
+    "updated_at": "2026-06-03T21:18:35"
+  },
+  "PMAX|2303": {
+    "wrong_keyword": "PMAX",
+    "correct_code": "2303",
+    "correct_name": "聯電",
+    "confidence": "medium",
+    "max_score": 50,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "12f46126-6bbd-4627-b0c4-de49fbd4a256"
+    ],
+    "evidence": [
+      {
+        "video_id": "12f46126-6bbd-4627-b0c4-de49fbd4a256",
+        "channel": "韭菜畢業班",
+        "date": "2026-05-31",
+        "title": "EP230 | 台、美股重點一次說，Dell AI Server財報超預期，NVIDIA Computex展主軸AI PC，被動元件實際需求",
+        "source": "full_video_validator",
+        "score": 50,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context"
+        ],
+        "context": "美股 目前的部位 其實都是 繼續卡實在這邊 然後為了就是 讓自己不要錯過 這一段比較難得的 一個行情 最近真的是 屬實算是 非常難得的行情 因為像我們前幾集 聊到的一些 可能跟聯電有相關的 一些 這種PMAX 相關的話題 或說MOSSAI 其實 二集體 他們都一起 往上去衝 我覺得大家從 股價上面的表現 應該也可以 多多少少知道 或是我們上一集 其實有聊到的一些 too quick的這些技術 這些too quick的技術 如果說接下來 他們的豐裝 繼續被重視的話 那我認為 應該還是會 蠻不錯的一個表現 雖然都 很多都已經收到天上去了 但是收到天上 這邊天上 就是天上 會不會有更多的外太公 這個"
+      }
+    ],
+    "phonetic_candidates": [],
+    "updated_at": "2026-06-03T21:18:35"
   }
 }
