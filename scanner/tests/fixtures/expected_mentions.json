@@ -1,0 +1,28 @@
+{
+  "cpo_lianjun": {
+    "description": "CPO 語境中，Whisper 的「聯軍」應該補到聯鈞；光聖也應被抓到。",
+    "enable_phonetic_discovery": true,
+    "must_include": ["3450", "6442"],
+    "must_exclude": ["4905", "9962"]
+  },
+  "heshentang_context": {
+    "description": "被動元件語境中，和聲堂應透過已學 alias 解析為禾伸堂。",
+    "learned_aliases": {
+      "和聲堂": "3026"
+    },
+    "must_include": ["3026"],
+    "must_exclude": ["2207"]
+  },
+  "phonetic_lianjun_discovery": {
+    "description": "股票語境中的未知近音詞「聯均」應補當次命中並寫入候選。",
+    "enable_phonetic_discovery": true,
+    "must_include": ["3450"],
+    "must_exclude": ["4905"],
+    "expected_candidates": ["聯均|3450"]
+  },
+  "non_stock_lianjun": {
+    "description": "非股票語境的 AI 聯軍不應被發音 discovery 誤補為聯鈞。",
+    "enable_phonetic_discovery": true,
+    "must_exclude": ["3450"]
+  }
+}

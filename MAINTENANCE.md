@@ -513,3 +513,41 @@ The production scanner uses the same pronunciation score conservatively:
 - the App review page shows these names for human review.
 
 Pronunciation does not automatically change detected stocks or approve aliases.
+
+# Offline Scanner Fixture Replay
+
+Use fixture replay when fixing Whisper aliases, missed stocks, false positives,
+or highlight/source-context regressions. It replays saved transcript snippets
+through the production scanner recognizer only. It does not download videos, run
+Whisper, call Gemini, or write real `data/alias_candidates.json`.
+
+Run all replay fixtures:
+
+```bash
+make replay
+```
+
+Run one fixture:
+
+```bash
+make replay CASE=cpo_lianjun
+```
+
+List available fixtures:
+
+```bash
+/Users/leowang/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 \
+  scanner/tools/replay_scan_fixture.py --list
+```
+
+Fixture files:
+
+```text
+scanner/tests/fixtures/transcripts/*.txt
+scanner/tests/fixtures/expected_mentions.json
+```
+
+Add a new regression by saving the problematic transcript snippet in
+`transcripts/<case_id>.txt`, then adding expected `must_include`,
+`must_exclude`, and optional `expected_candidates` entries in
+`expected_mentions.json`.
