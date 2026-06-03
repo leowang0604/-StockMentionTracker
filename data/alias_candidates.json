@@ -524,61 +524,6 @@
     ],
     "wrong_keyword" : "美觀"
   },
-  "群一證|6005" : {
-    "confidence" : "high",
-    "correct_code" : "6005",
-    "correct_name" : "群益證",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "韭菜畢業班",
-        "context" : "個產業的指數化 最近的這個證券的這個指數化 它基本上是直接一直往上去 然後一直滾量一直滾量上去 那如果用一些大家比較 就是平常用的什麼技術面 它已經高檔動畫很久了 你隨便舉例好了 像是康和證、紅園證、群一證 智和證、統一證 它們基本上都是一直在往上去衝 就是很強勢 那當然這些東西不是我自己喜歡的 但我知道有一派人會是 就乾脆去把資金卡在這邊 因為成交量是一個而事實 就是大家一直滾量上去 所以手續費絕對會是越收越高 你可以看到最近有蠻多人就會PO 他們自己的那個收的稅 就替國家做了多少次 就是往上去衝 但是我覺得同樣的 他們也有可能賺到更大額的報酬 只是就是這個東西 就大家可以去注意一下 好當然",
-        "date" : "2026-06-03",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "name_distance<=1",
-          "phonetic_top1",
-          "stock_context"
-        ],
-        "score" : 100,
-        "source" : "full_video_validator",
-        "title" : "EP231 | 台、美股重點一次說，Computex 展後各大公司說法，Marvell 800G光模組量產，AI工廠模組化後的台股供應鏈",
-        "video_id" : "46e8bc5b-ad08-4f91-95cb-e3c89a845d91"
-      }
-    ],
-    "max_score" : 100,
-    "observations" : 1,
-    "phonetic_candidates" : [
-      {
-        "code" : "6005",
-        "name" : "群益證",
-        "phonetic_similarity" : 1,
-        "score" : 0.883,
-        "text_similarity" : 0.667
-      },
-      {
-        "code" : "2855",
-        "name" : "統一證",
-        "phonetic_similarity" : 0.727,
-        "score" : 0.706,
-        "text_similarity" : 0.667
-      },
-      {
-        "code" : "6016",
-        "name" : "康和證",
-        "phonetic_similarity" : 0.545,
-        "score" : 0.471,
-        "text_similarity" : 0.333
-      }
-    ],
-    "updated_at" : "2026-06-03T21:10:16",
-    "video_ids" : [
-      "46e8bc5b-ad08-4f91-95cb-e3c89a845d91"
-    ],
-    "wrong_keyword" : "群一證"
-  },
   "臺灣50全股|0050" : {
     "confidence" : "medium",
     "correct_code" : "0050",
