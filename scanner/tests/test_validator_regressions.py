@@ -22,6 +22,17 @@ def load_scanner():
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     stocks = json.loads(STOCKS_PATH.read_text(encoding="utf-8"))["stocks"]
+    by_code = {str(stock.get("code", "")): stock for stock in stocks}
+    for stock in [
+        {"code": "2330", "name": "台積電", "market": "listed", "sector": "半導體業"},
+        {"code": "2317", "name": "鴻海", "market": "listed", "sector": "其他電子業"},
+        {"code": "2615", "name": "萬海", "market": "listed", "sector": "航運業"},
+        {"code": "3026", "name": "禾伸堂", "market": "listed", "sector": "電子零組件業"},
+        {"code": "3450", "name": "聯鈞", "market": "listed", "sector": "半導體業"},
+        {"code": "6669", "name": "緯穎", "market": "listed", "sector": "電腦及週邊設備業"},
+    ]:
+        by_code.setdefault(stock["code"], stock)
+    stocks = list(by_code.values())
     (
         module.STOCK_DICT,
         module.CODE_TO_NAME,
@@ -165,6 +176,39 @@ class ValidatorRegressionTests(unittest.TestCase):
 
         ordinary_text = "這次AI聯軍一起推出新服務，大家都很期待。"
         hits = self.scanner.recognize_stocks(ordinary_text)
+        self.assertNotIn("3450", [hit["stock_code"] for hit in hits])
+
+    def test_phonetic_discovery_adds_current_scan_hit_and_review_candidate(self):
+        if self.scanner.lazy_pinyin is None:
+            self.skipTest("pypinyin is not installed")
+
+        text = "AI伺服器族群裡面圍影今天漲停，股價和營收都很強。"
+        with tempfile.TemporaryDirectory() as tmpdir:
+            candidates_path = Path(tmpdir) / "alias_candidates.json"
+            rejected_path = Path(tmpdir) / "rejected_aliases.json"
+            candidates_path.write_text("{}", encoding="utf-8")
+            rejected_path.write_text("{}", encoding="utf-8")
+            old_candidates = self.scanner.ALIAS_CANDIDATES_FILE
+            old_rejected = self.scanner.REJECTED_ALIASES_FILE
+            self.scanner.ALIAS_CANDIDATES_FILE = candidates_path
+            self.scanner.REJECTED_ALIASES_FILE = rejected_path
+            self.scanner._PHONETIC_STOCK_INDEX = None
+            try:
+                hits = self.scanner.recognize_stocks(text, enable_phonetic_discovery=True)
+            finally:
+                self.scanner.ALIAS_CANDIDATES_FILE = old_candidates
+                self.scanner.REJECTED_ALIASES_FILE = old_rejected
+
+            self.assertIn("6669", [hit["stock_code"] for hit in hits])
+            candidates = json.loads(candidates_path.read_text(encoding="utf-8"))
+            self.assertIn("圍影|6669", candidates)
+
+    def test_phonetic_discovery_requires_stock_context(self):
+        if self.scanner.lazy_pinyin is None:
+            self.skipTest("pypinyin is not installed")
+
+        text = "這次AI聯軍一起推出新服務，大家都很期待。"
+        hits = self.scanner.recognize_stocks(text, enable_phonetic_discovery=True)
         self.assertNotIn("3450", [hit["stock_code"] for hit in hits])
 
 

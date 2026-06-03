@@ -1129,6 +1129,20 @@ STOCK_MARKET: dict[str, str] = {}  # code → "TW" or "US"
 STOCK_SECTOR: dict[str, str] = {}  # code → sector name
 _PHONETIC_STOCK_INDEX: list[tuple[str, str, str]] | None = None
 
+_PHONETIC_DISCOVERY_MIN_SCORE = 0.80
+_PHONETIC_DISCOVERY_MIN_LEAD = 0.12
+_PHONETIC_DISCOVERY_CONTEXT_WINDOW = 90
+_PHONETIC_DISCOVERY_MAX_PER_TEXT = 5
+_PHONETIC_DISCOVERY_MAX_TERMS = 250
+_PHONETIC_DISCOVERY_STOPWORDS: set[str] = {
+    "今天", "昨天", "明天", "現在", "之前", "後來", "最近", "目前", "大家", "我們",
+    "他們", "這個", "那個", "如果", "因為", "所以", "但是", "可是", "然後", "其實",
+    "可能", "應該", "一定", "不會", "沒有", "不是", "就是", "比較", "一個", "兩個",
+    "很多", "一些", "起來", "看到", "講到", "想到", "知道", "覺得", "代表", "問題",
+    "市場", "股票", "股價", "族群", "產業", "公司", "題材", "被動", "主動", "外資",
+    "法人", "營收", "訂單", "毛利", "漲停", "跌停", "拉回", "創高", "位階",
+}
+
 # Strong sector signals for conservative Gemini correction validation.
 # Keep this intentionally small: generic words such as AI/材料/題材 are too broad.
 _SECTOR_CONTEXT_FAMILIES: dict[str, dict[str, set[str]]] = {
@@ -1204,6 +1218,150 @@ def _has_strong_sector_mismatch(text: str, code: str) -> bool:
     context_families = _context_sector_families(text)
     stock_families = _stock_sector_families(code)
     return bool(context_families and stock_families and not context_families & stock_families)
+
+
+def _phonetic_discovery_windows(text: str) -> list[tuple[int, int]]:
+    markers = set(STOCK_CONTEXT_HINTS)
+    for config in _SECTOR_CONTEXT_FAMILIES.values():
+        markers.update(config["keywords"])
+
+    ranges: list[tuple[int, int]] = []
+    for marker in markers:
+        if not marker or marker not in text:
+            continue
+        start = 0
+        while True:
+            pos = text.find(marker, start)
+            if pos < 0:
+                break
+            ranges.append((
+                max(0, pos - _PHONETIC_DISCOVERY_CONTEXT_WINDOW),
+                min(len(text), pos + len(marker) + _PHONETIC_DISCOVERY_CONTEXT_WINDOW),
+            ))
+            start = pos + len(marker)
+
+    ranges.sort()
+    merged: list[tuple[int, int]] = []
+    for lo, hi in ranges:
+        if not merged or lo > merged[-1][1]:
+            merged.append((lo, hi))
+        else:
+            merged[-1] = (merged[-1][0], max(merged[-1][1], hi))
+    return merged
+
+
+def _iter_unknown_cjk_terms(text: str) -> list[tuple[str, int]]:
+    """Extract short unknown Chinese terms near stock context markers."""
+    found: list[tuple[str, int]] = []
+    seen_terms: set[tuple[str, int]] = set()
+    for lo, hi in _phonetic_discovery_windows(text or ""):
+        for run in re.finditer(r"[\u3400-\u9fff]{2,}", text[lo:hi]):
+            raw = run.group()
+            base_pos = lo + run.start()
+            for length in (2, 3, 4):
+                if len(raw) < length:
+                    continue
+                for offset in range(0, len(raw) - length + 1):
+                    term = raw[offset:offset + length]
+                    pos = base_pos + offset
+                    if term in _PHONETIC_DISCOVERY_STOPWORDS:
+                        continue
+                    if term in STOCK_DICT or term in CODE_TO_NAME.values():
+                        continue
+                    key = (term, pos)
+                    if key not in seen_terms:
+                        seen_terms.add(key)
+                        found.append(key)
+                        if len(found) >= _PHONETIC_DISCOVERY_MAX_TERMS:
+                            return found
+    return found
+
+
+def _phonetic_discovery_context_ok(text: str, term: str, pos: int) -> bool:
+    lo = max(0, pos - _PHONETIC_DISCOVERY_CONTEXT_WINDOW)
+    hi = min(len(text), pos + len(term) + _PHONETIC_DISCOVERY_CONTEXT_WINDOW)
+    ctx = text[lo:hi]
+    return (
+        _has_stock_context_evidence(ctx, mention_terms=[term], window=40)
+        or bool(_context_sector_families(ctx))
+    )
+
+
+def _discover_phonetic_stock_hits(
+    text: str,
+    *,
+    existing_codes: set[str],
+    recognition_dict: dict[str, str],
+    video_ctx: dict | None = None,
+) -> list[dict]:
+    """Add current-scan-only hits from high-confidence unknown Whisper homophones."""
+    if lazy_pinyin is None:
+        return []
+
+    discovered: list[dict] = []
+    added_codes: set[str] = set()
+    rejected_aliases = _load_rejected_aliases()
+    _vctx = video_ctx or {}
+
+    for term, pos in _iter_unknown_cjk_terms(text):
+        if len(discovered) >= _PHONETIC_DISCOVERY_MAX_PER_TEXT:
+            break
+        if term in recognition_dict:
+            continue
+        if not _phonetic_discovery_context_ok(text, term, pos):
+            continue
+
+        candidates = _phonetic_alias_candidates(term, limit=2)
+        if not candidates:
+            continue
+        best = candidates[0]
+        code = best["code"]
+        lead = best["score"] - candidates[1]["score"] if len(candidates) > 1 else best["score"]
+        if (
+            best["score"] < _PHONETIC_DISCOVERY_MIN_SCORE
+            or lead < _PHONETIC_DISCOVERY_MIN_LEAD
+            or code in existing_codes
+            or code in added_codes
+            or f"{term}|{code}" in rejected_aliases
+        ):
+            continue
+
+        start = max(0, pos - 100)
+        end = min(len(text), pos + len(term) + 200)
+        ctx = text[start:end].replace("\n", " ").strip()
+        if not _has_stock_context_evidence(ctx, code=code, mention_terms=[term]) and not _context_sector_families(ctx):
+            continue
+        if _has_strong_sector_mismatch(ctx, code):
+            continue
+
+        stock_name = CODE_TO_NAME.get(code, best["name"])
+        discovered.append({
+            "stock_code": code,
+            "stock_name": stock_name,
+            "stock_market": STOCK_MARKET.get(code, "TW"),
+            "stock_sector": STOCK_SECTOR.get(code),
+            "context": ctx,
+            "matched_keyword": term,
+            "position": pos,
+            "phonetic_discovered": True,
+            "whisper_corrected": True,
+        })
+        added_codes.add(code)
+        print(
+            f"  [phonetic-discovery] 「{term}」→ {code}({stock_name}) "
+            f"score={best['score']} lead={lead:.3f}",
+            file=sys.stderr,
+        )
+        _record_alias_candidate(
+            term,
+            code,
+            stock_name,
+            context=ctx,
+            video_ctx=_vctx,
+            source="phonetic-discovery",
+        )
+
+    return discovered
 
 
 def _sector_aware_nearby_stock_keyword(
@@ -2163,7 +2321,12 @@ KEYWORD_PATTERN_OVERRIDE: dict[str, str] = {
 # Stock Recognition
 # ─────────────────────────────────────────────────────────────────────────────
 
-def recognize_stocks(text: str, video_ctx: dict | None = None) -> list[dict]:
+def recognize_stocks(
+    text: str,
+    video_ctx: dict | None = None,
+    *,
+    enable_phonetic_discovery: bool = False,
+) -> list[dict]:
     """
     掃描文字，找出所有台股 / 美股提及，回傳含上下文的列表。
     英文關鍵字加 word-boundary 避免誤匹配；相近重複 match 去重。
@@ -2282,6 +2445,14 @@ def recognize_stocks(text: str, video_ctx: dict | None = None) -> list[dict]:
                 "matched_keyword": keyword,
                 "position":        pos,
             })
+
+    if enable_phonetic_discovery:
+        hits.extend(_discover_phonetic_stock_hits(
+            text,
+            existing_codes={h["stock_code"] for h in hits},
+            recognition_dict=recognition_dict,
+            video_ctx=_vctx,
+        ))
 
     return hits
 
@@ -3996,7 +4167,11 @@ def _detect_youtube_video(
     video_ctx = {"video_id": video_id, "channel": source_name, "date": date, "title": title}
 
     # 軌道 A：關鍵字比對（always run as baseline/fallback）
-    hits_keyword = deduplicate_hits(recognize_stocks(text, video_ctx=video_ctx))
+    hits_keyword = deduplicate_hits(recognize_stocks(
+        text,
+        video_ctx=video_ctx,
+        enable_phonetic_discovery=(analysis_source == "whisper"),
+    ))
 
     # 軌道 B：Gemini LLM 抽取（只在有足夠文字且 extraction_mode 允許時啟動）
     # title+description fallback 不送 Gemini：內容太短、無深度討論，不值得消耗 API 額度
@@ -4359,7 +4534,11 @@ def _detect_podcast_episode(
         analysis_source = "titleAndDescription"
 
     video_ctx   = {"video_id": ep["id"], "channel": source_name, "date": date, "title": title}
-    hits_keyword = deduplicate_hits(recognize_stocks(text, video_ctx=video_ctx))
+    hits_keyword = deduplicate_hits(recognize_stocks(
+        text,
+        video_ctx=video_ctx,
+        enable_phonetic_discovery=(analysis_source == "whisper"),
+    ))
 
     hits_gemini: list[dict] | None = None
     if (extraction_mode in ("gemini", "auto")
