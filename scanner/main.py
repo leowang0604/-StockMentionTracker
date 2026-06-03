@@ -2308,6 +2308,7 @@ KEYWORD_PATTERN_OVERRIDE: dict[str, str] = {
     "力士": r"(?<!海)力士",         # exclude "海力士" (SK Hynix)
     "新建": r"(?<!重新)新建(?!立)",  # exclude "重新建立" (re-establish) — lookbehind covers full "重新"
     "新產": r"新產(?!品)",         # exclude "新產品" (new product)
+    "新普": r"新普(?!生)",         # exclude Whisper fragments like "新普生家庭" (新生家庭)
     "全訊": r"全訊(?!息)",         # exclude "全訊息" — 5222 全訊科技
     "達新": r"(?<!輝)達新",        # exclude Whisper 把「輝達新…」誤切成「達新」— 1315 達新工業
     "上亞": r"上亞(?!洲)",         # exclude "上亞洲盤" — 6130 上亞科技

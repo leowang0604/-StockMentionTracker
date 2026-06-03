@@ -1,0 +1,41 @@
+name: Scanner Replay Tests
+
+on:
+  push:
+    paths:
+      - ".github/workflows/scanner_replay.yml"
+      - "Makefile"
+      - "scanner/**"
+      - "data/stocks.json"
+  pull_request:
+    paths:
+      - ".github/workflows/scanner_replay.yml"
+      - "Makefile"
+      - "scanner/**"
+      - "data/stocks.json"
+  workflow_dispatch:
+
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+          cache-dependency-path: scanner/requirements.txt
+
+      - name: Install test dependencies
+        run: pip install requests yt-dlp "pypinyin>=0.53,<1"
+
+      - name: Run scanner regression tests
+        run: python -m unittest scanner.tests.test_validator_regressions -v
+
+      - name: Replay scanner fixtures
+        run: python scanner/tools/replay_scan_fixture.py

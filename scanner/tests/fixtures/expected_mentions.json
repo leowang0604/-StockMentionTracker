@@ -24,5 +24,26 @@
     "description": "非股票語境的 AI 聯軍不應被發音 discovery 誤補為聯鈞。",
     "enable_phonetic_discovery": true,
     "must_exclude": ["3450"]
+  },
+  "c3_ai_common": {
+    "description": "一般 AI 伺服器語境不應被抓成 C3.ai。",
+    "must_exclude": ["AI"]
+  },
+  "newpu_false_positive": {
+    "description": "Whisper 的「新普生家庭」不是新普股票。",
+    "enable_phonetic_discovery": true,
+    "must_exclude": ["6121"]
+  },
+  "shengyang_false_positive": {
+    "description": "一般大尺寸需求討論不應被抓成昇陽半導體。",
+    "enable_phonetic_discovery": true,
+    "must_exclude": ["8028"]
+  },
+  "wantai_learned_alias": {
+    "description": "人工確認後的文宴 alias 應解析為萬泰科。",
+    "learned_aliases": {
+      "文宴": "6190"
+    },
+    "must_include": ["6190"]
   }
 }

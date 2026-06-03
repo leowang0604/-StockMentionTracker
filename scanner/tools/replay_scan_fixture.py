@@ -30,7 +30,10 @@ REQUIRED_STOCKS = [
     {"code": "3026", "name": "禾伸堂", "market": "listed", "sector": "電子零組件業"},
     {"code": "3450", "name": "聯鈞", "market": "listed", "sector": "半導體業"},
     {"code": "4905", "name": "台聯電", "market": "tpex", "sector": "光電"},
+    {"code": "6121", "name": "新普", "market": "listed", "sector": "電腦及週邊設備業"},
+    {"code": "6190", "name": "萬泰科", "market": "listed", "sector": "電子通路"},
     {"code": "6442", "name": "光聖", "market": "listed", "sector": "通信網路業"},
+    {"code": "8028", "name": "昇陽半導體", "market": "listed", "sector": "半導體業"},
 ]
 
 
