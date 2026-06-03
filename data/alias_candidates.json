@@ -528,58 +528,5 @@
       "cc65e950-dd93-4d1d-a414-e73e4c732401"
     ],
     "wrong_keyword" : "萬序"
-  },
-  "馬費歐|MRVL" : {
-    "confidence" : "medium",
-    "correct_code" : "MRVL",
-    "correct_name" : "Marvell",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "財女珍妮",
-        "context" : "以讓更多人看到這個節目 支持我們持續跟大家分享 最新的財經資訊 一起在投資這條路上 持續的前進 好我今天沒有露臉 不是因為沒有人按讚 是因為早上財報有一點多 實在是有一點來不及 因為大家都知道 比如說馬費歐 Salesforce這些公司 都是蠻多人可能有持有 或者是很有興趣的公司 所以也是想要在早上 把它介紹完 然後讓大家可以在早上 上班的時間 或者是有空的時候 就可以知道發生了什麼事情 先來看一下 昨天美股收盤的表現 到窮工業指數是上漲0.4% 漲了182點 收在50644點 創下的歷史新高 所以如果今天收盤創高的話 那延續前幾天 也有創高的情況 多頭的趨勢樂觀的氛圍 是沒有太大改變的 標普",
-        "date" : "2026-05-28",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "stock_context"
-        ],
-        "score" : 65,
-        "source" : "full_video_validator",
-        "title" : "2026\/05\/28(四) 台積電創高，費半漲不動？",
-        "video_id" : "664a9673-8607-43b0-a5cf-ab03e4d1faf0"
-      }
-    ],
-    "max_score" : 65,
-    "observations" : 1,
-    "phonetic_candidates" : [
-      {
-        "code" : "3516",
-        "name" : "亞帝歐",
-        "phonetic_similarity" : 0.571,
-        "score" : 0.488,
-        "text_similarity" : 0.333
-      },
-      {
-        "code" : "2916",
-        "name" : "滿心",
-        "phonetic_similarity" : 0.429,
-        "score" : 0.279,
-        "text_similarity" : 0
-      },
-      {
-        "code" : "3339",
-        "name" : "泰谷",
-        "phonetic_similarity" : 0.429,
-        "score" : 0.279,
-        "text_similarity" : 0
-      }
-    ],
-    "updated_at" : "2026-06-02T23:21:14",
-    "video_ids" : [
-      "664a9673-8607-43b0-a5cf-ab03e4d1faf0"
-    ],
-    "wrong_keyword" : "馬費歐"
   }
 }
