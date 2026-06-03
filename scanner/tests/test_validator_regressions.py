@@ -182,7 +182,7 @@ class ValidatorRegressionTests(unittest.TestCase):
         if self.scanner.lazy_pinyin is None:
             self.skipTest("pypinyin is not installed")
 
-        text = "AI伺服器族群裡面圍影今天漲停，股價和營收都很強。"
+        text = "聯均這檔股票今天漲停，股價和營收都很強。"
         with tempfile.TemporaryDirectory() as tmpdir:
             candidates_path = Path(tmpdir) / "alias_candidates.json"
             rejected_path = Path(tmpdir) / "rejected_aliases.json"
@@ -199,9 +199,9 @@ class ValidatorRegressionTests(unittest.TestCase):
                 self.scanner.ALIAS_CANDIDATES_FILE = old_candidates
                 self.scanner.REJECTED_ALIASES_FILE = old_rejected
 
-            self.assertIn("6669", [hit["stock_code"] for hit in hits])
+            self.assertIn("3450", [hit["stock_code"] for hit in hits])
             candidates = json.loads(candidates_path.read_text(encoding="utf-8"))
-            self.assertIn("圍影|6669", candidates)
+            self.assertIn("聯均|3450", candidates)
 
     def test_phonetic_discovery_requires_stock_context(self):
         if self.scanner.lazy_pinyin is None:
