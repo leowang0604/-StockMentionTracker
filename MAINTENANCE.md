@@ -475,24 +475,26 @@ YouTube 在 GitHub Actions 的 IP 上封鎖了部分請求，這是已知限制�
 | `data/gemini_usage.json` | Gemini API 用量追蹤 |
 | `data/stocks.json` | 台股清單快取（30 天更新一次） |
 | `.github/workflows/daily_scan.yml` | GitHub Actions 排程設定 |
-# Offline Phonetic Alias Benchmark
 
-Use the offline benchmark before connecting pronunciation scoring to the
-production scanner. It reads `data/stocks.json` and curated fixtures only. It
-does not call Gemini, modify scanner output, or promote aliases.
+---
+
+## 離線發音 Alias Benchmark
+
+在把發音分數接進 production scanner 前，先用這個離線 benchmark 驗證。它只讀
+`data/stocks.json` 和人工整理的 fixtures，不會呼叫 Gemini、不會修改掃描結果，也不會自動升級 alias。
 
 ```bash
 python -m pip install -r scanner/tools/requirements-benchmark.txt
 python scanner/tools/benchmark_phonetic_aliases.py
 ```
 
-The curated positive and negative cases live in:
+正例與反例案例放在：
 
 ```text
 scanner/tests/fixtures/phonetic_alias_cases.json
 ```
 
-Initial baseline with six confirmed Chinese Whisper variants:
+最初用 6 個已確認的中文 Whisper 變體測得的 baseline：
 
 ```text
 baseline Top-1: 3/6
@@ -502,52 +504,51 @@ phonetic Top-3: 6/6
 negative Top-1 failures: 0/4
 ```
 
-Pronunciation should remain a candidate-ranking signal. Do not use it alone to
-promote aliases automatically.
+發音分數應該只作為候選排序訊號，不要單獨用來自動升級 alias。
 
-The production scanner uses the same pronunciation score conservatively:
+production scanner 目前保守使用同一套發音分數：
 
-- it builds a TW stock pronunciation index in memory once per scan;
-- it adds pronunciation evidence to alias-candidate confidence;
-- it stores the closest three names in `data/alias_candidates.json`;
-- the App review page shows these names for human review.
+- 每次掃描在記憶體建立一次台股發音索引
+- 把發音證據加入 alias candidate 的信心分數
+- 把最接近的 3 個股票名稱寫進 `data/alias_candidates.json`
+- App 的審核頁會顯示這些候選，供人工判斷
 
-Pronunciation does not automatically change detected stocks or approve aliases.
+發音分數本身不會自動改變偵測到的股票，也不會自動核准 alias。
 
-# Offline Scanner Fixture Replay
+---
 
-Use fixture replay when fixing Whisper aliases, missed stocks, false positives,
-or highlight/source-context regressions. It replays saved transcript snippets
-through the production scanner recognizer only. It does not download videos, run
-Whisper, call Gemini, or write real `data/alias_candidates.json`.
+## 離線 Scanner Fixture Replay
 
-Run all replay fixtures:
+修 Whisper alias、漏抓股票、誤判、highlight 或 context regression 時，優先跑 fixture replay。
+它會把已保存的逐字稿片段直接丟進 production scanner 的辨識邏輯，不會下載影片、不會跑
+Whisper、不會呼叫 Gemini，也不會寫入真正的 `data/alias_candidates.json`。
+
+跑全部 replay fixtures：
 
 ```bash
 make replay
 ```
 
-Run one fixture:
+只跑單一 fixture：
 
 ```bash
 make replay CASE=cpo_lianjun
 ```
 
-List available fixtures:
+列出目前可用 fixture：
 
 ```bash
 /Users/leowang/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 \
   scanner/tools/replay_scan_fixture.py --list
 ```
 
-Fixture files:
+fixture 檔案位置：
 
 ```text
 scanner/tests/fixtures/transcripts/*.txt
 scanner/tests/fixtures/expected_mentions.json
 ```
 
-Add a new regression by saving the problematic transcript snippet in
-`transcripts/<case_id>.txt`, then adding expected `must_include`,
-`must_exclude`, and optional `expected_candidates` entries in
-`expected_mentions.json`.
+新增 regression 的方式：先把有問題的逐字稿片段存成
+`transcripts/<case_id>.txt`，再到 `expected_mentions.json` 補上預期的
+`must_include`、`must_exclude`，以及可選的 `expected_candidates`。
