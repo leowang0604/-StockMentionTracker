@@ -506,61 +506,6 @@
     ],
     "wrong_keyword" : "壓力"
   },
-  "富邦美|8454" : {
-    "confidence" : "high",
-    "correct_code" : "8454",
-    "correct_name" : "富邦媒",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "兆華與股惑仔",
-        "context" : "季跟今年第一季 非常慘淡 但股交上來了 為什麼大家就是期待你第二季 有東西要來 那這個亞馬遜訂單或是其他的訂單 有沒有出現變化 恐怕四星就是 現在大家在觀望這個事情 今天當然還有像 我覺得比較有趣的像富邦美 富邦美說實話 我覺得很難看好這個產業 因為電商嘛 不過他們自己在股東會上面就說 爬也要爬回來 也要爬回來 然後要想辦法做一些 其他的業務這樣子 所以他今天也是拉了一根漲停板 不過我個人對於電商這個事情 我還是覺得比較保守 因為有朋友在庫彭 也有朋友在富邦美 然後也有朋友以前在雅虎 琴墨購物壞 被統一收購 都覺得 這個做電商到底造什麼孽 怎麼那麼辛苦 我覺得戰場還是很廝殺 尤其庫彭進來 基本",
-        "date" : "2026-05-29",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "name_distance<=1",
-          "phonetic_top1",
-          "stock_context"
-        ],
-        "score" : 100,
-        "source" : "full_video_validator",
-        "title" : "EP1108｜DELL財報爆衝、兆元宴吃飽，緯創、鴻海、廣達齊漲停，老AI變新火種！下週電腦展開跑，多頭延續到何時？ft.操盤手 黃豐凱",
-        "video_id" : "af36eacf-8c25-4895-b394-74e28a5f81e7"
-      }
-    ],
-    "max_score" : 100,
-    "observations" : 1,
-    "phonetic_candidates" : [
-      {
-        "code" : "8454",
-        "name" : "富邦媒",
-        "phonetic_similarity" : 1,
-        "score" : 0.883,
-        "text_similarity" : 0.667
-      },
-      {
-        "code" : "0052",
-        "name" : "富邦科技",
-        "phonetic_similarity" : 0.8,
-        "score" : 0.695,
-        "text_similarity" : 0.5
-      },
-      {
-        "code" : "2881",
-        "name" : "富邦金",
-        "phonetic_similarity" : 0.667,
-        "score" : 0.667,
-        "text_similarity" : 0.667
-      }
-    ],
-    "updated_at" : "2026-06-04T21:39:18",
-    "video_ids" : [
-      "af36eacf-8c25-4895-b394-74e28a5f81e7"
-    ],
-    "wrong_keyword" : "富邦美"
-  },
   "巧心|1563" : {
     "confidence" : "high",
     "correct_code" : "1563",
