@@ -397,61 +397,6 @@
     ],
     "wrong_keyword" : "台塑市保"
   },
-  "壓力|1514" : {
-    "confidence" : "high",
-    "correct_code" : "1514",
-    "correct_name" : "亞力",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "韭菜畢業班",
-        "context" : "工作久坐,忙碌沒喝水,連親密時都覺得尷尬有壓力嗎? 私密守護關鍵在成分與計量 葡萄王美好關係,集結頂規的曼月梅A型元花金素65毫克 與低甘露糖1000毫克,加上三大專利一生菌260億 與日本式的萃取,幫你把關尷尬異味,展現清爽氣息 每天兩包,守護你的所有美好關係 嗨大家好,我是叔叔,這裡是九彩畢業班 如果你沒追蹤我們節目的朋友的話,可以點擊一下上角 所以之後你就可以在第一線收到我們節目的官方通知 如果你今天是看YouTube的朋友的話,也可以",
-        "date" : "2026-06-03",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "name_distance<=1",
-          "phonetic_top1",
-          "stock_context"
-        ],
-        "score" : 100,
-        "source" : "phonetic-discovery",
-        "title" : "EP231 | 台、美股重點一次說，Computex 展後各大公司說法，Marvell 800G光模組量產，AI工廠模組化後的台股供應鏈",
-        "video_id" : "46e8bc5b-ad08-4f91-95cb-e3c89a845d91"
-      }
-    ],
-    "max_score" : 100,
-    "observations" : 2,
-    "phonetic_candidates" : [
-      {
-        "code" : "1514",
-        "name" : "亞力",
-        "phonetic_similarity" : 1,
-        "score" : 0.825,
-        "text_similarity" : 0.5
-      },
-      {
-        "code" : "8996",
-        "name" : "高力",
-        "phonetic_similarity" : 0.6,
-        "score" : 0.565,
-        "text_similarity" : 0.5
-      },
-      {
-        "code" : "1464",
-        "name" : "得力",
-        "phonetic_similarity" : 0.5,
-        "score" : 0.5,
-        "text_similarity" : 0.5
-      }
-    ],
-    "updated_at" : "2026-06-04T20:13:06",
-    "video_ids" : [
-      "46e8bc5b-ad08-4f91-95cb-e3c89a845d91"
-    ],
-    "wrong_keyword" : "壓力"
-  },
   "強帽|2481" : {
     "confidence" : "high",
     "correct_code" : "2481",
