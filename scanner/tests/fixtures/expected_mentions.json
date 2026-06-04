@@ -20,8 +20,9 @@
     "description": "股票語境中的未知近音詞「聯均」應補當次命中並寫入候選。",
     "enable_phonetic_discovery": true,
     "must_include": ["3450"],
-    "must_exclude": ["4905"],
+    "must_exclude": ["1449", "4905"],
     "must_highlight": ["聯均"],
+    "must_not_highlight": ["價和"],
     "expected_candidates": ["聯均|3450"]
   },
   "non_stock_lianjun": {
@@ -54,5 +55,13 @@
     },
     "must_include": ["6190"],
     "must_highlight": ["文宴"]
+  },
+  "walsin_group_whisper_aliases": {
+    "description": "華新麗華集團語境中，華邦店/彩金/新商店應分別解析為華邦電/彩晶/信昌電。",
+    "enable_phonetic_discovery": true,
+    "must_include": ["2344", "6116", "6173"],
+    "must_exclude": ["1423", "3085"],
+    "must_highlight": ["華邦店", "彩金", "新商店"],
+    "must_not_highlight": ["立華"]
   }
 }
