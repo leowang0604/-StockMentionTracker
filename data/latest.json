@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-03T21:18:36",
+  "updated_at": "2026-06-04T20:05:22",
   "stocks_ranking": [
     {
       "code": "INTC",
@@ -52135,7 +52135,7 @@
       "code": "T",
       "name": "AT&T",
       "market": "US",
-      "sector": "高速連接",
+      "sector": "通訊媒體",
       "contexts": [
         {
           "video": "2026/04/27(一) 費半創紀18連漲，還能進場嗎？Intel暴漲20%，財報透露什麼？",
@@ -54335,6 +54335,56 @@
           "bearish": 0,
           "neutral": 0,
           "sentiment_score": 0.7
+        }
+      }
+    },
+    {
+      "code": "ADI",
+      "name": "ADI",
+      "market": "US",
+      "sector": "半導體",
+      "contexts": [
+        {
+          "video": "2026/05/05(二) Palantir為什麼不漲？#PLTR #ON #NVDA #MU",
+          "channel": "財女珍妮",
+          "date": "2026-05-05",
+          "text": "他 現在漲上去的時候 才跟我說我要追 所以我覺得 有的時候這個市場 就是歷史不斷的在重複發生 每一次我們跟大家分享的時候 可能是他已經漲上來 或者是什麼 但是我在之前寫文章的時候 比如說我們之前有寫過ADI嘛 亞德諾嘛 比如說我們之前有寫過其他的公司 甚至我大概前一陣子也有寫 CoreWave這家公司 然後裡面也有針對 很多的公司去做一個固執 結果這兩天 其實像CoreWave Nevis他們的股價都非常的強 那我可能也有在某個節目上面講說 我是持有這些公司的 那為什麼我會去持有呢 其實就是因為我覺得 他之前跌得比較多 他可能現在 他的底部是有比較明顯的 所以我把一些光通 電力去把它換過去 就是等於",
+          "matched_keyword": "ADI",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
+          "video": "EP667 | 🌍",
+          "channel": "股癌",
+          "date": "2026-06-03",
+          "text": "的股票呢 那感覺GTC後 資金又回流 Invidia台積電供應鏈 孟公覺得市場 是否會補掌Invidia TSMC 那另外下一波的漲價體財 是否有可能會延伸到 公率半導體IDM 如ON跟PIMIC 如ADI 我覺得這位兄弟 他的敏感度非常好 就是我覺得公率元件 或者是公率半導體 相關的一些公司 其實我們都注意到 他的基本面 有滿顯著的在改善中 所以他確實有可能是 下一波題材的一個汇聚點 可是他的光芒 沒有像 比如說CPU 或者是被動元件 那樣子的全面 因為他市場上 非常喜歡那種 類似戴維斯雙級的東西 反正我ASP可以拉上去 那再來呢 我的PU Ratio也拉上去 這個可能是大家會比較喜歡的 重點是你",
+          "matched_keyword": "ADi",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        }
+      ],
+      "total_mentions": 2,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-05-05": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-06-03": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
         }
       }
     },
@@ -58668,37 +58718,6 @@
       }
     },
     {
-      "code": "ADI",
-      "name": "ADI",
-      "market": "US",
-      "sector": "半導體",
-      "contexts": [
-        {
-          "video": "2026/05/05(二) Palantir為什麼不漲？#PLTR #ON #NVDA #MU",
-          "channel": "財女珍妮",
-          "date": "2026-05-05",
-          "text": "他 現在漲上去的時候 才跟我說我要追 所以我覺得 有的時候這個市場 就是歷史不斷的在重複發生 每一次我們跟大家分享的時候 可能是他已經漲上來 或者是什麼 但是我在之前寫文章的時候 比如說我們之前有寫過ADI嘛 亞德諾嘛 比如說我們之前有寫過其他的公司 甚至我大概前一陣子也有寫 CoreWave這家公司 然後裡面也有針對 很多的公司去做一個固執 結果這兩天 其實像CoreWave Nevis他們的股價都非常的強 那我可能也有在某個節目上面講說 我是持有這些公司的 那為什麼我會去持有呢 其實就是因為我覺得 他之前跌得比較多 他可能現在 他的底部是有比較明顯的 所以我把一些光通 電力去把它換過去 就是等於",
-          "matched_keyword": "ADI",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        }
-      ],
-      "total_mentions": 1,
-      "sentiment_score": 0.5,
-      "daily": {
-        "2026-05-05": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        }
-      }
-    },
-    {
       "code": "8930",
       "name": "青鋼",
       "market": "TW",
@@ -59852,7 +59871,7 @@
       "code": "DDOG",
       "name": "Datadog",
       "market": "US",
-      "sector": "企業軟體",
+      "sector": "網路安全",
       "contexts": [
         {
           "video": "2026/05/08(五)美股下跌還能買嗎？ #ANET #DDOG #FTNT",
@@ -60938,7 +60957,7 @@
       "code": "GLW",
       "name": "Corning Inc.",
       "market": "US",
-      "sector": "光通訊",
+      "sector": "科技",
       "contexts": [
         {
           "video": "EP225 | 台、美股重點一次說，消費性電腦與緯穎展望，康寧與AAOI長約發酵，聽眾QA",
@@ -63746,6 +63765,19 @@
       ]
     },
     {
+      "sector": "半導體",
+      "market": "US",
+      "total_mentions": 43,
+      "stock_codes": [
+        "INTC",
+        "TXN",
+        "ON",
+        "ADI",
+        "MCHP",
+        "ON Semiconductor Corporation"
+      ]
+    },
+    {
       "sector": "ETF・主動型",
       "market": "TW",
       "total_mentions": 43,
@@ -63758,19 +63790,6 @@
         "00980A",
         "00994A",
         "00993A"
-      ]
-    },
-    {
-      "sector": "半導體",
-      "market": "US",
-      "total_mentions": 42,
-      "stock_codes": [
-        "INTC",
-        "TXN",
-        "ON",
-        "MCHP",
-        "ADI",
-        "ON Semiconductor Corporation"
       ]
     },
     {
@@ -63950,6 +63969,19 @@
       ]
     },
     {
+      "sector": "科技",
+      "market": "US",
+      "total_mentions": 28,
+      "stock_codes": [
+        "SNDK",
+        "INTU",
+        "TER",
+        "GLW",
+        "NOW",
+        "NTAP"
+      ]
+    },
+    {
       "sector": "ETF・科技",
       "market": "TW",
       "total_mentions": 28,
@@ -63994,18 +64026,6 @@
       ]
     },
     {
-      "sector": "科技",
-      "market": "US",
-      "total_mentions": 27,
-      "stock_codes": [
-        "SNDK",
-        "INTU",
-        "TER",
-        "NOW",
-        "NTAP"
-      ]
-    },
-    {
       "sector": "伺服器",
       "market": "US",
       "total_mentions": 25,
@@ -64030,14 +64050,26 @@
       ]
     },
     {
+      "sector": "網路安全",
+      "market": "US",
+      "total_mentions": 23,
+      "stock_codes": [
+        "NET",
+        "ZS",
+        "CRWD",
+        "OKTA",
+        "DDOG",
+        "FTNT"
+      ]
+    },
+    {
       "sector": "光通訊",
       "market": "US",
-      "total_mentions": 24,
+      "total_mentions": 23,
       "stock_codes": [
         "COHR",
         "LITE",
-        "AAOI",
-        "GLW"
+        "AAOI"
       ]
     },
     {
@@ -64075,18 +64107,6 @@
       "stock_codes": [
         "1216",
         "1201"
-      ]
-    },
-    {
-      "sector": "網路安全",
-      "market": "US",
-      "total_mentions": 22,
-      "stock_codes": [
-        "NET",
-        "ZS",
-        "CRWD",
-        "OKTA",
-        "FTNT"
       ]
     },
     {
@@ -64336,17 +64356,6 @@
       ]
     },
     {
-      "sector": "企業軟體",
-      "market": "US",
-      "total_mentions": 13,
-      "stock_codes": [
-        "IBM",
-        "ADBE",
-        "CDNS",
-        "DDOG"
-      ]
-    },
-    {
       "sector": "電子通路",
       "market": "TW",
       "total_mentions": 13,
@@ -64372,6 +64381,16 @@
         "1611",
         "1623",
         "1604"
+      ]
+    },
+    {
+      "sector": "企業軟體",
+      "market": "US",
+      "total_mentions": 12,
+      "stock_codes": [
+        "IBM",
+        "ADBE",
+        "CDNS"
       ]
     },
     {
@@ -64614,6 +64633,17 @@
       ]
     },
     {
+      "sector": "通訊媒體",
+      "market": "US",
+      "total_mentions": 6,
+      "stock_codes": [
+        "CHTR",
+        "T",
+        "SATS",
+        "VZ"
+      ]
+    },
+    {
       "sector": "公用事業",
       "market": "US",
       "total_mentions": 5,
@@ -64671,16 +64701,6 @@
       ]
     },
     {
-      "sector": "通訊媒體",
-      "market": "US",
-      "total_mentions": 4,
-      "stock_codes": [
-        "CHTR",
-        "SATS",
-        "VZ"
-      ]
-    },
-    {
       "sector": "水泥工業",
       "market": "TW",
       "total_mentions": 4,
@@ -64733,15 +64753,6 @@
       "total_mentions": 3,
       "stock_codes": [
         "2101"
-      ]
-    },
-    {
-      "sector": "高速連接",
-      "market": "US",
-      "total_mentions": 3,
-      "stock_codes": [
-        "T",
-        "CRDO"
       ]
     },
     {
@@ -64831,6 +64842,14 @@
       "total_mentions": 1,
       "stock_codes": [
         "4420"
+      ]
+    },
+    {
+      "sector": "高速連接",
+      "market": "US",
+      "total_mentions": 1,
+      "stock_codes": [
+        "CRDO"
       ]
     },
     {
