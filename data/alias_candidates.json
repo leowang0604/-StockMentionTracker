@@ -367,60 +367,6 @@
     ],
     "wrong_keyword" : "光搭"
   },
-  "利基店|6770" : {
-    "confidence" : "high",
-    "correct_code" : "6770",
-    "correct_name" : "力積電",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "兆華與股惑仔",
-        "context" : "那記憶體當中 你就看到像這個華邦店 可是今天比較可惜的是 這個黃董的利金集團 對 它兩檔都創新高 一個是艾普先盤中創的歷史新高 但震盪很大 可以搞走低 太靠走低 掌庭板倒變碟瓣跟停板 那黃董自己的這個利基店 今天股價也是創下 終於掛牌的新高 但盤中也是大不震盪 然後盤中翻碟 所以我覺得其實你現在都可以看到 在盤面上這種熱絡的時候 集團性的作帳的個股 也是盤面上大家可以留著焦點 那另外一塊 你可以從投信的買盤來看到 我覺得最好情況就是 投信跟集團雙加持的一個個股 我覺得表現可能會變得更加的強勢 所以盤面上你可以看到近期 投信有在買的 又有集團色彩的一個個股 也都是盤面上相對比較強勢的標的 好 因",
-        "date" : "2026-06-01",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "phonetic_top3",
-          "stock_context"
-        ],
-        "score" : 75,
-        "source" : "full_video_validator",
-        "title" : "EP1109｜仁勳開講、開獎！伺服器代工、AI PC、邊緣AI回來，GDP成長率上修9.64%，繼續正循環！怕賣飛又怕回檔，對策是什麼？ft.題材獵人 林漢偉",
-        "video_id" : "dc015b5b-798a-4009-ae12-7ec086d274b2"
-      }
-    ],
-    "max_score" : 75,
-    "observations" : 1,
-    "phonetic_candidates" : [
-      {
-        "code" : "5364",
-        "name" : "力麗店",
-        "phonetic_similarity" : 0.875,
-        "score" : 0.685,
-        "text_similarity" : 0.333
-      },
-      {
-        "code" : "6770",
-        "name" : "力積電",
-        "phonetic_similarity" : 1,
-        "score" : 0.65,
-        "text_similarity" : 0
-      },
-      {
-        "code" : "2706",
-        "name" : "第一店",
-        "phonetic_similarity" : 0.75,
-        "score" : 0.604,
-        "text_similarity" : 0.333
-      }
-    ],
-    "updated_at" : "2026-06-04T21:25:48",
-    "video_ids" : [
-      "dc015b5b-798a-4009-ae12-7ec086d274b2"
-    ],
-    "wrong_keyword" : "利基店"
-  },
   "台塑市保|1301" : {
     "confidence" : "medium",
     "correct_code" : "1301",
