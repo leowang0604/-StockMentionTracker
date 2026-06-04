@@ -397,61 +397,6 @@
     ],
     "wrong_keyword" : "台塑市保"
   },
-  "強帽|2481" : {
-    "confidence" : "high",
-    "correct_code" : "2481",
-    "correct_name" : "強茂",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "兆華與股惑仔",
-        "context" : "件 他們有做車用市場的 現在就變成AI有切進去 又有車用的復甦 開開新興 又天外飛來一個助力 我覺得這也蠻有趣的 這些都是很奇妙的 而且是往正向發展的一些 利多到台灣來 沒錯 像你今天很多什麼 像什麼強帽 白半 其實他們就卡在這一塊 然後鵬城 然後像昨天 其實很多汽車零件 也漲了第一根 今天又漲第二根 我覺得昨天可能很多人 沒上車 因為他是一開盤就已自作 所以很多昨天 我覺得主力當中 可能昨天就 你會考慮嗎 一大早就進去了 你會考慮嗎 汽車零個純汽車零件 我個人是有看到一家 很特殊的公司 就是有一家做 就是鋁合圈鍛造的公司 你說 他 巧心 巧心 巧心昨天漲停泰 他其實在 這個事件之前 他就已經",
-        "date" : "2026-05-29",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "name_distance<=1",
-          "phonetic_top1",
-          "stock_context"
-        ],
-        "score" : 100,
-        "source" : "full_video_validator",
-        "title" : "EP1108｜DELL財報爆衝、兆元宴吃飽，緯創、鴻海、廣達齊漲停，老AI變新火種！下週電腦展開跑，多頭延續到何時？ft.操盤手 黃豐凱",
-        "video_id" : "af36eacf-8c25-4895-b394-74e28a5f81e7"
-      }
-    ],
-    "max_score" : 100,
-    "observations" : 1,
-    "phonetic_candidates" : [
-      {
-        "code" : "2481",
-        "name" : "強茂",
-        "phonetic_similarity" : 1,
-        "score" : 0.825,
-        "text_similarity" : 0.5
-      },
-      {
-        "code" : "5013",
-        "name" : "強新",
-        "phonetic_similarity" : 0.625,
-        "score" : 0.581,
-        "text_similarity" : 0.5
-      },
-      {
-        "code" : "2438",
-        "name" : "翔耀",
-        "phonetic_similarity" : 0.75,
-        "score" : 0.488,
-        "text_similarity" : 0
-      }
-    ],
-    "updated_at" : "2026-06-04T21:39:17",
-    "video_ids" : [
-      "af36eacf-8c25-4895-b394-74e28a5f81e7"
-    ],
-    "wrong_keyword" : "強帽"
-  },
   "拜一|6152" : {
     "confidence" : "high",
     "correct_code" : "6152",
