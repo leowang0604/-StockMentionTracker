@@ -240,10 +240,16 @@
     "wrong_keyword": "台塑市保"
   },
   "壓力|1514": {
-    "confidence": "high",
+    "wrong_keyword": "壓力",
     "correct_code": "1514",
     "correct_name": "亞力",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 2,
     "distinct_videos": 1,
+    "video_ids": [
+      "46e8bc5b-ad08-4f91-95cb-e3c89a845d91"
+    ],
     "evidence": [
       {
         "channel": "韭菜畢業班",
@@ -263,36 +269,30 @@
         "video_id": "46e8bc5b-ad08-4f91-95cb-e3c89a845d91"
       }
     ],
-    "max_score": 100,
-    "observations": 1,
     "phonetic_candidates": [
       {
         "code": "1514",
         "name": "亞力",
-        "phonetic_similarity": 1,
         "score": 0.825,
+        "phonetic_similarity": 1.0,
         "text_similarity": 0.5
       },
       {
         "code": "8996",
         "name": "高力",
-        "phonetic_similarity": 0.6,
         "score": 0.565,
+        "phonetic_similarity": 0.6,
         "text_similarity": 0.5
       },
       {
         "code": "1464",
         "name": "得力",
-        "phonetic_similarity": 0.5,
         "score": 0.5,
+        "phonetic_similarity": 0.5,
         "text_similarity": 0.5
       }
     ],
-    "updated_at": "2026-06-03T21:09:54",
-    "video_ids": [
-      "46e8bc5b-ad08-4f91-95cb-e3c89a845d91"
-    ],
-    "wrong_keyword": "壓力"
+    "updated_at": "2026-06-04T20:13:06"
   },
   "法碩會|2357": {
     "confidence": "high",
