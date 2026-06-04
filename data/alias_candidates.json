@@ -260,59 +260,6 @@
     ],
     "wrong_keyword" : "invdr"
   },
-  "世界經濟|2303" : {
-    "confidence" : "medium",
-    "correct_code" : "2303",
-    "correct_name" : "聯電",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "兆華與股惑仔",
-        "context" : " 現在發展的一個重點 所以你可以看到他 點名的聯發科 點名的台積電 點名的相關供應鏈 我覺得也是說 大家可以持續做一個關注的 目前來看我覺得CPU所帶動的 你看近期臺灣的 成熟製程的股票 今天的聯電 世界經濟盤中拉到漲停板 甚至說細金圓的 環球金 中美金 合金 加金等等的 但有一些 漲多的是有點休息整理 但是 繼續強的股票還是很多 那今天盤面上 因為我覺得是有點百花齊放 但是整體上 不管你說AI供應鏈 有沒有出現輪動的現象 我覺得那都不是重點 因為目前來看以黃仁勳的說法 他認為整個AI的成長性 還沒有看到比較明顯的反轉點 所以他認為在將接下來的 所謂的AI 已經進入到變現的時代 那你投入越多的",
-        "date" : "2026-06-01",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "stock_context"
-        ],
-        "score" : 65,
-        "source" : "full_video_validator",
-        "title" : "EP1109｜仁勳開講、開獎！伺服器代工、AI PC、邊緣AI回來，GDP成長率上修9.64%，繼續正循環！怕賣飛又怕回檔，對策是什麼？ft.題材獵人 林漢偉",
-        "video_id" : "dc015b5b-798a-4009-ae12-7ec086d274b2"
-      }
-    ],
-    "max_score" : 65,
-    "observations" : 1,
-    "phonetic_candidates" : [
-      {
-        "code" : "2063",
-        "name" : "世鎧精密",
-        "phonetic_similarity" : 0.667,
-        "score" : 0.521,
-        "text_similarity" : 0.25
-      },
-      {
-        "code" : "5347",
-        "name" : "世界",
-        "phonetic_similarity" : 0.5,
-        "score" : 0.5,
-        "text_similarity" : 0.5
-      },
-      {
-        "code" : "9958",
-        "name" : "世紀鋼",
-        "phonetic_similarity" : 0.583,
-        "score" : 0.467,
-        "text_similarity" : 0.25
-      }
-    ],
-    "updated_at" : "2026-06-04T21:25:47",
-    "video_ids" : [
-      "dc015b5b-798a-4009-ae12-7ec086d274b2"
-    ],
-    "wrong_keyword" : "世界經濟"
-  },
   "光搭|2338" : {
     "confidence" : "high",
     "correct_code" : "2338",
