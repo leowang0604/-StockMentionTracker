@@ -31,38 +31,6 @@
     ],
     "wrong_keyword" : "MVIDIA"
   },
-  "Media Tech|2454" : {
-    "confidence" : "medium",
-    "correct_code" : "2454",
-    "correct_name" : "聯發科",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "兆華與股惑仔",
-        "context" : " 會把廣達排在第一棒 一定有他的原因 我看到昨天有一個很可愛的影片 就是黃仁軒在台灣的 這個員工總部 不是在跟大家講話 他就問了一個女員工說 你結婚了嗎 女員工說是有 他說那你先生在哪裡 他說他先生在Media Tech 在這個聯發科 然後他就說 怎麼樣在我們NB店 你找不到對象嗎這樣子 然後女生就笑得很害羞 後來才說 女生是聯發科去MV的 等等 這就代表聯發科的人 都被MV挖走 這件事情是真的 是真的 我看到那一支影片 到後來好笑歸好笑 覺得挺心酸的 搞不好過不多久 他先生也在MV 是去年就在講說 Media要挖了很多 聯發科的高階的人才 那也沒辦法 確實 因為台灣之前的高階人才 尤其是IC",
-        "date" : "2026-05-29",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context"
-        ],
-        "score" : 50,
-        "source" : "full_video_validator",
-        "title" : "EP1108｜DELL財報爆衝、兆元宴吃飽，緯創、鴻海、廣達齊漲停，老AI變新火種！下週電腦展開跑，多頭延續到何時？ft.操盤手 黃豐凱",
-        "video_id" : "af36eacf-8c25-4895-b394-74e28a5f81e7"
-      }
-    ],
-    "max_score" : 50,
-    "observations" : 1,
-    "phonetic_candidates" : [
-
-    ],
-    "updated_at" : "2026-06-04T21:39:17",
-    "video_ids" : [
-      "af36eacf-8c25-4895-b394-74e28a5f81e7"
-    ],
-    "wrong_keyword" : "Media Tech"
-  },
   "PMAX|2303" : {
     "confidence" : "medium",
     "correct_code" : "2303",
