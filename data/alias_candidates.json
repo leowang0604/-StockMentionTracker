@@ -947,61 +947,6 @@
     ],
     "wrong_keyword" : "萬序"
   },
-  "銀頁達|2356" : {
-    "confidence" : "high",
-    "correct_code" : "2356",
-    "correct_name" : "英業達",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "兆華與股惑仔",
-        "context" : "好像台肩 不是盤面上的主角 所以台肩壓回來 但你可以發現到 連發科是大漲 創造歷史的新高 所以他其實提到了一些 相關的合作夥伴 今天盤面上 刷一整排的 應該是相關的 筆電相關的 所以華碩 紅雞 仁寶 銀頁達 那時候尾創廣達等等 股價都是創下 波段新高 或是歷史的新高 所以我覺得這一波台股 雖然說 漲多震盪難免 但是整個族群的輪動 我覺得都還是維持個 非常健康 因為今天最少不是漲 一整排可能是什麼 機械人的中小型的腰骨 少一整排的漲停板 今天其實漲的話 還是這種名門正派的大股票 所以我覺得這個 當然對於盤式的 健康輪動來講 是一個正面的訊號 所以今天我覺得 就整個台股的一個盤式 只能夠跟大家講 ",
-        "date" : "2026-06-01",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "name_distance=2",
-          "phonetic_top1",
-          "stock_context"
-        ],
-        "score" : 97,
-        "source" : "full_video_validator",
-        "title" : "EP1109｜仁勳開講、開獎！伺服器代工、AI PC、邊緣AI回來，GDP成長率上修9.64%，繼續正循環！怕賣飛又怕回檔，對策是什麼？ft.題材獵人 林漢偉",
-        "video_id" : "dc015b5b-798a-4009-ae12-7ec086d274b2"
-      }
-    ],
-    "max_score" : 97,
-    "observations" : 1,
-    "phonetic_candidates" : [
-      {
-        "code" : "2356",
-        "name" : "英業達",
-        "phonetic_similarity" : 0.875,
-        "score" : 0.685,
-        "text_similarity" : 0.333
-      },
-      {
-        "code" : "4995",
-        "name" : "晶達",
-        "phonetic_similarity" : 0.571,
-        "score" : 0.488,
-        "text_similarity" : 0.333
-      },
-      {
-        "code" : "6576",
-        "name" : "逸達",
-        "phonetic_similarity" : 0.571,
-        "score" : 0.488,
-        "text_similarity" : 0.333
-      }
-    ],
-    "updated_at" : "2026-06-04T21:25:46",
-    "video_ids" : [
-      "dc015b5b-798a-4009-ae12-7ec086d274b2"
-    ],
-    "wrong_keyword" : "銀頁達"
-  },
   "馬蕾爾|MRVL" : {
     "confidence" : "medium",
     "correct_code" : "MRVL",
