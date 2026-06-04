@@ -570,5 +570,637 @@
       }
     ],
     "updated_at": "2026-06-04T19:44:14"
+  },
+  "潑若威|3163": {
+    "wrong_keyword": "潑若威",
+    "correct_code": "3163",
+    "correct_name": "波若威",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "4421a9b6-8dc3-451d-93c6-a19b7a6b0e68"
+    ],
+    "evidence": [
+      {
+        "video_id": "4421a9b6-8dc3-451d-93c6-a19b7a6b0e68",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-03",
+        "title": "EP1111｜多頭沒敗象，6萬點也不算高？產業資訊、基本面價值難衡量，用技術面做平衡？重電、CPO、老AI，都會挑戰新高？ft.K線之神 朱家泓",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "所以今天也請主老師 看了一下連亞 潑若威 這兩支 它算是CPU裡面 第一波大標的高價股 他們有領頭羊的作用 對 其實CPU在前面 已經 我一直講 就我們的技術面來講 你如果漲了一大波 可能是題材 可能是產業 但是他如果回來修正的時候 時間就會比較久 所以潑若威這支股票 其實他整理了很久 對 從他的高點 再請主老師幫我們看一下 但是我們可以知道 一支股票的好壞 就是你整理的時候 有沒有疊的幅度很深 如果你還是在 一個範圍裡面整理 那就是說 你要修正而已 那修正完了 後面還有機會 那我剛剛看一下了 我們上次的最高點 是1315 最高點 那如果以今天的收盤是1085 大概回來的兩三層 那現在 他就形"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3163",
+        "name": "波若威",
+        "score": 0.802,
+        "phonetic_similarity": 0.875,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "3078",
+        "name": "僑威",
+        "score": 0.442,
+        "phonetic_similarity": 0.5,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "6114",
+        "name": "久威",
+        "score": 0.442,
+        "phonetic_similarity": 0.5,
+        "text_similarity": 0.333
+      }
+    ],
+    "updated_at": "2026-06-04T20:51:59"
+  },
+  "拜一|6152": {
+    "wrong_keyword": "拜一",
+    "correct_code": "6152",
+    "correct_name": "百一",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "66a74bc5-4f8a-4735-b5a0-77972ee3ccf0"
+    ],
+    "evidence": [
+      {
+        "video_id": "66a74bc5-4f8a-4735-b5a0-77972ee3ccf0",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-02",
+        "title": "EP1110｜台股的轉股？低本益比AI股回溫，台積電也快來，記憶體、CPO、被動、機器人震盪，怎麼抱？6月中FED會議要小心？ft.AI達人 蔡明翰",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "新高了 而今天的量能 現在真的就是動不動 就要到1兆5 1兆6的量能 真的是一個很誇張的數字 那今天的盤 相對之下我覺得算喜 怎麼講呢 這幾天從上禮拜五開始 大型的AI權指鼓 就開始表態囉 禮拜五強禮拜一強 今天還是強 所以以指數來說 你說要再續創新高什麼的 有這些大型權指鼓 我想這個上市的指數 是不會寂寞的 但是貴買就比較辛苦一點了 因為今天的貴買 最後還是一個收黑 跌了1.21% 所以中小型鼓 今天的洗刷震盪幅度 是非常非常的大 那指數呢 今天上下的差距 也有超過1000點 現在呢盤中震盪1000點 也似乎不是什麼了不起 跟稀奇的事情 但今天的體感 可能相對之下就不是那麼好了 因為禮拜五跟"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "6152",
+        "name": "百一",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "8222",
+        "name": "寶一",
+        "score": 0.695,
+        "phonetic_similarity": 0.8,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "4126",
+        "name": "太醫",
+        "score": 0.52,
+        "phonetic_similarity": 0.8,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-06-04T21:05:36"
+  },
+  "銀頁達|2356": {
+    "wrong_keyword": "銀頁達",
+    "correct_code": "2356",
+    "correct_name": "英業達",
+    "confidence": "high",
+    "max_score": 97,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "dc015b5b-798a-4009-ae12-7ec086d274b2"
+    ],
+    "evidence": [
+      {
+        "video_id": "dc015b5b-798a-4009-ae12-7ec086d274b2",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-01",
+        "title": "EP1109｜仁勳開講、開獎！伺服器代工、AI PC、邊緣AI回來，GDP成長率上修9.64%，繼續正循環！怕賣飛又怕回檔，對策是什麼？ft.題材獵人 林漢偉",
+        "source": "full_video_validator",
+        "score": 97,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "好像台肩 不是盤面上的主角 所以台肩壓回來 但你可以發現到 連發科是大漲 創造歷史的新高 所以他其實提到了一些 相關的合作夥伴 今天盤面上 刷一整排的 應該是相關的 筆電相關的 所以華碩 紅雞 仁寶 銀頁達 那時候尾創廣達等等 股價都是創下 波段新高 或是歷史的新高 所以我覺得這一波台股 雖然說 漲多震盪難免 但是整個族群的輪動 我覺得都還是維持個 非常健康 因為今天最少不是漲 一整排可能是什麼 機械人的中小型的腰骨 少一整排的漲停板 今天其實漲的話 還是這種名門正派的大股票 所以我覺得這個 當然對於盤式的 健康輪動來講 是一個正面的訊號 所以今天我覺得 就整個台股的一個盤式 只能夠跟大家講 "
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2356",
+        "name": "英業達",
+        "score": 0.685,
+        "phonetic_similarity": 0.875,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "4995",
+        "name": "晶達",
+        "score": 0.488,
+        "phonetic_similarity": 0.571,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "6576",
+        "name": "逸達",
+        "score": 0.488,
+        "phonetic_similarity": 0.571,
+        "text_similarity": 0.333
+      }
+    ],
+    "updated_at": "2026-06-04T21:25:46"
+  },
+  "漲銀金|8358": {
+    "wrong_keyword": "漲銀金",
+    "correct_code": "8358",
+    "correct_name": "金居",
+    "confidence": "low",
+    "max_score": 43,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "dc015b5b-798a-4009-ae12-7ec086d274b2"
+    ],
+    "evidence": [
+      {
+        "video_id": "dc015b5b-798a-4009-ae12-7ec086d274b2",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-01",
+        "title": "EP1109｜仁勳開講、開獎！伺服器代工、AI PC、邊緣AI回來，GDP成長率上修9.64%，繼續正循環！怕賣飛又怕回檔，對策是什麼？ft.題材獵人 林漢偉",
+        "source": "full_video_validator",
+        "score": 43,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "weak_sector_match"
+        ],
+        "context": "中 其實每一檔股票 或每一個族群的輪動 他都會有機會 所以你可以看到今天盤面上 真的有很多股票 是百花齊放的發動上來 比方說你看到PCB當中的 臺光店雖然沒有強漲 但臺藥 聯貿 都大到漲銀版 是 對 金居也繼續漲銀版 也收下這個歷史的新高 所以你可以看到整個供應鏈 今天盤中也一度 拉高到漲銀版的一個情況 但是同樣情況裡面 你看到高利拉回來 其中雙重沒有特別的強 所以我覺得 就是整個趨勢上來看 對AI供應鏈來講 都是有利的 但是最怕的一件事情 就是大家會覺得說 為什麼我買一樣AI供應鏈的股票 我的股票就比別人更弱 就像你之前是 偽創的股東投資人 就會覺得我好悶 為什麼我買的 AI伺服器都沒有漲到"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2891",
+        "name": "中信金",
+        "score": 0.648,
+        "phonetic_similarity": 0.818,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "2801",
+        "name": "彰銀",
+        "score": 0.589,
+        "phonetic_similarity": 0.727,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "2049",
+        "name": "上銀",
+        "score": 0.53,
+        "phonetic_similarity": 0.636,
+        "text_similarity": 0.333
+      }
+    ],
+    "updated_at": "2026-06-04T21:25:47"
+  },
+  "新商店|3085": {
+    "wrong_keyword": "新商店",
+    "correct_code": "3085",
+    "correct_name": "新零售",
+    "confidence": "high",
+    "max_score": 77,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "dc015b5b-798a-4009-ae12-7ec086d274b2"
+    ],
+    "evidence": [
+      {
+        "video_id": "dc015b5b-798a-4009-ae12-7ec086d274b2",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-01",
+        "title": "EP1109｜仁勳開講、開獎！伺服器代工、AI PC、邊緣AI回來，GDP成長率上修9.64%，繼續正循環！怕賣飛又怕回檔，對策是什麼？ft.題材獵人 林漢偉",
+        "source": "full_video_validator",
+        "score": 77,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "stock_context"
+        ],
+        "context": "們的布局非常好 第一個你看到 他有所謂的華興科 對 華興科也是這個重要的 這個臺灣被動員間的二哥 也是華興立華集團股票 然後華邦店也很爭氣 今天股價也算到率實的新高 然後他旗下還有新唐 還有彩金 還有新商店 所以我覺得這就代表說 在6月份 只要這些主流題材還在的話 相關的華興集團的各股 你也可以做一個多方一併的看待 那國際集團當然持續維持一個 強勢的表態 所以你可以從這樣的一個情況裡面 甚至聯發科集團 聯店集團 我覺得在6月份 其實大家可以從這個集團股當中 尋找到一些不錯的標的 那但儘量還是要選擇強勢的產業 也就剛剛提到 被動員間 你就從國際集團 華興集團裡面 去尋找當中標的 那記憶體當中 你"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2427",
+        "name": "三商電",
+        "score": 0.658,
+        "phonetic_similarity": 0.833,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "6173",
+        "name": "信昌電",
+        "score": 0.596,
+        "phonetic_similarity": 0.917,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "4931",
+        "name": "新盛力",
+        "score": 0.55,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.333
+      }
+    ],
+    "updated_at": "2026-06-04T21:25:47"
+  },
+  "世界經濟|2303": {
+    "wrong_keyword": "世界經濟",
+    "correct_code": "2303",
+    "correct_name": "聯電",
+    "confidence": "medium",
+    "max_score": 65,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "dc015b5b-798a-4009-ae12-7ec086d274b2"
+    ],
+    "evidence": [
+      {
+        "video_id": "dc015b5b-798a-4009-ae12-7ec086d274b2",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-01",
+        "title": "EP1109｜仁勳開講、開獎！伺服器代工、AI PC、邊緣AI回來，GDP成長率上修9.64%，繼續正循環！怕賣飛又怕回檔，對策是什麼？ft.題材獵人 林漢偉",
+        "source": "full_video_validator",
+        "score": 65,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "stock_context"
+        ],
+        "context": " 現在發展的一個重點 所以你可以看到他 點名的聯發科 點名的台積電 點名的相關供應鏈 我覺得也是說 大家可以持續做一個關注的 目前來看我覺得CPU所帶動的 你看近期臺灣的 成熟製程的股票 今天的聯電 世界經濟盤中拉到漲停板 甚至說細金圓的 環球金 中美金 合金 加金等等的 但有一些 漲多的是有點休息整理 但是 繼續強的股票還是很多 那今天盤面上 因為我覺得是有點百花齊放 但是整體上 不管你說AI供應鏈 有沒有出現輪動的現象 我覺得那都不是重點 因為目前來看以黃仁勳的說法 他認為整個AI的成長性 還沒有看到比較明顯的反轉點 所以他認為在將接下來的 所謂的AI 已經進入到變現的時代 那你投入越多的"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2063",
+        "name": "世鎧精密",
+        "score": 0.521,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.25
+      },
+      {
+        "code": "5347",
+        "name": "世界",
+        "score": 0.5,
+        "phonetic_similarity": 0.5,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "9958",
+        "name": "世紀鋼",
+        "score": 0.467,
+        "phonetic_similarity": 0.583,
+        "text_similarity": 0.25
+      }
+    ],
+    "updated_at": "2026-06-04T21:25:47"
+  },
+  "利基店|6770": {
+    "wrong_keyword": "利基店",
+    "correct_code": "6770",
+    "correct_name": "力積電",
+    "confidence": "high",
+    "max_score": 75,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "dc015b5b-798a-4009-ae12-7ec086d274b2"
+    ],
+    "evidence": [
+      {
+        "video_id": "dc015b5b-798a-4009-ae12-7ec086d274b2",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-01",
+        "title": "EP1109｜仁勳開講、開獎！伺服器代工、AI PC、邊緣AI回來，GDP成長率上修9.64%，繼續正循環！怕賣飛又怕回檔，對策是什麼？ft.題材獵人 林漢偉",
+        "source": "full_video_validator",
+        "score": 75,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "phonetic_top3",
+          "stock_context"
+        ],
+        "context": "那記憶體當中 你就看到像這個華邦店 可是今天比較可惜的是 這個黃董的利金集團 對 它兩檔都創新高 一個是艾普先盤中創的歷史新高 但震盪很大 可以搞走低 太靠走低 掌庭板倒變碟瓣跟停板 那黃董自己的這個利基店 今天股價也是創下 終於掛牌的新高 但盤中也是大不震盪 然後盤中翻碟 所以我覺得其實你現在都可以看到 在盤面上這種熱絡的時候 集團性的作帳的個股 也是盤面上大家可以留著焦點 那另外一塊 你可以從投信的買盤來看到 我覺得最好情況就是 投信跟集團雙加持的一個個股 我覺得表現可能會變得更加的強勢 所以盤面上你可以看到近期 投信有在買的 又有集團色彩的一個個股 也都是盤面上相對比較強勢的標的 好 因"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "5364",
+        "name": "力麗店",
+        "score": 0.685,
+        "phonetic_similarity": 0.875,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "6770",
+        "name": "力積電",
+        "score": 0.65,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "2706",
+        "name": "第一店",
+        "score": 0.604,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.333
+      }
+    ],
+    "updated_at": "2026-06-04T21:25:48"
+  },
+  "強帽|2481": {
+    "wrong_keyword": "強帽",
+    "correct_code": "2481",
+    "correct_name": "強茂",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "af36eacf-8c25-4895-b394-74e28a5f81e7"
+    ],
+    "evidence": [
+      {
+        "video_id": "af36eacf-8c25-4895-b394-74e28a5f81e7",
+        "channel": "兆華與股惑仔",
+        "date": "2026-05-29",
+        "title": "EP1108｜DELL財報爆衝、兆元宴吃飽，緯創、鴻海、廣達齊漲停，老AI變新火種！下週電腦展開跑，多頭延續到何時？ft.操盤手 黃豐凱",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "件 他們有做車用市場的 現在就變成AI有切進去 又有車用的復甦 開開新興 又天外飛來一個助力 我覺得這也蠻有趣的 這些都是很奇妙的 而且是往正向發展的一些 利多到台灣來 沒錯 像你今天很多什麼 像什麼強帽 白半 其實他們就卡在這一塊 然後鵬城 然後像昨天 其實很多汽車零件 也漲了第一根 今天又漲第二根 我覺得昨天可能很多人 沒上車 因為他是一開盤就已自作 所以很多昨天 我覺得主力當中 可能昨天就 你會考慮嗎 一大早就進去了 你會考慮嗎 汽車零個純汽車零件 我個人是有看到一家 很特殊的公司 就是有一家做 就是鋁合圈鍛造的公司 你說 他 巧心 巧心 巧心昨天漲停泰 他其實在 這個事件之前 他就已經"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2481",
+        "name": "強茂",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "5013",
+        "name": "強新",
+        "score": 0.581,
+        "phonetic_similarity": 0.625,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "2438",
+        "name": "翔耀",
+        "score": 0.488,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-06-04T21:39:17"
+  },
+  "巧心|1563": {
+    "wrong_keyword": "巧心",
+    "correct_code": "1563",
+    "correct_name": "巧新",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "af36eacf-8c25-4895-b394-74e28a5f81e7"
+    ],
+    "evidence": [
+      {
+        "video_id": "af36eacf-8c25-4895-b394-74e28a5f81e7",
+        "channel": "兆華與股惑仔",
+        "date": "2026-05-29",
+        "title": "EP1108｜DELL財報爆衝、兆元宴吃飽，緯創、鴻海、廣達齊漲停，老AI變新火種！下週電腦展開跑，多頭延續到何時？ft.操盤手 黃豐凱",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "是一開盤就已自作 所以很多昨天 我覺得主力當中 可能昨天就 你會考慮嗎 一大早就進去了 你會考慮嗎 汽車零個純汽車零件 我個人是有看到一家 很特殊的公司 就是有一家做 就是鋁合圈鍛造的公司 你說 他 巧心 巧心 巧心昨天漲停泰 他其實在 這個事件之前 他就已經默默的漲上來 所以我覺得 這東西對他是加分 可是我覺得他真的在漲的原因 可能不是這個 可能還有其他的 那我稍微去搜尋一下 好像看到他有切入半導體 不得了 要多題材 做鋁合金的 居然去切入半導體 那我覺得這就是一個新的 事業的亮光 所以我覺得 當然 大家就可以去 follow一下 最最看這家公司的 基本面的狀況 看看從往面的形態 對 好 然"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "1563",
+        "name": "巧新",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "1259",
+        "name": "安心",
+        "score": 0.546,
+        "phonetic_similarity": 0.571,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "2916",
+        "name": "滿心",
+        "score": 0.546,
+        "phonetic_similarity": 0.571,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-06-04T21:39:17"
+  },
+  "dell|8358": {
+    "wrong_keyword": "dell",
+    "correct_code": "8358",
+    "correct_name": "金居",
+    "confidence": "low",
+    "max_score": 35,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "af36eacf-8c25-4895-b394-74e28a5f81e7"
+    ],
+    "evidence": [
+      {
+        "video_id": "af36eacf-8c25-4895-b394-74e28a5f81e7",
+        "channel": "兆華與股惑仔",
+        "date": "2026-05-29",
+        "title": "EP1108｜DELL財報爆衝、兆元宴吃飽，緯創、鴻海、廣達齊漲停，老AI變新火種！下週電腦展開跑，多頭延續到何時？ft.操盤手 黃豐凱",
+        "source": "full_video_validator",
+        "score": 35,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match"
+        ],
+        "context": "的快 那 被動的股票漲那麼快 你是要擔心的 因為被動變主動 就是被動基金 變主動基金的操作模式 竟然是會讓人害怕 但是我覺得在這盤裡面 其實也不用太難過 就是說 其他車很多股票 例如說 我們之前是被替金居罕圓 我們說 它沒有那麼差 這幾天它就開始 回復原審 除關第一天漲停來了 就告訴你說 它其實真的沒有那麼差 那之前大家一直在嫌 金圓店不好 其實 我感覺金圓店 應該也快差不多了 金圓店我們 真的是沒有覺得它不好 可是籌碼上比較投信在賣 大家有耐心一下 因為我覺得 當然賣它有一個原因 就是因為 它沒有接到Google TPU的訂單 Google TPU的訂單 我上次就講過 它是落到 鋁鵝光歷程的"
+      }
+    ],
+    "phonetic_candidates": [],
+    "updated_at": "2026-06-04T21:39:17"
+  },
+  "Media Tech|2454": {
+    "wrong_keyword": "Media Tech",
+    "correct_code": "2454",
+    "correct_name": "聯發科",
+    "confidence": "medium",
+    "max_score": 50,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "af36eacf-8c25-4895-b394-74e28a5f81e7"
+    ],
+    "evidence": [
+      {
+        "video_id": "af36eacf-8c25-4895-b394-74e28a5f81e7",
+        "channel": "兆華與股惑仔",
+        "date": "2026-05-29",
+        "title": "EP1108｜DELL財報爆衝、兆元宴吃飽，緯創、鴻海、廣達齊漲停，老AI變新火種！下週電腦展開跑，多頭延續到何時？ft.操盤手 黃豐凱",
+        "source": "full_video_validator",
+        "score": 50,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context"
+        ],
+        "context": " 會把廣達排在第一棒 一定有他的原因 我看到昨天有一個很可愛的影片 就是黃仁軒在台灣的 這個員工總部 不是在跟大家講話 他就問了一個女員工說 你結婚了嗎 女員工說是有 他說那你先生在哪裡 他說他先生在Media Tech 在這個聯發科 然後他就說 怎麼樣在我們NB店 你找不到對象嗎這樣子 然後女生就笑得很害羞 後來才說 女生是聯發科去MV的 等等 這就代表聯發科的人 都被MV挖走 這件事情是真的 是真的 我看到那一支影片 到後來好笑歸好笑 覺得挺心酸的 搞不好過不多久 他先生也在MV 是去年就在講說 Media要挖了很多 聯發科的高階的人才 那也沒辦法 確實 因為台灣之前的高階人才 尤其是IC"
+      }
+    ],
+    "phonetic_candidates": [],
+    "updated_at": "2026-06-04T21:39:17"
+  },
+  "富邦美|8454": {
+    "wrong_keyword": "富邦美",
+    "correct_code": "8454",
+    "correct_name": "富邦媒",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "af36eacf-8c25-4895-b394-74e28a5f81e7"
+    ],
+    "evidence": [
+      {
+        "video_id": "af36eacf-8c25-4895-b394-74e28a5f81e7",
+        "channel": "兆華與股惑仔",
+        "date": "2026-05-29",
+        "title": "EP1108｜DELL財報爆衝、兆元宴吃飽，緯創、鴻海、廣達齊漲停，老AI變新火種！下週電腦展開跑，多頭延續到何時？ft.操盤手 黃豐凱",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "季跟今年第一季 非常慘淡 但股交上來了 為什麼大家就是期待你第二季 有東西要來 那這個亞馬遜訂單或是其他的訂單 有沒有出現變化 恐怕四星就是 現在大家在觀望這個事情 今天當然還有像 我覺得比較有趣的像富邦美 富邦美說實話 我覺得很難看好這個產業 因為電商嘛 不過他們自己在股東會上面就說 爬也要爬回來 也要爬回來 然後要想辦法做一些 其他的業務這樣子 所以他今天也是拉了一根漲停板 不過我個人對於電商這個事情 我還是覺得比較保守 因為有朋友在庫彭 也有朋友在富邦美 然後也有朋友以前在雅虎 琴墨購物壞 被統一收購 都覺得 這個做電商到底造什麼孽 怎麼那麼辛苦 我覺得戰場還是很廝殺 尤其庫彭進來 基本"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "8454",
+        "name": "富邦媒",
+        "score": 0.883,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "0052",
+        "name": "富邦科技",
+        "score": 0.695,
+        "phonetic_similarity": 0.8,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "2881",
+        "name": "富邦金",
+        "score": 0.667,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.667
+      }
+    ],
+    "updated_at": "2026-06-04T21:39:18"
+  },
+  "MVIDIA|NVDA": {
+    "wrong_keyword": "MVIDIA",
+    "correct_code": "NVDA",
+    "correct_name": "NVIDIA",
+    "confidence": "medium",
+    "max_score": 60,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "af36eacf-8c25-4895-b394-74e28a5f81e7"
+    ],
+    "evidence": [
+      {
+        "video_id": "af36eacf-8c25-4895-b394-74e28a5f81e7",
+        "channel": "兆華與股惑仔",
+        "date": "2026-05-29",
+        "title": "EP1108｜DELL財報爆衝、兆元宴吃飽，緯創、鴻海、廣達齊漲停，老AI變新火種！下週電腦展開跑，多頭延續到何時？ft.操盤手 黃豐凱",
+        "source": "full_video_validator",
+        "score": 60,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "name_distance<=1"
+        ],
+        "context": "一點小下壓 來到了1096點的漲點 還是非常厲害 而且我想今天盤面上 一開盤 大家就看到所謂 趙元彥的成員們 輕儀色的開始急拉 拉得比較快 就立刻漲停了 拉得慢一些 大概10點多也漲停了 尤其是紅海 廣達 尾創 哇塞 你要看到這三巨頭 同時漲停 真的是非常非常罕見 營業達也漲停對不對 技嘉一度漲停 還有這個仁寶接近漲停 太誇張了 我們這些老AI全職股 輕儀色的在趙元彥之後漲停 這真的是非常非常少見 然後今天還有MSI的換股 我們也提到 外資在今天 等一下看一下盤後籌碼 應該也是大幅的脈操 因為三個全中都是提升的 所以今天的成交量 1.8兆 加劑上櫃 2.2兆 這個還沒有把盤後算進來 驚人 驚人"
+      }
+    ],
+    "phonetic_candidates": [],
+    "updated_at": "2026-06-04T21:39:21"
   }
 }
