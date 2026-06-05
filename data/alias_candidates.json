@@ -334,60 +334,6 @@
     ],
     "wrong_keyword" : "富邦電子"
   },
-  "揮達|1720" : {
-    "confidence" : "high",
-    "correct_code" : "1720",
-    "correct_name" : "生達",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "財女珍妮",
-        "context" : "哈囉大家好我是JENNY 今天繼續來跟大家分享 美股近期的大小事 今天是2026年的6月1號禮拜一 今天要來跟大家分享的主題是 Computex要出很招 揮達還可以長嗎 如果你們都在這邊 跟我們一起追視長 才產業看趨勢的話 那在節目開始之前 把我們按個讚 訂閱 開啟小鈴鐺 這些動作對我來說非常的重要 也可以讓更多人看到這個節目 支持我們持續跟大家分享 最新的財經資訊 一起在投資這條路上持續的前進 看到聽眾說 欸 小珍早看到你上好多節目 小弟乾敗下風 我最近好像沒有上很多節目吧 不過有的時候大家看到我上節目的時候 我自己都還沒有看到 因為有的時候大家傳給",
-        "date" : "2026-06-01",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "name_distance<=1",
-          "stock_context"
-        ],
-        "score" : 90,
-        "source" : "full_video_validator",
-        "title" : "2026\/06\/01(一) COMPUTEX出狠招，輝達還能漲嗎？",
-        "video_id" : "b8a9ad87-d83d-4ad9-94bf-fee01ddde4be"
-      }
-    ],
-    "max_score" : 90,
-    "observations" : 1,
-    "phonetic_candidates" : [
-      {
-        "code" : "3211",
-        "name" : "順達",
-        "phonetic_similarity" : 0.667,
-        "score" : 0.608,
-        "text_similarity" : 0.5
-      },
-      {
-        "code" : "4549",
-        "name" : "桓達",
-        "phonetic_similarity" : 0.667,
-        "score" : 0.608,
-        "text_similarity" : 0.5
-      },
-      {
-        "code" : "6576",
-        "name" : "逸達",
-        "phonetic_similarity" : 0.6,
-        "score" : 0.565,
-        "text_similarity" : 0.5
-      }
-    ],
-    "updated_at" : "2026-06-05T22:08:46",
-    "video_ids" : [
-      "b8a9ad87-d83d-4ad9-94bf-fee01ddde4be"
-    ],
-    "wrong_keyword" : "揮達"
-  },
   "新商店|3085" : {
     "confidence" : "high",
     "correct_code" : "3085",
