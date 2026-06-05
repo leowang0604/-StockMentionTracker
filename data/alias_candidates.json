@@ -31,38 +31,6 @@
     ],
     "wrong_keyword" : "MVIDIA"
   },
-  "PMAX|2303" : {
-    "confidence" : "medium",
-    "correct_code" : "2303",
-    "correct_name" : "聯電",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "韭菜畢業班",
-        "context" : "美股 目前的部位 其實都是 繼續卡實在這邊 然後為了就是 讓自己不要錯過 這一段比較難得的 一個行情 最近真的是 屬實算是 非常難得的行情 因為像我們前幾集 聊到的一些 可能跟聯電有相關的 一些 這種PMAX 相關的話題 或說MOSSAI 其實 二集體 他們都一起 往上去衝 我覺得大家從 股價上面的表現 應該也可以 多多少少知道 或是我們上一集 其實有聊到的一些 too quick的這些技術 這些too quick的技術 如果說接下來 他們的豐裝 繼續被重視的話 那我認為 應該還是會 蠻不錯的一個表現 雖然都 很多都已經收到天上去了 但是收到天上 這邊天上 就是天上 會不會有更多的外太公 這個",
-        "date" : "2026-05-31",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context"
-        ],
-        "score" : 50,
-        "source" : "full_video_validator",
-        "title" : "EP230 | 台、美股重點一次說，Dell AI Server財報超預期，NVIDIA Computex展主軸AI PC，被動元件實際需求",
-        "video_id" : "12f46126-6bbd-4627-b0c4-de49fbd4a256"
-      }
-    ],
-    "max_score" : 50,
-    "observations" : 1,
-    "phonetic_candidates" : [
-
-    ],
-    "updated_at" : "2026-06-03T21:18:35",
-    "video_ids" : [
-      "12f46126-6bbd-4627-b0c4-de49fbd4a256"
-    ],
-    "wrong_keyword" : "PMAX"
-  },
   "SNAP|NTAP" : {
     "confidence" : "high",
     "correct_code" : "NTAP",
