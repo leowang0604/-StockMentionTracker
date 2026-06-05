@@ -501,58 +501,6 @@
     ],
     "wrong_keyword" : "萬序"
   },
-  "馬菲爾|MRVL" : {
-    "confidence" : "medium",
-    "correct_code" : "MRVL",
-    "correct_name" : "Marvell",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "財女珍妮",
-        "context" : "Hello 大家好 我是卷尼 今天繼續來跟大家分享美股近期的大小事件 是今天是2026年的6月3號禮拜三 今天要來跟大家分享的主題是 輝達清典馬菲爾暴漲 帶飛了光通股 所以昨天可以看到 光通又表現得非常非常的強勁 如意美中在這邊 跟我們一起追思想財產業看劇室的話 那在節目開始之前 幫我們按個讚、訂閱、開啟小鈴鐺 當這些動作對我來說非常重要 也可以讓更多人看到這個節目 支持我們持續跟大家分享最新的財經資訊 一起在投資這條路上持續的前進 先來看一下昨天美股收盤的表現 昨天到窮工業指數是上漲0.5% S&P 500指數上漲0.1% 盤中的高點 76",
-        "date" : "2026-06-03",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context"
-        ],
-        "score" : 50,
-        "source" : "full_video_validator",
-        "title" : "2026\/06\/03 (三) 輝達欽點Marvell暴漲，帶飛光通股",
-        "video_id" : "0b057c23-833e-42b7-9dbf-ef14faea6891"
-      }
-    ],
-    "max_score" : 50,
-    "observations" : 1,
-    "phonetic_candidates" : [
-      {
-        "code" : "6844",
-        "name" : "諾貝兒",
-        "phonetic_similarity" : 0.5,
-        "score" : 0.325,
-        "text_similarity" : 0
-      },
-      {
-        "code" : "1722",
-        "name" : "台肥",
-        "phonetic_similarity" : 0.429,
-        "score" : 0.279,
-        "text_similarity" : 0
-      },
-      {
-        "code" : "2020",
-        "name" : "美亞",
-        "phonetic_similarity" : 0.429,
-        "score" : 0.279,
-        "text_similarity" : 0
-      }
-    ],
-    "updated_at" : "2026-06-05T21:49:52",
-    "video_ids" : [
-      "0b057c23-833e-42b7-9dbf-ef14faea6891"
-    ],
-    "wrong_keyword" : "馬菲爾"
-  },
   "馬蕾爾|MRVL" : {
     "confidence" : "medium",
     "correct_code" : "MRVL",
