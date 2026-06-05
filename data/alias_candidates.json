@@ -197,60 +197,6 @@
     ],
     "wrong_keyword" : "invdr"
   },
-  "光搭|2338" : {
-    "confidence" : "high",
-    "correct_code" : "2338",
-    "correct_name" : "光罩",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "韭菜畢業班",
-        "context" : "太差 當然我們可以看到 跟PCE有相關的東西 在禮拜五的時候 是一起往上去從的 然後再來就是一些 看到跟伺服器這三個字 有關係的東西 也都一起往上去走的 而且這個走其實 幾乎是收一根漲停 我們看到像 光搭 尾創機 都是久違的跳空 往上去漲 然後收漲停 再來就是華碩 其實華碩我們在 前面幾集的時候 我跟各位聊過 他法碩會的時候 其實是有透露出一點點 就是小氛圍 那個氣氛是有帶到的 但是我們看到現在 反應是蠻快的 好那我們講到 像電腦相關的東西 或是說伺服器 主動用相關的東西 我覺得一開始 可以跟各位來聊的東西 就是Dale這一家公司 那Dale這一家公司 其實我對他算是 感覺是不差的 因為其實大",
-        "date" : "2026-05-31",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "name_distance<=1",
-          "stock_context"
-        ],
-        "score" : 90,
-        "source" : "full_video_validator",
-        "title" : "EP230 | 台、美股重點一次說，Dell AI Server財報超預期，NVIDIA Computex展主軸AI PC，被動元件實際需求",
-        "video_id" : "12f46126-6bbd-4627-b0c4-de49fbd4a256"
-      }
-    ],
-    "max_score" : 90,
-    "observations" : 1,
-    "phonetic_candidates" : [
-      {
-        "code" : "3666",
-        "name" : "光耀",
-        "phonetic_similarity" : 0.75,
-        "score" : 0.663,
-        "text_similarity" : 0.5
-      },
-      {
-        "code" : "2382",
-        "name" : "廣達",
-        "phonetic_similarity" : 1,
-        "score" : 0.65,
-        "text_similarity" : 0
-      },
-      {
-        "code" : "5381",
-        "name" : "光譜",
-        "phonetic_similarity" : 0.714,
-        "score" : 0.639,
-        "text_similarity" : 0.5
-      }
-    ],
-    "updated_at" : "2026-06-03T21:18:35",
-    "video_ids" : [
-      "12f46126-6bbd-4627-b0c4-de49fbd4a256"
-    ],
-    "wrong_keyword" : "光搭"
-  },
   "台塑四堡|1301" : {
     "confidence" : "medium",
     "correct_code" : "1301",
