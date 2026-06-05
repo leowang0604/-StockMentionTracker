@@ -500,57 +500,5 @@
       "cc65e950-dd93-4d1d-a414-e73e4c732401"
     ],
     "wrong_keyword" : "萬序"
-  },
-  "馬蕾爾|MRVL" : {
-    "confidence" : "medium",
-    "correct_code" : "MRVL",
-    "correct_name" : "Marvell",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "股癌",
-        "context" : "什麼樣的 新的酷東西 有像上次一樣這樣跟大家分享 那目前就是只是看的一些 在computax這邊的演講 和各個CEO 我們去發表自己的一些想法 那當然市場裡面 我覺得最大的一個震撼點 就是在老黃講說 馬蕾爾可能是下一個 造員企業之後 馬蕾爾這一個 有點像是說大牛車的東西 突然間變成 媽的飛天神牛直接射出去 那這個我們預期到 這個真的是沒有辦法預期到 那老實講 目前我們去看馬蕾爾的話 你說他在DSP這邊 實在還蠻不錯 但是在ASIC這邊 我是覺得說 他還在一個發展的道路上 他沒有辦法像 可能media tech 或是像 Blockhouse這麼樣的一個明確 所以就是說 老黃的喊盤能力 還是非常的",
-        "date" : "2026-06-03",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context"
-        ],
-        "score" : 50,
-        "source" : "full_video_validator",
-        "title" : "EP667 | 🌍",
-        "video_id" : "8c2cb9ef-82a5-46ec-bd46-1e213017a353"
-      }
-    ],
-    "max_score" : 50,
-    "observations" : 2,
-    "phonetic_candidates" : [
-      {
-        "code" : "6844",
-        "name" : "諾貝兒",
-        "phonetic_similarity" : 0.5,
-        "score" : 0.325,
-        "text_similarity" : 0
-      },
-      {
-        "code" : "1432",
-        "name" : "大魯閣",
-        "phonetic_similarity" : 0.429,
-        "score" : 0.279,
-        "text_similarity" : 0
-      },
-      {
-        "code" : "1514",
-        "name" : "亞力",
-        "phonetic_similarity" : 0.429,
-        "score" : 0.279,
-        "text_similarity" : 0
-      }
-    ],
-    "updated_at" : "2026-06-04T19:44:14",
-    "video_ids" : [
-      "8c2cb9ef-82a5-46ec-bd46-1e213017a353"
-    ],
-    "wrong_keyword" : "馬蕾爾"
   }
 }
