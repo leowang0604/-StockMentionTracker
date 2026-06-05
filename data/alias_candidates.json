@@ -335,58 +335,6 @@
     ],
     "wrong_keyword" : "新商店"
   },
-  "漲銀金|8358" : {
-    "confidence" : "low",
-    "correct_code" : "8358",
-    "correct_name" : "金居",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "兆華與股惑仔",
-        "context" : "中 其實每一檔股票 或每一個族群的輪動 他都會有機會 所以你可以看到今天盤面上 真的有很多股票 是百花齊放的發動上來 比方說你看到PCB當中的 臺光店雖然沒有強漲 但臺藥 聯貿 都大到漲銀版 是 對 金居也繼續漲銀版 也收下這個歷史的新高 所以你可以看到整個供應鏈 今天盤中也一度 拉高到漲銀版的一個情況 但是同樣情況裡面 你看到高利拉回來 其中雙重沒有特別的強 所以我覺得 就是整個趨勢上來看 對AI供應鏈來講 都是有利的 但是最怕的一件事情 就是大家會覺得說 為什麼我買一樣AI供應鏈的股票 我的股票就比別人更弱 就像你之前是 偽創的股東投資人 就會覺得我好悶 為什麼我買的 AI伺服器都沒有漲到",
-        "date" : "2026-06-01",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "weak_sector_match"
-        ],
-        "score" : 43,
-        "source" : "full_video_validator",
-        "title" : "EP1109｜仁勳開講、開獎！伺服器代工、AI PC、邊緣AI回來，GDP成長率上修9.64%，繼續正循環！怕賣飛又怕回檔，對策是什麼？ft.題材獵人 林漢偉",
-        "video_id" : "dc015b5b-798a-4009-ae12-7ec086d274b2"
-      }
-    ],
-    "max_score" : 43,
-    "observations" : 1,
-    "phonetic_candidates" : [
-      {
-        "code" : "2891",
-        "name" : "中信金",
-        "phonetic_similarity" : 0.818,
-        "score" : 0.648,
-        "text_similarity" : 0.333
-      },
-      {
-        "code" : "2801",
-        "name" : "彰銀",
-        "phonetic_similarity" : 0.727,
-        "score" : 0.589,
-        "text_similarity" : 0.333
-      },
-      {
-        "code" : "2049",
-        "name" : "上銀",
-        "phonetic_similarity" : 0.636,
-        "score" : 0.53,
-        "text_similarity" : 0.333
-      }
-    ],
-    "updated_at" : "2026-06-04T21:25:47",
-    "video_ids" : [
-      "dc015b5b-798a-4009-ae12-7ec086d274b2"
-    ],
-    "wrong_keyword" : "漲銀金"
-  },
   "臺灣50全股|0050" : {
     "confidence" : "medium",
     "correct_code" : "0050",
