@@ -242,10 +242,12 @@ ALIASES: dict[str, str] = {
     "00980A": "00980A", "00981A": "00981A", "00982A": "00982A", "00984A": "00984A",
     "00985A": "00985A", "00987A": "00987A", "00991A": "00991A", "00992A": "00992A",
     "00993A": "00993A", "00994A": "00994A", "00995A": "00995A", "00996A": "00996A",
+    "00403A": "00403A",
     # 主動 ETF 短形式別名（逐字稿常省略前綴 "00"，例如 "994A"、"992A"）
     "980A": "00980A", "981A": "00981A", "982A": "00982A", "984A": "00984A",
     "985A": "00985A", "987A": "00987A", "991A": "00991A", "992A": "00992A",
     "993A": "00993A", "994A": "00994A", "995A": "00995A", "996A": "00996A",
+    "403A": "00403A",
     # 槓桿反向 / 債券 ETF
     "00631L": "00631L", "00632R": "00632R",
     "00679B": "00679B", "00720B": "00720B",
@@ -1093,6 +1095,7 @@ TW_STOCK_SECTORS: dict[str, str] = {
     "00985A": "ETF・主動型", "00987A": "ETF・主動型", "00991A": "ETF・主動型",
     "00992A": "ETF・主動型", "00993A": "ETF・主動型", "00994A": "ETF・主動型",
     "00995A": "ETF・主動型", "00996A": "ETF・主動型", "00980A": "ETF・主動型",
+    "00403A": "ETF・主動型",
     "00631L": "ETF・槓桿反向", "00632R": "ETF・槓桿反向",
     "00679B": "ETF・債券",   "00720B": "ETF・債券",
 }
@@ -2207,10 +2210,12 @@ def build_stock_dict(
     # ── Taiwan aliases (override conflicts; TW wins over US for same keyword) ─
     for alias, code in ALIASES.items():
         stock_dict[alias] = code
-        if re.match(r"^\d{4,6}$", alias) and alias not in code_to_name:
-            code_to_name[alias] = alias
+        if code not in code_to_name and re.match(r"^0\d{3,5}[A-Z]?$", code):
+            code_to_name[code] = code
         if code not in stock_market:
             stock_market[code] = "TW"
+        if code not in stock_sector and code in TW_STOCK_SECTORS:
+            stock_sector[code] = TW_STOCK_SECTORS[code]
 
     # ── Approved Whisper corrections (promoted after review) ────────────────────
     for alias, code in _load_learned_aliases().items():

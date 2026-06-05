@@ -32,6 +32,8 @@ def load_scanner():
         {"code": "6214", "name": "精誠", "market": "listed", "sector": "資訊服務業"},
         {"code": "6669", "name": "緯穎", "market": "listed", "sector": "電腦及週邊設備業"},
         {"code": "6690", "name": "安碁資訊", "market": "listed", "sector": "資訊服務業"},
+        {"code": "00403A", "name": "00403A", "market": "listed", "sector": "ETF・主動型"},
+        {"code": "00993A", "name": "主動安聯台灣", "market": "listed", "sector": "ETF・主動型"},
     ]:
         by_code.setdefault(stock["code"], stock)
     stocks = list(by_code.values())
@@ -118,6 +120,20 @@ class ValidatorRegressionTests(unittest.TestCase):
         )
         self.assertEqual([hit["stock_code"] for hit in hits], ["6214"])
         self.assertEqual([hit["matched_keyword"] for hit in hits], ["金城資訊"])
+
+    def test_active_etf_short_code_403a_does_not_merge_into_993a(self):
+        text = "像我們常常講到981A 403A 992A 991A，各自有他們喜歡的領域。"
+        hits = self.scanner.recognize_stocks(text)
+        codes = [hit["stock_code"] for hit in hits]
+        self.assertIn("00403A", codes)
+        self.assertNotIn("00993A", codes)
+
+    def test_active_etf_993a_still_resolves_to_anlian(self):
+        text = "我要看到安聯的993A，也要看到群益的992A。"
+        hits = self.scanner.recognize_stocks(text)
+        codes = [hit["stock_code"] for hit in hits]
+        self.assertIn("00993A", codes)
+        self.assertIn("00992A", codes)
 
     def test_new_whisper_correction_is_review_candidate_only(self):
         text = "緯印這檔股票最近營收成長，AI伺服器客戶訂單也增加。"
