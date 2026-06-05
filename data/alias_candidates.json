@@ -1,38 +1,4 @@
 {
-  "Inter|INTC" : {
-    "confidence" : "high",
-    "correct_code" : "INTC",
-    "correct_name" : "Intel",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "財女珍妮",
-        "context" : "xt的演講上面 我覺得一個很重要的亮點 好 還有就是大家最期待的 這個RTX Spark 就是他跟微軟啊 然後去合作 然後Windows問世以來呢 最大的一個革命 這個也是讓昨天像是高通啊 AMD啊 Inter啊 全部都是股價 算重挫嗎 就是股價是下跌 然後比較負面的去反映的 那RTX Spark 他其實 就是希望呢 就是他是 我們先講細節 就是他是Blockwell RTX GPU 然後跟 搭配跟連發科 共同設計的這個 20核心的Grass CPU 然後去採用台積電 三奈米的製程 128GB的記憶體啊 整體的算力可以達到 這個 ePeta Flops 然後就可以去運行很多 Cuda跟Wind",
-        "date" : "2026-06-02",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "name_distance<=1",
-          "stock_context"
-        ],
-        "score" : 90,
-        "source" : "full_video_validator",
-        "title" : "2026\/06\/02(二) 一天漲6％，輝達還能繼續漲嗎？#NVDA",
-        "video_id" : "f4a134ad-943c-48c7-8cf3-08ee5bfc7e4b"
-      }
-    ],
-    "max_score" : 90,
-    "observations" : 1,
-    "phonetic_candidates" : [
-
-    ],
-    "updated_at" : "2026-06-05T21:59:55",
-    "video_ids" : [
-      "f4a134ad-943c-48c7-8cf3-08ee5bfc7e4b"
-    ],
-    "wrong_keyword" : "Inter"
-  },
   "MVIDIA|NVDA" : {
     "confidence" : "medium",
     "correct_code" : "NVDA",
