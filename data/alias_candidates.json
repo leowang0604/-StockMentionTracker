@@ -299,10 +299,16 @@
     "wrong_keyword": "台塑市保"
   },
   "拜一|6152": {
-    "confidence": "high",
+    "wrong_keyword": "拜一",
     "correct_code": "6152",
     "correct_name": "百一",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 2,
     "distinct_videos": 1,
+    "video_ids": [
+      "66a74bc5-4f8a-4735-b5a0-77972ee3ccf0"
+    ],
     "evidence": [
       {
         "channel": "兆華與股惑仔",
@@ -322,36 +328,30 @@
         "video_id": "66a74bc5-4f8a-4735-b5a0-77972ee3ccf0"
       }
     ],
-    "max_score": 100,
-    "observations": 1,
     "phonetic_candidates": [
       {
         "code": "6152",
         "name": "百一",
-        "phonetic_similarity": 1,
         "score": 0.825,
+        "phonetic_similarity": 1.0,
         "text_similarity": 0.5
       },
       {
         "code": "8222",
         "name": "寶一",
-        "phonetic_similarity": 0.8,
         "score": 0.695,
+        "phonetic_similarity": 0.8,
         "text_similarity": 0.5
       },
       {
         "code": "4126",
         "name": "太醫",
-        "phonetic_similarity": 0.8,
         "score": 0.52,
-        "text_similarity": 0
+        "phonetic_similarity": 0.8,
+        "text_similarity": 0.0
       }
     ],
-    "updated_at": "2026-06-04T21:05:36",
-    "video_ids": [
-      "66a74bc5-4f8a-4735-b5a0-77972ee3ccf0"
-    ],
-    "wrong_keyword": "拜一"
+    "updated_at": "2026-06-05T21:02:20"
   },
   "新商店|3085": {
     "confidence": "high",
@@ -711,5 +711,59 @@
     ],
     "phonetic_candidates": [],
     "updated_at": "2026-06-05T19:59:49"
+  },
+  "富邦電子|0052": {
+    "wrong_keyword": "富邦電子",
+    "correct_code": "0052",
+    "correct_name": "富邦科技",
+    "confidence": "high",
+    "max_score": 90,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "fcf0d87d-10e1-4ba6-88e6-c5dc837fe5cc"
+    ],
+    "evidence": [
+      {
+        "video_id": "fcf0d87d-10e1-4ba6-88e6-c5dc837fe5cc",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-04",
+        "title": "EP1112｜無聊就會跌？剛好給停利理由！就業熱就怕不降息，博通財報和台積電股東會平淡，非電、金融撐盤，回檔機會來了？ft.選股教練 陳唯泰",
+        "source": "full_video_validator",
+        "score": 90,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "stock_context"
+        ],
+        "context": "我的配置裡面 因為我不喜歡股息 還是搶到這件事情 所以我還是 主軸核心會是科技跟市值 就例如說830 或者說像那個 剛剛講到 只要跟科技比較相關的 成分高的 富邦電子 等一下他應該叫富邦科技 凌露 這種我都配得比較多"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "0053",
+        "name": "元大電子",
+        "score": 0.608,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "00652",
+        "name": "富邦印度",
+        "score": 0.608,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "2344",
+        "name": "華邦電",
+        "score": 0.608,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-06-05T20:30:25"
   }
 }
