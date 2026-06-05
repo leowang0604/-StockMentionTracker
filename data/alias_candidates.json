@@ -440,61 +440,6 @@
     ],
     "wrong_keyword" : "漲銀金"
   },
-  "為聖|2231" : {
-    "confidence" : "high",
-    "correct_code" : "2231",
-    "correct_name" : "為升",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "股癌",
-        "context" : "歡迎收聽古來為聖夢宮本集節目由直村秀贊助 想要在延遲這塊穩定獲利 需要直村秀的這些組合助你避開暗沉讓延遲一路漲停 第一個先講全新上市的開光小紅噴 第一眼就被他吸睛的紅色液體給吸引 簡單說這一隻是樁龍的漲停板鎖死 小紅噴細緻的霧耗水露可以在臉上形成一層保護膜 出油出汗都能確保你的樁龍維持在高檔不跳空 第一早噴完直接愛上這一罐 連我這種直男都可以發現臉今天特別亮 不過上次之前有時候做完指甲都不知道的尷尬 小紅噴一噴一",
-        "date" : "2026-05-30",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "name_distance<=1",
-          "phonetic_top1",
-          "stock_context"
-        ],
-        "score" : 100,
-        "source" : "phonetic-discovery",
-        "title" : "EP666 | 🍐",
-        "video_id" : "fd5d4766-183d-4ed9-8d68-958c50d8e730"
-      }
-    ],
-    "max_score" : 100,
-    "observations" : 3,
-    "phonetic_candidates" : [
-      {
-        "code" : "2231",
-        "name" : "為升",
-        "phonetic_similarity" : 1,
-        "score" : 0.825,
-        "text_similarity" : 0.5
-      },
-      {
-        "code" : "2467",
-        "name" : "志聖",
-        "phonetic_similarity" : 0.75,
-        "score" : 0.663,
-        "text_similarity" : 0.5
-      },
-      {
-        "code" : "2388",
-        "name" : "威盛",
-        "phonetic_similarity" : 1,
-        "score" : 0.65,
-        "text_similarity" : 0
-      }
-    ],
-    "updated_at" : "2026-06-05T19:42:53",
-    "video_ids" : [
-      "fd5d4766-183d-4ed9-8d68-958c50d8e730"
-    ],
-    "wrong_keyword" : "為聖"
-  },
   "臺灣50全股|0050" : {
     "confidence" : "medium",
     "correct_code" : "0050",
