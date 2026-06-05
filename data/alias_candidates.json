@@ -164,37 +164,6 @@
     ],
     "wrong_keyword" : "Zehler"
   },
-  "dell|8358" : {
-    "confidence" : "low",
-    "correct_code" : "8358",
-    "correct_name" : "金居",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "兆華與股惑仔",
-        "context" : "的快 那 被動的股票漲那麼快 你是要擔心的 因為被動變主動 就是被動基金 變主動基金的操作模式 竟然是會讓人害怕 但是我覺得在這盤裡面 其實也不用太難過 就是說 其他車很多股票 例如說 我們之前是被替金居罕圓 我們說 它沒有那麼差 這幾天它就開始 回復原審 除關第一天漲停來了 就告訴你說 它其實真的沒有那麼差 那之前大家一直在嫌 金圓店不好 其實 我感覺金圓店 應該也快差不多了 金圓店我們 真的是沒有覺得它不好 可是籌碼上比較投信在賣 大家有耐心一下 因為我覺得 當然賣它有一個原因 就是因為 它沒有接到Google TPU的訂單 Google TPU的訂單 我上次就講過 它是落到 鋁鵝光歷程的",
-        "date" : "2026-05-29",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match"
-        ],
-        "score" : 35,
-        "source" : "full_video_validator",
-        "title" : "EP1108｜DELL財報爆衝、兆元宴吃飽，緯創、鴻海、廣達齊漲停，老AI變新火種！下週電腦展開跑，多頭延續到何時？ft.操盤手 黃豐凱",
-        "video_id" : "af36eacf-8c25-4895-b394-74e28a5f81e7"
-      }
-    ],
-    "max_score" : 35,
-    "observations" : 1,
-    "phonetic_candidates" : [
-
-    ],
-    "updated_at" : "2026-06-04T21:39:17",
-    "video_ids" : [
-      "af36eacf-8c25-4895-b394-74e28a5f81e7"
-    ],
-    "wrong_keyword" : "dell"
-  },
   "invdr|NVDA" : {
     "confidence" : "medium",
     "correct_code" : "NVDA",
