@@ -197,59 +197,6 @@
     ],
     "wrong_keyword" : "invdr"
   },
-  "台塑四堡|1301" : {
-    "confidence" : "medium",
-    "correct_code" : "1301",
-    "correct_name" : "台塑",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "投資癮",
-        "context" : " 加上那個時候 美國銀行的倒閉 製造市場的恐慌 而成為當時金融類國的喜歡 所以從配息這件事情 公網的聽眾朋友應該都清楚明白 他並不是一個絕對壞事 他甚至可以逼出一些長期投資人 其實在近一點的例子 就像台塑士堡一樣 南亞當時也討論到沒有配息 而逼出一些長期投資人 所以那時候才說30年河東 30年河西 製造自己的金河 而這禮拜的南亞 也來到收盤的新高了 我自己是沒有太多的動作 也沒有太多的想法 畢竟台塑士堡是南亞科最大的股東 在機體的趨勢還沒有趨緩跟放緩之前 我都沒有太多想要變動的地方 只能持續的觀察 而再也再次證明 其實鼓勵這件事情 是給大多數人喜歡的 但對於交易者來說 還是要做評估跟判斷 所以",
-        "date" : "2026-05-31",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "name_distance=2",
-          "phonetic_top3"
-        ],
-        "score" : 57,
-        "source" : "full_video_validator",
-        "title" : "EP331 軟硬兼具",
-        "video_id" : "cc65e950-dd93-4d1d-a414-e73e4c732401"
-      }
-    ],
-    "max_score" : 57,
-    "observations" : 1,
-    "phonetic_candidates" : [
-      {
-        "code" : "6505",
-        "name" : "台塑化",
-        "phonetic_similarity" : 0.6,
-        "score" : 0.565,
-        "text_similarity" : 0.5
-      },
-      {
-        "code" : "1301",
-        "name" : "台塑",
-        "phonetic_similarity" : 0.5,
-        "score" : 0.5,
-        "text_similarity" : 0.5
-      },
-      {
-        "code" : "1326",
-        "name" : "台化",
-        "phonetic_similarity" : 0.5,
-        "score" : 0.412,
-        "text_similarity" : 0.25
-      }
-    ],
-    "updated_at" : "2026-06-05T22:25:39",
-    "video_ids" : [
-      "cc65e950-dd93-4d1d-a414-e73e4c732401"
-    ],
-    "wrong_keyword" : "台塑四堡"
-  },
   "台塑市保|1301" : {
     "confidence" : "medium",
     "correct_code" : "1301",
