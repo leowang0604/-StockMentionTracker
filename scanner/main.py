@@ -292,8 +292,14 @@ def _load_rejected_aliases() -> dict[str, dict]:
     return {}
 
 
+def _phonetic_stock_name(text: str) -> str:
+    """Normalize TW stock display names before pronunciation matching."""
+    return re.sub(r"[^\u3400-\u9fffA-Za-z0-9]+", "", text or "")
+
+
 def _phonetic_key(text: str) -> str:
     """Return tone-less Mandarin pinyin, or an empty string when unavailable."""
+    text = _phonetic_stock_name(text)
     if lazy_pinyin is None or Style is None or not re.search(r"[\u3400-\u9fff]", text):
         return ""
     return "".join(
@@ -323,8 +329,9 @@ def _phonetic_alias_candidates(wrong_keyword: str, limit: int = 3) -> list[dict]
 
     candidates: list[dict] = []
     for code, name, name_phonetic in _PHONETIC_STOCK_INDEX:
+        comparable_name = _phonetic_stock_name(name)
         phonetic_similarity = _similarity(wrong_phonetic, name_phonetic)
-        text_similarity = _similarity(wrong_keyword, name)
+        text_similarity = _similarity(wrong_keyword, comparable_name)
         score = 0.35 * text_similarity + 0.65 * phonetic_similarity
         candidates.append({
             "code": code,
@@ -678,6 +685,7 @@ STOCK_CONTEXT_HINTS: set[str] = {
     "創高", "創新高", "拉回", "位階", "買點", "賣點", "看多", "看空", "中性",
     "漲價", "報價", "代工", "產能", "擴產", "庫存", "需求", "產業", "族群",
     "題材", "估值", "市佔", "公司", "客戶", "供應鏈",
+    "ETF", "高息", "高股息", "成分", "成分股", "持股", "權重", "比重",
 } | BULLISH_KEYWORDS | BEARISH_KEYWORDS
 
 PROMOTIONAL_CONTEXT_HINTS: set[str] = {
@@ -1138,7 +1146,7 @@ _PHONETIC_DISCOVERY_STOPWORDS: set[str] = {
     "今天", "昨天", "明天", "現在", "之前", "後來", "最近", "目前", "大家", "我們",
     "他們", "這個", "那個", "如果", "因為", "所以", "但是", "可是", "然後", "其實",
     "可能", "應該", "一定", "不會", "沒有", "不是", "就是", "比較", "一個", "兩個",
-    "很多", "一些", "有一", "價和", "立華", "起來", "看到", "講到", "想到", "知道", "覺得", "代表", "問題",
+    "很多", "一些", "有一", "價和", "價格", "價值", "立華", "起來", "看到", "講到", "想到", "知道", "覺得", "代表", "問題",
     "市場", "股票", "股價", "族群", "產業", "公司", "題材", "被動", "主動", "外資",
     "法人", "營收", "訂單", "毛利", "漲停", "跌停", "拉回", "創高", "位階",
 }

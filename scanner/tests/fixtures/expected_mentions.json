@@ -63,5 +63,15 @@
     "must_exclude": ["1423", "3085"],
     "must_highlight": ["華邦店", "彩金", "新商店"],
     "must_not_highlight": ["立華"]
+  },
+  "high_dividend_components": {
+    "description": "高息 ETF 成分股列舉中，Whisper 的國具/尾創應補成國巨/緯創，光寶科也要保留。",
+    "enable_phonetic_discovery": true,
+    "learned_aliases": {
+      "尾創": "3231"
+    },
+    "must_include": ["2327", "2454", "3008", "2301", "3231"],
+    "must_highlight": ["國具", "聯發科", "大立光", "光寶科", "尾創"],
+    "expected_candidates": ["國具|2327"]
   }
 }
