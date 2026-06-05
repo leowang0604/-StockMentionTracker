@@ -658,61 +658,6 @@
     ],
     "wrong_keyword" : "美觀"
   },
-  "聯發客|2454" : {
-    "confidence" : "high",
-    "correct_code" : "2454",
-    "correct_name" : "聯發科",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "投資癮",
-        "context" : "時看到極小的賣量 而兩者相符之下 才會造成多了這麼容易有這些個股 直接鎖到掌聽板 而這些都還是大型全程類股 這些手上像歷程 也是連續鎖了四根掌聽板 而它的指控是超風 也是持續創新高 而鴻海這個東西 跟聯發客一樣 自己是沒有太多的琢磨在裡面 但是相對的 鴻海集團真的太大了 可以從鴻海集團裡面 各股去找一些有機會的東西 而當時聯發客連續掌聽的時候 我自己也承認 我沒有在聯發客太多的琢磨 因為自己長街車友 不會比較大的全程類股身上 主要還是台積電跟大力光身上 不過大力光在這段時間 也來到新高的位置點 雖然還沒有到歷史新高 但是歷史新高 大概只差20多%而已 光旋類股 有大力光跟預警光 還有其他的金國",
-        "date" : "2026-05-31",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "name_distance<=1",
-          "phonetic_top1",
-          "stock_context"
-        ],
-        "score" : 100,
-        "source" : "full_video_validator",
-        "title" : "EP331 軟硬兼具",
-        "video_id" : "cc65e950-dd93-4d1d-a414-e73e4c732401"
-      }
-    ],
-    "max_score" : 100,
-    "observations" : 1,
-    "phonetic_candidates" : [
-      {
-        "code" : "2454",
-        "name" : "聯發科",
-        "phonetic_similarity" : 1,
-        "score" : 0.883,
-        "text_similarity" : 0.667
-      },
-      {
-        "code" : "1459",
-        "name" : "聯發",
-        "phonetic_similarity" : 0.75,
-        "score" : 0.721,
-        "text_similarity" : 0.667
-      },
-      {
-        "code" : "2756",
-        "name" : "聯發國際",
-        "phonetic_similarity" : 0.545,
-        "score" : 0.53,
-        "text_similarity" : 0.5
-      }
-    ],
-    "updated_at" : "2026-06-05T22:25:39",
-    "video_ids" : [
-      "cc65e950-dd93-4d1d-a414-e73e4c732401"
-    ],
-    "wrong_keyword" : "聯發客"
-  },
   "臺灣50全股|0050" : {
     "confidence" : "medium",
     "correct_code" : "0050",
