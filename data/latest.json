@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-05T19:43:32",
+  "updated_at": "2026-06-05T19:59:49",
   "stocks_ranking": [
     {
       "code": "INTC",
@@ -49713,6 +49713,75 @@
       }
     },
     {
+      "code": "6116",
+      "name": "彩晶",
+      "market": "TW",
+      "sector": "面板",
+      "contexts": [
+        {
+          "video": "EP1097｜川習會激勵美股，對台股的利弊如何看？三星準罷工，記憶體再漲波段？被動全族群表態！Q1季報觀察重點？ft.報價天王 林信富",
+          "channel": "兆華與股惑仔",
+          "date": "2026-05-14",
+          "text": "土管制 就雙方各有各的一個底牌 可以拿來運用 那這個部分能不能夠 稍微有一些放寬的情況 我想這一次 也是這個 輝達黃仁勳 會搭上這一次 川普的專機 飛到中國的一個主要原因 看能不能夠 針對在 輝達的一些晶片 進到中國 有一些更寬鬆的一個政策 我想這個都是 接下來可能發展的方向 不過總歸一句話 不管政治面的什麼發展 我想從 不管是 去年4月的川普關稅 或今年3月的美伊戰爭 其實 等到事件落幕之後 市場還是會回歸到 基本的經濟面 是否成長 我覺得這才是關鍵 因為畢竟看起來 今年 整體AI 還是發展非常的迅速 那 特別是在 AI伺服器的區塊的需求 還是非常的大 那當然 這個對於台灣 特別是硬體製造 有切",
+          "matched_keyword": "彩晶",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
+          "video": "EP331 軟硬兼具",
+          "channel": "投資癮",
+          "date": "2026-05-31",
+          "text": "論這個部分 也就沒有太多的想法 去討論這個部分 畢竟優勢都已經拿到了 只能持續觀察 持續找市場有機會 一些工時 而瑞萱部分 主要是面板的部分 而面板最近還是很強勢 面板你就會連帶去看 看到群創 友達 彩晶 而如果要向外延伸 其他面板的話 之前其實有討論過 可能要聽4月除後3月底的節目 當時整體市場都在盤整或下跌 但是面板的肋骨特別亮眼 除了那次之公司串在一起以外 也有看到其他相關的強勢肋骨 像是油田 陳鴻 台表科 或是GIS 而這些公司目前有走過一大步段了 目前市場的故事還是差不多 沒什麼太多的想法 所以單純用價量型態 以及右側強勢股的想法 在動能上面 應該是有辦法跟上市場的節奏 那既然聊到自身 ",
+          "matched_keyword": "彩晶",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
+          "video": "EP231 | 台、美股重點一次說，Computex 展後各大公司說法，Marvell 800G光模組量產，AI工廠模組化後的台股供應鏈",
+          "channel": "韭菜畢業班",
+          "date": "2026-06-03",
+          "text": "各位過一下 台股目前的一個金流好了 自己看現在產業地圖 大部分今天 就以6月3號來講的話 其實都是在光身上 然後再來就是一些伺服器身上 然後還有面板 那面板的話 其實就大概那幾家 像是最近比較紅的 就彩金 有達群創這些 然後甚至我們可以看到幾家 比較小家 但我這邊不想要把它唸出來 我怕唸出來 大家就是馬上去追進 這樣好像也不太好 我們就唸一個幾個比較大支一點的 那就是各自都有各自的話題 那我們之前有一集有提到 TGV 那其實TGV這個東西 我覺得第一階段 我自己會去比較喜歡看的東西的話 還是在一些雷射磚孔的東西身上 就是等於是 它是最必要的 就是 因為你今天就是要找這個TGV的題材 它不會是一個",
+          "matched_keyword": "彩金",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        }
+      ],
+      "total_mentions": 3,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-05-14": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-05-31": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-06-03": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
       "code": "CDNS",
       "name": "Cadence Design Systems",
       "market": "US",
@@ -54269,56 +54338,6 @@
       }
     },
     {
-      "code": "6116",
-      "name": "彩晶",
-      "market": "TW",
-      "sector": "面板",
-      "contexts": [
-        {
-          "video": "EP1097｜川習會激勵美股，對台股的利弊如何看？三星準罷工，記憶體再漲波段？被動全族群表態！Q1季報觀察重點？ft.報價天王 林信富",
-          "channel": "兆華與股惑仔",
-          "date": "2026-05-14",
-          "text": "土管制 就雙方各有各的一個底牌 可以拿來運用 那這個部分能不能夠 稍微有一些放寬的情況 我想這一次 也是這個 輝達黃仁勳 會搭上這一次 川普的專機 飛到中國的一個主要原因 看能不能夠 針對在 輝達的一些晶片 進到中國 有一些更寬鬆的一個政策 我想這個都是 接下來可能發展的方向 不過總歸一句話 不管政治面的什麼發展 我想從 不管是 去年4月的川普關稅 或今年3月的美伊戰爭 其實 等到事件落幕之後 市場還是會回歸到 基本的經濟面 是否成長 我覺得這才是關鍵 因為畢竟看起來 今年 整體AI 還是發展非常的迅速 那 特別是在 AI伺服器的區塊的需求 還是非常的大 那當然 這個對於台灣 特別是硬體製造 有切",
-          "matched_keyword": "彩晶",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        },
-        {
-          "video": "EP331 軟硬兼具",
-          "channel": "投資癮",
-          "date": "2026-05-31",
-          "text": "論這個部分 也就沒有太多的想法 去討論這個部分 畢竟優勢都已經拿到了 只能持續觀察 持續找市場有機會 一些工時 而瑞萱部分 主要是面板的部分 而面板最近還是很強勢 面板你就會連帶去看 看到群創 友達 彩晶 而如果要向外延伸 其他面板的話 之前其實有討論過 可能要聽4月除後3月底的節目 當時整體市場都在盤整或下跌 但是面板的肋骨特別亮眼 除了那次之公司串在一起以外 也有看到其他相關的強勢肋骨 像是油田 陳鴻 台表科 或是GIS 而這些公司目前有走過一大步段了 目前市場的故事還是差不多 沒什麼太多的想法 所以單純用價量型態 以及右側強勢股的想法 在動能上面 應該是有辦法跟上市場的節奏 那既然聊到自身 ",
-          "matched_keyword": "彩晶",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        }
-      ],
-      "total_mentions": 2,
-      "sentiment_score": 0.5,
-      "daily": {
-        "2026-05-14": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-05-31": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        }
-      }
-    },
-    {
       "code": "2385",
       "name": "群光",
       "market": "TW",
@@ -55259,6 +55278,56 @@
           "bearish": 0,
           "neutral": 1,
           "sentiment_score": 0.625
+        }
+      }
+    },
+    {
+      "code": "GLW",
+      "name": "Corning Inc.",
+      "market": "US",
+      "sector": "光通訊",
+      "contexts": [
+        {
+          "video": "EP225 | 台、美股重點一次說，消費性電腦與緯穎展望，康寧與AAOI長約發酵，聽眾QA",
+          "channel": "韭菜畢業班",
+          "date": "2026-05-13",
+          "text": "親自點評到他 所以等於說 NVIDIA這個地方的話 是欲付了這一個5億美元的認股權 所以等於是未來他的 投資的金額的話 可能可以高達27億美元 所以我們可以看到他 以第一季財報來看 像Conning GLW這一家的話 那他第一季財報 光通相關的營收的話 成長了36% 那盡力的部分的話 是暴增了93% 那同時我們可以看到 第一季的營收 年增的話大約是18% 然後EPS的部分的話 年增大約是30% 但是我們會比較去注意到 就是光通性的這一個部門 他年增後續應該會表現不錯 同時太陽能的部門的話 他也是由往上去提的 Conning來講的話 他其實就有兩個題材 現在講第一個 就是光相關的題材 那第二個就是玻璃",
+          "matched_keyword": "GLW",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP231 | 台、美股重點一次說，Computex 展後各大公司說法，Marvell 800G光模組量產，AI工廠模組化後的台股供應鏈",
+          "channel": "韭菜畢業班",
+          "date": "2026-06-03",
+          "text": "看到像muffel老黃一句 這個東西它應該是要上一兆的 美元的公司市值 馬上那個股價就直接往天空設了 一個晚上漲了32% 其實我覺得現在對於美股的態度 有一點像是我自己舉例好了 像我最近之前不是有聊過GLW嗎 就是康寧這一家公司 康寧這一家公司就是吃了題材 反正主要就是光芒 然後再來就是玻璃相關的東西 它也是有題材的 之前前幾天就是一直下刷衣 但它有時候一根回去 其實就會把之前的蝶幅收復回去 這件事情其實看coherent 或是說看lumentent都是差不多的狀態 所以我覺得在美股假如你今天跟我一樣 是就是等這種洗刷刷盤 等著心情有點不耐煩的時候 有時候它就是要等到你 受不了的時候 它就突然兩三根",
+          "matched_keyword": "GLW",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        }
+      ],
+      "total_mentions": 2,
+      "sentiment_score": 0.75,
+      "daily": {
+        "2026-05-13": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        },
+        "2026-06-03": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
         }
       }
     },
@@ -61676,37 +61745,6 @@
       }
     },
     {
-      "code": "GLW",
-      "name": "Corning Inc.",
-      "market": "US",
-      "sector": "光通訊",
-      "contexts": [
-        {
-          "video": "EP225 | 台、美股重點一次說，消費性電腦與緯穎展望，康寧與AAOI長約發酵，聽眾QA",
-          "channel": "韭菜畢業班",
-          "date": "2026-05-13",
-          "text": "親自點評到他 所以等於說 NVIDIA這個地方的話 是欲付了這一個5億美元的認股權 所以等於是未來他的 投資的金額的話 可能可以高達27億美元 所以我們可以看到他 以第一季財報來看 像Conning GLW這一家的話 那他第一季財報 光通相關的營收的話 成長了36% 那盡力的部分的話 是暴增了93% 那同時我們可以看到 第一季的營收 年增的話大約是18% 然後EPS的部分的話 年增大約是30% 但是我們會比較去注意到 就是光通性的這一個部門 他年增後續應該會表現不錯 同時太陽能的部門的話 他也是由往上去提的 Conning來講的話 他其實就有兩個題材 現在講第一個 就是光相關的題材 那第二個就是玻璃",
-          "matched_keyword": "GLW",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        }
-      ],
-      "total_mentions": 1,
-      "sentiment_score": 1.0,
-      "daily": {
-        "2026-05-13": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 1.0
-        }
-      }
-    },
-    {
       "code": "6456",
       "name": "GIS-KY",
       "market": "TW",
@@ -64735,6 +64773,16 @@
       ]
     },
     {
+      "sector": "面板",
+      "market": "TW",
+      "total_mentions": 43,
+      "stock_codes": [
+        "3481",
+        "2409",
+        "6116"
+      ]
+    },
+    {
       "sector": "AI網路",
       "market": "US",
       "total_mentions": 42,
@@ -64742,16 +64790,6 @@
         "AVGO",
         "CSCO",
         "ANET"
-      ]
-    },
-    {
-      "sector": "面板",
-      "market": "TW",
-      "total_mentions": 42,
-      "stock_codes": [
-        "3481",
-        "2409",
-        "6116"
       ]
     },
     {
@@ -64982,7 +65020,7 @@
     {
       "sector": "光通訊",
       "market": "US",
-      "total_mentions": 24,
+      "total_mentions": 25,
       "stock_codes": [
         "COHR",
         "LITE",

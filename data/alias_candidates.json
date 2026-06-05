@@ -681,5 +681,35 @@
       "8c2cb9ef-82a5-46ec-bd46-1e213017a353"
     ],
     "wrong_keyword": "馬蕾爾"
+  },
+  "On|MSFT": {
+    "wrong_keyword": "On",
+    "correct_code": "MSFT",
+    "correct_name": "Microsoft",
+    "confidence": "medium",
+    "max_score": 50,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "12f46126-6bbd-4627-b0c4-de49fbd4a256"
+    ],
+    "evidence": [
+      {
+        "video_id": "12f46126-6bbd-4627-b0c4-de49fbd4a256",
+        "channel": "韭菜畢業班",
+        "date": "2026-05-31",
+        "title": "EP230 | 台、美股重點一次說，Dell AI Server財報超預期，NVIDIA Computex展主軸AI PC，被動元件實際需求",
+        "source": "full_video_validator",
+        "score": 50,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context"
+        ],
+        "context": "然後那個Computer Test 我們在近期也看到像NVIDIA 或是說像是On Microsoft 然後其實就是一起發一篇文 有點像是我們以前做社團活動 大家就會丟一個文章的時候 接下來這個即將要有大活動 大家會起來參加這樣子"
+      }
+    ],
+    "phonetic_candidates": [],
+    "updated_at": "2026-06-05T19:59:49"
   }
 }
