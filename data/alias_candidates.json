@@ -765,5 +765,143 @@
       }
     ],
     "updated_at": "2026-06-05T20:30:25"
+  },
+  "馬菲爾|MRVL": {
+    "wrong_keyword": "馬菲爾",
+    "correct_code": "MRVL",
+    "correct_name": "Marvell",
+    "confidence": "medium",
+    "max_score": 50,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "0b057c23-833e-42b7-9dbf-ef14faea6891"
+    ],
+    "evidence": [
+      {
+        "video_id": "0b057c23-833e-42b7-9dbf-ef14faea6891",
+        "channel": "財女珍妮",
+        "date": "2026-06-03",
+        "title": "2026/06/03 (三) 輝達欽點Marvell暴漲，帶飛光通股",
+        "source": "full_video_validator",
+        "score": 50,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context"
+        ],
+        "context": "Hello 大家好 我是卷尼 今天繼續來跟大家分享美股近期的大小事件 是今天是2026年的6月3號禮拜三 今天要來跟大家分享的主題是 輝達清典馬菲爾暴漲 帶飛了光通股 所以昨天可以看到 光通又表現得非常非常的強勁 如意美中在這邊 跟我們一起追思想財產業看劇室的話 那在節目開始之前 幫我們按個讚、訂閱、開啟小鈴鐺 當這些動作對我來說非常重要 也可以讓更多人看到這個節目 支持我們持續跟大家分享最新的財經資訊 一起在投資這條路上持續的前進 先來看一下昨天美股收盤的表現 昨天到窮工業指數是上漲0.5% S&P 500指數上漲0.1% 盤中的高點 76"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "6844",
+        "name": "諾貝兒",
+        "score": 0.325,
+        "phonetic_similarity": 0.5,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "1722",
+        "name": "台肥",
+        "score": 0.279,
+        "phonetic_similarity": 0.429,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "2020",
+        "name": "美亞",
+        "score": 0.279,
+        "phonetic_similarity": 0.429,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-06-05T21:49:52"
+  },
+  "Inter|INTC": {
+    "wrong_keyword": "Inter",
+    "correct_code": "INTC",
+    "correct_name": "Intel",
+    "confidence": "high",
+    "max_score": 90,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "f4a134ad-943c-48c7-8cf3-08ee5bfc7e4b"
+    ],
+    "evidence": [
+      {
+        "video_id": "f4a134ad-943c-48c7-8cf3-08ee5bfc7e4b",
+        "channel": "財女珍妮",
+        "date": "2026-06-02",
+        "title": "2026/06/02(二) 一天漲6％，輝達還能繼續漲嗎？#NVDA",
+        "source": "full_video_validator",
+        "score": 90,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "stock_context"
+        ],
+        "context": "xt的演講上面 我覺得一個很重要的亮點 好 還有就是大家最期待的 這個RTX Spark 就是他跟微軟啊 然後去合作 然後Windows問世以來呢 最大的一個革命 這個也是讓昨天像是高通啊 AMD啊 Inter啊 全部都是股價 算重挫嗎 就是股價是下跌 然後比較負面的去反映的 那RTX Spark 他其實 就是希望呢 就是他是 我們先講細節 就是他是Blockwell RTX GPU 然後跟 搭配跟連發科 共同設計的這個 20核心的Grass CPU 然後去採用台積電 三奈米的製程 128GB的記憶體啊 整體的算力可以達到 這個 ePeta Flops 然後就可以去運行很多 Cuda跟Wind"
+      }
+    ],
+    "phonetic_candidates": [],
+    "updated_at": "2026-06-05T21:59:55"
+  },
+  "揮達|1720": {
+    "wrong_keyword": "揮達",
+    "correct_code": "1720",
+    "correct_name": "生達",
+    "confidence": "high",
+    "max_score": 90,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "b8a9ad87-d83d-4ad9-94bf-fee01ddde4be"
+    ],
+    "evidence": [
+      {
+        "video_id": "b8a9ad87-d83d-4ad9-94bf-fee01ddde4be",
+        "channel": "財女珍妮",
+        "date": "2026-06-01",
+        "title": "2026/06/01(一) COMPUTEX出狠招，輝達還能漲嗎？",
+        "source": "full_video_validator",
+        "score": 90,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "stock_context"
+        ],
+        "context": "哈囉大家好我是JENNY 今天繼續來跟大家分享 美股近期的大小事 今天是2026年的6月1號禮拜一 今天要來跟大家分享的主題是 Computex要出很招 揮達還可以長嗎 如果你們都在這邊 跟我們一起追視長 才產業看趨勢的話 那在節目開始之前 把我們按個讚 訂閱 開啟小鈴鐺 這些動作對我來說非常的重要 也可以讓更多人看到這個節目 支持我們持續跟大家分享 最新的財經資訊 一起在投資這條路上持續的前進 看到聽眾說 欸 小珍早看到你上好多節目 小弟乾敗下風 我最近好像沒有上很多節目吧 不過有的時候大家看到我上節目的時候 我自己都還沒有看到 因為有的時候大家傳給"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3211",
+        "name": "順達",
+        "score": 0.608,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "4549",
+        "name": "桓達",
+        "score": 0.608,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "6576",
+        "name": "逸達",
+        "score": 0.565,
+        "phonetic_similarity": 0.6,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-06-05T22:08:46"
   }
 }
