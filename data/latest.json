@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-04T21:39:21",
+  "updated_at": "2026-06-05T19:43:32",
   "stocks_ranking": [
     {
       "code": "INTC",
@@ -535,6 +535,18 @@
           "extraction_mode": "gemini"
         },
         {
+          "video": "EP667 | 🌍",
+          "channel": "股癌",
+          "date": "2026-06-03",
+          "text": "牛直接射出去 那這個我們預期到 這個真的是沒有辦法預期到 那老實講 目前我們去看馬蕾爾的話 你說他在DSP這邊 實在還蠻不錯 但是在ASIC這邊 我是覺得說 他還在一個發展的道路上 他沒有辦法像 可能media tech 或是像 Blockhouse這麼樣的一個明確 所以就是說 老黃的喊盤能力 還是非常的強大 基本上反正就是典石成金 他只要踢到誰 誰就有機會 那這次也蠻好笑 他在他自己的背板上面 放上了幾個台灣的餐廳 那不知道這幾家台灣餐廳 會不會也典石成金 當然他本身就是名店 但搞不好 因為他這樣子cure之後 大家就生意興隆 那就促進一下實體生意 也蠻不錯的 那在馬蕾爾的演講裡面 他最主要都是在強調 不管是在",
+          "matched_keyword": "Media Tech",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
           "video": "2026/06/02(二) 一天漲6％，輝達還能繼續漲嗎？#NVDA",
           "channel": "財女珍妮",
           "date": "2026-06-02",
@@ -858,18 +870,6 @@
           "sentiment_score": 0.5,
           "video_url": "",
           "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP1098｜創高變殺盤？輝達新高、台積電技術論壇怎麼沒幫助？載板、CPO大跌，廣達季報中槍，台積處分世界，對誰能有信心？ft.操盤手 黃豐凱",
-          "channel": "兆華與股惑仔",
-          "date": "2026-05-15",
-          "text": "理 好 那我講一件事情 就是聯發科在做這個TPU裡面的 封裝測試 交給了誰 交給了立誠 跟日月光的細品 這就是為什麼讓 立誠今天突然翻身 就是 其實之前很多人都不太清楚 不太清楚 那也一樣 正因為還是聯發科在主導 所以 它的原本的探針的廠商 就還是原本的那些 那因為最近有一些傳言 所以就把這些有些公司 把它股價打爛了 但是我們就不特別去想去哪一家 但是我們講說 像立誠他就是被頻繁 就是 他其實有機會 但是我要講其實 立誠只是介紹一部分的訂單 因為這個Mansos 應該是日月光的細品 不是立誠 但是立誠確實是有吃到 一部分的訂單 所以你看基本上他有訂單 他就怎樣 他之前沒有漲 他就漲 那之前已經漲過的",
-          "matched_keyword": "聯發科",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
         }
       ],
       "total_mentions": 30,
@@ -883,11 +883,11 @@
           "sentiment_score": 0.5
         },
         "2026-06-03": {
-          "mentions": 1,
-          "bullish": 0,
+          "mentions": 2,
+          "bullish": 1,
           "bearish": 0,
           "neutral": 1,
-          "sentiment_score": 0.5
+          "sentiment_score": 0.75
         },
         "2026-06-02": {
           "mentions": 1,
@@ -988,11 +988,11 @@
           "sentiment_score": 0.4
         },
         "2026-05-15": {
-          "mentions": 4,
-          "bullish": 1,
+          "mentions": 3,
+          "bullish": 0,
           "bearish": 0,
           "neutral": 3,
-          "sentiment_score": 0.625
+          "sentiment_score": 0.5
         }
       }
     },
@@ -37028,7 +37028,7 @@
       "code": "00403A",
       "name": "主動統一升級50",
       "market": "TW",
-      "sector": "ETF",
+      "sector": "ETF・主動型",
       "contexts": [
         {
           "video": "EP1095｜不用羨慕朋友賺很多，但自問有沒有核心部位？台積電問題不是掉單，是訂單太擠了！00403A大溢價，追高了怎麼辦？ft.AI達人 蔡明翰",
@@ -50031,7 +50031,7 @@
       "code": "DASH",
       "name": "DoorDash",
       "market": "US",
-      "sector": "消費",
+      "sector": "零售電商",
       "contexts": [
         {
           "video": "EP217 | 台、美股重點一次說，Google TPU 各代產品結構與台廠供應鏈， 台積電封裝技術進展與風險，CPO量產前注意",
@@ -50359,7 +50359,7 @@
       "code": "CHT",
       "name": "Charter Communications",
       "market": "US",
-      "sector": "其他",
+      "sector": "金融",
       "contexts": [
         {
           "video": "2026/04/27(一) 費半創紀18連漲，還能進場嗎？Intel暴漲20%，財報透露什麼？",
@@ -61679,7 +61679,7 @@
       "code": "GLW",
       "name": "Corning Inc.",
       "market": "US",
-      "sector": "科技",
+      "sector": "光通訊",
       "contexts": [
         {
           "video": "EP225 | 台、美股重點一次說，消費性電腦與緯穎展望，康寧與AAOI長約發酵，聽眾QA",
@@ -64290,6 +64290,37 @@
           "sentiment_score": 0.7
         }
       }
+    },
+    {
+      "code": "CNC",
+      "name": "Centene Corporation",
+      "market": "US",
+      "sector": "醫療",
+      "contexts": [
+        {
+          "video": "EP666 | 🍐",
+          "channel": "股癌",
+          "date": "2026-05-30",
+          "text": "隔壁 部門的人說我是 心急得臭臭泥 走路經過很臭好難過 趕快去洗澡 趕快去擦提香膏好不好 趕快去 不知道 就是可能 如果真的是 有一些汗腺的問題 去去做一些出貓 去做一些雷射 那個都有幫助 下面一位 CNC車神菲霸 挨大的拖鞋是什麼牌子 嗨 孟老哥 Tesla的好戲還在後頭 想聽你近期對Intel的看法 其實前面都講過 就是我認為就是CPU 那5月24號是我跟 老婆佩儀交往12週年 以及結婚兩週年 雖然平時對小孩 以及家務事 我都只是當個台幣戰士 但他對於這個家務事的付出 還是很有體感的 那這次留言想要藉由孟公 閒失的嗓音做老婆 天天開心 身體健康 我跟小飛都愛你 那更感謝主委每週五四的分析 那su",
+          "matched_keyword": "CNC",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-05-30": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
     }
   ],
   "sectors_ranking": [
@@ -64552,7 +64583,7 @@
     {
       "sector": "金融",
       "market": "US",
-      "total_mentions": 58,
+      "total_mentions": 60,
       "stock_codes": [
         "GS",
         "MS",
@@ -64560,6 +64591,7 @@
         "JPM",
         "V",
         "BLK",
+        "CHT",
         "CB",
         "CME",
         "MA",
@@ -64580,6 +64612,22 @@
         "3661",
         "3035",
         "5274"
+      ]
+    },
+    {
+      "sector": "ETF・主動型",
+      "market": "TW",
+      "total_mentions": 54,
+      "stock_codes": [
+        "00981A",
+        "00991A",
+        "00992A",
+        "00403A",
+        "00985A",
+        "00987A",
+        "00993A",
+        "00980A",
+        "00994A"
       ]
     },
     {
@@ -64638,21 +64686,6 @@
         "3081",
         "6442",
         "4979"
-      ]
-    },
-    {
-      "sector": "ETF・主動型",
-      "market": "TW",
-      "total_mentions": 47,
-      "stock_codes": [
-        "00981A",
-        "00991A",
-        "00992A",
-        "00985A",
-        "00987A",
-        "00993A",
-        "00980A",
-        "00994A"
       ]
     },
     {
@@ -64893,19 +64926,6 @@
       ]
     },
     {
-      "sector": "科技",
-      "market": "US",
-      "total_mentions": 28,
-      "stock_codes": [
-        "SNDK",
-        "INTU",
-        "TER",
-        "GLW",
-        "NOW",
-        "NTAP"
-      ]
-    },
-    {
       "sector": "紡織纖維",
       "market": "TW",
       "total_mentions": 28,
@@ -64937,6 +64957,18 @@
       ]
     },
     {
+      "sector": "科技",
+      "market": "US",
+      "total_mentions": 27,
+      "stock_codes": [
+        "SNDK",
+        "INTU",
+        "TER",
+        "NOW",
+        "NTAP"
+      ]
+    },
+    {
       "sector": "伺服器",
       "market": "US",
       "total_mentions": 25,
@@ -64948,32 +64980,27 @@
       ]
     },
     {
-      "sector": "消費",
+      "sector": "光通訊",
       "market": "US",
       "total_mentions": 24,
       "stock_codes": [
-        "CCL",
-        "DASH",
-        "GRMN",
-        "DECK",
-        "NKE",
-        "ABNB"
+        "COHR",
+        "LITE",
+        "AAOI",
+        "GLW"
       ]
     },
     {
-      "sector": "ETF",
-      "market": "TW",
+      "sector": "醫療",
+      "market": "US",
       "total_mentions": 24,
       "stock_codes": [
-        "00830",
-        "00403A",
-        "00757",
-        "00735",
-        "00400A",
-        "00662",
-        "006205",
-        "00752",
-        "00660"
+        "TECH",
+        "UNH",
+        "HUM",
+        "CVS",
+        "CI",
+        "CNC"
       ]
     },
     {
@@ -64990,34 +65017,24 @@
       ]
     },
     {
-      "sector": "光通訊",
-      "market": "US",
-      "total_mentions": 23,
-      "stock_codes": [
-        "COHR",
-        "LITE",
-        "AAOI"
-      ]
-    },
-    {
-      "sector": "醫療",
-      "market": "US",
-      "total_mentions": 23,
-      "stock_codes": [
-        "TECH",
-        "UNH",
-        "HUM",
-        "CVS",
-        "CI"
-      ]
-    },
-    {
       "sector": "食品",
       "market": "TW",
       "total_mentions": 22,
       "stock_codes": [
         "1216",
         "1201"
+      ]
+    },
+    {
+      "sector": "消費",
+      "market": "US",
+      "total_mentions": 22,
+      "stock_codes": [
+        "CCL",
+        "GRMN",
+        "DECK",
+        "NKE",
+        "ABNB"
       ]
     },
     {
@@ -65189,6 +65206,21 @@
       ]
     },
     {
+      "sector": "ETF",
+      "market": "TW",
+      "total_mentions": 17,
+      "stock_codes": [
+        "00830",
+        "00757",
+        "00735",
+        "00400A",
+        "00662",
+        "006205",
+        "00752",
+        "00660"
+      ]
+    },
+    {
       "sector": "塑膠工業",
       "market": "TW",
       "total_mentions": 17,
@@ -65237,6 +65269,18 @@
       ]
     },
     {
+      "sector": "零售電商",
+      "market": "US",
+      "total_mentions": 15,
+      "stock_codes": [
+        "COST",
+        "DASH",
+        "WMT",
+        "TGT",
+        "BKNG"
+      ]
+    },
+    {
       "sector": "電子通路",
       "market": "TW",
       "total_mentions": 15,
@@ -65264,17 +65308,6 @@
         "1623",
         "1604",
         "1608"
-      ]
-    },
-    {
-      "sector": "零售電商",
-      "market": "US",
-      "total_mentions": 13,
-      "stock_codes": [
-        "COST",
-        "WMT",
-        "TGT",
-        "BKNG"
       ]
     },
     {
@@ -65570,17 +65603,6 @@
       ]
     },
     {
-      "sector": "其他",
-      "market": "US",
-      "total_mentions": 5,
-      "stock_codes": [
-        "CHT",
-        "SPY",
-        "BE",
-        "CFLT"
-      ]
-    },
-    {
       "sector": "水泥工業",
       "market": "TW",
       "total_mentions": 5,
@@ -65700,6 +65722,16 @@
         "2913",
         "2915",
         "2911"
+      ]
+    },
+    {
+      "sector": "其他",
+      "market": "US",
+      "total_mentions": 3,
+      "stock_codes": [
+        "SPY",
+        "BE",
+        "CFLT"
       ]
     },
     {
