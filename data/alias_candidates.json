@@ -219,36 +219,6 @@
     ],
     "wrong_keyword" : "富邦電子"
   },
-  "臺灣50全股|0050" : {
-    "confidence" : "medium",
-    "correct_code" : "0050",
-    "correct_name" : "元大台灣50",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "兆華與股惑仔",
-        "context" : "不妨透過一天的方式幫你追 不管是市值型 或是說這種所謂的 不然被動是我主動式的 現在來看 我們講盤面上輪到 這些大型股在表態的時候 你只要透過一天去買 都能夠買到盤面上 輪動漲零百的股票 像剛剛提到 臺灣50全股當中 今天有很多檔也是漲零百 所以你就不會感覺到 怎麼別人股票漲零百 我都沒有 其實你去看他成份股 既然有漲停的 你心情就會好一些了 確實 但是各股各股的魅力 這個我們也明白 所以上禮拜 可能跟大家比較多的分享是 包括到今天其實也是 其實這段時間的盤 他適合右側 他也適合左側 我覺得這是一個最好的情況 怎麼會這麼說 因為他波動大 所以如果今天你是一個 右側動能派的 其實每天都有非常多的",
-        "date" : "2026-05-25",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "stock_context"
-        ],
-        "score" : 65,
-        "source" : "full_video_validator",
-        "title" : "EP1104｜黃仁勳來台、美伊真和談，台股瘋創高！動能、低接都可以等到創新高，主動、被動ETF各有優點，誰是AI相對落後股？ft.題材獵人 林漢偉",
-        "video_id" : "af536dd4-0e40-4002-98d2-81fe88bf177b"
-      }
-    ],
-    "max_score" : 65,
-    "observations" : 1,
-    "updated_at" : "2026-05-31T20:19:38",
-    "video_ids" : [
-      "af536dd4-0e40-4002-98d2-81fe88bf177b"
-    ],
-    "wrong_keyword" : "臺灣50全股"
-  },
   "萬序|6187" : {
     "confidence" : "high",
     "correct_code" : "6187",
