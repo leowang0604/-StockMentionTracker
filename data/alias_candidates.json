@@ -31,40 +31,6 @@
     ],
     "wrong_keyword" : "MVIDIA"
   },
-  "SNAP|NTAP" : {
-    "confidence" : "high",
-    "correct_code" : "NTAP",
-    "correct_name" : "NetApp",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "財女珍妮",
-        "context" : "回 比如說 我可能有回測 缺口或者是 比較長期的均線 比如說月線的時候 年 10日線的時候 我再去做分批的佈局 然後先去兼一點資金 因為有資金在裡面 你才可以去關注這家公司 他未來的表現 好 另外一個SNAP 就是NTAP這家公司 這家公司也是很妙 因為過去大家可能會覺得 它是一家硬體的公司 而且它也是有歷經過 網路泡沫的嘛 那在成績了 大概有20幾年之後 股價終於回到2000年的高點了 那NTAP它是做什麼的呢 它是一家企業資料基礎 架構跟存儲的公司 它的核心 現在已經不是在做什麼 消費性的硬體 然後在賣設備 這一類 它現在主要就是幫企業 去管理保護它的 流通的資料 大量的資料 然後特別是聚",
-        "date" : "2026-06-01",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "stock_context",
-          "code_in_context"
-        ],
-        "score" : 85,
-        "source" : "full_video_validator",
-        "title" : "2026\/06\/01(一) COMPUTEX出狠招，輝達還能漲嗎？",
-        "video_id" : "b8a9ad87-d83d-4ad9-94bf-fee01ddde4be"
-      }
-    ],
-    "max_score" : 85,
-    "observations" : 1,
-    "phonetic_candidates" : [
-
-    ],
-    "updated_at" : "2026-06-02T22:40:40",
-    "video_ids" : [
-      "b8a9ad87-d83d-4ad9-94bf-fee01ddde4be"
-    ],
-    "wrong_keyword" : "SNAP"
-  },
   "Vertip|VRT" : {
     "confidence" : "high",
     "correct_code" : "VRT",
