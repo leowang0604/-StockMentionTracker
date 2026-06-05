@@ -219,60 +219,6 @@
     ],
     "wrong_keyword" : "富邦電子"
   },
-  "新商店|3085" : {
-    "confidence" : "high",
-    "correct_code" : "3085",
-    "correct_name" : "新零售",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "兆華與股惑仔",
-        "context" : "們的布局非常好 第一個你看到 他有所謂的華興科 對 華興科也是這個重要的 這個臺灣被動員間的二哥 也是華興立華集團股票 然後華邦店也很爭氣 今天股價也算到率實的新高 然後他旗下還有新唐 還有彩金 還有新商店 所以我覺得這就代表說 在6月份 只要這些主流題材還在的話 相關的華興集團的各股 你也可以做一個多方一併的看待 那國際集團當然持續維持一個 強勢的表態 所以你可以從這樣的一個情況裡面 甚至聯發科集團 聯店集團 我覺得在6月份 其實大家可以從這個集團股當中 尋找到一些不錯的標的 那但儘量還是要選擇強勢的產業 也就剛剛提到 被動員間 你就從國際集團 華興集團裡面 去尋找當中標的 那記憶體當中 你",
-        "date" : "2026-06-01",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "name_distance=2",
-          "stock_context"
-        ],
-        "score" : 77,
-        "source" : "full_video_validator",
-        "title" : "EP1109｜仁勳開講、開獎！伺服器代工、AI PC、邊緣AI回來，GDP成長率上修9.64%，繼續正循環！怕賣飛又怕回檔，對策是什麼？ft.題材獵人 林漢偉",
-        "video_id" : "dc015b5b-798a-4009-ae12-7ec086d274b2"
-      }
-    ],
-    "max_score" : 77,
-    "observations" : 1,
-    "phonetic_candidates" : [
-      {
-        "code" : "2427",
-        "name" : "三商電",
-        "phonetic_similarity" : 0.833,
-        "score" : 0.658,
-        "text_similarity" : 0.333
-      },
-      {
-        "code" : "6173",
-        "name" : "信昌電",
-        "phonetic_similarity" : 0.917,
-        "score" : 0.596,
-        "text_similarity" : 0
-      },
-      {
-        "code" : "4931",
-        "name" : "新盛力",
-        "phonetic_similarity" : 0.667,
-        "score" : 0.55,
-        "text_similarity" : 0.333
-      }
-    ],
-    "updated_at" : "2026-06-04T21:25:47",
-    "video_ids" : [
-      "dc015b5b-798a-4009-ae12-7ec086d274b2"
-    ],
-    "wrong_keyword" : "新商店"
-  },
   "臺灣50全股|0050" : {
     "confidence" : "medium",
     "correct_code" : "0050",
