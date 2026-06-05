@@ -29,7 +29,9 @@ def load_scanner():
         {"code": "2615", "name": "萬海", "market": "listed", "sector": "航運業"},
         {"code": "3026", "name": "禾伸堂", "market": "listed", "sector": "電子零組件業"},
         {"code": "3450", "name": "聯鈞", "market": "listed", "sector": "半導體業"},
+        {"code": "6214", "name": "精誠", "market": "listed", "sector": "資訊服務業"},
         {"code": "6669", "name": "緯穎", "market": "listed", "sector": "電腦及週邊設備業"},
+        {"code": "6690", "name": "安碁資訊", "market": "listed", "sector": "資訊服務業"},
     ]:
         by_code.setdefault(stock["code"], stock)
     stocks = list(by_code.values())
@@ -94,6 +96,28 @@ class ValidatorRegressionTests(unittest.TestCase):
             text,
         )
         self.assertEqual([hit["stock_code"] for hit in hits], ["3026"])
+
+    def test_jincheng_info_alias_resolves_to_systex_not_acer_cyber(self):
+        text = "跟以前金城資訊一樣，他是配5塊。"
+        hits = self.scanner.recognize_stocks(text)
+        self.assertIn("6214", [hit["stock_code"] for hit in hits])
+        self.assertNotIn("6690", [hit["stock_code"] for hit in hits])
+
+    def test_gemini_misread_jincheng_info_remaps_to_systex_not_acer_cyber(self):
+        text = "跟以前金城資訊一樣，他是配5塊。"
+        hits = self.validate(
+            {
+                "name": "安碁資訊",
+                "code": "6690",
+                "whisper_original": "金城資訊",
+                "context": text,
+                "sentiment": "neutral",
+                "score": 0.5,
+            },
+            text,
+        )
+        self.assertEqual([hit["stock_code"] for hit in hits], ["6214"])
+        self.assertEqual([hit["matched_keyword"] for hit in hits], ["金城資訊"])
 
     def test_new_whisper_correction_is_review_candidate_only(self):
         text = "緯印這檔股票最近營收成長，AI伺服器客戶訂單也增加。"
