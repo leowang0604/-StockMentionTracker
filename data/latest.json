@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-06T21:14:23",
+  "updated_at": "2026-06-06T22:12:15",
   "stocks_ranking": [
     {
       "code": "INTC",
@@ -27382,10 +27382,22 @@
           "sentiment_score": 1.0,
           "video_url": "",
           "extraction_mode": "keyword"
+        },
+        {
+          "video": "2026/06/02(二) 一天漲6％，輝達還能繼續漲嗎？#NVDA",
+          "channel": "財女珍妮",
+          "date": "2026-06-02",
+          "text": "的贏家是誰 如果大家有看到的話 就是 ARM 因為今天輝達 他就是 RTS Spark 他就是 CPU 的核心 就是採用 ARM 的架構 所以 ARM 他昨天漲了 16% 然後你看一些硬體商 比如說 Dell 昨天也漲了 16% 那我們今天因為來不及講 比如說惠宇在盤後公佈財報 現在是怎樣 就是這些做伺服器的 盤後公佈財報沒有漲了 30% 就不合格 是不是 今天早上看到的時候 也是直接傻眼 然後 Dell 或者是 像我們昨天有講到的 像華碩 維新 這一類的公司其實都是 那目前看起來 有受到影響的輸家 但是我覺得他只是短期的 情緒發酵 像是 Intel 像是 AMD 像是高通 我覺得如果你在之前 你會覺",
+          "matched_keyword": "Dell",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.9,
+          "video_url": "",
+          "extraction_mode": "gemini"
         }
       ],
-      "total_mentions": 15,
-      "sentiment_score": 0.687,
+      "total_mentions": 16,
+      "sentiment_score": 0.7,
       "daily": {
         "2026-04-05": {
           "mentions": 2,
@@ -27449,6 +27461,13 @@
           "bearish": 0,
           "neutral": 1,
           "sentiment_score": 0.5
+        },
+        "2026-06-02": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.9
         }
       }
     },
@@ -65874,6 +65893,37 @@
           "sentiment_score": 0.8
         }
       }
+    },
+    {
+      "code": "3680",
+      "name": "家登",
+      "market": "TW",
+      "sector": "電子零組件",
+      "contexts": [
+        {
+          "video": "談判就是人生：失敗、重建與剎價的藝術 ft. 談判大叔陳侯勳",
+          "channel": "財女珍妮",
+          "date": "2026-06-03",
+          "text": "大家都在說談判其實就是一個雙邊的 那剛剛我們已經講完了 買方的部分 那現在賣方的部分 因為我也曾經有過一樣的經驗跟痛苦 第一個是我要怎麼樣知道自己 到底有多少本錢 我可以喊出多少的價格 比如說我看十家登錄的時候 我這棟房子旁邊都是賣五千萬好了 那我現在我也想要賣我的房子 我可以喊個六千萬嗎 我是直接要開六千萬 還是我應該就是跟周圍的行情一樣 然後我在出嫁了之後 我要怎麼樣 讓仲介真的可以為我爭取最大的利益呢 Jenny問了一個很好的問題 這個時候就要看時間段 比如說現在這個2026年的時間 其實我會強烈建議賣方不要賣房子 賣方不要賣房子 千萬不要賣房子 因為今年是非常慘的一年 我手上就有六都大概",
+          "matched_keyword": "家登",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-06-03": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
     }
   ],
   "sectors_ranking": [
@@ -66021,7 +66071,7 @@
     {
       "sector": "電子零組件",
       "market": "TW",
-      "total_mentions": 77,
+      "total_mentions": 78,
       "stock_codes": [
         "4749",
         "6643",
@@ -66046,7 +66096,8 @@
         "6147",
         "3555",
         "4971",
-        "3317"
+        "3317",
+        "3680"
       ]
     },
     {
@@ -66528,7 +66579,7 @@
     {
       "sector": "伺服器",
       "market": "US",
-      "total_mentions": 25,
+      "total_mentions": 26,
       "stock_codes": [
         "DELL",
         "HPQ",

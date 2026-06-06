@@ -30,10 +30,16 @@
     "wrong_keyword": "MVIDIA"
   },
   "Vertip|VRT": {
-    "confidence": "high",
+    "wrong_keyword": "Vertip",
     "correct_code": "VRT",
     "correct_name": "Vertiv",
+    "confidence": "high",
+    "max_score": 90,
+    "observations": 2,
     "distinct_videos": 1,
+    "video_ids": [
+      "f4a134ad-943c-48c7-8cf3-08ee5bfc7e4b"
+    ],
     "evidence": [
       {
         "channel": "財女珍妮",
@@ -50,16 +56,26 @@
         "source": "full_video_validator",
         "title": "2026/06/02(二) 一天漲6％，輝達還能繼續漲嗎？#NVDA",
         "video_id": "f4a134ad-943c-48c7-8cf3-08ee5bfc7e4b"
+      },
+      {
+        "video_id": "f4a134ad-943c-48c7-8cf3-08ee5bfc7e4b",
+        "channel": "財女珍妮",
+        "date": "2026-06-02",
+        "title": "2026/06/02(二) 一天漲6％，輝達還能繼續漲嗎？#NVDA",
+        "source": "full_video_validator",
+        "score": 90,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "stock_context"
+        ],
+        "context": "像是博通 昨天表現也很強 大概漲了3%左右 還有像是Coherent 他也漲了 然後另外最後的話 可能我們 近期沒有關注到的 但是我昨天在影片裡面 其實也有提到 就是跟電力 然後跟散熱相關的 比如說像Vertip 其實在之前也非常的強勁 但是近期的股價 也是有一點休息的味道 但是如果他回測到 月線回測到季線的時候 是不是也可以在 慢慢的去做一些分皮的佈局 所以有的時候 大家不要只看會漲的股票 你要去想說 黃龍勳的五層蛋糕 或者是在這個生態系裡面 哪一層是不可或缺的 如果真的不可或缺 他的估值又在過去漲太多 然後現在有修正的話 我覺得你就應該要勇敢的 去做佈局 勇敢的去做買進 因為你去追高 其實"
       }
     ],
-    "max_score": 90,
-    "observations": 1,
     "phonetic_candidates": [],
-    "updated_at": "2026-06-02T22:32:03",
-    "video_ids": [
-      "f4a134ad-943c-48c7-8cf3-08ee5bfc7e4b"
-    ],
-    "wrong_keyword": "Vertip"
+    "updated_at": "2026-06-06T22:00:35"
   },
   "Zehler|ZS": {
     "confidence": "medium",
@@ -347,5 +363,88 @@
     ],
     "phonetic_candidates": [],
     "updated_at": "2026-06-06T19:25:50"
+  },
+  "馬菲歐|MRVL": {
+    "wrong_keyword": "馬菲歐",
+    "correct_code": "MRVL",
+    "correct_name": "Marvell",
+    "confidence": "medium",
+    "max_score": 50,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "0b057c23-833e-42b7-9dbf-ef14faea6891"
+    ],
+    "evidence": [
+      {
+        "video_id": "0b057c23-833e-42b7-9dbf-ef14faea6891",
+        "channel": "財女珍妮",
+        "date": "2026-06-03",
+        "title": "2026/06/03 (三) 輝達欽點Marvell暴漲，帶飛光通股",
+        "source": "full_video_validator",
+        "score": 50,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context"
+        ],
+        "context": " 你的光的價值會提高 而且你這個錢是花得更有道理的 因為你今天透過光 你一定是需要有更多的資本支出 跟你的成本一定是變高 你要把它用在 應該適合它的地方 那該用同的地方 就用同 該用光的地方就用光 那馬菲歐在裡面 他也不是只賣光模組而已 而是提供光通訊模組裡面 很重要的 比如說像DSP 然後甚至你到未來800G 1.6T的時候 這個訊號的處理難度大幅提高的時候 你DSP的價格 你的ASP平均售價就會跟著增高 那你的營收會增長之外 因為你的價格也漲加 你的溢價能力 那你的獲利能力也會恐怖的提升 這些都是跟AI的網路架構 是有非常大的關係的 所以你現在只要記得一件事情就好 AI下一階段的基礎建設投"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3516",
+        "name": "亞帝歐",
+        "score": 0.488,
+        "phonetic_similarity": 0.571,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "1301",
+        "name": "台塑",
+        "score": 0.279,
+        "phonetic_similarity": 0.429,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "1304",
+        "name": "台聚",
+        "score": 0.279,
+        "phonetic_similarity": 0.429,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-06-06T21:47:19"
+  },
+  "Interarm|INTC": {
+    "wrong_keyword": "Interarm",
+    "correct_code": "INTC",
+    "correct_name": "Intel",
+    "confidence": "medium",
+    "max_score": 65,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "0b057c23-833e-42b7-9dbf-ef14faea6891"
+    ],
+    "evidence": [
+      {
+        "video_id": "0b057c23-833e-42b7-9dbf-ef14faea6891",
+        "channel": "財女珍妮",
+        "date": "2026-06-03",
+        "title": "2026/06/03 (三) 輝達欽點Marvell暴漲，帶飛光通股",
+        "source": "full_video_validator",
+        "score": 65,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "stock_context"
+        ],
+        "context": "重要的角色 但是現在的配比 可能從過去大概1比12 1比8 然後現在已經逐漸走向 1比2 1比1的時候 它就是一個不可逆的趨勢 它就是會持續的往前 那你說跟CPU相關的公司 之前漲很多 比如說AMD Interarm這些公司 那現在休息一下 那是不是你就可以注意 休息稍休息多久 休整稍休整多久 好 所以當資料中心 它的一個大量的流量 之間的資料傳輸的速度 已經越來越多的時候 那這邊就是我們剛剛提到的 低延遲 然後大家都說光徑同退 但是現在也已經被打翻了 就是同沒有要退的意思 現在就是光同並進 為什麼要光同並進呢 因為同現在短距離部分 我還是有成本的優勢 所以我沒有必要 今天為了我要去發展光 所"
+      }
+    ],
+    "phonetic_candidates": [],
+    "updated_at": "2026-06-06T21:47:20"
   }
 }
