@@ -262,5 +262,90 @@
       }
     ],
     "updated_at": "2026-06-06T18:36:07"
+  },
+  "好的|3114": {
+    "wrong_keyword": "好的",
+    "correct_code": "3114",
+    "correct_name": "好德",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "46e8bc5b-ad08-4f91-95cb-e3c89a845d91"
+    ],
+    "evidence": [
+      {
+        "video_id": "46e8bc5b-ad08-4f91-95cb-e3c89a845d91",
+        "channel": "韭菜畢業班",
+        "date": "2026-06-03",
+        "title": "EP231 | 台、美股重點一次說，Computex 展後各大公司說法，Marvell 800G光模組量產，AI工廠模組化後的台股供應鏈",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "因為我一個人後製也有點痛苦 難道嗎 就是有一點沒有辦法 因為我心中會有一個品質在那邊 然後可是我發現我一個人 有要整理的東西有點太多了 然後再加上後製這件事情本身不是我的專業 我自己覺得我還是想要好好的去想 產業的要講什麼東西會比較好一點 所以之後我們video podcast會晚個一兩天 甚至可能晚更久 讓大家可以在假如你之後是已經聽了第一遍 在YouTube podcast 其實你可以重複的聽 就等於是double check 然後再來就是之前有人跟我講過 字幕這件事情其實對大家來講非常重要 其實我原本以為沒有這麼重要 結果越來越多人跟我講 所以我也會開始越來越重視這個video podc"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3114",
+        "name": "好德",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "3349",
+        "name": "寶德",
+        "score": 0.52,
+        "phonetic_similarity": 0.8,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "9943",
+        "name": "好樂迪",
+        "score": 0.488,
+        "phonetic_similarity": 0.571,
+        "text_similarity": 0.333
+      }
+    ],
+    "updated_at": "2026-06-06T19:14:55"
+  },
+  "On Microsoft|MSFT": {
+    "wrong_keyword": "On Microsoft",
+    "correct_code": "MSFT",
+    "correct_name": "Microsoft",
+    "confidence": "medium",
+    "max_score": 50,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "12f46126-6bbd-4627-b0c4-de49fbd4a256"
+    ],
+    "evidence": [
+      {
+        "video_id": "12f46126-6bbd-4627-b0c4-de49fbd4a256",
+        "channel": "韭菜畢業班",
+        "date": "2026-05-31",
+        "title": "EP230 | 台、美股重點一次說，Dell AI Server財報超預期，NVIDIA Computex展主軸AI PC，被動元件實際需求",
+        "source": "full_video_validator",
+        "score": 50,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context"
+        ],
+        "context": "然後那個 Computex 我們在近期也看到 像 NVIDIA 或是說像是 On Microsoft 然後其實就是一起發一篇文 然後有點像是我們 那種以前做社團活動 大家就會丟一個文章的時候 接下來這個即將要有大活動 大家會起來參加這樣子"
+      }
+    ],
+    "phonetic_candidates": [],
+    "updated_at": "2026-06-06T19:25:50"
   }
 }
