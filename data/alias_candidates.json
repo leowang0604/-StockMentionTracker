@@ -1,219 +1,266 @@
 {
-  "MVIDIA|NVDA" : {
-    "confidence" : "medium",
-    "correct_code" : "NVDA",
-    "correct_name" : "NVIDIA",
-    "distinct_videos" : 1,
-    "evidence" : [
+  "MVIDIA|NVDA": {
+    "confidence": "medium",
+    "correct_code": "NVDA",
+    "correct_name": "NVIDIA",
+    "distinct_videos": 1,
+    "evidence": [
       {
-        "channel" : "兆華與股惑仔",
-        "context" : "一點小下壓 來到了1096點的漲點 還是非常厲害 而且我想今天盤面上 一開盤 大家就看到所謂 趙元彥的成員們 輕儀色的開始急拉 拉得比較快 就立刻漲停了 拉得慢一些 大概10點多也漲停了 尤其是紅海 廣達 尾創 哇塞 你要看到這三巨頭 同時漲停 真的是非常非常罕見 營業達也漲停對不對 技嘉一度漲停 還有這個仁寶接近漲停 太誇張了 我們這些老AI全職股 輕儀色的在趙元彥之後漲停 這真的是非常非常少見 然後今天還有MSI的換股 我們也提到 外資在今天 等一下看一下盤後籌碼 應該也是大幅的脈操 因為三個全中都是提升的 所以今天的成交量 1.8兆 加劑上櫃 2.2兆 這個還沒有把盤後算進來 驚人 驚人",
-        "date" : "2026-05-29",
-        "reasons" : [
+        "channel": "兆華與股惑仔",
+        "context": "一點小下壓 來到了1096點的漲點 還是非常厲害 而且我想今天盤面上 一開盤 大家就看到所謂 趙元彥的成員們 輕儀色的開始急拉 拉得比較快 就立刻漲停了 拉得慢一些 大概10點多也漲停了 尤其是紅海 廣達 尾創 哇塞 你要看到這三巨頭 同時漲停 真的是非常非常罕見 營業達也漲停對不對 技嘉一度漲停 還有這個仁寶接近漲停 太誇張了 我們這些老AI全職股 輕儀色的在趙元彥之後漲停 這真的是非常非常少見 然後今天還有MSI的換股 我們也提到 外資在今天 等一下看一下盤後籌碼 應該也是大幅的脈操 因為三個全中都是提升的 所以今天的成交量 1.8兆 加劑上櫃 2.2兆 這個還沒有把盤後算進來 驚人 驚人",
+        "date": "2026-05-29",
+        "reasons": [
           "known_stock_code",
           "code_name_match",
           "name_distance<=1"
         ],
-        "score" : 60,
-        "source" : "full_video_validator",
-        "title" : "EP1108｜DELL財報爆衝、兆元宴吃飽，緯創、鴻海、廣達齊漲停，老AI變新火種！下週電腦展開跑，多頭延續到何時？ft.操盤手 黃豐凱",
-        "video_id" : "af36eacf-8c25-4895-b394-74e28a5f81e7"
+        "score": 60,
+        "source": "full_video_validator",
+        "title": "EP1108｜DELL財報爆衝、兆元宴吃飽，緯創、鴻海、廣達齊漲停，老AI變新火種！下週電腦展開跑，多頭延續到何時？ft.操盤手 黃豐凱",
+        "video_id": "af36eacf-8c25-4895-b394-74e28a5f81e7"
       }
     ],
-    "max_score" : 60,
-    "observations" : 1,
-    "phonetic_candidates" : [
-
-    ],
-    "updated_at" : "2026-06-04T21:39:21",
-    "video_ids" : [
+    "max_score": 60,
+    "observations": 1,
+    "phonetic_candidates": [],
+    "updated_at": "2026-06-04T21:39:21",
+    "video_ids": [
       "af36eacf-8c25-4895-b394-74e28a5f81e7"
     ],
-    "wrong_keyword" : "MVIDIA"
+    "wrong_keyword": "MVIDIA"
   },
-  "Vertip|VRT" : {
-    "confidence" : "high",
-    "correct_code" : "VRT",
-    "correct_name" : "Vertiv",
-    "distinct_videos" : 1,
-    "evidence" : [
+  "Vertip|VRT": {
+    "confidence": "high",
+    "correct_code": "VRT",
+    "correct_name": "Vertiv",
+    "distinct_videos": 1,
+    "evidence": [
       {
-        "channel" : "財女珍妮",
-        "context" : "比如說像Vertip 其實在之前也非常的強勁 但是近期的股價 也是有一點休息的味道 但是如果他回測到 月線回測到季線的時候 是不是也可以在 慢慢的去做一些分皮的佈局",
-        "date" : "2026-06-02",
-        "reasons" : [
+        "channel": "財女珍妮",
+        "context": "比如說像Vertip 其實在之前也非常的強勁 但是近期的股價 也是有一點休息的味道 但是如果他回測到 月線回測到季線的時候 是不是也可以在 慢慢的去做一些分皮的佈局",
+        "date": "2026-06-02",
+        "reasons": [
           "known_stock_code",
           "code_name_match",
           "original_in_context",
           "name_distance<=1",
           "stock_context"
         ],
-        "score" : 90,
-        "source" : "full_video_validator",
-        "title" : "2026\/06\/02(二) 一天漲6％，輝達還能繼續漲嗎？#NVDA",
-        "video_id" : "f4a134ad-943c-48c7-8cf3-08ee5bfc7e4b"
+        "score": 90,
+        "source": "full_video_validator",
+        "title": "2026/06/02(二) 一天漲6％，輝達還能繼續漲嗎？#NVDA",
+        "video_id": "f4a134ad-943c-48c7-8cf3-08ee5bfc7e4b"
       }
     ],
-    "max_score" : 90,
-    "observations" : 1,
-    "phonetic_candidates" : [
-
-    ],
-    "updated_at" : "2026-06-02T22:32:03",
-    "video_ids" : [
+    "max_score": 90,
+    "observations": 1,
+    "phonetic_candidates": [],
+    "updated_at": "2026-06-02T22:32:03",
+    "video_ids": [
       "f4a134ad-943c-48c7-8cf3-08ee5bfc7e4b"
     ],
-    "wrong_keyword" : "Vertip"
+    "wrong_keyword": "Vertip"
   },
-  "Zehler|ZS" : {
-    "confidence" : "medium",
-    "correct_code" : "ZS",
-    "correct_name" : "Zscaler",
-    "distinct_videos" : 1,
-    "evidence" : [
+  "Zehler|ZS": {
+    "confidence": "medium",
+    "correct_code": "ZS",
+    "correct_name": "Zscaler",
+    "distinct_videos": 1,
+    "evidence": [
       {
-        "channel" : "財女珍妮",
-        "context" : " 可是軟體的部分 你說以後會不會慢慢的開始 有一些新的成長機會啊 或者是長多了 你想要去做換股的時候 你可能也會從軟體股去找 畢竟他們現在的估值 有些真的看起來都是還蠻低的 那我們先講第一家公司 就是Zehler這家公司 那他其實呢 是跟網路安全資安有關的 好那昨天呢 他大跌了大概有超過30%以上 順便也拉 就是直接把 像是Pelotov啊 CrossTrack這些呢 全部都直接拉下來 這兩家公司大概有跌了3%以上 好那為什麼 Zehler他會跌這麼多呢 你說這份財報有不好嗎 其實他的營收跟獲利 都是優於市場預期的 而且公司也有導入AI啊 然後他的累積訂單呢 其實他的AR啊 或者是他的這個 年",
-        "date" : "2026-05-28",
-        "reasons" : [
+        "channel": "財女珍妮",
+        "context": " 可是軟體的部分 你說以後會不會慢慢的開始 有一些新的成長機會啊 或者是長多了 你想要去做換股的時候 你可能也會從軟體股去找 畢竟他們現在的估值 有些真的看起來都是還蠻低的 那我們先講第一家公司 就是Zehler這家公司 那他其實呢 是跟網路安全資安有關的 好那昨天呢 他大跌了大概有超過30%以上 順便也拉 就是直接把 像是Pelotov啊 CrossTrack這些呢 全部都直接拉下來 這兩家公司大概有跌了3%以上 好那為什麼 Zehler他會跌這麼多呢 你說這份財報有不好嗎 其實他的營收跟獲利 都是優於市場預期的 而且公司也有導入AI啊 然後他的累積訂單呢 其實他的AR啊 或者是他的這個 年",
+        "date": "2026-05-28",
+        "reasons": [
           "known_stock_code",
           "code_name_match",
           "original_in_context",
           "stock_context"
         ],
-        "score" : 65,
-        "source" : "full_video_validator",
-        "title" : "2026\/05\/28(四) 台積電創高，費半漲不動？",
-        "video_id" : "664a9673-8607-43b0-a5cf-ab03e4d1faf0"
+        "score": 65,
+        "source": "full_video_validator",
+        "title": "2026/05/28(四) 台積電創高，費半漲不動？",
+        "video_id": "664a9673-8607-43b0-a5cf-ab03e4d1faf0"
       }
     ],
-    "max_score" : 65,
-    "observations" : 2,
-    "phonetic_candidates" : [
-
-    ],
-    "updated_at" : "2026-06-02T23:21:14",
-    "video_ids" : [
+    "max_score": 65,
+    "observations": 2,
+    "phonetic_candidates": [],
+    "updated_at": "2026-06-02T23:21:14",
+    "video_ids": [
       "664a9673-8607-43b0-a5cf-ab03e4d1faf0"
     ],
-    "wrong_keyword" : "Zehler"
+    "wrong_keyword": "Zehler"
   },
-  "invdr|NVDA" : {
-    "confidence" : "medium",
-    "correct_code" : "NVDA",
-    "correct_name" : "NVIDIA",
-    "distinct_videos" : 1,
-    "evidence" : [
+  "invdr|NVDA": {
+    "confidence": "medium",
+    "correct_code": "NVDA",
+    "correct_name": "NVIDIA",
+    "distinct_videos": 1,
+    "evidence": [
       {
-        "channel" : "投資癮",
-        "context" : "候 稍微慢一點慢一點 直到我的部位降到一定程度 降到剩下成本的時候 就會先暫停看一下 重新觀察市場的變化 我自己認為 在盤整的時候 盡量不要去做加碼的動作 盤整突破 再做下一波動作 像這陣子也有討論到invdr的部分 從財報公布之後 市場連續下跌 但目前的位置還在月線附近 在長期的區域身上 沒有太大的改變 像這禮拜黃鑫新區來台灣行銷 而整個照原業的所有工資 大部分的工資點到一些代工廠 在週末的時候直接掌聽 最有趣的地方就是 掌聽的部分 在鎖價的時候 量能沒有很大 就以鴻海來說 我在盤中看到鴻海的掌聽板的價格 委託價格 依照過往的經驗判斷 應該至少幾千張 甚至幾萬張 才可以把鴻海鎖在掌聽板 但這",
-        "date" : "2026-05-31",
-        "reasons" : [
+        "channel": "投資癮",
+        "context": "候 稍微慢一點慢一點 直到我的部位降到一定程度 降到剩下成本的時候 就會先暫停看一下 重新觀察市場的變化 我自己認為 在盤整的時候 盡量不要去做加碼的動作 盤整突破 再做下一波動作 像這陣子也有討論到invdr的部分 從財報公布之後 市場連續下跌 但目前的位置還在月線附近 在長期的區域身上 沒有太大的改變 像這禮拜黃鑫新區來台灣行銷 而整個照原業的所有工資 大部分的工資點到一些代工廠 在週末的時候直接掌聽 最有趣的地方就是 掌聽的部分 在鎖價的時候 量能沒有很大 就以鴻海來說 我在盤中看到鴻海的掌聽板的價格 委託價格 依照過往的經驗判斷 應該至少幾千張 甚至幾萬張 才可以把鴻海鎖在掌聽板 但這",
+        "date": "2026-05-31",
+        "reasons": [
           "known_stock_code",
           "code_name_match",
           "original_in_context",
           "stock_context"
         ],
-        "score" : 65,
-        "source" : "full_video_validator",
-        "title" : "EP331 軟硬兼具",
-        "video_id" : "cc65e950-dd93-4d1d-a414-e73e4c732401"
+        "score": 65,
+        "source": "full_video_validator",
+        "title": "EP331 軟硬兼具",
+        "video_id": "cc65e950-dd93-4d1d-a414-e73e4c732401"
       }
     ],
-    "max_score" : 65,
-    "observations" : 1,
-    "phonetic_candidates" : [
-
-    ],
-    "updated_at" : "2026-06-02T23:37:39",
-    "video_ids" : [
+    "max_score": 65,
+    "observations": 1,
+    "phonetic_candidates": [],
+    "updated_at": "2026-06-02T23:37:39",
+    "video_ids": [
       "cc65e950-dd93-4d1d-a414-e73e4c732401"
     ],
-    "wrong_keyword" : "invdr"
+    "wrong_keyword": "invdr"
   },
-  "富邦電子|0052" : {
-    "confidence" : "high",
-    "correct_code" : "0052",
-    "correct_name" : "富邦科技",
-    "distinct_videos" : 1,
-    "evidence" : [
+  "富邦電子|0052": {
+    "confidence": "high",
+    "correct_code": "0052",
+    "correct_name": "富邦科技",
+    "distinct_videos": 1,
+    "evidence": [
       {
-        "channel" : "兆華與股惑仔",
-        "context" : "我的配置裡面 因為我不喜歡股息 還是搶到這件事情 所以我還是 主軸核心會是科技跟市值 就例如說830 或者說像那個 剛剛講到 只要跟科技比較相關的 成分高的 富邦電子 等一下他應該叫富邦科技 凌露 這種我都配得比較多",
-        "date" : "2026-06-04",
-        "reasons" : [
+        "channel": "兆華與股惑仔",
+        "context": "我的配置裡面 因為我不喜歡股息 還是搶到這件事情 所以我還是 主軸核心會是科技跟市值 就例如說830 或者說像那個 剛剛講到 只要跟科技比較相關的 成分高的 富邦電子 等一下他應該叫富邦科技 凌露 這種我都配得比較多",
+        "date": "2026-06-04",
+        "reasons": [
           "known_stock_code",
           "code_name_match",
           "original_in_context",
           "name_distance<=1",
           "stock_context"
         ],
-        "score" : 90,
-        "source" : "full_video_validator",
-        "title" : "EP1112｜無聊就會跌？剛好給停利理由！就業熱就怕不降息，博通財報和台積電股東會平淡，非電、金融撐盤，回檔機會來了？ft.選股教練 陳唯泰",
-        "video_id" : "fcf0d87d-10e1-4ba6-88e6-c5dc837fe5cc"
+        "score": 90,
+        "source": "full_video_validator",
+        "title": "EP1112｜無聊就會跌？剛好給停利理由！就業熱就怕不降息，博通財報和台積電股東會平淡，非電、金融撐盤，回檔機會來了？ft.選股教練 陳唯泰",
+        "video_id": "fcf0d87d-10e1-4ba6-88e6-c5dc837fe5cc"
       }
     ],
-    "max_score" : 90,
-    "observations" : 1,
-    "phonetic_candidates" : [
+    "max_score": 90,
+    "observations": 1,
+    "phonetic_candidates": [
       {
-        "code" : "0053",
-        "name" : "元大電子",
-        "phonetic_similarity" : 0.667,
-        "score" : 0.608,
-        "text_similarity" : 0.5
+        "code": "0053",
+        "name": "元大電子",
+        "phonetic_similarity": 0.667,
+        "score": 0.608,
+        "text_similarity": 0.5
       },
       {
-        "code" : "00652",
-        "name" : "富邦印度",
-        "phonetic_similarity" : 0.667,
-        "score" : 0.608,
-        "text_similarity" : 0.5
+        "code": "00652",
+        "name": "富邦印度",
+        "phonetic_similarity": 0.667,
+        "score": 0.608,
+        "text_similarity": 0.5
       },
       {
-        "code" : "2344",
-        "name" : "華邦電",
-        "phonetic_similarity" : 0.667,
-        "score" : 0.608,
-        "text_similarity" : 0.5
+        "code": "2344",
+        "name": "華邦電",
+        "phonetic_similarity": 0.667,
+        "score": 0.608,
+        "text_similarity": 0.5
       }
     ],
-    "updated_at" : "2026-06-05T20:30:25",
-    "video_ids" : [
+    "updated_at": "2026-06-05T20:30:25",
+    "video_ids": [
       "fcf0d87d-10e1-4ba6-88e6-c5dc837fe5cc"
     ],
-    "wrong_keyword" : "富邦電子"
+    "wrong_keyword": "富邦電子"
   },
-  "萬序|6187" : {
-    "confidence" : "high",
-    "correct_code" : "6187",
-    "correct_name" : "萬潤",
-    "distinct_videos" : 1,
-    "evidence" : [
+  "萬序|6187": {
+    "confidence": "high",
+    "correct_code": "6187",
+    "correct_name": "萬潤",
+    "distinct_videos": 1,
+    "evidence": [
       {
-        "channel" : "投資癮",
-        "context" : " 除非你現在是空守者或放空者 才會開始有點擔心或琢磨這一塊 反而是原本的持有者在考慮 要不要減碼或市場的震盪程度 去做一些斟酌的轉換 而且這些相關的族群 大多數都已經創了新高了 像是萬泰哥跟他的指控是萬序 在上禮拜就創了粒子新高了 而且他現在是深達科 華通跟宏觀 也都是創了新高的位置 所以這個發展就讓他自然發展 然後靜靜的去觀察 我覺得這個夢很漂亮 我覺得外太高的能源資源 是無限想像的空間 也清楚這樣馬斯克這個人 很會做夢 但是很會造夢 只是因為目前市場的資金 還是太過於需要 太過於稀缺了 我需要拿這些資金去做右側交易 或是一些左側安排 整個資產配置上面 還沒有想要把資金放到Space身上 有",
-        "date" : "2026-05-31",
-        "reasons" : [
+        "channel": "投資癮",
+        "context": " 除非你現在是空守者或放空者 才會開始有點擔心或琢磨這一塊 反而是原本的持有者在考慮 要不要減碼或市場的震盪程度 去做一些斟酌的轉換 而且這些相關的族群 大多數都已經創了新高了 像是萬泰哥跟他的指控是萬序 在上禮拜就創了粒子新高了 而且他現在是深達科 華通跟宏觀 也都是創了新高的位置 所以這個發展就讓他自然發展 然後靜靜的去觀察 我覺得這個夢很漂亮 我覺得外太高的能源資源 是無限想像的空間 也清楚這樣馬斯克這個人 很會做夢 但是很會造夢 只是因為目前市場的資金 還是太過於需要 太過於稀缺了 我需要拿這些資金去做右側交易 或是一些左側安排 整個資產配置上面 還沒有想要把資金放到Space身上 有",
+        "date": "2026-05-31",
+        "reasons": [
           "known_stock_code",
           "code_name_match",
           "original_in_context",
           "name_distance<=1",
           "stock_context"
         ],
-        "score" : 90,
-        "source" : "full_video_validator",
-        "title" : "EP331 軟硬兼具",
-        "video_id" : "cc65e950-dd93-4d1d-a414-e73e4c732401"
+        "score": 90,
+        "source": "full_video_validator",
+        "title": "EP331 軟硬兼具",
+        "video_id": "cc65e950-dd93-4d1d-a414-e73e4c732401"
       }
     ],
-    "max_score" : 90,
-    "observations" : 1,
-    "updated_at" : "2026-06-02T01:55:24",
-    "video_ids" : [
+    "max_score": 90,
+    "observations": 1,
+    "updated_at": "2026-06-02T01:55:24",
+    "video_ids": [
       "cc65e950-dd93-4d1d-a414-e73e4c732401"
     ],
-    "wrong_keyword" : "萬序"
+    "wrong_keyword": "萬序"
+  },
+  "生一|1773": {
+    "wrong_keyword": "生一",
+    "correct_code": "1773",
+    "correct_name": "勝一",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "6d6095d8-112b-4c7f-abb3-8b670f092b2e"
+    ],
+    "evidence": [
+      {
+        "video_id": "6d6095d8-112b-4c7f-abb3-8b670f092b2e",
+        "channel": "股癌",
+        "date": "2026-06-06",
+        "title": "EP668 | 🦞",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "歡迎收聽古來為先夢宮本集節目由Sally贊助 不知不覺一年過了一半時間真的是過很快 最近不早人開始在看端午連假要去哪裡玩 甚至有些人行程都拍好了 簡單說就是人還在公司但腦子已經在機場 這種時候會發生一件固定的是 出國需求開始上來 然後同一個老問題一起回歸網路 很多人行程拍得很滿 機票、飯店、景點都研究得很細 但最容易出事情的是最基本的網路 到當地才發現沒有網路 導航卡住、轎車失敗 餐廳找不到、整趟旅行變求生模式 現在比較省事的方法是E-SIM 像Sally的E-SIM 出國前線設定好落地直接連線 不用換卡、不用找針 也不用在機場翻行李 流量可以在app裡面直接看 用完再加就好 不用整張重來 再"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "1773",
+        "name": "勝一",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "1777",
+        "name": "生泰",
+        "score": 0.663,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "5455",
+        "name": "昇益",
+        "score": 0.65,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-06-06T18:36:07"
   }
 }
