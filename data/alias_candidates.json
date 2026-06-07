@@ -458,61 +458,6 @@
     ],
     "wrong_keyword" : "服貿科"
   },
-  "生一|1773" : {
-    "confidence" : "high",
-    "correct_code" : "1773",
-    "correct_name" : "勝一",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "股癌",
-        "context" : "歡迎收聽古來為先夢宮本集節目由Sally贊助 不知不覺一年過了一半時間真的是過很快 最近不早人開始在看端午連假要去哪裡玩 甚至有些人行程都拍好了 簡單說就是人還在公司但腦子已經在機場 這種時候會發生一件固定的是 出國需求開始上來 然後同一個老問題一起回歸網路 很多人行程拍得很滿 機票、飯店、景點都研究得很細 但最容易出事情的是最基本的網路 到當地才發現沒有網路 導航卡住、轎車失敗 餐廳找不到、整趟旅行變求生模式 現在比較省事的方法是E-SIM 像Sally的E-SIM 出國前線設定好落地直接連線 不用換卡、不用找針 也不用在機場翻行李 流量可以在app裡面直接看 用完再加就好 不用整張重來 再",
-        "date" : "2026-06-06",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "name_distance<=1",
-          "phonetic_top1",
-          "stock_context"
-        ],
-        "score" : 100,
-        "source" : "phonetic-discovery",
-        "title" : "EP668 | 🦞",
-        "video_id" : "6d6095d8-112b-4c7f-abb3-8b670f092b2e"
-      }
-    ],
-    "max_score" : 100,
-    "observations" : 2,
-    "phonetic_candidates" : [
-      {
-        "code" : "1773",
-        "name" : "勝一",
-        "phonetic_similarity" : 1,
-        "score" : 0.825,
-        "text_similarity" : 0.5
-      },
-      {
-        "code" : "1777",
-        "name" : "生泰",
-        "phonetic_similarity" : 0.75,
-        "score" : 0.663,
-        "text_similarity" : 0.5
-      },
-      {
-        "code" : "5455",
-        "name" : "昇益",
-        "phonetic_similarity" : 1,
-        "score" : 0.65,
-        "text_similarity" : 0
-      }
-    ],
-    "updated_at" : "2026-06-07T18:26:48",
-    "video_ids" : [
-      "6d6095d8-112b-4c7f-abb3-8b670f092b2e"
-    ],
-    "wrong_keyword" : "生一"
-  },
   "經向店|2308" : {
     "confidence" : "medium",
     "correct_code" : "2308",
