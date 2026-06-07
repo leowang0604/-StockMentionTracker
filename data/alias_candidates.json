@@ -60,10 +60,16 @@
     "wrong_keyword": "On Microsoft"
   },
   "Vertip|VRT": {
-    "confidence": "high",
+    "wrong_keyword": "Vertip",
     "correct_code": "VRT",
     "correct_name": "Vertiv",
+    "confidence": "high",
+    "max_score": 90,
+    "observations": 3,
     "distinct_videos": 1,
+    "video_ids": [
+      "f4a134ad-943c-48c7-8cf3-08ee5bfc7e4b"
+    ],
     "evidence": [
       {
         "channel": "財女珍妮",
@@ -98,14 +104,8 @@
         "video_id": "f4a134ad-943c-48c7-8cf3-08ee5bfc7e4b"
       }
     ],
-    "max_score": 90,
-    "observations": 2,
     "phonetic_candidates": [],
-    "updated_at": "2026-06-06T22:00:35",
-    "video_ids": [
-      "f4a134ad-943c-48c7-8cf3-08ee5bfc7e4b"
-    ],
-    "wrong_keyword": "Vertip"
+    "updated_at": "2026-06-07T20:56:05"
   },
   "Zehler|ZS": {
     "confidence": "medium",
