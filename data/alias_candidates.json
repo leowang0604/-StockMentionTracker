@@ -297,61 +297,6 @@
     ],
     "wrong_keyword" : "nervous"
   },
-  "台子|2511" : {
-    "confidence" : "high",
-    "correct_code" : "2511",
-    "correct_name" : "太子",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "投資癮",
-        "context" : "所以分享邏輯跟概念會有點不太一樣 所以碰到這種訊息 應該還算是可以理解的 那上禮拜才聊到這件事情 那這禮拜接下來 應該會接受市場的一些考驗的 這禮拜五已經沒有觀察類股了 那這禮拜的週末就夜盤的時候 台子期下跌了3000多點 每股市大指數都一起下跌 那是達克下跌4.18% S&P500下跌2.60% 盜窮指數下跌1.35% 那跌幅最重是廢半指數 下跌10.26%下跌1300多點 所以廢半指數的30大成份股 包括NVIDIA、TSM、美光、iSmo、Intel 下跌的幅度都非常非常深 所以整體來說 自己的狀況感受是蠻明顯的 但是真的沒有什麼太多的恐慌感 而且期待的感覺還是大於傷害的感覺 也重要一定",
-        "date" : "2026-06-07",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "name_distance<=1",
-          "phonetic_top1",
-          "stock_context"
-        ],
-        "score" : 100,
-        "source" : "phonetic-discovery",
-        "title" : "EP332 股市收心操",
-        "video_id" : "c0fccd99-6b6d-46e7-b94b-90155018eca4"
-      }
-    ],
-    "max_score" : 100,
-    "observations" : 1,
-    "phonetic_candidates" : [
-      {
-        "code" : "2511",
-        "name" : "太子",
-        "phonetic_similarity" : 1,
-        "score" : 0.825,
-        "text_similarity" : 0.5
-      },
-      {
-        "code" : "1101",
-        "name" : "台泥",
-        "phonetic_similarity" : 0.8,
-        "score" : 0.695,
-        "text_similarity" : 0.5
-      },
-      {
-        "code" : "1722",
-        "name" : "台肥",
-        "phonetic_similarity" : 0.667,
-        "score" : 0.608,
-        "text_similarity" : 0.5
-      }
-    ],
-    "updated_at" : "2026-06-07T21:18:28",
-    "video_ids" : [
-      "c0fccd99-6b6d-46e7-b94b-90155018eca4"
-    ],
-    "wrong_keyword" : "台子"
-  },
   "富邦電子|0052" : {
     "confidence" : "high",
     "correct_code" : "0052",
