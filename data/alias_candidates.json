@@ -1,37 +1,4 @@
 {
-  "Brocon|AVGO" : {
-    "confidence" : "medium",
-    "correct_code" : "AVGO",
-    "correct_name" : "Broadcom",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "韭菜畢業班",
-        "context" : " 但是其實生息這件事情 之前4、5月其實就已經有跌過了 所以你要預期飛農好 所以你預期這一個Fed會生息 其實之前就已經講過類似的事情 它不是說今天才來了 所以我認為這一次殺 你也可以把它推估成就是給Brocon 因為Brocon這一次的展望 沒有到這麼的好 我們等一下也會講到Brocon 就搏通這家公司 因為我自己就有使用 然後兩天跌了12%加7% 然後大概19% 所以其實也是 我們也都是扛過來的 所以其實我覺得有時候跌 如果你們真的覺得 自己的跌很受傷的話 其實我覺得我這邊也可以跟你講 我就是也是承受這個跌 就是它也不是說 第一次遇到 第二次遇到了 然後每一次下跌下來 其實對我來講就是 產",
-        "date" : "2026-06-07",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "stock_context"
-        ],
-        "score" : 65,
-        "source" : "full_video_validator",
-        "title" : "EP232 | 台、美股重點一次說，台股暴跌後的想法，Broadcom財報，台積電CoPoS提前量產，TGV玻璃基板驗證進度",
-        "video_id" : "ad10cab8-473b-4133-8ce0-45e7bd4f8ba0"
-      }
-    ],
-    "max_score" : 65,
-    "observations" : 1,
-    "phonetic_candidates" : [
-
-    ],
-    "updated_at" : "2026-06-07T18:54:53",
-    "video_ids" : [
-      "ad10cab8-473b-4133-8ce0-45e7bd4f8ba0"
-    ],
-    "wrong_keyword" : "Brocon"
-  },
   "FOP|2330" : {
     "confidence" : "medium",
     "correct_code" : "2330",
