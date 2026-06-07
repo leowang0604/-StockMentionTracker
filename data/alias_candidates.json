@@ -1,37 +1,4 @@
 {
-  "Interarm|INTC" : {
-    "confidence" : "medium",
-    "correct_code" : "INTC",
-    "correct_name" : "Intel",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "財女珍妮",
-        "context" : "重要的角色 但是現在的配比 可能從過去大概1比12 1比8 然後現在已經逐漸走向 1比2 1比1的時候 它就是一個不可逆的趨勢 它就是會持續的往前 那你說跟CPU相關的公司 之前漲很多 比如說AMD Interarm這些公司 那現在休息一下 那是不是你就可以注意 休息稍休息多久 休整稍休整多久 好 所以當資料中心 它的一個大量的流量 之間的資料傳輸的速度 已經越來越多的時候 那這邊就是我們剛剛提到的 低延遲 然後大家都說光徑同退 但是現在也已經被打翻了 就是同沒有要退的意思 現在就是光同並進 為什麼要光同並進呢 因為同現在短距離部分 我還是有成本的優勢 所以我沒有必要 今天為了我要去發展光 所",
-        "date" : "2026-06-03",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "stock_context"
-        ],
-        "score" : 65,
-        "source" : "full_video_validator",
-        "title" : "2026\/06\/03 (三) 輝達欽點Marvell暴漲，帶飛光通股",
-        "video_id" : "0b057c23-833e-42b7-9dbf-ef14faea6891"
-      }
-    ],
-    "max_score" : 65,
-    "observations" : 1,
-    "phonetic_candidates" : [
-
-    ],
-    "updated_at" : "2026-06-06T21:47:20",
-    "video_ids" : [
-      "0b057c23-833e-42b7-9dbf-ef14faea6891"
-    ],
-    "wrong_keyword" : "Interarm"
-  },
   "MVIDIA|NVDA" : {
     "confidence" : "medium",
     "correct_code" : "NVDA",
