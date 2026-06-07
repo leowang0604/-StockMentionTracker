@@ -360,5 +360,203 @@
       "0b057c23-833e-42b7-9dbf-ef14faea6891"
     ],
     "wrong_keyword": "馬菲歐"
+  },
+  "Brocon|AVGO": {
+    "wrong_keyword": "Brocon",
+    "correct_code": "AVGO",
+    "correct_name": "Broadcom",
+    "confidence": "medium",
+    "max_score": 65,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "ad10cab8-473b-4133-8ce0-45e7bd4f8ba0"
+    ],
+    "evidence": [
+      {
+        "video_id": "ad10cab8-473b-4133-8ce0-45e7bd4f8ba0",
+        "channel": "韭菜畢業班",
+        "date": "2026-06-07",
+        "title": "EP232 | 台、美股重點一次說，台股暴跌後的想法，Broadcom財報，台積電CoPoS提前量產，TGV玻璃基板驗證進度",
+        "source": "full_video_validator",
+        "score": 65,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "stock_context"
+        ],
+        "context": " 但是其實生息這件事情 之前4、5月其實就已經有跌過了 所以你要預期飛農好 所以你預期這一個Fed會生息 其實之前就已經講過類似的事情 它不是說今天才來了 所以我認為這一次殺 你也可以把它推估成就是給Brocon 因為Brocon這一次的展望 沒有到這麼的好 我們等一下也會講到Brocon 就搏通這家公司 因為我自己就有使用 然後兩天跌了12%加7% 然後大概19% 所以其實也是 我們也都是扛過來的 所以其實我覺得有時候跌 如果你們真的覺得 自己的跌很受傷的話 其實我覺得我這邊也可以跟你講 我就是也是承受這個跌 就是它也不是說 第一次遇到 第二次遇到了 然後每一次下跌下來 其實對我來講就是 產"
+      }
+    ],
+    "phonetic_candidates": [],
+    "updated_at": "2026-06-07T18:54:53"
+  },
+  "FOP|2330": {
+    "wrong_keyword": "FOP",
+    "correct_code": "2330",
+    "correct_name": "台積電",
+    "confidence": "medium",
+    "max_score": 50,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "ad10cab8-473b-4133-8ce0-45e7bd4f8ba0"
+    ],
+    "evidence": [
+      {
+        "video_id": "ad10cab8-473b-4133-8ce0-45e7bd4f8ba0",
+        "channel": "韭菜畢業班",
+        "date": "2026-06-07",
+        "title": "EP232 | 台、美股重點一次說，台股暴跌後的想法，Broadcom財報，台積電CoPoS提前量產，TGV玻璃基板驗證進度",
+        "source": "full_video_validator",
+        "score": 50,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context"
+        ],
+        "context": "一件事情 然後再來就是 如果我們看到 台股相關的東西的話 因為近期其實 台積電是有喊出來 COPOS相關的東西 它是有量產的一個節奏 是可能可以在 2027年的下半年 就會進入一個量產 然後再來就是 FOP的部分的話 技術驗證競 是已經進到了一個 量產的一個元年 所以我們其實可以注意到 蠻多東西相關的 它COPOS相關的一個供應鏈 從我們看到面板 載具的前端 就是一些設備相關的東西 舉個例子來講好了 像是君華 或者是如果我們講的是 日本相關產商的話 日本的話就是6146 然後再來就是7966 大家可以去打 就是日本 然後這個代號 然後再來6988這些 也就是像Disco這些公司 他們其實都是有"
+      }
+    ],
+    "phonetic_candidates": [],
+    "updated_at": "2026-06-07T18:54:53"
+  },
+  "Mafio老黃|1731": {
+    "wrong_keyword": "Mafio老黃",
+    "correct_code": "1731",
+    "correct_name": "美吾華",
+    "confidence": "medium",
+    "max_score": 65,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "46e8bc5b-ad08-4f91-95cb-e3c89a845d91"
+    ],
+    "evidence": [
+      {
+        "video_id": "46e8bc5b-ad08-4f91-95cb-e3c89a845d91",
+        "channel": "韭菜畢業班",
+        "date": "2026-06-03",
+        "title": "EP231 | 台、美股重點一次說，Computex 展後各大公司說法，Marvell 800G光模組量產，AI工廠模組化後的台股供應鏈",
+        "source": "full_video_validator",
+        "score": 65,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "stock_context"
+        ],
+        "context": "還滿有趣的 好再來就是說我們這一集會把 就大家最期待的一件事 應該就是Computed講了哪些東西 這一層Video Computed其實丟出來之後 很多個股都是與路均沾 然後一起往上去噴 我們看到像Mafio老黃一句 這個東西它應該是要上一兆的 美元的公司市值 馬上那個股價就直接往天空設 一個晚上漲了32% 其實我覺得現在對於美股的態度 有一點像是我自己舉例好了 像我最近之前不是有聊過 GELW就是康寧這一家公司 康寧這一家公司就是吃了題材 凡主要就是光芒 然後再來就是玻璃相關的東西 它也是有題材的 之前前幾天就是一直下刷一單 它有時候一根回去 其實就會把之前的蝶幅收復回去 這件事情其實看C"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "6757",
+        "name": "台灣虎航",
+        "score": 0.35,
+        "phonetic_similarity": 0.538,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "8487",
+        "name": "愛爾達-創",
+        "score": 0.35,
+        "phonetic_similarity": 0.538,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "9960",
+        "name": "邁達康",
+        "score": 0.35,
+        "phonetic_similarity": 0.538,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-06-07T19:02:47"
+  },
+  "nervous|2376": {
+    "wrong_keyword": "nervous",
+    "correct_code": "2376",
+    "correct_name": "技嘉",
+    "confidence": "medium",
+    "max_score": 65,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "46e8bc5b-ad08-4f91-95cb-e3c89a845d91"
+    ],
+    "evidence": [
+      {
+        "video_id": "46e8bc5b-ad08-4f91-95cb-e3c89a845d91",
+        "channel": "韭菜畢業班",
+        "date": "2026-06-03",
+        "title": "EP231 | 台、美股重點一次說，Computex 展後各大公司說法，Marvell 800G光模組量產，AI工廠模組化後的台股供應鏈",
+        "source": "full_video_validator",
+        "score": 65,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "stock_context"
+        ],
+        "context": " 泰國廠的這些月產等級 較上個季度來說的話 已經是翻倍了 然後再來就是自幫 他其實可以看到擴產的 預期其實是相對的積極的 還有看到另外一家 就是像技嘉這一家公司 那技嘉這一家公司的話 我們之前會把他跟nervous掛鉤在一起 就是nervous的發展下 他勢必是會存在的 那我們可以先注意到一件事情 現在技嘉如果我們看的是 A&D的這個N550X 所謂的業界 其實大部分人做的這個大小 我們會把它叫成10U 當然技嘉的話要做成8U 好 我這個地方解釋一下 U是什麼東西 雖然我們以前應該解釋過 1U的話就等於是一個 標準的這種機架的高度 然後大概高度的話 就是4.4公分 所以他可以把它做成就是說 我"
+      }
+    ],
+    "phonetic_candidates": [],
+    "updated_at": "2026-06-07T19:02:47"
+  },
+  "經向店|2308": {
+    "wrong_keyword": "經向店",
+    "correct_code": "2308",
+    "correct_name": "台達電",
+    "confidence": "medium",
+    "max_score": 65,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "46e8bc5b-ad08-4f91-95cb-e3c89a845d91"
+    ],
+    "evidence": [
+      {
+        "video_id": "46e8bc5b-ad08-4f91-95cb-e3c89a845d91",
+        "channel": "韭菜畢業班",
+        "date": "2026-06-03",
+        "title": "EP231 | 台、美股重點一次說，Computex 展後各大公司說法，Marvell 800G光模組量產，AI工廠模組化後的台股供應鏈",
+        "source": "full_video_validator",
+        "score": 65,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "stock_context"
+        ],
+        "context": " 然後毛利的部分 我覺得倒是還好 就算可能下降一點 甚至如果不這樣反生的話 那他就有可能 可以有一個 蠻強大的一個動能存在 目前我們還可以看到 幾件事情 就是一些擴產的話題 那擴產的話題的話 不外乎像經向店 或說像是自幫以及台藥 這些東西都是有一些擴產的話題存在 甚至我們早期調的一些增底 只要有一些擴產存在 然後再來就是說 我們可以看到以經向店來看的話 泰國廠的這些月產等級 較上個季度來說的話 已經是翻倍了 然後再來就是自幫 他其實可以看到擴產的 預期其實是相對的積極的 還有看到另外一家 就是像技嘉這一家公司 那技嘉這一家公司的話 我們之前會把他跟nervous掛鉤在一起 就是nervous的"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2368",
+        "name": "金像電",
+        "score": 0.6,
+        "phonetic_similarity": 0.923,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "3530",
+        "name": "晶相光",
+        "score": 0.511,
+        "phonetic_similarity": 0.786,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "4528",
+        "name": "江興鍛",
+        "score": 0.5,
+        "phonetic_similarity": 0.769,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-06-07T19:02:47"
   }
 }
