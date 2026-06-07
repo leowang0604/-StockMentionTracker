@@ -685,58 +685,6 @@
     ],
     "wrong_keyword" : "萬序"
   },
-  "風策鼓|8358" : {
-    "confidence" : "medium",
-    "correct_code" : "8358",
-    "correct_name" : "金居",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "兆華與股惑仔",
-        "context" : " 今天也就順勢也都大噴 但這個鼓票 說實話平常的成交量 比較小 鼓本比較小 所以今天的小型鼓 長在支付軟體鼓 但是你可以看到 被動元件 紅了好長好長一段時間的 今天就整個大洗雙 包括說像之前 比較紅的風策鼓啦 CPO啦 今天都是一個 比較震盪幅度 劇烈的狀態 好 那今天的來賓 也來講一些這件事情了 指數看來還不錯 幼創收盤高 可是體感溫度降低了 接棒 由大型鼓接棒 看來很健康 可是大家還是希望 我手上的中小型 熱門鼓可以長 先來歡迎他 今天來的是我們的 AI達人蔡銘翰 趙華豪 聽到沒有 大家好 銘翰昨天沒來 但昨天我的 Pocket有聊到銘翰 我有跟銘翰說 然後我就說 要是昨天這種聽眾的問題 ",
-        "date" : "2026-06-02",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context"
-        ],
-        "score" : 50,
-        "source" : "full_video_validator",
-        "title" : "EP1110｜台股的轉股？低本益比AI股回溫，台積電也快來，記憶體、CPO、被動、機器人震盪，怎麼抱？6月中FED會議要小心？ft.AI達人 蔡明翰",
-        "video_id" : "66a74bc5-4f8a-4735-b5a0-77972ee3ccf0"
-      }
-    ],
-    "max_score" : 50,
-    "observations" : 1,
-    "phonetic_candidates" : [
-      {
-        "code" : "2061",
-        "name" : "風青",
-        "phonetic_similarity" : 0.5,
-        "score" : 0.442,
-        "text_similarity" : 0.333
-      },
-      {
-        "code" : "8255",
-        "name" : "朋程",
-        "phonetic_similarity" : 0.556,
-        "score" : 0.361,
-        "text_similarity" : 0
-      },
-      {
-        "code" : "1907",
-        "name" : "永豐餘",
-        "phonetic_similarity" : 0.5,
-        "score" : 0.325,
-        "text_similarity" : 0
-      }
-    ],
-    "updated_at" : "2026-06-07T20:02:17",
-    "video_ids" : [
-      "66a74bc5-4f8a-4735-b5a0-77972ee3ccf0"
-    ],
-    "wrong_keyword" : "風策鼓"
-  },
   "馬菲歐|MRVL" : {
     "confidence" : "medium",
     "correct_code" : "MRVL",
