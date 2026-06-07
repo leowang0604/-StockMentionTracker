@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-07T21:04:40",
+  "updated_at": "2026-06-07T21:18:37",
   "stocks_ranking": [
     {
       "code": "INTC",
@@ -7,6 +7,18 @@
       "market": "US",
       "sector": "半導體",
       "contexts": [
+        {
+          "video": "EP332 股市收心操",
+          "channel": "投資癮",
+          "date": "2026-06-07",
+          "text": "投信換股的關係 連續漲停創新高 一個禮拜漲了快要15% 我看市場還是沒有太多的討論 反正也好 我自己還是喜歡默默去做自己的事情 等到大家都在討論的時候 就慢慢做一些退堂的行為 現在5月初的時候 討論到Intel的代額 其實那個時候就慢慢做一些解碼的動作 這一半也看到Intel開始下跌了30%左右 我自己到現在為止沒有太多的想法 自己的步驟要去前進就好 回到哥越合約上面 目前是沒有透露態度東西 但可以知道個人品牌的誘惑真的太大了 而且這個東西不只在籃球上面 在高爾夫酒上面也有相對應的合約 並且還可以同意 哥越在個人品牌上面 還可以簽其他合約 市場目前是傳說 這個合約大概10年 價值超過4億美金 而這也是李",
+          "matched_keyword": "Intel",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
         {
           "video": "EP667 | 🌍",
           "channel": "股癌",
@@ -359,23 +371,18 @@
           "sentiment_score": 0.5,
           "video_url": "",
           "extraction_mode": "gemini"
-        },
-        {
-          "video": "EP329 市場裡光彩奪目",
-          "channel": "投資癮",
-          "date": "2026-05-17",
-          "text": " 可能會多了25%左右 而且中間還有一個資金轉換的時間差 只要這個時間差控制得漂亮 這個損失的問題 可以下降得更低 大概是這種概念 而數字上面沒有辦法很精準 但是心態上面 應該是這麼想的 而這禮拜其實Intel下跌23% 就像上禮拜我試著做一節嗎 但是真的不是賣給川普了 因為上禮拜的川普 應該還在中國忙 這次的傳奇會沒有太多的想法 看完內容之後你會覺得說 你能知道的是他們願意讓你知道的 但你想知道的那個部分 是他們不會讓你知道的 但是可以看到川普在中國的態度 會乖的很多 願意照顧去念 我像在日本韓國這麼的嗆 在日本的時候 還會偷臭一下珍珠港的世界 在韓國的時候拿別人的筆來用 在中國的時候乖乖的照顧念 大",
-          "matched_keyword": "Intel",
-          "analysis_source": "whisper",
-          "sentiment": "bearish",
-          "sentiment_score": 0.3,
-          "video_url": "",
-          "extraction_mode": "gemini"
         }
       ],
       "total_mentions": 30,
-      "sentiment_score": 0.483,
+      "sentiment_score": 0.497,
       "daily": {
+        "2026-06-07": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.7
+        },
         "2026-06-03": {
           "mentions": 3,
           "bullish": 0,
@@ -489,11 +496,11 @@
           "sentiment_score": 0.5
         },
         "2026-05-17": {
-          "mentions": 2,
+          "mentions": 1,
           "bullish": 0,
-          "bearish": 1,
+          "bearish": 0,
           "neutral": 1,
-          "sentiment_score": 0.4
+          "sentiment_score": 0.5
         }
       }
     },
@@ -2973,6 +2980,18 @@
           "whisper_corrected": true
         },
         {
+          "video": "EP332 股市收心操",
+          "channel": "投資癮",
+          "date": "2026-06-07",
+          "text": "才會有一大堆新聞消息 市場梗圖跑出來 而很長的時候 市場大概就是這種節奏 只是看完這次的討論上面 會認為說 如果真的所有東西 都要依附在揮達身上 那為什麼不直接買揮達就好了 這很像兩年前討論到 你喜歡台積電到那裡設廠 而不是買運的房子 而是要買它公司的股票 而且買股票在台灣 比買房子的程序時間 有東西還都還要高很多 但當時候的熱度 還是讓不少人去衝動的 下下禮拜有央行理建事會 我現在在星期二點點的部分 也會做出進一步的討論 而到時候如果有機會的話 再跟大家好好聊聊 目前還是要先面對 股市帶來的震盪 那明天市場的變化之後 明天在長文裡面 也會跟大家進一步的討論 跟寫新的一步的想法 那昨天在看NBA冠軍",
+          "matched_keyword": "TSM",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
           "video": "EP668 | 🦞",
           "channel": "股癌",
           "date": "2026-06-06",
@@ -3307,28 +3326,16 @@
           "sentiment_score": 0.5,
           "video_url": "",
           "extraction_mode": "gemini"
-        },
-        {
-          "video": "EP664 | 🐟",
-          "channel": "股癌",
-          "date": "2026-05-23",
-          "text": "這邊的壓力 會越來越大 那不然說大家可能會去敦促 Intel趕快把東西做出來 就即便他可能目前 只有後段的表現 會是相對好一點 那前段說不定大家就是 給你錢趕快做 希望你可以把東西做出來 那或者是去找TSM 或是找一些既有的業者 那告訴你說 我可能願意去花錢 去包產線或是什麼的 談一些地牢 我自己猜是會發生 因為目前的狀況就是 怎麼講 就是市場的競爭者變多了 以前可能是一個虛無嫖妙 大家都只知道說 OK Google要開始外銷 可是不知道他的動作這麼大 那動作這麼大的狀況之下 那就問要怎麼樣在這之中受惠 當然就是誰拿到更多晶片 誰可以更快的把這些 Custard鋪出去 誰就能複製 像是馬斯克的成功案",
-          "matched_keyword": "TSMC",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "gemini"
         }
       ],
       "total_mentions": 30,
       "sentiment_score": 0.507,
       "daily": {
         "2026-06-07": {
-          "mentions": 1,
+          "mentions": 2,
           "bullish": 0,
           "bearish": 0,
-          "neutral": 1,
+          "neutral": 2,
           "sentiment_score": 0.5
         },
         "2026-06-06": {
@@ -3421,13 +3428,6 @@
           "bearish": 0,
           "neutral": 1,
           "sentiment_score": 0.5
-        },
-        "2026-05-23": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
         }
       }
     },
@@ -3446,6 +3446,18 @@
           "analysis_source": "whisper",
           "sentiment": "neutral",
           "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP332 股市收心操",
+          "channel": "投資癮",
+          "date": "2026-06-07",
+          "text": "相對之下 我認為公司只要在變壞的時候 有持續買回股票 配型能力 就會有相對吸引力 所以公司派的立場 雖然有降低買進的速度 但是他們要提高他們的股利 對於一些人來說 可能還是有吸引力 而且這一段時間 蘋果的前執行長庫克 也超到兩次低 第一次在2025年底左右 買進了5萬股 平均價格大概不到60元 總共買進了近290萬美金 第二次買進 是2026年的4月10日左右 那時候公開25000股 平均買進的價格是42.43元左右 大概是100萬美金 所以這兩次的買進 大概買進1億的台幣 但是這個進而對來說並沒有很大 但它真的是有花了錢去買進這個東西 所以它現在的持股 大概13萬股左右 所以對於Nike來說",
+          "matched_keyword": "蘋果",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
           "video_url": "",
           "extraction_mode": "keyword"
         },
@@ -3784,29 +3796,17 @@
           "sentiment_score": 1.0,
           "video_url": "",
           "extraction_mode": "keyword"
-        },
-        {
-          "video": "2026/05/15 (五) 輝達一週漲20%，創高還能追？台積電又喊三層蛋糕",
-          "channel": "財女珍妮",
-          "date": "2026-05-15",
-          "text": "能去去做一些 經濟上面的施壓 比如說更大規模 更精密的一些軍事演習 或者是更針對性的製裁 可是今天我們台灣最重要的 對於世界的貢獻是台積電 比如說台積電占了 全球90%最先進的晶片 我們最大的客戶就是蘋果跟輝達 合計就占了台積電的營收 將近40% 那如果你今天你把所有跟台積電 相關的公司全部加進來 AMD 英特爾 博通 高通 微軟 亞馬遜 Mata Google 這些市值超過30兆美元 所以為什麼川普他在會談之後 他們在聲明裡面 你可以看到兩邊 之間其實他們的表態是有不一樣的 有一樣的會後聲明 但是也有各自表述的議題 就代表了現在兩邊之間 在這個商業 或者是在科技的競爭上面 其實還有諸多的考量的",
-          "matched_keyword": "蘋果",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
         }
       ],
       "total_mentions": 30,
-      "sentiment_score": 0.547,
+      "sentiment_score": 0.563,
       "daily": {
         "2026-06-07": {
-          "mentions": 1,
-          "bullish": 0,
+          "mentions": 2,
+          "bullish": 1,
           "bearish": 0,
           "neutral": 1,
-          "sentiment_score": 0.5
+          "sentiment_score": 0.75
         },
         "2026-06-06": {
           "mentions": 1,
@@ -3921,11 +3921,11 @@
           "sentiment_score": 0.5
         },
         "2026-05-15": {
-          "mentions": 2,
+          "mentions": 1,
           "bullish": 1,
           "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.75
+          "neutral": 0,
+          "sentiment_score": 1.0
         }
       }
     },
@@ -3935,6 +3935,18 @@
       "market": "US",
       "sector": "AI晶片",
       "contexts": [
+        {
+          "video": "EP332 股市收心操",
+          "channel": "投資癮",
+          "date": "2026-06-07",
+          "text": "000多點 每股市大指數都一起下跌 那是達克下跌4.18% S&P500下跌2.60% 盜窮指數下跌1.35% 那跌幅最重是廢半指數 下跌10.26%下跌1300多點 所以廢半指數的30大成份股 包括NVIDIA、TSM、美光、iSmo、Intel 下跌的幅度都非常非常深 所以整體來說 自己的狀況感受是蠻明顯的 但是真的沒有什麼太多的恐慌感 而且期待的感覺還是大於傷害的感覺 也重要一定程度的心理準備 跟交易上的準備 其中在上個月初左右的時候 大家在吹捧CPU的時候 在節目討論過 稍微去撿滿一些Intel的部分 那這次跌過100元了 所以這一來一回的震盪 已經省了大概25%左右的資金了 當然這邊不是特別要去",
+          "matched_keyword": "NVIDIA",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
         {
           "video": "EP668 | 🦞",
           "channel": "股癌",
@@ -4284,23 +4296,18 @@
           "sentiment_score": 0.5,
           "video_url": "",
           "extraction_mode": "gemini"
-        },
-        {
-          "video": "EP1104｜黃仁勳來台、美伊真和談，台股瘋創高！動能、低接都可以等到創新高，主動、被動ETF各有優點，誰是AI相對落後股？ft.題材獵人 林漢偉",
-          "channel": "兆華與股惑仔",
-          "date": "2026-05-25",
-          "text": "e 甚至AMD 他們自己有沒有漲 只要他們的財報好 他們帶來了好消息 台股就叫做一棒接一棒 但我自己也沒有想到 六日自然還有美衣正式和談 這次應該是真的 這個東西加總進來 再加上現在誰呢 誰在臺灣呢 黃仁勳也在臺灣了 蘇姿峰也在臺灣了 蘇姿峰據說不會參加 這個電腦展可能就要回去了 那黃仁勳可能就會一路 待到computex 這個中間當地 他回去哪些地方 我想已經一起旋風了 又在饒河夜市 一堆人在PO看到他 還偷吃民眾的烤玉米 等等很可愛的一些行為 但不管他可不可愛 台股是非常的可愛 台股非常忠誠的顯示了 力空之下我們有韌性 是抗諜的又提醒大家 我觀察的依據 就是我們強韌的基本面 以及接下來信號回答財",
-          "matched_keyword": "黃仁勳",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
         }
       ],
       "total_mentions": 30,
       "sentiment_score": 0.625,
       "daily": {
+        "2026-06-07": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
         "2026-06-06": {
           "mentions": 1,
           "bullish": 0,
@@ -4372,13 +4379,6 @@
           "sentiment_score": 0.733
         },
         "2026-05-26": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-05-25": {
           "mentions": 1,
           "bullish": 0,
           "bearish": 0,
@@ -5870,6 +5870,18 @@
       "sector": "記憶體",
       "contexts": [
         {
+          "video": "EP332 股市收心操",
+          "channel": "投資癮",
+          "date": "2026-06-07",
+          "text": "數都一起下跌 那是達克下跌4.18% S&P500下跌2.60% 盜窮指數下跌1.35% 那跌幅最重是廢半指數 下跌10.26%下跌1300多點 所以廢半指數的30大成份股 包括NVIDIA、TSM、美光、iSmo、Intel 下跌的幅度都非常非常深 所以整體來說 自己的狀況感受是蠻明顯的 但是真的沒有什麼太多的恐慌感 而且期待的感覺還是大於傷害的感覺 也重要一定程度的心理準備 跟交易上的準備 其中在上個月初左右的時候 大家在吹捧CPU的時候 在節目討論過 稍微去撿滿一些Intel的部分 那這次跌過100元了 所以這一來一回的震盪 已經省了大概25%左右的資金了 當然這邊不是特別要去看壞這件事情",
+          "matched_keyword": "美光",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
           "video": "EP1113｜太貴了，輝達也在調整記憶體用量？如何評估對AI趨勢的發展？震盪開始、籌好資金，Q3看CPO再起、機器人應用！ft.操盤手 黃豐凱",
           "channel": "兆華與股惑仔",
           "date": "2026-06-05",
@@ -6219,23 +6231,18 @@
           "sentiment_score": 0.5,
           "video_url": "",
           "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP1092｜美伊和平利多用掉了，下一個刺激市場的會是降息？投信一定要買，低位階、有權值的被動元件、老AI、電源來了！ft.股科大夫 容逸燊",
-          "channel": "兆華與股惑仔",
-          "date": "2026-05-07",
-          "text": "AI 比較相關的記憶體 或者是 你等到記憶體整體族群 資金稍微退散 稍微有些修正的話 再去做一個縫低的承接 我認為記憶體短期 今天看來 目前的這個低檔 也就是上個月的低點區 應該不會再被跌破 因為像美光、Sendisk 海利斯這些人都在創高 當然會對於全球記憶體 有這種連帶作用 可是記憶體已經反彈上來 到這個位置 我覺得再去追價 要注意風險 因為畢竟上面 還是有某種套牢的壓力 再加上現在台股 真的族群非常之多 不像去年第四季 大概就只有兩個主要的族群 一個PCB 一個是記憶體 就沒有其他的主角了 現在是 大家都是 會吸引到市場上的目光 所以自然資金分散狀的下 它的一個延續性 會比較沒有那麼的強勢",
-          "matched_keyword": "美光",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
         }
       ],
       "total_mentions": 30,
       "sentiment_score": 0.608,
       "daily": {
+        "2026-06-07": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
         "2026-06-05": {
           "mentions": 1,
           "bullish": 0,
@@ -6349,13 +6356,6 @@
           "sentiment_score": 0.8
         },
         "2026-05-09": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-05-07": {
           "mentions": 1,
           "bullish": 0,
           "bearish": 0,
@@ -10573,6 +10573,18 @@
       "sector": "組裝代工",
       "contexts": [
         {
+          "video": "EP332 股市收心操",
+          "channel": "投資癮",
+          "date": "2026-06-07",
+          "text": "停 這點就真的非常非常的奇怪 而且我覺得資金量的體 明明就這麼大了 但這種收漲停比較像是 沒有人賣 而不是 很大力的去賣 而這種東西 一定是有盯盤的人才會發現的東西 沒有盯盤的人或市場外的人 就可能是鴻海大漲 市場大漲 那些AI老族群大漲之後 就開始吹捧 開始去講 但這種東西也不是個標準答案 只是觀察一些有趣的東西或細節 在節目上面或在自己身上 會做一些紀錄 做一些觀察 總之有發現資金在做轉移 而拉台的資金 比較像是沒人賣 而不是大力的去賣 你要有錢去轉移的時候 你也要錢去賣出 我們在有限資金去做轉換的話 應該就是要做這種節奏 我們不肯永遠有資金跑進來 永遠有場外資金一不停的投入 在有限資金操作 ",
+          "matched_keyword": "鴻海",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
           "video": "EP1113｜太貴了，輝達也在調整記憶體用量？如何評估對AI趨勢的發展？震盪開始、籌好資金，Q3看CPO再起、機器人應用！ft.操盤手 黃豐凱",
           "channel": "兆華與股惑仔",
           "date": "2026-06-05",
@@ -10919,23 +10931,18 @@
           "sentiment_score": 1.0,
           "video_url": "",
           "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP657 | 🐫",
-          "channel": "股癌",
-          "date": "2026-04-29",
-          "text": "上有人已經在幫這個東西 去做定價 去假設說他可以賣個什麼 幾千萬台然後一顆 120 美元 所以貢獻可能 EPS 贏收多少 但總之就是先看看就好 然後再來就是因為他的夥伴是利訊 這個利訊嚴格上來說 他跟鴻海比起來那個等級還是有差 所以那個品質要直接去挑戰到 iPhone 我覺得是比較困難 應該可以把它視為是 Next Pixel Phone 或是說 Next Samsung 還有一點點的可能性 這是我的一個小小心得跟大家分享一下 那再來就是在聊一下 Meta 去簽了一個 Multi-Billion Dollar Agreement With AWS for Large Scale Graviton",
-          "matched_keyword": "鴻海",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
         }
       ],
       "total_mentions": 30,
       "sentiment_score": 0.578,
       "daily": {
+        "2026-06-07": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
         "2026-06-05": {
           "mentions": 1,
           "bullish": 0,
@@ -11096,13 +11103,6 @@
           "bearish": 0,
           "neutral": 0,
           "sentiment_score": 1.0
-        },
-        "2026-04-29": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
         }
       }
     },
@@ -57124,6 +57124,57 @@
       }
     },
     {
+      "code": "2511",
+      "name": "太子",
+      "market": "TW",
+      "sector": "建材營造業",
+      "contexts": [
+        {
+          "video": "EP654 | 🌵",
+          "channel": "股癌",
+          "date": "2026-04-18",
+          "text": "本人是中年南漂二寶八 家中的長公主 護理系畢業估計 我們繼續挑戰 全台最高學府 台大醫院的兒科病房在裡面 遇到很多書本上 都沒有交過的罕見疾病 經歷過年初一到初三 值班 and uncle 不知不覺的撐了半年了 那我跟太太都感到欣慰 助長公主 aka 粉紅熊姐姐 4月5號生日快樂 今年就申請到 台大太子員工宿舍 那助長女婿今年時期順利 明年初順利申請到 高雄的醫院跟理想的科系 那祝你們感情順順利利常常久久 助小公主可可 年底成功申請到 馬來西亞的交換學生 明年申請上台大研究所 助太太 angel 3月1號生日快樂 永遠18歲 那接著回到市場的話題 去年靠著大盤槓桿流 以及市場賞飯 吃成功賺了8位數",
+          "matched_keyword": "太子",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP332 股市收心操",
+          "channel": "投資癮",
+          "date": "2026-06-07",
+          "text": "所以分享邏輯跟概念會有點不太一樣 所以碰到這種訊息 應該還算是可以理解的 那上禮拜才聊到這件事情 那這禮拜接下來 應該會接受市場的一些考驗的 這禮拜五已經沒有觀察類股了 那這禮拜的週末就夜盤的時候 台子期下跌了3000多點 每股市大指數都一起下跌 那是達克下跌4.18% S&P500下跌2.60% 盜窮指數下跌1.35% 那跌幅最重是廢半指數 下跌10.26%下跌1300多點 所以廢半指數的30大成份股 包括NVIDIA、TSM、美光、iSmo、Intel 下跌的幅度都非常非常深 所以整體來說 自己的狀況感受是蠻明顯的 但是真的沒有什麼太多的恐慌感 而且期待的感覺還是大於傷害的感覺 也重要一定程",
+          "matched_keyword": "台子",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.0,
+          "video_url": "",
+          "extraction_mode": "keyword",
+          "whisper_corrected": true
+        }
+      ],
+      "total_mentions": 2,
+      "sentiment_score": 0.25,
+      "daily": {
+        "2026-04-18": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-06-07": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 1,
+          "neutral": 0,
+          "sentiment_score": 0.0
+        }
+      }
+    },
+    {
       "code": "3040",
       "name": "遠見",
       "market": "TW",
@@ -59366,37 +59417,6 @@
       "sentiment_score": 0.5,
       "daily": {
         "2026-04-22": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        }
-      }
-    },
-    {
-      "code": "2511",
-      "name": "太子",
-      "market": "TW",
-      "sector": "建材營造業",
-      "contexts": [
-        {
-          "video": "EP654 | 🌵",
-          "channel": "股癌",
-          "date": "2026-04-18",
-          "text": "本人是中年南漂二寶八 家中的長公主 護理系畢業估計 我們繼續挑戰 全台最高學府 台大醫院的兒科病房在裡面 遇到很多書本上 都沒有交過的罕見疾病 經歷過年初一到初三 值班 and uncle 不知不覺的撐了半年了 那我跟太太都感到欣慰 助長公主 aka 粉紅熊姐姐 4月5號生日快樂 今年就申請到 台大太子員工宿舍 那助長女婿今年時期順利 明年初順利申請到 高雄的醫院跟理想的科系 那祝你們感情順順利利常常久久 助小公主可可 年底成功申請到 馬來西亞的交換學生 明年申請上台大研究所 助太太 angel 3月1號生日快樂 永遠18歲 那接著回到市場的話題 去年靠著大盤槓桿流 以及市場賞飯 吃成功賺了8位數",
-          "matched_keyword": "太子",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        }
-      ],
-      "total_mentions": 1,
-      "sentiment_score": 0.5,
-      "daily": {
-        "2026-04-18": {
           "mentions": 1,
           "bullish": 0,
           "bearish": 0,
@@ -66954,6 +66974,22 @@
       ]
     },
     {
+      "sector": "建材營造業",
+      "market": "TW",
+      "total_mentions": 23,
+      "stock_codes": [
+        "1453",
+        "2516",
+        "2504",
+        "5521",
+        "2524",
+        "2511",
+        "2501",
+        "9906",
+        "1438"
+      ]
+    },
+    {
       "sector": "食品",
       "market": "TW",
       "total_mentions": 22,
@@ -66985,22 +67021,6 @@
         "2753",
         "5706",
         "5701"
-      ]
-    },
-    {
-      "sector": "建材營造業",
-      "market": "TW",
-      "total_mentions": 22,
-      "stock_codes": [
-        "1453",
-        "2516",
-        "2504",
-        "5521",
-        "2524",
-        "2511",
-        "2501",
-        "9906",
-        "1438"
       ]
     },
     {
@@ -73320,6 +73340,23 @@
         "AAPL",
         "GOOGL",
         "6207"
+      ],
+      "analysis_source": "whisper",
+      "thumbnail_url": null
+    },
+    {
+      "video_id": "c0fccd99-6b6d-46e7-b94b-90155018eca4",
+      "title": "EP332 股市收心操",
+      "channel": "投資癮",
+      "date": "2026-06-07",
+      "stocks_found": [
+        "INTC",
+        "2511",
+        "2317",
+        "AAPL",
+        "NVDA",
+        "MU",
+        "2330"
       ],
       "analysis_source": "whisper",
       "thumbnail_url": null
