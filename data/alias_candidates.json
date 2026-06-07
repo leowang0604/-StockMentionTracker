@@ -558,5 +558,220 @@
       }
     ],
     "updated_at": "2026-06-07T19:02:47"
+  },
+  "風策鼓|8358": {
+    "wrong_keyword": "風策鼓",
+    "correct_code": "8358",
+    "correct_name": "金居",
+    "confidence": "medium",
+    "max_score": 50,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "66a74bc5-4f8a-4735-b5a0-77972ee3ccf0"
+    ],
+    "evidence": [
+      {
+        "video_id": "66a74bc5-4f8a-4735-b5a0-77972ee3ccf0",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-02",
+        "title": "EP1110｜台股的轉股？低本益比AI股回溫，台積電也快來，記憶體、CPO、被動、機器人震盪，怎麼抱？6月中FED會議要小心？ft.AI達人 蔡明翰",
+        "source": "full_video_validator",
+        "score": 50,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context"
+        ],
+        "context": " 今天也就順勢也都大噴 但這個鼓票 說實話平常的成交量 比較小 鼓本比較小 所以今天的小型鼓 長在支付軟體鼓 但是你可以看到 被動元件 紅了好長好長一段時間的 今天就整個大洗雙 包括說像之前 比較紅的風策鼓啦 CPO啦 今天都是一個 比較震盪幅度 劇烈的狀態 好 那今天的來賓 也來講一些這件事情了 指數看來還不錯 幼創收盤高 可是體感溫度降低了 接棒 由大型鼓接棒 看來很健康 可是大家還是希望 我手上的中小型 熱門鼓可以長 先來歡迎他 今天來的是我們的 AI達人蔡銘翰 趙華豪 聽到沒有 大家好 銘翰昨天沒來 但昨天我的 Pocket有聊到銘翰 我有跟銘翰說 然後我就說 要是昨天這種聽眾的問題 "
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2061",
+        "name": "風青",
+        "score": 0.442,
+        "phonetic_similarity": 0.5,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "8255",
+        "name": "朋程",
+        "score": 0.361,
+        "phonetic_similarity": 0.556,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "1907",
+        "name": "永豐餘",
+        "score": 0.325,
+        "phonetic_similarity": 0.5,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-06-07T20:02:17"
+  },
+  "怡鼎|5289": {
+    "wrong_keyword": "怡鼎",
+    "correct_code": "5289",
+    "correct_name": "宜鼎",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "dc015b5b-798a-4009-ae12-7ec086d274b2"
+    ],
+    "evidence": [
+      {
+        "video_id": "dc015b5b-798a-4009-ae12-7ec086d274b2",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-01",
+        "title": "EP1109｜仁勳開講、開獎！伺服器代工、AI PC、邊緣AI回來，GDP成長率上修9.64%，繼續正循環！怕賣飛又怕回檔，對策是什麼？ft.題材獵人 林漢偉",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context",
+          "weak_sector_match"
+        ],
+        "context": "都非常的昂貴 所以軟體股其實成績了一段時間 可是我大家回去看 這些軟體股的獲利 其實並沒有不好 完全就是評價受到了質疑 工業電腦則是受困於 去年一整年的機體大漲 其實工業電腦 有人是可以消化的 例如像怡鼎這種專作 公控相關的 他就有消化 但是那是因為 怡鼎本來就是專作 記憶體相關的公控產品 那其他的 不是的就很辛苦 可是我也聽到 這個工業電腦廠商 說客戶也能理解 記憶體就是這樣居高不下 總不能都不出貨了 所以在第二季 這類型的 客戶願意接受轉嫁的狀況 就會提升 我這邊趕快來接一下 因為剛剛講到這個邊緣AI 輪迴邊緣AI的話 我覺得這兩個族群 是值得留意的 但他們的缺點就是 交易量比較小 一旦籌"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "5289",
+        "name": "宜鼎",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "3592",
+        "name": "瑞鼎",
+        "score": 0.639,
+        "phonetic_similarity": 0.714,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "5209",
+        "name": "新鼎",
+        "score": 0.639,
+        "phonetic_similarity": 0.714,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-06-07T20:22:22"
+  },
+  "服貿科|6505": {
+    "wrong_keyword": "服貿科",
+    "correct_code": "6505",
+    "correct_name": "台塑化",
+    "confidence": "medium",
+    "max_score": 50,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "dc015b5b-798a-4009-ae12-7ec086d274b2"
+    ],
+    "evidence": [
+      {
+        "video_id": "dc015b5b-798a-4009-ae12-7ec086d274b2",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-01",
+        "title": "EP1109｜仁勳開講、開獎！伺服器代工、AI PC、邊緣AI回來，GDP成長率上修9.64%，繼續正循環！怕賣飛又怕回檔，對策是什麼？ft.題材獵人 林漢偉",
+        "source": "full_video_validator",
+        "score": 50,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "phonetic_conflict",
+          "stock_context"
+        ],
+        "context": "多負荷式題材 對 他又賣南店 然後又賣南亞科 他的頁外肯定滿滿滿 而且賣了大概三個季度 還沒賣完 還要繼續賣 所以你看到他今天的南店 甚至南亞科漲停版 又創新新高 所以整個台塑集團的股票 你看今天什麼服貿科也上來了 然後相關的台塑集團 我覺得都可以觀察一下 除了這個台塑次保以外 其他的所謂旗下的南亞科 或南店這些指標線股票 甚至封測股票 我覺得都是在6月份 你可以留意到 他們有強勢輪動往上的機會 那另外就是華興立華集團 是 那華興立華集團 當然有很多他們的布局非常好 第一個你看到 他有所謂的華興科 對 華興科也是這個重要的 這個臺灣被動員間的二哥 也是華興立華集團股票 然後華邦店也很爭氣 今天"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "8131",
+        "name": "福懋科",
+        "score": 0.767,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "2413",
+        "name": "環科",
+        "score": 0.488,
+        "phonetic_similarity": 0.571,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "3209",
+        "name": "全科",
+        "score": 0.488,
+        "phonetic_similarity": 0.571,
+        "text_similarity": 0.333
+      }
+    ],
+    "updated_at": "2026-06-07T20:22:22"
+  },
+  "新商店|3711": {
+    "wrong_keyword": "新商店",
+    "correct_code": "3711",
+    "correct_name": "日月光投控",
+    "confidence": "medium",
+    "max_score": 65,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "dc015b5b-798a-4009-ae12-7ec086d274b2"
+    ],
+    "evidence": [
+      {
+        "video_id": "dc015b5b-798a-4009-ae12-7ec086d274b2",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-01",
+        "title": "EP1109｜仁勳開講、開獎！伺服器代工、AI PC、邊緣AI回來，GDP成長率上修9.64%，繼續正循環！怕賣飛又怕回檔，對策是什麼？ft.題材獵人 林漢偉",
+        "source": "full_video_validator",
+        "score": 65,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "stock_context"
+        ],
+        "context": "們的布局非常好 第一個你看到 他有所謂的華興科 對 華興科也是這個重要的 這個臺灣被動員間的二哥 也是華興立華集團股票 然後華邦店也很爭氣 今天股價也算到率實的新高 然後他旗下還有新唐 還有彩金 還有新商店 所以我覺得這就代表說 在6月份 只要這些主流題材還在的話 相關的華興集團的各股 你也可以做一個多方一併的看待 那國際集團當然持續維持一個 強勢的表態 所以你可以從這樣的一個情況裡面 甚至聯發科集團 聯店集團 我覺得在6月份 其實大家可以從這個集團股當中 尋找到一些不錯的標的 那但儘量還是要選擇強勢的產業 也就剛剛提到 被動員間 你就從國際集團 華興集團裡面 去尋找當中標的 那記憶體當中 你"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2427",
+        "name": "三商電",
+        "score": 0.658,
+        "phonetic_similarity": 0.833,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "6173",
+        "name": "信昌電",
+        "score": 0.596,
+        "phonetic_similarity": 0.917,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "4931",
+        "name": "新盛力",
+        "score": 0.55,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.333
+      }
+    ],
+    "updated_at": "2026-06-07T20:22:22"
   }
 }
