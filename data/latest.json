@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-08T20:06:27",
+  "updated_at": "2026-06-08T20:21:27",
   "stocks_ranking": [
     {
       "code": "INTC",
@@ -51462,6 +51462,68 @@
       }
     },
     {
+      "code": "ON Semiconductor",
+      "name": "ON Semiconductor Corporation",
+      "market": "US",
+      "sector": "半導體",
+      "contexts": [
+        {
+          "video": "EP668 | 🦞",
+          "channel": "股癌",
+          "date": "2026-06-06",
+          "text": "來 就一定是沒有辦法 因為時間是還沒有到的 我覺得這是RTX Spark 目前純用Demo的內容來看 我覺得要成功的機率會是高的 但他還缺林門一角 林門一角是什麼 因為我說的成功機率高 是based on 我現在的一個生活的做法是怎麼樣 我用了很多的perplexity computer 我已經開始有用很多的AI的內容 所以AI的內容 因為我現在用的AI 並不是可能 一般消費者會去接觸到的 我一個月幾百塊之中 我是一個月是付六千固定的月費 然後外加 我還會再去額外的買token 因為這東西太好用了 它已經是在我的食物成品 就要說我現在要去買一些紅酒 那我要知道說 它在拍賣的價格 或者說它在各個網站",
+          "matched_keyword": "ON",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP667 | 🌍",
+          "channel": "股癌",
+          "date": "2026-06-03",
+          "text": "也可以點食成金 自己的股票呢 那感覺GTC後 資金又回流 Invidia台積電供應鏈 孟公覺得市場 是否會補掌Invidia TSMC 那另外下一波的漲價體財 是否有可能會延伸到 公率半導體IDM 如ON跟PIMIC 如ADI 我覺得這位兄弟 他的敏感度非常好 就是我覺得公率元件 或者是公率半導體 相關的一些公司 其實我們都注意到 他的基本面 有滿顯著的在改善中 所以他確實有可能是 下一波題材的一個汇聚點 可是他的光芒 沒有像 比如說CPU 或者是被動元件 那樣子的全面 因為他市場上 非常喜歡那種 類似戴維斯雙級的東西 反正我ASP可以拉上去 那再來呢 我的PU Ratio也拉上去 這個可能是大家",
+          "matched_keyword": "ON",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP231 | 台、美股重點一次說，Computex 展後各大公司說法，Marvell 800G光模組量產，AI工廠模組化後的台股供應鏈",
+          "channel": "韭菜畢業班",
+          "date": "2026-06-03",
+          "text": "% 70% 我覺得這在美股真的太容易發生了 好 那再來就是我們看聊一下 這個computest這個話題 首先computest這一次公布出來 我們先回應上一集有講過的 就是跟聯發科一起 共同開發了這個on架購的超級晶片 也就是之前上一集講的N1X 那其他實際上名字叫做RTXBOX 那這個東西推出來之後 其實簡單來說 它就是for Windows PC 那Windows PC其實裡面 涵蓋的廠牌有像是微軟 華碩 del 微星 HP 聯想 那甚至像Adobe 它其實也有在黃昇先有公布出來 就等於是 它可以重新架構 Photoshop 或Premiere的這一個架構 讓它的整體的效能是往上提升兩倍的 那",
+          "matched_keyword": "ON",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        }
+      ],
+      "total_mentions": 3,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-06-06": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-06-03": {
+          "mentions": 2,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 2,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
       "code": "CDNS",
       "name": "Cadence Design Systems",
       "market": "US",
@@ -57216,56 +57278,6 @@
           "sentiment_score": 0.5
         },
         "2026-06-06": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        }
-      }
-    },
-    {
-      "code": "ON Semiconductor",
-      "name": "ON Semiconductor Corporation",
-      "market": "US",
-      "sector": "半導體",
-      "contexts": [
-        {
-          "video": "EP668 | 🦞",
-          "channel": "股癌",
-          "date": "2026-06-06",
-          "text": "來 就一定是沒有辦法 因為時間是還沒有到的 我覺得這是RTX Spark 目前純用Demo的內容來看 我覺得要成功的機率會是高的 但他還缺林門一角 林門一角是什麼 因為我說的成功機率高 是based on 我現在的一個生活的做法是怎麼樣 我用了很多的perplexity computer 我已經開始有用很多的AI的內容 所以AI的內容 因為我現在用的AI 並不是可能 一般消費者會去接觸到的 我一個月幾百塊之中 我是一個月是付六千固定的月費 然後外加 我還會再去額外的買token 因為這東西太好用了 它已經是在我的食物成品 就要說我現在要去買一些紅酒 那我要知道說 它在拍賣的價格 或者說它在各個網站",
-          "matched_keyword": "ON",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP667 | 🌍",
-          "channel": "股癌",
-          "date": "2026-06-03",
-          "text": "也可以點食成金 自己的股票呢 那感覺GTC後 資金又回流 Invidia台積電供應鏈 孟公覺得市場 是否會補掌Invidia TSMC 那另外下一波的漲價體財 是否有可能會延伸到 公率半導體IDM 如ON跟PIMIC 如ADI 我覺得這位兄弟 他的敏感度非常好 就是我覺得公率元件 或者是公率半導體 相關的一些公司 其實我們都注意到 他的基本面 有滿顯著的在改善中 所以他確實有可能是 下一波題材的一個汇聚點 可是他的光芒 沒有像 比如說CPU 或者是被動元件 那樣子的全面 因為他市場上 非常喜歡那種 類似戴維斯雙級的東西 反正我ASP可以拉上去 那再來呢 我的PU Ratio也拉上去 這個可能是大家",
-          "matched_keyword": "ON",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        }
-      ],
-      "total_mentions": 2,
-      "sentiment_score": 0.5,
-      "daily": {
-        "2026-06-06": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-06-03": {
           "mentions": 1,
           "bullish": 0,
           "bearish": 0,
@@ -66722,7 +66734,7 @@
     {
       "sector": "半導體",
       "market": "US",
-      "total_mentions": 46,
+      "total_mentions": 47,
       "stock_codes": [
         "INTC",
         "TXN",
