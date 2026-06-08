@@ -143,10 +143,16 @@
     "wrong_keyword": "On Microsoft"
   },
   "Vertip|VRT": {
-    "confidence": "high",
+    "wrong_keyword": "Vertip",
     "correct_code": "VRT",
     "correct_name": "Vertiv",
+    "confidence": "high",
+    "max_score": 90,
+    "observations": 4,
     "distinct_videos": 1,
+    "video_ids": [
+      "f4a134ad-943c-48c7-8cf3-08ee5bfc7e4b"
+    ],
     "evidence": [
       {
         "channel": "財女珍妮",
@@ -179,16 +185,26 @@
         "source": "full_video_validator",
         "title": "2026/06/02(二) 一天漲6％，輝達還能繼續漲嗎？#NVDA",
         "video_id": "f4a134ad-943c-48c7-8cf3-08ee5bfc7e4b"
+      },
+      {
+        "video_id": "f4a134ad-943c-48c7-8cf3-08ee5bfc7e4b",
+        "channel": "財女珍妮",
+        "date": "2026-06-02",
+        "title": "2026/06/02(二) 一天漲6％，輝達還能繼續漲嗎？#NVDA",
+        "source": "full_video_validator",
+        "score": 90,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "stock_context"
+        ],
+        "context": "還有像是Coherent 他也漲了 然後另外最後的話 可能我們 近期沒有關注到的 但是我昨天在影片裡面 其實也有提到 就是跟電力 然後跟散熱相關的 比如說像Vertip 其實在之前也非常的強勁 但是近期的股價 也是有一點休息的味道"
       }
     ],
-    "max_score": 90,
-    "observations": 3,
     "phonetic_candidates": [],
-    "updated_at": "2026-06-07T20:56:05",
-    "video_ids": [
-      "f4a134ad-943c-48c7-8cf3-08ee5bfc7e4b"
-    ],
-    "wrong_keyword": "Vertip"
+    "updated_at": "2026-06-08T22:25:49"
   },
   "Zehler|ZS": {
     "confidence": "medium",
@@ -848,5 +864,65 @@
       }
     ],
     "updated_at": "2026-06-08T21:39:42"
+  },
+  "Mata|META": {
+    "wrong_keyword": "Mata",
+    "correct_code": "META",
+    "correct_name": "Meta",
+    "confidence": "high",
+    "max_score": 75,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "9b8c39fb-8346-4158-80d2-861353a72f07"
+    ],
+    "evidence": [
+      {
+        "video_id": "9b8c39fb-8346-4158-80d2-861353a72f07",
+        "channel": "財女珍妮",
+        "date": "2026-06-08",
+        "title": "2026/06/08 (一) 費半崩10%，台指夜盤3000點，泡沫又要破了？",
+        "source": "full_video_validator",
+        "score": 75,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1"
+        ],
+        "context": "Mata Meta在上個禮拜五的時候 跌的是5.5% 然後有一個新聞傳出來 就是英國時報 英國金融時報呢 他們有指出說 Meta又要再考慮進行大規模的 股票增發 來籌集AI資本支出的資金"
+      }
+    ],
+    "phonetic_candidates": [],
+    "updated_at": "2026-06-08T21:49:47"
+  },
+  "null|TSLA": {
+    "wrong_keyword": "null",
+    "correct_code": "TSLA",
+    "correct_name": "Tesla",
+    "confidence": "low",
+    "max_score": 35,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "867d22a7-6a0c-4448-9db5-8140a04d7acb"
+    ],
+    "evidence": [
+      {
+        "video_id": "867d22a7-6a0c-4448-9db5-8140a04d7acb",
+        "channel": "財女珍妮",
+        "date": "2026-06-04",
+        "title": "2026/06/03 (三) SpaceX正式遞表，輝達、博通又要跌了？ #nvda #avgo #nvts",
+        "source": "full_video_validator",
+        "score": 35,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match"
+        ],
+        "context": "這兩天呢還有人在群組裡面還有聽眾讀者在群組裡面問說欸如果今天SPACEX要上市的話會不會對特斯拉帶一個外藝效應外藝效應是好的就是可以同步的拉抬他嘛但是我們之前呢其實也有提過了SPACEX上市其實對於特斯拉來說不一定是好事"
+      }
+    ],
+    "phonetic_candidates": [],
+    "updated_at": "2026-06-08T21:55:52"
   }
 }
