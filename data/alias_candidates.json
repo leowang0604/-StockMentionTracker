@@ -684,5 +684,169 @@
       }
     ],
     "updated_at": "2026-06-08T20:21:27"
+  },
+  "祕望時|2059": {
+    "wrong_keyword": "祕望時",
+    "correct_code": "2059",
+    "correct_name": "川湖",
+    "confidence": "medium",
+    "max_score": 50,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "5f0b292a-68ac-4e45-98ed-468f328f1070"
+    ],
+    "evidence": [
+      {
+        "video_id": "5f0b292a-68ac-4e45-98ed-468f328f1070",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-08",
+        "title": "EP1114｜每次都是周末出事，今天能買東西嗎，明天還跌怎麼辦？高槓桿先賣，低持股就買，都不吃虧？AI發展沒變，但升息該怕？ft.題材獵人 林漢偉",
+        "source": "full_video_validator",
+        "score": 50,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "phonetic_conflict",
+          "stock_context"
+        ],
+        "context": "子 對 所以大家都知道 隨時會有這種大疊發紙箱的時候 可是在發紙箱的時候 為什麼會覺得這次只是回檔 而不是崩盤 或是正式的多頭結束 就是要看AI的底氣 所以川胡今天的漲停板 是很有意義的 還有再來就是祕望時的漲停板 讓我們知道被動元件 絕對這個族群就是沒死掉 我手上的被動元件 有很多也是關緊幣 可是他們今天也是盤中就打開 關緊幣還能夠就是盤中就打開 就代表確實有高手 想要把這個族群扶起來 好 當然今天也漲了很多 根本就不認識的公司 就那二十幾塊 十幾塊 那個可能就是個別的主力在點火 那個要內行人才知道 我們就不列入討論 那今天還有什麼漲停 新勝利 所以電力這件事情 雖然在禮拜四五覺得有點 禮拜"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "8043",
+        "name": "蜜望實",
+        "score": 0.767,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "4432",
+        "name": "銘旺實",
+        "score": 0.532,
+        "phonetic_similarity": 0.818,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "4771",
+        "name": "望隼",
+        "score": 0.478,
+        "phonetic_similarity": 0.556,
+        "text_similarity": 0.333
+      }
+    ],
+    "updated_at": "2026-06-08T20:40:32"
+  },
+  "統一潮|2912": {
+    "wrong_keyword": "統一潮",
+    "correct_code": "2912",
+    "correct_name": "統一超",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "fcf0d87d-10e1-4ba6-88e6-c5dc837fe5cc"
+    ],
+    "evidence": [
+      {
+        "video_id": "fcf0d87d-10e1-4ba6-88e6-c5dc837fe5cc",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-04",
+        "title": "EP1112｜無聊就會跌？剛好給停利理由！就業熱就怕不降息，博通財報和台積電股東會平淡，非電、金融撐盤，回檔機會來了？ft.選股教練 陳唯泰",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "我要跟各位分享一下 為什麼選富邦美 其實我內心呢 一直長起來 是另外一檔股票 是統一潮 好 因為統一潮 他配9塊 不管他賺多賺少 他每年是配9塊 這是我對我來講 是一個非常安穩的策略"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2912",
+        "name": "統一超",
+        "score": 0.883,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "9907",
+        "name": "統一實",
+        "score": 0.688,
+        "phonetic_similarity": 0.7,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "2855",
+        "name": "統一證",
+        "score": 0.647,
+        "phonetic_similarity": 0.636,
+        "text_similarity": 0.667
+      }
+    ],
+    "updated_at": "2026-06-08T21:10:24"
+  },
+  "聯軍|2303": {
+    "wrong_keyword": "聯軍",
+    "correct_code": "2303",
+    "correct_name": "聯電",
+    "confidence": "high",
+    "max_score": 75,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "66a74bc5-4f8a-4735-b5a0-77972ee3ccf0"
+    ],
+    "evidence": [
+      {
+        "video_id": "66a74bc5-4f8a-4735-b5a0-77972ee3ccf0",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-02",
+        "title": "EP1110｜台股的轉股？低本益比AI股回溫，台積電也快來，記憶體、CPO、被動、機器人震盪，怎麼抱？6月中FED會議要小心？ft.AI達人 蔡明翰",
+        "source": "full_video_validator",
+        "score": 75,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_conflict",
+          "stock_context"
+        ],
+        "context": "可是後來CPO算是我 比較賣非的族群 可是我手上還有一間公司 大家如果有印象的話 就是之前被罵爛的聯軍 就是當你手上的光盛 你手上的PROVAY 根本就已經飛天的時候 聯軍還在那邊廢"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3450",
+        "name": "聯鈞",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "1229",
+        "name": "聯華",
+        "score": 0.639,
+        "phonetic_similarity": 0.714,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "1806",
+        "name": "冠軍",
+        "score": 0.639,
+        "phonetic_similarity": 0.714,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-06-08T21:39:42"
   }
 }
