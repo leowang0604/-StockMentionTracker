@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-07T21:18:37",
+  "updated_at": "2026-06-08T20:06:27",
   "stocks_ranking": [
     {
       "code": "INTC",
@@ -24895,7 +24895,7 @@
       "code": "CCL",
       "name": "Carnival",
       "market": "US",
-      "sector": "消費電子",
+      "sector": "消費",
       "contexts": [
         {
           "video": "EP213 | 台、美股重點一次說，台股反彈怎麼看？美股極度恐慌後的觀察重點，南俊國際與滑軌需求，設備股後勢",
@@ -38592,7 +38592,7 @@
       "code": "SYY",
       "name": "Sysco",
       "market": "US",
-      "sector": "民生消費",
+      "sector": "食品",
       "contexts": [
         {
           "video": "2026/03/26 (四）存儲出大事， MU, SNDK還能漲？",
@@ -45128,7 +45128,7 @@
       "code": "UBER",
       "name": "Uber",
       "market": "US",
-      "sector": "工業",
+      "sector": "交通",
       "contexts": [
         {
           "video": "EP654 | 🌵",
@@ -51691,7 +51691,7 @@
       "code": "DASH",
       "name": "DoorDash",
       "market": "US",
-      "sector": "零售電商",
+      "sector": "外送",
       "contexts": [
         {
           "video": "EP217 | 台、美股重點一次說，Google TPU 各代產品結構與台廠供應鏈， 台積電封裝技術進展與風險，CPO量產前注意",
@@ -51871,7 +51871,7 @@
       "code": "CHTR",
       "name": "Charter Communications",
       "market": "US",
-      "sector": "AI網路",
+      "sector": "通訊媒體",
       "contexts": [
         {
           "video": "EP649 | 💌",
@@ -54383,7 +54383,7 @@
       "code": "T",
       "name": "AT&T",
       "market": "US",
-      "sector": "AI網路",
+      "sector": "電信",
       "contexts": [
         {
           "video": "2026/04/27(一) 費半創紀18連漲，還能進場嗎？Intel暴漲20%，財報透露什麼？",
@@ -55284,7 +55284,7 @@
       "code": "DECK",
       "name": "Deckers Brands",
       "market": "US",
-      "sector": "消費電子",
+      "sector": "服飾",
       "contexts": [
         {
           "video": "EP656 | 🍇",
@@ -57175,6 +57175,106 @@
       }
     },
     {
+      "code": "NOW",
+      "name": "ServiceNow",
+      "market": "US",
+      "sector": "企業軟體",
+      "contexts": [
+        {
+          "video": "EP666 | 🍐",
+          "channel": "股癌",
+          "date": "2026-05-30",
+          "text": "esforce 他搞了一個 真正上網 record high的一個buyback 他就狂買股票 你們覺得我公司很爛 是不是 媽老是狂買 我就用行動證明給你看 我狂賣我自己的股票 再來我們也注意到 像是ServiceNow的老闆 也是跟大家講說 就是外面的那些AI論述 就是全部都是講錯的 其實他的公司 是在一個非常大的順風上面 然後也是靠成績 慢慢的去證明 最近像是什麼 Octa或是Snowflake 都是開出極好的成績 那就告訴大家說 其實AI是幫這些軟體 去做加分 他不是一個扣分項 那當然一定會有人去舉出說 有哪一些軟體 他可能致敬是摔到爛掉的 可是那個道理 我們講過 他跟硬體一樣 或者說晶圓代購一樣 你也不是",
+          "matched_keyword": "ServiceNow",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP668 | 🦞",
+          "channel": "股癌",
+          "date": "2026-06-06",
+          "text": "頭的東西 那可能我們過去看了很多的 VR Gargle 然後跟AR的一些demo 我們覺得說 嗯這東西可能還太遠 可是就是這次的電腦展 綜合大家前面所講的東西 他給我的感受就是說 Future is now 就是所有東西之下 都可以立刻實現的 而不是說停留在紙上尬吹的環節 那總之就是收入非常多 那最後Mikki來帶我們去看 SUS的施展 他們一樣在南港展覽館裡面 一樣有包一個小空間 那以前上去的時候 是裡面有什麼機械狗 那這次一樣沒有看到機械狗 那但是他們多了蠻多 除了去展示伺服器之外 那伺服器一樣 我覺得反正現在大家都差不多 那但是呢 他有去秀了一些軟體的應用 然後這些軟體的應用呢 可以快速的去識",
+          "matched_keyword": "NOW",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        }
+      ],
+      "total_mentions": 2,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-05-30": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-06-06": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
+      "code": "ON Semiconductor",
+      "name": "ON Semiconductor Corporation",
+      "market": "US",
+      "sector": "半導體",
+      "contexts": [
+        {
+          "video": "EP668 | 🦞",
+          "channel": "股癌",
+          "date": "2026-06-06",
+          "text": "來 就一定是沒有辦法 因為時間是還沒有到的 我覺得這是RTX Spark 目前純用Demo的內容來看 我覺得要成功的機率會是高的 但他還缺林門一角 林門一角是什麼 因為我說的成功機率高 是based on 我現在的一個生活的做法是怎麼樣 我用了很多的perplexity computer 我已經開始有用很多的AI的內容 所以AI的內容 因為我現在用的AI 並不是可能 一般消費者會去接觸到的 我一個月幾百塊之中 我是一個月是付六千固定的月費 然後外加 我還會再去額外的買token 因為這東西太好用了 它已經是在我的食物成品 就要說我現在要去買一些紅酒 那我要知道說 它在拍賣的價格 或者說它在各個網站",
+          "matched_keyword": "ON",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP667 | 🌍",
+          "channel": "股癌",
+          "date": "2026-06-03",
+          "text": "也可以點食成金 自己的股票呢 那感覺GTC後 資金又回流 Invidia台積電供應鏈 孟公覺得市場 是否會補掌Invidia TSMC 那另外下一波的漲價體財 是否有可能會延伸到 公率半導體IDM 如ON跟PIMIC 如ADI 我覺得這位兄弟 他的敏感度非常好 就是我覺得公率元件 或者是公率半導體 相關的一些公司 其實我們都注意到 他的基本面 有滿顯著的在改善中 所以他確實有可能是 下一波題材的一個汇聚點 可是他的光芒 沒有像 比如說CPU 或者是被動元件 那樣子的全面 因為他市場上 非常喜歡那種 類似戴維斯雙級的東西 反正我ASP可以拉上去 那再來呢 我的PU Ratio也拉上去 這個可能是大家",
+          "matched_keyword": "ON",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        }
+      ],
+      "total_mentions": 2,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-06-06": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-06-03": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
       "code": "3040",
       "name": "遠見",
       "market": "TW",
@@ -58618,7 +58718,7 @@
       "code": "EA",
       "name": "Electronic Arts",
       "market": "US",
-      "sector": "串流媒體",
+      "sector": "遊戲",
       "contexts": [
         {
           "video": "訪談特別篇_產業研究與專職交易生活 ft.田中太郎",
@@ -59218,7 +59318,7 @@
       "code": "TER",
       "name": "Teradyne",
       "market": "US",
-      "sector": "科技",
+      "sector": "半導體設備",
       "contexts": [
         {
           "video": "2026/04/16 (四）美股創新高 ，泡沫示警？ASML財報，Tesla AI5晶片設計定案",
@@ -59308,7 +59408,7 @@
       "code": "BKNG",
       "name": "Booking Holdings",
       "market": "US",
-      "sector": "零售電商",
+      "sector": "旅遊",
       "contexts": [
         {
           "video": "EP653 | 🕊️",
@@ -60142,7 +60242,7 @@
       "code": "VZ",
       "name": "Verizon",
       "market": "US",
-      "sector": "通訊媒體",
+      "sector": "電信",
       "contexts": [
         {
           "video": "2026/04/27(一) 費半創紀18連漲，還能進場嗎？Intel暴漲20%，財報透露什麼？",
@@ -62290,7 +62390,7 @@
       "code": "DDOG",
       "name": "Datadog",
       "market": "US",
-      "sector": "企業軟體",
+      "sector": "網路安全",
       "contexts": [
         {
           "video": "2026/05/08(五)美股下跌還能買嗎？ #ANET #DDOG #FTNT",
@@ -65367,37 +65467,6 @@
       }
     },
     {
-      "code": "NOW",
-      "name": "ServiceNow",
-      "market": "US",
-      "sector": "科技",
-      "contexts": [
-        {
-          "video": "EP666 | 🍐",
-          "channel": "股癌",
-          "date": "2026-05-30",
-          "text": "esforce 他搞了一個 真正上網 record high的一個buyback 他就狂買股票 你們覺得我公司很爛 是不是 媽老是狂買 我就用行動證明給你看 我狂賣我自己的股票 再來我們也注意到 像是ServiceNow的老闆 也是跟大家講說 就是外面的那些AI論述 就是全部都是講錯的 其實他的公司 是在一個非常大的順風上面 然後也是靠成績 慢慢的去證明 最近像是什麼 Octa或是Snowflake 都是開出極好的成績 那就告訴大家說 其實AI是幫這些軟體 去做加分 他不是一個扣分項 那當然一定會有人去舉出說 有哪一些軟體 他可能致敬是摔到爛掉的 可是那個道理 我們講過 他跟硬體一樣 或者說晶圓代購一樣 你也不是",
-          "matched_keyword": "ServiceNow",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        }
-      ],
-      "total_mentions": 1,
-      "sentiment_score": 0.5,
-      "daily": {
-        "2026-05-30": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        }
-      }
-    },
-    {
       "code": "5522",
       "name": "遠雄",
       "market": "TW",
@@ -66639,16 +66708,6 @@
       ]
     },
     {
-      "sector": "消費電子",
-      "market": "US",
-      "total_mentions": 49,
-      "stock_codes": [
-        "AAPL",
-        "CCL",
-        "DECK"
-      ]
-    },
-    {
       "sector": "被動元件",
       "market": "TW",
       "total_mentions": 49,
@@ -66661,15 +66720,17 @@
       ]
     },
     {
-      "sector": "AI網路",
+      "sector": "半導體",
       "market": "US",
-      "total_mentions": 47,
+      "total_mentions": 46,
       "stock_codes": [
-        "AVGO",
-        "CSCO",
-        "ANET",
-        "CHTR",
-        "T"
+        "INTC",
+        "TXN",
+        "ON",
+        "ADI",
+        "ON Semiconductor",
+        "MCHP",
+        "ON Semiconductor Corporation"
       ]
     },
     {
@@ -66680,19 +66741,6 @@
         "3481",
         "2409",
         "6116"
-      ]
-    },
-    {
-      "sector": "半導體",
-      "market": "US",
-      "total_mentions": 44,
-      "stock_codes": [
-        "INTC",
-        "TXN",
-        "ON",
-        "ADI",
-        "MCHP",
-        "ON Semiconductor Corporation"
       ]
     },
     {
@@ -66714,6 +66762,16 @@
         "2354",
         "2392",
         "4938"
+      ]
+    },
+    {
+      "sector": "AI網路",
+      "market": "US",
+      "total_mentions": 43,
+      "stock_codes": [
+        "AVGO",
+        "CSCO",
+        "ANET"
       ]
     },
     {
@@ -66871,6 +66929,14 @@
       ]
     },
     {
+      "sector": "消費電子",
+      "market": "US",
+      "total_mentions": 30,
+      "stock_codes": [
+        "AAPL"
+      ]
+    },
+    {
       "sector": "ETF・科技",
       "market": "TW",
       "total_mentions": 30,
@@ -66901,19 +66967,6 @@
       ]
     },
     {
-      "sector": "科技",
-      "market": "US",
-      "total_mentions": 28,
-      "stock_codes": [
-        "SNDK",
-        "INTU",
-        "TER",
-        "NOW",
-        "NTAP",
-        "MPWR"
-      ]
-    },
-    {
       "sector": "電動車",
       "market": "TW",
       "total_mentions": 28,
@@ -66941,6 +66994,17 @@
       ]
     },
     {
+      "sector": "科技",
+      "market": "US",
+      "total_mentions": 26,
+      "stock_codes": [
+        "SNDK",
+        "INTU",
+        "NTAP",
+        "MPWR"
+      ]
+    },
+    {
       "sector": "伺服器",
       "market": "US",
       "total_mentions": 26,
@@ -66960,6 +67024,19 @@
         "LITE",
         "AAOI",
         "GLW"
+      ]
+    },
+    {
+      "sector": "網路安全",
+      "market": "US",
+      "total_mentions": 23,
+      "stock_codes": [
+        "NET",
+        "ZS",
+        "CRWD",
+        "OKTA",
+        "DDOG",
+        "FTNT"
       ]
     },
     {
@@ -66999,18 +67076,6 @@
       ]
     },
     {
-      "sector": "網路安全",
-      "market": "US",
-      "total_mentions": 22,
-      "stock_codes": [
-        "NET",
-        "ZS",
-        "CRWD",
-        "OKTA",
-        "FTNT"
-      ]
-    },
-    {
       "sector": "觀光餐旅",
       "market": "TW",
       "total_mentions": 22,
@@ -67021,6 +67086,17 @@
         "2753",
         "5706",
         "5701"
+      ]
+    },
+    {
+      "sector": "消費",
+      "market": "US",
+      "total_mentions": 21,
+      "stock_codes": [
+        "CCL",
+        "GRMN",
+        "NKE",
+        "ABNB"
       ]
     },
     {
@@ -67188,25 +67264,14 @@
       ]
     },
     {
-      "sector": "串流媒體",
+      "sector": "企業軟體",
       "market": "US",
       "total_mentions": 17,
       "stock_codes": [
-        "NFLX",
-        "DIS",
-        "EA"
-      ]
-    },
-    {
-      "sector": "零售電商",
-      "market": "US",
-      "total_mentions": 17,
-      "stock_codes": [
-        "COST",
-        "WMT",
-        "DASH",
-        "TGT",
-        "BKNG"
+        "ADBE",
+        "IBM",
+        "CDNS",
+        "NOW"
       ]
     },
     {
@@ -67239,14 +67304,12 @@
       ]
     },
     {
-      "sector": "企業軟體",
+      "sector": "串流媒體",
       "market": "US",
       "total_mentions": 16,
       "stock_codes": [
-        "ADBE",
-        "IBM",
-        "CDNS",
-        "DDOG"
+        "NFLX",
+        "DIS"
       ]
     },
     {
@@ -67280,6 +67343,16 @@
       ]
     },
     {
+      "sector": "零售電商",
+      "market": "US",
+      "total_mentions": 14,
+      "stock_codes": [
+        "COST",
+        "WMT",
+        "TGT"
+      ]
+    },
+    {
       "sector": "半導體設備",
       "market": "TW",
       "total_mentions": 14,
@@ -67289,23 +67362,24 @@
       ]
     },
     {
+      "sector": "半導體設備",
+      "market": "US",
+      "total_mentions": 14,
+      "stock_codes": [
+        "KLAC",
+        "ASML",
+        "AMAT",
+        "TER",
+        "LRCX",
+        "ONTO"
+      ]
+    },
+    {
       "sector": "生技製藥",
       "market": "TW",
       "total_mentions": 13,
       "stock_codes": [
         "4129"
-      ]
-    },
-    {
-      "sector": "半導體設備",
-      "market": "US",
-      "total_mentions": 13,
-      "stock_codes": [
-        "KLAC",
-        "ASML",
-        "AMAT",
-        "LRCX",
-        "ONTO"
       ]
     },
     {
@@ -67332,19 +67406,6 @@
         "2379",
         "3704",
         "5388"
-      ]
-    },
-    {
-      "sector": "工業",
-      "market": "US",
-      "total_mentions": 12,
-      "stock_codes": [
-        "UBER",
-        "MAS",
-        "CAT",
-        "EME",
-        "PNR",
-        "FAST"
       ]
     },
     {
@@ -67467,15 +67528,6 @@
       ]
     },
     {
-      "sector": "民生消費",
-      "market": "US",
-      "total_mentions": 8,
-      "stock_codes": [
-        "SYY",
-        "DLTR"
-      ]
-    },
-    {
       "sector": "汽車工業",
       "market": "TW",
       "total_mentions": 8,
@@ -67489,11 +67541,31 @@
       ]
     },
     {
+      "sector": "工業",
+      "market": "US",
+      "total_mentions": 8,
+      "stock_codes": [
+        "MAS",
+        "CAT",
+        "EME",
+        "PNR",
+        "FAST"
+      ]
+    },
+    {
       "sector": "玻璃陶瓷",
       "market": "TW",
       "total_mentions": 7,
       "stock_codes": [
         "1802"
+      ]
+    },
+    {
+      "sector": "食品",
+      "market": "US",
+      "total_mentions": 7,
+      "stock_codes": [
+        "SYY"
       ]
     },
     {
@@ -67596,6 +67668,14 @@
       ]
     },
     {
+      "sector": "交通",
+      "market": "US",
+      "total_mentions": 4,
+      "stock_codes": [
+        "UBER"
+      ]
+    },
+    {
       "sector": "鋼鐵工業",
       "market": "TW",
       "total_mentions": 4,
@@ -67618,16 +67698,6 @@
       "stock_codes": [
         "2059",
         "8210"
-      ]
-    },
-    {
-      "sector": "消費",
-      "market": "US",
-      "total_mentions": 4,
-      "stock_codes": [
-        "GRMN",
-        "NKE",
-        "ABNB"
       ]
     },
     {
@@ -67654,6 +67724,24 @@
       "total_mentions": 3,
       "stock_codes": [
         "8450"
+      ]
+    },
+    {
+      "sector": "通訊媒體",
+      "market": "US",
+      "total_mentions": 3,
+      "stock_codes": [
+        "CHTR",
+        "SATS"
+      ]
+    },
+    {
+      "sector": "電信",
+      "market": "US",
+      "total_mentions": 3,
+      "stock_codes": [
+        "T",
+        "VZ"
       ]
     },
     {
@@ -67705,11 +67793,27 @@
       ]
     },
     {
+      "sector": "外送",
+      "market": "US",
+      "total_mentions": 2,
+      "stock_codes": [
+        "DASH"
+      ]
+    },
+    {
       "sector": "電源IC",
       "market": "TW",
       "total_mentions": 2,
       "stock_codes": [
         "6138"
+      ]
+    },
+    {
+      "sector": "服飾",
+      "market": "US",
+      "total_mentions": 2,
+      "stock_codes": [
+        "DECK"
       ]
     },
     {
@@ -67727,15 +67831,6 @@
       "stock_codes": [
         "8440",
         "3551"
-      ]
-    },
-    {
-      "sector": "通訊媒體",
-      "market": "US",
-      "total_mentions": 2,
-      "stock_codes": [
-        "SATS",
-        "VZ"
       ]
     },
     {
@@ -67761,6 +67856,22 @@
       "total_mentions": 1,
       "stock_codes": [
         "CRDO"
+      ]
+    },
+    {
+      "sector": "遊戲",
+      "market": "US",
+      "total_mentions": 1,
+      "stock_codes": [
+        "EA"
+      ]
+    },
+    {
+      "sector": "旅遊",
+      "market": "US",
+      "total_mentions": 1,
+      "stock_codes": [
+        "BKNG"
       ]
     },
     {
@@ -67825,6 +67936,14 @@
       "total_mentions": 1,
       "stock_codes": [
         "2207"
+      ]
+    },
+    {
+      "sector": "民生消費",
+      "market": "US",
+      "total_mentions": 1,
+      "stock_codes": [
+        "DLTR"
       ]
     },
     {
