@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-08T22:40:28",
+  "updated_at": "2026-06-09T20:00:04",
   "stocks_ranking": [
     {
       "code": "INTC",
@@ -24941,7 +24941,7 @@
       "code": "CCL",
       "name": "Carnival",
       "market": "US",
-      "sector": "消費",
+      "sector": "消費電子",
       "contexts": [
         {
           "video": "EP213 | 台、美股重點一次說，台股反彈怎麼看？美股極度恐慌後的觀察重點，南俊國際與滑軌需求，設備股後勢",
@@ -38822,7 +38822,7 @@
       "code": "SYY",
       "name": "Sysco",
       "market": "US",
-      "sector": "食品",
+      "sector": "民生消費",
       "contexts": [
         {
           "video": "2026/03/26 (四）存儲出大事， MU, SNDK還能漲？",
@@ -45458,7 +45458,7 @@
       "code": "UBER",
       "name": "Uber",
       "market": "US",
-      "sector": "交通",
+      "sector": "工業",
       "contexts": [
         {
           "video": "EP654 | 🌵",
@@ -52198,7 +52198,7 @@
       "code": "DASH",
       "name": "DoorDash",
       "market": "US",
-      "sector": "外送",
+      "sector": "零售電商",
       "contexts": [
         {
           "video": "EP217 | 台、美股重點一次說，Google TPU 各代產品結構與台廠供應鏈， 台積電封裝技術進展與風險，CPO量產前注意",
@@ -52378,7 +52378,7 @@
       "code": "CHTR",
       "name": "Charter Communications",
       "market": "US",
-      "sector": "通訊媒體",
+      "sector": "AI網路",
       "contexts": [
         {
           "video": "EP649 | 💌",
@@ -54890,7 +54890,7 @@
       "code": "T",
       "name": "AT&T",
       "market": "US",
-      "sector": "電信",
+      "sector": "通訊媒體",
       "contexts": [
         {
           "video": "2026/04/27(一) 費半創紀18連漲，還能進場嗎？Intel暴漲20%，財報透露什麼？",
@@ -55791,7 +55791,7 @@
       "code": "DECK",
       "name": "Deckers Brands",
       "market": "US",
-      "sector": "服飾",
+      "sector": "消費電子",
       "contexts": [
         {
           "video": "EP656 | 🍇",
@@ -57585,7 +57585,7 @@
       "code": "NOW",
       "name": "ServiceNow",
       "market": "US",
-      "sector": "企業軟體",
+      "sector": "科技",
       "contexts": [
         {
           "video": "EP666 | 🍐",
@@ -57685,7 +57685,7 @@
       "code": "UPS",
       "name": "United Parcel Service, Inc.",
       "market": "US",
-      "sector": "運輸",
+      "sector": "工業",
       "contexts": [
         {
           "video": "2026/06/03 (三) SpaceX正式遞表，輝達、博通又要跌了？ #nvda #avgo #nvts",
@@ -59138,7 +59138,7 @@
       "code": "EA",
       "name": "Electronic Arts",
       "market": "US",
-      "sector": "遊戲",
+      "sector": "串流媒體",
       "contexts": [
         {
           "video": "訪談特別篇_產業研究與專職交易生活 ft.田中太郎",
@@ -59468,7 +59468,7 @@
       "code": "BIIB",
       "name": "Biogen",
       "market": "US",
-      "sector": "生技製藥",
+      "sector": "醫療",
       "contexts": [
         {
           "video": "2026/04/16 (四）美股創新高 ，泡沫示警？ASML財報，Tesla AI5晶片設計定案",
@@ -59738,7 +59738,7 @@
       "code": "TER",
       "name": "Teradyne",
       "market": "US",
-      "sector": "半導體設備",
+      "sector": "科技",
       "contexts": [
         {
           "video": "2026/04/16 (四）美股創新高 ，泡沫示警？ASML財報，Tesla AI5晶片設計定案",
@@ -59828,7 +59828,7 @@
       "code": "BKNG",
       "name": "Booking Holdings",
       "market": "US",
-      "sector": "旅遊",
+      "sector": "零售電商",
       "contexts": [
         {
           "video": "EP653 | 🕊️",
@@ -60662,7 +60662,7 @@
       "code": "VZ",
       "name": "Verizon",
       "market": "US",
-      "sector": "電信",
+      "sector": "通訊媒體",
       "contexts": [
         {
           "video": "2026/04/27(一) 費半創紀18連漲，還能進場嗎？Intel暴漲20%，財報透露什麼？",
@@ -62810,7 +62810,7 @@
       "code": "DDOG",
       "name": "Datadog",
       "market": "US",
-      "sector": "網路安全",
+      "sector": "AI軟體",
       "contexts": [
         {
           "video": "2026/05/08(五)美股下跌還能買嗎？ #ANET #DDOG #FTNT",
@@ -67252,6 +67252,16 @@
       ]
     },
     {
+      "sector": "消費電子",
+      "market": "US",
+      "total_mentions": 49,
+      "stock_codes": [
+        "AAPL",
+        "CCL",
+        "DECK"
+      ]
+    },
+    {
       "sector": "被動元件",
       "market": "TW",
       "total_mentions": 49,
@@ -67285,6 +67295,17 @@
         "3481",
         "2409",
         "6116"
+      ]
+    },
+    {
+      "sector": "AI網路",
+      "market": "US",
+      "total_mentions": 45,
+      "stock_codes": [
+        "AVGO",
+        "CSCO",
+        "ANET",
+        "CHTR"
       ]
     },
     {
@@ -67336,16 +67357,6 @@
         "2354",
         "2392",
         "4938"
-      ]
-    },
-    {
-      "sector": "AI網路",
-      "market": "US",
-      "total_mentions": 43,
-      "stock_codes": [
-        "AVGO",
-        "CSCO",
-        "ANET"
       ]
     },
     {
@@ -67475,11 +67486,16 @@
       ]
     },
     {
-      "sector": "消費電子",
+      "sector": "科技",
       "market": "US",
       "total_mentions": 30,
       "stock_codes": [
-        "AAPL"
+        "SNDK",
+        "NOW",
+        "INTU",
+        "TER",
+        "NTAP",
+        "MPWR"
       ]
     },
     {
@@ -67528,14 +67544,17 @@
       ]
     },
     {
-      "sector": "科技",
+      "sector": "醫療",
       "market": "US",
-      "total_mentions": 27,
+      "total_mentions": 28,
       "stock_codes": [
-        "SNDK",
-        "INTU",
-        "NTAP",
-        "MPWR"
+        "TECH",
+        "UNH",
+        "HUM",
+        "CVS",
+        "BIIB",
+        "CI",
+        "CNC"
       ]
     },
     {
@@ -67550,19 +67569,6 @@
       ]
     },
     {
-      "sector": "醫療",
-      "market": "US",
-      "total_mentions": 27,
-      "stock_codes": [
-        "TECH",
-        "UNH",
-        "HUM",
-        "CVS",
-        "CI",
-        "CNC"
-      ]
-    },
-    {
       "sector": "光通訊",
       "market": "US",
       "total_mentions": 25,
@@ -67574,25 +67580,13 @@
       ]
     },
     {
-      "sector": "網路安全",
-      "market": "US",
-      "total_mentions": 23,
-      "stock_codes": [
-        "NET",
-        "ZS",
-        "CRWD",
-        "OKTA",
-        "DDOG",
-        "FTNT"
-      ]
-    },
-    {
       "sector": "AI軟體",
       "market": "US",
-      "total_mentions": 23,
+      "total_mentions": 24,
       "stock_codes": [
         "AI",
         "SNOW",
+        "DDOG",
         "PLTR",
         "MDB"
       ]
@@ -67623,6 +67617,18 @@
       ]
     },
     {
+      "sector": "網路安全",
+      "market": "US",
+      "total_mentions": 22,
+      "stock_codes": [
+        "NET",
+        "ZS",
+        "CRWD",
+        "OKTA",
+        "FTNT"
+      ]
+    },
+    {
       "sector": "觀光餐旅",
       "market": "TW",
       "total_mentions": 22,
@@ -67633,17 +67639,6 @@
         "2753",
         "5706",
         "5701"
-      ]
-    },
-    {
-      "sector": "消費",
-      "market": "US",
-      "total_mentions": 21,
-      "stock_codes": [
-        "CCL",
-        "GRMN",
-        "NKE",
-        "ABNB"
       ]
     },
     {
@@ -67821,14 +67816,25 @@
       ]
     },
     {
-      "sector": "企業軟體",
+      "sector": "串流媒體",
       "market": "US",
       "total_mentions": 17,
       "stock_codes": [
-        "ADBE",
-        "IBM",
-        "CDNS",
-        "NOW"
+        "NFLX",
+        "DIS",
+        "EA"
+      ]
+    },
+    {
+      "sector": "零售電商",
+      "market": "US",
+      "total_mentions": 17,
+      "stock_codes": [
+        "COST",
+        "WMT",
+        "DASH",
+        "TGT",
+        "BKNG"
       ]
     },
     {
@@ -67867,12 +67873,13 @@
       ]
     },
     {
-      "sector": "串流媒體",
+      "sector": "企業軟體",
       "market": "US",
-      "total_mentions": 16,
+      "total_mentions": 15,
       "stock_codes": [
-        "NFLX",
-        "DIS"
+        "ADBE",
+        "IBM",
+        "CDNS"
       ]
     },
     {
@@ -67891,16 +67898,6 @@
       ]
     },
     {
-      "sector": "零售電商",
-      "market": "US",
-      "total_mentions": 14,
-      "stock_codes": [
-        "COST",
-        "WMT",
-        "TGT"
-      ]
-    },
-    {
       "sector": "半導體設備",
       "market": "TW",
       "total_mentions": 14,
@@ -67910,16 +67907,17 @@
       ]
     },
     {
-      "sector": "半導體設備",
+      "sector": "工業",
       "market": "US",
       "total_mentions": 14,
       "stock_codes": [
-        "KLAC",
-        "ASML",
-        "AMAT",
-        "TER",
-        "LRCX",
-        "ONTO"
+        "UBER",
+        "MAS",
+        "CAT",
+        "EME",
+        "UPS",
+        "PNR",
+        "FAST"
       ]
     },
     {
@@ -67928,6 +67926,18 @@
       "total_mentions": 13,
       "stock_codes": [
         "4129"
+      ]
+    },
+    {
+      "sector": "半導體設備",
+      "market": "US",
+      "total_mentions": 13,
+      "stock_codes": [
+        "KLAC",
+        "ASML",
+        "AMAT",
+        "LRCX",
+        "ONTO"
       ]
     },
     {
@@ -67983,15 +67993,6 @@
         "6188",
         "3349",
         "3272"
-      ]
-    },
-    {
-      "sector": "服飾",
-      "market": "US",
-      "total_mentions": 11,
-      "stock_codes": [
-        "NIKE",
-        "DECK"
       ]
     },
     {
@@ -68060,6 +68061,14 @@
       ]
     },
     {
+      "sector": "服飾",
+      "market": "US",
+      "total_mentions": 9,
+      "stock_codes": [
+        "NIKE"
+      ]
+    },
+    {
       "sector": "半導體",
       "market": "TW",
       "total_mentions": 9,
@@ -68085,6 +68094,15 @@
       ]
     },
     {
+      "sector": "民生消費",
+      "market": "US",
+      "total_mentions": 8,
+      "stock_codes": [
+        "SYY",
+        "DLTR"
+      ]
+    },
+    {
       "sector": "汽車工業",
       "market": "TW",
       "total_mentions": 8,
@@ -68098,31 +68116,11 @@
       ]
     },
     {
-      "sector": "工業",
-      "market": "US",
-      "total_mentions": 8,
-      "stock_codes": [
-        "MAS",
-        "CAT",
-        "EME",
-        "PNR",
-        "FAST"
-      ]
-    },
-    {
       "sector": "玻璃陶瓷",
       "market": "TW",
       "total_mentions": 7,
       "stock_codes": [
         "1802"
-      ]
-    },
-    {
-      "sector": "食品",
-      "market": "US",
-      "total_mentions": 7,
-      "stock_codes": [
-        "SYY"
       ]
     },
     {
@@ -68234,14 +68232,6 @@
       ]
     },
     {
-      "sector": "交通",
-      "market": "US",
-      "total_mentions": 4,
-      "stock_codes": [
-        "UBER"
-      ]
-    },
-    {
       "sector": "鋼鐵工業",
       "market": "TW",
       "total_mentions": 4,
@@ -68255,6 +68245,26 @@
       "total_mentions": 4,
       "stock_codes": [
         "COP"
+      ]
+    },
+    {
+      "sector": "消費",
+      "market": "US",
+      "total_mentions": 4,
+      "stock_codes": [
+        "GRMN",
+        "NKE",
+        "ABNB"
+      ]
+    },
+    {
+      "sector": "通訊媒體",
+      "market": "US",
+      "total_mentions": 4,
+      "stock_codes": [
+        "T",
+        "SATS",
+        "VZ"
       ]
     },
     {
@@ -68284,24 +68294,6 @@
       ]
     },
     {
-      "sector": "通訊媒體",
-      "market": "US",
-      "total_mentions": 3,
-      "stock_codes": [
-        "CHTR",
-        "SATS"
-      ]
-    },
-    {
-      "sector": "電信",
-      "market": "US",
-      "total_mentions": 3,
-      "stock_codes": [
-        "T",
-        "VZ"
-      ]
-    },
-    {
       "sector": "ETF・槓桿反向",
       "market": "TW",
       "total_mentions": 3,
@@ -68317,16 +68309,6 @@
       "stock_codes": [
         "6505",
         "9926"
-      ]
-    },
-    {
-      "sector": "生技製藥",
-      "market": "US",
-      "total_mentions": 3,
-      "stock_codes": [
-        "MRNA",
-        "BIIB",
-        "LLY"
       ]
     },
     {
@@ -68350,14 +68332,6 @@
       ]
     },
     {
-      "sector": "外送",
-      "market": "US",
-      "total_mentions": 2,
-      "stock_codes": [
-        "DASH"
-      ]
-    },
-    {
       "sector": "電源IC",
       "market": "TW",
       "total_mentions": 2,
@@ -68374,20 +68348,21 @@
       ]
     },
     {
-      "sector": "運輸",
-      "market": "US",
-      "total_mentions": 2,
-      "stock_codes": [
-        "UPS"
-      ]
-    },
-    {
       "sector": "綠能環保",
       "market": "TW",
       "total_mentions": 2,
       "stock_codes": [
         "8440",
         "3551"
+      ]
+    },
+    {
+      "sector": "生技製藥",
+      "market": "US",
+      "total_mentions": 2,
+      "stock_codes": [
+        "MRNA",
+        "LLY"
       ]
     },
     {
@@ -68413,22 +68388,6 @@
       "total_mentions": 1,
       "stock_codes": [
         "CRDO"
-      ]
-    },
-    {
-      "sector": "遊戲",
-      "market": "US",
-      "total_mentions": 1,
-      "stock_codes": [
-        "EA"
-      ]
-    },
-    {
-      "sector": "旅遊",
-      "market": "US",
-      "total_mentions": 1,
-      "stock_codes": [
-        "BKNG"
       ]
     },
     {
@@ -68493,14 +68452,6 @@
       "total_mentions": 1,
       "stock_codes": [
         "2207"
-      ]
-    },
-    {
-      "sector": "民生消費",
-      "market": "US",
-      "total_mentions": 1,
-      "stock_codes": [
-        "DLTR"
       ]
     },
     {
