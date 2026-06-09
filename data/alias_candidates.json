@@ -116,40 +116,6 @@
     ],
     "wrong_keyword" : "Mafio老黃"
   },
-  "Muffel|AVGO" : {
-    "confidence" : "high",
-    "correct_code" : "AVGO",
-    "correct_name" : "Broadcom",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "韭菜畢業班",
-        "context" : "把它想得這麼的極端 並沒有這麼的極端 我們可以看到 像是每股相關的一些 我們所謂之前講的同相關的傳輸的 他也沒有很差 所以大家千萬不要 因為他講這句話 然後就覺得接下來完蛋 但是他現在我們只能說 現在Muffel 整體來看的話 他是非常強大的 然後再來就是 他自己本身還有100T的 Tide這種網路交換器 然後同時就是 所謂的光引擎 以及供風裝的交換器 他都是他的題材所在 然後甚至 就是所有的話題 信息現在都環繞在身上 所以現在股價動得非常的勤 那他現在整體 我們還可以看到 如果講到Muffel的話 我們會看到就是另外一家 像是台灣的風車龍頭 我覺得ASE 日月光的部分 那就是可以確保一件事情",
-        "date" : "2026-06-03",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "stock_context",
-          "weak_sector_match"
-        ],
-        "score" : 73,
-        "source" : "full_video_validator",
-        "title" : "EP231 | 台、美股重點一次說，Computex 展後各大公司說法，Marvell 800G光模組量產，AI工廠模組化後的台股供應鏈",
-        "video_id" : "46e8bc5b-ad08-4f91-95cb-e3c89a845d91"
-      }
-    ],
-    "max_score" : 73,
-    "observations" : 1,
-    "phonetic_candidates" : [
-
-    ],
-    "updated_at" : "2026-06-09T20:14:48",
-    "video_ids" : [
-      "46e8bc5b-ad08-4f91-95cb-e3c89a845d91"
-    ],
-    "wrong_keyword" : "Muffel"
-  },
   "On Microsoft|MSFT" : {
     "confidence" : "medium",
     "correct_code" : "MSFT",
