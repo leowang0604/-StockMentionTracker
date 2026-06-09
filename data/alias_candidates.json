@@ -312,39 +312,6 @@
     ],
     "wrong_keyword" : "invdr"
   },
-  "nervous|2376" : {
-    "confidence" : "medium",
-    "correct_code" : "2376",
-    "correct_name" : "技嘉",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "韭菜畢業班",
-        "context" : " 泰國廠的這些月產等級 較上個季度來說的話 已經是翻倍了 然後再來就是自幫 他其實可以看到擴產的 預期其實是相對的積極的 還有看到另外一家 就是像技嘉這一家公司 那技嘉這一家公司的話 我們之前會把他跟nervous掛鉤在一起 就是nervous的發展下 他勢必是會存在的 那我們可以先注意到一件事情 現在技嘉如果我們看的是 A&D的這個N550X 所謂的業界 其實大部分人做的這個大小 我們會把它叫成10U 當然技嘉的話要做成8U 好 我這個地方解釋一下 U是什麼東西 雖然我們以前應該解釋過 1U的話就等於是一個 標準的這種機架的高度 然後大概高度的話 就是4.4公分 所以他可以把它做成就是說 我",
-        "date" : "2026-06-03",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "stock_context"
-        ],
-        "score" : 65,
-        "source" : "full_video_validator",
-        "title" : "EP231 | 台、美股重點一次說，Computex 展後各大公司說法，Marvell 800G光模組量產，AI工廠模組化後的台股供應鏈",
-        "video_id" : "46e8bc5b-ad08-4f91-95cb-e3c89a845d91"
-      }
-    ],
-    "max_score" : 65,
-    "observations" : 2,
-    "phonetic_candidates" : [
-
-    ],
-    "updated_at" : "2026-06-08T20:21:27",
-    "video_ids" : [
-      "46e8bc5b-ad08-4f91-95cb-e3c89a845d91"
-    ],
-    "wrong_keyword" : "nervous"
-  },
   "null|TSLA" : {
     "confidence" : "low",
     "correct_code" : "TSLA",
