@@ -116,39 +116,6 @@
     ],
     "wrong_keyword" : "Mafio老黃"
   },
-  "Mata|META" : {
-    "confidence" : "high",
-    "correct_code" : "META",
-    "correct_name" : "Meta",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "財女珍妮",
-        "context" : "Mata Meta在上個禮拜五的時候 跌的是5.5% 然後有一個新聞傳出來 就是英國時報 英國金融時報呢 他們有指出說 Meta又要再考慮進行大規模的 股票增發 來籌集AI資本支出的資金",
-        "date" : "2026-06-08",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "name_distance<=1"
-        ],
-        "score" : 75,
-        "source" : "full_video_validator",
-        "title" : "2026\/06\/08 (一) 費半崩10%，台指夜盤3000點，泡沫又要破了？",
-        "video_id" : "9b8c39fb-8346-4158-80d2-861353a72f07"
-      }
-    ],
-    "max_score" : 75,
-    "observations" : 1,
-    "phonetic_candidates" : [
-
-    ],
-    "updated_at" : "2026-06-08T21:49:47",
-    "video_ids" : [
-      "9b8c39fb-8346-4158-80d2-861353a72f07"
-    ],
-    "wrong_keyword" : "Mata"
-  },
   "Muffel|AVGO" : {
     "confidence" : "high",
     "correct_code" : "AVGO",
