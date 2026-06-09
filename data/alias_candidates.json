@@ -690,60 +690,6 @@
     ],
     "wrong_keyword" : "祕望時"
   },
-  "紅機|1618" : {
-    "confidence" : "high",
-    "correct_code" : "1618",
-    "correct_name" : "合機",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "兆華與股惑仔",
-        "context" : "也一定 也是積極的 要 往這上面走 所以他們一樣 他們的股票 有機會 你看鴻海 不要說他的歷史高點 他的300塊 就套了很久 沒錯 這兩天 這兩天就過了 這一過 就會往歷史高點走 廣達 尾創 還有什麼紅機 大家要忘了嗎 尾創是已經創新高了 對啊 紅機我找一下 紅機疊的 紅機疊到沒有人 連他的電腦 很多人都很少去問他了 Acer 因為股價一直是疊 他也最近很強 紅機最近很強 華碩 這都是老的 華碩是創分隔後 應該是減資後的高點 減資後的高點 這些是不是通通都復活了 我們講的就復活了 在早期我都講 他做那個最強的股票 現在他們 紅機還遠 紅機高點在241 對 還早了很 他疊得很慘 他真的 現在 我",
-        "date" : "2026-06-03",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "name_distance<=1",
-          "stock_context"
-        ],
-        "score" : 90,
-        "source" : "full_video_validator",
-        "title" : "EP1111｜多頭沒敗象，6萬點也不算高？產業資訊、基本面價值難衡量，用技術面做平衡？重電、CPO、老AI，都會挑戰新高？ft.K線之神 朱家泓",
-        "video_id" : "4421a9b6-8dc3-451d-93c6-a19b7a6b0e68"
-      }
-    ],
-    "max_score" : 90,
-    "observations" : 1,
-    "phonetic_candidates" : [
-      {
-        "code" : "7769",
-        "name" : "鴻勁",
-        "phonetic_similarity" : 0.857,
-        "score" : 0.557,
-        "text_similarity" : 0
-      },
-      {
-        "code" : "1452",
-        "name" : "宏益",
-        "phonetic_similarity" : 0.833,
-        "score" : 0.542,
-        "text_similarity" : 0
-      },
-      {
-        "code" : "1726",
-        "name" : "永記",
-        "phonetic_similarity" : 0.833,
-        "score" : 0.542,
-        "text_similarity" : 0
-      }
-    ],
-    "updated_at" : "2026-06-09T21:35:03",
-    "video_ids" : [
-      "4421a9b6-8dc3-451d-93c6-a19b7a6b0e68"
-    ],
-    "wrong_keyword" : "紅機"
-  },
   "經向店|2308" : {
     "confidence" : "medium",
     "correct_code" : "2308",
