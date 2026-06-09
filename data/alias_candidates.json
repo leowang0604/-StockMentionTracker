@@ -148,38 +148,6 @@
     ],
     "wrong_keyword" : "On Microsoft"
   },
-  "Oricos|ORCL" : {
-    "confidence" : "medium",
-    "correct_code" : "ORCL",
-    "correct_name" : "Oracle",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "韭菜畢業班",
-        "context" : "態 所以我覺得在美股假如你今天跟我一樣 是就是等這種洗刷刷盤 等著心情有點不耐煩的時候 有時候它就是要等到你 受不了的時候 它就突然兩三根給你 然後讓你這措手不及 就是等於是在趕空手 像上一集有聊到的Oricos相關的話題 在這幾天也是一樣就衝得非常的快 我覺得以美股的角度來看的話 現在就是最痛苦的一件事應該就是抱不住 然後再來就是說 現在最痛苦的事應該就是沒有部位 當然我們這個地方不是在跟各位講說 你現在馬上就要趕快O-ing進去 然後讓自己的部位呈現100% 200%這樣子 我知道有很多人靠這一波賺到大錢 但是就是每次居高的時候 我們還是要思維一下 就是等於是噴上去之後呢 我們還是不會把部",
-        "date" : "2026-06-03",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context"
-        ],
-        "score" : 50,
-        "source" : "full_video_validator",
-        "title" : "EP231 | 台、美股重點一次說，Computex 展後各大公司說法，Marvell 800G光模組量產，AI工廠模組化後的台股供應鏈",
-        "video_id" : "46e8bc5b-ad08-4f91-95cb-e3c89a845d91"
-      }
-    ],
-    "max_score" : 50,
-    "observations" : 1,
-    "phonetic_candidates" : [
-
-    ],
-    "updated_at" : "2026-06-09T20:14:49",
-    "video_ids" : [
-      "46e8bc5b-ad08-4f91-95cb-e3c89a845d91"
-    ],
-    "wrong_keyword" : "Oricos"
-  },
   "Vertip|VRT" : {
     "confidence" : "high",
     "correct_code" : "VRT",
