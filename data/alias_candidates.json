@@ -792,5 +792,122 @@
     ],
     "phonetic_candidates": [],
     "updated_at": "2026-06-09T19:38:04"
+  },
+  "Muffel|AVGO": {
+    "wrong_keyword": "Muffel",
+    "correct_code": "AVGO",
+    "correct_name": "Broadcom",
+    "confidence": "high",
+    "max_score": 73,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "46e8bc5b-ad08-4f91-95cb-e3c89a845d91"
+    ],
+    "evidence": [
+      {
+        "video_id": "46e8bc5b-ad08-4f91-95cb-e3c89a845d91",
+        "channel": "韭菜畢業班",
+        "date": "2026-06-03",
+        "title": "EP231 | 台、美股重點一次說，Computex 展後各大公司說法，Marvell 800G光模組量產，AI工廠模組化後的台股供應鏈",
+        "source": "full_video_validator",
+        "score": 73,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "stock_context",
+          "weak_sector_match"
+        ],
+        "context": "把它想得這麼的極端 並沒有這麼的極端 我們可以看到 像是每股相關的一些 我們所謂之前講的同相關的傳輸的 他也沒有很差 所以大家千萬不要 因為他講這句話 然後就覺得接下來完蛋 但是他現在我們只能說 現在Muffel 整體來看的話 他是非常強大的 然後再來就是 他自己本身還有100T的 Tide這種網路交換器 然後同時就是 所謂的光引擎 以及供風裝的交換器 他都是他的題材所在 然後甚至 就是所有的話題 信息現在都環繞在身上 所以現在股價動得非常的勤 那他現在整體 我們還可以看到 如果講到Muffel的話 我們會看到就是另外一家 像是台灣的風車龍頭 我覺得ASE 日月光的部分 那就是可以確保一件事情"
+      }
+    ],
+    "phonetic_candidates": [],
+    "updated_at": "2026-06-09T20:14:48"
+  },
+  "Oricos|ORCL": {
+    "wrong_keyword": "Oricos",
+    "correct_code": "ORCL",
+    "correct_name": "Oracle",
+    "confidence": "medium",
+    "max_score": 50,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "46e8bc5b-ad08-4f91-95cb-e3c89a845d91"
+    ],
+    "evidence": [
+      {
+        "video_id": "46e8bc5b-ad08-4f91-95cb-e3c89a845d91",
+        "channel": "韭菜畢業班",
+        "date": "2026-06-03",
+        "title": "EP231 | 台、美股重點一次說，Computex 展後各大公司說法，Marvell 800G光模組量產，AI工廠模組化後的台股供應鏈",
+        "source": "full_video_validator",
+        "score": 50,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context"
+        ],
+        "context": "態 所以我覺得在美股假如你今天跟我一樣 是就是等這種洗刷刷盤 等著心情有點不耐煩的時候 有時候它就是要等到你 受不了的時候 它就突然兩三根給你 然後讓你這措手不及 就是等於是在趕空手 像上一集有聊到的Oricos相關的話題 在這幾天也是一樣就衝得非常的快 我覺得以美股的角度來看的話 現在就是最痛苦的一件事應該就是抱不住 然後再來就是說 現在最痛苦的事應該就是沒有部位 當然我們這個地方不是在跟各位講說 你現在馬上就要趕快O-ing進去 然後讓自己的部位呈現100% 200%這樣子 我知道有很多人靠這一波賺到大錢 但是就是每次居高的時候 我們還是要思維一下 就是等於是噴上去之後呢 我們還是不會把部"
+      }
+    ],
+    "phonetic_candidates": [],
+    "updated_at": "2026-06-09T20:14:49"
+  },
+  "經向店|2368": {
+    "wrong_keyword": "經向店",
+    "correct_code": "2368",
+    "correct_name": "金像電",
+    "confidence": "high",
+    "max_score": 97,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "46e8bc5b-ad08-4f91-95cb-e3c89a845d91"
+    ],
+    "evidence": [
+      {
+        "video_id": "46e8bc5b-ad08-4f91-95cb-e3c89a845d91",
+        "channel": "韭菜畢業班",
+        "date": "2026-06-03",
+        "title": "EP231 | 台、美股重點一次說，Computex 展後各大公司說法，Marvell 800G光模組量產，AI工廠模組化後的台股供應鏈",
+        "source": "full_video_validator",
+        "score": 97,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "phonetic_top1",
+          "stock_context",
+          "strong_sector_match"
+        ],
+        "context": " 然後毛利的部分 我覺得倒是還好 就算可能下降一點 甚至如果不這樣反生的話 那他就有可能 可以有一個 蠻強大的一個動能存在 目前我們還可以看到 幾件事情 就是一些擴產的話題 那擴產的話題的話 不外乎像經向店 或說像是自幫以及台藥 這些東西都是有一些擴產的話題存在 甚至我們早期調的一些增底 只要有一些擴產存在 然後再來就是說 我們可以看到以經向店來看的話 泰國廠的這些月產等級 較上個季度來說的話 已經是翻倍了 然後再來就是自幫 他其實可以看到擴產的 預期其實是相對的積極的 還有看到另外一家 就是像技嘉這一家公司 那技嘉這一家公司的話 我們之前會把他跟nervous掛鉤在一起 就是nervous的"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2368",
+        "name": "金像電",
+        "score": 0.6,
+        "phonetic_similarity": 0.923,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "3530",
+        "name": "晶相光",
+        "score": 0.511,
+        "phonetic_similarity": 0.786,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "4528",
+        "name": "江興鍛",
+        "score": 0.5,
+        "phonetic_similarity": 0.769,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-06-09T20:14:50"
   }
 }
