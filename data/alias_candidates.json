@@ -909,5 +909,111 @@
       }
     ],
     "updated_at": "2026-06-09T20:14:50"
+  },
+  "騎幫|2368": {
+    "wrong_keyword": "騎幫",
+    "correct_code": "2368",
+    "correct_name": "金像電",
+    "confidence": "medium",
+    "max_score": 50,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "fdbf6501-861c-4c78-be4e-b0046986ebcb"
+    ],
+    "evidence": [
+      {
+        "video_id": "fdbf6501-861c-4c78-be4e-b0046986ebcb",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-09",
+        "title": "EP1115｜只殺一天夠嗎？外資調升國巨、金像電、大立光評價，5月營收持續好，AI底氣勝出！若是再跌升息恐懼，就更該買？ft.AI達人 蔡明翰",
+        "source": "full_video_validator",
+        "score": 50,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context"
+        ],
+        "context": "例如說大立光 例如說國劇出現了1,500塊錢的目標價 我們之前一直講 外資的目標價給國劇都超級小氣 終於出現一個離他現價 超過一倍的一個目標價出來了 金像電 騎幫等等的"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "6147",
+        "name": "頎邦",
+        "score": 0.65,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "3564",
+        "name": "其陽",
+        "score": 0.542,
+        "phonetic_similarity": 0.833,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "6122",
+        "name": "擎邦",
+        "score": 0.488,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-06-09T20:32:57"
+  },
+  "紅機|1618": {
+    "wrong_keyword": "紅機",
+    "correct_code": "1618",
+    "correct_name": "合機",
+    "confidence": "high",
+    "max_score": 90,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "4421a9b6-8dc3-451d-93c6-a19b7a6b0e68"
+    ],
+    "evidence": [
+      {
+        "video_id": "4421a9b6-8dc3-451d-93c6-a19b7a6b0e68",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-03",
+        "title": "EP1111｜多頭沒敗象，6萬點也不算高？產業資訊、基本面價值難衡量，用技術面做平衡？重電、CPO、老AI，都會挑戰新高？ft.K線之神 朱家泓",
+        "source": "full_video_validator",
+        "score": 90,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "stock_context"
+        ],
+        "context": "也一定 也是積極的 要 往這上面走 所以他們一樣 他們的股票 有機會 你看鴻海 不要說他的歷史高點 他的300塊 就套了很久 沒錯 這兩天 這兩天就過了 這一過 就會往歷史高點走 廣達 尾創 還有什麼紅機 大家要忘了嗎 尾創是已經創新高了 對啊 紅機我找一下 紅機疊的 紅機疊到沒有人 連他的電腦 很多人都很少去問他了 Acer 因為股價一直是疊 他也最近很強 紅機最近很強 華碩 這都是老的 華碩是創分隔後 應該是減資後的高點 減資後的高點 這些是不是通通都復活了 我們講的就復活了 在早期我都講 他做那個最強的股票 現在他們 紅機還遠 紅機高點在241 對 還早了很 他疊得很慘 他真的 現在 我"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "7769",
+        "name": "鴻勁",
+        "score": 0.557,
+        "phonetic_similarity": 0.857,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "1452",
+        "name": "宏益",
+        "score": 0.542,
+        "phonetic_similarity": 0.833,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "1726",
+        "name": "永記",
+        "score": 0.542,
+        "phonetic_similarity": 0.833,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-06-09T21:35:03"
   }
 }
