@@ -73,5 +73,19 @@
     "must_include": ["2327", "2454", "3008", "2301", "3231"],
     "must_highlight": ["國具", "聯發科", "大立光", "光寶科", "尾創"],
     "expected_candidates": ["國具|2327"]
+  },
+  "jinxiang_ai_optics_supply_chain": {
+    "description": "AI 光模組供應鏈語境中，Whisper 的經向店應解析為金像電，不應被 Gemini 候選改成台達電。",
+    "enable_phonetic_discovery": true,
+    "must_include": ["2368"],
+    "must_exclude": ["2308"],
+    "must_highlight": ["經向店"]
+  },
+  "honhai_ai_pc_assembly_context": {
+    "description": "AI PC / Computex 組裝代工語境中，Whisper 的轟害應解析為鴻海，不應被改成廣達。",
+    "enable_phonetic_discovery": true,
+    "must_include": ["2317"],
+    "must_exclude": ["2382"],
+    "must_highlight": ["轟害"]
   }
 }

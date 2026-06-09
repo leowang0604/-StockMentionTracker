@@ -456,17 +456,33 @@ def _record_alias_candidate(
     """Persist a review candidate. This intentionally does not modify learned aliases."""
     wrong_keyword = (wrong_keyword or "").strip()
     correct_code = (correct_code or "").strip()
-    canonical_name = CODE_TO_NAME.get(correct_code, "")
-    correct_name = (correct_name or canonical_name).strip()
     if (
         not wrong_keyword
         or not correct_code
         or wrong_keyword in STOCK_DICT
         or correct_code not in CODE_TO_NAME
-        or canonical_name != correct_name
         or f"{wrong_keyword}|{correct_code}" in _load_rejected_aliases()
     ):
         return
+
+    contextual_code = _contextual_whisper_alias_code(wrong_keyword, context)
+    if (
+        contextual_code
+        and contextual_code != correct_code
+        and f"{wrong_keyword}|{contextual_code}" not in _load_rejected_aliases()
+    ):
+        print(
+            f"  [alias-candidate] contextual override 「{wrong_keyword}」:"
+            f" {correct_code}({CODE_TO_NAME.get(correct_code, correct_name or '')})"
+            f" → {contextual_code}({CODE_TO_NAME.get(contextual_code, contextual_code)})",
+            file=sys.stderr,
+        )
+        correct_code = contextual_code
+
+    canonical_name = CODE_TO_NAME.get(correct_code, "")
+    correct_name = (correct_name or canonical_name).strip()
+    if canonical_name != correct_name:
+        correct_name = canonical_name
 
     phonetic_candidates = _phonetic_alias_candidates(wrong_keyword)
     score, reasons = _alias_candidate_score(
@@ -1179,6 +1195,20 @@ _SECTOR_CONTEXT_FAMILIES: dict[str, dict[str, set[str]]] = {
             "上詮", "波若威", "波羅威",
         },
     },
+    "AI光模組供應鏈": {
+        "sectors": {"PCB", "PCB載板", "電子零組件業", "CPO光通訊", "光通訊", "電源供應器"},
+        "keywords": {
+            "Marvell", "Broadcom", "博通", "800G", "光模組", "光通訊",
+            "AI工廠", "模組化", "供應鏈", "擴產",
+        },
+    },
+    "AI組裝代工": {
+        "sectors": {"組裝代工", "伺服器", "電腦及週邊設備業"},
+        "keywords": {
+            "AI PC", "AIPC", "Computex", "電腦展", "伺服器", "AI伺服器",
+            "代工", "組裝", "ODM", "EMS", "NVIDIA", "Dell",
+        },
+    },
     "華新麗華集團": {
         "sectors": {"被動元件", "電子零組件業", "記憶體", "半導體業", "面板", "光電業"},
         "keywords": {
@@ -1197,6 +1227,17 @@ _CONTEXTUAL_WHISPER_ALIASES: dict[str, dict[str, str]] = {
     },
     "CPO光通訊": {
         "聯軍": "3450", "聯均": "3450", "連軍": "3450",
+    },
+    "AI光模組供應鏈": {
+        "經向店": "2368",
+        "經相電": "2368",
+        "金像店": "2368",
+        "金像殿": "2368",
+    },
+    "AI組裝代工": {
+        "轟害": "2317",
+        "轟海": "2317",
+        "鴻害": "2317",
     },
     "華新麗華集團": {
         "華邦店": "2344",
@@ -1238,6 +1279,18 @@ def _stock_sector_families(code: str) -> set[str]:
         for family, config in _SECTOR_CONTEXT_FAMILIES.items()
         if sector in config["sectors"]
     }
+
+
+def _contextual_whisper_alias_code(term: str, text: str) -> str | None:
+    """Resolve a Whisper alias only when its scoped sector context is active."""
+    term = (term or "").strip()
+    if not term:
+        return None
+    for family in _context_sector_families(text):
+        code = _CONTEXTUAL_WHISPER_ALIASES.get(family, {}).get(term)
+        if code in CODE_TO_NAME:
+            return code
+    return None
 
 
 def _has_strong_sector_mismatch(text: str, code: str) -> bool:
@@ -3240,6 +3293,28 @@ def _validate_gemini_stocks(
         fuzzy_name_appears = False
         is_short_cjk_name = _contains_only_cjk(resolved_name) and len(resolved_name) <= 3
         sector_source_term = whisper_orig_bare or whisper_orig or name
+        contextual_code = _contextual_whisper_alias_code(sector_source_term, chunk_text)
+        if contextual_code and contextual_code != resolved_code:
+            contextual_name = CODE_TO_NAME.get(contextual_code, contextual_code)
+            print(
+                f"  [gemini_extract] contextual alias remap"
+                f" — {sector_source_term!r} -> {contextual_code}({contextual_name})"
+                f" instead of {resolved_code}({resolved_name});"
+                f" weak sectors={_format_context_sector_scores(chunk_text)}",
+                file=sys.stderr,
+            )
+            if not whisper_orig:
+                whisper_orig = sector_source_term
+                whisper_orig_bare = sector_source_term
+                _whisper_core = _core(sector_source_term)
+            resolved_code = contextual_code
+            resolved_name = contextual_name
+            name = resolved_name
+            stock_keywords = [kw for kw, c in STOCK_DICT.items() if c == resolved_code]
+            search_names = stock_keywords if lev_resolved else stock_keywords + [name]
+            exact_name_appears = any(kw in chunk_text for kw in search_names)
+            name_appears = True
+
         sector_nearby = _sector_aware_nearby_stock_keyword(
             sector_source_term,
             exclude_code=resolved_code,
