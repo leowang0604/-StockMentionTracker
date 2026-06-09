@@ -697,61 +697,6 @@
     ],
     "wrong_keyword" : "經向店"
   },
-  "聯軍|2303" : {
-    "confidence" : "high",
-    "correct_code" : "2303",
-    "correct_name" : "聯電",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "兆華與股惑仔",
-        "context" : "可是後來CPO算是我 比較賣非的族群 可是我手上還有一間公司 大家如果有印象的話 就是之前被罵爛的聯軍 就是當你手上的光盛 你手上的PROVAY 根本就已經飛天的時候 聯軍還在那邊廢",
-        "date" : "2026-06-02",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "name_distance<=1",
-          "phonetic_conflict",
-          "stock_context"
-        ],
-        "score" : 75,
-        "source" : "full_video_validator",
-        "title" : "EP1110｜台股的轉股？低本益比AI股回溫，台積電也快來，記憶體、CPO、被動、機器人震盪，怎麼抱？6月中FED會議要小心？ft.AI達人 蔡明翰",
-        "video_id" : "66a74bc5-4f8a-4735-b5a0-77972ee3ccf0"
-      }
-    ],
-    "max_score" : 75,
-    "observations" : 1,
-    "phonetic_candidates" : [
-      {
-        "code" : "3450",
-        "name" : "聯鈞",
-        "phonetic_similarity" : 1,
-        "score" : 0.825,
-        "text_similarity" : 0.5
-      },
-      {
-        "code" : "1229",
-        "name" : "聯華",
-        "phonetic_similarity" : 0.714,
-        "score" : 0.639,
-        "text_similarity" : 0.5
-      },
-      {
-        "code" : "1806",
-        "name" : "冠軍",
-        "phonetic_similarity" : 0.714,
-        "score" : 0.639,
-        "text_similarity" : 0.5
-      }
-    ],
-    "updated_at" : "2026-06-08T21:39:42",
-    "video_ids" : [
-      "66a74bc5-4f8a-4735-b5a0-77972ee3ccf0"
-    ],
-    "wrong_keyword" : "聯軍"
-  },
   "萬序|6187" : {
     "confidence" : "high",
     "correct_code" : "6187",
