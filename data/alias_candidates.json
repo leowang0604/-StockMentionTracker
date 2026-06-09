@@ -377,58 +377,6 @@
     ],
     "wrong_keyword" : "null"
   },
-  "on架購|2454" : {
-    "confidence" : "medium",
-    "correct_code" : "2454",
-    "correct_name" : "聯發科",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "韭菜畢業班",
-        "context" : "% 70% 我覺得這在美股真的太容易發生了 好 那再來就是我們看聊一下 這個computest這個話題 首先computest這一次公布出來 我們先回應上一集有講過的 就是跟聯發科一起 共同開發了這個on架購的超級晶片 也就是之前上一集講的N1X 那其他實際上名字叫做RTXBOX 那這個東西推出來之後 其實簡單來說 它就是for Windows PC 那Windows PC其實裡面 涵蓋的廠牌有像是微軟 華碩 del 微星 HP 聯想 那甚至像Adobe 它其實也有在黃昇先有公布出來 就等於是 它可以重新架構 Photoshop 或Premiere的這一個架構 讓它的整體的效能是往上提升兩倍的",
-        "date" : "2026-06-03",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context"
-        ],
-        "score" : 50,
-        "source" : "full_video_validator",
-        "title" : "EP231 | 台、美股重點一次說，Computex 展後各大公司說法，Marvell 800G光模組量產，AI工廠模組化後的台股供應鏈",
-        "video_id" : "46e8bc5b-ad08-4f91-95cb-e3c89a845d91"
-      }
-    ],
-    "max_score" : 50,
-    "observations" : 1,
-    "phonetic_candidates" : [
-      {
-        "code" : "2945",
-        "name" : "三商家購",
-        "phonetic_similarity" : 0.5,
-        "score" : 0.412,
-        "text_similarity" : 0.25
-      },
-      {
-        "code" : "1227",
-        "name" : "佳格",
-        "phonetic_similarity" : 0.5,
-        "score" : 0.325,
-        "text_similarity" : 0
-      },
-      {
-        "code" : "1417",
-        "name" : "嘉裕",
-        "phonetic_similarity" : 0.5,
-        "score" : 0.325,
-        "text_similarity" : 0
-      }
-    ],
-    "updated_at" : "2026-06-08T20:21:27",
-    "video_ids" : [
-      "46e8bc5b-ad08-4f91-95cb-e3c89a845d91"
-    ],
-    "wrong_keyword" : "on架購"
-  },
   "富邦電子|0052" : {
     "confidence" : "high",
     "correct_code" : "0052",
