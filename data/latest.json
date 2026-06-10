@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-09T22:30:50",
+  "updated_at": "2026-06-10T20:16:04",
   "stocks_ranking": [
     {
       "code": "INTC",
@@ -7,6 +7,18 @@
       "market": "US",
       "sector": "半導體",
       "contexts": [
+        {
+          "video": "EP669 | 🎈",
+          "channel": "股癌",
+          "date": "2026-06-10",
+          "text": "是對於未來的一些簽簪性 我個人是覺得 沒有什麼太大的影響跟變化 特別是我自己下去看這個市場 我會覺得還算是 沒有到非常的瘋狂 在相對的中心 等到整個市場 可能大家都開始去買什麼 衛星AI data center 然後或者說 開始去買一堆機器人類股 機器人類股變成市場的主軸的時候 那就真的要擔心 因為那一東西可能 就是在短期內 真的是比較難看到數字的東西 當然最近身邊有些朋友 又在跟我分享說 其實現在在機器人附近的 討論真的非常多 像有一個人去參加了 反正美光的某一種會議之後 然後出來就給我看了 大量的PDF 那反正就是 他們是非常看好機器人的一個發展 出來的速度沒有這麼快 就搞不好是三年後五年後之類的 ",
+          "matched_keyword": "英特爾",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
         {
           "video": "2026/06/09 (二) 反彈了，該跑嗎？",
           "channel": "財女珍妮",
@@ -358,23 +370,18 @@
           "sentiment_score": 0.4,
           "video_url": "",
           "extraction_mode": "gemini"
-        },
-        {
-          "video": "EP1100｜後悔3月低點買不夠，又怕這次真崩盤，怎麼做？通膨和AI成長的平衡點在哪裡？主動ETF殺高價股，台股幸好有台積電！ft.型男股神 陳威良",
-          "channel": "兆華與股惑仔",
-          "date": "2026-05-19",
-          "text": "跌有限 而且你不會認為 台積電會跌到腰斬 跌到下勢吧 不太可能這樣的想法 所以有這樣一個東西 定在那裡的時候 整個大盤 你說要變成一個 大崩盤的情況 以目前台積電的成長的態勢 來說並不容易 就算有什麼intel 三星 什麼分時訂單 我想至少以 精明兩年 我覺得都不太容易 撼動台積電 任何的業績 更何況他自己法說會上 是已經講出 未來五年的願景 可是對於某一些的 中小型高價股 確實 他可能就會產生 人才人的問題 一賣就賣到跌停 一買就買到漲停 我覺得這個是大家 在操作個股上面 一定要非常留意的 一件事情 可能會造成 某一些股票的股災 但是我覺得說 要人才人到整個台股 崩 我覺得不會 但是如果今天每股 因為",
-          "matched_keyword": "Intel",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
         }
       ],
       "total_mentions": 30,
       "sentiment_score": 0.5,
       "daily": {
+        "2026-06-10": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
         "2026-06-09": {
           "mentions": 1,
           "bullish": 1,
@@ -493,13 +500,6 @@
           "bearish": 0,
           "neutral": 3,
           "sentiment_score": 0.5
-        },
-        "2026-05-19": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
         }
       }
     },
@@ -509,6 +509,18 @@
       "market": "TW",
       "sector": "手機晶片",
       "contexts": [
+        {
+          "video": "EP669 | 🎈",
+          "channel": "股癌",
+          "date": "2026-06-10",
+          "text": "出去的族群 那可能就是我們會想要去追蹤的 因為 單就禮拜三 這個盤中來看的話 當然被動員間還是非常的強勢 那光通的話就是全部都轉弱 那TSMC我本來覺得有機會是 下一波要領跑的 然後現在也是轉弱 然後發哥也稍微都往下跳 所以還沒有辦法很明確去識別 那本來自己心中猜想的 就是有些像是避風港的 比較便宜的 像是一些常務類型的股票 那也沒有拉出去 所以現在還沒有辦法識別出來 可能要等到就是 嚴建為平 就是我們看到 有一些族群走出去的時候 我們就知道說 那可能下一波的資金 會往哪個方向去考 那我們就稍微再講一下 這個市場中發生一些事件 那首先呢 台積電這個月營收開起來 是還蠻不錯 然後CFO在 不知道是訪",
+          "matched_keyword": "發哥",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
         {
           "video": "EP1115｜只殺一天夠嗎？外資調升國巨、金像電、大立光評價，5月營收持續好，AI底氣勝出！若是再跌升息恐懼，就更該買？ft.AI達人 蔡明翰",
           "channel": "兆華與股惑仔",
@@ -858,23 +870,18 @@
           "sentiment_score": 0.7,
           "video_url": "",
           "extraction_mode": "gemini"
-        },
-        {
-          "video": "EP663 | 🦘",
-          "channel": "股癌",
-          "date": "2026-05-20",
-          "text": "巨資的一群人 然後就講到這件事情 然後同時提到說 剛好就有技巧蠻鳥的 因為真的一堆人賺得比我多 然後我講完之後我就被 其中一位 我會尊稱為大哥的人就 就捧我 就說幹這個價值觀偏差 一個月賺這樣子 你用MTD算 你還不是用YTD 這個很多了 我就說 可是我們身邊一堆更多 他說你不要比那個 你要看什麼shop ratio 你要看回檔之後 他也在不在 反正都是一些老生常談 可是真的發生在你身上的時候 你就會不舒服 所以我才會一直講說 比較是快樂之賊 只要你有比較的心態 你就很難快樂 一個該是快樂的事情 你可能不知道 就今天獲得一個什麼女優 不應該舉這個例子 就你獲得某個偶像的簽名照 然後或者說 你獲得了某",
-          "matched_keyword": "MediaTek",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "gemini"
         }
       ],
       "total_mentions": 30,
-      "sentiment_score": 0.576,
+      "sentiment_score": 0.593,
       "daily": {
+        "2026-06-10": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        },
         "2026-06-09": {
           "mentions": 1,
           "bullish": 1,
@@ -988,11 +995,11 @@
           "sentiment_score": 0.5
         },
         "2026-05-20": {
-          "mentions": 2,
+          "mentions": 1,
           "bullish": 1,
           "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.6
+          "neutral": 0,
+          "sentiment_score": 0.7
         }
       }
     },
@@ -2959,6 +2966,18 @@
       "sector": "晶圓代工",
       "contexts": [
         {
+          "video": "EP669 | 🎈",
+          "channel": "股癌",
+          "date": "2026-06-10",
+          "text": "K 或者是突然間爆亮 在我們的角度都覺得說 反而可以再繼續等看看 因為太多東西已經是拉出去了 所以這個可能是自己 或是身邊一些資金 下對於這個市場的評價 所以整體來看 我覺得大家前面所提到的一些事件 台積電的那個漲價 應該算是一個蠻好的利多 然後再來 Semi Analysis所發的 大家說是放雷的那兩件事情 自己看起來是覺得還好 它有點像說 就是幫市場稍微的 reality check一下 那可能有些那種信仰不堅得 就會在過程中 就被他給洗出去了 那也好啦 因為一個東西要漲的話 就是要把一些人洗掉 類似說我們那時候在24年的7月 然後還有外加像在關稅站那時候 你就注意到說 有時候那個籌碼這樣子 上",
+          "matched_keyword": "台積電",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
           "video": "EP1115｜只殺一天夠嗎？外資調升國巨、金像電、大立光評價，5月營收持續好，AI底氣勝出！若是再跌升息恐懼，就更該買？ft.AI達人 蔡明翰",
           "channel": "兆華與股惑仔",
           "date": "2026-06-09",
@@ -3306,23 +3325,18 @@
           "sentiment_score": 0.5,
           "video_url": "",
           "extraction_mode": "gemini"
-        },
-        {
-          "video": "EP1105｜台積電吵分紅，出問題嗎？矽光子來接棒、被動沒結束，台股大回檔機會少，要思考的不是高報酬率，而是總資產成長多少？ft.AI達人 蔡明翰",
-          "channel": "兆華與股惑仔",
-          "date": "2026-05-26",
-          "text": "那還有就是西光子今天有回升 對不對 記憶體今天有回升 所以鞋骨還是有呈現 有人休息就會有人接棒的一個態勢 不能說是不健康 可是震盪大難免大家也會去思考 要怎麼樣停歷 還是有沒有可能回四萬點 到底為什麼台積電部長 今天的這些問題 我看到有聽眾留言說 最喜歡這位達人來上節目了 因為我們會形成一個 雙重奏 碎碎念雙重奏 先來歡迎他就是 AI 達人明翰哥 造化好聽眾朋友大家好 我就跟這個聽眾開玩笑說 對因為我碎念碎念到一半的時候 就看到明翰哥的臉 他已經準備 滿腔的話 要準備接話了 好不過我們先來講今天的盤事 因為上一個禮拜來我們也聊到 真的長得很急 然後回檔才回一下下就上來了 所以今天的震盪 伴隨著其實還",
-          "matched_keyword": "台積電",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "gemini"
         }
       ],
       "total_mentions": 30,
-      "sentiment_score": 0.513,
+      "sentiment_score": 0.52,
       "daily": {
+        "2026-06-10": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.7
+        },
         "2026-06-09": {
           "mentions": 2,
           "bullish": 0,
@@ -3413,13 +3427,6 @@
           "bearish": 0,
           "neutral": 3,
           "sentiment_score": 0.55
-        },
-        "2026-05-26": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
         }
       }
     },
@@ -3429,6 +3436,18 @@
       "market": "US",
       "sector": "消費電子",
       "contexts": [
+        {
+          "video": "EP669 | 🎈",
+          "channel": "股癌",
+          "date": "2026-06-10",
+          "text": "你看前面不是有講說什麼 蠻多安卓手機 AI功能多厲害 又誰還要換iPhone 你後面看銷量就會知道說 那些說法是很奇怪 可是在當下 大家就真的會去把這個說法 當成是好像是某一種真相 然後去解釋說 你看Apple就是因為 這樣子才會疊之類的 就也類似說 你看現在大家看到這些光通 或是說一些可能800V 相關的伺服器在疊 然後就會講說 這個是因為 可能Semi Annihilated發了什麼東西 但是等到後面創新高的時候 就No one cares 沒有人會再去提到這樣的東西 所以這就是 我覺得每破修正 大家要學會的一個東西 那種大家在當下 非常擔心的東西 很多時候你事後回頭看 就發現說他真的沒有什麼大不了",
+          "matched_keyword": "蘋果",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
         {
           "video": "2026/06/09 (二) 反彈了，該跑嗎？",
           "channel": "財女珍妮",
@@ -3776,23 +3795,18 @@
           "sentiment_score": 0.5,
           "video_url": "",
           "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP226 | 台、美股重點一次說，Intel EMIB與各大巨頭關係，Nebius 產品與優缺點，輝達財報後勢展望",
-          "channel": "韭菜畢業班",
-          "date": "2026-05-17",
-          "text": "他的話 大致上 我覺得都應該是Chorus 要嘛就S 要嘛就L 這兩個 我覺得這沒有什麼太大的疑慮 那同時我們可以看到 就是Tesla相關的東西 跟Intel的合作 我覺得當然是顯而易見的 那再來就是Apple 那我覺得就是看這幾個東西 後續的一個發展 那Amazon我覺得可以去 比較去注意到的東西的話 他的Testing的話 要嘛可能也是會給 我們看到的歷程 或者是說我們會看到 Encur 或SE 可能也會有我們講的 測試相關的利多 我覺得這個也是可以市場 先去注意到的東西 總之我覺得 emip的部分的話 我後續還是會持續的看一下 但是可能股價還是回個 15%到20% 我自己會很喜歡 就是我真的很喜歡",
-          "matched_keyword": "Apple",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "gemini"
         }
       ],
       "total_mentions": 30,
-      "sentiment_score": 0.547,
+      "sentiment_score": 0.553,
       "daily": {
+        "2026-06-10": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.7
+        },
         "2026-06-09": {
           "mentions": 1,
           "bullish": 0,
@@ -3911,13 +3925,6 @@
           "bearish": 1,
           "neutral": 2,
           "sentiment_score": 0.444
-        },
-        "2026-05-17": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
         }
       }
     },
@@ -5378,6 +5385,30 @@
       "sector": "雲端/AI",
       "contexts": [
         {
+          "video": "EP669 | 🎈",
+          "channel": "股癌",
+          "date": "2026-06-10",
+          "text": "掉 所以大洗一波 說不定是一個蠻好的事情 那最後面 我們就稍微來看一下Apple的WFDC 那整體來看 我認為沒有什麼太多新的亮點 反正Apple就是更加的 聚焦去 要把手機做好這件事情上面 那同時跟Google合作 去做一些模型 那自己當然也有一些 本家的模型去做一些應用 那像我自己之前的一個 猜想是就是 如果蘋果他是要去做 一個收購入費的模式的話 那應該是還蠻不錯的 應該是有機會可以賺到 蠻多錢 而且不用去扛巨大的CAPEX 那現在看起來 他們是要去走一個遮蹤的路線 特別是像我們之前有跟大家分享說 其實蘋果在 那是哪裡 反正就是 桃園那附近有一個 好像什麼航空城工業取代什麼 反正他們在那邊 是有在搞伺",
+          "matched_keyword": "Google",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP669 | 🎈",
+          "channel": "股癌",
+          "date": "2026-06-10",
+          "text": "還是要去做投入 而且是那種 精品等級的東西做得很好 所以他們還是要去做 他們也想說走一個那種遮蹤路線 就是他們沒有像那些 巨頭們花大量的錢去砸 他就是 可能一部分的東西是用我的 然後一部分的東西 是跟Google合作 那再來那種term and deal 可能要在後面 再去做一些驗證 然後當然 不是那種存過入費的一個模式 他們決定還是要把一些 主控權放在自己的身上 那我覺得這個在AIS代理 可能是一個 怎麼講 就是他看起來是一個保守牌 但他或許是選擇了 一個正確的路線 因為大家還是會擔心說 如果你手上沒有模型的話 是不是說 主控權都會放在別人的身上 但這件事情 我自己是不會這麼的擔心 因為我還是跟大家強調",
+          "matched_keyword": "Google",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
           "video": "2026/06/09 (二) 反彈了，該跑嗎？",
           "channel": "財女珍妮",
           "date": "2026-06-09",
@@ -5713,35 +5744,18 @@
           "sentiment_score": 0.5,
           "video_url": "",
           "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP229 | 台、美股重點一次說，美光HBM長約與估值重估，Google TPU帶動聯發科，功率半導體漲價與ABF、玻璃基板後勢",
-          "channel": "韭菜畢業班",
-          "date": "2026-05-27",
-          "text": "跟各位聊過 所以等於是它現在 我們看到這個兩奈米的TPU之外 還有看到1.4奈米Icefish的 這一個專案的話 我覺得之後也都是大家市場 應該會是持續的去關注的 那在2027年跟2028年來看的話 Google TPU佔據這一個聯發課營收的話 應該理論上來說 2027年是三層接近四層 那再來就2028年的話 應該是六層附近 所以這個兩奈米的Human Fish 我覺得是相對重要的 然後再來就是這一個S.P.的部分的話 可以到美元的1萬3 那同時其實市場還有另外一派說法 就是接下來Google會有一些AI的高階手機 那這個AI的高階手機的話 等於是它也可以搭載到這一個浪潮 雖然我們之前就有講過 手機可能是",
-          "matched_keyword": "Google",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP229 | 台、美股重點一次說，美光HBM長約與估值重估，Google TPU帶動聯發科，功率半導體漲價與ABF、玻璃基板後勢",
-          "channel": "韭菜畢業班",
-          "date": "2026-05-27",
-          "text": "萬3 那同時其實市場還有另外一派說法 就是接下來Google會有一些AI的高階手機 那這個AI的高階手機的話 等於是它也可以搭載到這一個浪潮 雖然我們之前就有講過 手機可能是它相對弱勢的 但是如果說在Google Gemini手機的 前提之下的話 會不會一起推升下去 我覺得這個是市場會去優先 去關注的一件事情 好 那再來的話 我們可以注意到另外一個東西 就是奧特斯這家公司 那我大概解說一下 奧特斯公司是什麼東西 它主要的話 如果說大家去查一下 就會知道它是歐洲的全球領先 的一個高階的印刷電路板 以及半導體封裝載板的製造商 那其實它在最近的法收會 其實有講過 就是ABF的需求 其實是相對應提升的 它也上調了",
-          "matched_keyword": "Google",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
         }
       ],
       "total_mentions": 30,
-      "sentiment_score": 0.523,
+      "sentiment_score": 0.54,
       "daily": {
+        "2026-06-10": {
+          "mentions": 2,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.75
+        },
         "2026-06-09": {
           "mentions": 6,
           "bullish": 1,
@@ -5813,10 +5827,10 @@
           "sentiment_score": 0.5
         },
         "2026-05-27": {
-          "mentions": 4,
+          "mentions": 2,
           "bullish": 0,
           "bearish": 0,
-          "neutral": 4,
+          "neutral": 2,
           "sentiment_score": 0.5
         }
       }
@@ -5827,6 +5841,18 @@
       "market": "US",
       "sector": "記憶體",
       "contexts": [
+        {
+          "video": "EP669 | 🎈",
+          "channel": "股癌",
+          "date": "2026-06-10",
+          "text": "變成市場的主軸的時候 那就真的要擔心 因為那一東西可能 就是在短期內 真的是比較難看到數字的東西 當然最近身邊有些朋友 又在跟我分享說 其實現在在機器人附近的 討論真的非常多 像有一個人去參加了 反正美光的某一種會議之後 然後出來就給我看了 大量的PDF 那反正就是 他們是非常看好機器人的一個發展 出來的速度沒有這麼快 就搞不好是三年後五年後之類的 可是已經開始去注意一些規格的東西 所以在我的角度是 只要後面都持續的有故事存在 然後沒有一些國際事件的重大衝擊的話 其實還是會去把每次的這種拉回 或是修正都視為這種機會 就是你過去講說 上不了車的 你看真的車回來給你上 還是一堆人不會上 然後下次再問說",
+          "matched_keyword": "美光",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
         {
           "video": "2026/06/09 (二) 反彈了，該跑嗎？",
           "channel": "財女珍妮",
@@ -6177,23 +6203,18 @@
           "sentiment_score": 0.8,
           "video_url": "",
           "extraction_mode": "gemini"
-        },
-        {
-          "video": "EP1094｜蘋果1.8奈米找英特爾，擔心台積電的時候都是買點？記憶體猛攻，三星罷工成關鍵？低軌衛星漲UFO概念？ft.題材獵人 林漢偉",
-          "channel": "兆華與股惑仔",
-          "date": "2026-05-11",
-          "text": "時候 他的利空跌下來 他會跟他的基本面 再去做一個再平衡 為什麼講到再平衡 因為我要請浩偉哥 講到記憶體這件事情了 記得之前記憶體 在長的時候就有提醒 他現貨價沒有 再長了要注意 而且那個時候 其實像美光的骨架 也是回檔的 也是回測的 可是後來就覺得不公平了 因為我們的記憶體 不斷地回測 可是美光海利是噴出 再噴出 不斷地噴出的情況下 我們又結束了第一季財報 好棒 讚實在太厲害了 那時候你就會希望 骨架跌到這邊 跟他的業績 和國際大廠的脈絡 進行一個再平衡 而且會有一些新的消息傳出來 例如說 大家為什麼要私募 去參加納雅科的私募 可能在納雅科不只是 希望我們做不到的產品給他做 也希望納雅科 有一些",
-          "matched_keyword": "美光",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.8,
-          "video_url": "",
-          "extraction_mode": "gemini"
         }
       ],
       "total_mentions": 30,
-      "sentiment_score": 0.592,
+      "sentiment_score": 0.598,
       "daily": {
+        "2026-06-10": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        },
         "2026-06-09": {
           "mentions": 1,
           "bullish": 1,
@@ -6307,13 +6328,6 @@
           "sentiment_score": 0.575
         },
         "2026-05-12": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 0.8
-        },
-        "2026-05-11": {
           "mentions": 1,
           "bullish": 1,
           "bearish": 0,
@@ -25023,7 +25037,7 @@
       "code": "CCL",
       "name": "Carnival",
       "market": "US",
-      "sector": "消費電子",
+      "sector": "零售電商",
       "contexts": [
         {
           "video": "EP213 | 台、美股重點一次說，台股反彈怎麼看？美股極度恐慌後的觀察重點，南俊國際與滑軌需求，設備股後勢",
@@ -27372,7 +27386,7 @@
       "code": "TECH",
       "name": "Bio-Techne",
       "market": "US",
-      "sector": "醫療",
+      "sector": "生技製藥",
       "contexts": [
         {
           "video": "EP653 | 🕊️",
@@ -48379,6 +48393,87 @@
       }
     },
     {
+      "code": "6210",
+      "name": "慶生",
+      "market": "TW",
+      "sector": "資訊服務",
+      "contexts": [
+        {
+          "video": "EP662 | ⛑️",
+          "channel": "股癌",
+          "date": "2026-05-16",
+          "text": "喝邊的風 再吹著頭發飄東 就像簡單愛古來的優質好節目 因為憑證英雄的 邏輯魔法師 家人們及室的 猛攻老公 那請老公用猛男的聲音 帶驚喜感 那祝福邏輯魔法師的 家人們5月17號 生日快樂 我一定好飯店要慶生 謝謝夢攻 老公愛你 下面一位 坦肯齊 發瘋啦 嚴厲斥責 猛攻請幫我用川普的聲音說 Oh I like China Yeah 那這裡的3K真好玩 下面一位 Bonnie Pitt 你的好鄰居 Monochka 你好 我的生活圈跟你幾乎重疊 超常遇到你看你的家人 很常早上帶狗狗散步 都會看到你老婆帶著小兒子散步 但都沒有你 想說你是不是去打網球 那這是留言也沒有要說什麼 只是覺得為什麼你業配情趣 用",
+          "matched_keyword": "慶生",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP664 | 🐟",
+          "channel": "股癌",
+          "date": "2026-05-23",
+          "text": "的 你當初不是講說 他健康快樂就好 你怎麼現在要求一大堆 我希望我一直 可以維持這樣的初衷 我下面有一位 大豬豬反方向的中 穿梭時間的畫面如中 從反方向開始移動 安安 夢宮恰卡 雖然知道 您不怎麼喜歡慶生 但還是要預祝您生日快樂 吃骨擋擋噴高高 也祝您一家和古友們 身體健康 失去瞬間感愛 您PS 怕到時候留不到 所以提早開始留言 這個還是蠻感動的 雖然我自己 對我真的沒有在過生日 我自己也會忘記自己的生日 我什麼的 那只是 非常感謝一些聽眾 有記得小弟的生日 光這樣子 我就覺得非常開心 那也希望您 平安健康快樂 下面有一位 ROPERT 槓桿夢宮恰卡 午安 我有一個三月入股市的朋友 每天都在說 怎",
+          "matched_keyword": "慶生",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP664 | 🐟",
+          "channel": "股癌",
+          "date": "2026-05-23",
+          "text": "送給我們家最愛夢宮的 左鷹區骨海女神 本來今年排班輪到地底來搶留言 但是兒子畢竟比較不靠譜 結論夢宮還是一定要生女兒 而且跟你越像 你越知道要愛他一輩子 瓜好笑 那祝媽咪永遠這麼健康喜樂 希望你在國外慶生的旅程中 聽到留言 但失敗 繼續努力到 母親節也都沒有成功 但不管哪一天都一樣 那最後請用某男的聲音 阿牧我們永遠愛你 這個好像很常看到 左鷹區女古神 還是說左鷹區有很多個女古神之類 但這個應該是一個 很合樂的熔熔的家庭 整天都要來幫他媽媽留言 希望這個地方的 自身美少女 這個身體健康快樂平安 下面有位 Vander Dung 設備蠟場狗 夢宮Chika 我是在Vander工作的打工仔 去年兩個二",
+          "matched_keyword": "慶生",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP669 | 🎈",
+          "channel": "股癌",
+          "date": "2026-06-10",
+          "text": "那是自己的目標了 那邊可以去 持續的成長大概是很好 只是說把所有的經歷都丟在那 那我就沒有這麼喜歡 所以當然我今年的願望 還是希望身體健康 不管是對自己 或是家人朋友都是 那像是昨天有一些朋友 在幫我慶生的時候 那吹蠟燭的時候 也是在講身體健康 因為其實對於 像自己或是身邊的人來講 身體健康真的是最重要的東西 已經沒有什麼比這個更重要 然後以前可能還會 到20幾歲的時候 一些身邊的朋友聚在一起 會講說希望大家快點發財 可是我覺得這幾天的行情 沒有發財的人可能是少數 所以當然我們講這個 沒有要去刺激任何人的意思 就是說在自己的觀察 生活權真的就是這樣一個情形 所以就是身體健康 變成是大家最重要的東西",
+          "matched_keyword": "慶生",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        }
+      ],
+      "total_mentions": 4,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-05-16": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-05-23": {
+          "mentions": 2,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 2,
+          "sentiment_score": 0.5
+        },
+        "2026-06-10": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
       "code": "5475",
       "name": "德宏",
       "market": "TW",
@@ -50393,68 +50488,6 @@
           "bullish": 0,
           "bearish": 0,
           "neutral": 1,
-          "sentiment_score": 0.5
-        }
-      }
-    },
-    {
-      "code": "6210",
-      "name": "慶生",
-      "market": "TW",
-      "sector": "資訊服務",
-      "contexts": [
-        {
-          "video": "EP662 | ⛑️",
-          "channel": "股癌",
-          "date": "2026-05-16",
-          "text": "喝邊的風 再吹著頭發飄東 就像簡單愛古來的優質好節目 因為憑證英雄的 邏輯魔法師 家人們及室的 猛攻老公 那請老公用猛男的聲音 帶驚喜感 那祝福邏輯魔法師的 家人們5月17號 生日快樂 我一定好飯店要慶生 謝謝夢攻 老公愛你 下面一位 坦肯齊 發瘋啦 嚴厲斥責 猛攻請幫我用川普的聲音說 Oh I like China Yeah 那這裡的3K真好玩 下面一位 Bonnie Pitt 你的好鄰居 Monochka 你好 我的生活圈跟你幾乎重疊 超常遇到你看你的家人 很常早上帶狗狗散步 都會看到你老婆帶著小兒子散步 但都沒有你 想說你是不是去打網球 那這是留言也沒有要說什麼 只是覺得為什麼你業配情趣 用",
-          "matched_keyword": "慶生",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP664 | 🐟",
-          "channel": "股癌",
-          "date": "2026-05-23",
-          "text": "的 你當初不是講說 他健康快樂就好 你怎麼現在要求一大堆 我希望我一直 可以維持這樣的初衷 我下面有一位 大豬豬反方向的中 穿梭時間的畫面如中 從反方向開始移動 安安 夢宮恰卡 雖然知道 您不怎麼喜歡慶生 但還是要預祝您生日快樂 吃骨擋擋噴高高 也祝您一家和古友們 身體健康 失去瞬間感愛 您PS 怕到時候留不到 所以提早開始留言 這個還是蠻感動的 雖然我自己 對我真的沒有在過生日 我自己也會忘記自己的生日 我什麼的 那只是 非常感謝一些聽眾 有記得小弟的生日 光這樣子 我就覺得非常開心 那也希望您 平安健康快樂 下面有一位 ROPERT 槓桿夢宮恰卡 午安 我有一個三月入股市的朋友 每天都在說 怎",
-          "matched_keyword": "慶生",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP664 | 🐟",
-          "channel": "股癌",
-          "date": "2026-05-23",
-          "text": "送給我們家最愛夢宮的 左鷹區骨海女神 本來今年排班輪到地底來搶留言 但是兒子畢竟比較不靠譜 結論夢宮還是一定要生女兒 而且跟你越像 你越知道要愛他一輩子 瓜好笑 那祝媽咪永遠這麼健康喜樂 希望你在國外慶生的旅程中 聽到留言 但失敗 繼續努力到 母親節也都沒有成功 但不管哪一天都一樣 那最後請用某男的聲音 阿牧我們永遠愛你 這個好像很常看到 左鷹區女古神 還是說左鷹區有很多個女古神之類 但這個應該是一個 很合樂的熔熔的家庭 整天都要來幫他媽媽留言 希望這個地方的 自身美少女 這個身體健康快樂平安 下面有位 Vander Dung 設備蠟場狗 夢宮Chika 我是在Vander工作的打工仔 去年兩個二",
-          "matched_keyword": "慶生",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        }
-      ],
-      "total_mentions": 3,
-      "sentiment_score": 0.5,
-      "daily": {
-        "2026-05-16": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-05-23": {
-          "mentions": 2,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 2,
           "sentiment_score": 0.5
         }
       }
@@ -52834,7 +52867,7 @@
       "code": "CHTR",
       "name": "Charter Communications",
       "market": "US",
-      "sector": "AI網路",
+      "sector": "通訊媒體",
       "contexts": [
         {
           "video": "EP649 | 💌",
@@ -52982,7 +53015,7 @@
       "code": "CHT",
       "name": "Charter Communications",
       "market": "US",
-      "sector": "其他",
+      "sector": "AI網路",
       "contexts": [
         {
           "video": "2026/04/27(一) 費半創紀18連漲，還能進場嗎？Intel暴漲20%，財報透露什麼？",
@@ -56148,7 +56181,7 @@
       "code": "DECK",
       "name": "Deckers Brands",
       "market": "US",
-      "sector": "消費電子",
+      "sector": "零售電商",
       "contexts": [
         {
           "video": "EP656 | 🍇",
@@ -58076,6 +58109,56 @@
       }
     },
     {
+      "code": "00929",
+      "name": "復華台灣科技優息",
+      "market": "TW",
+      "sector": "ETF・高股息",
+      "contexts": [
+        {
+          "video": "EP325 撞不夠才賺不夠",
+          "channel": "投資癮",
+          "date": "2026-04-19",
+          "text": "的狀況是這樣子 我記得當天在下單的時候 就是一開盤就狀況不錯 創新高 基本上那個量體又很大 我幾乎每個帳戶都拿出來打打打打 後來才發現 為什麼我這個帳戶的東西 都沒有變化 而那一瞬間我就想到 應該是當機了 因為當機這件事情 又不是第一次發生 而且不是發現在台新證券 其實很多券商都發生當機的問題 只是929是大家過了 就沒有拿出來討論 所以我一直都認為 分開不同的帳戶 分開不同的券商 其實面對這種問題的時候 影響會小一點點 但這種東西不是第一次發生 但那種第一次面對這種事情 會很大聲 但其實解決的方式 就是用不同的帳戶 去做一些買跟賣動作 賣的部分就比較難一點 因為它卡單了 那卡單的情況下 當機的情況",
+          "matched_keyword": "929",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP669 | 🎈",
+          "channel": "股癌",
+          "date": "2026-06-10",
+          "text": "你就立刻知道說 OK 為什麼有些人對你會有一些意見 也不說怎麼他們一定是 Lesser 他們一定是比你不如或什麼 只是就是 不知道大家怎麼能 我想要去表達的意思 反正就是你查完之後 你會釋懷 那當然929之後就知道說 那你不用去對每個人講的東西 那我的在意 因為你可能 不會想要變成他 你懂我意思嗎 所以我現在想法是這樣子 我去聽到一個批評 我後來比較有感覺的是 你如果是我想要變成的人 你是我的偶像 或者是說你是我的榜樣 我就會覺得蠻難過的 我可能就會剝離心 我就會去思考說 是不是我哪來做錯什麼 可是 如果你只是一個網友 或是一個朋友 或甚至是你是我的某一個家人 我重視你 但是你不是我Look Up",
+          "matched_keyword": "929",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        }
+      ],
+      "total_mentions": 2,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-04-19": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-06-10": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
       "code": "3040",
       "name": "遠見",
       "market": "TW",
@@ -58379,7 +58462,7 @@
       "code": "ABNB",
       "name": "Airbnb",
       "market": "US",
-      "sector": "消費",
+      "sector": "零售電商",
       "contexts": [
         {
           "video": "2026/04/02 (四）史上最大IPO， SpaceX 要來了！",
@@ -58649,7 +58732,7 @@
       "code": "SATS",
       "name": "EchoStar",
       "market": "US",
-      "sector": "通訊媒體",
+      "sector": "AI網路",
       "contexts": [
         {
           "video": "2026/03/24 (二）川普TACO， 反彈該跑？輝達(NVDA) 佈局電力",
@@ -59789,7 +59872,7 @@
       "code": "BIIB",
       "name": "Biogen",
       "market": "US",
-      "sector": "醫療",
+      "sector": "生技製藥",
       "contexts": [
         {
           "video": "2026/04/16 (四）美股創新高 ，泡沫示警？ASML財報，Tesla AI5晶片設計定案",
@@ -60604,37 +60687,6 @@
           "bearish": 1,
           "neutral": 0,
           "sentiment_score": 0.0
-        }
-      }
-    },
-    {
-      "code": "00929",
-      "name": "復華台灣科技優息",
-      "market": "TW",
-      "sector": "ETF・高股息",
-      "contexts": [
-        {
-          "video": "EP325 撞不夠才賺不夠",
-          "channel": "投資癮",
-          "date": "2026-04-19",
-          "text": "的狀況是這樣子 我記得當天在下單的時候 就是一開盤就狀況不錯 創新高 基本上那個量體又很大 我幾乎每個帳戶都拿出來打打打打 後來才發現 為什麼我這個帳戶的東西 都沒有變化 而那一瞬間我就想到 應該是當機了 因為當機這件事情 又不是第一次發生 而且不是發現在台新證券 其實很多券商都發生當機的問題 只是929是大家過了 就沒有拿出來討論 所以我一直都認為 分開不同的帳戶 分開不同的券商 其實面對這種問題的時候 影響會小一點點 但這種東西不是第一次發生 但那種第一次面對這種事情 會很大聲 但其實解決的方式 就是用不同的帳戶 去做一些買跟賣動作 賣的部分就比較難一點 因為它卡單了 那卡單的情況下 當機的情況",
-          "matched_keyword": "929",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        }
-      ],
-      "total_mentions": 1,
-      "sentiment_score": 0.5,
-      "daily": {
-        "2026-04-19": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
         }
       }
     },
@@ -63131,7 +63183,7 @@
       "code": "DDOG",
       "name": "Datadog",
       "market": "US",
-      "sector": "AI軟體",
+      "sector": "AI網路",
       "contexts": [
         {
           "video": "2026/05/08(五)美股下跌還能買嗎？ #ANET #DDOG #FTNT",
@@ -67202,6 +67254,68 @@
           "sentiment_score": 0.4
         }
       }
+    },
+    {
+      "code": "9955",
+      "name": "佳龍",
+      "market": "TW",
+      "sector": "綠能環保",
+      "contexts": [
+        {
+          "video": "EP669 | 🎈",
+          "channel": "股癌",
+          "date": "2026-06-10",
+          "text": "下面一位 Anzo Chen 安安你好 幾歲給虧嗎 公公台中有很多的大坪數房子 不考慮嗎 四房五房一定都是可以的 而且電梯不太會遇到人 那甚至有某建案號稱 秘書會全力幫忙控制電梯 不要遇到人 搜尋一下9955的住處 我覺得蠻不錯的 不太會遇到人 來台中當鄰居 把手牽手一起吃 皮諾可格愛妮 其實我最早去選擇林口 是因為我想要去離開台北市 然後去找人少一點的地方 那只是現在在林口 算是定下來 因為小朋友在那邊念書 那這個念書的地方 就是可以一路直升到高中的 那說不定後面就銜接 不管是在台灣 或是去海外念大學 這個太遠了 我沒有辦法去想像 那總之就是目前覺得這邊 養小孩子非常合適 所以因為是想要沒有人而來",
+          "matched_keyword": "9955",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-06-10": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
+      "code": "XYZ",
+      "name": "Block, Inc.",
+      "market": "US",
+      "sector": "金融",
+      "contexts": [
+        {
+          "video": "EP668 | 🦞",
+          "channel": "股癌",
+          "date": "2026-06-06",
+          "text": "ied Memory 就是說他把整個記憶體的 Pro都可以拿來用 所以我可以放進去更大的模型 我可以一次處理更多的參數 那所以呢 他有去展示 像他可以去把New York City 可能包30到50 block之間的一個 地貌之階 在一瞬間就Render出來 而且他的速度超級快 他不會因為說什麼你轉頭 然後他就需要去載路 或者說會卡頓之類的 非常的順 我覺得想說 因為以前我們都知道說 每次的GTA出來 他就是一個硬體大屠殺 甚至是可能連 當下檯面上最強大的硬體 都沒有辦法去跑他的最高效能 你要等到可能一兩年之後才有辦法 那今年呢 我覺得會有一些變化 就是可能在AI的輔助之下 不管是NV 那什麼DLSS什",
+          "matched_keyword": "Block",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-06-06": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
     }
   ],
   "sectors_ranking": [
@@ -67447,7 +67561,7 @@
     {
       "sector": "金融",
       "market": "US",
-      "total_mentions": 65,
+      "total_mentions": 66,
       "stock_codes": [
         "GS",
         "MS",
@@ -67464,7 +67578,8 @@
         "BRK.B",
         "AIG",
         "C",
-        "HBAN"
+        "HBAN",
+        "XYZ"
       ]
     },
     {
@@ -67572,16 +67687,6 @@
       ]
     },
     {
-      "sector": "消費電子",
-      "market": "US",
-      "total_mentions": 49,
-      "stock_codes": [
-        "AAPL",
-        "CCL",
-        "DECK"
-      ]
-    },
-    {
       "sector": "被動元件",
       "market": "TW",
       "total_mentions": 49,
@@ -67608,6 +67713,19 @@
       ]
     },
     {
+      "sector": "AI網路",
+      "market": "US",
+      "total_mentions": 47,
+      "stock_codes": [
+        "AVGO",
+        "CSCO",
+        "ANET",
+        "CHT",
+        "SATS",
+        "DDOG"
+      ]
+    },
+    {
       "sector": "面板",
       "market": "TW",
       "total_mentions": 47,
@@ -67618,26 +67736,15 @@
       ]
     },
     {
-      "sector": "AI網路",
-      "market": "US",
-      "total_mentions": 45,
-      "stock_codes": [
-        "AVGO",
-        "CSCO",
-        "ANET",
-        "CHTR"
-      ]
-    },
-    {
       "sector": "資訊服務",
       "market": "TW",
-      "total_mentions": 45,
+      "total_mentions": 46,
       "stock_codes": [
         "6274",
         "6597",
+        "6210",
         "6217",
         "8042",
-        "6210",
         "5381",
         "6664",
         "5439",
@@ -67743,6 +67850,21 @@
       ]
     },
     {
+      "sector": "零售電商",
+      "market": "US",
+      "total_mentions": 38,
+      "stock_codes": [
+        "CCL",
+        "COST",
+        "WMT",
+        "DASH",
+        "TGT",
+        "DECK",
+        "ABNB",
+        "BKNG"
+      ]
+    },
+    {
       "sector": "PCB載板",
       "market": "TW",
       "total_mentions": 37,
@@ -67819,6 +67941,14 @@
       ]
     },
     {
+      "sector": "消費電子",
+      "market": "US",
+      "total_mentions": 30,
+      "stock_codes": [
+        "AAPL"
+      ]
+    },
+    {
       "sector": "ETF・科技",
       "market": "TW",
       "total_mentions": 30,
@@ -67864,20 +67994,6 @@
       ]
     },
     {
-      "sector": "醫療",
-      "market": "US",
-      "total_mentions": 28,
-      "stock_codes": [
-        "TECH",
-        "UNH",
-        "HUM",
-        "CVS",
-        "BIIB",
-        "CI",
-        "CNC"
-      ]
-    },
-    {
       "sector": "伺服器",
       "market": "US",
       "total_mentions": 27,
@@ -67902,11 +68018,10 @@
     {
       "sector": "AI軟體",
       "market": "US",
-      "total_mentions": 24,
+      "total_mentions": 23,
       "stock_codes": [
         "AI",
         "SNOW",
-        "DDOG",
         "PLTR",
         "MDB"
       ]
@@ -67962,6 +68077,20 @@
       ]
     },
     {
+      "sector": "ETF・高股息",
+      "market": "TW",
+      "total_mentions": 22,
+      "stock_codes": [
+        "00940",
+        "00900",
+        "0056",
+        "00713",
+        "00929",
+        "00878",
+        "00919"
+      ]
+    },
+    {
       "sector": "金融保險業",
       "market": "TW",
       "total_mentions": 21,
@@ -67984,20 +68113,6 @@
         "2471",
         "6112",
         "3029"
-      ]
-    },
-    {
-      "sector": "ETF・高股息",
-      "market": "TW",
-      "total_mentions": 21,
-      "stock_codes": [
-        "00940",
-        "00900",
-        "0056",
-        "00713",
-        "00929",
-        "00878",
-        "00919"
       ]
     },
     {
@@ -68070,6 +68185,17 @@
       ]
     },
     {
+      "sector": "生技製藥",
+      "market": "US",
+      "total_mentions": 19,
+      "stock_codes": [
+        "TECH",
+        "MRNA",
+        "BIIB",
+        "LLY"
+      ]
+    },
+    {
       "sector": "網通",
       "market": "TW",
       "total_mentions": 19,
@@ -68120,18 +68246,6 @@
         "3045",
         "2412",
         "4904"
-      ]
-    },
-    {
-      "sector": "零售電商",
-      "market": "US",
-      "total_mentions": 18,
-      "stock_codes": [
-        "COST",
-        "WMT",
-        "DASH",
-        "TGT",
-        "BKNG"
       ]
     },
     {
@@ -68314,6 +68428,18 @@
         "6188",
         "3349",
         "3272"
+      ]
+    },
+    {
+      "sector": "醫療",
+      "market": "US",
+      "total_mentions": 11,
+      "stock_codes": [
+        "UNH",
+        "HUM",
+        "CVS",
+        "CI",
+        "CNC"
       ]
     },
     {
@@ -68521,14 +68647,13 @@
       ]
     },
     {
-      "sector": "其他",
+      "sector": "通訊媒體",
       "market": "US",
       "total_mentions": 5,
       "stock_codes": [
-        "CHT",
-        "SPY",
-        "BE",
-        "CFLT"
+        "CHTR",
+        "T",
+        "VZ"
       ]
     },
     {
@@ -68569,26 +68694,6 @@
       ]
     },
     {
-      "sector": "消費",
-      "market": "US",
-      "total_mentions": 4,
-      "stock_codes": [
-        "GRMN",
-        "NKE",
-        "ABNB"
-      ]
-    },
-    {
-      "sector": "通訊媒體",
-      "market": "US",
-      "total_mentions": 4,
-      "stock_codes": [
-        "T",
-        "SATS",
-        "VZ"
-      ]
-    },
-    {
       "sector": "文化創意",
       "market": "TW",
       "total_mentions": 4,
@@ -68623,6 +68728,15 @@
       ]
     },
     {
+      "sector": "消費",
+      "market": "US",
+      "total_mentions": 3,
+      "stock_codes": [
+        "GRMN",
+        "NKE"
+      ]
+    },
+    {
       "sector": "ETF・槓桿反向",
       "market": "TW",
       "total_mentions": 3,
@@ -68638,6 +68752,16 @@
       "stock_codes": [
         "6505",
         "9926"
+      ]
+    },
+    {
+      "sector": "綠能環保",
+      "market": "TW",
+      "total_mentions": 3,
+      "stock_codes": [
+        "8440",
+        "3551",
+        "9955"
       ]
     },
     {
@@ -68661,29 +68785,21 @@
       ]
     },
     {
+      "sector": "其他",
+      "market": "US",
+      "total_mentions": 3,
+      "stock_codes": [
+        "SPY",
+        "BE",
+        "CFLT"
+      ]
+    },
+    {
       "sector": "電源IC",
       "market": "TW",
       "total_mentions": 2,
       "stock_codes": [
         "6138"
-      ]
-    },
-    {
-      "sector": "綠能環保",
-      "market": "TW",
-      "total_mentions": 2,
-      "stock_codes": [
-        "8440",
-        "3551"
-      ]
-    },
-    {
-      "sector": "生技製藥",
-      "market": "US",
-      "total_mentions": 2,
-      "stock_codes": [
-        "MRNA",
-        "LLY"
       ]
     },
     {
@@ -74411,6 +74527,25 @@
         "2317",
         "TSLA",
         "2382"
+      ],
+      "analysis_source": "whisper",
+      "thumbnail_url": null
+    },
+    {
+      "video_id": "f208d558-a3a0-4812-a19a-777c69ac31bf",
+      "title": "EP669 | 🎈",
+      "channel": "股癌",
+      "date": "2026-06-10",
+      "stocks_found": [
+        "00929",
+        "INTC",
+        "GOOGL",
+        "AAPL",
+        "6210",
+        "MU",
+        "9955",
+        "2330",
+        "2454"
       ],
       "analysis_source": "whisper",
       "thumbnail_url": null
