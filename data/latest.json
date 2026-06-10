@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-10T20:16:04",
+  "updated_at": "2026-06-10T20:30:06",
   "stocks_ranking": [
     {
       "code": "INTC",
@@ -1511,6 +1511,18 @@
       "sector": "雲端/AI",
       "contexts": [
         {
+          "video": "EP233 | CPO&HVDC 利空解讀 ，營建股突然上漲 ? 台股系統性風險 ？",
+          "channel": "韭菜畢業班",
+          "date": "2026-06-10",
+          "text": "一個 ASK也就是交換晶片的話 你直接去驅動光的這個元件 那這個東西的話 最主要的一個困難點 就是在於說 它的傳輸距離其實是相對受限的 可能就只有在500米內 但這個LPO的話 其實早就已經上用了 在META 然後還有其他的 北美的這些CSP的部分 2026年就已經大規模的開始使用 然後出貨量也達到千萬支 大概就像是中繼續創的部分的話 也是Google的LPO的一個 非常關鍵的一個供應商 那再來就是下一代 那就是NPO 那NPO的部分的話就是進風裝光學 進風裝光學的話 其實很不能去粗略掉的東西的話 其實就是LUMENTAL 那有些人覺得 我這個地方 我看到這一篇報導出來的時候 首先我自己是會先挖上一個",
+          "matched_keyword": "Meta",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
           "video": "EP1115｜只殺一天夠嗎？外資調升國巨、金像電、大立光評價，5月營收持續好，AI底氣勝出！若是再跌升息恐懼，就更該買？ft.AI達人 蔡明翰",
           "channel": "兆華與股惑仔",
           "date": "2026-06-09",
@@ -1860,23 +1872,18 @@
           "video_url": "",
           "extraction_mode": "gemini",
           "whisper_corrected": true
-        },
-        {
-          "video": "EP1097｜川習會激勵美股，對台股的利弊如何看？三星準罷工，記憶體再漲波段？被動全族群表態！Q1季報觀察重點？ft.報價天王 林信富",
-          "channel": "兆華與股惑仔",
-          "date": "2026-05-14",
-          "text": "說 突然如果說被裁員 或者說被這個 這個出現一些這個 經濟狀況的一個情況 那我相信AI的普及 會有兩個方向發展 第一個就是基礎的白領工作 未來勢必會漸漸被取代 我們看到其實 包括科技公司也在裁員 之前META也在裁員 他們賺很多錢但裁員 對 為什麼 因為你的工作的內容 可能基礎倒已經可以被AI 的流程自動化給取代掉 那當然公司 就會考量成本的問題 把這個裁掉 所以如果是基礎的白領 那這個可能也是要點危機意識 不然就是趕快去學一點AI的東西 再來另外一個可能比較有發展 認為就是AI目前還取代不了的 你現在AI還沒有辦法這樣 去種水果 種大名 所以如果可以學習一些 能夠在這個現實世界裡面 目前還不會被AI",
-          "matched_keyword": "Meta",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
         }
       ],
       "total_mentions": 30,
       "sentiment_score": 0.553,
       "daily": {
+        "2026-06-10": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
         "2026-06-09": {
           "mentions": 2,
           "bullish": 1,
@@ -1990,13 +1997,6 @@
           "sentiment_score": 0.5
         },
         "2026-05-15": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-05-14": {
           "mentions": 1,
           "bullish": 0,
           "bearish": 0,
@@ -5409,6 +5409,18 @@
           "extraction_mode": "keyword"
         },
         {
+          "video": "EP233 | CPO&HVDC 利空解讀 ，營建股突然上漲 ? 台股系統性風險 ？",
+          "channel": "韭菜畢業班",
+          "date": "2026-06-10",
+          "text": "只有在500米內 但這個LPO的話 其實早就已經上用了 在META 然後還有其他的 北美的這些CSP的部分 2026年就已經大規模的開始使用 然後出貨量也達到千萬支 大概就像是中繼續創的部分的話 也是Google的LPO的一個 非常關鍵的一個供應商 那再來就是下一代 那就是NPO 那NPO的部分的話就是進風裝光學 進風裝光學的話 其實很不能去粗略掉的東西的話 其實就是LUMENTAL 那有些人覺得 我這個地方 我看到這一篇報導出來的時候 首先我自己是會先挖上一個問號 就是說 這個有一點偏向是我們以前 其實就已經有討論過 我們也知道這些量率的問題的 那現在又再被拉出來講一次 那有點就是 在大盤不好的情況下",
+          "matched_keyword": "Google",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
           "video": "2026/06/09 (二) 反彈了，該跑嗎？",
           "channel": "財女珍妮",
           "date": "2026-06-09",
@@ -5732,29 +5744,17 @@
           "sentiment_score": 0.5,
           "video_url": "",
           "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP229 | 台、美股重點一次說，美光HBM長約與估值重估，Google TPU帶動聯發科，功率半導體漲價與ABF、玻璃基板後勢",
-          "channel": "韭菜畢業班",
-          "date": "2026-05-27",
-          "text": "心 好那再來就是說 最近我不知道大家有沒有感覺到 就是聯發科 大家真的是非常的強 就是一路衝 一千六百塊 然後噴到現在已經是四千兩百塊了 那聯發科其實大致上我覺得 話題之前可能市場會比較擔心 說接下來Google 他替Google設計了這個兩奈米的TPU 然後可能會因為一些先進風裝 或者是說一些技術上面的驗證 去做一個卡關 但是就是等於是 二零二八年它的出貨 可能就會有所限制 但是如果說大家去看 Intel現在目前的狀況的話 兩利率是有所提升 那當然兩利率上 我覺得市場雖然說是九成以上 但我們之前有講過 就如果說要真的把它砍進去 然後真的要使用的話 兩利率基本上還是會下降的 但是這個也可以讓市場 原本擔心",
-          "matched_keyword": "Google",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
         }
       ],
       "total_mentions": 30,
       "sentiment_score": 0.54,
       "daily": {
         "2026-06-10": {
-          "mentions": 2,
+          "mentions": 3,
           "bullish": 1,
           "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.75
+          "neutral": 2,
+          "sentiment_score": 0.667
         },
         "2026-06-09": {
           "mentions": 6,
@@ -5827,10 +5827,10 @@
           "sentiment_score": 0.5
         },
         "2026-05-27": {
-          "mentions": 2,
+          "mentions": 1,
           "bullish": 0,
           "bearish": 0,
-          "neutral": 2,
+          "neutral": 1,
           "sentiment_score": 0.5
         }
       }
@@ -5852,6 +5852,18 @@
           "sentiment_score": 1.0,
           "video_url": "",
           "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP233 | CPO&HVDC 利空解讀 ，營建股突然上漲 ? 台股系統性風險 ？",
+          "channel": "韭菜畢業班",
+          "date": "2026-06-10",
+          "text": "那其實光通相關的東西的話 主要的導火線還是在 其實跟上一次我們講 記憶體的那一個 看空的一個機構 反正就說了 接下來的 Ruby是帶他 其實不會用到這麼多的記憶體 HBM這樣子 那其實後面也可以看到 美光其實也是一下子 就反彈回去了 但是當這一個大盤 出現一個系統性風險的時候 只要你有一個壞故事丟出來 然後越多人一直在轉傳 然後甚至我們看到X上面 其實很多人 一直在議論紛紛這一件事情 其實這一件事情在 禮拜二的半夜的時候 其實就有廣傳 到禮拜三 所有東西都一起下殺下來之後 就開始有一點訊息爆炸式的成長 那這個東西的話 其實它就是一個看空的報告 那主要看空的報告 我跟各位報告 小伍知道還是有一些人 ",
+          "matched_keyword": "美光",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
         },
         {
           "video": "2026/06/09 (二) 反彈了，該跑嗎？",
@@ -6191,29 +6203,17 @@
           "sentiment_score": 0.3,
           "video_url": "",
           "extraction_mode": "gemini"
-        },
-        {
-          "video": "2026/05/12(二) 美股狂牛，才剛開始？半導體是不是漲到壞掉了？",
-          "channel": "財女珍妮",
-          "date": "2026-05-12",
-          "text": "情況 然後如果產能停滯的話 你看這會變成一種 效應的眼神 恐慌情緒的發散 所以在短期之內 就會去影響股價 那今天你做不出來 那受惠的人 當然就是你的競爭對手嘛 敵人的痛苦就是我的快樂 對不對 所以呢像美光 是不是就是一個很大的受惠 所以他就直接 就是分析師把美光的目標架 直接去拉到一切美元 我覺得這件事情就是 大家自己稍微看一下 我也不會覺得 這件事情就是美光 長的一個主要原因 因為很多東西都是結果論嘛 如果你今天就是用後照鏡 再看你持有的股票 或者是在看你觀察的公司的話 你會覺得好像都很合理 但是你有辦法在試前 你已經知道 喔這件事情他會發生 所以股價才會這樣 基本上我覺得罷工這件事情呢 就是一",
-          "matched_keyword": "美光",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.8,
-          "video_url": "",
-          "extraction_mode": "gemini"
         }
       ],
       "total_mentions": 30,
-      "sentiment_score": 0.598,
+      "sentiment_score": 0.588,
       "daily": {
         "2026-06-10": {
-          "mentions": 1,
+          "mentions": 2,
           "bullish": 1,
           "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 1.0
+          "neutral": 1,
+          "sentiment_score": 0.75
         },
         "2026-06-09": {
           "mentions": 1,
@@ -6326,13 +6326,6 @@
           "bearish": 1,
           "neutral": 2,
           "sentiment_score": 0.575
-        },
-        "2026-05-12": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 0.8
         }
       }
     },
@@ -6342,6 +6335,30 @@
       "market": "US",
       "sector": "電動車",
       "contexts": [
+        {
+          "video": "EP233 | CPO&HVDC 利空解讀 ，營建股突然上漲 ? 台股系統性風險 ？",
+          "channel": "韭菜畢業班",
+          "date": "2026-06-10",
+          "text": "計上面有問題的話 其實也都會一起去做一個 共同上面的解決 然後再來就是 我們可以看到 像是台大店的BPU的話Q1 它的一個出貨 其實對於這些東西 其實也都是有受惠的 同時我覺得 丁的東西 還有像是它跟特斯拉的一個合作 那除能系統上面來說的話 它會是一個相對重要的 一個供應商 那其次的 還有另外一件事情就是說 我們可以看到 為什麼會講這一個記點器 它的一個單價 其實比我們以前一般的 是高了接近20到30倍的 所以其實這個是相對多的 然後同時 如果我們可以看到 它目前的整體的營收結構 來講的話 其實伺服器的部分 並不是說到 占比非常的高 它可能占比 可能就是2026年 可能就是只有一個16% 但之後如果",
+          "matched_keyword": "特斯拉",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP233 | CPO&HVDC 利空解讀 ，營建股突然上漲 ? 台股系統性風險 ？",
+          "channel": "韭菜畢業班",
+          "date": "2026-06-10",
+          "text": "但它主要的營收結構來看的話 智慧電網 充電樁 然後一些逆變器 那這個營收結構的話 是大約佔據了七成 所以如果說大家去訂的話 也不要只看HVDC 它還是有其他的東西 只要如持續的發展的前提之下 不管是TESLA發展前提之下的話 它都有可能會因此而受惠 那當然HVDC的一個方案 這件事情並沒有打壓到 市場的一個反應 所以我就覺得說這一篇報導 就有點偏向是 系統性風險的一個下殺之下 全盤一起往下去打 有點就是我揍你一拳 然後你後面等於也會被我揍到 小鷹抓老雞 是老鷹抓小雞 靠背 總之我覺得今天大概是這樣子 然後最後跟各位報告一下 我們的產業地圖 623號 跟各位報告一下是晚上9點 好所以晚上9點 可以把時間",
+          "matched_keyword": "Tesla",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
         {
           "video": "2026/06/09 (二) 反彈了，該跑嗎？",
           "channel": "財女珍妮",
@@ -6678,35 +6695,18 @@
           "sentiment_score": 0.5,
           "video_url": "",
           "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP1090｜美伊吵也不怕，不休息的台股要硬買嗎？散戶開槓桿會爆掉嗎？下跌敢撿的人，上漲更有底氣進場？手中不動的持股如何處理？ft.AI達人 蔡明翰",
-          "channel": "兆華與股惑仔",
-          "date": "2026-05-05",
-          "text": "有時候算了 現在再做出三天的移民也來不及了 我乾脆直接跨入二奈米 那你三奈米都做不出來的 你跟我講說你要二 甚至一奈米都要繼續往前進 我自己是打一個很大的問號 那剛才提到任何 包含最早的部分是從這個 特斯拉那邊先說 他的這個半導體的部分 未來要跟intel下去做合作 其實最主要關鍵點 除了剛剛趙華提到 你永遠都跟一個供應商拿 當然會緊張之外 其實最重要關鍵點是拿不到 因為他的產能就這麼多 那最早就是馬斯克 他一直有很遠大的夢想 他的夢想結論很簡單 就是台積電一家的產能 都給他都不夠 所以他現在排隊 都只拿到其中的一小部分而已 他要他提出來的量 根本就是比台積電更大的量 所以我會覺得說 他會想辦法去找",
-          "matched_keyword": "特斯拉",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "2026/05/04(一) 伊朗提談判新方案，戰爭已結束？AI續強，軟體復活了嗎 #CAT #TEAM",
-          "channel": "財女珍妮",
-          "date": "2026-05-04",
-          "text": "力放近嗎 講氣力放近好像太過嚴重 就是你會覺得 大家好像還是會 趨向比較保守 或者是有一點獲利了解的賣壓 那整體的狀況呢 我覺得也是以大型的科技巨頭 作為主要的支撐 所以像是蘋果啊 微軟啊 亞馬遜啊 特斯拉啊 甚至像李萊啊 其實他們的表現都比較好 甚至我們在看軟體的時候呢 其實表現得也是非常的強勁 以及像記憶體 記憶體也是 不管你今天是在訓練啊 或者是你在AIA捲 就是未來到邊緣啊 中端裝置這邊的時候呢 它都還是會有非常大量的需求 所以 像Sandisk 我們在上個禮拜五的時候就有講嘛 你看基本面也沒問題 公司也是一直調高了 他們自己對於未來的預期啊 資本支出什麼的 但是市場有的時候 就是會有一些獲",
-          "matched_keyword": "Tesla",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "gemini"
         }
       ],
       "total_mentions": 30,
-      "sentiment_score": 0.512,
+      "sentiment_score": 0.495,
       "daily": {
+        "2026-06-10": {
+          "mentions": 2,
+          "bullish": 0,
+          "bearish": 1,
+          "neutral": 1,
+          "sentiment_score": 0.25
+        },
         "2026-06-09": {
           "mentions": 1,
           "bullish": 0,
@@ -6827,20 +6827,6 @@
           "sentiment_score": 0.5
         },
         "2026-05-06": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-05-05": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-05-04": {
           "mentions": 1,
           "bullish": 0,
           "bearish": 0,
@@ -26543,6 +26529,300 @@
       }
     },
     {
+      "code": "COHR",
+      "name": "Coherent",
+      "market": "US",
+      "sector": "光通訊",
+      "contexts": [
+        {
+          "video": "EP649 | 💌",
+          "channel": "股癌",
+          "date": "2026-04-01",
+          "text": "才買 可是你怎麼知道他買多少 這個錢是他什麼0.5%的現金 那他買這個東西 你在那邊幾次要半天 你不就覺得自己很好笑 人家只是隨便買 他只是這樣買菜一樣 那你以為說什麼 背後有超級大的陰謀的計畫 所以再來要稍微的注意一下 因為他過去 他其實買了滿多東西 像什麼 Synopsis Core with Coherent Lumentine 最新是兩個光通全包 Nabius Marvellous全包 那所以基本上的 你可以看到說他裡面 就你要把它湊在一起的話 OK 那像Synopsis就是 EDA的設計 那可能是 Fusion Chiplet的某種設計工具店 那Core with跟Nabius的話 可能就是說 De",
+          "matched_keyword": "COHR",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": null
+        },
+        {
+          "video": "EP1069｜這次伊朗沒否認，4月有好消息？昨天嚇出場，今天不敢追？熱門股全面回血，有部位但不冒險，這些ETF幫忙漲回來！ft.型男股神 陳威良",
+          "channel": "兆華與股惑仔",
+          "date": "2026-04-01",
+          "text": "種 極短線的 戰爭受惠股 可能就不是很適合自己 不是它不對 不是它不能做 而是沒有很適合自己 那AI所延伸出來的是 我比較有信心 就算現在我買高了 被短套了 但是未來這個大方向還在 就像我們看到 因為最近 其實從美股的 記憶體的美光Sendix 或者說在光通部分 像AXT 或者說像Lumanton Coherent 那這些個股 他們因為位階比較高 所以有時候突然 一天就給你 暴跌十幾% 但是像昨晚一反彈的時候 動不動也是可以拉出 二位數的漲過 那時間拉長來看 其實他們的一個 技術面的現行跟未接會說話 他們還是在相對的右上角 只是漲多之後 可能大家去做 月線的回測 或季線的回測 但是他們還是 是屬於一個 中長期",
+          "matched_keyword": "COHR",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.8,
+          "video_url": null
+        },
+        {
+          "video": "2026/03/24 (二）川普TACO， 反彈該跑？輝達(NVDA) 佈局電力",
+          "channel": "財女珍妮",
+          "date": "2026-03-24",
+          "text": "是突然就跳到Vertif上面 因為Vertif它其實主要也是做 散熱管理冷卻系統的一家公司 而且昨天有一個小小的 不能算是亮點 因為現在加入到 SNP500指數成分股裡面 大家已經不覺得 就是B漲的一個訊號了 但是因為昨天就是 SNP500指數 季度成分股的調整 除了Vertif之外 Lutman、Coherent、EchoStar 其實都有被加到 這個SNP500指數裡面 那最有話題性 或者是我自己 其實本來就也有在關注 除了我們跟大家講過的光通 光通已經講過很多次了 再來就是散熱跟電力 Vertif其實也是我們 一直關注的公司 那這家公司主要就是 像資料中心的冷卻系統 電源管理 然後它是做一個 完整的一條",
+          "matched_keyword": "Coherent",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
+        },
+        {
+          "video": "EP653 | 🕊️",
+          "channel": "股癌",
+          "date": "2026-04-15",
+          "text": "會學大人 現在他發脾氣也都用吼的 不過又怕影響到別人 哈哈順便想問您一下 美股的前五大持股 跟抱得住的原因 方便在分享即可 愛您祝您一家健康平安 目前的持股比較大 就是CPU 然後再來就是Marvel 那CPU的話 是買Intel arm 然後跟這個AMD 那再來光通也買滿多的 像Lomantin跟Cohirin 那Cloudflare也買滿多的 還有Tesla也買滿多的 那大概就是這幾檔 是我目前比較主要的持股 那當然會再變動 然後接下來說 以目前CPU的話 我覺得應該還有機會再繼續走 可是Marvel 因為他的利多 就是我買的利多 我已經出來了 所以如果這邊他沒有繼續走的話 他很快就會掉出我的主要持股",
+          "matched_keyword": "Cohirin",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": ""
+        },
+        {
+          "video": "EP1077｜台股大跨步37000點！賣飛正常，如何重新買回來？台積法說若回檔，設備好機會？PCB、CPO強恆強，被動元件真漲價？ft.報價天王 林信富",
+          "channel": "兆華與股惑仔",
+          "date": "2026-04-15",
+          "text": "你去看 這個 美國的這些光通訊的股票 其實不管像是 Lumatin 這個Coherin",
+          "matched_keyword": "Coherin",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": ""
+        },
+        {
+          "video": "2026/04/15 (三）納指10連漲， 巨頭終於要動了？AVGO, MRVL, CRDO噴出",
+          "channel": "財女珍妮",
+          "date": "2026-04-15",
+          "text": "逆的趨勢 所以你今天你要去買光通的時候 你會買的公司 其實大概也就是那些 因為我們剛剛講到了 這些公司其實他的客戶很集中 但是這些集中的客戶 他的下游廠商 他也希望可以去分散 問題是你要技術好 然後又可以做得出來 然後又可以交貨順產的公司 其實也是沒幾家嘛 所以我們看到 輝達他有去砸了二十億 給這個coherent跟luminten 對luminten 對 然後還有 剛剛有人在youtube 跟我講那個發音的問題 他有現在有點怪怪的 好 ok沒差 這個就是心理作用 好像光模組供應鏈呢 然後他們輝達就是希望 可以把未來這個供應鏈 就是他的這個上游 來源啊這些東西 然後可以去做鎖住 那mafio呢也用五十五億 然",
+          "matched_keyword": "Coherent",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": ""
+        },
+        {
+          "video": "EP220 | 台、美股重點一次說， ETF投資上限25%與台股關係，亞馬遜Amazon 算力供應鏈， CPU漲價與Intel財報",
+          "channel": "韭菜畢業班",
+          "date": "2026-04-26",
+          "text": "講到一些 光通相關的話題的話 我們一定會講到就是NVIDIA 之前投資的 那其實之前投資的 NVIDIA投資的東西 其實都有往上去勾引了 現在現狀來講的話 第一個就是Rumantem 那再來的話 就是COHR 就是Cohirant 那第三個的話就是Moffel 那Moffel的話 我們上一集時也有提到 他跟其他家大廠的合作 其實都有推升這一個股價往上去走 至少NVIDIA的資本來看的話 單月就已經投資了 超過美金60億 這個不是開玩笑的 那同時1.6T的模組的這個出貨量 大家如果說 仔細去想的話 2026年的話 也是會年增超過800% 這個其實也是相對多的 那當然我覺得 終究回到最重要的關鍵 就是CP",
+          "matched_keyword": "Cohirant",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
+          "video": "2026/04/29(三) 美股爲什麼又跌了？#GLW #CLS #STX 財報",
+          "channel": "財女珍妮",
+          "date": "2026-04-29",
+          "text": "I的影響 或者是你說 他財報公布的影響 所以有一點開高 走 也不用開低走低 就是相比於前一天 都還處在一個新高的位階 然後現在已經是跌破了前高點了 然後他也讓 同產業的裡面 比如說光通裡面的 CNR Coherent Lumentine 這些公司 他的股價 也是都跌了 大概六七個Percent以上 好 那是不是財報不好 也沒有 營收年增18% 是超過了市場的預期 然後你可以看到 光通訊部門 是增長的影傾 營收年增了36% 主要就是受 生成是AI的需求推動 那當然 Cony他還有一些其他的業務 比如說像太陽能的業務 汽車的業務什麼的 你的表現 你的營收的增長率 可能就沒有到那麼好 但是Cony也有說 他之前在1",
+          "matched_keyword": "Coherent",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP222 | 台、美股重點一次說， 美股巨頭財報總結，臻鼎-KY與mSAP需求，致茂與鴻勁的產品結構差異與互補",
+          "channel": "韭菜畢業班",
+          "date": "2026-05-03",
+          "text": "廢半 其實是繼續反彈上去 然後再來就是納斯達克的部分 其實已經是創下了一個 歷史新高繼續往上去走 那SMP500其實也是差不多 那之前有稍微的休息的 像是Rumenton 就是光通訊Light 或是說Coherent 其實都有看到一些小幅度的反彈 那再來如果大家是看的是藍料電池 就是跟電有相關的一些話題的話 B1其實現在也是創下一個歷史新高 在開出財報之後隔天 其實是直接上漲了27% 這個其實如果對應到台灣的話 其實就是像高麗 就是很明顯的一個合作的一家廠商 那再來就像康書 那這種東西的話 其實有時候我們就會去對應一下 胎顧他的表現是如何的 那再來最近其實還有看到一些 我覺得像CPU族群Intel 我覺得大家",
+          "matched_keyword": "Coherent",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "2026/05/07(四) 財報好不漲，到底為什麼？#ETN #ANET #ARM #COHR",
+          "channel": "財女珍妮",
+          "date": "2026-05-07",
+          "text": "廠康寧的股票認購權 那希望呢 就是可以在美國境內先大規模的製造 先進光學連線解決方案 服務下一代的AI資料中心 所以灰打也是一直在佈局 我今天東投一點 西投一點 我們昨天講到的盧門城 或者是今天要講的Coherent 其實都是一樣 他之前也都各投了20億嘛 第一個就是我今天建立好聯盟 第二個是我確保 我未來的產能不會缺 在產能不會缺的情況之下 你才有可能可以掌握定價權 你才有可能可以讓你的營收持續的增長嘛 所以這個是昨天灰打 他一個很重要的 這個利多的消息 好 那還有一個事情 大家有發現昨天迪士尼長了8%嗎 他是昨天盤錢的財報喔 然後財報出來之後其實股價就漲 那昨天也是漲了8%左右 那也不知道大家有沒有去看這",
+          "matched_keyword": "Coherent",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "2026/05/07(四) 財報好不漲，到底為什麼？#ETN #ANET #ARM #COHR",
+          "channel": "財女珍妮",
+          "date": "2026-05-07",
+          "text": "時候呢 那 大家就會希望有更高的一個預期 所以我覺得這件事情呢 他其實是一個很合理的現象 但是你還是要去搭配他的 營收搭配他的獲利 搭配他的毛利率來看 然後再去搭配他的一些量化的指標 因為如果你要做 Coherent 指甲公司 或者是這一個類股好了 不管你先講 Coherent 或者是 Lumentine 或者是 AI 或者是其他相關 AXCI 我知道大概有人在問嘛 但是因為這家公司 在上個禮拜公佈財報之後 我一直還沒有時間講 我一直想說我要再拍影片 但是真的沒時間 所以請大家見料 我之後有時間一定會講 因為你看這財報季過了之後呢 剩下來 我們又要再回歸 那個美衣之間 如果他們還沒搞完的話 那那個時間點 如果",
+          "matched_keyword": "Coherent",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "2026/05/07(四) 財報好不漲，到底為什麼？#ETN #ANET #ARM #COHR",
+          "channel": "財女珍妮",
+          "date": "2026-05-07",
+          "text": "要讓大家有期待感 股價才會上漲 那靠那個播放率 就是下載率才會上升 對不對 就是我們要現在一直立一些 flag 然後讓大家可以 繼續的回來看我們的節目 我覺得這樣不錯好不好 所以呢 我們現在講完了 Coherent 之後呢 就是我覺得 整體來說沒有什麼改變 但是現在就是 有拉回 所以這也是我之前講嘛 我不是賣在 近期的一個最高點 拿去做轉換的 我之前有很多的光通 我光通 你們講到的股票 我全部都有 Coherent 魯曼城 然後還有 XTI 還有 這個 還有一些設備股 ONTO 然後還有像是 反正很多 還有剛剛我們講到那個 那個是什麼東西 好 不重要 反正你們講到的東西我都有 但是我後來就是去把它 降了一些",
+          "matched_keyword": "Coherent",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "2026/05/12(二) 美股狂牛，才剛開始？半導體是不是漲到壞掉了？",
+          "channel": "財女珍妮",
+          "date": "2026-05-12",
+          "text": "湯嗎 好像也沒什麼必要的 再來就是 我覺得也不需要灌雞湯 我覺得已經漲到 真的是沒朋友的光通 光通這個板塊 昨天基本上就是 ACMP500指數裡面 最強的一塊 大家可以看到 像是Lumatin 或者是Coherin 或者是像AOI 這幾家公司 全部都是在開盤的時候 就是一路上從 到底是花性蝦米袋集 對不對 連我這種台語不好的人 都嚇到 你看我今天講了多少句台語了 那Lumatin昨天是漲了17% 然後收在 1053美元 創下的歷史新高 是ACMP500指數裡面 表現最好的一家公司 那很多的觸發點 那包括了 有分析師調高目標價 或者是公司宣布 就是5月18號的時候 也不是公司宣布 反正就是 有宣布這個事件 就",
+          "matched_keyword": "Coherin",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
+          "video": "2026/06/02(二) 一天漲6％，輝達還能繼續漲嗎？#NVDA",
+          "channel": "財女珍妮",
+          "date": "2026-06-02",
+          "text": "是那家 SK海力士 美光三星 那昨天美光大概也漲了 將近有7%左右 我三星也有漲了大概10% 那 如果你在去看的話 還有像我們講到的光通 光通的話 像是博通 昨天表現也很強 大概漲了3%左右 還有像是Coherent 他也漲了 然後另外最後的話 可能我們 近期沒有關注到的 但是我昨天在影片裡面 其實也有提到 就是跟電力 然後跟散熱相關的 比如說像Vertip 其實在之前也非常的強勁 但是近期的股價 也是有一點休息的味道 但是如果他回測到 月線回測到季線的時候 是不是也可以在 慢慢的去做一些分皮的佈局 所以有的時候 大家不要只看會漲的股票 你要去想說 黃龍勳的五層蛋糕 或者是在這個生態系裡面 哪一層是不可或缺的",
+          "matched_keyword": "Coherent",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
+          "video": "EP231 | 台、美股重點一次說，Computex 展後各大公司說法，Marvell 800G光模組量產，AI工廠模組化後的台股供應鏈",
+          "channel": "韭菜畢業班",
+          "date": "2026-06-03",
+          "text": "就是康寧這一家公司 康寧這一家公司就是吃了題材 反正主要就是光芒 然後再來就是玻璃相關的東西 它也是有題材的 之前前幾天就是一直下刷衣 但它有時候一根回去 其實就會把之前的蝶幅收復回去 這件事情其實看coherent 或是說看lumentent都是差不多的狀態 所以我覺得在美股假如你今天跟我一樣 是就是等這種洗刷刷盤 等著心情有點不耐煩的時候 有時候它就是要等到你 受不了的時候 它就突然兩三根給你 然後讓你挫手不及 就是等於是在尬空手 像上一集有聊到的ORICO相關的話題 在這幾天也是一樣 就衝得非常的快 我覺得以美股的角度來看的話 現在就是最痛苦的一件事 應該就是抱不住 然後再來就是說 現在最痛苦的事應該就",
+          "matched_keyword": "Coherent",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
+          "video": "2026/06/09 (二) 反彈了，該跑嗎？",
+          "channel": "財女珍妮",
+          "date": "2026-06-09",
+          "text": "發酵 所以如果你今天有光通的股票的話 你也不需要在現階段很快的去把股價 或者是你的持股賣掉 你可以去看光通的股票 這一個是康寧的股價嗎 基本上我們上個禮拜 有一天有講到光通 然後我們在光通裡面有講到 Coherent Lumentine 或者是像AOI 這幾家公司 它的現行大概都是長這樣 就是都還維持在一個上升趨勢之上 因為他們在接下來這種光通病境 光的需求越來越高的支持論點 都可以讓他們的股價有更進一步的發展 甚至是我覺得在更長期的未來 都可以有一個長期趨勢向上的走勢 那昨天為什麼要特別把康寧出來講 是因為康寧跟亞馬遜 簽訂了一項長期的數十億美元的 光簽供應協議 這個對於兩家公司都好消息 一邊怕產能瓶頸 一",
+          "matched_keyword": "Coherent",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP233 | CPO&HVDC 利空解讀 ，營建股突然上漲 ? 台股系統性風險 ？",
+          "channel": "韭菜畢業班",
+          "date": "2026-06-10",
+          "text": "來就是CW Laser 然後這個兩個其實都是它在做的東西 那ENL的話 其實相當於就是 你在800G跟1.6T的話 其實你都會使用到 然後其實我們可以看到 不管是Lumintent自己講出來的 還是說Coherent自己講出來 其實都有提到 這個東西的話 就是實際上面有在出貨了 也有看到實質上面的成績 但是這一次罕空下來 就只是主要就是批評說 你現在出貨 你只是做一個商用 小批量的出貨 你不是真的是可以做一個商轉 那你真的市場上面 都需要這一件事情 所以就是有一點就是在一起打下來 但是其實就很奇怪的就是 如果我們今天講到 就是可插拔的這些相關的題材 光通訊相關的題材 它其實也一起無差別的被炸到 那我就是以台顧",
+          "matched_keyword": "Coherent",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        }
+      ],
+      "total_mentions": 17,
+      "sentiment_score": 0.724,
+      "daily": {
+        "2026-04-01": {
+          "mentions": 2,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.65
+        },
+        "2026-03-24": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-04-15": {
+          "mentions": 3,
+          "bullish": 3,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.8
+        },
+        "2026-04-26": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.7
+        },
+        "2026-04-29": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-05-03": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        },
+        "2026-05-07": {
+          "mentions": 3,
+          "bullish": 2,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.833
+        },
+        "2026-05-12": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.7
+        },
+        "2026-06-02": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.7
+        },
+        "2026-06-03": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-06-09": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        },
+        "2026-06-10": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
       "code": "2603",
       "name": "長榮",
       "market": "TW",
@@ -27652,281 +27932,6 @@
           "bearish": 0,
           "neutral": 1,
           "sentiment_score": 0.875
-        }
-      }
-    },
-    {
-      "code": "COHR",
-      "name": "Coherent",
-      "market": "US",
-      "sector": "光通訊",
-      "contexts": [
-        {
-          "video": "EP649 | 💌",
-          "channel": "股癌",
-          "date": "2026-04-01",
-          "text": "才買 可是你怎麼知道他買多少 這個錢是他什麼0.5%的現金 那他買這個東西 你在那邊幾次要半天 你不就覺得自己很好笑 人家只是隨便買 他只是這樣買菜一樣 那你以為說什麼 背後有超級大的陰謀的計畫 所以再來要稍微的注意一下 因為他過去 他其實買了滿多東西 像什麼 Synopsis Core with Coherent Lumentine 最新是兩個光通全包 Nabius Marvellous全包 那所以基本上的 你可以看到說他裡面 就你要把它湊在一起的話 OK 那像Synopsis就是 EDA的設計 那可能是 Fusion Chiplet的某種設計工具店 那Core with跟Nabius的話 可能就是說 De",
-          "matched_keyword": "COHR",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": null
-        },
-        {
-          "video": "EP1069｜這次伊朗沒否認，4月有好消息？昨天嚇出場，今天不敢追？熱門股全面回血，有部位但不冒險，這些ETF幫忙漲回來！ft.型男股神 陳威良",
-          "channel": "兆華與股惑仔",
-          "date": "2026-04-01",
-          "text": "種 極短線的 戰爭受惠股 可能就不是很適合自己 不是它不對 不是它不能做 而是沒有很適合自己 那AI所延伸出來的是 我比較有信心 就算現在我買高了 被短套了 但是未來這個大方向還在 就像我們看到 因為最近 其實從美股的 記憶體的美光Sendix 或者說在光通部分 像AXT 或者說像Lumanton Coherent 那這些個股 他們因為位階比較高 所以有時候突然 一天就給你 暴跌十幾% 但是像昨晚一反彈的時候 動不動也是可以拉出 二位數的漲過 那時間拉長來看 其實他們的一個 技術面的現行跟未接會說話 他們還是在相對的右上角 只是漲多之後 可能大家去做 月線的回測 或季線的回測 但是他們還是 是屬於一個 中長期",
-          "matched_keyword": "COHR",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.8,
-          "video_url": null
-        },
-        {
-          "video": "2026/03/24 (二）川普TACO， 反彈該跑？輝達(NVDA) 佈局電力",
-          "channel": "財女珍妮",
-          "date": "2026-03-24",
-          "text": "是突然就跳到Vertif上面 因為Vertif它其實主要也是做 散熱管理冷卻系統的一家公司 而且昨天有一個小小的 不能算是亮點 因為現在加入到 SNP500指數成分股裡面 大家已經不覺得 就是B漲的一個訊號了 但是因為昨天就是 SNP500指數 季度成分股的調整 除了Vertif之外 Lutman、Coherent、EchoStar 其實都有被加到 這個SNP500指數裡面 那最有話題性 或者是我自己 其實本來就也有在關注 除了我們跟大家講過的光通 光通已經講過很多次了 再來就是散熱跟電力 Vertif其實也是我們 一直關注的公司 那這家公司主要就是 像資料中心的冷卻系統 電源管理 然後它是做一個 完整的一條",
-          "matched_keyword": "Coherent",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": ""
-        },
-        {
-          "video": "EP653 | 🕊️",
-          "channel": "股癌",
-          "date": "2026-04-15",
-          "text": "會學大人 現在他發脾氣也都用吼的 不過又怕影響到別人 哈哈順便想問您一下 美股的前五大持股 跟抱得住的原因 方便在分享即可 愛您祝您一家健康平安 目前的持股比較大 就是CPU 然後再來就是Marvel 那CPU的話 是買Intel arm 然後跟這個AMD 那再來光通也買滿多的 像Lomantin跟Cohirin 那Cloudflare也買滿多的 還有Tesla也買滿多的 那大概就是這幾檔 是我目前比較主要的持股 那當然會再變動 然後接下來說 以目前CPU的話 我覺得應該還有機會再繼續走 可是Marvel 因為他的利多 就是我買的利多 我已經出來了 所以如果這邊他沒有繼續走的話 他很快就會掉出我的主要持股",
-          "matched_keyword": "Cohirin",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": ""
-        },
-        {
-          "video": "EP1077｜台股大跨步37000點！賣飛正常，如何重新買回來？台積法說若回檔，設備好機會？PCB、CPO強恆強，被動元件真漲價？ft.報價天王 林信富",
-          "channel": "兆華與股惑仔",
-          "date": "2026-04-15",
-          "text": "你去看 這個 美國的這些光通訊的股票 其實不管像是 Lumatin 這個Coherin",
-          "matched_keyword": "Coherin",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.7,
-          "video_url": ""
-        },
-        {
-          "video": "2026/04/15 (三）納指10連漲， 巨頭終於要動了？AVGO, MRVL, CRDO噴出",
-          "channel": "財女珍妮",
-          "date": "2026-04-15",
-          "text": "逆的趨勢 所以你今天你要去買光通的時候 你會買的公司 其實大概也就是那些 因為我們剛剛講到了 這些公司其實他的客戶很集中 但是這些集中的客戶 他的下游廠商 他也希望可以去分散 問題是你要技術好 然後又可以做得出來 然後又可以交貨順產的公司 其實也是沒幾家嘛 所以我們看到 輝達他有去砸了二十億 給這個coherent跟luminten 對luminten 對 然後還有 剛剛有人在youtube 跟我講那個發音的問題 他有現在有點怪怪的 好 ok沒差 這個就是心理作用 好像光模組供應鏈呢 然後他們輝達就是希望 可以把未來這個供應鏈 就是他的這個上游 來源啊這些東西 然後可以去做鎖住 那mafio呢也用五十五億 然",
-          "matched_keyword": "Coherent",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.7,
-          "video_url": ""
-        },
-        {
-          "video": "EP220 | 台、美股重點一次說， ETF投資上限25%與台股關係，亞馬遜Amazon 算力供應鏈， CPU漲價與Intel財報",
-          "channel": "韭菜畢業班",
-          "date": "2026-04-26",
-          "text": "講到一些 光通相關的話題的話 我們一定會講到就是NVIDIA 之前投資的 那其實之前投資的 NVIDIA投資的東西 其實都有往上去勾引了 現在現狀來講的話 第一個就是Rumantem 那再來的話 就是COHR 就是Cohirant 那第三個的話就是Moffel 那Moffel的話 我們上一集時也有提到 他跟其他家大廠的合作 其實都有推升這一個股價往上去走 至少NVIDIA的資本來看的話 單月就已經投資了 超過美金60億 這個不是開玩笑的 那同時1.6T的模組的這個出貨量 大家如果說 仔細去想的話 2026年的話 也是會年增超過800% 這個其實也是相對多的 那當然我覺得 終究回到最重要的關鍵 就是CP",
-          "matched_keyword": "Cohirant",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.7,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        },
-        {
-          "video": "2026/04/29(三) 美股爲什麼又跌了？#GLW #CLS #STX 財報",
-          "channel": "財女珍妮",
-          "date": "2026-04-29",
-          "text": "I的影響 或者是你說 他財報公布的影響 所以有一點開高 走 也不用開低走低 就是相比於前一天 都還處在一個新高的位階 然後現在已經是跌破了前高點了 然後他也讓 同產業的裡面 比如說光通裡面的 CNR Coherent Lumentine 這些公司 他的股價 也是都跌了 大概六七個Percent以上 好 那是不是財報不好 也沒有 營收年增18% 是超過了市場的預期 然後你可以看到 光通訊部門 是增長的影傾 營收年增了36% 主要就是受 生成是AI的需求推動 那當然 Cony他還有一些其他的業務 比如說像太陽能的業務 汽車的業務什麼的 你的表現 你的營收的增長率 可能就沒有到那麼好 但是Cony也有說 他之前在1",
-          "matched_keyword": "Coherent",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP222 | 台、美股重點一次說， 美股巨頭財報總結，臻鼎-KY與mSAP需求，致茂與鴻勁的產品結構差異與互補",
-          "channel": "韭菜畢業班",
-          "date": "2026-05-03",
-          "text": "廢半 其實是繼續反彈上去 然後再來就是納斯達克的部分 其實已經是創下了一個 歷史新高繼續往上去走 那SMP500其實也是差不多 那之前有稍微的休息的 像是Rumenton 就是光通訊Light 或是說Coherent 其實都有看到一些小幅度的反彈 那再來如果大家是看的是藍料電池 就是跟電有相關的一些話題的話 B1其實現在也是創下一個歷史新高 在開出財報之後隔天 其實是直接上漲了27% 這個其實如果對應到台灣的話 其實就是像高麗 就是很明顯的一個合作的一家廠商 那再來就像康書 那這種東西的話 其實有時候我們就會去對應一下 胎顧他的表現是如何的 那再來最近其實還有看到一些 我覺得像CPU族群Intel 我覺得大家",
-          "matched_keyword": "Coherent",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "2026/05/07(四) 財報好不漲，到底為什麼？#ETN #ANET #ARM #COHR",
-          "channel": "財女珍妮",
-          "date": "2026-05-07",
-          "text": "廠康寧的股票認購權 那希望呢 就是可以在美國境內先大規模的製造 先進光學連線解決方案 服務下一代的AI資料中心 所以灰打也是一直在佈局 我今天東投一點 西投一點 我們昨天講到的盧門城 或者是今天要講的Coherent 其實都是一樣 他之前也都各投了20億嘛 第一個就是我今天建立好聯盟 第二個是我確保 我未來的產能不會缺 在產能不會缺的情況之下 你才有可能可以掌握定價權 你才有可能可以讓你的營收持續的增長嘛 所以這個是昨天灰打 他一個很重要的 這個利多的消息 好 那還有一個事情 大家有發現昨天迪士尼長了8%嗎 他是昨天盤錢的財報喔 然後財報出來之後其實股價就漲 那昨天也是漲了8%左右 那也不知道大家有沒有去看這",
-          "matched_keyword": "Coherent",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "2026/05/07(四) 財報好不漲，到底為什麼？#ETN #ANET #ARM #COHR",
-          "channel": "財女珍妮",
-          "date": "2026-05-07",
-          "text": "時候呢 那 大家就會希望有更高的一個預期 所以我覺得這件事情呢 他其實是一個很合理的現象 但是你還是要去搭配他的 營收搭配他的獲利 搭配他的毛利率來看 然後再去搭配他的一些量化的指標 因為如果你要做 Coherent 指甲公司 或者是這一個類股好了 不管你先講 Coherent 或者是 Lumentine 或者是 AI 或者是其他相關 AXCI 我知道大概有人在問嘛 但是因為這家公司 在上個禮拜公佈財報之後 我一直還沒有時間講 我一直想說我要再拍影片 但是真的沒時間 所以請大家見料 我之後有時間一定會講 因為你看這財報季過了之後呢 剩下來 我們又要再回歸 那個美衣之間 如果他們還沒搞完的話 那那個時間點 如果",
-          "matched_keyword": "Coherent",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "2026/05/07(四) 財報好不漲，到底為什麼？#ETN #ANET #ARM #COHR",
-          "channel": "財女珍妮",
-          "date": "2026-05-07",
-          "text": "要讓大家有期待感 股價才會上漲 那靠那個播放率 就是下載率才會上升 對不對 就是我們要現在一直立一些 flag 然後讓大家可以 繼續的回來看我們的節目 我覺得這樣不錯好不好 所以呢 我們現在講完了 Coherent 之後呢 就是我覺得 整體來說沒有什麼改變 但是現在就是 有拉回 所以這也是我之前講嘛 我不是賣在 近期的一個最高點 拿去做轉換的 我之前有很多的光通 我光通 你們講到的股票 我全部都有 Coherent 魯曼城 然後還有 XTI 還有 這個 還有一些設備股 ONTO 然後還有像是 反正很多 還有剛剛我們講到那個 那個是什麼東西 好 不重要 反正你們講到的東西我都有 但是我後來就是去把它 降了一些",
-          "matched_keyword": "Coherent",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "2026/05/12(二) 美股狂牛，才剛開始？半導體是不是漲到壞掉了？",
-          "channel": "財女珍妮",
-          "date": "2026-05-12",
-          "text": "湯嗎 好像也沒什麼必要的 再來就是 我覺得也不需要灌雞湯 我覺得已經漲到 真的是沒朋友的光通 光通這個板塊 昨天基本上就是 ACMP500指數裡面 最強的一塊 大家可以看到 像是Lumatin 或者是Coherin 或者是像AOI 這幾家公司 全部都是在開盤的時候 就是一路上從 到底是花性蝦米袋集 對不對 連我這種台語不好的人 都嚇到 你看我今天講了多少句台語了 那Lumatin昨天是漲了17% 然後收在 1053美元 創下的歷史新高 是ACMP500指數裡面 表現最好的一家公司 那很多的觸發點 那包括了 有分析師調高目標價 或者是公司宣布 就是5月18號的時候 也不是公司宣布 反正就是 有宣布這個事件 就",
-          "matched_keyword": "Coherin",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.7,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        },
-        {
-          "video": "2026/06/02(二) 一天漲6％，輝達還能繼續漲嗎？#NVDA",
-          "channel": "財女珍妮",
-          "date": "2026-06-02",
-          "text": "是那家 SK海力士 美光三星 那昨天美光大概也漲了 將近有7%左右 我三星也有漲了大概10% 那 如果你在去看的話 還有像我們講到的光通 光通的話 像是博通 昨天表現也很強 大概漲了3%左右 還有像是Coherent 他也漲了 然後另外最後的話 可能我們 近期沒有關注到的 但是我昨天在影片裡面 其實也有提到 就是跟電力 然後跟散熱相關的 比如說像Vertip 其實在之前也非常的強勁 但是近期的股價 也是有一點休息的味道 但是如果他回測到 月線回測到季線的時候 是不是也可以在 慢慢的去做一些分皮的佈局 所以有的時候 大家不要只看會漲的股票 你要去想說 黃龍勳的五層蛋糕 或者是在這個生態系裡面 哪一層是不可或缺的",
-          "matched_keyword": "Coherent",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.7,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        },
-        {
-          "video": "EP231 | 台、美股重點一次說，Computex 展後各大公司說法，Marvell 800G光模組量產，AI工廠模組化後的台股供應鏈",
-          "channel": "韭菜畢業班",
-          "date": "2026-06-03",
-          "text": "就是康寧這一家公司 康寧這一家公司就是吃了題材 反正主要就是光芒 然後再來就是玻璃相關的東西 它也是有題材的 之前前幾天就是一直下刷衣 但它有時候一根回去 其實就會把之前的蝶幅收復回去 這件事情其實看coherent 或是說看lumentent都是差不多的狀態 所以我覺得在美股假如你今天跟我一樣 是就是等這種洗刷刷盤 等著心情有點不耐煩的時候 有時候它就是要等到你 受不了的時候 它就突然兩三根給你 然後讓你挫手不及 就是等於是在尬空手 像上一集有聊到的ORICO相關的話題 在這幾天也是一樣 就衝得非常的快 我覺得以美股的角度來看的話 現在就是最痛苦的一件事 應該就是抱不住 然後再來就是說 現在最痛苦的事應該就",
-          "matched_keyword": "Coherent",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        },
-        {
-          "video": "2026/06/09 (二) 反彈了，該跑嗎？",
-          "channel": "財女珍妮",
-          "date": "2026-06-09",
-          "text": "發酵 所以如果你今天有光通的股票的話 你也不需要在現階段很快的去把股價 或者是你的持股賣掉 你可以去看光通的股票 這一個是康寧的股價嗎 基本上我們上個禮拜 有一天有講到光通 然後我們在光通裡面有講到 Coherent Lumentine 或者是像AOI 這幾家公司 它的現行大概都是長這樣 就是都還維持在一個上升趨勢之上 因為他們在接下來這種光通病境 光的需求越來越高的支持論點 都可以讓他們的股價有更進一步的發展 甚至是我覺得在更長期的未來 都可以有一個長期趨勢向上的走勢 那昨天為什麼要特別把康寧出來講 是因為康寧跟亞馬遜 簽訂了一項長期的數十億美元的 光簽供應協議 這個對於兩家公司都好消息 一邊怕產能瓶頸 一",
-          "matched_keyword": "Coherent",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        }
-      ],
-      "total_mentions": 16,
-      "sentiment_score": 0.737,
-      "daily": {
-        "2026-04-01": {
-          "mentions": 2,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.65
-        },
-        "2026-03-24": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-04-15": {
-          "mentions": 3,
-          "bullish": 3,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 0.8
-        },
-        "2026-04-26": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 0.7
-        },
-        "2026-04-29": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-05-03": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 1.0
-        },
-        "2026-05-07": {
-          "mentions": 3,
-          "bullish": 2,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.833
-        },
-        "2026-05-12": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 0.7
-        },
-        "2026-06-02": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 0.7
-        },
-        "2026-06-03": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-06-09": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 1.0
         }
       }
     },
@@ -42247,6 +42252,133 @@
       }
     },
     {
+      "code": "VRT",
+      "name": "Vertiv",
+      "market": "US",
+      "sector": "液冷/電網",
+      "contexts": [
+        {
+          "video": "2026/04/23(四)特斯拉財報，狂砸250億擴張AI與機器人版圖，以及其他重點公司的財報！",
+          "channel": "財女珍妮",
+          "date": "2026-04-23",
+          "text": " 還沒有非常的健全 我覺得他的波動會比較大的 我自己會認為 可能不會再去做 大幅破底的動作 但是你要更有耐心的 去持有你自己 手上的這些股票 好 我們就進入了 我覺得非常重要的財報 公司的第一家就是 Vertif 那也是我們在 過去的影片裡面啊 甚至我最近的課程裡面 已經有一個陪跑的群組 那裡面就會有人問說 欸 以前呢 就聽我很久以前 就在講Vertif的家公司 然後我有跟大家講說 我有Vertif的家公司 那現在呢 都一直看著他漲上去 然後不知道到底還可不可以賣 那我那時候的回答就是 我覺得 你可以先等他的財報公佈 因為Vertif其實 現在漲上來之後 已經算是一個 估值比較高的公司 今天估值一旦比較高",
+          "matched_keyword": "Vertiv",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
+          "video": "EP220 | 台、美股重點一次說， ETF投資上限25%與台股關係，亞馬遜Amazon 算力供應鏈， CPU漲價與Intel財報",
+          "channel": "韭菜畢業班",
+          "date": "2026-04-26",
+          "text": "相牽來牽去 算力的部分 大家絕對都還是非常的需要的 那我們最後再來講一下 為什麼剛剛會講到一些 電源相關的話題 如果大家有仔細去看的話 就是散熱或是說電力相關的 那我們會去比較看的東西 就是美股的一個VRT 那VRT的話其實在最近的表現 也沒有到很差 其實是創下了一個接近歷史新高了 那再來就是可以看到 以台股的角度來看的話 台達電最近的表現 其實也不差 已經到了2000元的附近了 那其實我覺得以現在的一個 角度來看的話 就是以VRT來看的話 它現在Q1的一個財報 然後持續的上修 成長率的話還是有到3成以上 然後再來就是說 以現在目前看到 我們整個亞洲區 電源或是說散熱的同業 其實大家估應收的年增率 ",
+          "matched_keyword": "VRT",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
+          "video": "2026/05/04(一) 伊朗提談判新方案，戰爭已結束？AI續強，軟體復活了嗎 #CAT #TEAM",
+          "channel": "財女珍妮",
+          "date": "2026-05-04",
+          "text": "這個不是短期的需求拉貨 而是長期的一個 結構性的改變 這句話呢 你聽起來應該非常的熟悉 我們之前在講很多公司 基礎材料的時候 不是 基礎設備的時候呢 都會講到 比如說 Vertif 對不對 這家公司 Vrt 比如說我們在講 G-Evernova的時候 G-E-V 這家公司的時候 我們是不是也都講 他們就一直不斷的去上調 他們2028年的財策嘛 所以你看 Catpillar他其實也是一樣 他其實也在告訴你 我的訂單超級強的 好那另外還有什麼重點呢 就是你要去看他在 這一次呢 他的一個 主要的業務的一個表現嘛 主要業務的表現呢 第一個就是電力 電力就是我們剛剛講到 他三大主要 收入來源的其中一項 那以前",
+          "matched_keyword": "VRT",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "2026/06/02(二) 一天漲6％，輝達還能繼續漲嗎？#NVDA",
+          "channel": "財女珍妮",
+          "date": "2026-06-02",
+          "text": "比如說像Vertip 其實在之前也非常的強勁 但是近期的股價 也是有一點休息的味道 但是如果他回測到 月線回測到季線的時候 是不是也可以在 慢慢的去做一些分皮的佈局",
+          "matched_keyword": "Vertip",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini",
+          "whisper_corrected": true
+        },
+        {
+          "video": "2026/06/01(一) COMPUTEX出狠招，輝達還能漲嗎？",
+          "channel": "財女珍妮",
+          "date": "2026-06-01",
+          "text": "為什麼比如說像是Vertif 或者是Costalization 或者是Vistra這幾家公司 它的股價都還是處在 我覺得Vertif沒有 Vertif只是稍微的 就是有拉回而已",
+          "matched_keyword": "Vertif",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
+          "video": "EP233 | CPO&HVDC 利空解讀 ，營建股突然上漲 ? 台股系統性風險 ？",
+          "channel": "韭菜畢業班",
+          "date": "2026-06-10",
+          "text": "E 這幾家公司的話 其實在最近都有 稍微的小反彈了一下 那其實我覺得 以台灣的祭奠器來講的話 因為送穿金幣 跟蠻多大型公司 其實都是有合作的 我們舉個例子來講 像是Fertif 那Fertif的話其實VRT 其實最近我們不要去評論股價 那總之如果說 它在設計上面有問題的話 其實也都會一起去做一個 共同上面的解決 然後再來就是 我們可以看到 像是台大店的BPU的話Q1 它的一個出貨 其實對於這些東西 其實也都是有受惠的 同時我覺得 丁的東西 還有像是它跟特斯拉的一個合作 那除能系統上面來說的話 它會是一個相對重要的 一個供應商 那其次的 還有另外一件事情就是說 我們可以看到 為什麼會講這一個記點器 它",
+          "matched_keyword": "VRT",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        }
+      ],
+      "total_mentions": 6,
+      "sentiment_score": 0.533,
+      "daily": {
+        "2026-04-23": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-04-26": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.7
+        },
+        "2026-05-04": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-06-02": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-06-01": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-06-10": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
       "code": "3211",
       "name": "順達",
       "market": "TW",
@@ -44192,114 +44324,6 @@
           "bearish": 0,
           "neutral": 0,
           "sentiment_score": 0.7
-        },
-        "2026-06-01": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        }
-      }
-    },
-    {
-      "code": "VRT",
-      "name": "Vertiv",
-      "market": "US",
-      "sector": "液冷/電網",
-      "contexts": [
-        {
-          "video": "2026/04/23(四)特斯拉財報，狂砸250億擴張AI與機器人版圖，以及其他重點公司的財報！",
-          "channel": "財女珍妮",
-          "date": "2026-04-23",
-          "text": " 還沒有非常的健全 我覺得他的波動會比較大的 我自己會認為 可能不會再去做 大幅破底的動作 但是你要更有耐心的 去持有你自己 手上的這些股票 好 我們就進入了 我覺得非常重要的財報 公司的第一家就是 Vertif 那也是我們在 過去的影片裡面啊 甚至我最近的課程裡面 已經有一個陪跑的群組 那裡面就會有人問說 欸 以前呢 就聽我很久以前 就在講Vertif的家公司 然後我有跟大家講說 我有Vertif的家公司 那現在呢 都一直看著他漲上去 然後不知道到底還可不可以賣 那我那時候的回答就是 我覺得 你可以先等他的財報公佈 因為Vertif其實 現在漲上來之後 已經算是一個 估值比較高的公司 今天估值一旦比較高",
-          "matched_keyword": "Vertiv",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        },
-        {
-          "video": "EP220 | 台、美股重點一次說， ETF投資上限25%與台股關係，亞馬遜Amazon 算力供應鏈， CPU漲價與Intel財報",
-          "channel": "韭菜畢業班",
-          "date": "2026-04-26",
-          "text": "相牽來牽去 算力的部分 大家絕對都還是非常的需要的 那我們最後再來講一下 為什麼剛剛會講到一些 電源相關的話題 如果大家有仔細去看的話 就是散熱或是說電力相關的 那我們會去比較看的東西 就是美股的一個VRT 那VRT的話其實在最近的表現 也沒有到很差 其實是創下了一個接近歷史新高了 那再來就是可以看到 以台股的角度來看的話 台達電最近的表現 其實也不差 已經到了2000元的附近了 那其實我覺得以現在的一個 角度來看的話 就是以VRT來看的話 它現在Q1的一個財報 然後持續的上修 成長率的話還是有到3成以上 然後再來就是說 以現在目前看到 我們整個亞洲區 電源或是說散熱的同業 其實大家估應收的年增率 ",
-          "matched_keyword": "VRT",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.7,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        },
-        {
-          "video": "2026/05/04(一) 伊朗提談判新方案，戰爭已結束？AI續強，軟體復活了嗎 #CAT #TEAM",
-          "channel": "財女珍妮",
-          "date": "2026-05-04",
-          "text": "這個不是短期的需求拉貨 而是長期的一個 結構性的改變 這句話呢 你聽起來應該非常的熟悉 我們之前在講很多公司 基礎材料的時候 不是 基礎設備的時候呢 都會講到 比如說 Vertif 對不對 這家公司 Vrt 比如說我們在講 G-Evernova的時候 G-E-V 這家公司的時候 我們是不是也都講 他們就一直不斷的去上調 他們2028年的財策嘛 所以你看 Catpillar他其實也是一樣 他其實也在告訴你 我的訂單超級強的 好那另外還有什麼重點呢 就是你要去看他在 這一次呢 他的一個 主要的業務的一個表現嘛 主要業務的表現呢 第一個就是電力 電力就是我們剛剛講到 他三大主要 收入來源的其中一項 那以前",
-          "matched_keyword": "VRT",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "2026/06/02(二) 一天漲6％，輝達還能繼續漲嗎？#NVDA",
-          "channel": "財女珍妮",
-          "date": "2026-06-02",
-          "text": "比如說像Vertip 其實在之前也非常的強勁 但是近期的股價 也是有一點休息的味道 但是如果他回測到 月線回測到季線的時候 是不是也可以在 慢慢的去做一些分皮的佈局",
-          "matched_keyword": "Vertip",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "gemini",
-          "whisper_corrected": true
-        },
-        {
-          "video": "2026/06/01(一) COMPUTEX出狠招，輝達還能漲嗎？",
-          "channel": "財女珍妮",
-          "date": "2026-06-01",
-          "text": "為什麼比如說像是Vertif 或者是Costalization 或者是Vistra這幾家公司 它的股價都還是處在 我覺得Vertif沒有 Vertif只是稍微的 就是有拉回而已",
-          "matched_keyword": "Vertif",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        }
-      ],
-      "total_mentions": 5,
-      "sentiment_score": 0.54,
-      "daily": {
-        "2026-04-23": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-04-26": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 0.7
-        },
-        "2026-05-04": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-06-02": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
         },
         "2026-06-01": {
           "mentions": 1,
@@ -67316,6 +67340,37 @@
           "sentiment_score": 0.5
         }
       }
+    },
+    {
+      "code": "ALL",
+      "name": "Allstate",
+      "market": "US",
+      "sector": "金融",
+      "contexts": [
+        {
+          "video": "EP232 | 台、美股重點一次說，台股暴跌後的想法，Broadcom財報，台積電CoPoS提前量產，TGV玻璃基板驗證進度",
+          "channel": "韭菜畢業班",
+          "date": "2026-06-07",
+          "text": "一起往下去跳空 再一次的話 那可能就會產生 一個開低之後再走更低 那那個時候其實我覺得 以禮拜一來說 不會是一個 很好去加碼的一個地方 就是不會對我來說 我覺得波動最大的地方 反而不會是我 特別想要去all in 或者是說把我資金 馬上打進去的部分 我自己有一些劇本 可以跟各位分享一下 有點偏向的是 假如我現在已經有一筆資金 我們把它假設為這個 100%的這個資金好了 我們先姑且不論 它到底佔據你原本的 總資產的多少% 我認為可以把它分成 3到5批次 然後慢慢的去打 你喜歡大波動 就像我們之前前面幾集 我跟各位論述過一個 我覺得一個觀點就是說 只要跌個5%以上 我會先打擊利益比擔 這件事情我在禮拜一",
+          "matched_keyword": "ALL",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 1.0,
+      "daily": {
+        "2026-06-07": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        }
+      }
     }
   ],
   "sectors_ranking": [
@@ -67561,7 +67616,7 @@
     {
       "sector": "金融",
       "market": "US",
-      "total_mentions": 66,
+      "total_mentions": 67,
       "stock_codes": [
         "GS",
         "MS",
@@ -67579,7 +67634,8 @@
         "AIG",
         "C",
         "HBAN",
-        "XYZ"
+        "XYZ",
+        "ALL"
       ]
     },
     {
@@ -67994,6 +68050,17 @@
       ]
     },
     {
+      "sector": "光通訊",
+      "market": "US",
+      "total_mentions": 28,
+      "stock_codes": [
+        "COHR",
+        "LITE",
+        "GLW",
+        "AAOI"
+      ]
+    },
+    {
       "sector": "伺服器",
       "market": "US",
       "total_mentions": 27,
@@ -68002,17 +68069,6 @@
         "HPQ",
         "SMCI",
         "HPE"
-      ]
-    },
-    {
-      "sector": "光通訊",
-      "market": "US",
-      "total_mentions": 27,
-      "stock_codes": [
-        "COHR",
-        "LITE",
-        "GLW",
-        "AAOI"
       ]
     },
     {
@@ -68402,6 +68458,17 @@
       ]
     },
     {
+      "sector": "液冷/電網",
+      "market": "US",
+      "total_mentions": 12,
+      "stock_codes": [
+        "VRT",
+        "GEV",
+        "ETN",
+        "PWR"
+      ]
+    },
+    {
       "sector": "數位雲端",
       "market": "TW",
       "total_mentions": 12,
@@ -68440,17 +68507,6 @@
         "CVS",
         "CI",
         "CNC"
-      ]
-    },
-    {
-      "sector": "液冷/電網",
-      "market": "US",
-      "total_mentions": 11,
-      "stock_codes": [
-        "VRT",
-        "GEV",
-        "ETN",
-        "PWR"
       ]
     },
     {
@@ -74546,6 +74602,22 @@
         "9955",
         "2330",
         "2454"
+      ],
+      "analysis_source": "whisper",
+      "thumbnail_url": null
+    },
+    {
+      "video_id": "7e120b09-e270-4f75-96f8-026e475ab659",
+      "title": "EP233 | CPO&HVDC 利空解讀 ，營建股突然上漲 ? 台股系統性風險 ？",
+      "channel": "韭菜畢業班",
+      "date": "2026-06-10",
+      "stocks_found": [
+        "GOOGL",
+        "COHR",
+        "MU",
+        "TSLA",
+        "VRT",
+        "META"
       ],
       "analysis_source": "whisper",
       "thumbnail_url": null
