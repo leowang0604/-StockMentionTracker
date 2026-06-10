@@ -53,12 +53,24 @@ struct AliasEvidence: Codable, Identifiable {
     let score: Int
     let reasons: [String]
     let context: String
+    let overrideKind: String?
+    let overrideReason: String?
+    let originalCode: String?
+    let originalName: String?
+    let phoneticTopScore: Double?
+    let phoneticLead: Double?
 
     var id: String { "\(videoID)|\(source)|\(context)" }
 
     enum CodingKeys: String, CodingKey {
         case channel, context, date, reasons, score, source, title
         case videoID = "video_id"
+        case overrideKind = "override_kind"
+        case overrideReason = "override_reason"
+        case originalCode = "original_code"
+        case originalName = "original_name"
+        case phoneticTopScore = "phonetic_top_score"
+        case phoneticLead = "phonetic_lead"
     }
 }
 

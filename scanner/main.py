@@ -490,10 +490,24 @@ def _record_alias_candidate(
     context: str = "",
     video_ctx: dict | None = None,
     source: str,
+    override_info: dict | None = None,
 ) -> None:
     """Persist a review candidate. This intentionally does not modify learned aliases."""
     wrong_keyword = (wrong_keyword or "").strip()
     correct_code = (correct_code or "").strip()
+    original_code = correct_code
+    original_name = correct_name or CODE_TO_NAME.get(correct_code, "")
+    override_kind = ""
+    override_reason = ""
+    phonetic_top_score: float | None = None
+    phonetic_lead: float | None = None
+    if override_info:
+        override_kind = str(override_info.get("override_kind", "") or "")
+        override_reason = str(override_info.get("override_reason", "") or "")
+        original_code = str(override_info.get("original_code", original_code) or "")
+        original_name = str(override_info.get("original_name", original_name) or "")
+        phonetic_top_score = override_info.get("phonetic_top_score")
+        phonetic_lead = override_info.get("phonetic_lead")
     if (
         not wrong_keyword
         or not correct_code
@@ -516,6 +530,9 @@ def _record_alias_candidate(
             file=sys.stderr,
         )
         correct_code = contextual_code
+        if not override_kind:
+            override_kind = "contextual"
+            override_reason = "scoped context alias"
 
     phonetic_candidates = _phonetic_alias_candidates(wrong_keyword)
     phonetic_code = _phonetic_override_code(
@@ -532,6 +549,19 @@ def _record_alias_candidate(
             file=sys.stderr,
         )
         correct_code = phonetic_code
+        if not override_kind:
+            override_kind = "phonetic"
+            top = phonetic_candidates[0] if phonetic_candidates else {}
+            phonetic_top_score = top.get("score")
+            phonetic_lead = (
+                phonetic_candidates[0]["score"] - phonetic_candidates[1]["score"]
+                if len(phonetic_candidates) > 1 else phonetic_candidates[0]["score"]
+            ) if phonetic_candidates else None
+            override_reason = (
+                f"phonetic_top1 score={phonetic_top_score:.3f} lead={phonetic_lead:.3f}"
+                if phonetic_top_score is not None and phonetic_lead is not None
+                else "phonetic_top1"
+            )
 
     canonical_name = CODE_TO_NAME.get(correct_code, "")
     correct_name = (correct_name or canonical_name).strip()
@@ -564,6 +594,17 @@ def _record_alias_candidate(
         "reasons": reasons,
         "context": context[:300],
     }
+    if override_kind:
+        sample.update({
+            "override_kind": override_kind,
+            "override_reason": override_reason,
+            "original_code": original_code,
+            "original_name": original_name,
+        })
+        if phonetic_top_score is not None:
+            sample["phonetic_top_score"] = phonetic_top_score
+        if phonetic_lead is not None:
+            sample["phonetic_lead"] = phonetic_lead
     if sample not in evidence:
         evidence.append(sample)
     max_score = max(score, entry.get("max_score", 0))
@@ -3346,8 +3387,11 @@ def _validate_gemini_stocks(
         fuzzy_name_appears = False
         is_short_cjk_name = _contains_only_cjk(resolved_name) and len(resolved_name) <= 3
         sector_source_term = whisper_orig_bare or whisper_orig or name
+        alias_override_info: dict | None = None
         contextual_code = _contextual_whisper_alias_code(sector_source_term, chunk_text)
         if contextual_code and contextual_code != resolved_code:
+            previous_code = resolved_code
+            previous_name = resolved_name
             contextual_name = CODE_TO_NAME.get(contextual_code, contextual_code)
             print(
                 f"  [gemini_extract] contextual alias remap"
@@ -3362,14 +3406,28 @@ def _validate_gemini_stocks(
                 _whisper_core = _core(sector_source_term)
             resolved_code = contextual_code
             resolved_name = contextual_name
+            alias_override_info = {
+                "override_kind": "contextual",
+                "override_reason": "scoped context alias",
+                "original_code": previous_code,
+                "original_name": previous_name,
+            }
             name = resolved_name
             stock_keywords = [kw for kw, c in STOCK_DICT.items() if c == resolved_code]
             search_names = stock_keywords if lev_resolved else stock_keywords + [name]
             exact_name_appears = any(kw in chunk_text for kw in search_names)
             name_appears = True
 
-        phonetic_code = _phonetic_override_code(sector_source_term, resolved_code, chunk_text)
+        phonetic_candidates_for_override = _phonetic_alias_candidates(sector_source_term)
+        phonetic_code = _phonetic_override_code(
+            sector_source_term,
+            resolved_code,
+            chunk_text,
+            phonetic_candidates_for_override,
+        )
         if phonetic_code and phonetic_code != resolved_code:
+            previous_code = resolved_code
+            previous_name = resolved_name
             phonetic_name = CODE_TO_NAME.get(phonetic_code, phonetic_code)
             print(
                 f"  [gemini_extract] phonetic alias remap"
@@ -3384,6 +3442,24 @@ def _validate_gemini_stocks(
                 _whisper_core = _core(sector_source_term)
             resolved_code = phonetic_code
             resolved_name = phonetic_name
+            top_score = phonetic_candidates_for_override[0]["score"] if phonetic_candidates_for_override else None
+            lead = (
+                phonetic_candidates_for_override[0]["score"] - phonetic_candidates_for_override[1]["score"]
+                if len(phonetic_candidates_for_override) > 1
+                else phonetic_candidates_for_override[0]["score"]
+            ) if phonetic_candidates_for_override else None
+            alias_override_info = {
+                "override_kind": "phonetic",
+                "override_reason": (
+                    f"phonetic_top1 score={top_score:.3f} lead={lead:.3f}"
+                    if top_score is not None and lead is not None
+                    else "phonetic_top1"
+                ),
+                "original_code": previous_code,
+                "original_name": previous_name,
+                "phonetic_top_score": top_score,
+                "phonetic_lead": lead,
+            }
             name = resolved_name
             stock_keywords = [kw for kw, c in STOCK_DICT.items() if c == resolved_code]
             search_names = stock_keywords if lev_resolved else stock_keywords + [name]
@@ -3749,6 +3825,7 @@ def _validate_gemini_stocks(
                 context=ctx,
                 video_ctx=video_ctx,
                 source="full_video_validator",
+                override_info=alias_override_info,
             )
 
         validated.append({

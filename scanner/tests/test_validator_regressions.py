@@ -244,6 +244,12 @@ class ValidatorRegressionTests(unittest.TestCase):
             self.assertIn("祕望時|8043", candidates)
             self.assertNotIn("祕望時|2059", candidates)
             self.assertEqual(candidates["祕望時|8043"]["correct_name"], "蜜望實")
+            evidence = candidates["祕望時|8043"]["evidence"][-1]
+            self.assertEqual(evidence["override_kind"], "phonetic")
+            self.assertEqual(evidence["original_code"], "2059")
+            self.assertEqual(evidence["original_name"], "川湖")
+            self.assertGreaterEqual(evidence["phonetic_top_score"], 0.65)
+            self.assertGreaterEqual(evidence["phonetic_lead"], 0.10)
 
     def test_gemini_result_uses_clear_phonetic_winner_over_wrong_target(self):
         if self.scanner.lazy_pinyin is None:
@@ -275,10 +281,15 @@ class ValidatorRegressionTests(unittest.TestCase):
             finally:
                 self.scanner.ALIAS_CANDIDATES_FILE = old_candidates
                 self.scanner.REJECTED_ALIASES_FILE = old_rejected
+            candidates = json.loads(candidates_path.read_text(encoding="utf-8"))
 
         self.assertIn("6147", [hit["stock_code"] for hit in hits])
         self.assertNotIn("2368", [hit["stock_code"] for hit in hits if hit["matched_keyword"] == "騎幫"])
         self.assertIn("騎幫", [hit["matched_keyword"] for hit in hits])
+        evidence = candidates["騎幫|6147"]["evidence"][-1]
+        self.assertEqual(evidence["override_kind"], "phonetic")
+        self.assertEqual(evidence["original_code"], "2368")
+        self.assertEqual(evidence["original_name"], "金像電")
 
     def test_lianjun_only_matches_lianjun_in_cpo_context(self):
         cpo_text = "CPO族群裡面光盛和聯亞先休息，但是聯軍這些開始補漲。"

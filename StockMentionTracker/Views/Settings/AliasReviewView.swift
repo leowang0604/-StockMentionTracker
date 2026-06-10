@@ -102,6 +102,11 @@ struct AliasReviewView: View {
                         .foregroundStyle(.secondary)
                         .lineLimit(2)
                 }
+                if let overrideSummary = overrideSummary(for: candidate, evidence: evidence) {
+                    Text(overrideSummary)
+                        .font(.caption)
+                        .foregroundStyle(.blue)
+                }
                 Text(highlightedMentionText(evidence.context, terms: aliasHighlightTerms(for: candidate)))
                     .font(.caption)
                     .lineLimit(5)
@@ -148,6 +153,37 @@ struct AliasReviewView: View {
         return Array(Set(terms))
             .filter { !$0.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty }
             .sorted { $0.count > $1.count }
+    }
+
+    private func overrideSummary(for candidate: AliasCandidate, evidence: AliasEvidence) -> String? {
+        guard let kind = evidence.overrideKind, !kind.isEmpty else { return nil }
+        let label: String
+        switch kind {
+        case "phonetic":
+            label = "音近反轉"
+        case "contextual":
+            label = "語境修正"
+        default:
+            label = kind
+        }
+
+        var pieces = [label]
+        if let originalName = evidence.originalName, let originalCode = evidence.originalCode,
+           !originalName.isEmpty, !originalCode.isEmpty {
+            pieces.append("原本：\(originalName) \(originalCode)")
+        }
+        pieces.append("改用：\(candidate.correctName) \(candidate.correctCode)")
+
+        if let score = evidence.phoneticTopScore {
+            var scoreText = "音近 \(Int((score * 100).rounded()))%"
+            if let lead = evidence.phoneticLead {
+                scoreText += "，領先 \(Int((lead * 100).rounded()))%"
+            }
+            pieces.append(scoreText)
+        } else if let reason = evidence.overrideReason, !reason.isEmpty {
+            pieces.append(reason)
+        }
+        return pieces.joined(separator: " · ")
     }
 
     private func loadCandidates() async {
