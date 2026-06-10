@@ -102,7 +102,7 @@ struct AliasReviewView: View {
                         .foregroundStyle(.secondary)
                         .lineLimit(2)
                 }
-                Text(evidence.context)
+                Text(highlightedMentionText(evidence.context, terms: aliasHighlightTerms(for: candidate)))
                     .font(.caption)
                     .lineLimit(5)
             }
@@ -131,6 +131,23 @@ struct AliasReviewView: View {
             .disabled(processingID != nil)
         }
         .padding(.vertical, 6)
+    }
+
+    private func aliasHighlightTerms(for candidate: AliasCandidate) -> [String] {
+        var terms = [
+            candidate.wrongKeyword,
+            candidate.correctName,
+            candidate.correctCode,
+        ]
+        if let phoneticCandidates = candidate.phoneticCandidates {
+            for phoneticCandidate in phoneticCandidates.prefix(3) {
+                terms.append(phoneticCandidate.name)
+                terms.append(phoneticCandidate.code)
+            }
+        }
+        return Array(Set(terms))
+            .filter { !$0.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty }
+            .sorted { $0.count > $1.count }
     }
 
     private func loadCandidates() async {

@@ -26,12 +26,16 @@ def load_scanner():
     for stock in [
         {"code": "2330", "name": "台積電", "market": "listed", "sector": "半導體業"},
         {"code": "2317", "name": "鴻海", "market": "listed", "sector": "其他電子業"},
+        {"code": "2059", "name": "川湖", "market": "listed", "sector": "電子零組件業"},
+        {"code": "2368", "name": "金像電", "market": "listed", "sector": "電子零組件業"},
         {"code": "2615", "name": "萬海", "market": "listed", "sector": "航運業"},
         {"code": "3026", "name": "禾伸堂", "market": "listed", "sector": "電子零組件業"},
         {"code": "3450", "name": "聯鈞", "market": "listed", "sector": "半導體業"},
+        {"code": "6147", "name": "頎邦", "market": "listed", "sector": "半導體業"},
         {"code": "6214", "name": "精誠", "market": "listed", "sector": "資訊服務業"},
         {"code": "6669", "name": "緯穎", "market": "listed", "sector": "電腦及週邊設備業"},
         {"code": "6690", "name": "安碁資訊", "market": "listed", "sector": "資訊服務業"},
+        {"code": "8043", "name": "蜜望實", "market": "listed", "sector": "電子零組件業"},
         {"code": "00403A", "name": "00403A", "market": "listed", "sector": "ETF・主動型"},
         {"code": "00993A", "name": "主動安聯台灣", "market": "listed", "sector": "ETF・主動型"},
     ]:
@@ -208,6 +212,73 @@ class ValidatorRegressionTests(unittest.TestCase):
         self.assertEqual(candidates[0]["name"], "鴻海")
         _, reasons = self.scanner._alias_candidate_score("紅海", "2615", "萬海", "紅海最近上漲。")
         self.assertIn("phonetic_conflict", reasons)
+
+    def test_alias_candidate_uses_clear_phonetic_winner_over_gemini_guess(self):
+        if self.scanner.lazy_pinyin is None:
+            self.skipTest("pypinyin is not installed")
+
+        text = "所以川湖今天的漲停板很有意義，還有再來就是祕望時的漲停板，讓我們知道被動元件這個族群沒死掉。"
+        with tempfile.TemporaryDirectory() as tmpdir:
+            candidates_path = Path(tmpdir) / "alias_candidates.json"
+            rejected_path = Path(tmpdir) / "rejected_aliases.json"
+            candidates_path.write_text("{}", encoding="utf-8")
+            rejected_path.write_text("{}", encoding="utf-8")
+            old_candidates = self.scanner.ALIAS_CANDIDATES_FILE
+            old_rejected = self.scanner.REJECTED_ALIASES_FILE
+            self.scanner.ALIAS_CANDIDATES_FILE = candidates_path
+            self.scanner.REJECTED_ALIASES_FILE = rejected_path
+            self.scanner._PHONETIC_STOCK_INDEX = None
+            try:
+                self.scanner._record_alias_candidate(
+                    "祕望時",
+                    "2059",
+                    "川湖",
+                    context=text,
+                    source="regression-test",
+                )
+            finally:
+                self.scanner.ALIAS_CANDIDATES_FILE = old_candidates
+                self.scanner.REJECTED_ALIASES_FILE = old_rejected
+
+            candidates = json.loads(candidates_path.read_text(encoding="utf-8"))
+            self.assertIn("祕望時|8043", candidates)
+            self.assertNotIn("祕望時|2059", candidates)
+            self.assertEqual(candidates["祕望時|8043"]["correct_name"], "蜜望實")
+
+    def test_gemini_result_uses_clear_phonetic_winner_over_wrong_target(self):
+        if self.scanner.lazy_pinyin is None:
+            self.skipTest("pypinyin is not installed")
+
+        text = "例如說大立光，例如說國劇出現了目標價，終於出現一個離他現價超過一倍的目標價，金像電、騎幫等等的。"
+        with tempfile.TemporaryDirectory() as tmpdir:
+            candidates_path = Path(tmpdir) / "alias_candidates.json"
+            rejected_path = Path(tmpdir) / "rejected_aliases.json"
+            candidates_path.write_text("{}", encoding="utf-8")
+            rejected_path.write_text("{}", encoding="utf-8")
+            old_candidates = self.scanner.ALIAS_CANDIDATES_FILE
+            old_rejected = self.scanner.REJECTED_ALIASES_FILE
+            self.scanner.ALIAS_CANDIDATES_FILE = candidates_path
+            self.scanner.REJECTED_ALIASES_FILE = rejected_path
+            self.scanner._PHONETIC_STOCK_INDEX = None
+            try:
+                hits = self.validate(
+                    {
+                        "name": "金像電",
+                        "code": "2368",
+                        "whisper_original": "騎幫",
+                        "context": text,
+                        "sentiment": "neutral",
+                        "score": 0.5,
+                    },
+                    text,
+                )
+            finally:
+                self.scanner.ALIAS_CANDIDATES_FILE = old_candidates
+                self.scanner.REJECTED_ALIASES_FILE = old_rejected
+
+        self.assertIn("6147", [hit["stock_code"] for hit in hits])
+        self.assertNotIn("2368", [hit["stock_code"] for hit in hits if hit["matched_keyword"] == "騎幫"])
+        self.assertIn("騎幫", [hit["matched_keyword"] for hit in hits])
 
     def test_lianjun_only_matches_lianjun_in_cpo_context(self):
         cpo_text = "CPO族群裡面光盛和聯亞先休息，但是聯軍這些開始補漲。"

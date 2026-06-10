@@ -347,6 +347,44 @@ def _phonetic_alias_candidates(wrong_keyword: str, limit: int = 3) -> list[dict]
     return sorted(candidates, key=lambda item: (-item["score"], item["code"], item["name"]))[:limit]
 
 
+_PHONETIC_OVERRIDE_MIN_SCORE = 0.65
+_PHONETIC_OVERRIDE_MIN_LEAD = 0.10
+
+
+def _phonetic_override_code(
+    wrong_keyword: str,
+    current_code: str,
+    context: str,
+    phonetic_candidates: list[dict] | None = None,
+) -> str | None:
+    """Use a clear phonetic winner to override a weaker Gemini correction."""
+    wrong_keyword = (wrong_keyword or "").strip()
+    current_code = (current_code or "").strip()
+    if not wrong_keyword or not current_code or wrong_keyword not in (context or ""):
+        return None
+    if wrong_keyword in STOCK_DICT:
+        return None
+
+    candidates = phonetic_candidates or _phonetic_alias_candidates(wrong_keyword)
+    if not candidates:
+        return None
+    phonetic_codes = [candidate["code"] for candidate in candidates]
+    top = candidates[0]
+    top_code = top["code"]
+    if top_code == current_code or current_code in phonetic_codes:
+        return None
+    lead = top["score"] - candidates[1]["score"] if len(candidates) > 1 else top["score"]
+    if top["score"] < _PHONETIC_OVERRIDE_MIN_SCORE or lead < _PHONETIC_OVERRIDE_MIN_LEAD:
+        return None
+    if f"{wrong_keyword}|{top_code}" in _load_rejected_aliases():
+        return None
+    if not _has_stock_context_evidence(context, code=top_code, mention_terms=[wrong_keyword]) and not _context_sector_families(context):
+        return None
+    if _has_strong_sector_mismatch(context, top_code):
+        return None
+    return top_code
+
+
 def _build_phonetic_stock_index() -> list[tuple[str, str, str]]:
     """Build the review-only TW pronunciation index once per scanner run."""
     if lazy_pinyin is None:
@@ -479,12 +517,27 @@ def _record_alias_candidate(
         )
         correct_code = contextual_code
 
+    phonetic_candidates = _phonetic_alias_candidates(wrong_keyword)
+    phonetic_code = _phonetic_override_code(
+        wrong_keyword,
+        correct_code,
+        context,
+        phonetic_candidates,
+    )
+    if phonetic_code and phonetic_code != correct_code:
+        print(
+            f"  [alias-candidate] phonetic override 「{wrong_keyword}」:"
+            f" {correct_code}({CODE_TO_NAME.get(correct_code, correct_name or '')})"
+            f" → {phonetic_code}({CODE_TO_NAME.get(phonetic_code, phonetic_code)})",
+            file=sys.stderr,
+        )
+        correct_code = phonetic_code
+
     canonical_name = CODE_TO_NAME.get(correct_code, "")
     correct_name = (correct_name or canonical_name).strip()
     if canonical_name != correct_name:
         correct_name = canonical_name
 
-    phonetic_candidates = _phonetic_alias_candidates(wrong_keyword)
     score, reasons = _alias_candidate_score(
         wrong_keyword,
         correct_code,
@@ -704,7 +757,7 @@ STOCK_CONTEXT_HINTS: set[str] = {
     "本益比", "毛利", "毛利率", "訂單", "出貨", "漲停", "跌停", "大漲", "大跌",
     "創高", "創新高", "拉回", "位階", "買點", "賣點", "看多", "看空", "中性",
     "漲價", "報價", "代工", "產能", "擴產", "庫存", "需求", "產業", "族群",
-    "題材", "估值", "市佔", "公司", "客戶", "供應鏈",
+    "題材", "估值", "目標價", "評價", "市佔", "公司", "客戶", "供應鏈",
     "ETF", "高息", "高股息", "成分", "成分股", "持股", "權重", "比重",
 } | BULLISH_KEYWORDS | BEARISH_KEYWORDS
 
@@ -3309,6 +3362,28 @@ def _validate_gemini_stocks(
                 _whisper_core = _core(sector_source_term)
             resolved_code = contextual_code
             resolved_name = contextual_name
+            name = resolved_name
+            stock_keywords = [kw for kw, c in STOCK_DICT.items() if c == resolved_code]
+            search_names = stock_keywords if lev_resolved else stock_keywords + [name]
+            exact_name_appears = any(kw in chunk_text for kw in search_names)
+            name_appears = True
+
+        phonetic_code = _phonetic_override_code(sector_source_term, resolved_code, chunk_text)
+        if phonetic_code and phonetic_code != resolved_code:
+            phonetic_name = CODE_TO_NAME.get(phonetic_code, phonetic_code)
+            print(
+                f"  [gemini_extract] phonetic alias remap"
+                f" — {sector_source_term!r} -> {phonetic_code}({phonetic_name})"
+                f" instead of {resolved_code}({resolved_name});"
+                f" weak sectors={_format_context_sector_scores(chunk_text)}",
+                file=sys.stderr,
+            )
+            if not whisper_orig:
+                whisper_orig = sector_source_term
+                whisper_orig_bare = sector_source_term
+                _whisper_core = _core(sector_source_term)
+            resolved_code = phonetic_code
+            resolved_name = phonetic_name
             name = resolved_name
             stock_keywords = [kw for kw, c in STOCK_DICT.items() if c == resolved_code]
             search_names = stock_keywords if lev_resolved else stock_keywords + [name]
