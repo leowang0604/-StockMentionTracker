@@ -11,6 +11,8 @@ Steps:
   6. Write results to data/latest.json
 """
 
+from __future__ import annotations
+
 import json
 import os
 import re
@@ -42,6 +44,7 @@ TEST_DOWNLOAD_ONLY = os.environ.get("TEST_DOWNLOAD_ONLY", "false").lower() == "t
 SPOTIFY_CLIENT_ID  = os.environ.get("SPOTIFY_CLIENT_ID", "")
 SPOTIFY_CLIENT_SECRET = os.environ.get("SPOTIFY_CLIENT_SECRET", "")
 GEMINI_API_KEY     = os.environ.get("GEMINI_API_KEY", "")
+INTERMEDIATE_GIT_PUSH = os.environ.get("SCANNER_INTERMEDIATE_GIT_PUSH", "false").lower() == "true"
 
 # Path to Netscape-format cookies file (set by workflow from YOUTUBE_COOKIES secret)
 COOKIES_FILE = os.environ.get("YOUTUBE_COOKIES_FILE", "")
@@ -5266,32 +5269,35 @@ def main() -> None:
         print(f"  💾 Saved — {len(history['videos_scanned'])} total videos, "
               f"{len(history['stocks_ranking'])} stocks")
 
-        # ── Intermediate git commit so data survives timeout ──────────────
-        import subprocess
-        try:
-            subprocess.run(["git", "config", "user.email", "github-actions[bot]@users.noreply.github.com"], check=True)
-            subprocess.run(["git", "config", "user.name", "github-actions[bot]"], check=True)
-            # Stage latest.json + any other modified tracked files in data/
-            subprocess.run(["git", "add", "-u", "data/"], capture_output=True)
-            subprocess.run(["git", "add", str(OUTPUT_FILE)], check=True)
-            result = subprocess.run(
-                ["git", "diff", "--staged", "--quiet"],
-                capture_output=True
-            )
-            if result.returncode != 0:  # staged changes exist
-                subprocess.run(
-                    ["git", "commit", "-m",
-                     f"chore: scan progress after {sname}"],
-                    check=True
+        # ── Optional intermediate git commit so data survives timeout ─────
+        # Keep this disabled in normal CI runs. Rebase/push during the scanner
+        # can leave a half-finished git state and make the final workflow push fail.
+        if INTERMEDIATE_GIT_PUSH:
+            import subprocess
+            try:
+                subprocess.run(["git", "config", "user.email", "github-actions[bot]@users.noreply.github.com"], check=True)
+                subprocess.run(["git", "config", "user.name", "github-actions[bot]"], check=True)
+                # Stage latest.json + any other modified tracked files in data/
+                subprocess.run(["git", "add", "-u", "data/"], capture_output=True)
+                subprocess.run(["git", "add", str(OUTPUT_FILE)], check=True)
+                result = subprocess.run(
+                    ["git", "diff", "--staged", "--quiet"],
+                    capture_output=True
                 )
-                subprocess.run(
-                    ["git", "pull", "--rebase", "--autostash", "origin", "main"],
-                    check=True
-                )
-                subprocess.run(["git", "push"], check=True)
-                print(f"  📤 Pushed intermediate results")
-        except Exception as e:
-            print(f"  ⚠️  Intermediate commit failed (non-fatal): {e}")
+                if result.returncode != 0:  # staged changes exist
+                    subprocess.run(
+                        ["git", "commit", "-m",
+                         f"chore: scan progress after {sname}"],
+                        check=True
+                    )
+                    subprocess.run(
+                        ["git", "pull", "--rebase", "--autostash", "origin", "main"],
+                        check=True
+                    )
+                    subprocess.run(["git", "push"], check=True)
+                    print(f"  📤 Pushed intermediate results")
+            except Exception as e:
+                print(f"  ⚠️  Intermediate commit failed (non-fatal): {e}")
 
     # ── Enrich sectors for TW stocks mentioned but without sector ─────────
     if GEMINI_API_KEY:

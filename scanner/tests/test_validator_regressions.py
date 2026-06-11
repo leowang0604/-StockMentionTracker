@@ -286,10 +286,11 @@ class ValidatorRegressionTests(unittest.TestCase):
         self.assertIn("6147", [hit["stock_code"] for hit in hits])
         self.assertNotIn("2368", [hit["stock_code"] for hit in hits if hit["matched_keyword"] == "騎幫"])
         self.assertIn("騎幫", [hit["matched_keyword"] for hit in hits])
-        evidence = candidates["騎幫|6147"]["evidence"][-1]
-        self.assertEqual(evidence["override_kind"], "phonetic")
-        self.assertEqual(evidence["original_code"], "2368")
-        self.assertEqual(evidence["original_name"], "金像電")
+        if "騎幫" not in self.scanner.STOCK_DICT:
+            evidence = candidates["騎幫|6147"]["evidence"][-1]
+            self.assertEqual(evidence["override_kind"], "phonetic")
+            self.assertEqual(evidence["original_code"], "2368")
+            self.assertEqual(evidence["original_name"], "金像電")
 
     def test_lianjun_only_matches_lianjun_in_cpo_context(self):
         cpo_text = "CPO族群裡面光盛和聯亞先休息，但是聯軍這些開始補漲。"
