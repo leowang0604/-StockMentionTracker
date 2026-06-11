@@ -62,6 +62,29 @@ struct AliasEvidence: Codable, Identifiable {
 
     var id: String { "\(videoID)|\(source)|\(context)" }
 
+    var parsedDate: Date? {
+        let f = DateFormatter()
+        f.dateFormat = "yyyy-MM-dd"
+        return f.date(from: date)
+    }
+
+    var dateText: String {
+        guard let d = parsedDate else { return date }
+        let f = DateFormatter()
+        f.dateStyle = .short
+        f.locale = Locale(identifier: "zh_TW")
+        return f.string(from: d)
+    }
+
+    var youtubeURL: URL? {
+        let allowed = CharacterSet.alphanumerics.union(CharacterSet(charactersIn: "-_"))
+        guard videoID.count == 11,
+              videoID.unicodeScalars.allSatisfy({ allowed.contains($0) }) else {
+            return nil
+        }
+        return URL(string: "https://www.youtube.com/watch?v=\(videoID)")
+    }
+
     enum CodingKeys: String, CodingKey {
         case channel, context, date, reasons, score, source, title
         case videoID = "video_id"

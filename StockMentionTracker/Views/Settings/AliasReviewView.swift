@@ -19,19 +19,31 @@ struct AliasReviewView: View {
             } else if isLoading {
                 ProgressView("載入 Alias 候選…")
             } else if sortedCandidates.isEmpty {
-                ContentUnavailableView {
-                    Label("沒有待審核候選", systemImage: "checkmark.circle")
-                } description: {
-                    Text("每日掃描發現新的 Whisper 錯字後，會顯示在這裡。")
+                VStack(spacing: 0) {
+                    filterBar
+                    ContentUnavailableView {
+                        Label("沒有待審核候選", systemImage: "checkmark.circle")
+                    } description: {
+                        Text("目前時間範圍內沒有待審核候選。")
+                    }
                 }
             } else {
-                List(sortedCandidates) { candidate in
-                    candidateRow(candidate)
+                VStack(spacing: 0) {
+                    filterBar
+                    List(sortedCandidates) { candidate in
+                        candidateRow(candidate)
+                    }
+                    .listStyle(.plain)
+                    .scrollContentBackground(.hidden)
+                    .refreshable { await loadCandidates() }
                 }
-                .refreshable { await loadCandidates() }
             }
         }
+        .background(Color.black.ignoresSafeArea())
         .navigationTitle("Alias 候選審核")
+        .navigationBarTitleDisplayMode(.large)
+        .toolbarBackground(Color.black, for: .navigationBar)
+        .toolbarBackground(.visible, for: .navigationBar)
         .toolbar {
             ToolbarItem(placement: .automatic) {
                 Button {
@@ -54,14 +66,43 @@ struct AliasReviewView: View {
     }
 
     private var sortedCandidates: [AliasCandidate] {
-        candidates.values.sorted {
-            if $0.maxScore != $1.maxScore { return $0.maxScore > $1.maxScore }
-            return $0.observations > $1.observations
+        candidates.values
+            .filter { !filteredEvidence(for: $0).isEmpty }
+            .sorted { lhs, rhs in
+                let lhsEvidence = filteredEvidence(for: lhs)
+                let rhsEvidence = filteredEvidence(for: rhs)
+                let lhsScore = lhsEvidence.map(\.score).max() ?? lhs.maxScore
+                let rhsScore = rhsEvidence.map(\.score).max() ?? rhs.maxScore
+                if lhsScore != rhsScore { return lhsScore > rhsScore }
+                return lhsEvidence.count > rhsEvidence.count
         }
     }
 
+    private var filterBar: some View {
+        @Bindable var appState = appState
+        return VStack(spacing: 0) {
+            HStack(spacing: 10) {
+                Text("最近")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                Slider(value: $appState.selectedDays, in: 1...60, step: 1)
+                Text("\(Int(appState.selectedDays)) 天")
+                    .font(.caption.monospacedDigit())
+                    .frame(width: 44, alignment: .trailing)
+            }
+            .padding(.horizontal)
+            .padding(.vertical, 8)
+            Divider()
+        }
+        .background(Color.black)
+    }
+
     private func candidateRow(_ candidate: AliasCandidate) -> some View {
-        VStack(alignment: .leading, spacing: 10) {
+        let evidenceInRange = filteredEvidence(for: candidate)
+        let latestEvidence = evidenceInRange.last
+        let videoCount = Set(evidenceInRange.map(\.videoID).filter { !$0.isEmpty }).count
+        let displayScore = evidenceInRange.map(\.score).max() ?? candidate.maxScore
+        return VStack(alignment: .leading, spacing: 10) {
             HStack {
                 Text(candidate.wrongKeyword)
                     .font(.headline)
@@ -73,12 +114,12 @@ struct AliasReviewView: View {
                     .font(.caption.monospaced())
                     .foregroundStyle(.secondary)
                 Spacer()
-                Text("\(candidate.maxScore)")
+                Text("\(displayScore)")
                     .font(.caption.monospaced())
                     .foregroundStyle(.secondary)
             }
 
-            Text("\(candidate.distinctVideos) 支影片 · \(candidate.observations) 次觀察")
+            Text("\(videoCount) 支影片 · \(evidenceInRange.count) 次觀察")
                 .font(.caption)
                 .foregroundStyle(.secondary)
 
@@ -95,13 +136,8 @@ struct AliasReviewView: View {
                 }
             }
 
-            if let evidence = candidate.evidence.last {
-                if !evidence.title.isEmpty {
-                    Text(evidence.title)
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
-                        .lineLimit(2)
-                }
+            if let evidence = latestEvidence {
+                sourceLine(for: evidence)
                 if let overrideSummary = overrideSummary(for: candidate, evidence: evidence) {
                     Text(overrideSummary)
                         .font(.caption)
@@ -136,6 +172,41 @@ struct AliasReviewView: View {
             .disabled(processingID != nil)
         }
         .padding(.vertical, 6)
+        .listRowBackground(Color.black)
+    }
+
+    @ViewBuilder
+    private func sourceLine(for evidence: AliasEvidence) -> some View {
+        VStack(alignment: .leading, spacing: 4) {
+            HStack(spacing: 6) {
+                Image(systemName: evidence.youtubeURL == nil ? "waveform" : "play.rectangle.fill")
+                    .foregroundStyle(sourceIconColor(for: evidence))
+                Text([evidence.channel, evidence.dateText].filter { !$0.isEmpty }.joined(separator: " · "))
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                if let url = evidence.youtubeURL {
+                    Link(destination: url) {
+                        Label("開啟", systemImage: "arrow.up.right.square")
+                            .font(.caption)
+                    }
+                }
+            }
+            if !evidence.title.isEmpty {
+                Text(evidence.title)
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                    .lineLimit(2)
+            }
+        }
+    }
+
+    private func sourceIconColor(for evidence: AliasEvidence) -> Color {
+        evidence.youtubeURL == nil ? .secondary : .red
+    }
+
+    private func filteredEvidence(for candidate: AliasCandidate) -> [AliasEvidence] {
+        let cutoff = appState.cutoffDate
+        return candidate.evidence.filter { ($0.parsedDate ?? .distantPast) >= cutoff }
     }
 
     private func aliasHighlightTerms(for candidate: AliasCandidate) -> [String] {
