@@ -32,7 +32,10 @@ jobs:
           cache-dependency-path: scanner/requirements.txt
 
       - name: Install test dependencies
-        run: pip install requests yt-dlp "pypinyin>=0.53,<1"
+        run: pip install -r scanner/requirements.txt
+
+      - name: Verify phonetic dependency
+        run: python -c "from pypinyin import Style, lazy_pinyin; print('pypinyin ok')"
 
       - name: Run scanner regression tests
         run: python -m unittest scanner.tests.test_validator_regressions -v

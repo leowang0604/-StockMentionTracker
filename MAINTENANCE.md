@@ -28,13 +28,28 @@ cd -StockMentionTracker
 
 ### 安裝 Python 依賴
 
+建議使用 Python 3.11+ 的虛擬環境，不要直接用 macOS/Xcode 內建的 `python3`。Xcode 內建 Python 可能是 3.9，會卡在 scanner 使用的型別註記，也常讓 `pypinyin` 沒裝在正確環境。
+
 ```bash
-pip install "yt-dlp>=2025.1.1" requests "youtube-transcript-api>=1.0.0" google-genai "pypinyin>=0.53,<1"
-# 若要跑 Whisper（轉錄 Podcast 音訊）
-pip install faster-whisper==1.1.1
+python3.11 -m venv .venv
+.venv/bin/python -m pip install --upgrade pip
+.venv/bin/python -m pip install -r scanner/requirements.txt
 ```
 
 Python 版本需 **3.11+**（type union `X | Y` 語法）。
+
+確認音近偵測依賴有裝到同一個 Python：
+
+```bash
+.venv/bin/python -c "from pypinyin import Style, lazy_pinyin; print('pypinyin ok')"
+```
+
+若本機沒有 `python3.11`，也可以用 Codex workspace 內建 Python：
+
+```bash
+/Users/leowang/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 \
+  -m pip install -r scanner/requirements.txt
+```
 
 ### GitHub Secrets 設定
 
@@ -52,6 +67,18 @@ Python 版本需 **3.11+**（type union `X | Y` 語法）。
 `YOUTUBE_API_KEY` 沒設定時會 fallback 到 RSS，功能大致一樣但速度較慢。
 
 ### 本地測試
+
+Scanner regression：
+
+```bash
+make test-scanner
+```
+
+Replay fixtures：
+
+```bash
+make replay
+```
 
 ```bash
 # 設定環境變數
