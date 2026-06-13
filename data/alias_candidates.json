@@ -523,60 +523,6 @@
     ],
     "wrong_keyword" : "富邦電子"
   },
-  "揮打|NVDA" : {
-    "confidence" : "high",
-    "correct_code" : "NVDA",
-    "correct_name" : "NVIDIA",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "兆華與股惑仔",
-        "context" : "性 跟大家來分享一下 其實對等關稅之前 還有一次殺判 不曉得大家記不記得 在2024年 我記得是一天好像跌1800點 也是史上沒有看過 這麼大的跌點 因為那時候股票位階 還不是那麼高 那跌什麼 是跌 揮打的財報 揮打的財報出來 華爾街就覺得 我給你的預期是非常高的 你這樣的財報 我還沒有辦法接受 然後這樣AI就要泡沫了 代表你的資本支出 可能得不到回收 所以你財報沒有非常的亮眼 然後別人有一些 Ethiq可能會分拾你的 GPU市場等等的疑慮 傳出來 忽然之間 美國的科技股就大崩跌 然後台股也跟著大殺兩天 大殺兩天 那一次其實我也是有點小緊張 因為大家知道沒有經驗 他就是上來 那一次的殺盤 就想",
-        "date" : "2026-06-09",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "stock_context",
-          "weak_sector_match"
-        ],
-        "score" : 73,
-        "source" : "full_video_validator",
-        "title" : "EP1115｜只殺一天夠嗎？外資調升國巨、金像電、大立光評價，5月營收持續好，AI底氣勝出！若是再跌升息恐懼，就更該買？ft.AI達人 蔡明翰",
-        "video_id" : "fdbf6501-861c-4c78-be4e-b0046986ebcb"
-      }
-    ],
-    "max_score" : 73,
-    "observations" : 3,
-    "phonetic_candidates" : [
-      {
-        "code" : "3211",
-        "name" : "順達",
-        "phonetic_similarity" : 0.667,
-        "score" : 0.433,
-        "text_similarity" : 0
-      },
-      {
-        "code" : "4549",
-        "name" : "桓達",
-        "phonetic_similarity" : 0.667,
-        "score" : 0.433,
-        "text_similarity" : 0
-      },
-      {
-        "code" : "1536",
-        "name" : "和大",
-        "phonetic_similarity" : 0.6,
-        "score" : 0.39,
-        "text_similarity" : 0
-      }
-    ],
-    "updated_at" : "2026-06-13T20:07:52",
-    "video_ids" : [
-      "fdbf6501-861c-4c78-be4e-b0046986ebcb"
-    ],
-    "wrong_keyword" : "揮打"
-  },
   "新勝利|4931" : {
     "confidence" : "high",
     "correct_code" : "4931",
