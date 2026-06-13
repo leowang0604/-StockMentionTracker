@@ -364,59 +364,6 @@
     ],
     "wrong_keyword" : "丁"
   },
-  "家古文|ORCL" : {
-    "confidence" : "medium",
-    "correct_code" : "ORCL",
-    "correct_name" : "Oracle",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "財女珍妮",
-        "context" : "在影片上面 告訴大家說 你不要去做追高的動作 你可以稍微的等一下 因為市場上面永遠都有機會 現金你的子彈 就是留在這個時候用的 各位寶寶們好不好 好 那我們就看一下 今天我覺得比較重要的是什麼呢 就是家古文 因為家古文也是跟AI 有非常有關的一個家公司 什麼凱希雜貨店是什麼東西 家古文在盤後的時候 大跌了10%左右 好 那10% 你如果今天看家古文 這近一年的走勢 對不對 這是近一年的走勢 一樣也是走了一個 非常落勢的格局 然後到這邊年線下的時候 開始有進行打底 那在前幾天的時候 一度站回年線 大家都想說穩了對不對 但是你看前面的壓力很重 今天就算要漲破年線 我覺得他也不可能直接這樣子 直接漲",
-        "date" : "2026-06-11",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "stock_context"
-        ],
-        "score" : 65,
-        "source" : "full_video_validator",
-        "title" : "2026\/06\/11 (四) 通膨沒事，黃金暴跌，空頭來了？",
-        "video_id" : "c4409f61-f3e8-4a62-bcfe-79d304406a1e"
-      }
-    ],
-    "max_score" : 65,
-    "observations" : 2,
-    "phonetic_candidates" : [
-      {
-        "code" : "3680",
-        "name" : "家登",
-        "phonetic_similarity" : 0.5,
-        "score" : 0.442,
-        "text_similarity" : 0.333
-      },
-      {
-        "code" : "8462",
-        "name" : "柏文",
-        "phonetic_similarity" : 0.5,
-        "score" : 0.442,
-        "text_similarity" : 0.333
-      },
-      {
-        "code" : "1525",
-        "name" : "江申",
-        "phonetic_similarity" : 0.667,
-        "score" : 0.433,
-        "text_similarity" : 0
-      }
-    ],
-    "updated_at" : "2026-06-13T20:35:25",
-    "video_ids" : [
-      "c4409f61-f3e8-4a62-bcfe-79d304406a1e"
-    ],
-    "wrong_keyword" : "家古文"
-  },
   "富邦電子|0052" : {
     "confidence" : "high",
     "correct_code" : "0052",
