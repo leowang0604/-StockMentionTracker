@@ -746,60 +746,6 @@
     ],
     "wrong_keyword" : "服貿科"
   },
-  "祕望時|2059" : {
-    "confidence" : "medium",
-    "correct_code" : "2059",
-    "correct_name" : "川湖",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "兆華與股惑仔",
-        "context" : "子 對 所以大家都知道 隨時會有這種大疊發紙箱的時候 可是在發紙箱的時候 為什麼會覺得這次只是回檔 而不是崩盤 或是正式的多頭結束 就是要看AI的底氣 所以川胡今天的漲停板 是很有意義的 還有再來就是祕望時的漲停板 讓我們知道被動元件 絕對這個族群就是沒死掉 我手上的被動元件 有很多也是關緊幣 可是他們今天也是盤中就打開 關緊幣還能夠就是盤中就打開 就代表確實有高手 想要把這個族群扶起來 好 當然今天也漲了很多 根本就不認識的公司 就那二十幾塊 十幾塊 那個可能就是個別的主力在點火 那個要內行人才知道 我們就不列入討論 那今天還有什麼漲停 新勝利 所以電力這件事情 雖然在禮拜四五覺得有點 禮拜",
-        "date" : "2026-06-08",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "phonetic_conflict",
-          "stock_context"
-        ],
-        "score" : 50,
-        "source" : "full_video_validator",
-        "title" : "EP1114｜每次都是周末出事，今天能買東西嗎，明天還跌怎麼辦？高槓桿先賣，低持股就買，都不吃虧？AI發展沒變，但升息該怕？ft.題材獵人 林漢偉",
-        "video_id" : "5f0b292a-68ac-4e45-98ed-468f328f1070"
-      }
-    ],
-    "max_score" : 50,
-    "observations" : 1,
-    "phonetic_candidates" : [
-      {
-        "code" : "8043",
-        "name" : "蜜望實",
-        "phonetic_similarity" : 1,
-        "score" : 0.767,
-        "text_similarity" : 0.333
-      },
-      {
-        "code" : "4432",
-        "name" : "銘旺實",
-        "phonetic_similarity" : 0.818,
-        "score" : 0.532,
-        "text_similarity" : 0
-      },
-      {
-        "code" : "4771",
-        "name" : "望隼",
-        "phonetic_similarity" : 0.556,
-        "score" : 0.478,
-        "text_similarity" : 0.333
-      }
-    ],
-    "updated_at" : "2026-06-08T20:40:32",
-    "video_ids" : [
-      "5f0b292a-68ac-4e45-98ed-468f328f1070"
-    ],
-    "wrong_keyword" : "祕望時"
-  },
   "穩貌|3105" : {
     "confidence" : "high",
     "correct_code" : "3105",
