@@ -665,59 +665,6 @@
     ],
     "wrong_keyword" : "萬序"
   },
-  "請說|3481" : {
-    "confidence" : "medium",
-    "correct_code" : "3481",
-    "correct_name" : "群創",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "兆華與股惑仔",
-        "context" : "然後又是高本一筆的 可是後來就發現 哇塞 這個很強 結果宅本好像還是接下來的主流 所以後來資金就很快 把錦碩給打開了 打開了我反而就沒興趣賣了 這個大家自己參著 因為大家如果有聽Pocket就知道 我請說實在是買的太低太低了 所以有點在做實驗班的 看他要去哪裡 然後但是我覺得很值得觀察的是 不要看到跌成這樣 就去看跌到跌停板的有誰 剛剛浩北哥有講 如果他的融資幅有比較高的 然後他可能本一筆也比較高的 甚至還沒有本一筆 是虧錢的公司 也許會鎖到第三天 這個不確定 可是一定要看一下今天漲停板 或是從盤中拉起來的 就是高手盤在做什麼事情 川胡是很明白的 我早上跟浩北哥一樣的想法 開盤三分鐘就漲停的川",
-        "date" : "2026-06-08",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "name_distance=2"
-        ],
-        "score" : 62,
-        "source" : "full_video_validator",
-        "title" : "EP1114｜每次都是周末出事，今天能買東西嗎，明天還跌怎麼辦？高槓桿先賣，低持股就買，都不吃虧？AI發展沒變，但升息該怕？ft.題材獵人 林漢偉",
-        "video_id" : "5f0b292a-68ac-4e45-98ed-468f328f1070"
-      }
-    ],
-    "max_score" : 62,
-    "observations" : 1,
-    "phonetic_candidates" : [
-      {
-        "code" : "3189",
-        "name" : "景碩",
-        "phonetic_similarity" : 0.875,
-        "score" : 0.569,
-        "text_similarity" : 0
-      },
-      {
-        "code" : "6491",
-        "name" : "晶碩",
-        "phonetic_similarity" : 0.875,
-        "score" : 0.569,
-        "text_similarity" : 0
-      },
-      {
-        "code" : "5269",
-        "name" : "祥碩",
-        "phonetic_similarity" : 0.778,
-        "score" : 0.506,
-        "text_similarity" : 0
-      }
-    ],
-    "updated_at" : "2026-06-13T20:26:24",
-    "video_ids" : [
-      "5f0b292a-68ac-4e45-98ed-468f328f1070"
-    ],
-    "wrong_keyword" : "請說"
-  },
   "轟害|2382" : {
     "confidence" : "medium",
     "correct_code" : "2382",
