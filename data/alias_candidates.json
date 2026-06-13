@@ -310,60 +310,6 @@
     ],
     "wrong_keyword" : "nv"
   },
-  "丁|TSLA" : {
-    "confidence" : "low",
-    "correct_code" : "TSLA",
-    "correct_name" : "Tesla",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "韭菜畢業班",
-        "context" : " 那總之如果說 它在設計上面有問題的話 其實也都會一起去做一個 共同上面的解決 然後再來就是 我們可以看到 像是台大店的BPU的話Q1 它的一個出貨 其實對於這些東西 其實也都是有受惠的 同時我覺得 丁的東西 還有像是它跟特斯拉的一個合作 那除能系統上面來說的話 它會是一個相對重要的 一個供應商 那其次的 還有另外一件事情就是說 我們可以看到 為什麼會講這一個記點器 它的一個單價 其實比我們以前一般的 是高了接近20到30倍的 所以其實這個是相對多的 然後同時 如果我們可以看到 它目前的整體的營收結構 來講的話 其實伺服器的部分 並不是說到 占比非常的高 它可能占比 可能就是2026年 可能就",
-        "date" : "2026-06-10",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "stock_context",
-          "strong_sector_mismatch"
-        ],
-        "score" : 35,
-        "source" : "full_video_validator",
-        "title" : "EP233 | CPO&HVDC 利空解讀 ，營建股突然上漲 ? 台股系統性風險 ？",
-        "video_id" : "7e120b09-e270-4f75-96f8-026e475ab659"
-      }
-    ],
-    "max_score" : 35,
-    "observations" : 1,
-    "phonetic_candidates" : [
-      {
-        "code" : "1733",
-        "name" : "五鼎",
-        "phonetic_similarity" : 0.667,
-        "score" : 0.433,
-        "text_similarity" : 0
-      },
-      {
-        "code" : "3522",
-        "name" : "御嵿",
-        "phonetic_similarity" : 0.667,
-        "score" : 0.433,
-        "text_similarity" : 0
-      },
-      {
-        "code" : "4585",
-        "name" : "達明",
-        "phonetic_similarity" : 0.667,
-        "score" : 0.433,
-        "text_similarity" : 0
-      }
-    ],
-    "updated_at" : "2026-06-13T18:57:37",
-    "video_ids" : [
-      "7e120b09-e270-4f75-96f8-026e475ab659"
-    ],
-    "wrong_keyword" : "丁"
-  },
   "富邦電子|0052" : {
     "confidence" : "high",
     "correct_code" : "0052",
