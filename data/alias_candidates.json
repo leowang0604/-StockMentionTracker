@@ -694,67 +694,6 @@
     ],
     "wrong_keyword" : "服貿科"
   },
-  "穩貌|3105" : {
-    "confidence" : "high",
-    "correct_code" : "3105",
-    "correct_name" : "穩懋",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "兆華與股惑仔",
-        "context" : "季線 回頭來看 千載難逢的好機會 真的 這一波多頭的期張點 但那時候情緒是沒那麼好 所以也剛好逝逢1000幾 那大家就可以報股票 就一人還被我逼著 要錄一檔股票這樣子 然後有什麼呢 有齊宏 有金居 有穩貌 我現在印象中是這個 然後像股魚來 因為他不太能講各股 他就說就隨便挑擋 積極的主動型ETF 其實就算是主動型的ETF 都漲可能七八十趴 有 對 所以那個日子 我記得很清楚 那天你逼攻別人 那天我也是被逼攻 你沒逼攻嗎 我那天在那個外出 那你報什麼 我在摩根大通的年度論壇 然後他們就請我一個去 然後下面有他們200個VIP 然後我就說 你就買黃仁勳來台灣找的 三個辣台妹 台積電 台達電 台光電",
-        "date" : "2026-06-12",
-        "original_code" : "6223",
-        "original_name" : "旺矽",
-        "override_kind" : "phonetic",
-        "override_reason" : "phonetic_top1 score=0.825 lead=0.325",
-        "phonetic_lead" : 0.32499999999999996,
-        "phonetic_top_score" : 0.825,
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "name_distance<=1",
-          "phonetic_top1",
-          "stock_context"
-        ],
-        "score" : 100,
-        "source" : "full_video_validator",
-        "title" : "EP1118｜多空交戰已結束？下週華許考驗後，重返基本面，選台積電、被動、CPO、記憶體，台股直奔世界第4大，外資該回頭？ft.雷老闆",
-        "video_id" : "f167ba05-283e-480b-b8b3-a2d29287692b"
-      }
-    ],
-    "max_score" : 100,
-    "observations" : 1,
-    "phonetic_candidates" : [
-      {
-        "code" : "3105",
-        "name" : "穩懋",
-        "phonetic_similarity" : 1,
-        "score" : 0.825,
-        "text_similarity" : 0.5
-      },
-      {
-        "code" : "6761",
-        "name" : "穩得",
-        "phonetic_similarity" : 0.5,
-        "score" : 0.5,
-        "text_similarity" : 0.5
-      },
-      {
-        "code" : "2324",
-        "name" : "仁寶",
-        "phonetic_similarity" : 0.667,
-        "score" : 0.433,
-        "text_similarity" : 0
-      }
-    ],
-    "updated_at" : "2026-06-13T19:21:03",
-    "video_ids" : [
-      "f167ba05-283e-480b-b8b3-a2d29287692b"
-    ],
-    "wrong_keyword" : "穩貌"
-  },
   "立的|3058" : {
     "confidence" : "high",
     "correct_code" : "3058",
