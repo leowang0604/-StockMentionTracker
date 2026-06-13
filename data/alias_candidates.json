@@ -364,58 +364,6 @@
     ],
     "wrong_keyword" : "丁"
   },
-  "京項店|2454" : {
-    "confidence" : "medium",
-    "correct_code" : "2454",
-    "correct_name" : "聯發科",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "兆華與股惑仔",
-        "context" : "ETF 有點知名度的 幾乎都是進流入 錢跑進去了 那今天有沒有給大家很好的回報 有 像我就觀察 雖然這段時間 98EA跑得比較慢 可是昨天大概有8億元跑進去 他就買了兩檔 買了誰呢 聯發科 買了誰呢 京項店 這兩檔今天怎樣呢 張定班 好 所以今天98EA 直接就反彈快要5個百分點 還是蠻強的 所以我覺得 在這樣的多頭氣勢下 明漢幫忙大家 知道AI的基本面 完全是正向的時候 你們不敢買個股 真的就讓專業經理人幫你操盤 因為他們拿了你的錢 是一定要買的 對 應該這樣講 這個個股的部分風險 當然相對比較高一些些 但也不一定 如果你有辦法 做有效的篩選 尤其是AI加上全資股 你知道這兩個交解 其實風險",
-        "date" : "2026-06-09",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context"
-        ],
-        "score" : 50,
-        "source" : "full_video_validator",
-        "title" : "EP1115｜只殺一天夠嗎？外資調升國巨、金像電、大立光評價，5月營收持續好，AI底氣勝出！若是再跌升息恐懼，就更該買？ft.AI達人 蔡明翰",
-        "video_id" : "fdbf6501-861c-4c78-be4e-b0046986ebcb"
-      }
-    ],
-    "max_score" : 50,
-    "observations" : 1,
-    "phonetic_candidates" : [
-      {
-        "code" : "2368",
-        "name" : "金像電",
-        "phonetic_similarity" : 0.923,
-        "score" : 0.6,
-        "text_similarity" : 0
-      },
-      {
-        "code" : "3530",
-        "name" : "晶相光",
-        "phonetic_similarity" : 0.786,
-        "score" : 0.511,
-        "text_similarity" : 0
-      },
-      {
-        "code" : "2449",
-        "name" : "京元電子",
-        "phonetic_similarity" : 0.643,
-        "score" : 0.505,
-        "text_similarity" : 0.25
-      }
-    ],
-    "updated_at" : "2026-06-10T21:03:45",
-    "video_ids" : [
-      "fdbf6501-861c-4c78-be4e-b0046986ebcb"
-    ],
-    "wrong_keyword" : "京項店"
-  },
   "家古文|ORCL" : {
     "confidence" : "medium",
     "correct_code" : "ORCL",
