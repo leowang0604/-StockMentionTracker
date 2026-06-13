@@ -439,7 +439,7 @@
     "correct_name": "NVIDIA",
     "confidence": "high",
     "max_score": 73,
-    "observations": 2,
+    "observations": 3,
     "distinct_videos": 1,
     "video_ids": [
       "fdbf6501-861c-4c78-be4e-b0046986ebcb"
@@ -464,34 +464,40 @@
     ],
     "phonetic_candidates": [
       {
-        "code": "0053",
-        "name": "元大電子",
-        "score": 0.163,
-        "phonetic_similarity": 0.25,
+        "code": "3211",
+        "name": "順達",
+        "score": 0.433,
+        "phonetic_similarity": 0.667,
         "text_similarity": 0.0
       },
       {
-        "code": "0056",
-        "name": "元大高股息",
-        "score": 0.15,
-        "phonetic_similarity": 0.231,
+        "code": "4549",
+        "name": "桓達",
+        "score": 0.433,
+        "phonetic_similarity": 0.667,
         "text_similarity": 0.0
       },
       {
-        "code": "00923",
-        "name": "群益台ESG低碳50",
-        "score": 0.144,
-        "phonetic_similarity": 0.222,
+        "code": "1536",
+        "name": "和大",
+        "score": 0.39,
+        "phonetic_similarity": 0.6,
         "text_similarity": 0.0
       }
     ],
-    "updated_at": "2026-06-12T21:03:17"
+    "updated_at": "2026-06-13T20:07:52"
   },
   "新勝利|4931": {
-    "confidence": "high",
+    "wrong_keyword": "新勝利",
     "correct_code": "4931",
     "correct_name": "新盛力",
+    "confidence": "high",
+    "max_score": 97,
+    "observations": 2,
     "distinct_videos": 1,
+    "video_ids": [
+      "5f0b292a-68ac-4e45-98ed-468f328f1070"
+    ],
     "evidence": [
       {
         "channel": "兆華與股惑仔",
@@ -517,36 +523,30 @@
         "video_id": "5f0b292a-68ac-4e45-98ed-468f328f1070"
       }
     ],
-    "max_score": 97,
-    "observations": 1,
     "phonetic_candidates": [
       {
         "code": "4931",
         "name": "新盛力",
-        "phonetic_similarity": 1,
         "score": 0.767,
+        "phonetic_similarity": 1.0,
         "text_similarity": 0.333
       },
       {
         "code": "3625",
         "name": "西勝",
-        "phonetic_similarity": 0.7,
         "score": 0.572,
+        "phonetic_similarity": 0.7,
         "text_similarity": 0.333
       },
       {
         "code": "1773",
         "name": "勝一",
-        "phonetic_similarity": 0.6,
         "score": 0.507,
+        "phonetic_similarity": 0.6,
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-06-10T21:23:10",
-    "video_ids": [
-      "5f0b292a-68ac-4e45-98ed-468f328f1070"
-    ],
-    "wrong_keyword": "新勝利"
+    "updated_at": "2026-06-13T20:26:25"
   },
   "新商店|3711": {
     "confidence": "medium",
@@ -1010,7 +1010,7 @@
     "correct_name": "Oracle",
     "confidence": "medium",
     "max_score": 65,
-    "observations": 1,
+    "observations": 2,
     "distinct_videos": 1,
     "video_ids": [
       "c4409f61-f3e8-4a62-bcfe-79d304406a1e"
@@ -1034,27 +1034,507 @@
     ],
     "phonetic_candidates": [
       {
-        "code": "00938",
-        "name": "凱基優選30",
-        "score": 0.186,
-        "phonetic_similarity": 0.286,
-        "text_similarity": 0.0
+        "code": "3680",
+        "name": "家登",
+        "score": 0.442,
+        "phonetic_similarity": 0.5,
+        "text_similarity": 0.333
       },
       {
-        "code": "00728",
-        "name": "第一金工業30",
-        "score": 0.173,
-        "phonetic_similarity": 0.267,
-        "text_similarity": 0.0
+        "code": "8462",
+        "name": "柏文",
+        "score": 0.442,
+        "phonetic_similarity": 0.5,
+        "text_similarity": 0.333
       },
       {
-        "code": "00952",
-        "name": "凱基台灣AI 50",
-        "score": 0.173,
-        "phonetic_similarity": 0.267,
+        "code": "1525",
+        "name": "江申",
+        "score": 0.433,
+        "phonetic_similarity": 0.667,
         "text_similarity": 0.0
       }
     ],
-    "updated_at": "2026-06-12T21:31:18"
+    "updated_at": "2026-06-13T20:35:25"
+  },
+  "台大店|2308": {
+    "wrong_keyword": "台大店",
+    "correct_code": "2308",
+    "correct_name": "台達電",
+    "confidence": "high",
+    "max_score": 97,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "7e120b09-e270-4f75-96f8-026e475ab659"
+    ],
+    "evidence": [
+      {
+        "video_id": "7e120b09-e270-4f75-96f8-026e475ab659",
+        "channel": "韭菜畢業班",
+        "date": "2026-06-10",
+        "title": "EP233 | CPO&HVDC 利空解讀 ，營建股突然上漲 ? 台股系統性風險 ？",
+        "source": "full_video_validator",
+        "score": 97,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "舉個例子來講 像是Fertif 那Fertif的話其實VRT 其實最近我們不要去評論股價 那總之如果說 它在設計上面有問題的話 其實也都會一起去做一個 共同上面的解決 然後再來就是 我們可以看到 像是台大店的BPU的話Q1 它的一個出貨 其實對於這些東西 其實也都是有受惠的 同時我覺得 丁的東西 還有像是它跟特斯拉的一個合作 那除能系統上面來說的話 它會是一個相對重要的 一個供應商 那其次的 還有另外一件事情就是說 我們可以看到 為什麼會講這一個記點器 它的一個單價 其實比我們以前一般的 是高了接近20到30倍的 所以其實這個是相對多的 然後同時 如果我們可以看到 它目前的整體的營收結構 來講"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2308",
+        "name": "台達電",
+        "score": 0.767,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "2330",
+        "name": "台積電",
+        "score": 0.622,
+        "phonetic_similarity": 0.778,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "8926",
+        "name": "台汽電",
+        "score": 0.622,
+        "phonetic_similarity": 0.778,
+        "text_similarity": 0.333
+      }
+    ],
+    "updated_at": "2026-06-13T18:57:37"
+  },
+  "丁|TSLA": {
+    "wrong_keyword": "丁",
+    "correct_code": "TSLA",
+    "correct_name": "Tesla",
+    "confidence": "low",
+    "max_score": 35,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "7e120b09-e270-4f75-96f8-026e475ab659"
+    ],
+    "evidence": [
+      {
+        "video_id": "7e120b09-e270-4f75-96f8-026e475ab659",
+        "channel": "韭菜畢業班",
+        "date": "2026-06-10",
+        "title": "EP233 | CPO&HVDC 利空解讀 ，營建股突然上漲 ? 台股系統性風險 ？",
+        "source": "full_video_validator",
+        "score": 35,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "stock_context",
+          "strong_sector_mismatch"
+        ],
+        "context": " 那總之如果說 它在設計上面有問題的話 其實也都會一起去做一個 共同上面的解決 然後再來就是 我們可以看到 像是台大店的BPU的話Q1 它的一個出貨 其實對於這些東西 其實也都是有受惠的 同時我覺得 丁的東西 還有像是它跟特斯拉的一個合作 那除能系統上面來說的話 它會是一個相對重要的 一個供應商 那其次的 還有另外一件事情就是說 我們可以看到 為什麼會講這一個記點器 它的一個單價 其實比我們以前一般的 是高了接近20到30倍的 所以其實這個是相對多的 然後同時 如果我們可以看到 它目前的整體的營收結構 來講的話 其實伺服器的部分 並不是說到 占比非常的高 它可能占比 可能就是2026年 可能就"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "1733",
+        "name": "五鼎",
+        "score": 0.433,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "3522",
+        "name": "御嵿",
+        "score": 0.433,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "4585",
+        "name": "達明",
+        "score": 0.433,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-06-13T18:57:37"
+  },
+  "是開|5324": {
+    "wrong_keyword": "是開",
+    "correct_code": "5324",
+    "correct_name": "士開",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "f167ba05-283e-480b-b8b3-a2d29287692b"
+    ],
+    "evidence": [
+      {
+        "video_id": "f167ba05-283e-480b-b8b3-a2d29287692b",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-12",
+        "title": "EP1118｜多空交戰已結束？下週華許考驗後，重返基本面，選台積電、被動、CPO、記憶體，台股直奔世界第4大，外資該回頭？ft.雷老闆",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "或是這個禮拜的提感 溫度應該是不太理想 可是如果您把指數打開來看 這個禮拜一的開盤 當然禮拜一開盤 是一個跳空往下跌的開盤 開在44057 那今天的收盤收在44169 這代表什麼呢 這個禮拜上下呢 就是開盤到收盤 事實上我們歷經的是一個 上漲112點的行情 上漲112點可是提感溫度超級爛 然後很多人看到自己的庫存 會發現 怎麼搞的一個禮拜的庫存 消失了10幾20%的獲利 不過我自己是看 因為大家知道 我昨天有跟大家分享 我把信倉點和國劇賣了 所以大家如果看到今天早上期貨 8點45分的開盤 就知道趙華在幹嘛 啊 賣飛了在尖叫 賣飛了 尤其信倉點今天 幾乎是從頭鎖到尾 沒有什麼機會再把它買回來 但"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "5324",
+        "name": "士開",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "6561",
+        "name": "是方",
+        "score": 0.546,
+        "phonetic_similarity": 0.571,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "1903",
+        "name": "士紙",
+        "score": 0.433,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-06-13T19:20:49"
+  },
+  "信倉點|6173": {
+    "wrong_keyword": "信倉點",
+    "correct_code": "6173",
+    "correct_name": "信昌電",
+    "confidence": "high",
+    "max_score": 97,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "f167ba05-283e-480b-b8b3-a2d29287692b"
+    ],
+    "evidence": [
+      {
+        "video_id": "f167ba05-283e-480b-b8b3-a2d29287692b",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-12",
+        "title": "EP1118｜多空交戰已結束？下週華許考驗後，重返基本面，選台積電、被動、CPO、記憶體，台股直奔世界第4大，外資該回頭？ft.雷老闆",
+        "source": "full_video_validator",
+        "score": 97,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "的是一個 上漲112點的行情 上漲112點可是提感溫度超級爛 然後很多人看到自己的庫存 會發現 怎麼搞的一個禮拜的庫存 消失了10幾20%的獲利 不過我自己是看 因為大家知道 我昨天有跟大家分享 我把信倉點和國劇賣了 所以大家如果看到今天早上期貨 8點45分的開盤 就知道趙華在幹嘛 啊 賣飛了在尖叫 賣飛了 尤其信倉點今天 幾乎是從頭鎖到尾 沒有什麼機會再把它買回來 但沒關係 因為昨天跟大家分享的 就是一個 減壓的概念 減壓的概念 那剛好昨天盤中 也有減了一些ETF 所以呢 也不算是失落太大 那如果把我獲利了結的部分 加回來 事實上這個禮拜 我的損益確實沒有什麼 太大的變化 就是被嚇到洗出去了"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "6173",
+        "name": "信昌電",
+        "score": 0.713,
+        "phonetic_similarity": 0.917,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "8021",
+        "name": "尖點",
+        "score": 0.53,
+        "phonetic_similarity": 0.636,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "2368",
+        "name": "金像電",
+        "score": 0.488,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-06-13T19:21:02"
+  },
+  "監點|8021": {
+    "wrong_keyword": "監點",
+    "correct_code": "8021",
+    "correct_name": "尖點",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "f167ba05-283e-480b-b8b3-a2d29287692b"
+    ],
+    "evidence": [
+      {
+        "video_id": "f167ba05-283e-480b-b8b3-a2d29287692b",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-12",
+        "title": "EP1118｜多空交戰已結束？下週華許考驗後，重返基本面，選台積電、被動、CPO、記憶體，台股直奔世界第4大，外資該回頭？ft.雷老闆",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "那我有看到這幾天 我很高興這幾天 其實傳訊息來給我的朋友 都不是一直在問股票 都是在分享心情 像今天早上就收到一個 因為他看來 他也知道我的信窗店賣費一直碎念 我可以體會大家賣費的心情 但他有講到他把監點賣掉 那這個朋友就說 因為監點最近幾天也常是 疊停又打開 漲停又殺黑 他覺得好累 但獲利已經不錯了 超過40個百分點 他就覺得與其這樣子看著他 不如就先做一趟獲利入袋 之後再看有沒有機會接回來 然後重點在減壓 因為在壓力的情況下 我們會做出錯誤的決定 所以有時候為什麼要送雞湯 就是如果大家現在 還能承受的話 就不要亂賣 其實禮拜一除了 有沒有撿股票是其次之外 有提醒大家不要亂賣東西 但是如果說",
+        "override_kind": "phonetic",
+        "override_reason": "phonetic_top1 score=0.825 lead=0.256",
+        "original_code": "3035",
+        "original_name": "智原",
+        "phonetic_top_score": 0.825,
+        "phonetic_lead": 0.256
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "8021",
+        "name": "尖點",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "2303",
+        "name": "聯電",
+        "score": 0.569,
+        "phonetic_similarity": 0.875,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "6843",
+        "name": "進典",
+        "score": 0.569,
+        "phonetic_similarity": 0.875,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-06-13T19:21:02"
+  },
+  "穩貌|3105": {
+    "wrong_keyword": "穩貌",
+    "correct_code": "3105",
+    "correct_name": "穩懋",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "f167ba05-283e-480b-b8b3-a2d29287692b"
+    ],
+    "evidence": [
+      {
+        "video_id": "f167ba05-283e-480b-b8b3-a2d29287692b",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-12",
+        "title": "EP1118｜多空交戰已結束？下週華許考驗後，重返基本面，選台積電、被動、CPO、記憶體，台股直奔世界第4大，外資該回頭？ft.雷老闆",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "季線 回頭來看 千載難逢的好機會 真的 這一波多頭的期張點 但那時候情緒是沒那麼好 所以也剛好逝逢1000幾 那大家就可以報股票 就一人還被我逼著 要錄一檔股票這樣子 然後有什麼呢 有齊宏 有金居 有穩貌 我現在印象中是這個 然後像股魚來 因為他不太能講各股 他就說就隨便挑擋 積極的主動型ETF 其實就算是主動型的ETF 都漲可能七八十趴 有 對 所以那個日子 我記得很清楚 那天你逼攻別人 那天我也是被逼攻 你沒逼攻嗎 我那天在那個外出 那你報什麼 我在摩根大通的年度論壇 然後他們就請我一個去 然後下面有他們200個VIP 然後我就說 你就買黃仁勳來台灣找的 三個辣台妹 台積電 台達電 台光電",
+        "override_kind": "phonetic",
+        "override_reason": "phonetic_top1 score=0.825 lead=0.325",
+        "original_code": "6223",
+        "original_name": "旺矽",
+        "phonetic_top_score": 0.825,
+        "phonetic_lead": 0.32499999999999996
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3105",
+        "name": "穩懋",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "6761",
+        "name": "穩得",
+        "score": 0.5,
+        "phonetic_similarity": 0.5,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "2324",
+        "name": "仁寶",
+        "score": 0.433,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-06-13T19:21:03"
+  },
+  "立的|3058": {
+    "wrong_keyword": "立的",
+    "correct_code": "3058",
+    "correct_name": "立德",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "2286dd26-e2e4-4065-af99-0cc4aa165970"
+    ],
+    "evidence": [
+      {
+        "video_id": "2286dd26-e2e4-4065-af99-0cc4aa165970",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-11",
+        "title": "EP1117｜CPI過關，美伊戰會頓化？1400點V型震盪，決定買賣的依據？下週華許大魔王過後可以放心？ft.股市獅公 李永年",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "嗦的結盟 就是我會跟大家不斷分享 我在做什麼 然後也會請達人們 也要跟大家分享一些 比較對的操作觀念 那這邊的話 跟股貨載的聽眾分享 像這個禮拜我覺得來賓很有趣 禮拜一是題材獵人漢偉哥 漢偉哥是比較中立的人 但他瞭解各種題材 他的中立是包括說 今天長得有基本面他也會講 長得沒基本面他也會講 今天勢頭很強 只要是正規投機 投資他全部都會講 很可愛的一個人 那第二天是明漢哥 明漢哥就是我們裡面的絕對樂觀 他只在意大盤 或是個股的乖離率 也許太高了 可是他對AI的發展 是絕對的樂觀 所以就是站在殺下來 一定要買的狀況 那昨天來的是偉泰 偉泰是屬於比較謹慎型的 他有提到最近有一些現象 是他以前投資 這"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3058",
+        "name": "立德",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "5344",
+        "name": "立衛",
+        "score": 0.565,
+        "phonetic_similarity": 0.6,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "6175",
+        "name": "立敦",
+        "score": 0.565,
+        "phonetic_similarity": 0.6,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-06-13T19:35:25"
+  },
+  "00402A|00940": {
+    "wrong_keyword": "00402A",
+    "correct_code": "00940",
+    "correct_name": "元大台灣價值高息",
+    "confidence": "medium",
+    "max_score": 65,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "e74d2637-63e7-4b28-bdc4-0e0df72ba41a"
+    ],
+    "evidence": [
+      {
+        "video_id": "e74d2637-63e7-4b28-bdc4-0e0df72ba41a",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-10",
+        "title": "EP1116｜今天體感比周一還難過？先殺CPI預期，盤面失去AI主流，台積電營收能救？營建接棒要觀察的股、房資金流向？ft.選股教練 陳唯泰",
+        "source": "full_video_validator",
+        "score": 65,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "stock_context"
+        ],
+        "context": "因為我也不是會 隨便賣東西的人 那我中間又有做 挺立的規劃 所以我就在看了半天 我今天確實什麼都沒有做 那我剛剛跟維泰講說 我今天只有在最後一盤 就上到最低的時候 我打開了 看了一下昨天跟大家分享的 00402A怎麼了 他昨天掛牌 他昨天掛牌遇到台股 剛好大漲 整個大溢價 結果我到維盤的時候 他完全沒溢價 破發又沒溢價 然後又便宜 因為一張是10塊發行家 又破發 我就進去 就是撈個幾張放著 當作一個種子 因為他投資在 美股科技股市 我有興趣的範圍 就當個種子 我今天就只有做這件事情 從頭到尾我也沒有賣東西 我也沒有買東西 厲害 為什麼 為什麼這樣又厲害 做了我不敢做的事 你說去撿那個402A "
+      }
+    ],
+    "phonetic_candidates": [],
+    "updated_at": "2026-06-13T19:49:43"
+  },
+  "請說|3481": {
+    "wrong_keyword": "請說",
+    "correct_code": "3481",
+    "correct_name": "群創",
+    "confidence": "medium",
+    "max_score": 62,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "5f0b292a-68ac-4e45-98ed-468f328f1070"
+    ],
+    "evidence": [
+      {
+        "video_id": "5f0b292a-68ac-4e45-98ed-468f328f1070",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-08",
+        "title": "EP1114｜每次都是周末出事，今天能買東西嗎，明天還跌怎麼辦？高槓桿先賣，低持股就買，都不吃虧？AI發展沒變，但升息該怕？ft.題材獵人 林漢偉",
+        "source": "full_video_validator",
+        "score": 62,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2"
+        ],
+        "context": "然後又是高本一筆的 可是後來就發現 哇塞 這個很強 結果宅本好像還是接下來的主流 所以後來資金就很快 把錦碩給打開了 打開了我反而就沒興趣賣了 這個大家自己參著 因為大家如果有聽Pocket就知道 我請說實在是買的太低太低了 所以有點在做實驗班的 看他要去哪裡 然後但是我覺得很值得觀察的是 不要看到跌成這樣 就去看跌到跌停板的有誰 剛剛浩北哥有講 如果他的融資幅有比較高的 然後他可能本一筆也比較高的 甚至還沒有本一筆 是虧錢的公司 也許會鎖到第三天 這個不確定 可是一定要看一下今天漲停板 或是從盤中拉起來的 就是高手盤在做什麼事情 川胡是很明白的 我早上跟浩北哥一樣的想法 開盤三分鐘就漲停的川"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3189",
+        "name": "景碩",
+        "score": 0.569,
+        "phonetic_similarity": 0.875,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "6491",
+        "name": "晶碩",
+        "score": 0.569,
+        "phonetic_similarity": 0.875,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "5269",
+        "name": "祥碩",
+        "score": 0.506,
+        "phonetic_similarity": 0.778,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-06-13T20:26:24"
   }
 }
