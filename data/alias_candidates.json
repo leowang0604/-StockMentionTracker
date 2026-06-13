@@ -482,61 +482,6 @@
     ],
     "wrong_keyword" : "京項店"
   },
-  "信倉點|6173" : {
-    "confidence" : "high",
-    "correct_code" : "6173",
-    "correct_name" : "信昌電",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "兆華與股惑仔",
-        "context" : "的是一個 上漲112點的行情 上漲112點可是提感溫度超級爛 然後很多人看到自己的庫存 會發現 怎麼搞的一個禮拜的庫存 消失了10幾20%的獲利 不過我自己是看 因為大家知道 我昨天有跟大家分享 我把信倉點和國劇賣了 所以大家如果看到今天早上期貨 8點45分的開盤 就知道趙華在幹嘛 啊 賣飛了在尖叫 賣飛了 尤其信倉點今天 幾乎是從頭鎖到尾 沒有什麼機會再把它買回來 但沒關係 因為昨天跟大家分享的 就是一個 減壓的概念 減壓的概念 那剛好昨天盤中 也有減了一些ETF 所以呢 也不算是失落太大 那如果把我獲利了結的部分 加回來 事實上這個禮拜 我的損益確實沒有什麼 太大的變化 就是被嚇到洗出去了",
-        "date" : "2026-06-12",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "name_distance=2",
-          "phonetic_top1",
-          "stock_context"
-        ],
-        "score" : 97,
-        "source" : "full_video_validator",
-        "title" : "EP1118｜多空交戰已結束？下週華許考驗後，重返基本面，選台積電、被動、CPO、記憶體，台股直奔世界第4大，外資該回頭？ft.雷老闆",
-        "video_id" : "f167ba05-283e-480b-b8b3-a2d29287692b"
-      }
-    ],
-    "max_score" : 97,
-    "observations" : 1,
-    "phonetic_candidates" : [
-      {
-        "code" : "6173",
-        "name" : "信昌電",
-        "phonetic_similarity" : 0.917,
-        "score" : 0.713,
-        "text_similarity" : 0.333
-      },
-      {
-        "code" : "8021",
-        "name" : "尖點",
-        "phonetic_similarity" : 0.636,
-        "score" : 0.53,
-        "text_similarity" : 0.333
-      },
-      {
-        "code" : "2368",
-        "name" : "金像電",
-        "phonetic_similarity" : 0.75,
-        "score" : 0.488,
-        "text_similarity" : 0
-      }
-    ],
-    "updated_at" : "2026-06-13T19:21:02",
-    "video_ids" : [
-      "f167ba05-283e-480b-b8b3-a2d29287692b"
-    ],
-    "wrong_keyword" : "信倉點"
-  },
   "台大店|2308" : {
     "confidence" : "high",
     "correct_code" : "2308",
