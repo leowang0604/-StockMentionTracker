@@ -2,6 +2,7 @@ import SwiftUI
 
 struct AliasReviewView: View {
     @Environment(AppState.self) private var appState
+    @Environment(\.dismiss) private var dismiss
 
     @State private var candidates: [String: AliasCandidate] = [:]
     @State private var isLoading = false
@@ -9,51 +10,42 @@ struct AliasReviewView: View {
     @State private var errorMessage: String?
 
     var body: some View {
-        Group {
-            if !appState.hasGitHubConfig {
-                ContentUnavailableView {
-                    Label("未設定 GitHub", systemImage: "gear")
-                } description: {
-                    Text("請先在設定頁填入 GitHub Repo 和 Personal Access Token")
-                }
-            } else if isLoading {
-                ProgressView("載入 Alias 候選…")
-            } else if sortedCandidates.isEmpty {
-                VStack(spacing: 0) {
-                    filterBar
+        VStack(spacing: 0) {
+            header
+            Group {
+                if !appState.hasGitHubConfig {
                     ContentUnavailableView {
-                        Label("沒有待審核候選", systemImage: "checkmark.circle")
+                        Label("未設定 GitHub", systemImage: "gear")
                     } description: {
-                        Text("目前時間範圍內沒有待審核候選。")
+                        Text("請先在設定頁填入 GitHub Repo 和 Personal Access Token")
                     }
-                }
-            } else {
-                VStack(spacing: 0) {
-                    filterBar
-                    List(sortedCandidates) { candidate in
-                        candidateRow(candidate)
+                } else if isLoading {
+                    ProgressView("載入 Alias 候選…")
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                } else if sortedCandidates.isEmpty {
+                    VStack(spacing: 0) {
+                        filterBar
+                        ContentUnavailableView {
+                            Label("沒有待審核候選", systemImage: "checkmark.circle")
+                        } description: {
+                            Text("目前時間範圍內沒有待審核候選。")
+                        }
                     }
-                    .listStyle(.plain)
-                    .scrollContentBackground(.hidden)
-                    .refreshable { await loadCandidates() }
+                } else {
+                    VStack(spacing: 0) {
+                        filterBar
+                        List(sortedCandidates) { candidate in
+                            candidateRow(candidate)
+                        }
+                        .listStyle(.plain)
+                        .scrollContentBackground(.hidden)
+                        .refreshable { await loadCandidates() }
+                    }
                 }
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
         .background(Color.black.ignoresSafeArea())
-        .navigationTitle("Alias 候選審核")
-        .navigationBarTitleDisplayMode(.large)
-        .toolbarBackground(Color.black, for: .navigationBar)
-        .toolbarBackground(.visible, for: .navigationBar)
-        .toolbar {
-            ToolbarItem(placement: .automatic) {
-                Button {
-                    Task { await loadCandidates() }
-                } label: {
-                    Image(systemName: "arrow.triangle.2.circlepath")
-                }
-                .disabled(isLoading)
-            }
-        }
         .task { await loadCandidates() }
         .alert("發生錯誤", isPresented: Binding(
             get: { errorMessage != nil },
@@ -63,6 +55,44 @@ struct AliasReviewView: View {
         } message: {
             Text(errorMessage ?? "")
         }
+    }
+
+    private var header: some View {
+        HStack(spacing: 12) {
+            Button {
+                dismiss()
+            } label: {
+                Image(systemName: "chevron.left")
+                    .font(.system(size: 22, weight: .semibold))
+                    .frame(width: 44, height: 44)
+                    .background(.thinMaterial, in: Circle())
+            }
+            .buttonStyle(.plain)
+            .accessibilityLabel("返回")
+
+            Text("Alias 候選審核")
+                .font(.title.bold())
+                .lineLimit(1)
+                .minimumScaleFactor(0.7)
+
+            Spacer()
+
+            Button {
+                Task { await loadCandidates() }
+            } label: {
+                Image(systemName: "arrow.triangle.2.circlepath")
+                    .font(.system(size: 20, weight: .semibold))
+                    .frame(width: 44, height: 44)
+                    .background(.thinMaterial, in: Circle())
+            }
+            .buttonStyle(.plain)
+            .disabled(isLoading)
+            .accessibilityLabel("重新整理")
+        }
+        .padding(.horizontal)
+        .padding(.top, 8)
+        .padding(.bottom, 12)
+        .background(Color.black)
     }
 
     private var sortedCandidates: [AliasCandidate] {

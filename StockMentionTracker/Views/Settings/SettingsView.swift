@@ -8,6 +8,7 @@ struct SettingsView: View {
     @State private var githubRepoInput = ""
     @State private var githubPATInput = ""
     @State private var showingClearAlert = false
+    @State private var showingAliasReview = false
     @State private var sourcesConfig: SourcesConfig = SourcesConfig(sources: [], globalExtractionMode: nil)
     @State private var currentSHA: String = ""
 
@@ -31,13 +32,16 @@ struct SettingsView: View {
                     Task { await loadGlobalExtractionMode() }
                 }
             }
+            .fullScreenCover(isPresented: $showingAliasReview) {
+                AliasReviewView()
+            }
         }
     }
 
     private var aliasReviewSection: some View {
         Section {
-            NavigationLink {
-                AliasReviewView()
+            Button {
+                showingAliasReview = true
             } label: {
                 Label("Alias 候選審核", systemImage: "checklist")
             }
