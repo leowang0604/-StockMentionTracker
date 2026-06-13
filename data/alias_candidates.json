@@ -772,60 +772,6 @@
     ],
     "wrong_keyword" : "萬序"
   },
-  "要滑腰|6446" : {
-    "confidence" : "high",
-    "correct_code" : "6446",
-    "correct_name" : "藥華藥",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "兆華與股惑仔",
-        "context" : "理論上來講 今天如果市場非常恐慌的話 資金會跑到哪裡 會跑到一些防禦避險的概念的股票 但你看到今天第一個 生技股在盤面上 並沒有大部分發動 雖然有保銳 非常低的位階轉強 但上禮拜有一些強勢的生技股 像要滑腰 像什麼全服生技這些的 其實今天都是反而是往下走跌 也代表我覺得今天市場 第一個資金鎖定的 還是跌升的AI股票 那第二件事情 如果大家還有印象 去年的所謂的四月份對等關稅 第一天跌停版的時候 台股哪些股票抗跌 就是電信股 然後台灣高鐵 那你看到今天的中華電信 遠傳台客大 其實並沒有漲 所以代表說其實今天有資金進來 但不選擇避險的標的 反而選擇跌升的標的 我覺得這是一些比較偏向看盤的技巧 所以",
-        "date" : "2026-06-08",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "phonetic_top1",
-          "stock_context"
-        ],
-        "score" : 85,
-        "source" : "full_video_validator",
-        "title" : "EP1114｜每次都是周末出事，今天能買東西嗎，明天還跌怎麼辦？高槓桿先賣，低持股就買，都不吃虧？AI發展沒變，但升息該怕？ft.題材獵人 林漢偉",
-        "video_id" : "5f0b292a-68ac-4e45-98ed-468f328f1070"
-      }
-    ],
-    "max_score" : 85,
-    "observations" : 1,
-    "phonetic_candidates" : [
-      {
-        "code" : "6446",
-        "name" : "藥華藥",
-        "phonetic_similarity" : 1,
-        "score" : 0.65,
-        "text_similarity" : 0
-      },
-      {
-        "code" : "2367",
-        "name" : "燿華",
-        "phonetic_similarity" : 0.667,
-        "score" : 0.433,
-        "text_similarity" : 0
-      },
-      {
-        "code" : "2395",
-        "name" : "研華",
-        "phonetic_similarity" : 0.556,
-        "score" : 0.361,
-        "text_similarity" : 0
-      }
-    ],
-    "updated_at" : "2026-06-10T21:23:10",
-    "video_ids" : [
-      "5f0b292a-68ac-4e45-98ed-468f328f1070"
-    ],
-    "wrong_keyword" : "要滑腰"
-  },
   "請說|3481" : {
     "confidence" : "medium",
     "correct_code" : "3481",
