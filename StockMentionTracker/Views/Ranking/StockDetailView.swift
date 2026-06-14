@@ -9,20 +9,6 @@ struct StockDetailView: View {
     @State private var expandedIDs = Set<String>()
     @State private var contextSort = "newest"  // newest | oldest | count
 
-    /// All distinct keywords matched across every context for this stock.
-    /// Uses ALL unfiltered contexts from dataService so date-window filtering
-    /// doesn't strip out the keywords we need for highlighting.
-    private var allHighlightTerms: [String] {
-        let fullContexts = dataService.scanResult.stocksRanking
-            .first { $0.code == stock.code }?.contexts ?? stock.contexts
-        let keywords = fullContexts.compactMap(\.matchedKeyword).filter { !$0.isEmpty }
-        let base = mentionHighlightTerms(stockName: stock.name, code: stock.code)
-        let keywordTerms = keywords.flatMap {
-            mentionHighlightTerms(stockName: stock.name, code: stock.code, matchedKeyword: $0)
-        }
-        return Array(Set(base + keywordTerms))
-    }
-
     private var sortedContexts: [MentionContext] {
         switch contextSort {
         case "oldest":
@@ -140,7 +126,7 @@ struct StockDetailView: View {
                     ForEach(sortedContexts) { ctx in
                         ContextRowView(
                             context: ctx,
-                            highlightTerms: allHighlightTerms,
+                            highlightTerms: highlightTerms(for: ctx),
                             isExpanded: expandedIDs.contains(ctx.id),
                             onToggle: {
                                 withAnimation(.easeInOut(duration: 0.2)) {
@@ -189,6 +175,14 @@ struct StockDetailView: View {
 #if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
 #endif
+    }
+
+    private func highlightTerms(for context: MentionContext) -> [String] {
+        mentionHighlightTerms(
+            stockName: stock.name,
+            code: stock.code,
+            matchedKeyword: context.matchedKeyword
+        )
     }
 }
 

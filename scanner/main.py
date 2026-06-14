@@ -828,6 +828,24 @@ def _is_generic_industry_mention(term: str) -> bool:
     return (term or "").strip() in GENERIC_INDUSTRY_MENTION_TERMS
 
 
+def _needs_identity_boundary(term: str) -> bool:
+    """ASCII tickers/codes must not match inside longer tokens (GS != GSE)."""
+    return bool(re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9.\-]*", term or ""))
+
+
+def _contains_identity_term(text: str, term: str) -> bool:
+    """Match stock identity terms with safe boundaries for ASCII tickers/codes."""
+    if not text or not term:
+        return False
+    if _needs_identity_boundary(term):
+        return re.search(
+            rf"(?<![A-Za-z0-9]){re.escape(term)}(?![A-Za-z0-9])",
+            text,
+            flags=re.IGNORECASE,
+        ) is not None
+    return term in text
+
+
 def _has_exact_stock_identity_evidence(
     text: str,
     *,
@@ -853,7 +871,7 @@ def _has_exact_stock_identity_evidence(
             continue
         identity_terms.add(kw)
 
-    return any(term and term in text for term in identity_terms)
+    return any(_contains_identity_term(text, term) for term in identity_terms)
 
 
 def _is_short_ascii_us_identity(code: str, resolved_name: str) -> bool:
@@ -875,7 +893,7 @@ def _has_stock_context_evidence(
         return False
 
     terms = [t for t in (mention_terms or []) if t]
-    if code and code in text:
+    if code and _contains_identity_term(text, code):
         return True
 
     for hint in STOCK_CONTEXT_HINTS:
@@ -3062,6 +3080,14 @@ def _find_keyword_pos(needle: str, haystack: str, allow_fuzzy: bool = True) -> i
     """在 haystack 中找 needle 的位置，支援 臺/台 正規化及 Levenshtein ≤ 1 模糊比對。
     回傳在原始 haystack 中的位置，找不到則回傳 -1。"""
     # 1. 完全比對
+    if _needs_identity_boundary(needle):
+        match = re.search(
+            rf"(?<![A-Za-z0-9]){re.escape(needle)}(?![A-Za-z0-9])",
+            haystack,
+            flags=re.IGNORECASE,
+        )
+        return match.start() if match else -1
+
     pos = haystack.find(needle)
     if pos >= 0:
         return pos
@@ -3385,7 +3411,7 @@ def _validate_gemini_stocks(
             and whisper_orig_bare in chunk_text
             and _levenshtein(_core(whisper_orig_bare), _resolved_core) <= 1
         )
-        exact_name_appears = any(kw in chunk_text for kw in search_names)
+        exact_name_appears = any(_contains_identity_term(chunk_text, kw) for kw in search_names)
         name_appears = exact_name_appears or _whisper_close or _whisper_bare_close
         fuzzy_name_appears = False
         is_short_cjk_name = _contains_only_cjk(resolved_name) and len(resolved_name) <= 3
@@ -3418,7 +3444,7 @@ def _validate_gemini_stocks(
             name = resolved_name
             stock_keywords = [kw for kw, c in STOCK_DICT.items() if c == resolved_code]
             search_names = stock_keywords if lev_resolved else stock_keywords + [name]
-            exact_name_appears = any(kw in chunk_text for kw in search_names)
+            exact_name_appears = any(_contains_identity_term(chunk_text, kw) for kw in search_names)
             name_appears = True
 
         phonetic_candidates_for_override = _phonetic_alias_candidates(sector_source_term)
@@ -3466,7 +3492,7 @@ def _validate_gemini_stocks(
             name = resolved_name
             stock_keywords = [kw for kw, c in STOCK_DICT.items() if c == resolved_code]
             search_names = stock_keywords if lev_resolved else stock_keywords + [name]
-            exact_name_appears = any(kw in chunk_text for kw in search_names)
+            exact_name_appears = any(_contains_identity_term(chunk_text, kw) for kw in search_names)
             name_appears = True
 
         sector_nearby = _sector_aware_nearby_stock_keyword(
@@ -3504,7 +3530,7 @@ def _validate_gemini_stocks(
                 and whisper_orig_bare in chunk_text
                 and _levenshtein(_core(whisper_orig_bare), _resolved_core) <= 1
             )
-            exact_name_appears = any(kw in chunk_text for kw in search_names)
+            exact_name_appears = any(_contains_identity_term(chunk_text, kw) for kw in search_names)
             name_appears = exact_name_appears or _whisper_close or _whisper_bare_close
             is_short_cjk_name = _contains_only_cjk(resolved_name) and len(resolved_name) <= 3
         if whisper_orig and whisper_orig not in STOCK_DICT:
@@ -3538,7 +3564,7 @@ def _validate_gemini_stocks(
                         and whisper_orig_bare in chunk_text
                         and _levenshtein(_core(whisper_orig_bare), _resolved_core) <= 1
                     )
-                    exact_name_appears = any(kw in chunk_text for kw in search_names)
+                    exact_name_appears = any(_contains_identity_term(chunk_text, kw) for kw in search_names)
                     name_appears = exact_name_appears or _whisper_close or _whisper_bare_close
                     is_short_cjk_name = _contains_only_cjk(resolved_name) and len(resolved_name) <= 3
         # Whisper 錯字修正場景：Gemini 給了正確名稱但未填 whisper_original，
@@ -3650,9 +3676,9 @@ def _validate_gemini_stocks(
         # 驗證 Gemini 提供的 context 是否真的包含這支股票的關鍵字；
         # 若沒有（Gemini 把別支股票的段落配過來），就丟掉改用原文定位。
         ctx_has_keyword = (
-            any(kw in ctx for kw in stock_keywords + [name, resolved_name])
-            or _whisper_close and whisper_orig in ctx
-            or _whisper_bare_close and whisper_orig_bare in ctx
+            any(_contains_identity_term(ctx, kw) for kw in stock_keywords + [name, resolved_name])
+            or _whisper_close and _contains_identity_term(ctx, whisper_orig)
+            or _whisper_bare_close and _contains_identity_term(ctx, whisper_orig_bare)
         )
         # Always re-center context on matched term in full transcript for better window size.
         # Use _find_keyword_pos for 臺/台 normalization + Levenshtein ≤ 1 fuzzy fallback.

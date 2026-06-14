@@ -496,18 +496,11 @@ struct DayMentionsSheet: View {
     }
 
     private func highlightTerms(for context: MentionContext) -> [String] {
-        let contextTerms = mentionHighlightTerms(
+        mentionHighlightTerms(
             stockName: stock.name,
             code: stock.code,
             matchedKeyword: context.matchedKeyword
         )
-        let keywordTerms = stock.contexts
-            .compactMap(\.matchedKeyword)
-            .filter { !$0.isEmpty }
-            .flatMap {
-                mentionHighlightTerms(stockName: stock.name, code: stock.code, matchedKeyword: $0)
-            }
-        return Array(Set(contextTerms + keywordTerms))
     }
 }
 

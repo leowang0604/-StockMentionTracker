@@ -38,6 +38,7 @@ def load_scanner():
         {"code": "8043", "name": "蜜望實", "market": "listed", "sector": "電子零組件業"},
         {"code": "00403A", "name": "00403A", "market": "listed", "sector": "ETF・主動型"},
         {"code": "00993A", "name": "主動安聯台灣", "market": "listed", "sector": "ETF・主動型"},
+        {"code": "GS", "name": "Goldman Sachs", "market": "US", "sector": "金融"},
     ]:
         by_code.setdefault(stock["code"], stock)
     stocks = list(by_code.values())
@@ -138,6 +139,34 @@ class ValidatorRegressionTests(unittest.TestCase):
         codes = [hit["stock_code"] for hit in hits]
         self.assertIn("00993A", codes)
         self.assertIn("00992A", codes)
+
+    def test_gse_does_not_match_short_ticker_gs(self):
+        text = "我記得好像GSE有寫，下個禮拜某個A加也要進去寫。"
+        hits = self.validate(
+            {
+                "name": "Goldman Sachs",
+                "code": "GS",
+                "context": text,
+                "sentiment": "neutral",
+                "score": 0.5,
+            },
+            text,
+        )
+        self.assertEqual(hits, [])
+
+    def test_standalone_gs_still_matches_goldman_sachs(self):
+        text = "GS 這次上修了目標價，市場反應偏中性。"
+        hits = self.validate(
+            {
+                "name": "Goldman Sachs",
+                "code": "GS",
+                "context": text,
+                "sentiment": "neutral",
+                "score": 0.5,
+            },
+            text,
+        )
+        self.assertEqual([hit["stock_code"] for hit in hits], ["GS"])
 
     def test_new_whisper_correction_is_review_candidate_only(self):
         text = "緯印這檔股票最近營收成長，AI伺服器客戶訂單也增加。"

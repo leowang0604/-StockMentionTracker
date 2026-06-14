@@ -4,8 +4,6 @@ struct VideoDetailView: View {
     let video: VideoScanned
     let stockEntries: [StockEntry]
 
-    @Environment(DataService.self) private var dataService
-
     @State private var expandedIDs = Set<String>()
 
     var body: some View {
@@ -84,18 +82,11 @@ struct VideoDetailView: View {
     }
 
     private func highlightTerms(for stock: StockEntry, context: MentionContext) -> [String] {
-        let fullContexts = dataService.scanResult.stocksRanking
-            .first { $0.code == stock.code }?.contexts ?? stock.contexts
-        let keywords = fullContexts.compactMap(\.matchedKeyword).filter { !$0.isEmpty }
-        let contextTerms = mentionHighlightTerms(
+        mentionHighlightTerms(
             stockName: stock.name,
             code: stock.code,
             matchedKeyword: context.matchedKeyword
         )
-        let keywordTerms = keywords.flatMap {
-            mentionHighlightTerms(stockName: stock.name, code: stock.code, matchedKeyword: $0)
-        }
-        return Array(Set(contextTerms + keywordTerms))
     }
 }
 
