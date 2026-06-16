@@ -549,7 +549,7 @@
     "correct_name": "士開",
     "confidence": "high",
     "max_score": 100,
-    "observations": 3,
+    "observations": 4,
     "distinct_videos": 1,
     "video_ids": [
       "f167ba05-283e-480b-b8b3-a2d29287692b"
@@ -596,7 +596,7 @@
         "text_similarity": 0.0
       }
     ],
-    "updated_at": "2026-06-15T21:53:01"
+    "updated_at": "2026-06-16T21:59:56"
   },
   "服貿科|6505": {
     "confidence": "medium",
@@ -713,7 +713,7 @@
     "correct_name": "立德",
     "confidence": "high",
     "max_score": 100,
-    "observations": 3,
+    "observations": 4,
     "distinct_videos": 1,
     "video_ids": [
       "2286dd26-e2e4-4065-af99-0cc4aa165970"
@@ -760,7 +760,7 @@
         "text_similarity": 0.5
       }
     ],
-    "updated_at": "2026-06-15T22:07:15"
+    "updated_at": "2026-06-16T22:14:50"
   },
   "經向店|2308": {
     "confidence": "medium",
@@ -980,5 +980,852 @@
     ],
     "phonetic_candidates": [],
     "updated_at": "2026-06-15T23:22:28"
+  },
+  "春田|2010": {
+    "wrong_keyword": "春田",
+    "correct_code": "2010",
+    "correct_name": "春源",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "685bc211-b7dc-478b-9463-53a160c20cdf"
+    ],
+    "evidence": [
+      {
+        "video_id": "685bc211-b7dc-478b-9463-53a160c20cdf",
+        "channel": "股癌",
+        "date": "2026-06-13",
+        "title": "EP670 | 🫡",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top3",
+          "stock_context"
+        ],
+        "context": "那我現在可能去算一些 被動元件 像我自己去看春田 我也覺得春田很貴 可是如果說春田 後來的EPS狂拉 它真的漲價成功 那種一系列的 什麼AI的需求 把它推上去的話 到時候你看它搞不好 又變成一個P1搞不好 再20倍以下的東西"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "4541",
+        "name": "晟田",
+        "score": 0.681,
+        "phonetic_similarity": 0.778,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "2010",
+        "name": "春源",
+        "score": 0.663,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "9951",
+        "name": "皇田",
+        "score": 0.608,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-06-16T20:34:03"
+  },
+  "連發科|2454": {
+    "wrong_keyword": "連發科",
+    "correct_code": "2454",
+    "correct_name": "聯發科",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "6d1e4799-6904-4211-bcdb-192153d0bbbe"
+    ],
+    "evidence": [
+      {
+        "video_id": "6d1e4799-6904-4211-bcdb-192153d0bbbe",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-15",
+        "title": "EP1119｜美伊要簽了，油價救了FED開會？今天動能、左側、觀望都有事情做，先買多題材最穩，SpaceX 掛牌，供應鏈還能漲？ft.題材獵人 林漢偉",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "IC設計細事財 所以像安摩啊 像在所謂的interMD等等的 那今天盤面上你就可以想得到 那可能在台股的細致財表現就還不錯 所以像創意啊 像這個聯電啊 像一些所謂細金人股票 我覺得都跟這些有關係 甚至連發科的表現 所以我覺得目前盤面上 如果你要做一個 資金有效率的操作的話 你都可以先從 台股資金強勢族群當中 有沒有國際股市的一些 相關的重要大廠可以參考 那再搭配上 如果有報價可以看 就是比方機體有報價 被動元件有報價 細金有報價 這些報價在漲 國際大廠在漲 就可以用過去機體 那個操作邏輯來看 他們就會有一個強勢的資金 集中效應 而維持一個強勢的表現 所以剛剛提到了 這個剛提到的 像西斯財啊 像"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2454",
+        "name": "聯發科",
+        "score": 0.883,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "1459",
+        "name": "聯發",
+        "score": 0.604,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "2408",
+        "name": "南亞科",
+        "score": 0.523,
+        "phonetic_similarity": 0.625,
+        "text_similarity": 0.333
+      }
+    ],
+    "updated_at": "2026-06-16T21:42:56"
+  },
+  "環球金|6488": {
+    "wrong_keyword": "環球金",
+    "correct_code": "6488",
+    "correct_name": "環球晶",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "6d1e4799-6904-4211-bcdb-192153d0bbbe"
+    ],
+    "evidence": [
+      {
+        "video_id": "6d1e4799-6904-4211-bcdb-192153d0bbbe",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-15",
+        "title": "EP1119｜美伊要簽了，油價救了FED開會？今天動能、左側、觀望都有事情做，先買多題材最穩，SpaceX 掛牌，供應鏈還能漲？ft.題材獵人 林漢偉",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "都可以觀察是什麼 就是說剛提到的 你從國際大廠的一個表現 可以找到旁邊上 比較強色的主流 那甚至說你看到 將軍的細金園也非常強 在日本的聖高 今天股價是大漲了 大概18個百分點 所以今天台股的細金園 環球金 中美金 合金加金 大堆的 甚至說台盛科 股價都是亮燈漲 太多檔了 說不出逐盡 對 所以我覺得這個是一塊 就是說目前來看 我覺得漲價升級的題材 搭配國際大廠的一個表態 那我覺得都是你資金 可以配置比較多的一個資金的比重 那第二件事情 當然就可以看到 因為這禮拜大事情很多嘛 所以我們剛剛提到 其實很多今天強勢 網上表態的個股 也都跟禮拜四的 00500056換股有關 所以創意啊 真頂ky啊 什"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "6488",
+        "name": "環球晶",
+        "score": 0.824,
+        "phonetic_similarity": 0.909,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "2880",
+        "name": "華南金",
+        "score": 0.572,
+        "phonetic_similarity": 0.7,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "2885",
+        "name": "元大金",
+        "score": 0.507,
+        "phonetic_similarity": 0.6,
+        "text_similarity": 0.333
+      }
+    ],
+    "updated_at": "2026-06-16T21:42:56"
+  },
+  "中美金|2891": {
+    "wrong_keyword": "中美金",
+    "correct_code": "2891",
+    "correct_name": "中信金",
+    "confidence": "high",
+    "max_score": 85,
+    "observations": 2,
+    "distinct_videos": 1,
+    "video_ids": [
+      "6d1e4799-6904-4211-bcdb-192153d0bbbe"
+    ],
+    "evidence": [
+      {
+        "video_id": "6d1e4799-6904-4211-bcdb-192153d0bbbe",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-15",
+        "title": "EP1119｜美伊要簽了，油價救了FED開會？今天動能、左側、觀望都有事情做，先買多題材最穩，SpaceX 掛牌，供應鏈還能漲？ft.題材獵人 林漢偉",
+        "source": "full_video_validator",
+        "score": 85,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top3",
+          "phonetic_conflict",
+          "stock_context"
+        ],
+        "context": "察是什麼 就是說剛提到的 你從國際大廠的一個表現 可以找到旁邊上 比較強色的主流 那甚至說你看到 將軍的細金園也非常強 在日本的聖高 今天股價是大漲了 大概18個百分點 所以今天台股的細金園 環球金 中美金 合金加金 大堆的 甚至說台盛科 股價都是亮燈漲 太多檔了 說不出逐盡 對 所以我覺得這個是一塊 就是說目前來看 我覺得漲價升級的題材 搭配國際大廠的一個表態 那我覺得都是你資金 可以配置比較多的一個資金的比重 那第二件事情 當然就可以看到 因為這禮拜大事情很多嘛 所以我們剛剛提到 其實很多今天強勢 網上表態的個股 也都跟禮拜四的 00500056換股有關 所以創意啊 真頂ky啊 什麼冒年 "
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "5483",
+        "name": "中美晶",
+        "score": 0.829,
+        "phonetic_similarity": 0.917,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "2891",
+        "name": "中信金",
+        "score": 0.706,
+        "phonetic_similarity": 0.727,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "4702",
+        "name": "中美實",
+        "score": 0.706,
+        "phonetic_similarity": 0.727,
+        "text_similarity": 0.667
+      }
+    ],
+    "updated_at": "2026-06-16T21:42:59"
+  },
+  "合金加金|5880": {
+    "wrong_keyword": "合金加金",
+    "correct_code": "5880",
+    "correct_name": "合庫金",
+    "confidence": "high",
+    "max_score": 97,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "6d1e4799-6904-4211-bcdb-192153d0bbbe"
+    ],
+    "evidence": [
+      {
+        "video_id": "6d1e4799-6904-4211-bcdb-192153d0bbbe",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-15",
+        "title": "EP1119｜美伊要簽了，油價救了FED開會？今天動能、左側、觀望都有事情做，先買多題材最穩，SpaceX 掛牌，供應鏈還能漲？ft.題材獵人 林漢偉",
+        "source": "full_video_validator",
+        "score": 97,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": " 就是說剛提到的 你從國際大廠的一個表現 可以找到旁邊上 比較強色的主流 那甚至說你看到 將軍的細金園也非常強 在日本的聖高 今天股價是大漲了 大概18個百分點 所以今天台股的細金園 環球金 中美金 合金加金 大堆的 甚至說台盛科 股價都是亮燈漲 太多檔了 說不出逐盡 對 所以我覺得這個是一塊 就是說目前來看 我覺得漲價升級的題材 搭配國際大廠的一個表態 那我覺得都是你資金 可以配置比較多的一個資金的比重 那第二件事情 當然就可以看到 因為這禮拜大事情很多嘛 所以我們剛剛提到 其實很多今天強勢 網上表態的個股 也都跟禮拜四的 00500056換股有關 所以創意啊 真頂ky啊 什麼冒年 難電 都"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "5880",
+        "name": "合庫金",
+        "score": 0.47,
+        "phonetic_similarity": 0.455,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "2883",
+        "name": "凱基金",
+        "score": 0.442,
+        "phonetic_similarity": 0.545,
+        "text_similarity": 0.25
+      },
+      {
+        "code": "3049",
+        "name": "精金",
+        "score": 0.442,
+        "phonetic_similarity": 0.545,
+        "text_similarity": 0.25
+      }
+    ],
+    "updated_at": "2026-06-16T21:42:56"
+  },
+  "台盛科|3532": {
+    "wrong_keyword": "台盛科",
+    "correct_code": "3532",
+    "correct_name": "台勝科",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "6d1e4799-6904-4211-bcdb-192153d0bbbe"
+    ],
+    "evidence": [
+      {
+        "video_id": "6d1e4799-6904-4211-bcdb-192153d0bbbe",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-15",
+        "title": "EP1119｜美伊要簽了，油價救了FED開會？今天動能、左側、觀望都有事情做，先買多題材最穩，SpaceX 掛牌，供應鏈還能漲？ft.題材獵人 林漢偉",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "際大廠的一個表現 可以找到旁邊上 比較強色的主流 那甚至說你看到 將軍的細金園也非常強 在日本的聖高 今天股價是大漲了 大概18個百分點 所以今天台股的細金園 環球金 中美金 合金加金 大堆的 甚至說台盛科 股價都是亮燈漲 太多檔了 說不出逐盡 對 所以我覺得這個是一塊 就是說目前來看 我覺得漲價升級的題材 搭配國際大廠的一個表態 那我覺得都是你資金 可以配置比較多的一個資金的比重 那第二件事情 當然就可以看到 因為這禮拜大事情很多嘛 所以我們剛剛提到 其實很多今天強勢 網上表態的個股 也都跟禮拜四的 00500056換股有關 所以創意啊 真頂ky啊 什麼冒年 難電 都是被新增0050的成分股"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3532",
+        "name": "台勝科",
+        "score": 0.883,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "3265",
+        "name": "台星科",
+        "score": 0.688,
+        "phonetic_similarity": 0.7,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "6464",
+        "name": "台數科",
+        "score": 0.688,
+        "phonetic_similarity": 0.7,
+        "text_similarity": 0.667
+      }
+    ],
+    "updated_at": "2026-06-16T21:42:57"
+  },
+  "雙紅|3324": {
+    "wrong_keyword": "雙紅",
+    "correct_code": "3324",
+    "correct_name": "雙鴻",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "6d1e4799-6904-4211-bcdb-192153d0bbbe"
+    ],
+    "evidence": [
+      {
+        "video_id": "6d1e4799-6904-4211-bcdb-192153d0bbbe",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-15",
+        "title": "EP1119｜美伊要簽了，油價救了FED開會？今天動能、左側、觀望都有事情做，先買多題材最穩，SpaceX 掛牌，供應鏈還能漲？ft.題材獵人 林漢偉",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context",
+          "weak_sector_match"
+        ],
+        "context": "當中 最近比較弱 還在相關的AI457相關的族群 所以你可以看到 比方說比較弱的 類似所謂的PCB 很多都是離錢高有段距離 台光店啊 台藥啊 今天雖然有表態 但從高檔回下來 大概都在月線附近 真散熱的雙紅 齊紅 建設這些的 其股價 我覺得這一波 也是修正的比較兇一點 那這些股票 我覺得就比較適合大家去蹲點 等待他的一個發酵 那等什麼 等美股相關的 揮達這些AI巨頭股票 再度表態往上的時候 他們就會有一波的一個公式 所以你可以看到 就是強勢股 你找這些報價上漲的 啊你如果要找一個 比較穩健的標的的話 你就可以尋找一下 這些所謂業績很好 你覺得他委屈了 但沒有那麼快發動 一些個股 那甚至你也可以去",
+        "override_kind": "phonetic",
+        "override_reason": "phonetic_top1 score=0.825 lead=0.130",
+        "original_code": "4764",
+        "original_name": "雙鍵",
+        "phonetic_top_score": 0.825,
+        "phonetic_lead": 0.13
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3324",
+        "name": "雙鴻",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "6506",
+        "name": "雙邦",
+        "score": 0.695,
+        "phonetic_similarity": 0.8,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "4728",
+        "name": "雙美",
+        "score": 0.565,
+        "phonetic_similarity": 0.6,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-06-16T21:42:57"
+  },
+  "台慶柯|3532": {
+    "wrong_keyword": "台慶柯",
+    "correct_code": "3532",
+    "correct_name": "台勝科",
+    "confidence": "high",
+    "max_score": 84,
+    "observations": 2,
+    "distinct_videos": 1,
+    "video_ids": [
+      "6d1e4799-6904-4211-bcdb-192153d0bbbe"
+    ],
+    "evidence": [
+      {
+        "video_id": "6d1e4799-6904-4211-bcdb-192153d0bbbe",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-15",
+        "title": "EP1119｜美伊要簽了，油價救了FED開會？今天動能、左側、觀望都有事情做，先買多題材最穩，SpaceX 掛牌，供應鏈還能漲？ft.題材獵人 林漢偉",
+        "source": "full_video_validator",
+        "score": 84,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "phonetic_top3",
+          "phonetic_conflict",
+          "stock_context",
+          "strong_sector_match"
+        ],
+        "context": "考 如果你是低檔報上來賣飛掉的 你前面已經有大段的 報酬率跟獲率 他可能就是你的底氣嘛 當然我不是很建議 大家這樣做 或者是同族群裡面 有沒有誰長得比較緩 例如說我手上還有另外一檔 也有跟大家分享過叫台慶柯 台慶柯今天後來也鎖了漲停 但他鎖得不甘不願的 很後面才鎖 就代表他是被動元件裡面 比較弱勢的 比較弱勢也漲很多了 可是他就漲得比較慢 那就看你要不要覺得 那我就快車下車了 跑去搭一個之前比較慢 但同族群的 因為台慶柯也在第一波 有講過他的電感要漲價 我現在不是在跟大家推薦各國 我只是在告訴大家 當我想要自我彌補 這種感覺的時候 我可能會做什麼事情 那再加上還有一件事情 是像上個禮拜 有跟大"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3357",
+        "name": "臺慶科",
+        "score": 0.767,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "3265",
+        "name": "台星科",
+        "score": 0.694,
+        "phonetic_similarity": 0.889,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "3532",
+        "name": "台勝科",
+        "score": 0.572,
+        "phonetic_similarity": 0.7,
+        "text_similarity": 0.333
+      }
+    ],
+    "updated_at": "2026-06-16T21:43:04"
+  },
+  "立即電|2472": {
+    "wrong_keyword": "立即電",
+    "correct_code": "2472",
+    "correct_name": "立隆電",
+    "confidence": "high",
+    "max_score": 97,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "6d1e4799-6904-4211-bcdb-192153d0bbbe"
+    ],
+    "evidence": [
+      {
+        "video_id": "6d1e4799-6904-4211-bcdb-192153d0bbbe",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-15",
+        "title": "EP1119｜美伊要簽了，油價救了FED開會？今天動能、左側、觀望都有事情做，先買多題材最穩，SpaceX 掛牌，供應鏈還能漲？ft.題材獵人 林漢偉",
+        "source": "full_video_validator",
+        "score": 97,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top3",
+          "phonetic_conflict",
+          "stock_context",
+          "strong_sector_match"
+        ],
+        "context": "本身的通路題材 所以我覺得現在反而記憶體 就比較辛苦一點 他可能要加上 被動員間的雙題材 表現得還比較好 所以我們講說 其實大摩報告那邊 提到三檔股票 一檔就是所謂的華邦電 另外一檔就是 明天要出關的立即電 他同樣也是具備戲電龍的題材 那股價因為經過修正了 所以他明天要出關 我覺得大家就可以去觀察一下 他如果上去的話 那可能這個另外一檔 也是黃董的股票 艾普 對 這一波修正 也修正蠻兇的 對 我覺得也可以一併 來做一個多方的看待 所以我覺得這個就是第一個 你可以從所謂的 相關族群當中找到雙題材 能夠搭上現在熱門題材的 我覺得就可以做一個 比較強勢的看法 那甚至像剛剛提到的 比方說聯軍 就是IC"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "6770",
+        "name": "力積電",
+        "score": 0.767,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "2472",
+        "name": "立隆電",
+        "score": 0.623,
+        "phonetic_similarity": 0.6,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "2330",
+        "name": "台積電",
+        "score": 0.622,
+        "phonetic_similarity": 0.778,
+        "text_similarity": 0.333
+      }
+    ],
+    "updated_at": "2026-06-16T21:42:58"
+  },
+  "虛心KY|6451": {
+    "wrong_keyword": "虛心KY",
+    "correct_code": "6451",
+    "correct_name": "訊芯-KY",
+    "confidence": "high",
+    "max_score": 97,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "6d1e4799-6904-4211-bcdb-192153d0bbbe"
+    ],
+    "evidence": [
+      {
+        "video_id": "6d1e4799-6904-4211-bcdb-192153d0bbbe",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-15",
+        "title": "EP1119｜美伊要簽了，油價救了FED開會？今天動能、左側、觀望都有事情做，先買多題材最穩，SpaceX 掛牌，供應鏈還能漲？ft.題材獵人 林漢偉",
+        "source": "full_video_validator",
+        "score": 97,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "phonetic_top1",
+          "stock_context",
+          "strong_sector_match"
+        ],
+        "context": "表上今天排面上 你看到Space是題材的同心店 同樣也是這個 IC封測族群 但因為它是主要可能有部分的營收比重 來自於這個相關的新鏈計畫 所以這個就讓他今天股價 算是在封測股裡面表現得還不錯 那之前像虛心KY 像聯軍是西光子題材 那現在看起來虛心KY 也被西光子拖累下來了 對 所以聯軍今天反而很強 對 那你看之前的歷程 南茂 福茂科 這些我覺得都是因為 記憶重新轉強之後 有重新一波的一個漲勢 所以我覺得你從這樣的一個方向 去延伸的話 你都可以找到相對還不錯的一個標的 甚至說我們會說 接下來你可以關注的什麼 就是Space的掛牌 那對於整個台灣相關供應鏈 我覺得都有一些想像的空間 今天晚上在達人",
+        "override_kind": "phonetic",
+        "override_reason": "phonetic_top1 score=0.744 lead=0.105",
+        "original_code": "PSKY",
+        "original_name": "Paramount Skydance Corporation",
+        "phonetic_top_score": 0.744,
+        "phonetic_lead": 0.10499999999999998
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "6451",
+        "name": "訊芯-KY",
+        "score": 0.744,
+        "phonetic_similarity": 0.875,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "1341",
+        "name": "富林-KY",
+        "score": 0.639,
+        "phonetic_similarity": 0.714,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "4571",
+        "name": "鈞興-KY",
+        "score": 0.608,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-06-16T21:42:59"
+  },
+  "升達科|3004": {
+    "wrong_keyword": "升達科",
+    "correct_code": "3004",
+    "correct_name": "豐達科",
+    "confidence": "high",
+    "max_score": 85,
+    "observations": 2,
+    "distinct_videos": 1,
+    "video_ids": [
+      "6d1e4799-6904-4211-bcdb-192153d0bbbe"
+    ],
+    "evidence": [
+      {
+        "video_id": "6d1e4799-6904-4211-bcdb-192153d0bbbe",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-15",
+        "title": "EP1119｜美伊要簽了，油價救了FED開會？今天動能、左側、觀望都有事情做，先買多題材最穩，SpaceX 掛牌，供應鏈還能漲？ft.題材獵人 林漢偉",
+        "source": "full_video_validator",
+        "score": 85,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top3",
+          "phonetic_conflict",
+          "stock_context"
+        ],
+        "context": "今年低軌衛星 大家從1月份 從去年12月份漲到現在 很多人就在等今天 等今天掛牌之後 要先做獲利了解的動作 所以這個賣壓出來 當然也是有一定的一個 邏輯存在 那第二件事情 就是他幾個重點指標股 第一個升達科 對股價還蠻弱的 那我覺得也是因為 整個盤面上資金排擠的效應 因為熱點通用 都在我們剛剛講的 漲價升級的題材 所以對於太空衛星這題材 感覺就是會有點 如果我有辦法去買 美股的SPACEX 我幹嘛來買台灣的供應鏈 但我覺得這個其實 就另外一個角度來講的話 其實我覺得供應鏈的優點 在於說 如果SPACEX好的話 他未來業績 或台灣訂單會同步的成長 所以你反過來想 就是說SPACEX 畢竟他在美股"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3491",
+        "name": "昇達科",
+        "score": 0.883,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "3004",
+        "name": "豐達科",
+        "score": 0.739,
+        "phonetic_similarity": 0.778,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "6492",
+        "name": "生華科",
+        "score": 0.637,
+        "phonetic_similarity": 0.8,
+        "text_similarity": 0.333
+      }
+    ],
+    "updated_at": "2026-06-16T21:43:04"
+  },
+  "雅翔|6139": {
+    "wrong_keyword": "雅翔",
+    "correct_code": "6139",
+    "correct_name": "亞翔",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "6d1e4799-6904-4211-bcdb-192153d0bbbe"
+    ],
+    "evidence": [
+      {
+        "video_id": "6d1e4799-6904-4211-bcdb-192153d0bbbe",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-15",
+        "title": "EP1119｜美伊要簽了，油價救了FED開會？今天動能、左側、觀望都有事情做，先買多題材最穩，SpaceX 掛牌，供應鏈還能漲？ft.題材獵人 林漢偉",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "所以馬斯克股票 就是大家叫他馬教主 你要相信他 就是放在那裡 才會有辦法抱下去 那還是跟大家講 其實剛剛其實 趙華講的一些廠物工程 或辦好一些設備股票 說真的 你如果沒有長期追蹤 很容易錯過他 像今天雅翔創造力的新高 我就今天盤中看到 哇 掌心板 他有凡軒 對 凡軒 然後漢堂 盛輝 這些股價 就是你一段時間沒有看他 然後一回頭 看來就是歷史新高了 所以我覺得這些所謂的具備 可能就是 長期穩定的訂單的股票 說真的 你是需要一點時間 去蹲點他買一些股票 那等到他轉牆的時候 你才會發現 才不會像我們這樣 盤面上會看那些熱門族群 結果一回頭 哇 這些已經 你覺得該買的時候 沒有買到 後面就只能夠看他一"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "6139",
+        "name": "亞翔",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "2634",
+        "name": "漢翔",
+        "score": 0.663,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "6185",
+        "name": "幃翔",
+        "score": 0.581,
+        "phonetic_similarity": 0.625,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-06-16T21:43:00"
+  },
+  "移頂|5289": {
+    "wrong_keyword": "移頂",
+    "correct_code": "5289",
+    "correct_name": "宜鼎",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "f167ba05-283e-480b-b8b3-a2d29287692b"
+    ],
+    "evidence": [
+      {
+        "video_id": "f167ba05-283e-480b-b8b3-a2d29287692b",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-12",
+        "title": "EP1118｜多空交戰已結束？下週華許考驗後，重返基本面，選台積電、被動、CPO、記憶體，台股直奔世界第4大，外資該回頭？ft.雷老闆",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "phonetic_top1",
+          "weak_sector_match",
+          "strong_sector_match"
+        ],
+        "context": "頻率過猛的問題 因為像華邦店 他可能就是股東會前 大家開始又醞釀那個買氣 股東會講個好消息 他就上去 對 對 我也覺得 其實我個人 是非常喜歡去年的 那你會發現說去年 他跟 有一檔 記憶體裡面比較像是移頂 移頂 移頂都已經回到 前兩天還回到快兩千 不過移頂公共型的商品 我覺得還是真的有差 因為以前拜訪過他們嘛 他們有一萬多個 為客戶開發的模具 然後良率還很高 所以以前長期來講 然後他們這一塊是很穩的 那你一定要講兩個 比較近的就他們嘛 那 我會覺得說 他也已經追上來了 對啊 那我覺得期一年 最重還是會上去的原因是 因為 他畢竟他花了那麼多的力氣 去募了一個ECB 是 然後那個定價在3500塊 ",
+        "override_kind": "phonetic",
+        "override_reason": "phonetic_top1 score=0.650 lead=0.108",
+        "original_code": "3406",
+        "original_name": "玉晶光",
+        "phonetic_top_score": 0.65,
+        "phonetic_lead": 0.10799999999999998
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "5289",
+        "name": "宜鼎",
+        "score": 0.65,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "3048",
+        "name": "益登",
+        "score": 0.542,
+        "phonetic_similarity": 0.833,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "3522",
+        "name": "御嵿",
+        "score": 0.542,
+        "phonetic_similarity": 0.833,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-06-16T22:00:14"
+  },
+  "見湖山|5701": {
+    "wrong_keyword": "見湖山",
+    "correct_code": "5701",
+    "correct_name": "劍湖山",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "e74d2637-63e7-4b28-bdc4-0e0df72ba41a"
+    ],
+    "evidence": [
+      {
+        "video_id": "e74d2637-63e7-4b28-bdc4-0e0df72ba41a",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-10",
+        "title": "EP1116｜今天體感比周一還難過？先殺CPI預期，盤面失去AI主流，台積電營收能救？營建接棒要觀察的股、房資金流向？ft.選股教練 陳唯泰",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "是亭麗的快樂 對 這就是亭麗的快樂 我們盡量享受亭麗的快樂 不要承擔太多停損的痛苦 雖然該停還是要停 對 然後再來 還有最近其實有一些 我們看到的一些 所謂的漲多的 很多的股票 像我上禮拜 我們聊那個見湖山 後來好多人去傳圖給我 不好意思沒有一一回覆 好像網路上有人傳梗圖 是把見湖山 key在那個背板上 然後什麼的 有的沒有的 還有講腰骨比較上茂也很誇張 長了二級跟停板 之後現在疊了十幾根的 疊停板 像今天的見湖山就疊停 然後前面兩 昨天也是疊停 像這種就是 如果說投資朋友 你手中股票或是你發現 關注的股票 它大漲 但是如果真的沒有基本面的話 那就當作天上掉下來的禮物 你拉上去要記得走 假設它"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "5701",
+        "name": "劍湖山",
+        "score": 0.883,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "1736",
+        "name": "喬山",
+        "score": 0.507,
+        "phonetic_similarity": 0.6,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "6275",
+        "name": "元山",
+        "score": 0.507,
+        "phonetic_similarity": 0.6,
+        "text_similarity": 0.333
+      }
+    ],
+    "updated_at": "2026-06-16T22:29:19"
+  },
+  "家股文|ORCL": {
+    "wrong_keyword": "家股文",
+    "correct_code": "ORCL",
+    "correct_name": "Oracle",
+    "confidence": "low",
+    "max_score": 35,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "c4409f61-f3e8-4a62-bcfe-79d304406a1e"
+    ],
+    "evidence": [
+      {
+        "video_id": "c4409f61-f3e8-4a62-bcfe-79d304406a1e",
+        "channel": "財女珍妮",
+        "date": "2026-06-11",
+        "title": "2026/06/11 (四) 通膨沒事，黃金暴跌，空頭來了？",
+        "source": "full_video_validator",
+        "score": 35,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match"
+        ],
+        "context": "也會達到900億美元左右 年增的幅度是達到了34% 所以你如果看過去 或者是看公司目前整個 對於外來的展望的話 都是非常非常的樂觀的 但是大家也有看到 我剛剛在Facebook上面 就有發一篇文 就是甲骨文 現在它的AI大夢 感覺好像已經沒有辦法說服市場 因為當你已經誇張到某一個程度 因為剩餘履約 義務是你已經簽訂的 但是你還沒有辦法履約 就是你還沒有交付 然後還沒有任列到帳上的一個金額 你現在已經畫得這麼大這麼大了 那你達成的時間表 或者是未來 如果有任何的狀況的話 會不會就導致 整個訂單的金額 會有很大的變動呢 所以我覺得 大家已經開始去擔心 就是這麼大規模的剩餘履約義務 你在未來的交付上"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3680",
+        "name": "家登",
+        "score": 0.442,
+        "phonetic_similarity": 0.5,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "8462",
+        "name": "柏文",
+        "score": 0.442,
+        "phonetic_similarity": 0.5,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "1525",
+        "name": "江申",
+        "score": 0.433,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-06-16T23:14:53"
   }
 }
