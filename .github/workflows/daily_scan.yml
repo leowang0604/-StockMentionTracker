@@ -2,8 +2,8 @@ name: Daily Stock Mention Scan
 
 on:
   schedule:
-    # 每天台灣時間 08:00（UTC 00:00）
-    - cron: '0 17 * * *'
+    # 每天台灣時間 00:49（UTC 16:49），避開 GitHub Actions 整點排程尖峰
+    - cron: '49 16 * * *'
   workflow_dispatch:
     inputs:
       use_whisper:
