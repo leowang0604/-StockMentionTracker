@@ -26,8 +26,9 @@ actor GitHubService {
         request.cachePolicy = .reloadIgnoringLocalCacheData
 
         let (data, response) = try await URLSession.shared.data(for: request)
-        guard (response as? HTTPURLResponse)?.statusCode == 200 else {
-            throw GitHubError.notFound
+        let statusCode = (response as? HTTPURLResponse)?.statusCode ?? -1
+        guard statusCode == 200 else {
+            throw GitHubError.fromStatusCode(statusCode)
         }
 
         let fileContent = try JSONDecoder().decode(FileContent.self, from: data)
@@ -89,7 +90,7 @@ actor GitHubService {
             return JSONFile(value: defaultValue, sha: nil)
         }
         guard statusCode == 200 else {
-            throw GitHubError.notFound
+            throw GitHubError.fromStatusCode(statusCode)
         }
 
         let fileContent = try JSONDecoder().decode(FileContent.self, from: data)
@@ -148,18 +149,33 @@ actor GitHubService {
 
 enum GitHubError: LocalizedError {
     case notFound
+    case unauthorized
+    case forbidden
     case saveFailed
     case saveFailedWithCode(Int)
     case invalidURL
     case decodeFailed
+    case unexpectedStatus(Int)
+
+    static func fromStatusCode(_ code: Int) -> GitHubError {
+        switch code {
+        case 401: return .unauthorized
+        case 403: return .forbidden
+        case 404: return .notFound
+        default: return .unexpectedStatus(code)
+        }
+    }
 
     var errorDescription: String? {
         switch self {
         case .notFound: return "找不到 sources.json（請確認 repo 路徑與 PAT）"
+        case .unauthorized: return "GitHub Token 無效或已過期，請到設定頁更新 Personal Access Token"
+        case .forbidden: return "GitHub Token 權限不足，請確認 PAT 有 repo 內容讀寫權限"
         case .saveFailed: return "儲存頻道列表失敗"
         case .saveFailedWithCode(let code): return "儲存失敗（HTTP \(code)）"
         case .invalidURL: return "無效的 GitHub repo 格式（應為 username/repo）"
         case .decodeFailed: return "解析 GitHub 回應失敗"
+        case .unexpectedStatus(let code): return "GitHub API 回應異常（HTTP \(code)）"
         }
     }
 }

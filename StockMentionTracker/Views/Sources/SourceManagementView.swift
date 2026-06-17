@@ -9,6 +9,7 @@ struct ChannelManagementView: View {
     @State private var currentSHA: String = ""
     @State private var isLoading = false
     @State private var errorMessage: String?
+    @State private var loadErrorMessage: String?
     @State private var showingAddChannel = false
     @State private var channelToDelete: ChannelSource?
     @State private var showDeleteAlert = false
@@ -69,7 +70,20 @@ struct ChannelManagementView: View {
 
     private var channelList: some View {
         List {
-            if sourcesConfig.sources.isEmpty {
+            if let loadErrorMessage, sourcesConfig.sources.isEmpty {
+                VStack(alignment: .leading, spacing: 8) {
+                    Label("無法載入頻道清單", systemImage: "exclamationmark.triangle")
+                        .font(.headline)
+                    Text(loadErrorMessage)
+                        .font(.subheadline)
+                        .foregroundStyle(.secondary)
+                    Text("請先到設定頁確認 GitHub Repo 與 Personal Access Token，再按重新載入。")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.vertical, 8)
+            } else if sourcesConfig.sources.isEmpty {
                 Text("尚無頻道，點選右上角 + 新增")
                     .foregroundStyle(.secondary)
                     .frame(maxWidth: .infinity, alignment: .center)
@@ -144,8 +158,11 @@ struct ChannelManagementView: View {
             )
             sourcesConfig = config
             currentSHA = sha
+            loadErrorMessage = nil
         } catch {
-            errorMessage = error.localizedDescription
+            let message = error.localizedDescription
+            loadErrorMessage = message
+            errorMessage = message
         }
         isLoading = false
     }

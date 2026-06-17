@@ -61,6 +61,7 @@ struct VideoDetailView: View {
         .navigationTitle("影片詳情")
 #if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden(true)
 #endif
         .toolbar {
             if let url = video.externalURL {
