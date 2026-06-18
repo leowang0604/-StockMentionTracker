@@ -549,7 +549,7 @@
     "correct_name": "士開",
     "confidence": "high",
     "max_score": 100,
-    "observations": 4,
+    "observations": 5,
     "distinct_videos": 1,
     "video_ids": [
       "f167ba05-283e-480b-b8b3-a2d29287692b"
@@ -596,7 +596,7 @@
         "text_similarity": 0.0
       }
     ],
-    "updated_at": "2026-06-16T21:59:56"
+    "updated_at": "2026-06-18T21:25:56"
   },
   "服貿科|6505": {
     "confidence": "medium",
@@ -2177,10 +2177,11 @@
     "correct_name": "漢唐",
     "confidence": "high",
     "max_score": 100,
-    "observations": 1,
-    "distinct_videos": 1,
+    "observations": 2,
+    "distinct_videos": 2,
     "video_ids": [
-      "6d1e4799-6904-4211-bcdb-192153d0bbbe"
+      "6d1e4799-6904-4211-bcdb-192153d0bbbe",
+      "e3633b4f-c3f2-4e69-80a8-42a666834b40"
     ],
     "evidence": [
       {
@@ -2199,6 +2200,23 @@
           "stock_context"
         ],
         "context": "抱下去 那還是跟大家講 其實剛剛其實 趙華講的一些廠物工程 或辦好一些設備股票 說真的 你如果沒有長期追蹤 很容易錯過他 像今天雅翔創造力的新高 我就今天盤中看到 哇 掌心板 他有凡軒 對 凡軒 然後漢堂 盛輝 這些股價 就是你一段時間沒有看他 然後一回頭 看來就是歷史新高了 所以我覺得這些所謂的具備 可能就是 長期穩定的訂單的股票 說真的 你是需要一點時間 去蹲點他買一些股票 那等到他轉牆的時候 你才會發現 才不會像我們這樣 盤面上會看那些熱門族群 結果一回頭 哇 這些已經 你覺得該買的時候 沒有買到 後面就只能夠看他一直上去了 那另外跟大家講一下 其實今天 我覺得盤面上也要關心 另外一個族"
+      },
+      {
+        "video_id": "e3633b4f-c3f2-4e69-80a8-42a666834b40",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-16",
+        "title": "EP1120｜再聽到升息導致下跌，都是機會？輝達也發債，軍備競賽不能停！台積電快醒了？設備、被動、CPO最新看法？ft.AI達人 蔡明翰",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "新高 可是有一些中小型的被動元件 就有一點點漲多回徒的狀態 CPO 有一點開高走低 大家都留下一個黑K 也有人漲停 但數量不多 等於說這個族群 現在有一點點的壓力在 還沒有辦法完全突破 設備股 像今天漢堂突然殺到一個跌停板 亞翔也中錯 設備股不是長線 我們覺得最穩的嗎 那今天突然殺下來 有什麼樣的問題嗎 還是剛好又給機會 其實一樣的問題 就是我剛剛講的 在下跌的過程當中 不見得一定要硬塞利空給他 那我有沒有利空 其實就我之前解讀也很簡單 如果有利空他就不會開高了 他不會開高之後走低 對不對 他會跳空 對他會跳空 如果真的盤中是不可能出現的 一定是晚上 昨天發生了什麼事情 可能昨天大家都知道 只"
       }
     ],
     "phonetic_candidates": [
@@ -2224,7 +2242,7 @@
         "text_similarity": 0.5
       }
     ],
-    "updated_at": "2026-06-17T21:00:14"
+    "updated_at": "2026-06-18T20:51:45"
   },
   "南亞可|1303": {
     "wrong_keyword": "南亞可",
@@ -2338,5 +2356,391 @@
       }
     ],
     "updated_at": "2026-06-17T21:30:51"
+  },
+  "ARN|ARM": {
+    "wrong_keyword": "ARN",
+    "correct_code": "ARM",
+    "correct_name": "ARM Holdings",
+    "confidence": "medium",
+    "max_score": 65,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "07a62ee9-027c-4503-9fa5-6aff25383a0b"
+    ],
+    "evidence": [
+      {
+        "video_id": "07a62ee9-027c-4503-9fa5-6aff25383a0b",
+        "channel": "韭菜畢業班",
+        "date": "2026-06-14",
+        "title": "EP234 | SpaceX IPO / 大立光新題材",
+        "source": "full_video_validator",
+        "score": 65,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "stock_context"
+        ],
+        "context": "單的東西的話 反彈就會相對的比較慢 甚至有可能反彈之後 再嚇殺的可能性還是存在 那再來就是如果我們看到 這幾天的反彈幅度 相對一個較高的東西 還是在CPU身上 我們講CPU就是ND 然後Intel或是ARN 其實反彈的幅度都算非常快 那其中最強的應該是ARN 這無庸置疑 那ARN還有伴隨著之前的 一些利多的好消息 AIPC的這些好消息存在 所以他反彈的幅度最快 我覺得也算是挺合理的 然後再來就是Intel的部分 那Intel的部分的話 其實我覺得蠻快的 就會去攻前面的一個高點了 這個是 我是優先會去注意到的一塊 好 那再來的話 我們可能就會來聊一下 就是近期台股的部分 那其實台股的部分 自己認"
+      }
+    ],
+    "phonetic_candidates": [],
+    "updated_at": "2026-06-18T20:07:36"
+  },
+  "廣宏科|3287": {
+    "wrong_keyword": "廣宏科",
+    "correct_code": "3287",
+    "correct_name": "廣寰科",
+    "confidence": "high",
+    "max_score": 85,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "0f189f4d-f530-465d-b1fe-1cf03e281a21"
+    ],
+    "evidence": [
+      {
+        "video_id": "0f189f4d-f530-465d-b1fe-1cf03e281a21",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-18",
+        "title": "EP1122｜華許忠於本色，美伊簽署MOU，市場放下心？台、日、韓都創歷史新高！功率、被動元件、封測、CPO，故事正展開？ft.操盤手 黃豐凱",
+        "source": "full_video_validator",
+        "score": 85,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top3",
+          "phonetic_conflict",
+          "stock_context"
+        ],
+        "context": "就廣宏科 有一家公司6693的廣宏科 那家公司很特殊 因為它是當初的冒敵的轉投資 冒敵當初是在太陽能界 是一個天王 台積電一度投他 可是後來因為太陽能這個產品 其實走得很快 而且大陸廠商一下就長很大 所以這個產業後來就沒落了 可是當他在急勝期的時候 他就投了廣宏科 這廣宏科他就是在做 高壓跟低壓的 變壓的一個IC",
+        "override_kind": "phonetic",
+        "override_reason": "phonetic_top1 score=0.883 lead=0.177",
+        "original_code": "2301",
+        "original_name": "光寶科",
+        "phonetic_top_score": 0.883,
+        "phonetic_lead": 0.17700000000000005
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "6693",
+        "name": "廣閎科",
+        "score": 0.883,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "3287",
+        "name": "廣寰科",
+        "score": 0.706,
+        "phonetic_similarity": 0.727,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "1785",
+        "name": "光洋科",
+        "score": 0.648,
+        "phonetic_similarity": 0.818,
+        "text_similarity": 0.333
+      }
+    ],
+    "updated_at": "2026-06-18T20:19:30"
+  },
+  "信長電|6173": {
+    "wrong_keyword": "信長電",
+    "correct_code": "6173",
+    "correct_name": "信昌電",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "e3633b4f-c3f2-4e69-80a8-42a666834b40"
+    ],
+    "evidence": [
+      {
+        "video_id": "e3633b4f-c3f2-4e69-80a8-42a666834b40",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-16",
+        "title": "EP1120｜再聽到升息導致下跌，都是機會？輝達也發債，軍備競賽不能停！台積電快醒了？設備、被動、CPO最新看法？ft.AI達人 蔡明翰",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "strong_sector_match"
+        ],
+        "context": " 可能只有五個percent 十個percent 甚至還幾乎沒成長的 那這個時間點 你的成本又相對比較高 那我就會建議 可能要留意風險 稍微做退場的動作 好 被弄已經很分歧 大家可能會想知道 趙華爸爸信長電賣回來 因為連續哀號兩天 觀察一下 好不容易轉弱了 如果有回到那一天 我賣出了價錢 考慮一下 假裝沒賣過 給國家賺交易費用 開玩笑的 但是今天有華興科的漲停 已經國劇的創新高 大哥 二哥還在衝 因為華興科是準備要出關 有出關前行情 就代表這個族群的活種沒有滅 還是沒有滅 可是你說有些中小型的 真的漲非常多 那就是剛剛敏翰哥講的 如果你當初是建立在低成本 你就讓它甩吧 根本沒差 而且現在大環境",
+        "override_kind": "phonetic",
+        "override_reason": "phonetic_top1 score=0.829 lead=0.225",
+        "original_code": "3711",
+        "original_name": "日月光投控",
+        "phonetic_top_score": 0.829,
+        "phonetic_lead": 0.22499999999999998
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "6173",
+        "name": "信昌電",
+        "score": 0.829,
+        "phonetic_similarity": 0.917,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "2368",
+        "name": "金像電",
+        "score": 0.604,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "2427",
+        "name": "三商電",
+        "score": 0.604,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.333
+      }
+    ],
+    "updated_at": "2026-06-18T20:51:44"
+  },
+  "收藏停辦|1303": {
+    "wrong_keyword": "收藏停辦",
+    "correct_code": "1303",
+    "correct_name": "南亞",
+    "confidence": "medium",
+    "max_score": 50,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "6d1e4799-6904-4211-bcdb-192153d0bbbe"
+    ],
+    "evidence": [
+      {
+        "video_id": "6d1e4799-6904-4211-bcdb-192153d0bbbe",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-15",
+        "title": "EP1119｜美伊要簽了，油價救了FED開會？今天動能、左側、觀望都有事情做，先買多題材最穩，SpaceX 掛牌，供應鏈還能漲？ft.題材獵人 林漢偉",
+        "source": "full_video_validator",
+        "score": 50,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context"
+        ],
+        "context": "到 零零五零的成分股啦 所以 而且他之前算是 籌碼相對比較乾淨 又沒有大股東賣股的問題 哦 沒有錯 宅板這一波是因為 南亞去賣了南殿 對 在整個台育集團或南亞集團 比較容易現在有這個問題 但今天南亞也收藏停辦 對 因為他賣別人 沒有人要賣 我們常常講 南亞的好處就是 他賣了一坨拉褲 就是爆賺多少的意外收益 而本業也有好轉 對 而且越賣他的庫存的市值 還越來越高 因為賣掉股票 還一直在創新高 所以我覺得 當然對南亞來講的話 就是 因為他賣了南亞科賣的難點 所以這樣那股票 都離錢高還有一段的距離 那本身反而南亞 是快要挑戰波段的一個新高 那當然我覺得 這個都可以觀察是什麼 就是說剛提到的 你從國際"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "4764",
+        "name": "雙鍵",
+        "score": 0.39,
+        "phonetic_similarity": 0.6,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "9951",
+        "name": "皇田",
+        "score": 0.39,
+        "phonetic_similarity": 0.6,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "1513",
+        "name": "中興電",
+        "score": 0.347,
+        "phonetic_similarity": 0.533,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-06-18T21:09:25"
+  },
+  "升達科|3491": {
+    "wrong_keyword": "升達科",
+    "correct_code": "3491",
+    "correct_name": "昇達科",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "6d1e4799-6904-4211-bcdb-192153d0bbbe"
+    ],
+    "evidence": [
+      {
+        "video_id": "6d1e4799-6904-4211-bcdb-192153d0bbbe",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-15",
+        "title": "EP1119｜美伊要簽了，油價救了FED開會？今天動能、左側、觀望都有事情做，先買多題材最穩，SpaceX 掛牌，供應鏈還能漲？ft.題材獵人 林漢偉",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context",
+          "strong_sector_match"
+        ],
+        "context": "今年低軌衛星 大家從1月份 從去年12月份漲到現在 很多人就在等今天 等今天掛牌之後 要先做獲利了解的動作 所以這個賣壓出來 當然也是有一定的一個 邏輯存在 那第二件事情 就是他幾個重點指標股 第一個升達科 對股價還蠻弱的 那我覺得也是因為 整個盤面上資金排擠的效應 因為熱點通用 都在我們剛剛講的 漲價升級的題材 所以對於太空衛星這題材 感覺就是會有點 如果我有辦法去買 美股的SPACEX 我幹嘛來買台灣的供應鏈 但我覺得這個其實 就另外一個角度來講的話 其實我覺得供應鏈的優點 在於說 如果SPACEX好的話 他未來業績 或台灣訂單會同步的成長 所以你反過來想 就是說SPACEX 畢竟他在美股",
+        "override_kind": "contextual",
+        "override_reason": "scoped context alias",
+        "original_code": "3004",
+        "original_name": "豐達科"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3491",
+        "name": "昇達科",
+        "score": 0.883,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "3004",
+        "name": "豐達科",
+        "score": 0.739,
+        "phonetic_similarity": 0.778,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "6492",
+        "name": "生華科",
+        "score": 0.637,
+        "phonetic_similarity": 0.8,
+        "text_similarity": 0.333
+      }
+    ],
+    "updated_at": "2026-06-18T21:09:45"
+  },
+  "新商店|6173": {
+    "wrong_keyword": "新商店",
+    "correct_code": "6173",
+    "correct_name": "信昌電",
+    "confidence": "high",
+    "max_score": 80,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "6d1e4799-6904-4211-bcdb-192153d0bbbe"
+    ],
+    "evidence": [
+      {
+        "video_id": "6d1e4799-6904-4211-bcdb-192153d0bbbe",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-15",
+        "title": "EP1119｜美伊要簽了，油價救了FED開會？今天動能、左側、觀望都有事情做，先買多題材最穩，SpaceX 掛牌，供應鏈還能漲？ft.題材獵人 林漢偉",
+        "source": "full_video_validator",
+        "score": 80,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "phonetic_top3",
+          "weak_sector_match",
+          "strong_sector_match"
+        ],
+        "context": " 哎我資金能夠配合短中 長期的規劃 那可能你可以配置ETF 或者說你可以去蹲點一些 可能還沒有發酵的 一些重點族群 好雖然我會有點開玩笑的 尖叫說 被動元件賣飛了 但是被動元件很多檔 很多檔 我講的像新商店 他真的是角度比較陡的 那當然國劇大哥 他的帶頭作用 也是非常的重要 但因為我國劇介入的比較晚 所以呢兩個想法 一個是 你要不要把這兩檔公司 接回來 我覺得這個是大家 如果之前股票剛賣飛 可以去思考的 當然你有可能一接回來 他就沒有再繼續漲停了 這個風險就要自己理解 但他是一個解方 他是一個解方 因為今天以國劇來說 是有接回來的時間的 新商店比較沒有 你要不要把他接回來呢 這是第一個 那你也",
+        "override_kind": "contextual",
+        "override_reason": "scoped context alias",
+        "original_code": "3376",
+        "original_name": "新日興"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2427",
+        "name": "三商電",
+        "score": 0.658,
+        "phonetic_similarity": 0.833,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "6173",
+        "name": "信昌電",
+        "score": 0.596,
+        "phonetic_similarity": 0.917,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "4931",
+        "name": "新盛力",
+        "score": 0.55,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.333
+      }
+    ],
+    "updated_at": "2026-06-18T21:09:47"
+  },
+  "億價|2402": {
+    "wrong_keyword": "億價",
+    "correct_code": "2402",
+    "correct_name": "毅嘉",
+    "confidence": "high",
+    "max_score": 97,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "15e2f42a-f490-4791-9e0a-90bc2a288219"
+    ],
+    "evidence": [
+      {
+        "video_id": "15e2f42a-f490-4791-9e0a-90bc2a288219",
+        "channel": "投資癮",
+        "date": "2026-06-14",
+        "title": "EP333 被綁架的資金",
+        "source": "full_video_validator",
+        "score": 97,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "說 是否是一個漂亮的買進點 就不得而知了 在一個還沒賺錢的公司 那個夢想的程度 有沒有辦法讓投資人 再一次把我們的資金丟進去 這才是市場給的考驗 而十幾年前阿里巴巴 當時的成效價格是68元 像是當天的億價大概38%左右 經過一小段的時間的責任 有上漲破百之後 就開始緩緩下跌 跌了一年之後 最後的價格是最低 來到57元左右 所以當時最後的價格 比成效價格低了16% 接著經過三年多後 才再一次創了新高 所以一來一往之間 花了四年的時間 才再一次創了新高 所以這時間走 我自己會拉得比較遠一點 可能是三年五年十年之後 而這種夢想投資來說 我並不考慮拉一個太短的周期 它的周期會拉得非常非常長 而對於美股",
+        "override_kind": "phonetic",
+        "override_reason": "phonetic_top1 score=0.650 lead=0.130",
+        "original_code": "9906",
+        "original_name": "欣巴巴",
+        "phonetic_top_score": 0.65,
+        "phonetic_lead": 0.13
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2402",
+        "name": "毅嘉",
+        "score": 0.65,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "1457",
+        "name": "宜進",
+        "score": 0.52,
+        "phonetic_similarity": 0.8,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "2376",
+        "name": "技嘉",
+        "score": 0.52,
+        "phonetic_similarity": 0.8,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-06-18T22:30:58"
   }
 }
