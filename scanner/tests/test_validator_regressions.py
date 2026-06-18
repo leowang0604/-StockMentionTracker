@@ -35,6 +35,7 @@ def load_scanner():
         {"code": "6214", "name": "精誠", "market": "listed", "sector": "資訊服務業"},
         {"code": "6669", "name": "緯穎", "market": "listed", "sector": "電腦及週邊設備業"},
         {"code": "6690", "name": "安碁資訊", "market": "listed", "sector": "資訊服務業"},
+        {"code": "8131", "name": "福懋科", "market": "listed", "sector": "半導體業"},
         {"code": "8043", "name": "蜜望實", "market": "listed", "sector": "電子零組件業"},
         {"code": "00403A", "name": "00403A", "market": "listed", "sector": "ETF・主動型"},
         {"code": "00993A", "name": "主動安聯台灣", "market": "listed", "sector": "ETF・主動型"},
@@ -49,6 +50,14 @@ def load_scanner():
         module.STOCK_SECTOR,
         module.NAME_TO_CODE,
     ) = module.build_stock_dict(stocks)
+    module.STOCK_SECTOR.update({
+        "2010": "鋼鐵工業",
+        "2891": "金融",
+        "3004": "鋼鐵工業",
+        "3532": "半導體業",
+        "5880": "金融",
+        "8131": "半導體業",
+    })
     return module
 
 
@@ -59,6 +68,22 @@ class ValidatorRegressionTests(unittest.TestCase):
 
     def validate(self, row, text):
         return self.scanner._validate_gemini_stocks([row], text)
+
+    def validate_isolated(self, row, text):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            candidates_path = Path(tmpdir) / "alias_candidates.json"
+            rejected_path = Path(tmpdir) / "rejected_aliases.json"
+            candidates_path.write_text("{}", encoding="utf-8")
+            rejected_path.write_text("{}", encoding="utf-8")
+            old_candidates = self.scanner.ALIAS_CANDIDATES_FILE
+            old_rejected = self.scanner.REJECTED_ALIASES_FILE
+            self.scanner.ALIAS_CANDIDATES_FILE = candidates_path
+            self.scanner.REJECTED_ALIASES_FILE = rejected_path
+            try:
+                return self.validate(row, text)
+            finally:
+                self.scanner.ALIAS_CANDIDATES_FILE = old_candidates
+                self.scanner.REJECTED_ALIASES_FILE = old_rejected
 
     def test_official_name_still_resolves(self):
         text = "台積電營收持續成長，市場仍然看好。"
@@ -174,6 +199,219 @@ class ValidatorRegressionTests(unittest.TestCase):
         spacex_hits = [hit for hit in hits if hit["stock_code"] == "SPCX"]
         self.assertEqual(len(spacex_hits), 1)
         self.assertEqual(spacex_hits[0]["stock_name"], "SpaceX")
+
+    def test_arm_chinese_alias_is_recognized(self):
+        text = "安謀這次公布新的手機晶片架構，市場反應偏正面。"
+        hits = self.scanner.recognize_stocks(text)
+        self.assertIn("ARM", [hit["stock_code"] for hit in hits])
+
+    def test_arm_one_letter_whisper_error_survives_short_us_identity_gate(self):
+        text = "ARN 這家公司最近股價上漲，市場也在討論它的新晶片架構。"
+        with tempfile.TemporaryDirectory() as tmpdir:
+            candidates_path = Path(tmpdir) / "alias_candidates.json"
+            rejected_path = Path(tmpdir) / "rejected_aliases.json"
+            candidates_path.write_text("{}", encoding="utf-8")
+            rejected_path.write_text("{}", encoding="utf-8")
+            old_candidates = self.scanner.ALIAS_CANDIDATES_FILE
+            old_rejected = self.scanner.REJECTED_ALIASES_FILE
+            self.scanner.ALIAS_CANDIDATES_FILE = candidates_path
+            self.scanner.REJECTED_ALIASES_FILE = rejected_path
+            try:
+                hits = self.validate(
+                    {
+                        "name": "ARM",
+                        "code": "ARM",
+                        "whisper_original": "ARN",
+                        "context": text,
+                        "sentiment": "bullish",
+                        "score": 0.7,
+                    },
+                    text,
+                )
+            finally:
+                self.scanner.ALIAS_CANDIDATES_FILE = old_candidates
+                self.scanner.REJECTED_ALIASES_FILE = old_rejected
+        self.assertEqual([hit["stock_code"] for hit in hits], ["ARM"])
+
+    def test_short_us_correction_still_requires_same_length_identity(self):
+        text = "ND 這家公司最近股價上漲，市場正在討論晶片題材。"
+        hits = self.validate(
+            {
+                "name": "AMD",
+                "code": "AMD",
+                "whisper_original": "ND",
+                "context": text,
+                "sentiment": "bullish",
+                "score": 0.7,
+            },
+            text,
+        )
+        self.assertEqual(hits, [])
+
+    def test_parenthetical_gemini_name_resolves_case_insensitively(self):
+        text = "接下來討論 Intel 的先進製程與晶圓代工策略。"
+        hits = self.validate(
+            {
+                "name": "Inter（intel）",
+                "code": "",
+                "context": text,
+                "sentiment": "neutral",
+                "score": 0.5,
+            },
+            text,
+        )
+        self.assertEqual([hit["stock_code"] for hit in hits], ["INTC"])
+
+    def test_clear_phonetic_match_survives_unrelated_sector_context(self):
+        if self.scanner.lazy_pinyin is None:
+            self.skipTest("pypinyin is not installed")
+
+        text = "車用零件今天漲價，不過福茂科這檔股票也有新的訂單題材。"
+        self.assertTrue(self.scanner._has_strong_sector_mismatch(text, "8131"))
+        self.assertTrue(self.scanner._has_clear_phonetic_support("福茂科", "8131"))
+        with tempfile.TemporaryDirectory() as tmpdir:
+            candidates_path = Path(tmpdir) / "alias_candidates.json"
+            rejected_path = Path(tmpdir) / "rejected_aliases.json"
+            candidates_path.write_text("{}", encoding="utf-8")
+            rejected_path.write_text("{}", encoding="utf-8")
+            old_candidates = self.scanner.ALIAS_CANDIDATES_FILE
+            old_rejected = self.scanner.REJECTED_ALIASES_FILE
+            self.scanner.ALIAS_CANDIDATES_FILE = candidates_path
+            self.scanner.REJECTED_ALIASES_FILE = rejected_path
+            try:
+                hits = self.validate(
+                    {
+                        "name": "福懋科",
+                        "code": "8131",
+                        "whisper_original": "福茂科",
+                        "context": text,
+                        "sentiment": "neutral",
+                        "score": 0.5,
+                    },
+                    text,
+                )
+            finally:
+                self.scanner.ALIAS_CANDIDATES_FILE = old_candidates
+                self.scanner.REJECTED_ALIASES_FILE = old_rejected
+        self.assertEqual([hit["stock_code"] for hit in hits], ["8131"])
+
+    def test_non_phonetic_sector_mismatch_stays_rejected(self):
+        text = "被動元件今天漲價，CPU 供應狀況則維持正常。"
+        self.assertTrue(self.scanner._has_strong_sector_mismatch(text, "2301"))
+        self.assertFalse(self.scanner._has_clear_phonetic_support("CPU", "2301"))
+        hits = self.validate(
+            {
+                "name": "光寶科",
+                "code": "2301",
+                "whisper_original": "CPU",
+                "context": text,
+                "sentiment": "neutral",
+                "score": 0.5,
+            },
+            text,
+        )
+        self.assertEqual(hits, [])
+
+    def test_sector_scoped_aliases_override_wrong_gemini_targets(self):
+        cases = [
+            (
+                "矽晶圓族群今天很強，環球金、中美金和台盛科都亮燈漲停。",
+                "中美金", "中信金", "2891", "5483",
+            ),
+            (
+                "被動元件裡面的台慶柯今天鎖漲停，電感也要漲價。",
+                "台慶柯", "台勝科", "3532", "3357",
+            ),
+            (
+                "低軌衛星的重點指標股升達科偏弱，SpaceX 供應鏈受到關注。",
+                "升達科", "豐達科", "3004", "3491",
+            ),
+        ]
+        for text, original, wrong_name, wrong_code, expected_code in cases:
+            with self.subTest(original=original):
+                hits = self.validate_isolated(
+                    {
+                        "name": wrong_name,
+                        "code": wrong_code,
+                        "whisper_original": original,
+                        "context": text,
+                        "sentiment": "neutral",
+                        "score": 0.5,
+                    },
+                    text,
+                )
+                self.assertEqual([hit["stock_code"] for hit in hits], [expected_code])
+
+    def test_compound_silicon_wafer_names_are_split_not_mapped_to_financial_stock(self):
+        text = "矽晶圓族群今天很強，環球金、中美金、合金加金、台盛科都亮燈漲停。"
+        hits = self.validate_isolated(
+            {
+                "name": "合庫金",
+                "code": "5880",
+                "whisper_original": "合金加金",
+                "context": text,
+                "sentiment": "bullish",
+                "score": 0.7,
+            },
+            text,
+        )
+        self.assertEqual(hits, [])
+
+        recognized = self.scanner.recognize_stocks(text)
+        by_keyword = {hit["matched_keyword"]: hit["stock_code"] for hit in recognized}
+        self.assertEqual(by_keyword["合金"], "6182")
+        self.assertEqual(by_keyword["加金"], "3016")
+
+    def test_passive_component_context_rejects_spring_source_steel_misread(self):
+        text = "被動元件像春田，我也覺得很貴，但如果 EPS 狂拉、漲價成功就會上去。"
+        hits = self.validate_isolated(
+            {
+                "name": "春源",
+                "code": "2010",
+                "whisper_original": "春田",
+                "context": text,
+                "sentiment": "neutral",
+                "score": 0.5,
+            },
+            text,
+        )
+        self.assertEqual(hits, [])
+
+    def test_correction_requires_local_plausibility_even_if_stock_name_appears_later(self):
+        filler = "這段只是在聊總體市場和節目安排。" * 12
+        text = f"代稱最近常被主持人掛在嘴邊。{filler}最後補充，春源今天公布營收。"
+        self.scanner._skip_log.clear()
+
+        hits = self.validate_isolated(
+            {
+                "name": "春源",
+                "code": "2010",
+                "whisper_original": "代稱",
+                "context": "最後補充，春源今天公布營收。",
+                "sentiment": "neutral",
+                "score": 0.5,
+            },
+            text,
+        )
+
+        self.assertEqual(hits, [])
+        reasons = [entry.get("reason") for entry in self.scanner._skip_log]
+        self.assertIn("whisper_correction_implausible", reasons)
+
+    def test_correction_with_nearby_official_identity_remains_valid(self):
+        text = "代稱這個口誤指的是春源，這檔股票今天公布營收。"
+        hits = self.validate_isolated(
+            {
+                "name": "春源",
+                "code": "2010",
+                "whisper_original": "代稱",
+                "context": text,
+                "sentiment": "neutral",
+                "score": 0.5,
+            },
+            text,
+        )
+        self.assertEqual([hit["stock_code"] for hit in hits], ["2010"])
 
     def test_new_whisper_correction_is_review_candidate_only(self):
         text = "緯印這檔股票最近營收成長，AI伺服器客戶訂單也增加。"

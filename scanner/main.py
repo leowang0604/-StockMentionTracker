@@ -259,6 +259,16 @@ ALIASES: dict[str, str] = {
     "679B": "00679B", "720B": "00720B",
 }
 
+# Core stocks referenced by maintained aliases/context rules. Keep these
+# available even when the upstream TW stock cache is temporarily incomplete.
+_ESSENTIAL_TW_STOCKS: dict[str, tuple[str, str]] = {
+    "3357": ("臺慶科", "被動元件"),
+    "3491": ("昇達科", "低軌衛星"),
+    "5483": ("中美晶", "半導體材料"),
+    "6182": ("合晶", "半導體材料"),
+    "3016": ("嘉晶", "半導體材料"),
+}
+
 # Keywords known to be Whisper transcription errors — sent to Gemini for
 # validation and correction. Newly proposed entries go to alias_candidates.json
 # for review instead of being promoted automatically.
@@ -877,8 +887,39 @@ def _has_exact_stock_identity_evidence(
 def _is_short_ascii_us_identity(code: str, resolved_name: str) -> bool:
     return (
         STOCK_MARKET.get(code) == "US"
-        and bool(re.fullmatch(r"[A-Za-z0-9.\-]{2,4}", resolved_name or ""))
+        and bool(
+            re.fullmatch(r"[A-Za-z0-9.\-]{2,4}", code or "")
+            or re.fullmatch(r"[A-Za-z0-9.\-]{2,4}", resolved_name or "")
+        )
     )
+
+
+def _has_clear_short_us_correction(
+    term: str,
+    *,
+    code: str,
+    resolved_name: str,
+    text: str,
+) -> bool:
+    """Allow a one-letter Whisper substitution when stock context is explicit."""
+    term = (term or "").strip()
+    if (
+        not _is_short_ascii_us_identity(code, resolved_name)
+        or not re.fullmatch(r"[A-Za-z0-9.\-]{3,4}", term)
+        or not _contains_identity_term(text, term)
+    ):
+        return False
+
+    normalized_term = term.casefold()
+    identities = {
+        identity.casefold()
+        for identity in (code, resolved_name)
+        if re.fullmatch(r"[A-Za-z0-9.\-]{3,4}", identity or "")
+        and len(identity) == len(term)
+    }
+    if not any(_levenshtein(normalized_term, identity) == 1 for identity in identities):
+        return False
+    return _has_stock_context_evidence(text, code=code, mention_terms=[term])
 
 
 def _has_stock_context_evidence(
@@ -969,7 +1010,7 @@ _US_STOCKS_DATA: list[tuple[list[str], str, str, str]] = [
     (["Microchip", "MCHP"],                            "MCHP",  "Microchip Tech",     "半導體"),
     # ── 手機晶片 ────────────────────────────────────────────────────────────────
     (["高通", "Qualcomm", "QCOM"],                     "QCOM",  "Qualcomm",           "手機晶片"),
-    (["ARM"],                                          "ARM",   "ARM Holdings",       "手機晶片"),
+    (["ARM", "Arm", "安謀"],                           "ARM",   "ARM Holdings",       "手機晶片"),
     # ── 半導體設備 ──────────────────────────────────────────────────────────────
     (["應用材料", "Applied Materials", "AMAT"],        "AMAT",  "Applied Materials",  "半導體設備"),
     (["科林研發", "Lam Research", "LRCX"],             "LRCX",  "Lam Research",       "半導體設備"),
@@ -1154,7 +1195,7 @@ TW_STOCK_SECTORS: dict[str, str] = {
     "2383": "CCL",      "6213": "CCL",      "6774": "CCL",
     # ── 被動元件 ────────────────────────────────────────────────────────────────
     "2327": "被動元件", "2492": "被動元件", "3026": "被動元件", "6173": "被動元件",
-    "2456": "被動元件", "2351": "被動元件", "2107": "被動元件",
+    "2456": "被動元件", "2351": "被動元件", "2107": "被動元件", "3357": "被動元件",
     # ── 組裝代工EMS ─────────────────────────────────────────────────────────────
     "2317": "組裝代工", "4938": "組裝代工", "2324": "組裝代工",
     "2354": "組裝代工", "2392": "組裝代工",
@@ -1164,6 +1205,7 @@ TW_STOCK_SECTORS: dict[str, str] = {
     "6187": "半導體設備", "3131": "半導體設備", "3583": "半導體設備", "5009": "半導體設備",
     # ── 半導體材料 ──────────────────────────────────────────────────────────────
     "8028": "半導體材料", "6488": "半導體材料", "5483": "半導體材料", "2338": "半導體材料",
+    "6182": "半導體材料", "3016": "半導體材料",
     # ── 電動車零件 ──────────────────────────────────────────────────────────────
     "1536": "電動車",   "3665": "電動車",   "1319": "電動車",   "6605": "電動車",
     # ── 電動車電池 ──────────────────────────────────────────────────────────────
@@ -1291,6 +1333,14 @@ _PHONETIC_DISCOVERY_STOPWORDS: set[str] = {
 # Strong sector signals for conservative Gemini correction validation.
 # Keep this intentionally small: generic words such as AI/材料/題材 are too broad.
 _SECTOR_CONTEXT_FAMILIES: dict[str, dict[str, set[str]]] = {
+    "金融": {
+        "sectors": {"金融", "金融保險業"},
+        "keywords": {"金融股", "銀行股", "金控", "銀行", "壽險", "保險股"},
+    },
+    "鋼鐵": {
+        "sectors": {"鋼鐵", "鋼鐵工業"},
+        "keywords": {"鋼鐵股", "鋼價", "鋼材", "不鏽鋼", "熱軋", "冷軋"},
+    },
     "汽車": {
         "sectors": {"汽車", "電動車", "電動車零件", "電動車電池", "充電樁"},
         "keywords": {"汽車零組件", "汽車零件", "車用零件", "車用", "AM零件", "電動車"},
@@ -1298,6 +1348,17 @@ _SECTOR_CONTEXT_FAMILIES: dict[str, dict[str, set[str]]] = {
     "被動元件": {
         "sectors": {"被動元件"},
         "keywords": {"被動元件", "MLCC", "電容", "電阻", "電感", "積層陶瓷"},
+    },
+    "矽晶圓": {
+        "sectors": {"半導體材料", "半導體業", "電子零組件業"},
+        "keywords": {
+            "矽晶圓", "晶圓材料", "環球晶", "環球金", "中美晶", "中美金",
+            "合晶", "嘉晶", "合金加金", "台勝科", "台盛科", "SUMCO",
+        },
+    },
+    "低軌衛星": {
+        "sectors": {"低軌衛星"},
+        "keywords": {"低軌衛星", "衛星供應鏈", "SpaceX", "SPACEX", "Starlink", "星鏈"},
     },
     "生技製藥": {
         "sectors": {"生技", "醫材", "生技製藥", "醫療"},
@@ -1340,6 +1401,18 @@ _CONTEXTUAL_WHISPER_ALIASES: dict[str, dict[str, str]] = {
         "耿頂": "1524", "耿頂梯": "1524",
         "威西": "1522",
         "地堡": "6605",
+    },
+    "被動元件": {
+        "台慶柯": "3357", "台慶科": "3357", "臺慶柯": "3357",
+    },
+    "矽晶圓": {
+        "中美金": "5483",
+        "合金": "6182",
+        "加金": "3016",
+        "台盛科": "3532",
+    },
+    "低軌衛星": {
+        "升達科": "3491",
     },
     "CPO光通訊": {
         "聯軍": "3450", "聯均": "3450", "連軍": "3450",
@@ -1413,6 +1486,109 @@ def _has_strong_sector_mismatch(text: str, code: str) -> bool:
     context_families = _context_sector_families(text)
     stock_families = _stock_sector_families(code)
     return bool(context_families and stock_families and not context_families & stock_families)
+
+
+def _has_clear_phonetic_support(term: str, code: str) -> bool:
+    """Return true only when pronunciation has one clear stock-name winner."""
+    candidates = _phonetic_alias_candidates(term, limit=2)
+    if not candidates or candidates[0]["code"] != code:
+        return False
+    lead = (
+        candidates[0]["score"] - candidates[1]["score"]
+        if len(candidates) > 1
+        else candidates[0]["score"]
+    )
+    return (
+        candidates[0]["score"] >= _PHONETIC_DISCOVERY_MIN_SCORE
+        and lead >= _PHONETIC_DISCOVERY_MIN_LEAD
+    )
+
+
+_DIRECT_STOCK_MENTION_CUES: tuple[str, ...] = (
+    "這檔", "個股", "股票", "股價", "漲停", "跌停", "營收", "EPS",
+    "目標價", "法說", "本益比", "訂單", "獲利", "買進", "賣出",
+)
+
+
+def _local_evidence_window(
+    text: str,
+    term: str,
+    *,
+    before: int = 90,
+    after: int = 160,
+) -> str:
+    """Return evidence centered on the claimed source term, never the full transcript."""
+    if not text or not term:
+        return ""
+    pos = _find_keyword_pos(term, text, allow_fuzzy=False)
+    if pos < 0:
+        return ""
+    return text[max(0, pos - before):pos + len(term) + after]
+
+
+def _has_direct_stock_cue_near_term(text: str, term: str) -> bool:
+    nearby = _local_evidence_window(text, term, before=35, after=55)
+    return bool(nearby and any(cue in nearby for cue in _DIRECT_STOCK_MENTION_CUES))
+
+
+def _has_plausible_correction_evidence(
+    term: str,
+    *,
+    code: str,
+    resolved_name: str,
+    text: str,
+    override_info: dict | None = None,
+) -> bool:
+    """Require local identity, approved alias, or strong similarity before accepting a correction."""
+    term = (term or "").strip()
+    if not term:
+        return True
+
+    local_text = _local_evidence_window(text, term)
+    if not local_text:
+        return False
+    identity_terms = {resolved_name, code}
+    identity_terms.update(kw for kw, mapped_code in STOCK_DICT.items() if mapped_code == code)
+    if any(_contains_identity_term(local_text, identity) for identity in identity_terms if identity):
+        return True
+    if STOCK_DICT.get(term) == code:
+        return True
+    if _contextual_whisper_alias_code(term, local_text) == code:
+        return True
+    if override_info and override_info.get("override_kind") in {"contextual", "phonetic"}:
+        return True
+    if _has_clear_short_us_correction(
+        term,
+        code=code,
+        resolved_name=resolved_name,
+        text=local_text,
+    ):
+        return True
+
+    term_core = _strip_common_stock_suffix(term)
+    name_core = _strip_common_stock_suffix(resolved_name)
+    textual_close = bool(
+        term_core
+        and name_core
+        and abs(len(term_core) - len(name_core)) <= 1
+        and _levenshtein(term_core.casefold(), name_core.casefold()) <= 1
+    )
+    if textual_close:
+        if len(term_core) >= 3:
+            return _has_stock_context_evidence(
+                local_text,
+                code=code,
+                mention_terms=[term],
+            )
+        return _has_direct_stock_cue_near_term(local_text, term)
+
+    if _has_clear_phonetic_support(term, code):
+        return _has_stock_context_evidence(
+            local_text,
+            code=code,
+            mention_terms=[term],
+        )
+    return False
 
 
 def _phonetic_discovery_windows(text: str) -> list[tuple[int, int]]:
@@ -2337,6 +2513,14 @@ def build_stock_dict(
             full_name = re.sub(r"\(原簡稱[：:][^)]+\)", "", etf_full_names[code]).strip()
             if full_name and full_name not in stock_dict:
                 stock_dict[full_name] = code
+
+    for code, (name, sector) in _ESSENTIAL_TW_STOCKS.items():
+        if code not in code_to_name:
+            code_to_name[code] = name
+            stock_dict[name] = code
+            stock_dict[code] = code
+        stock_market.setdefault(code, "TW")
+        stock_sector.setdefault(code, sector)
 
     # ── US stocks (built-in) — added BEFORE aliases so aliases can override ─
     for kw, ticker in US_KEYWORD_TO_CODE.items():
@@ -3379,6 +3563,28 @@ def _validate_gemini_stocks(
         resolved_name: str | None = None
         lev_resolved  = False  # 是否透過 Levenshtein 模糊比對解析
 
+        # Gemini 偶爾把辨識修正寫成「Inter（intel）」這類格式。
+        # 保留完整名稱，同時抽出括號內外的精確候選供 identity lookup。
+        name_candidates = [name]
+        parenthetical = re.match(r"^(.*?)\s*[（(]([^）)]+)[）)]\s*$", name)
+        if parenthetical:
+            name_candidates.extend([
+                parenthetical.group(1).strip(),
+                parenthetical.group(2).strip(),
+            ])
+        name_candidates = [candidate for candidate in dict.fromkeys(name_candidates) if candidate]
+
+        def _lookup_name_candidate() -> tuple[str | None, str | None]:
+            for candidate in name_candidates:
+                candidate_code = NAME_TO_CODE.get(candidate) or STOCK_DICT.get(candidate)
+                if candidate_code:
+                    return candidate_code, candidate
+            folded_candidates = {candidate.casefold() for candidate in name_candidates}
+            for keyword, candidate_code in NAME_TO_CODE.items():
+                if keyword.casefold() in folded_candidates:
+                    return candidate_code, keyword
+            return None, None
+
         # 優先：若 whisper_original 本身已是 STOCK_DICT 的已知誤字對應
         # 人工維護的 ALIASES 優先於 Gemini 的 name 猜測
         whisper_orig = (r.get("whisper_original") or "").strip()
@@ -3395,20 +3601,18 @@ def _validate_gemini_stocks(
                 resolved_name = canonical
             else:
                 # 代號與名稱不符（Gemini 亂配代號）→ 改以 name 查找
-                if name in NAME_TO_CODE:
-                    resolved_code = NAME_TO_CODE[name]
-                    resolved_name = name
-                elif name in STOCK_DICT:
-                    resolved_code = STOCK_DICT[name]
-                    resolved_name = CODE_TO_NAME.get(resolved_code, name)
+                candidate_code, candidate_name = _lookup_name_candidate()
+                if candidate_code:
+                    resolved_code = candidate_code
+                    resolved_name = CODE_TO_NAME.get(candidate_code, candidate_name or name)
                 # 找不到 → resolved_code 維持 None，後面會拒絕
-        elif not resolved_code and name in NAME_TO_CODE:
-            resolved_code = NAME_TO_CODE[name]
-            resolved_name = name
-        elif not resolved_code and name in STOCK_DICT:
-            resolved_code = STOCK_DICT[name]
-            resolved_name = CODE_TO_NAME.get(resolved_code, name)
         elif not resolved_code:
+            candidate_code, candidate_name = _lookup_name_candidate()
+            if candidate_code:
+                resolved_code = candidate_code
+                resolved_name = CODE_TO_NAME.get(candidate_code, candidate_name or name)
+
+        if not resolved_code:
             # Levenshtein 模糊比對（只對 ≥3 字名稱）
             if len(name) >= 3:
                 best_code, best_dist = None, 3
@@ -3478,7 +3682,18 @@ def _validate_gemini_stocks(
             and _levenshtein(_core(whisper_orig_bare), _resolved_core) <= 1
         )
         exact_name_appears = any(_contains_identity_term(chunk_text, kw) for kw in search_names)
-        name_appears = exact_name_appears or _whisper_close or _whisper_bare_close
+        clear_short_us_correction = _has_clear_short_us_correction(
+            whisper_orig_bare or whisper_orig,
+            code=resolved_code,
+            resolved_name=resolved_name,
+            text=chunk_text,
+        )
+        name_appears = (
+            exact_name_appears
+            or _whisper_close
+            or _whisper_bare_close
+            or clear_short_us_correction
+        )
         fuzzy_name_appears = False
         recovered_phonetic_evidence = False
         sector_source_term = whisper_orig_bare or whisper_orig or name
@@ -3787,7 +4002,12 @@ def _validate_gemini_stocks(
             })
             continue
 
-        if whisper_orig and not exact_name_appears and _has_strong_sector_mismatch(ctx, resolved_code):
+        if (
+            whisper_orig
+            and not exact_name_appears
+            and _has_strong_sector_mismatch(ctx, resolved_code)
+            and not _has_clear_phonetic_support(whisper_orig_bare or whisper_orig, resolved_code)
+        ):
             print(
                 f"  [gemini_extract] sector mismatch rejected for {resolved_code}({resolved_name})"
                 f" — correction {whisper_orig!r} conflicts with surrounding sector evidence;"
@@ -3866,6 +4086,12 @@ def _validate_gemini_stocks(
                 resolved_name=resolved_name,
                 stock_keywords=stock_keywords,
             )
+            and not _has_clear_short_us_correction(
+                whisper_orig,
+                code=resolved_code,
+                resolved_name=resolved_name,
+                text=ctx,
+            )
         ):
             print(
                 f"  [gemini_extract] short US identity rejected for {resolved_code}({resolved_name})"
@@ -3877,6 +4103,38 @@ def _validate_gemini_stocks(
                 "keyword": matched_term,
                 "reason":  "short_us_identity_missing",
                 "detail":  f"短英文美股缺少明確股票名/代號/alias 證據: {resolved_code}/{resolved_name}",
+                "video_id": _vctx.get("video_id", ""),
+                "channel":  _vctx.get("channel", ""),
+                "date":     _vctx.get("date", ""),
+                "title":    _vctx.get("title", ""),
+            })
+            continue
+
+        correction_term = whisper_orig_bare or whisper_orig
+        if (
+            whisper_orig
+            and not _has_plausible_correction_evidence(
+                correction_term,
+                code=resolved_code,
+                resolved_name=resolved_name,
+                text=chunk_text,
+                override_info=alias_override_info,
+            )
+        ):
+            print(
+                f"  [gemini_extract] implausible correction rejected for"
+                f" {resolved_code}({resolved_name})"
+                f" — {whisper_orig!r} lacks local identity or similarity evidence",
+                file=sys.stderr,
+            )
+            _vctx = video_ctx or {}
+            _skip_log.append({
+                "keyword": whisper_orig,
+                "reason":  "whisper_correction_implausible",
+                "detail":  (
+                    f"修正詞附近缺少股票身份、已核准 alias 或足夠相似度證據: "
+                    f"{whisper_orig}->{resolved_code}/{resolved_name}"
+                ),
                 "video_id": _vctx.get("video_id", ""),
                 "channel":  _vctx.get("channel", ""),
                 "date":     _vctx.get("date", ""),
