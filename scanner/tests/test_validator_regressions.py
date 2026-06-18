@@ -168,6 +168,13 @@ class ValidatorRegressionTests(unittest.TestCase):
         )
         self.assertEqual([hit["stock_code"] for hit in hits], ["GS"])
 
+    def test_spacex_official_ticker_is_recognized(self):
+        text = "SpaceX 掛牌後，市場開始重新評估低軌衛星供應鏈。"
+        hits = self.scanner.recognize_stocks(text)
+        spacex_hits = [hit for hit in hits if hit["stock_code"] == "SPCX"]
+        self.assertEqual(len(spacex_hits), 1)
+        self.assertEqual(spacex_hits[0]["stock_name"], "SpaceX")
+
     def test_new_whisper_correction_is_review_candidate_only(self):
         text = "緯印這檔股票最近營收成長，AI伺服器客戶訂單也增加。"
         with tempfile.TemporaryDirectory() as tmpdir:
@@ -362,6 +369,39 @@ class ValidatorRegressionTests(unittest.TestCase):
         text = "這次AI聯軍一起推出新服務，大家都很期待。"
         hits = self.scanner.recognize_stocks(text, enable_phonetic_discovery=True)
         self.assertNotIn("3450", [hit["stock_code"] for hit in hits])
+
+    def test_missing_whisper_original_can_be_recovered_from_phonetic_evidence(self):
+        if self.scanner.lazy_pinyin is None:
+            self.skipTest("pypinyin is not installed")
+
+        text = "散熱族群裡面的奇宏今天漲停，訂單與營收都持續成長。"
+        with tempfile.TemporaryDirectory() as tmpdir:
+            candidates_path = Path(tmpdir) / "alias_candidates.json"
+            rejected_path = Path(tmpdir) / "rejected_aliases.json"
+            candidates_path.write_text("{}", encoding="utf-8")
+            rejected_path.write_text("{}", encoding="utf-8")
+            old_candidates = self.scanner.ALIAS_CANDIDATES_FILE
+            old_rejected = self.scanner.REJECTED_ALIASES_FILE
+            self.scanner.ALIAS_CANDIDATES_FILE = candidates_path
+            self.scanner.REJECTED_ALIASES_FILE = rejected_path
+            self.scanner._PHONETIC_STOCK_INDEX = None
+            try:
+                hits = self.validate(
+                    {
+                        "name": "奇鋐",
+                        "code": "3017",
+                        "context": text,
+                        "sentiment": "bullish",
+                        "score": 0.7,
+                    },
+                    text + " 摩根大通也發布了報告。",
+                )
+            finally:
+                self.scanner.ALIAS_CANDIDATES_FILE = old_candidates
+                self.scanner.REJECTED_ALIASES_FILE = old_rejected
+
+        self.assertEqual([hit["stock_code"] for hit in hits], ["3017"])
+        self.assertEqual([hit["matched_keyword"] for hit in hits], ["奇宏"])
 
 
 if __name__ == "__main__":

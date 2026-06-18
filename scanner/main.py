@@ -1071,6 +1071,7 @@ _US_STOCKS_DATA: list[tuple[list[str], str, str, str]] = [
     (["雷神", "Raytheon", "RTX"],                      "RTX",   "Raytheon",           "航太國防"),
     (["諾斯洛普", "Northrop Grumman", "NOC"],          "NOC",   "Northrop Grumman",   "航太國防"),
     (["General Dynamics", "GD"],                       "GD",    "General Dynamics",   "航太國防"),
+    (["SpaceX", "Space X", "太空探索科技", "SPCX"],     "SPCX",  "SpaceX",             "航太國防"),
     # ── 串流媒體 ────────────────────────────────────────────────────────────────
     (["Netflix", "網飛", "NFLX"],                      "NFLX",  "Netflix",            "串流媒體"),
     (["Disney", "迪士尼", "DIS"],                      "DIS",   "Disney",             "串流媒體"),
@@ -1769,6 +1770,12 @@ def fetch_stock_list() -> list[dict]:
     ETF_URL      = "https://www.twse.com.tw/rwd/zh/ETF/domestic"
 
     stocks: list[dict] = []
+    cached_stocks: list[dict] = []
+    try:
+        with open(STOCKS_CACHE_FILE, encoding="utf-8") as f:
+            cached_stocks = json.load(f).get("stocks", [])
+    except Exception:
+        pass
 
     def _fetch(url: str, market: str) -> list[dict]:
         try:
@@ -1829,6 +1836,40 @@ def fetch_stock_list() -> list[dict]:
                 print(f"  [stocks] twse rwd fallback error: {e}", file=sys.stderr)
     tpex = _fetch(TPEX_URL, "tpex")
     etfs = _fetch_etf()
+
+    def _preserve_cache_if_incomplete(
+        live: list[dict],
+        cached: list[dict],
+        label: str,
+    ) -> list[dict]:
+        """Keep the previous universe when one upstream market returns a partial list."""
+        if not cached:
+            return live
+        minimum_expected = max(1, int(len(cached) * 0.8))
+        if len(live) >= minimum_expected:
+            return live
+        merged = {str(item.get("code", "")): item for item in cached if item.get("code")}
+        merged.update({str(item.get("code", "")): item for item in live if item.get("code")})
+        print(
+            f"  [stocks] {label} response looks incomplete"
+            f" ({len(live)} < {minimum_expected}); preserving {len(cached)} cached entries",
+            file=sys.stderr,
+        )
+        return list(merged.values())
+
+    cached_tpex = [s for s in cached_stocks if s.get("market") == "tpex"]
+    cached_etfs = [
+        s for s in cached_stocks
+        if s.get("market") == "twse" and re.match(r"^0\d{3,5}[A-Z]?$", str(s.get("code", "")))
+    ]
+    cached_twse = [
+        s for s in cached_stocks
+        if s.get("market") == "twse" and not re.match(r"^0\d{3,5}[A-Z]?$", str(s.get("code", "")))
+    ]
+    twse = _preserve_cache_if_incomplete(twse, cached_twse, "twse")
+    tpex = _preserve_cache_if_incomplete(tpex, cached_tpex, "tpex")
+    etfs = _preserve_cache_if_incomplete(etfs, cached_etfs, "etf")
+
     # Merge: ETF codes override any duplicate from TWSE general list
     etf_codes = {e["code"] for e in etfs}
     stocks = [s for s in twse if s["code"] not in etf_codes] + tpex + etfs
@@ -3114,23 +3155,48 @@ def _contains_only_cjk(text: str) -> bool:
     )
 
 
-def _conflicting_exact_keyword_hits(
-    text: str,
-    *,
-    exclude_code: str,
-    min_len: int = 3,
-) -> list[tuple[str, str]]:
-    hits: list[tuple[str, str]] = []
-    for kw, code in STOCK_DICT.items():
-        if code == exclude_code or len(kw) < min_len:
-            continue
-        if kw not in text:
-            continue
-        if kw == code:
-            continue
-        hits.append((kw, code))
-    hits.sort(key=lambda item: len(item[0]), reverse=True)
-    return hits
+def _phonetic_evidence_term_for_code(
+    evidence_text: str,
+    full_text: str,
+    code: str,
+) -> str | None:
+    """Find a high-confidence transcript term supporting one Gemini stock result."""
+    if lazy_pinyin is None or not evidence_text or not full_text or code not in CODE_TO_NAME:
+        return None
+
+    seen: set[str] = set()
+    for run in re.finditer(r"[\u3400-\u9fff]{2,}", evidence_text):
+        raw = run.group()
+        for length in (2, 3, 4):
+            if len(raw) < length:
+                continue
+            for offset in range(len(raw) - length + 1):
+                term = raw[offset:offset + length]
+                if term in seen or term in _PHONETIC_DISCOVERY_STOPWORDS or term not in full_text:
+                    continue
+                seen.add(term)
+                mapped_code = STOCK_DICT.get(term)
+                if mapped_code and mapped_code != code:
+                    continue
+                candidates = _phonetic_alias_candidates(term, limit=2)
+                if not candidates or candidates[0]["code"] != code:
+                    continue
+                lead = (
+                    candidates[0]["score"] - candidates[1]["score"]
+                    if len(candidates) > 1
+                    else candidates[0]["score"]
+                )
+                if (
+                    candidates[0]["score"] >= _PHONETIC_DISCOVERY_MIN_SCORE
+                    and lead >= _PHONETIC_DISCOVERY_MIN_LEAD
+                    and (
+                        _has_stock_context_evidence(evidence_text, code=code, mention_terms=[term])
+                        or bool(_context_sector_families(evidence_text))
+                    )
+                    and not _has_strong_sector_mismatch(evidence_text, code)
+                ):
+                    return term
+    return None
 
 
 def _nearby_other_stock_keyword(
@@ -3414,7 +3480,7 @@ def _validate_gemini_stocks(
         exact_name_appears = any(_contains_identity_term(chunk_text, kw) for kw in search_names)
         name_appears = exact_name_appears or _whisper_close or _whisper_bare_close
         fuzzy_name_appears = False
-        is_short_cjk_name = _contains_only_cjk(resolved_name) and len(resolved_name) <= 3
+        recovered_phonetic_evidence = False
         sector_source_term = whisper_orig_bare or whisper_orig or name
         alias_override_info: dict | None = None
         contextual_code = _contextual_whisper_alias_code(sector_source_term, chunk_text)
@@ -3532,7 +3598,6 @@ def _validate_gemini_stocks(
             )
             exact_name_appears = any(_contains_identity_term(chunk_text, kw) for kw in search_names)
             name_appears = exact_name_appears or _whisper_close or _whisper_bare_close
-            is_short_cjk_name = _contains_only_cjk(resolved_name) and len(resolved_name) <= 3
         if whisper_orig and whisper_orig not in STOCK_DICT:
             nearby_other = _nearby_other_stock_keyword(
                 whisper_orig_bare or whisper_orig,
@@ -3566,7 +3631,6 @@ def _validate_gemini_stocks(
                     )
                     exact_name_appears = any(_contains_identity_term(chunk_text, kw) for kw in search_names)
                     name_appears = exact_name_appears or _whisper_close or _whisper_bare_close
-                    is_short_cjk_name = _contains_only_cjk(resolved_name) and len(resolved_name) <= 3
         # Whisper 錯字修正場景：Gemini 給了正確名稱但未填 whisper_original，
         # 用 Levenshtein 在 chunk 中滑動視窗找相近的詞。
         # 2 字中文股名太容易誤撞，因此這裡只放行 3 字以上名稱。
@@ -3596,9 +3660,35 @@ def _validate_gemini_stocks(
                         name_appears = True
                         fuzzy_name_appears = True
                         break
-        # 若短中文名本身沒有 exact 命中，但 chunk 裡已有別支股票的 exact keyword，
-        # 優先相信 exact keyword，避免像「波諾威」被另一支兩字股票模糊誤配。
-        if whisper_orig and not exact_name_appears and fuzzy_name_appears:
+
+        # Gemini 偶爾正確辨識股票，卻漏填 whisper_original。只採用 Gemini 回傳的
+        # 原文句子中、確實存在於逐字稿且高信心唯一指向該股票的音近詞。
+        if not name_appears and not whisper_orig:
+            evidence_text = (r.get("context") or "").strip()
+            phonetic_evidence = _phonetic_evidence_term_for_code(
+                evidence_text,
+                chunk_text,
+                resolved_code,
+            )
+            if phonetic_evidence:
+                whisper_orig = phonetic_evidence
+                whisper_orig_bare = phonetic_evidence
+                name_appears = True
+                fuzzy_name_appears = True
+                recovered_phonetic_evidence = True
+                print(
+                    f"  [gemini_extract] recovered missing whisper_original"
+                    f" — {phonetic_evidence!r} -> {resolved_code}({resolved_name})",
+                    file=sys.stderr,
+                )
+
+        # 若 Whisper 原始詞更接近另一支股票，優先相信較近的股票。
+        if (
+            whisper_orig
+            and not exact_name_appears
+            and fuzzy_name_appears
+            and not recovered_phonetic_evidence
+        ):
             nearby_other = _nearby_other_stock_keyword(
                 whisper_orig_bare or whisper_orig,
                 exclude_code=resolved_code,
@@ -3622,29 +3712,6 @@ def _validate_gemini_stocks(
                 })
                 continue
 
-        if is_short_cjk_name and not exact_name_appears and not whisper_orig:
-            conflicting_hits = _conflicting_exact_keyword_hits(
-                chunk_text,
-                exclude_code=resolved_code,
-            )
-            if conflicting_hits:
-                strongest_kw, strongest_code = conflicting_hits[0]
-                print(
-                    f"  [gemini_extract] short-name conflict for {resolved_code}({resolved_name})"
-                    f" — exact keyword {strongest_kw!r} already maps to {strongest_code}",
-                    file=sys.stderr,
-                )
-                _vctx = video_ctx or {}
-                _skip_log.append({
-                    "keyword": name,
-                    "reason":  "gemini_short_name_conflict",
-                    "detail":  f"短股名缺少 exact 命中，且原文已有其他股票關鍵字: {strongest_kw}->{strongest_code}",
-                    "video_id": _vctx.get("video_id", ""),
-                    "channel":  _vctx.get("channel", ""),
-                    "date":     _vctx.get("date", ""),
-                    "title":    _vctx.get("title", ""),
-                })
-                continue
         if not name_appears:
             print(f"  [gemini_extract] hallucination? {resolved_code}({resolved_name}) not in chunk → skipped", file=sys.stderr)
             _vctx = video_ctx or {}
