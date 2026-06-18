@@ -26,9 +26,6 @@ on:
 permissions:
   contents: write
 
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
 jobs:
   scan:
     runs-on: ubuntu-latest
@@ -36,10 +33,10 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.11'
           cache: 'pip'
@@ -50,7 +47,7 @@ jobs:
 
       - name: Cache Whisper model
         if: ${{ inputs.use_whisper != 'false' }}
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: ~/.cache/huggingface/hub
           key: whisper-small-int8
