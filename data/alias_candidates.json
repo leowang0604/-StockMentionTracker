@@ -2177,7 +2177,7 @@
     "correct_name": "漢唐",
     "confidence": "high",
     "max_score": 100,
-    "observations": 2,
+    "observations": 4,
     "distinct_videos": 2,
     "video_ids": [
       "6d1e4799-6904-4211-bcdb-192153d0bbbe",
@@ -2217,6 +2217,41 @@
           "stock_context"
         ],
         "context": "新高 可是有一些中小型的被動元件 就有一點點漲多回徒的狀態 CPO 有一點開高走低 大家都留下一個黑K 也有人漲停 但數量不多 等於說這個族群 現在有一點點的壓力在 還沒有辦法完全突破 設備股 像今天漢堂突然殺到一個跌停板 亞翔也中錯 設備股不是長線 我們覺得最穩的嗎 那今天突然殺下來 有什麼樣的問題嗎 還是剛好又給機會 其實一樣的問題 就是我剛剛講的 在下跌的過程當中 不見得一定要硬塞利空給他 那我有沒有利空 其實就我之前解讀也很簡單 如果有利空他就不會開高了 他不會開高之後走低 對不對 他會跳空 對他會跳空 如果真的盤中是不可能出現的 一定是晚上 昨天發生了什麼事情 可能昨天大家都知道 只"
+      },
+      {
+        "video_id": "e3633b4f-c3f2-4e69-80a8-42a666834b40",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-16",
+        "title": "EP1120｜再聽到升息導致下跌，都是機會？輝達也發債，軍備競賽不能停！台積電快醒了？設備、被動、CPO最新看法？ft.AI達人 蔡明翰",
+        "source": "full_video_validator",
+        "score": 80,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context",
+          "strong_sector_mismatch"
+        ],
+        "context": "創新高 可是有一些中小型的被動元件 就有一點點長多回徒的狀態 CPO有一點開高走低 大家都留下一個黑K 也有人漲停 但數量不多 等於說這個族群 現在有一點點的壓力在 還沒有辦法完全突破 設備股 像今天漢堂突然 殺到一個跌停板 亞翔也中錯 設備股不是 長線我們覺得最穩的嗎 那今天突然殺下來 有什麼樣的問題嗎 還是剛好又給機會 其實一樣的問題就是 我常常講的 在下跌的過程當中 不見得一定要硬塞力轟給他 那有沒有力空 其實就我之前的解讀也很簡單 如果有力空他就不會開高了 他不會開高之後走低 對不對 他會跳空 對他會跳空 如果真的 盤中是不可能出現的 一定是晚上 昨天發生了什麼事情 可能 昨天大家都知"
+      },
+      {
+        "video_id": "6d1e4799-6904-4211-bcdb-192153d0bbbe",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-15",
+        "title": "EP1119｜美伊要簽了，油價救了FED開會？今天動能、左側、觀望都有事情做，先買多題材最穩，SpaceX 掛牌，供應鏈還能漲？ft.題材獵人 林漢偉",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "法抱下去 那還是跟大家講 其實剛剛其實 趙華講的一些廠物工程 我辦好也設備股票 說真的 你如果沒有長期追蹤 很容易錯過他 像今天雅翔創造力的新高 我就今天盤中看到 哇 長期版 還有凡軒 對 凡軒 然後漢堂 盛輝 這些股價就是 你一段時間沒有看他 然後一回頭 看那隻歷史新高了 所以我覺得這些所謂的具備 可能就是 長期穩定的訂單的股票 說真的你是需要一點時間 去蹲點他 買一些股票 那等到他轉牆的時候 你才會發現 才不會像我們這樣 盤面上會看那些熱門族群 結果一回頭哇 這些已經 你覺得該買的時候 沒有買到 後面就只能夠看他一直上去了 那另外跟大家講一下 其實今天 我覺得盤面上也要關心 另外一個族群 "
       }
     ],
     "phonetic_candidates": [
@@ -2242,7 +2277,7 @@
         "text_similarity": 0.5
       }
     ],
-    "updated_at": "2026-06-18T20:51:45"
+    "updated_at": "2026-06-19T19:28:52"
   },
   "南亞可|1303": {
     "wrong_keyword": "南亞可",
@@ -2576,8 +2611,8 @@
     "correct_code": "6173",
     "correct_name": "信昌電",
     "confidence": "high",
-    "max_score": 80,
-    "observations": 1,
+    "max_score": 87,
+    "observations": 2,
     "distinct_videos": 1,
     "video_ids": [
       "6d1e4799-6904-4211-bcdb-192153d0bbbe"
@@ -2603,6 +2638,27 @@
         "override_reason": "scoped context alias",
         "original_code": "3376",
         "original_name": "新日興"
+      },
+      {
+        "video_id": "6d1e4799-6904-4211-bcdb-192153d0bbbe",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-15",
+        "title": "EP1119｜美伊要簽了，油價救了FED開會？今天動能、左側、觀望都有事情做，先買多題材最穩，SpaceX 掛牌，供應鏈還能漲？ft.題材獵人 林漢偉",
+        "source": "full_video_validator",
+        "score": 87,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "phonetic_top3",
+          "stock_context",
+          "strong_sector_match"
+        ],
+        "context": "圈指數中場上漲了1227點 來到了45396點 說實話 好像上個禮拜的事情就像是 一場夢嗎 或是 傳過水無痕 又回到所有的均線之上 那我今天有看了一下我自己的庫存 如果把上個禮拜我跟大家挨好的 國際更新商店賣飛了的 損益等等的加回來 事實上今天庫存的損益 是逼近了一個高峰 也代表手上如果持有的是一些 相對熱門股或自己比較熟悉的股票成本拉得比較開的 上禮拜雖然很痛苦來來回回洗 但是 其實不太影響 總部位的損益 包括上禮拜可能趁著殺千點破月線 有再減一些ETF又一些些的幫助 不過 大家一定很想問 都說這禮拜有大魔王啊 當然這個美衣是不是真停戰 看來這一次應該是真的啦 我也不太 把話講死 但第四十次",
+        "override_kind": "contextual",
+        "override_reason": "scoped_context_alias",
+        "original_code": "4919",
+        "original_name": "新唐"
       }
     ],
     "phonetic_candidates": [
@@ -2628,7 +2684,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-06-18T21:09:47"
+    "updated_at": "2026-06-19T19:28:26"
   },
   "億價|2402": {
     "wrong_keyword": "億價",
@@ -2690,5 +2746,281 @@
       }
     ],
     "updated_at": "2026-06-18T22:30:58"
+  },
+  "環球菁|6488": {
+    "wrong_keyword": "環球菁",
+    "correct_code": "6488",
+    "correct_name": "環球晶",
+    "confidence": "high",
+    "max_score": 95,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "e130208e-660b-4a58-b704-cca587be88e1"
+    ],
+    "evidence": [
+      {
+        "video_id": "e130208e-660b-4a58-b704-cca587be88e1",
+        "channel": "韭菜畢業班",
+        "date": "2026-06-17",
+        "title": "EP235 | Google ASIC轉單傳聞 ？方形矽晶圓",
+        "source": "full_video_validator",
+        "score": 95,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1"
+        ],
+        "context": "我們可以看到 像上一次環球菁從6月10號 那個時候大概770塊附近 那現在我們講話 同時是6月17號 大午大概4點半附近 他可能是開高後走低 但是他至少都還是來到了 1000塊的水準"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "6488",
+        "name": "環球晶",
+        "score": 0.883,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "2468",
+        "name": "華經",
+        "score": 0.414,
+        "phonetic_similarity": 0.636,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "2880",
+        "name": "華南金",
+        "score": 0.414,
+        "phonetic_similarity": 0.636,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-06-19T18:51:48"
+  },
+  "台慶科|3357": {
+    "wrong_keyword": "台慶科",
+    "correct_code": "3357",
+    "correct_name": "臺慶科",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "0f189f4d-f530-465d-b1fe-1cf03e281a21"
+    ],
+    "evidence": [
+      {
+        "video_id": "0f189f4d-f530-465d-b1fe-1cf03e281a21",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-18",
+        "title": "EP1122｜華許忠於本色，美伊簽署MOU，市場放下心？台、日、韓都創歷史新高！功率、被動元件、封測、CPO，故事正展開？ft.操盤手 黃豐凱",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "weak_sector_match",
+          "strong_sector_match"
+        ],
+        "context": "至少可以拿來當作第一個 那滑星科二哥嘛 然後也是有所謂的 滑星集團的背景 我覺得至少你從這邊選 然後改革剛剛講了 他特別會常常提到的是 信長典和和聲堂 因為有拿到MVDR認證 那我會提到的是 信長典跟台慶科 因為跟台達電有簽比較長的合約 所以大家各自去選擇自己喜歡的 被動元件裡面 還蠻多值得留意 那如果剛剛凱哥說 他不好意思講誰 說做塑膠的 被動元件他覺得還好 那就上網查一下是誰 就知道了 就查一下塑膠電容 就知道在哪家 這個是被動元件的部分 另外一個我覺得 跟被動元件有點像的 就是公立元件 其實他們兩個都是 散在全領域 那AI要用 AI要升級 AI要提升 他們也都跟電 大部分都有關 所以公立",
+        "override_kind": "contextual",
+        "override_reason": "scoped_context_alias",
+        "original_code": "3532",
+        "original_name": "台勝科"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3357",
+        "name": "臺慶科",
+        "score": 0.883,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "3265",
+        "name": "台星科",
+        "score": 0.811,
+        "phonetic_similarity": 0.889,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "3532",
+        "name": "台勝科",
+        "score": 0.688,
+        "phonetic_similarity": 0.7,
+        "text_similarity": 0.667
+      }
+    ],
+    "updated_at": "2026-06-19T19:02:01"
+  },
+  "碩河|3691": {
+    "wrong_keyword": "碩河",
+    "correct_code": "3691",
+    "correct_name": "碩禾",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "6d1e4799-6904-4211-bcdb-192153d0bbbe"
+    ],
+    "evidence": [
+      {
+        "video_id": "6d1e4799-6904-4211-bcdb-192153d0bbbe",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-15",
+        "title": "EP1119｜美伊要簽了，油價救了FED開會？今天動能、左側、觀望都有事情做，先買多題材最穩，SpaceX 掛牌，供應鏈還能漲？ft.題材獵人 林漢偉",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "像的空間 今天晚上在達人秀 我們會講到相關的題材內容 那只是說 達人秀裡面沒有跟大家分享股票 我們就在這個 Podcast跟大家做一個分享 也就是說 在這個太陽人當中 我覺得有一張股票也蠻有趣的 叫做碩河 碩河 其實你好像蠻親愛碩河的 講過他蠻多次的 對 因為我覺得他這家公司是 非常多的題材 對的話題材 那比較有趣的是剛提到 他上個禮拜有碩河召開了股東會 股東會提到今年 為什麼他第一季賺了2.97元 是因為他的太陽人本業 導電銀漿的關係 因為贏家大漲 所以讓他整個開始轉虧為贏 搭配他有一個子公司叫碩通 那碩通他本身做的是 AI伺服器的散熱材料 跟整體的一個 所謂的散熱的解決方案 所以就比照可能"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3691",
+        "name": "碩禾",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "3617",
+        "name": "碩天",
+        "score": 0.5,
+        "phonetic_similarity": 0.5,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "7547",
+        "name": "碩網",
+        "score": 0.5,
+        "phonetic_similarity": 0.5,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-06-19T19:28:31"
+  },
+  "富邦金額|2881": {
+    "wrong_keyword": "富邦金額",
+    "correct_code": "2881",
+    "correct_name": "富邦金",
+    "confidence": "high",
+    "max_score": 95,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "15e2f42a-f490-4791-9e0a-90bc2a288219"
+    ],
+    "evidence": [
+      {
+        "video_id": "15e2f42a-f490-4791-9e0a-90bc2a288219",
+        "channel": "投資癮",
+        "date": "2026-06-14",
+        "title": "EP333 被綁架的資金",
+        "source": "full_video_validator",
+        "score": 95,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1"
+        ],
+        "context": "參與 而一來一往之下 我自己還是慶幸 有把所有的注意力放到台股身上 沒有被SpaceOS IPO上市給吸引走 因為如果要做這件事情 需要被綁住資金 而綁住的資金 也不一定可以達到 你想要買的部位 就拿富邦金額的例子來說 富邦人士有發出一個重訊 富邦人士本來要參與SpaceOS IPO 原本預定的身購上限金額 是6億美金 而在這一次5-6倍的超額認購之下 最後只買到5萬股的普通股 美股的價格 就是135%的成購價 而最後真的買到的金額 只有原本設定上限額度的1.12% 也就是說假設我們一般人 現在買進某間公司 100萬的話 最後讓你買到的金額 只有1萬1000塊 所以一直以來對我來說 投資間的事"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2881",
+        "name": "富邦金",
+        "score": 0.848,
+        "phonetic_similarity": 0.9,
+        "text_similarity": 0.75
+      },
+      {
+        "code": "00645",
+        "name": "富邦日本",
+        "score": 0.648,
+        "phonetic_similarity": 0.727,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "00652",
+        "name": "富邦印度",
+        "score": 0.648,
+        "phonetic_similarity": 0.727,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-06-19T20:03:12"
+  },
+  "富邦人士|2881": {
+    "wrong_keyword": "富邦人士",
+    "correct_code": "2881",
+    "correct_name": "富邦金",
+    "confidence": "medium",
+    "max_score": 62,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "15e2f42a-f490-4791-9e0a-90bc2a288219"
+    ],
+    "evidence": [
+      {
+        "video_id": "15e2f42a-f490-4791-9e0a-90bc2a288219",
+        "channel": "投資癮",
+        "date": "2026-06-14",
+        "title": "EP333 被綁架的資金",
+        "source": "full_video_validator",
+        "score": 62,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2"
+        ],
+        "context": " 我自己還是慶幸 有把所有的注意力放到台股身上 沒有被SpaceOS IPO上市給吸引走 因為如果要做這件事情 需要被綁住資金 而綁住的資金 也不一定可以達到 你想要買的部位 就拿富邦金額的例子來說 富邦人士有發出一個重訊 富邦人士本來要參與SpaceOS IPO 原本預定的身購上限金額 是6億美金 而在這一次5-6倍的超額認購之下 最後只買到5萬股的普通股 美股的價格 就是135%的成購價 而最後真的買到的金額 只有原本設定上限額度的1.12% 也就是說假設我們一般人 現在買進某間公司 100萬的話 最後讓你買到的金額 只有1萬1000塊 所以一直以來對我來說 投資間的事情 不只有價格問題 "
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "0052",
+        "name": "富邦科技",
+        "score": 0.608,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "8454",
+        "name": "富邦媒",
+        "score": 0.608,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "0057",
+        "name": "富邦摩台",
+        "score": 0.554,
+        "phonetic_similarity": 0.583,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-06-19T20:03:12"
   }
 }
