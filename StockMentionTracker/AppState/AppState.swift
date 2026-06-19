@@ -41,7 +41,10 @@ class AppState {
     }
 
     var cutoffDate: Date {
-        Calendar.current.date(byAdding: .day, value: -Int(selectedDays), to: Date()) ?? Date()
+        let calendar = Calendar.current
+        let today = calendar.startOfDay(for: Date())
+        let daysBack = max(1, Int(selectedDays))
+        return calendar.date(byAdding: .day, value: -daysBack, to: today) ?? today
     }
 
     // MARK: - ETF Category Filters
