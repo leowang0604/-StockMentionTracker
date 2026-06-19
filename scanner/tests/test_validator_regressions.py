@@ -694,6 +694,36 @@ class ValidatorRegressionTests(unittest.TestCase):
         self.assertEqual([hit["stock_code"] for hit in hits], ["3017"])
         self.assertEqual([hit["matched_keyword"] for hit in hits], ["奇宏"])
 
+    def test_shared_resolver_accepts_scoped_context_alias(self):
+        text = "被動元件族群裡面的滑星科，最近營收與股價都很強。"
+        decision = self.scanner._resolve_stock_correction(
+            "滑星科",
+            context=text,
+            suggested_code="3265",
+            policy="override",
+        )
+        self.assertEqual(decision["action"], "accept")
+        self.assertEqual(decision["code"], "2492")
+        self.assertEqual(decision["source"], "contextual_alias")
+
+    def test_shared_resolver_does_not_promote_ambiguous_term_without_stock_context(self):
+        decision = self.scanner._resolve_stock_correction(
+            "聯軍",
+            context="這次AI聯軍一起推出新服務，大家都很期待。",
+            policy="discovery",
+        )
+        self.assertNotEqual(decision["action"], "accept")
+
+    def test_shared_resolver_rejects_sector_conflict(self):
+        decision = self.scanner._resolve_stock_correction(
+            "春田",
+            context="被動元件族群裡面的春田，電阻電容需求回升。",
+            suggested_code="2010",
+            policy="validation",
+        )
+        self.assertEqual(decision["action"], "reject")
+        self.assertEqual(decision["reason"], "sector_mismatch")
+
 
 if __name__ == "__main__":
     unittest.main()

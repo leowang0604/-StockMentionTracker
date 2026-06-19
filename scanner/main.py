@@ -371,32 +371,20 @@ def _phonetic_override_code(
     context: str,
     phonetic_candidates: list[dict] | None = None,
 ) -> str | None:
-    """Use a clear phonetic winner to override a weaker Gemini correction."""
-    wrong_keyword = (wrong_keyword or "").strip()
-    current_code = (current_code or "").strip()
-    if not wrong_keyword or not current_code or wrong_keyword not in (context or ""):
-        return None
-    if wrong_keyword in STOCK_DICT:
-        return None
-
-    candidates = phonetic_candidates or _phonetic_alias_candidates(wrong_keyword)
-    if not candidates:
-        return None
-    phonetic_codes = [candidate["code"] for candidate in candidates]
-    top = candidates[0]
-    top_code = top["code"]
-    if top_code == current_code or current_code in phonetic_codes:
-        return None
-    lead = top["score"] - candidates[1]["score"] if len(candidates) > 1 else top["score"]
-    if top["score"] < _PHONETIC_OVERRIDE_MIN_SCORE or lead < _PHONETIC_OVERRIDE_MIN_LEAD:
-        return None
-    if f"{wrong_keyword}|{top_code}" in _load_rejected_aliases():
-        return None
-    if not _has_stock_context_evidence(context, code=top_code, mention_terms=[wrong_keyword]) and not _context_sector_families(context):
-        return None
-    if _has_strong_sector_mismatch(context, top_code):
-        return None
-    return top_code
+    """Compatibility wrapper around the shared correction resolver."""
+    decision = _resolve_stock_correction(
+        wrong_keyword,
+        context=context,
+        suggested_code=current_code,
+        policy="override",
+    )
+    if (
+        decision["action"] == "accept"
+        and decision["source"] == "phonetic"
+        and decision["code"] != current_code
+    ):
+        return decision["code"]
+    return None
 
 
 def _build_phonetic_stock_index() -> list[tuple[str, str, str]]:
@@ -531,51 +519,38 @@ def _record_alias_candidate(
     ):
         return
 
-    contextual_code = _contextual_whisper_alias_code(wrong_keyword, context)
-    if (
-        contextual_code
-        and contextual_code != correct_code
-        and f"{wrong_keyword}|{contextual_code}" not in _load_rejected_aliases()
-    ):
-        print(
-            f"  [alias-candidate] contextual override 「{wrong_keyword}」:"
-            f" {correct_code}({CODE_TO_NAME.get(correct_code, correct_name or '')})"
-            f" → {contextual_code}({CODE_TO_NAME.get(contextual_code, contextual_code)})",
-            file=sys.stderr,
-        )
-        correct_code = contextual_code
-        if not override_kind:
-            override_kind = "contextual"
-            override_reason = "scoped context alias"
-
-    phonetic_candidates = _phonetic_alias_candidates(wrong_keyword)
-    phonetic_code = _phonetic_override_code(
+    decision = _resolve_stock_correction(
         wrong_keyword,
-        correct_code,
-        context,
-        phonetic_candidates,
+        context=context,
+        suggested_code=correct_code,
+        policy="override",
     )
-    if phonetic_code and phonetic_code != correct_code:
+    phonetic_candidates = decision.get("phonetic_candidates") or _phonetic_alias_candidates(wrong_keyword)
+    resolved_candidate_code = decision.get("code")
+    if (
+        decision.get("action") == "accept"
+        and resolved_candidate_code
+        and resolved_candidate_code != correct_code
+    ):
+        decision_source = str(decision.get("source", "resolver"))
         print(
-            f"  [alias-candidate] phonetic override 「{wrong_keyword}」:"
+            f"  [alias-candidate] {decision_source} override 「{wrong_keyword}」:"
             f" {correct_code}({CODE_TO_NAME.get(correct_code, correct_name or '')})"
-            f" → {phonetic_code}({CODE_TO_NAME.get(phonetic_code, phonetic_code)})",
+            f" → {resolved_candidate_code}"
+            f"({CODE_TO_NAME.get(resolved_candidate_code, resolved_candidate_code)})",
             file=sys.stderr,
         )
-        correct_code = phonetic_code
+        correct_code = resolved_candidate_code
         if not override_kind:
-            override_kind = "phonetic"
-            top = phonetic_candidates[0] if phonetic_candidates else {}
-            phonetic_top_score = top.get("score")
-            phonetic_lead = (
-                phonetic_candidates[0]["score"] - phonetic_candidates[1]["score"]
-                if len(phonetic_candidates) > 1 else phonetic_candidates[0]["score"]
-            ) if phonetic_candidates else None
-            override_reason = (
-                f"phonetic_top1 score={phonetic_top_score:.3f} lead={phonetic_lead:.3f}"
-                if phonetic_top_score is not None and phonetic_lead is not None
-                else "phonetic_top1"
+            override_kind = (
+                "contextual" if decision_source == "contextual_alias"
+                else "phonetic" if decision_source == "phonetic"
+                else decision_source
             )
+            override_reason = str(decision.get("reason", "shared correction resolver"))
+            if decision_source == "phonetic":
+                phonetic_top_score = decision.get("score")
+                phonetic_lead = decision.get("lead")
 
     canonical_name = CODE_TO_NAME.get(correct_code, "")
     correct_name = (correct_name or canonical_name).strip()
@@ -1586,59 +1561,214 @@ def _has_plausible_correction_evidence(
     text: str,
     override_info: dict | None = None,
 ) -> bool:
-    """Require local identity, approved alias, or strong similarity before accepting a correction."""
+    """Compatibility gate backed by the shared correction resolver."""
     term = (term or "").strip()
     if not term:
         return True
-
-    local_text = _local_evidence_window(text, term)
-    if not local_text:
-        return False
-    if STOCK_DICT.get(term) == code:
-        return True
-    if _contextual_whisper_alias_code(term, local_text) == code:
-        return True
-    if override_info and override_info.get("override_kind") in {"contextual", "phonetic"}:
-        return True
-    if _has_explicit_correction_relation(
-        local_text,
+    decision = _resolve_stock_correction(
         term,
-        code=code,
-        resolved_name=resolved_name,
-    ):
-        return True
-    if _has_clear_short_us_correction(
-        term,
-        code=code,
-        resolved_name=resolved_name,
-        text=local_text,
-    ):
-        return True
-
-    term_core = _strip_common_stock_suffix(term)
-    name_core = _strip_common_stock_suffix(resolved_name)
-    textual_close = bool(
-        term_core
-        and name_core
-        and abs(len(term_core) - len(name_core)) <= 1
-        and _levenshtein(term_core.casefold(), name_core.casefold()) <= 1
+        context=text,
+        suggested_code=code,
+        policy="validation",
     )
-    if textual_close:
-        if len(term_core) >= 3:
-            return _has_stock_context_evidence(
-                local_text,
-                code=code,
-                mention_terms=[term],
-            )
-        return _has_direct_stock_cue_near_term(local_text, term)
+    if decision["action"] == "accept" and decision["code"] == code:
+        return True
+    return bool(
+        override_info
+        and override_info.get("override_kind") in {"contextual", "phonetic", "sector"}
+        and decision["action"] == "accept"
+        and decision["code"] == code
+    )
 
-    if _has_clear_phonetic_support(term, code):
-        return _has_stock_context_evidence(
-            local_text,
-            code=code,
-            mention_terms=[term],
+
+_CORRECTION_POLICIES: dict[str, tuple[float, float]] = {
+    "discovery": (_PHONETIC_DISCOVERY_MIN_SCORE, _PHONETIC_DISCOVERY_MIN_LEAD),
+    "override": (_PHONETIC_OVERRIDE_MIN_SCORE, _PHONETIC_OVERRIDE_MIN_LEAD),
+    "validation": (_PHONETIC_DISCOVERY_MIN_SCORE, _PHONETIC_DISCOVERY_MIN_LEAD),
+}
+
+
+def _normalize_correction_term(term: str) -> str:
+    """Normalize transcript/company variants without changing pronunciation."""
+    normalized = (term or "").strip().replace("臺", "台")
+    normalized = re.sub(r"[-－]KY$", "", normalized, flags=re.IGNORECASE).strip()
+    normalized = re.sub(r"[*＊]+$", "", normalized).strip()
+    return normalized
+
+
+def _resolve_stock_correction(
+    term: str,
+    *,
+    context: str,
+    suggested_code: str | None = None,
+    policy: str = "validation",
+) -> dict:
+    """Resolve one transcript term through the shared correction decision path.
+
+    action is one of accept/review/reject. Only accept may change the current
+    scan result; review is safe to persist for human inspection.
+    """
+    original_term = (term or "").strip()
+    normalized_term = _normalize_correction_term(original_term)
+    suggested_code = (suggested_code or "").strip()
+    local_text = _local_evidence_window(context, original_term) or context
+    result = {
+        "action": "reject",
+        "code": None,
+        "name": None,
+        "source": "none",
+        "score": 0.0,
+        "lead": 0.0,
+        "reason": "no_supported_candidate",
+        "phonetic_candidates": [],
+    }
+    if not normalized_term or not _contains_identity_term(context or "", original_term):
+        result["reason"] = "term_missing_from_context"
+        return result
+    if normalized_term.upper() in {word.upper() for word in WHISPER_ORIG_BLACKLIST}:
+        result["reason"] = "blacklisted_original"
+        return result
+
+    rejected = _load_rejected_aliases()
+
+    exact_code = STOCK_DICT.get(original_term) or STOCK_DICT.get(normalized_term)
+    if exact_code and f"{original_term}|{exact_code}" not in rejected:
+        return {
+            **result,
+            "action": "accept",
+            "code": exact_code,
+            "name": CODE_TO_NAME.get(exact_code, normalized_term),
+            "source": "exact_alias",
+            "score": 1.0,
+            "lead": 1.0,
+            "reason": "known_identity_or_approved_alias",
+        }
+
+    contextual_code = _contextual_whisper_alias_code(original_term, local_text)
+    if contextual_code and f"{original_term}|{contextual_code}" not in rejected:
+        return {
+            **result,
+            "action": "accept",
+            "code": contextual_code,
+            "name": CODE_TO_NAME.get(contextual_code, contextual_code),
+            "source": "contextual_alias",
+            "score": 0.98,
+            "lead": 1.0,
+            "reason": "scoped_context_alias",
+        }
+
+    if suggested_code and suggested_code in CODE_TO_NAME:
+        suggested_name = CODE_TO_NAME[suggested_code]
+        if _has_clear_short_us_correction(
+            original_term,
+            code=suggested_code,
+            resolved_name=suggested_name,
+            text=local_text,
+        ):
+            return {
+                **result,
+                "action": "accept",
+                "code": suggested_code,
+                "name": suggested_name,
+                "source": "short_us_correction",
+                "score": 0.95,
+                "lead": 1.0,
+                "reason": "clear_short_us_correction",
+            }
+        term_core = _strip_common_stock_suffix(normalized_term)
+        name_core = _strip_common_stock_suffix(_normalize_correction_term(suggested_name))
+        textual_close = bool(
+            term_core
+            and name_core
+            and abs(len(term_core) - len(name_core)) <= 1
+            and _levenshtein(term_core.casefold(), name_core.casefold()) <= 1
         )
-    return False
+        explicit_relation = _has_explicit_correction_relation(
+            local_text,
+            original_term,
+            code=suggested_code,
+            resolved_name=suggested_name,
+        )
+        textual_context_ok = (
+            _has_stock_context_evidence(
+                local_text,
+                code=suggested_code,
+                mention_terms=[original_term],
+            )
+            if len(term_core) >= 3
+            else _has_direct_stock_cue_near_term(local_text, original_term)
+        )
+        if (textual_close and textual_context_ok) or explicit_relation:
+            return {
+                **result,
+                "action": "accept",
+                "code": suggested_code,
+                "name": suggested_name,
+                "source": "textual_similarity" if textual_close else "explicit_correction",
+                "score": 0.9 if textual_close else 0.95,
+                "lead": 1.0,
+                "reason": "close_name_with_stock_context" if textual_close else "explicit_correction_relation",
+            }
+
+        sector_nearby = _sector_aware_nearby_stock_keyword(
+            original_term,
+            exclude_code=suggested_code,
+            text=local_text,
+        )
+        if sector_nearby:
+            sector_keyword, sector_code = sector_nearby
+            return {
+                **result,
+                "action": "accept",
+                "code": sector_code,
+                "name": CODE_TO_NAME.get(sector_code, sector_keyword),
+                "source": "sector_context",
+                "score": 0.92,
+                "lead": 1.0,
+                "reason": f"unique_nearby_name_with_sector_match:{sector_keyword}",
+            }
+        if _has_strong_sector_mismatch(local_text, suggested_code):
+            result["reason"] = "sector_mismatch"
+            return result
+
+    candidates = _phonetic_alias_candidates(original_term, limit=3)
+    result["phonetic_candidates"] = candidates
+    if not candidates:
+        return result
+
+    top = candidates[0]
+    lead = top["score"] - candidates[1]["score"] if len(candidates) > 1 else top["score"]
+    result.update({
+        "code": top["code"],
+        "name": CODE_TO_NAME.get(top["code"], top["name"]),
+        "source": "phonetic",
+        "score": top["score"],
+        "lead": lead,
+    })
+    if f"{original_term}|{top['code']}" in rejected:
+        result["reason"] = "manually_rejected"
+        return result
+    if _has_strong_sector_mismatch(local_text, top["code"]):
+        result["reason"] = "sector_mismatch"
+        return result
+
+    has_context = (
+        _has_stock_context_evidence(local_text, code=top["code"], mention_terms=[original_term])
+        or bool(_context_sector_families(local_text))
+    )
+    min_score, min_lead = _CORRECTION_POLICIES.get(
+        policy,
+        _CORRECTION_POLICIES["validation"],
+    )
+    if has_context and top["score"] >= min_score and lead >= min_lead:
+        result["action"] = "accept"
+        result["reason"] = "clear_phonetic_winner"
+    elif has_context and top["score"] >= 0.55 and lead >= 0.05:
+        result["action"] = "review"
+        result["reason"] = "plausible_but_not_unique"
+    else:
+        result["reason"] = "weak_phonetic_or_context"
+    return result
 
 
 def _phonetic_discovery_windows(text: str) -> list[tuple[int, int]]:
@@ -1732,16 +1862,17 @@ def _discover_phonetic_stock_hits(
         if not _phonetic_discovery_context_ok(text, term, pos):
             continue
 
-        candidates = _phonetic_alias_candidates(term, limit=2)
-        if not candidates:
+        decision = _resolve_stock_correction(
+            term,
+            context=text,
+            policy="discovery",
+        )
+        if decision["action"] != "accept" or decision["source"] != "phonetic":
             continue
-        best = candidates[0]
-        code = best["code"]
-        lead = best["score"] - candidates[1]["score"] if len(candidates) > 1 else best["score"]
+        code = decision["code"]
+        lead = decision["lead"]
         if (
-            best["score"] < _PHONETIC_DISCOVERY_MIN_SCORE
-            or lead < _PHONETIC_DISCOVERY_MIN_LEAD
-            or code in existing_codes
+            code in existing_codes
             or code in added_codes
             or f"{term}|{code}" in rejected_aliases
         ):
@@ -1755,7 +1886,7 @@ def _discover_phonetic_stock_hits(
         if _has_strong_sector_mismatch(ctx, code):
             continue
 
-        stock_name = CODE_TO_NAME.get(code, best["name"])
+        stock_name = CODE_TO_NAME.get(code, decision["name"] or code)
         discovered.append({
             "stock_code": code,
             "stock_name": stock_name,
@@ -1770,7 +1901,7 @@ def _discover_phonetic_stock_hits(
         added_codes.add(code)
         print(
             f"  [phonetic-discovery] 「{term}」→ {code}({stock_name}) "
-            f"score={best['score']} lead={lead:.3f}",
+            f"score={decision['score']} lead={lead:.3f}",
             file=sys.stderr,
         )
         _record_alias_candidate(
@@ -3753,14 +3884,22 @@ def _validate_gemini_stocks(
         recovered_phonetic_evidence = False
         sector_source_term = whisper_orig_bare or whisper_orig or name
         alias_override_info: dict | None = None
-        contextual_code = _contextual_whisper_alias_code(sector_source_term, chunk_text)
-        if contextual_code and contextual_code != resolved_code:
+        correction_decision = _resolve_stock_correction(
+            sector_source_term,
+            context=chunk_text,
+            suggested_code=resolved_code,
+            policy="override",
+        )
+        correction_code = correction_decision.get("code")
+        if correction_decision["action"] == "accept" and correction_code != resolved_code:
             previous_code = resolved_code
             previous_name = resolved_name
-            contextual_name = CODE_TO_NAME.get(contextual_code, contextual_code)
+            correction_name = CODE_TO_NAME.get(correction_code, correction_code)
+            correction_source = correction_decision["source"]
             print(
-                f"  [gemini_extract] contextual alias remap"
-                f" — {sector_source_term!r} -> {contextual_code}({contextual_name})"
+                f"  [gemini_extract] correction resolver remap"
+                f" ({correction_source})"
+                f" — {sector_source_term!r} -> {correction_code}({correction_name})"
                 f" instead of {resolved_code}({resolved_name});"
                 f" weak sectors={_format_context_sector_scores(chunk_text)}",
                 file=sys.stderr,
@@ -3769,105 +3908,27 @@ def _validate_gemini_stocks(
                 whisper_orig = sector_source_term
                 whisper_orig_bare = sector_source_term
                 _whisper_core = _core(sector_source_term)
-            resolved_code = contextual_code
-            resolved_name = contextual_name
+            resolved_code = correction_code
+            resolved_name = correction_name
+            override_kind = {
+                "contextual_alias": "contextual",
+                "phonetic": "phonetic",
+                "sector_context": "sector",
+            }.get(correction_source, correction_source)
             alias_override_info = {
-                "override_kind": "contextual",
-                "override_reason": "scoped context alias",
+                "override_kind": override_kind,
+                "override_reason": correction_decision["reason"],
                 "original_code": previous_code,
                 "original_name": previous_name,
             }
+            if correction_source == "phonetic":
+                alias_override_info["phonetic_top_score"] = correction_decision["score"]
+                alias_override_info["phonetic_lead"] = correction_decision["lead"]
             name = resolved_name
             stock_keywords = [kw for kw, c in STOCK_DICT.items() if c == resolved_code]
             search_names = stock_keywords if lev_resolved else stock_keywords + [name]
             exact_name_appears = any(_contains_identity_term(chunk_text, kw) for kw in search_names)
             name_appears = True
-
-        phonetic_candidates_for_override = _phonetic_alias_candidates(sector_source_term)
-        phonetic_code = _phonetic_override_code(
-            sector_source_term,
-            resolved_code,
-            chunk_text,
-            phonetic_candidates_for_override,
-        )
-        if phonetic_code and phonetic_code != resolved_code:
-            previous_code = resolved_code
-            previous_name = resolved_name
-            phonetic_name = CODE_TO_NAME.get(phonetic_code, phonetic_code)
-            print(
-                f"  [gemini_extract] phonetic alias remap"
-                f" — {sector_source_term!r} -> {phonetic_code}({phonetic_name})"
-                f" instead of {resolved_code}({resolved_name});"
-                f" weak sectors={_format_context_sector_scores(chunk_text)}",
-                file=sys.stderr,
-            )
-            if not whisper_orig:
-                whisper_orig = sector_source_term
-                whisper_orig_bare = sector_source_term
-                _whisper_core = _core(sector_source_term)
-            resolved_code = phonetic_code
-            resolved_name = phonetic_name
-            top_score = phonetic_candidates_for_override[0]["score"] if phonetic_candidates_for_override else None
-            lead = (
-                phonetic_candidates_for_override[0]["score"] - phonetic_candidates_for_override[1]["score"]
-                if len(phonetic_candidates_for_override) > 1
-                else phonetic_candidates_for_override[0]["score"]
-            ) if phonetic_candidates_for_override else None
-            alias_override_info = {
-                "override_kind": "phonetic",
-                "override_reason": (
-                    f"phonetic_top1 score={top_score:.3f} lead={lead:.3f}"
-                    if top_score is not None and lead is not None
-                    else "phonetic_top1"
-                ),
-                "original_code": previous_code,
-                "original_name": previous_name,
-                "phonetic_top_score": top_score,
-                "phonetic_lead": lead,
-            }
-            name = resolved_name
-            stock_keywords = [kw for kw, c in STOCK_DICT.items() if c == resolved_code]
-            search_names = stock_keywords if lev_resolved else stock_keywords + [name]
-            exact_name_appears = any(_contains_identity_term(chunk_text, kw) for kw in search_names)
-            name_appears = True
-
-        sector_nearby = _sector_aware_nearby_stock_keyword(
-            sector_source_term,
-            exclude_code=resolved_code,
-            text=chunk_text,
-        )
-        if sector_nearby:
-            strongest_kw, strongest_code = sector_nearby
-            strongest_name = CODE_TO_NAME.get(strongest_code, strongest_kw)
-            print(
-                f"  [gemini_extract] sector-aware remap"
-                f" — {sector_source_term!r} fits {strongest_kw!r}->{strongest_code}"
-                f" better than {resolved_code}({resolved_name});"
-                f" weak sectors={_format_context_sector_scores(chunk_text)}",
-                file=sys.stderr,
-            )
-            if not whisper_orig:
-                whisper_orig = sector_source_term
-                whisper_orig_bare = sector_source_term
-                _whisper_core = _core(sector_source_term)
-            resolved_code = strongest_code
-            resolved_name = strongest_name
-            name = resolved_name
-            stock_keywords = [kw for kw, c in STOCK_DICT.items() if c == resolved_code]
-            search_names = stock_keywords + [resolved_name]
-            _resolved_core = _core(resolved_name)
-            _whisper_close = bool(
-                whisper_orig
-                and whisper_orig in chunk_text
-                and _levenshtein(_whisper_core, _resolved_core) <= 1
-            )
-            _whisper_bare_close = bool(
-                whisper_orig_bare and whisper_orig_bare != whisper_orig
-                and whisper_orig_bare in chunk_text
-                and _levenshtein(_core(whisper_orig_bare), _resolved_core) <= 1
-            )
-            exact_name_appears = any(_contains_identity_term(chunk_text, kw) for kw in search_names)
-            name_appears = exact_name_appears or _whisper_close or _whisper_bare_close
         if whisper_orig and whisper_orig not in STOCK_DICT:
             nearby_other = _nearby_other_stock_keyword(
                 whisper_orig_bare or whisper_orig,
