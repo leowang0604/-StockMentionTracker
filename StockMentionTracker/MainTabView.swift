@@ -18,14 +18,8 @@ struct MainTabView: View {
             Tab("趨勢圖", systemImage: "chart.line.uptrend.xyaxis") {
                 TrendView()
             }
-            Tab("內容清單", systemImage: "list.bullet.rectangle") {
-                ContentListView()
-            }
-            Tab("頻道管理", systemImage: "antenna.radiowaves.left.and.right") {
-                ChannelManagementView()
-            }
-            Tab("設定", systemImage: "gear") {
-                SettingsView()
+            Tab("More", systemImage: "ellipsis") {
+                MoreView()
             }
         }
         .tabViewStyle(.sidebarAdaptable)
@@ -37,6 +31,33 @@ struct MainTabView: View {
             }
         }
         .animation(.easeInOut, value: dataService.isLoading)
+    }
+}
+
+private struct MoreView: View {
+    var body: some View {
+        NavigationStack {
+            List {
+                NavigationLink {
+                    ContentListView(ownsNavigationStack: false)
+                } label: {
+                    Label("內容清單", systemImage: "list.bullet.rectangle")
+                }
+
+                NavigationLink {
+                    ChannelManagementView()
+                } label: {
+                    Label("頻道管理", systemImage: "antenna.radiowaves.left.and.right")
+                }
+
+                NavigationLink {
+                    SettingsView()
+                } label: {
+                    Label("設定", systemImage: "gear")
+                }
+            }
+            .navigationTitle("More")
+        }
     }
 }
 

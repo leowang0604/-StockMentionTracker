@@ -4,7 +4,12 @@ struct ContentListView: View {
     @Environment(AppState.self)    private var appState
     @Environment(DataService.self) private var dataService
 
+    let ownsNavigationStack: Bool
     @State private var searchText = ""
+
+    init(ownsNavigationStack: Bool = true) {
+        self.ownsNavigationStack = ownsNavigationStack
+    }
 
     private var filteredVideos: [VideoScanned] {
         @Bindable var appState = appState
@@ -21,42 +26,53 @@ struct ContentListView: View {
 
     var body: some View {
         @Bindable var appState = appState
-        return NavigationStack {
-            VStack(spacing: 0) {
-                // Date slider
-                HStack(spacing: 10) {
-                    Text("最近")
-                        .font(.caption).foregroundStyle(.secondary)
-                    Slider(value: $appState.selectedDays, in: 1...60, step: 1)
-                    Text("\(Int(appState.selectedDays)) 天")
-                        .font(.caption.monospacedDigit())
-                        .frame(width: 44, alignment: .trailing)
+        return Group {
+            if ownsNavigationStack {
+                NavigationStack {
+                    content(selectedDays: $appState.selectedDays)
                 }
-                .padding(.horizontal)
-                .padding(.vertical, 8)
-
-                Divider()
-
-                if filteredVideos.isEmpty {
-                    ContentUnavailableView(
-                        "尚無內容",
-                        systemImage: "list.bullet.rectangle",
-                        description: Text("此時間範圍內無掃描結果")
-                    )
-                } else {
-                    List(filteredVideos) { video in
-                        NavigationLink {
-                            VideoDetailView(videoID: video.id)
-                        } label: {
-                            VideoRowView(video: video)
-                        }
-                    }
-                    .listStyle(.plain)
-                }
+            } else {
+                content(selectedDays: $appState.selectedDays)
             }
-            .navigationTitle("內容清單")
-            .searchable(text: $searchText, prompt: "搜尋標題或頻道")
         }
+    }
+
+    @ViewBuilder
+    private func content(selectedDays: Binding<Double>) -> some View {
+        VStack(spacing: 0) {
+            // Date slider
+            HStack(spacing: 10) {
+                Text("最近")
+                    .font(.caption).foregroundStyle(.secondary)
+                Slider(value: selectedDays, in: 1...60, step: 1)
+                Text("\(Int(selectedDays.wrappedValue)) 天")
+                    .font(.caption.monospacedDigit())
+                    .frame(width: 44, alignment: .trailing)
+            }
+            .padding(.horizontal)
+            .padding(.vertical, 8)
+
+            Divider()
+
+            if filteredVideos.isEmpty {
+                ContentUnavailableView(
+                    "尚無內容",
+                    systemImage: "list.bullet.rectangle",
+                    description: Text("此時間範圍內無掃描結果")
+                )
+            } else {
+                List(filteredVideos) { video in
+                    NavigationLink {
+                        VideoDetailView(videoID: video.id)
+                    } label: {
+                        VideoRowView(video: video)
+                    }
+                }
+                .listStyle(.plain)
+            }
+        }
+        .navigationTitle("內容清單")
+        .searchable(text: $searchText, prompt: "搜尋標題或頻道")
     }
 }
 
