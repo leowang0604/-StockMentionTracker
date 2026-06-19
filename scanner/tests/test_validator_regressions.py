@@ -262,6 +262,21 @@ class ValidatorRegressionTests(unittest.TestCase):
         )
         self.assertEqual([hit["stock_code"] for hit in hits], ["INTC"])
 
+    def test_trailing_attention_marker_has_clean_spoken_alias(self):
+        self.assertEqual(self.scanner.STOCK_DICT.get("愛普"), "6531")
+        text = "愛普這次矽電容缺口擴大，市場正在討論後續訂單。"
+        hits = self.validate(
+            {
+                "name": "愛普",
+                "code": "6531",
+                "context": text,
+                "sentiment": "neutral",
+                "score": 0.5,
+            },
+            text,
+        )
+        self.assertEqual([hit["stock_code"] for hit in hits], ["6531"])
+
     def test_clear_phonetic_match_survives_unrelated_sector_context(self):
         if self.scanner.lazy_pinyin is None:
             self.skipTest("pypinyin is not installed")
@@ -325,6 +340,18 @@ class ValidatorRegressionTests(unittest.TestCase):
             (
                 "低軌衛星的重點指標股升達科偏弱，SpaceX 供應鏈受到關注。",
                 "升達科", "豐達科", "3004", "3491",
+            ),
+            (
+                "低階被動元件漲價，滑星科是二哥，電容與電阻報價都在走高。",
+                "滑星科", "台星科", "3265", "2492",
+            ),
+            (
+                "最近高股息成分股除息，富方美連續兩天貼息，投信也在調節。",
+                "富方美", "豐泰", "9910", "8454",
+            ),
+            (
+                "被動元件裡面的信長店有新訂單，電阻材料也準備漲價。",
+                "信長店", "日月光投控", "3711", "6173",
             ),
         ]
         for text, original, wrong_name, wrong_code, expected_code in cases:
@@ -412,6 +439,32 @@ class ValidatorRegressionTests(unittest.TestCase):
             text,
         )
         self.assertEqual([hit["stock_code"] for hit in hits], ["2010"])
+
+    def test_nearby_official_identity_does_not_queue_unrelated_phrase(self):
+        text = "南亞今天也收藏停辦，後面仍在討論南亞的庫存與本業。"
+        self.scanner._skip_log.clear()
+        hits = self.validate_isolated(
+            {
+                "name": "南亞",
+                "code": "1303",
+                "whisper_original": "收藏停辦",
+                "context": text,
+                "sentiment": "neutral",
+                "score": 0.5,
+            },
+            text,
+        )
+        self.assertEqual(hits, [])
+        self.assertIn(
+            "whisper_correction_implausible",
+            [entry.get("reason") for entry in self.scanner._skip_log],
+        )
+
+    def test_close_dafang_whisper_alias_is_recognized(self):
+        text = "電子零組件裡面的達芳今天訂單增加，鍵盤與電源產品都有成長。"
+        hits = self.scanner.recognize_stocks(text)
+        self.assertIn("8163", [hit["stock_code"] for hit in hits])
+        self.assertIn("達芳", [hit["matched_keyword"] for hit in hits])
 
     def test_new_whisper_correction_is_review_candidate_only(self):
         text = "緯印這檔股票最近營收成長，AI伺服器客戶訂單也增加。"

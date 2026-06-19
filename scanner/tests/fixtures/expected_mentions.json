@@ -87,5 +87,11 @@
     "must_include": ["2317"],
     "must_exclude": ["2382"],
     "must_highlight": ["轟害"]
+  },
+  "recent_whisper_corrections": {
+    "description": "近期真實 Whisper 變體應在受控語境中補回富邦媒、華新科、信昌電、達方與愛普。",
+    "must_include": ["8454", "2492", "6173", "8163", "6531"],
+    "must_exclude": ["3265", "3711", "9910"],
+    "must_highlight": ["富方美", "滑星科", "信長店", "達芳", "愛普"]
   }
 }

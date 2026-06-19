@@ -2511,58 +2511,6 @@
     ],
     "updated_at": "2026-06-18T20:51:44"
   },
-  "收藏停辦|1303": {
-    "wrong_keyword": "收藏停辦",
-    "correct_code": "1303",
-    "correct_name": "南亞",
-    "confidence": "medium",
-    "max_score": 50,
-    "observations": 1,
-    "distinct_videos": 1,
-    "video_ids": [
-      "6d1e4799-6904-4211-bcdb-192153d0bbbe"
-    ],
-    "evidence": [
-      {
-        "video_id": "6d1e4799-6904-4211-bcdb-192153d0bbbe",
-        "channel": "兆華與股惑仔",
-        "date": "2026-06-15",
-        "title": "EP1119｜美伊要簽了，油價救了FED開會？今天動能、左側、觀望都有事情做，先買多題材最穩，SpaceX 掛牌，供應鏈還能漲？ft.題材獵人 林漢偉",
-        "source": "full_video_validator",
-        "score": 50,
-        "reasons": [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context"
-        ],
-        "context": "到 零零五零的成分股啦 所以 而且他之前算是 籌碼相對比較乾淨 又沒有大股東賣股的問題 哦 沒有錯 宅板這一波是因為 南亞去賣了南殿 對 在整個台育集團或南亞集團 比較容易現在有這個問題 但今天南亞也收藏停辦 對 因為他賣別人 沒有人要賣 我們常常講 南亞的好處就是 他賣了一坨拉褲 就是爆賺多少的意外收益 而本業也有好轉 對 而且越賣他的庫存的市值 還越來越高 因為賣掉股票 還一直在創新高 所以我覺得 當然對南亞來講的話 就是 因為他賣了南亞科賣的難點 所以這樣那股票 都離錢高還有一段的距離 那本身反而南亞 是快要挑戰波段的一個新高 那當然我覺得 這個都可以觀察是什麼 就是說剛提到的 你從國際"
-      }
-    ],
-    "phonetic_candidates": [
-      {
-        "code": "4764",
-        "name": "雙鍵",
-        "score": 0.39,
-        "phonetic_similarity": 0.6,
-        "text_similarity": 0.0
-      },
-      {
-        "code": "9951",
-        "name": "皇田",
-        "score": 0.39,
-        "phonetic_similarity": 0.6,
-        "text_similarity": 0.0
-      },
-      {
-        "code": "1513",
-        "name": "中興電",
-        "score": 0.347,
-        "phonetic_similarity": 0.533,
-        "text_similarity": 0.0
-      }
-    ],
-    "updated_at": "2026-06-18T21:09:25"
-  },
   "升達科|3491": {
     "wrong_keyword": "升達科",
     "correct_code": "3491",

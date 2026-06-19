@@ -149,6 +149,7 @@ ALIASES: dict[str, str] = {
     "華新科": "2492",
     "禾伸堂": "3026", "和聲堂": "3026", "禾申堂": "3026",
     "奇力新": "2456",
+    "達芳": "8163",  # Whisper 常將「達方」誤轉為「達芳」
     # 組裝代工
     "Foxconn": "2317", "Hon Hai": "2317", "富士康": "2317",
     "Pegatron": "4938", "和碩": "4938",
@@ -1332,7 +1333,7 @@ _PHONETIC_DISCOVERY_STOPWORDS: set[str] = {
 
 # Strong sector signals for conservative Gemini correction validation.
 # Keep this intentionally small: generic words such as AI/材料/題材 are too broad.
-_SECTOR_CONTEXT_FAMILIES: dict[str, dict[str, set[str]]] = {
+_SECTOR_CONTEXT_FAMILIES: dict[str, dict[str, set[str] | bool]] = {
     "金融": {
         "sectors": {"金融", "金融保險業"},
         "keywords": {"金融股", "銀行股", "金控", "銀行", "壽險", "保險股"},
@@ -1347,7 +1348,18 @@ _SECTOR_CONTEXT_FAMILIES: dict[str, dict[str, set[str]]] = {
     },
     "被動元件": {
         "sectors": {"被動元件"},
-        "keywords": {"被動元件", "MLCC", "電容", "電阻", "電感", "積層陶瓷"},
+        "keywords": {
+            "被動元件", "被動員間", "MLCC", "電容", "電阻", "電感", "積層陶瓷",
+            "國巨", "華新科", "華興科", "信昌電",
+        },
+    },
+    "高股息除權息": {
+        "sectors": {"數位雲端", "電子商務", "其他"},
+        "mismatch_guard": False,
+        "keywords": {
+            "高股息", "高股席", "除息", "出席", "填息", "填鞋",
+            "貼息", "貼鞋", "ETF成分股", "投信",
+        },
     },
     "矽晶圓": {
         "sectors": {"半導體材料", "半導體業", "電子零組件業"},
@@ -1404,6 +1416,11 @@ _CONTEXTUAL_WHISPER_ALIASES: dict[str, dict[str, str]] = {
     },
     "被動元件": {
         "台慶柯": "3357", "台慶科": "3357", "臺慶柯": "3357",
+        "信長店": "6173", "信長電": "6173", "慶長店": "6173",
+        "滑星科": "2492",
+    },
+    "高股息除權息": {
+        "富方美": "8454",
     },
     "矽晶圓": {
         "中美金": "5483",
@@ -1483,8 +1500,16 @@ def _contextual_whisper_alias_code(term: str, text: str) -> str | None:
 
 
 def _has_strong_sector_mismatch(text: str, code: str) -> bool:
-    context_families = _context_sector_families(text)
-    stock_families = _stock_sector_families(code)
+    context_families = {
+        family
+        for family in _context_sector_families(text)
+        if _SECTOR_CONTEXT_FAMILIES[family].get("mismatch_guard", True)
+    }
+    stock_families = {
+        family
+        for family in _stock_sector_families(code)
+        if _SECTOR_CONTEXT_FAMILIES[family].get("mismatch_guard", True)
+    }
     return bool(context_families and stock_families and not context_families & stock_families)
 
 
@@ -1509,6 +1534,11 @@ _DIRECT_STOCK_MENTION_CUES: tuple[str, ...] = (
     "目標價", "法說", "本益比", "訂單", "獲利", "買進", "賣出",
 )
 
+_EXPLICIT_CORRECTION_CUES: tuple[str, ...] = (
+    "口誤指的是", "口誤是", "應該是", "正確是", "更正為", "更正成",
+    "也就是", "指的是", "其實是",
+)
+
 
 def _local_evidence_window(
     text: str,
@@ -1531,6 +1561,23 @@ def _has_direct_stock_cue_near_term(text: str, term: str) -> bool:
     return bool(nearby and any(cue in nearby for cue in _DIRECT_STOCK_MENTION_CUES))
 
 
+def _has_explicit_correction_relation(
+    text: str,
+    term: str,
+    *,
+    code: str,
+    resolved_name: str,
+) -> bool:
+    """Require an explicit correction phrase before nearby identity can prove an arbitrary term."""
+    identities = {resolved_name, re.sub(r"[*＊]+$", "", resolved_name).strip(), code}
+    identities.update(kw for kw, mapped_code in STOCK_DICT.items() if mapped_code == code)
+    return (
+        _contains_identity_term(text, term)
+        and any(_contains_identity_term(text, identity) for identity in identities if identity)
+        and any(cue in text for cue in _EXPLICIT_CORRECTION_CUES)
+    )
+
+
 def _has_plausible_correction_evidence(
     term: str,
     *,
@@ -1547,15 +1594,18 @@ def _has_plausible_correction_evidence(
     local_text = _local_evidence_window(text, term)
     if not local_text:
         return False
-    identity_terms = {resolved_name, code}
-    identity_terms.update(kw for kw, mapped_code in STOCK_DICT.items() if mapped_code == code)
-    if any(_contains_identity_term(local_text, identity) for identity in identity_terms if identity):
-        return True
     if STOCK_DICT.get(term) == code:
         return True
     if _contextual_whisper_alias_code(term, local_text) == code:
         return True
     if override_info and override_info.get("override_kind") in {"contextual", "phonetic"}:
+        return True
+    if _has_explicit_correction_relation(
+        local_text,
+        term,
+        code=code,
+        resolved_name=resolved_name,
+    ):
         return True
     if _has_clear_short_us_correction(
         term,
@@ -2496,6 +2546,11 @@ def build_stock_dict(
         stock_dict[name]   = code
         stock_dict[code]   = code
         stock_market[code] = "TW"
+        # TWSE/TPEx names may carry a trailing attention marker (e.g. 愛普*).
+        # Keep the canonical display name but register the spoken clean name.
+        spoken_name = re.sub(r"[*＊]+$", "", name).strip()
+        if spoken_name and spoken_name != name and spoken_name not in stock_dict:
+            stock_dict[spoken_name] = code
         if code in TW_STOCK_SECTORS:
             stock_sector[code] = TW_STOCK_SECTORS[code]
         elif tw_industry_map and code in tw_industry_map:
