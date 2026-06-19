@@ -68,10 +68,7 @@ struct ChannelDetailView: View {
                 } else {
                     ForEach(episodes) { episode in
                         NavigationLink {
-                            VideoDetailView(
-                                video: episode,
-                                stockEntries: dataService.stockEntries(for: episode)
-                            )
+                            VideoDetailView(videoID: episode.id)
                         } label: {
                             VideoRowView(video: episode)
                         }

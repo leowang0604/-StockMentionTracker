@@ -73,15 +73,23 @@ class DataService {
             .sorted { ($0.parsedDate ?? .distantPast) > ($1.parsedDate ?? .distantPast) }
     }
 
+    func video(withID id: String) -> VideoScanned? {
+        scanResult.videosScanned.first { $0.id == id }
+    }
+
     func stockEntries(for video: VideoScanned) -> [StockEntry] {
         scanResult.stocksRanking.compactMap { stock -> StockEntry? in
-            let ctxs = stock.contexts.filter { $0.video == video.title }
+            let ctxs = stock.contexts.filter {
+                $0.video == video.title &&
+                $0.date == video.date &&
+                ($0.channel == nil || $0.channel == video.channel)
+            }
             guard !ctxs.isEmpty else { return nil }
             return StockEntry(code: stock.code, name: stock.name,
                               market: stock.market, sector: stock.sector,
                               totalMentions: ctxs.count, contexts: ctxs,
                               sentimentScore: nil, daily: nil)
-        }
+        }.sorted { $0.totalMentions > $1.totalMentions }
     }
 
     func clearCache() {

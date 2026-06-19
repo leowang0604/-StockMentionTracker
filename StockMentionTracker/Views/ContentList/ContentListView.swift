@@ -46,10 +46,7 @@ struct ContentListView: View {
                 } else {
                     List(filteredVideos) { video in
                         NavigationLink {
-                            VideoDetailView(
-                                video: video,
-                                stockEntries: stockEntries(for: video)
-                            )
+                            VideoDetailView(videoID: video.id)
                         } label: {
                             VideoRowView(video: video)
                         }
@@ -59,19 +56,6 @@ struct ContentListView: View {
             }
             .navigationTitle("內容清單")
             .searchable(text: $searchText, prompt: "搜尋標題或頻道")
-        }
-    }
-
-    private func stockEntries(for video: VideoScanned) -> [StockEntry] {
-        dataService.scanResult.stocksRanking.compactMap { stock -> StockEntry? in
-            let ctxs = stock.contexts.filter { $0.video == video.title }
-            guard !ctxs.isEmpty else { return nil }
-            return StockEntry(
-                code: stock.code, name: stock.name,
-                market: stock.market, sector: stock.sector,
-                totalMentions: ctxs.count, contexts: ctxs,
-                sentimentScore: nil, daily: nil
-            )
         }
     }
 }
