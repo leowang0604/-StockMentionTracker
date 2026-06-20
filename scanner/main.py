@@ -5416,6 +5416,36 @@ def get_video_key(video: dict) -> str:
     return f"{video.get('title', '')}_{video.get('date', '')}"
 
 
+def _content_dedup_keys(item: dict) -> set[str]:
+    """Return stable identifiers shared by fetched items and saved history rows."""
+    keys: set[str] = set()
+    item_id = (item.get("video_id") or item.get("id") or "").strip()
+    if item_id:
+        keys.add(f"id:{item_id}")
+    title = (item.get("title") or "").strip()
+    date = (item.get("date") or "").strip()
+    if title or date:
+        keys.add(f"title-date:{title}_{date}")
+    return keys
+
+
+def _filter_unseen_content(items: list[dict], history: dict) -> tuple[list[dict], int]:
+    """Drop already-saved videos/episodes before audio download or transcription."""
+    existing_keys = {
+        key
+        for video in history.get("videos_scanned", [])
+        for key in _content_dedup_keys(video)
+    }
+    unseen: list[dict] = []
+    skipped = 0
+    for item in items:
+        if _content_dedup_keys(item) & existing_keys:
+            skipped += 1
+        else:
+            unseen.append(item)
+    return unseen, skipped
+
+
 def merge_into_history(
     history: dict,
     new_videos: list[dict],
@@ -5637,6 +5667,7 @@ def main() -> None:
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
 
     total_new_mentions = 0
+    total_new_content = 0
 
     for source in active_sources:
         stype = source.get("type", "")
@@ -5655,25 +5686,42 @@ def main() -> None:
         print(f"  extraction_mode={exmode}")
 
         if stype == "youtube":
-            videos = get_channel_videos(ident)
-            print(f"  → {len(videos)} videos")
+            fetched_videos = get_channel_videos(ident)
+            videos, duplicate_count = _filter_unseen_content(fetched_videos, history)
+            print(
+                f"  → {len(fetched_videos)} videos fetched, "
+                f"{len(videos)} new, {duplicate_count} already scanned"
+            )
             for video in videos:
                 v_entry, hits, asrc, vurl = _detect_youtube_video(video, sname, extraction_mode=exmode)
                 detected.append((v_entry, hits, asrc, vurl))
 
         elif stype == "applePodcast":
-            episodes = fetch_apple_podcast_episodes(ident)
-            print(f"  → {len(episodes)} episodes")
+            fetched_episodes = fetch_apple_podcast_episodes(ident)
+            episodes, duplicate_count = _filter_unseen_content(fetched_episodes, history)
+            print(
+                f"  → {len(fetched_episodes)} episodes fetched, "
+                f"{len(episodes)} new, {duplicate_count} already scanned"
+            )
             for ep in episodes:
                 v_entry, hits, asrc = _detect_podcast_episode(ep, source, extraction_mode=exmode)
                 detected.append((v_entry, hits, asrc, None))
 
         elif stype == "spotify":
-            episodes = fetch_spotify_episodes(ident)
-            print(f"  → {len(episodes)} episodes")
+            fetched_episodes = fetch_spotify_episodes(ident)
+            episodes, duplicate_count = _filter_unseen_content(fetched_episodes, history)
+            print(
+                f"  → {len(fetched_episodes)} episodes fetched, "
+                f"{len(episodes)} new, {duplicate_count} already scanned"
+            )
             for ep in episodes:
                 v_entry, hits, asrc = _detect_podcast_episode(ep, source, extraction_mode=exmode)
                 detected.append((v_entry, hits, asrc, None))
+
+        if not detected:
+            print("  ✓ no new content — skipping download, Whisper, and Gemini")
+            continue
+        total_new_content += len(detected)
 
         # ── Pass 1.5: batch Gemini ambiguous filter (keyword-mode only) ──
         # Skipped when extraction_mode="gemini" or "auto" — Gemini already validated hits inline.
@@ -5765,6 +5813,10 @@ def main() -> None:
                     print(f"  📤 Pushed intermediate results")
             except Exception as e:
                 print(f"  ⚠️  Intermediate commit failed (non-fatal): {e}")
+
+    if total_new_content == 0:
+        print("\n[scanner] ✅ No new content across active sources — scan work skipped")
+        return
 
     # ── Enrich sectors for TW stocks mentioned but without sector ─────────
     if GEMINI_API_KEY:

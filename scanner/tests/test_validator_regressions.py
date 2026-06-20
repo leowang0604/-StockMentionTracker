@@ -724,6 +724,46 @@ class ValidatorRegressionTests(unittest.TestCase):
         self.assertEqual(decision["action"], "reject")
         self.assertEqual(decision["reason"], "sector_mismatch")
 
+    def test_prescan_filter_skips_existing_item_by_id(self):
+        history = {
+            "videos_scanned": [
+                {"video_id": "episode-1", "title": "舊集數", "date": "2026-06-18"}
+            ]
+        }
+        items = [
+            {"id": "episode-1", "title": "標題後來有修改", "date": "2026-06-18"},
+            {"id": "episode-2", "title": "新集數", "date": "2026-06-19"},
+        ]
+        unseen, skipped = self.scanner._filter_unseen_content(items, history)
+        self.assertEqual([item["id"] for item in unseen], ["episode-2"])
+        self.assertEqual(skipped, 1)
+
+    def test_prescan_filter_falls_back_to_title_and_date(self):
+        history = {
+            "videos_scanned": [
+                {"title": "沒有穩定 ID 的節目", "date": "2026-06-18"}
+            ]
+        }
+        items = [
+            {"id": "", "title": "沒有穩定 ID 的節目", "date": "2026-06-18"}
+        ]
+        unseen, skipped = self.scanner._filter_unseen_content(items, history)
+        self.assertEqual(unseen, [])
+        self.assertEqual(skipped, 1)
+
+    def test_prescan_filter_keeps_new_content(self):
+        history = {
+            "videos_scanned": [
+                {"video_id": "episode-1", "title": "舊集數", "date": "2026-06-18"}
+            ]
+        }
+        items = [
+            {"id": "episode-2", "title": "新集數", "date": "2026-06-19"}
+        ]
+        unseen, skipped = self.scanner._filter_unseen_content(items, history)
+        self.assertEqual(unseen, items)
+        self.assertEqual(skipped, 0)
+
 
 if __name__ == "__main__":
     unittest.main()
