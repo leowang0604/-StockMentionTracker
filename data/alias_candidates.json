@@ -2398,7 +2398,7 @@
     "correct_name": "ARM Holdings",
     "confidence": "medium",
     "max_score": 65,
-    "observations": 1,
+    "observations": 2,
     "distinct_videos": 1,
     "video_ids": [
       "07a62ee9-027c-4503-9fa5-6aff25383a0b"
@@ -2421,7 +2421,7 @@
       }
     ],
     "phonetic_candidates": [],
-    "updated_at": "2026-06-18T20:07:36"
+    "updated_at": "2026-06-20T18:56:16"
   },
   "廣宏科|3287": {
     "wrong_keyword": "廣宏科",
@@ -2429,7 +2429,7 @@
     "correct_name": "廣寰科",
     "confidence": "high",
     "max_score": 85,
-    "observations": 1,
+    "observations": 2,
     "distinct_videos": 1,
     "video_ids": [
       "0f189f4d-f530-465d-b1fe-1cf03e281a21"
@@ -2458,6 +2458,30 @@
         "original_name": "光寶科",
         "phonetic_top_score": 0.883,
         "phonetic_lead": 0.17700000000000005
+      },
+      {
+        "video_id": "0f189f4d-f530-465d-b1fe-1cf03e281a21",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-18",
+        "title": "EP1122｜華許忠於本色，美伊簽署MOU，市場放下心？台、日、韓都創歷史新高！功率、被動元件、封測、CPO，故事正展開？ft.操盤手 黃豐凱",
+        "source": "full_video_validator",
+        "score": 85,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top3",
+          "phonetic_conflict",
+          "stock_context"
+        ],
+        "context": "可是其實在公率元件裡面 還是有一個很重要的產品 就是未來的HVDC 是降壓的IC 這個也放在公率元件裡面 其實市場上其實 不太知道 真的到底有誰做進去 這個我們 不要留到達人秀 我們現在就講好了 就是廣宏科 有一家公司6693的廣宏科 那家公司很特殊 因為它是當初的 冒敵的轉投資 冒敵當初是在太陽能界 是一個天王 台積電一度投他 可是後來因為太陽能這個產品 其實走得很快 而且大陸廠商一下就長很大 所以這個產業後來就沒落了 可是當他在急勝期的時候 他就投了廣宏科 這廣宏科他就是在做 高壓跟低壓的 變壓的一個IC 那就我所知道 目前他在HVDC的高中低階 基本上都打進去了 所以我覺得他會是 相對來",
+        "override_kind": "phonetic",
+        "override_reason": "clear_phonetic_winner",
+        "original_code": "1537",
+        "original_name": "廣隆",
+        "phonetic_top_score": 0.883,
+        "phonetic_lead": 0.17700000000000005
       }
     ],
     "phonetic_candidates": [
@@ -2483,7 +2507,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-06-18T20:19:30"
+    "updated_at": "2026-06-20T19:07:55"
   },
   "信長電|6173": {
     "wrong_keyword": "信長電",
@@ -2552,7 +2576,7 @@
     "correct_name": "昇達科",
     "confidence": "high",
     "max_score": 100,
-    "observations": 1,
+    "observations": 2,
     "distinct_videos": 1,
     "video_ids": [
       "6d1e4799-6904-4211-bcdb-192153d0bbbe"
@@ -2577,6 +2601,28 @@
         "context": "今年低軌衛星 大家從1月份 從去年12月份漲到現在 很多人就在等今天 等今天掛牌之後 要先做獲利了解的動作 所以這個賣壓出來 當然也是有一定的一個 邏輯存在 那第二件事情 就是他幾個重點指標股 第一個升達科 對股價還蠻弱的 那我覺得也是因為 整個盤面上資金排擠的效應 因為熱點通用 都在我們剛剛講的 漲價升級的題材 所以對於太空衛星這題材 感覺就是會有點 如果我有辦法去買 美股的SPACEX 我幹嘛來買台灣的供應鏈 但我覺得這個其實 就另外一個角度來講的話 其實我覺得供應鏈的優點 在於說 如果SPACEX好的話 他未來業績 或台灣訂單會同步的成長 所以你反過來想 就是說SPACEX 畢竟他在美股",
         "override_kind": "contextual",
         "override_reason": "scoped context alias",
+        "original_code": "3004",
+        "original_name": "豐達科"
+      },
+      {
+        "video_id": "6d1e4799-6904-4211-bcdb-192153d0bbbe",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-15",
+        "title": "EP1119｜美伊要簽了，油價救了FED開會？今天動能、左側、觀望都有事情做，先買多題材最穩，SpaceX 掛牌，供應鏈還能漲？ft.題材獵人 林漢偉",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context",
+          "strong_sector_match"
+        ],
+        "context": "今年低軌衛星 大家從1月份 從去年12月份漲到現在 很多人就在等今天 等今天掛牌之後 要先做獲利了解的動作 所以這個賣壓出來 當然也是有一定的一個 邏輯存在 那第二件事情 就是他幾個重點指標股 第一個升達科 對股價還蠻弱的 那我覺得也是因為 整個盤面上資金排擠的效應 因為熱點通用 都在我們剛剛講的 漲價升級的題材 所以對於太空衛星這題材 感覺就是會有點 如果我有辦法去買 美股的SPACEX 我幹嘛來買台灣的供應鏈 但我覺得這個其實 就另外一個角度來講的話 其實我覺得供應鏈的優點 在於說 如果SPACEX好的話 他未來業績 或台灣訂單會同步的成長 所以你反過來想 就是說SPACEX 畢竟他在美股",
+        "override_kind": "contextual",
+        "override_reason": "scoped_context_alias",
         "original_code": "3004",
         "original_name": "豐達科"
       }
@@ -2604,7 +2650,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-06-18T21:09:45"
+    "updated_at": "2026-06-20T19:56:48"
   },
   "新商店|6173": {
     "wrong_keyword": "新商店",
@@ -3022,5 +3068,115 @@
       }
     ],
     "updated_at": "2026-06-19T20:03:12"
+  },
+  "連電|2303": {
+    "wrong_keyword": "連電",
+    "correct_code": "2303",
+    "correct_name": "聯電",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "e3633b4f-c3f2-4e69-80a8-42a666834b40"
+    ],
+    "evidence": [
+      {
+        "video_id": "e3633b4f-c3f2-4e69-80a8-42a666834b40",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-16",
+        "title": "EP1120｜再聽到升息導致下跌，都是機會？輝達也發債，軍備競賽不能停！台積電快醒了？設備、被動、CPO最新看法？ft.AI達人 蔡明翰",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "你公司的成長性 上面來做願景 它全部都綁在一起 這個講起來 有脈絡但都綁在一起 但我們還是先回到 台積電身上好了 今天是台電拉尾盤 但是最近說實話 比起其他的股票 甚至比起你看國具 或者是其他的大牛股連電 聯發科大力光 最近超級猛 台積電真的就是 非常的溫和的放在那裡 然後溫和到外資 當然Elysia以前 它不是最主流的外資 可是現在它也是 寒水會解冬 因為大家喜歡聽 喊了都喊不動 台積電現在的問題在哪裡 還是說有人覺得 台積電很容易在法說 會前的半個月開始發動 那因為它是7月中旬 中下旬法說 所以快要進入到發動期了 我這樣講 剛剛講Elysia這種外資的部分 這個 聽聽就好 我會老實講 它是"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2303",
+        "name": "聯電",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "8046",
+        "name": "南電",
+        "score": 0.663,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "6770",
+        "name": "力積電",
+        "score": 0.604,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.333
+      }
+    ],
+    "updated_at": "2026-06-20T19:39:22"
+  },
+  "碩合|3691": {
+    "wrong_keyword": "碩合",
+    "correct_code": "3691",
+    "correct_name": "碩禾",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "6d1e4799-6904-4211-bcdb-192153d0bbbe"
+    ],
+    "evidence": [
+      {
+        "video_id": "6d1e4799-6904-4211-bcdb-192153d0bbbe",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-15",
+        "title": "EP1119｜美伊要簽了，油價救了FED開會？今天動能、左側、觀望都有事情做，先買多題材最穩，SpaceX 掛牌，供應鏈還能漲？ft.題材獵人 林漢偉",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "像的空間 今天晚上在達人秀 我們會講到相關的題材內容 那只是說達人秀裡面 沒有跟大家分享股票 我們就在這個 Pocket是跟大家做一個分享 也就是說 在這個太陽人當中 我覺得有一張股票也蠻有趣的 叫做碩合 碩合 其實你好像蠻親愛碩合的 講過他蠻多次的 對 因為我覺得他這家公司 是非常多的題材 對的話題材 那比較有趣的是 剛剛提到 他上個禮拜有碩合召開了股東會 股東會提到今年 為什麼他第一季賺了2.97元 是因為他的太陽人本業 導電銀漿的關係 因為贏價大漲 所以讓他整個開始轉虧為贏 搭配他有一個子公司叫碩通 那碩通他本身做的是 AI伺服器的散熱材料 跟整體的一個 所謂的散熱的解決方案 所以就比照"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3691",
+        "name": "碩禾",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "1295",
+        "name": "生合",
+        "score": 0.546,
+        "phonetic_similarity": 0.571,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "3617",
+        "name": "碩天",
+        "score": 0.5,
+        "phonetic_similarity": 0.5,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-06-20T19:56:35"
   }
 }
