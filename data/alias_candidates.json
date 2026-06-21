@@ -3178,5 +3178,115 @@
       }
     ],
     "updated_at": "2026-06-20T19:56:35"
+  },
+  "的記|5902": {
+    "wrong_keyword": "的記",
+    "correct_code": "5902",
+    "correct_name": "德記",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "f578af59-6f24-4682-baee-86c94343207e"
+    ],
+    "evidence": [
+      {
+        "video_id": "f578af59-6f24-4682-baee-86c94343207e",
+        "channel": "投資癮",
+        "date": "2026-06-21",
+        "title": "EP334 投資體驗破壞中",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "就是一個非常基礎的要件 其實到目前為止大概兩三個月的大行情來說 基本上你所有看到那些標果都符合右側的形態 只不過在資金輪轉上面要怎麼選擇 就會是考驗到每個投資人的經驗跟首席程度了 像你現在看到的所有的記憶體類國、被動元件類國 光學元件族群、PCB族群 或是工率半導體、IC設計族群等等 都已經符合右側交易的邏輯 它一定會有一支公司特別的強勢 接著帶著整個族群一起強勢 這是產業面輪轉的關係 所以在符合右側邏輯的情況下 這些東西都可能是選擇 但選擇什麼樣的個股呢? 第一個要看排面的觀察 如果整個族群一起上漲 這機會比較大 機會非常的大 這就很有可能成為未來的一線類股 而首席程度也會影響到其中的參考值"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "5902",
+        "name": "德記",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "3466",
+        "name": "德晉",
+        "score": 0.52,
+        "phonetic_similarity": 0.8,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "1464",
+        "name": "得力",
+        "score": 0.488,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-06-21T18:36:08"
+  },
+  "紅海|2317": {
+    "wrong_keyword": "紅海",
+    "correct_code": "2317",
+    "correct_name": "鴻海",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "f578af59-6f24-4682-baee-86c94343207e"
+    ],
+    "evidence": [
+      {
+        "video_id": "f578af59-6f24-4682-baee-86c94343207e",
+        "channel": "投資癮",
+        "date": "2026-06-21",
+        "title": "EP334 投資體驗破壞中",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "階是台積電 它是台灣最賺錢的公司 也是市值最大的公司 另外一個是大力光 它是台灣EPS最高的 而當時股價是最高的 那時候股價台剛超過1000多元而已 我們有100萬 也不可能買進100萬 而第三個就是紅海 紅海就是營售最高的公司 但毛利率三率太低了 它的產業廣度 多到你根本看不清楚 所以最後考量只有台積電而已 那你說那時候買台積電 是不是有特別研究嗎 特別厲害嗎 我自己有什麼交易經驗嗎 但是是沒有的 就是剛好的錢 買進剛好的東西 剛好能理解的東西 直到2021年 再一次注意到大力光的時候 當時他們第一次實施了故場股 之後就開始持續追蹤 那個時候自己已經有點資產的 可以開始去買機這間公司 還可以"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2317",
+        "name": "鴻海",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "1612",
+        "name": "宏泰",
+        "score": 0.557,
+        "phonetic_similarity": 0.857,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "3311",
+        "name": "閎暉",
+        "score": 0.557,
+        "phonetic_similarity": 0.857,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-06-21T18:36:37"
   }
 }
