@@ -93,5 +93,13 @@
     "must_include": ["8454", "2492", "6173", "8163", "6531"],
     "must_exclude": ["3265", "3711", "9910"],
     "must_highlight": ["富方美", "滑星科", "信長店", "達芳", "愛普"]
+  },
+  "ep672_known_segments": {
+    "description": "EP672 已知問題片段：音近修正不得二次否決，validator-only 公司身份必須可解析。",
+    "enable_phonetic_discovery": true,
+    "gemini_results": "ep672_known_segments.json",
+    "must_include": ["2330", "2303", "MU", "TXN", "6770", "2327", "5347", "ON", "STM", "IFNNY", "ROHCY", "VSH"],
+    "must_exclude": ["4968"],
+    "must_highlight": ["立即電", "國具", "安森美", "STM", "英飛凌", "羅姆", "Vishay"]
   }
 }

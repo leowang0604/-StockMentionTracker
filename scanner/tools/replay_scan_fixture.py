@@ -103,6 +103,23 @@ def run_case(scanner, case_id: str, expected: dict) -> tuple[bool, list[str]]:
             video_ctx={"video_id": f"fixture:{case_id}", "channel": "fixture", "date": "", "title": case_id},
             enable_phonetic_discovery=bool(expected.get("enable_phonetic_discovery")),
         ))
+        gemini_fixture = expected.get("gemini_results")
+        if gemini_fixture:
+            gemini_path = FIXTURE_DIR / "gemini" / gemini_fixture
+            gemini_rows = json.loads(gemini_path.read_text(encoding="utf-8"))
+            gemini_hits = scanner._validate_gemini_stocks(
+                gemini_rows,
+                text,
+                video_ctx={
+                    "video_id": f"fixture:{case_id}",
+                    "channel": "fixture",
+                    "date": "",
+                    "title": case_id,
+                },
+            )
+            hits = scanner.deduplicate_hits(
+                scanner._merge_extraction_results(hits, gemini_hits)
+            )
         codes = {hit["stock_code"] for hit in hits}
         keywords = {
             (hit.get("matched_keyword") or "").strip()

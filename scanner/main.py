@@ -594,6 +594,8 @@ def _record_alias_candidate(
             sample["phonetic_top_score"] = phonetic_top_score
         if phonetic_lead is not None:
             sample["phonetic_lead"] = phonetic_lead
+        if override_info and override_info.get("needs_review"):
+            sample["needs_review"] = True
     if sample not in evidence:
         evidence.append(sample)
     max_score = max(score, entry.get("max_score", 0))
@@ -1100,6 +1102,17 @@ _US_STOCKS_DATA: list[tuple[list[str], str, str, str]] = [
     (["Costco", "好市多", "COST"],                     "COST",  "Costco",             "零售電商"),
 ]
 
+# Company identities that Gemini may return explicitly, but which are unsafe
+# as global transcript keywords (short tickers, foreign listings, etc.).
+# These are validator-only: recognize_stocks() still relies on STOCK_DICT.
+_VALIDATOR_ONLY_COMPANIES: list[tuple[list[str], str, str, str, str]] = [
+    (["ON", "onsemi", "ON Semiconductor", "安森美"], "ON", "ON Semi", "US", "半導體"),
+    (["STM", "STMicroelectronics", "意法半導體"], "STM", "STMicroelectronics", "US", "半導體"),
+    (["IFNNY", "Infineon", "英飛凌"], "IFNNY", "Infineon Technologies", "US", "半導體"),
+    (["VSH", "Vishay", "威世"], "VSH", "Vishay Intertechnology", "US", "電子零組件"),
+    (["ROHCY", "ROHM", "羅姆"], "ROHCY", "ROHM", "US", "半導體"),
+]
+
 US_KEYWORD_TO_CODE: dict[str, str] = {}
 US_CODE_TO_INFO:    dict[str, dict] = {}
 for _kws, _ticker, _name, _sector in _US_STOCKS_DATA:
@@ -1301,7 +1314,7 @@ _PHONETIC_DISCOVERY_STOPWORDS: set[str] = {
     "今天", "昨天", "明天", "現在", "之前", "後來", "最近", "目前", "大家", "我們",
     "他們", "這個", "那個", "如果", "因為", "所以", "但是", "可是", "然後", "其實",
     "可能", "應該", "一定", "不會", "沒有", "不是", "就是", "比較", "一個", "兩個",
-    "很多", "一些", "有一", "價和", "價格", "價值", "立華", "起來", "看到", "講到", "想到", "知道", "覺得", "代表", "問題",
+    "很多", "一些", "有一", "價和", "價格", "價值", "立華", "立即", "起來", "看到", "講到", "想到", "知道", "覺得", "代表", "問題",
     "市場", "股票", "股價", "族群", "產業", "公司", "題材", "被動", "主動", "外資",
     "法人", "營收", "訂單", "毛利", "漲停", "跌停", "拉回", "創高", "位階",
 }
@@ -1553,34 +1566,6 @@ def _has_explicit_correction_relation(
     )
 
 
-def _has_plausible_correction_evidence(
-    term: str,
-    *,
-    code: str,
-    resolved_name: str,
-    text: str,
-    override_info: dict | None = None,
-) -> bool:
-    """Compatibility gate backed by the shared correction resolver."""
-    term = (term or "").strip()
-    if not term:
-        return True
-    decision = _resolve_stock_correction(
-        term,
-        context=text,
-        suggested_code=code,
-        policy="validation",
-    )
-    if decision["action"] == "accept" and decision["code"] == code:
-        return True
-    return bool(
-        override_info
-        and override_info.get("override_kind") in {"contextual", "phonetic", "sector"}
-        and decision["action"] == "accept"
-        and decision["code"] == code
-    )
-
-
 _CORRECTION_POLICIES: dict[str, tuple[float, float]] = {
     "discovery": (_PHONETIC_DISCOVERY_MIN_SCORE, _PHONETIC_DISCOVERY_MIN_LEAD),
     "override": (_PHONETIC_OVERRIDE_MIN_SCORE, _PHONETIC_OVERRIDE_MIN_LEAD),
@@ -1621,6 +1606,7 @@ def _resolve_stock_correction(
         "lead": 0.0,
         "reason": "no_supported_candidate",
         "phonetic_candidates": [],
+        "needs_review": False,
     }
     if not normalized_term or not _contains_identity_term(context or "", original_term):
         result["reason"] = "term_missing_from_context"
@@ -1631,7 +1617,12 @@ def _resolve_stock_correction(
 
     rejected = _load_rejected_aliases()
 
-    exact_code = STOCK_DICT.get(original_term) or STOCK_DICT.get(normalized_term)
+    exact_code = (
+        STOCK_DICT.get(original_term)
+        or STOCK_DICT.get(normalized_term)
+        or NAME_TO_CODE.get(original_term)
+        or NAME_TO_CODE.get(normalized_term)
+    )
     if exact_code and f"{original_term}|{exact_code}" not in rejected:
         return {
             **result,
@@ -1760,10 +1751,21 @@ def _resolve_stock_correction(
         policy,
         _CORRECTION_POLICIES["validation"],
     )
-    if has_context and top["score"] >= min_score and lead >= min_lead:
+    accept_score = min_score if policy == "discovery" else min(0.60, min_score)
+    lead_is_sufficient = lead >= min_lead
+    if (
+        has_context
+        and top["score"] >= accept_score
+        and (policy != "discovery" or lead_is_sufficient)
+    ):
         result["action"] = "accept"
-        result["reason"] = "clear_phonetic_winner"
-    elif has_context and top["score"] >= 0.55 and lead >= 0.05:
+        result["needs_review"] = not lead_is_sufficient
+        result["reason"] = (
+            "clear_phonetic_winner"
+            if lead_is_sufficient
+            else "phonetic_top1_needs_review"
+        )
+    elif has_context and top["score"] >= 0.55:
         result["action"] = "review"
         result["reason"] = "plausible_but_not_unique"
     else:
@@ -2809,7 +2811,19 @@ def build_stock_dict(
     for kw, code in stock_dict.items():
         name_to_code[kw] = code
     for code, name in code_to_name.items():
+        name_to_code[code] = code
         name_to_code[name] = code
+
+    # Validator-only identities are intentionally omitted from stock_dict so
+    # short terms such as ON/STM are not matched blindly across transcripts.
+    for identities, code, name, market, sector in _VALIDATOR_ONLY_COMPANIES:
+        code_to_name.setdefault(code, name)
+        stock_market.setdefault(code, market)
+        stock_sector.setdefault(code, sector)
+        name_to_code[code] = code
+        name_to_code[name] = code
+        for identity in identities:
+            name_to_code[identity] = code
 
     return stock_dict, code_to_name, stock_market, stock_sector, name_to_code
 
@@ -3842,7 +3856,10 @@ def _validate_gemini_stocks(
             continue
 
         # ── 防幻覺：確認名稱確實出現在原文 ────────────────────────────
-        stock_keywords = [kw for kw, c in STOCK_DICT.items() if c == resolved_code]
+        stock_keywords = list(dict.fromkeys(
+            [kw for kw, c in STOCK_DICT.items() if c == resolved_code]
+            + [kw for kw, c in NAME_TO_CODE.items() if c == resolved_code]
+        ))
         # Levenshtein 解析時，不能把 Gemini 的 name 當作出現證據
         # （三星電機 ≠ 三洋電，兩者只是字形相近）
         search_names = stock_keywords if lev_resolved else stock_keywords + [name]
@@ -3890,6 +3907,27 @@ def _validate_gemini_stocks(
             suggested_code=resolved_code,
             policy="override",
         )
+        if whisper_orig and correction_decision["action"] != "accept":
+            print(
+                f"  [gemini_extract] correction rejected for"
+                f" {resolved_code}({resolved_name})"
+                f" — {whisper_orig!r}: {correction_decision['reason']}",
+                file=sys.stderr,
+            )
+            _vctx = video_ctx or {}
+            _skip_log.append({
+                "keyword": whisper_orig,
+                "reason": "whisper_correction_rejected",
+                "detail": (
+                    f"統一修正決策拒絕: {whisper_orig}->{resolved_code}/{resolved_name}; "
+                    f"reason={correction_decision['reason']}"
+                ),
+                "video_id": _vctx.get("video_id", ""),
+                "channel": _vctx.get("channel", ""),
+                "date": _vctx.get("date", ""),
+                "title": _vctx.get("title", ""),
+            })
+            continue
         correction_code = correction_decision.get("code")
         if correction_decision["action"] == "accept" and correction_code != resolved_code:
             previous_code = resolved_code
@@ -3924,6 +3962,7 @@ def _validate_gemini_stocks(
             if correction_source == "phonetic":
                 alias_override_info["phonetic_top_score"] = correction_decision["score"]
                 alias_override_info["phonetic_lead"] = correction_decision["lead"]
+                alias_override_info["needs_review"] = correction_decision.get("needs_review", False)
             name = resolved_name
             stock_keywords = [kw for kw, c in STOCK_DICT.items() if c == resolved_code]
             search_names = stock_keywords if lev_resolved else stock_keywords + [name]
@@ -4019,6 +4058,7 @@ def _validate_gemini_stocks(
             and not exact_name_appears
             and fuzzy_name_appears
             and not recovered_phonetic_evidence
+            and correction_decision["action"] != "accept"
         ):
             nearby_other = _nearby_other_stock_keyword(
                 whisper_orig_bare or whisper_orig,
@@ -4226,43 +4266,15 @@ def _validate_gemini_stocks(
             })
             continue
 
-        correction_term = whisper_orig_bare or whisper_orig
-        if (
-            whisper_orig
-            and not _has_plausible_correction_evidence(
-                correction_term,
-                code=resolved_code,
-                resolved_name=resolved_name,
-                text=chunk_text,
-                override_info=alias_override_info,
-            )
-        ):
-            print(
-                f"  [gemini_extract] implausible correction rejected for"
-                f" {resolved_code}({resolved_name})"
-                f" — {whisper_orig!r} lacks local identity or similarity evidence",
-                file=sys.stderr,
-            )
-            _vctx = video_ctx or {}
-            _skip_log.append({
-                "keyword": whisper_orig,
-                "reason":  "whisper_correction_implausible",
-                "detail":  (
-                    f"修正詞附近缺少股票身份、已核准 alias 或足夠相似度證據: "
-                    f"{whisper_orig}->{resolved_code}/{resolved_name}"
-                ),
-                "video_id": _vctx.get("video_id", ""),
-                "channel":  _vctx.get("channel", ""),
-                "date":     _vctx.get("date", ""),
-                "title":    _vctx.get("title", ""),
-            })
-            continue
-
         # 對 Whisper 近音修正再補一層語境證據：
         # 若沒有明確股票名稱，只是靠近音詞或模糊比對撐起來，
         # 就要求 context 附近出現股票討論語境，避免把節目前言/口頭語硬修成股票。
         relies_on_correction = bool(whisper_orig) and not exact_name_appears
-        if relies_on_correction and (_whisper_close or _whisper_bare_close or fuzzy_name_appears):
+        if (
+            relies_on_correction
+            and alias_override_info is None
+            and (_whisper_close or _whisper_bare_close or fuzzy_name_appears)
+        ):
             evidence_text = ctx or chunk_text
             evidence_terms = [t for t in (whisper_orig, whisper_orig_bare) if t]
             if not _has_stock_context_evidence(
@@ -4298,7 +4310,7 @@ def _validate_gemini_stocks(
                 override_info=alias_override_info,
             )
 
-        validated.append({
+        validated_hit = {
             "stock_code":        resolved_code,
             "stock_name":        resolved_name,
             "stock_market":      STOCK_MARKET.get(resolved_code, r.get("market") or "TW"),
@@ -4310,7 +4322,10 @@ def _validate_gemini_stocks(
             "whisper_corrected": bool(whisper_orig),
             "extraction_mode":   "gemini",
             "mention_count":     1,
-        })
+        }
+        if correction_decision.get("needs_review"):
+            validated_hit["correction_needs_review"] = True
+        validated.append(validated_hit)
 
     return validated
 

@@ -4,6 +4,7 @@ import sys
 import tempfile
 import types
 import unittest
+from unittest import mock
 from pathlib import Path
 
 
@@ -404,7 +405,7 @@ class ValidatorRegressionTests(unittest.TestCase):
         )
         self.assertEqual(hits, [])
 
-    def test_correction_requires_local_plausibility_even_if_stock_name_appears_later(self):
+    def test_correction_requires_local_evidence_even_if_stock_name_appears_later(self):
         filler = "這段只是在聊總體市場和節目安排。" * 12
         text = f"代稱最近常被主持人掛在嘴邊。{filler}最後補充，春源今天公布營收。"
         self.scanner._skip_log.clear()
@@ -423,7 +424,7 @@ class ValidatorRegressionTests(unittest.TestCase):
 
         self.assertEqual(hits, [])
         reasons = [entry.get("reason") for entry in self.scanner._skip_log]
-        self.assertIn("whisper_correction_implausible", reasons)
+        self.assertIn("whisper_correction_rejected", reasons)
 
     def test_correction_with_nearby_official_identity_remains_valid(self):
         text = "代稱這個口誤指的是春源，這檔股票今天公布營收。"
@@ -456,7 +457,7 @@ class ValidatorRegressionTests(unittest.TestCase):
         )
         self.assertEqual(hits, [])
         self.assertIn(
-            "whisper_correction_implausible",
+            "whisper_correction_rejected",
             [entry.get("reason") for entry in self.scanner._skip_log],
         )
 
@@ -723,6 +724,55 @@ class ValidatorRegressionTests(unittest.TestCase):
         )
         self.assertEqual(decision["action"], "reject")
         self.assertEqual(decision["reason"], "sector_mismatch")
+
+    def test_shared_resolver_accepts_sixty_percent_top1_with_context_for_review(self):
+        candidates = [
+            {"code": "6770", "name": "力積電", "score": 0.62},
+            {"code": "2330", "name": "台積電", "score": 0.60},
+        ]
+        with mock.patch.object(self.scanner, "_phonetic_alias_candidates", return_value=candidates):
+            decision = self.scanner._resolve_stock_correction(
+                "立即電",
+                context="晶圓代工族群裡面，立即電這檔股票最近訂單與股價都很強。",
+                suggested_code="2330",
+                policy="override",
+            )
+        self.assertEqual(decision["action"], "accept")
+        self.assertEqual(decision["code"], "6770")
+        self.assertTrue(decision["needs_review"])
+        self.assertEqual(decision["reason"], "phonetic_top1_needs_review")
+
+    def test_validator_does_not_reject_an_accepted_resolver_remap_twice(self):
+        text = "晶圓代工族群裡面，立即電這檔股票最近訂單與股價都很強。"
+        candidates = [
+            {"code": "6770", "name": "力積電", "score": 0.62},
+            {"code": "2330", "name": "台積電", "score": 0.60},
+        ]
+        with mock.patch.object(self.scanner, "_phonetic_alias_candidates", return_value=candidates):
+            hits = self.validate_isolated(
+                {
+                    "name": "台積電",
+                    "code": "2330",
+                    "whisper_original": "立即電",
+                    "context": text,
+                    "sentiment": "neutral",
+                    "score": 0.5,
+                },
+                text,
+            )
+        self.assertEqual([hit["stock_code"] for hit in hits], ["6770"])
+        self.assertTrue(hits[0]["correction_needs_review"])
+
+    def test_validator_only_company_registry_resolves_without_global_keyword_scan(self):
+        for identity, code in {
+            "ON": "ON",
+            "STM": "STM",
+            "英飛凌": "IFNNY",
+            "羅姆": "ROHCY",
+            "VSH": "VSH",
+        }.items():
+            self.assertEqual(self.scanner.NAME_TO_CODE.get(identity), code)
+            self.assertNotEqual(self.scanner.STOCK_DICT.get(identity), code)
 
     def test_prescan_filter_skips_existing_item_by_id(self):
         history = {
