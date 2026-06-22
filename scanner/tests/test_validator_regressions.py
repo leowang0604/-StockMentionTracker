@@ -777,6 +777,25 @@ class ValidatorRegressionTests(unittest.TestCase):
         hits = self.scanner.recognize_stocks(text, enable_phonetic_discovery=True)
         self.assertNotIn("3450", [hit["stock_code"] for hit in hits])
 
+    def test_phonetic_discovery_quota_is_spread_across_long_transcript(self):
+        noisy_sections = []
+        for index in range(10):
+            unique_words = " ".join(
+                chr(0x4E00 + index * 80 + offset) + chr(0x4E01 + index * 80 + offset)
+                for offset in range(40)
+            )
+            noisy_sections.append(f"股票市場題材 {unique_words}")
+        text = " ".join(noisy_sections[:5])
+        text += " 晶圓代工題材裡面，艾普這家公司正在擴充矽電容產能。 "
+        text += " ".join(noisy_sections[5:])
+
+        terms = self.scanner._iter_unknown_cjk_terms(text)
+        hits = self.scanner.recognize_stocks(text, enable_phonetic_discovery=True)
+
+        self.assertLessEqual(len(terms), self.scanner._PHONETIC_DISCOVERY_MAX_TERMS)
+        self.assertIn("艾普", [term for term, _ in terms])
+        self.assertIn("6531", [hit["stock_code"] for hit in hits])
+
     def test_missing_whisper_original_can_be_recovered_from_phonetic_evidence(self):
         if self.scanner.lazy_pinyin is None:
             self.skipTest("pypinyin is not installed")

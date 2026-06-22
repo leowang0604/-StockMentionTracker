@@ -1310,6 +1310,7 @@ _PHONETIC_DISCOVERY_MIN_LEAD = 0.12
 _PHONETIC_DISCOVERY_CONTEXT_WINDOW = 90
 _PHONETIC_DISCOVERY_MAX_PER_TEXT = 5
 _PHONETIC_DISCOVERY_MAX_TERMS = 250
+_PHONETIC_DISCOVERY_SEGMENT_CHARS = 500
 _PHONETIC_DISCOVERY_STOPWORDS: set[str] = {
     "今天", "昨天", "明天", "現在", "之前", "後來", "最近", "目前", "大家", "我們",
     "他們", "這個", "那個", "如果", "因為", "所以", "但是", "可是", "然後", "其實",
@@ -1803,31 +1804,137 @@ def _phonetic_discovery_windows(text: str) -> list[tuple[int, int]]:
     return merged
 
 
-def _iter_unknown_cjk_terms(text: str) -> list[tuple[str, int]]:
-    """Extract short unknown Chinese terms near stock context markers."""
-    found: list[tuple[str, int]] = []
-    seen_terms: set[tuple[str, int]] = set()
-    for lo, hi in _phonetic_discovery_windows(text or ""):
-        for run in re.finditer(r"[\u3400-\u9fff]{2,}", text[lo:hi]):
-            raw = run.group()
-            base_pos = lo + run.start()
-            for length in (2, 3, 4):
-                if len(raw) < length:
+def _unknown_cjk_candidates_in_range(
+    text: str,
+    lo: int,
+    hi: int,
+) -> list[tuple[str, int, bool]]:
+    """Return (term, position, is_complete_whisper_token) candidates."""
+    candidates: list[tuple[str, int, bool]] = []
+    for run in re.finditer(r"[\u3400-\u9fff]{2,}", text[lo:hi]):
+        raw = run.group()
+        base_pos = lo + run.start()
+        for length in (2, 3, 4):
+            if len(raw) < length:
+                continue
+            for offset in range(0, len(raw) - length + 1):
+                term = raw[offset:offset + length]
+                if term in _PHONETIC_DISCOVERY_STOPWORDS:
                     continue
-                for offset in range(0, len(raw) - length + 1):
-                    term = raw[offset:offset + length]
-                    pos = base_pos + offset
-                    if term in _PHONETIC_DISCOVERY_STOPWORDS:
-                        continue
-                    if term in STOCK_DICT or term in CODE_TO_NAME.values():
-                        continue
-                    key = (term, pos)
-                    if key not in seen_terms:
-                        seen_terms.add(key)
-                        found.append(key)
-                        if len(found) >= _PHONETIC_DISCOVERY_MAX_TERMS:
-                            return found
-    return found
+                if term in STOCK_DICT or term in CODE_TO_NAME.values():
+                    continue
+                candidates.append((
+                    term,
+                    base_pos + offset,
+                    offset == 0 and length == len(raw),
+                ))
+    return candidates
+
+
+def _spread_candidates(
+    candidates: list[tuple[str, int, bool]],
+    quota: int,
+) -> list[tuple[str, int, bool]]:
+    """Select candidates across the whole segment instead of only its beginning."""
+    by_term: dict[str, dict] = {}
+    for term, pos, is_complete in candidates:
+        info = by_term.setdefault(term, {
+            "term": term,
+            "position": pos,
+            "complete": False,
+            "count": 0,
+        })
+        info["position"] = min(info["position"], pos)
+        info["complete"] = info["complete"] or is_complete
+        info["count"] += 1
+
+    unique = [
+        (info["term"], info["position"], info["complete"], info["count"])
+        for info in by_term.values()
+    ]
+    if len(unique) <= quota:
+        return [
+            (term, pos, is_complete)
+            for term, pos, is_complete, _ in sorted(unique, key=lambda item: item[1])
+        ]
+
+    # Repeated fragments and complete 2–4 character Whisper tokens are much
+    # less noisy than a one-off sliding n-gram. Reserve half the quota for them.
+    ranked = sorted(
+        unique,
+        key=lambda item: (
+            not item[2],  # complete token first
+            -item[3],     # then repeated fragments
+            item[1],
+        ),
+    )
+    priority_count = max(1, quota // 2)
+    selected = ranked[:priority_count]
+    selected_terms = {item[0] for item in selected}
+    remaining = sorted(
+        (item for item in unique if item[0] not in selected_terms),
+        key=lambda item: item[1],
+    )
+
+    def evenly_spaced(
+        pool: list[tuple[str, int, bool, int]],
+        count: int,
+    ) -> list[tuple[str, int, bool, int]]:
+        if count <= 0 or not pool:
+            return []
+        if len(pool) <= count:
+            return pool
+        return [
+            pool[min(len(pool) - 1, (index * len(pool)) // count)]
+            for index in range(count)
+        ]
+
+    selected.extend(evenly_spaced(remaining, quota - len(selected)))
+    return [
+        (term, pos, is_complete)
+        for term, pos, is_complete, _ in sorted(selected, key=lambda item: item[1])
+    ]
+
+
+def _iter_unknown_cjk_terms(text: str) -> list[tuple[str, int]]:
+    """Extract a bounded, transcript-wide sample near stock context markers."""
+    text = text or ""
+    windows = _phonetic_discovery_windows(text)
+    if not windows:
+        return []
+
+    segment_count = max(1, (len(text) + _PHONETIC_DISCOVERY_SEGMENT_CHARS - 1)
+                        // _PHONETIC_DISCOVERY_SEGMENT_CHARS)
+    base_quota, remainder = divmod(_PHONETIC_DISCOVERY_MAX_TERMS, segment_count)
+
+    found: list[tuple[str, int]] = []
+    seen_terms: set[str] = set()
+    for segment_index in range(segment_count):
+        segment_lo = segment_index * _PHONETIC_DISCOVERY_SEGMENT_CHARS
+        segment_hi = min(len(text), segment_lo + _PHONETIC_DISCOVERY_SEGMENT_CHARS)
+        quota = base_quota + (1 if segment_index < remainder else 0)
+        if quota <= 0:
+            continue
+
+        candidates: list[tuple[str, int, bool]] = []
+        for window_lo, window_hi in windows:
+            lo = max(segment_lo, window_lo)
+            hi = min(segment_hi, window_hi)
+            if lo >= hi:
+                continue
+            for candidate in _unknown_cjk_candidates_in_range(text, lo, hi):
+                term = candidate[0]
+                if term in seen_terms:
+                    continue
+                candidates.append(candidate)
+
+        for term, pos, _ in _spread_candidates(candidates, quota):
+            if term in seen_terms:
+                continue
+            seen_terms.add(term)
+            found.append((term, pos))
+
+    return found[:_PHONETIC_DISCOVERY_MAX_TERMS]
 
 
 def _phonetic_discovery_context_ok(text: str, term: str, pos: int) -> bool:
