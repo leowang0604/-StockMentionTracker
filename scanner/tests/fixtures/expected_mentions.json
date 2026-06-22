@@ -101,5 +101,16 @@
     "must_include": ["2330", "2303", "MU", "TXN", "6770", "2327", "5347", "ON", "STM", "IFNNY", "ROHCY", "VSH"],
     "must_exclude": ["4968"],
     "must_highlight": ["立即電", "國具", "安森美", "STM", "英飛凌", "羅姆", "Vishay"]
+  },
+  "repeated_stock_segments": {
+    "description": "同一集遠距離重複提到同一股票時，需保留為多個短 context，且每段可直接 highlight。",
+    "gemini_results": "repeated_stock_segments.json",
+    "must_include": ["2330"],
+    "must_highlight": ["台積電"],
+    "min_segments": {
+      "2330": 2
+    },
+    "max_context_chars": 303,
+    "require_keyword_in_context": true
   }
 }

@@ -182,7 +182,10 @@ struct MentionContext: Codable, Identifiable {
     let extractionMode: String?   // "keyword" | "gemini"
     let whisperCorrected: Bool?
 
-    var id: String { "\(date)_\(video.prefix(20))_\(text.prefix(10))" }
+    // The same episode may discuss one stock in several distant transcript
+    // segments. Use the complete excerpt so SwiftUI does not collapse rows that
+    // happen to share the same first few characters.
+    var id: String { "\(date)_\(video)_\(matchedKeyword ?? "")_\(text)" }
 
     enum CodingKeys: String, CodingKey {
         case video, channel, date, text

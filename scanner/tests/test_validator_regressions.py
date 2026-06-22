@@ -100,6 +100,121 @@ class ValidatorRegressionTests(unittest.TestCase):
         )
         self.assertEqual([hit["stock_code"] for hit in hits], ["2330"])
 
+    def test_gemini_context_is_always_recentered_and_bounded(self):
+        text = ("這是節目前言與閒聊。" * 220) + "接著討論台積電先進製程與三奈米展望。" + ("後續市場說明。" * 80)
+        hits = self.validate(
+            {
+                "name": "台積電",
+                "code": "2330",
+                "context": text,
+                "sentiment": "neutral",
+                "score": 0.5,
+            },
+            text,
+        )
+        self.assertEqual(len(hits), 1)
+        self.assertIn("台積電", hits[0]["context"])
+        self.assertLessEqual(len(hits[0]["context"]), 303)
+        self.assertEqual(hits[0]["position"], text.index("台積電"))
+        self.assertIn(hits[0]["matched_keyword"], hits[0]["context"])
+
+    def test_similar_stock_name_uses_actual_transcript_term(self):
+        text = "前面先談台積電先進製程。" + ("其他市場內容。" * 80) + "後面回到利基電的成熟製程與產能。"
+        hits = self.validate(
+            {
+                "name": "力積電",
+                "code": "6770",
+                "whisper_original": "利基電",
+                "context": "前面先談台積電先進製程。",
+                "sentiment": "bullish",
+                "score": 0.7,
+            },
+            text,
+        )
+        self.assertEqual([hit["stock_code"] for hit in hits], ["6770"])
+        self.assertEqual(hits[0]["matched_keyword"], "利基電")
+        self.assertIn("利基電", hits[0]["context"])
+        self.assertNotIn("台積電", hits[0]["context"])
+
+    def test_merge_preserves_distinct_segments_for_same_stock(self):
+        keyword_hits = [
+            {
+                "stock_code": "2330",
+                "stock_name": "台積電",
+                "stock_market": "TW",
+                "stock_sector": "半導體業",
+                "matched_keyword": "台積電",
+                "context": "第一段談台積電先進製程。",
+                "position": 100,
+                "mention_count": 1,
+            },
+            {
+                "stock_code": "2330",
+                "stock_name": "台積電",
+                "stock_market": "TW",
+                "stock_sector": "半導體業",
+                "matched_keyword": "台積電",
+                "context": "第二段談台積電資本支出。",
+                "position": 500,
+                "mention_count": 1,
+            },
+        ]
+        gemini_hits = [{
+            "stock_code": "2330",
+            "stock_name": "台積電",
+            "stock_market": "TW",
+            "stock_sector": "半導體業",
+            "matched_keyword": "台積電",
+            "context": "第一段談台積電先進製程。",
+            "position": 100,
+            "sentiment": "bullish",
+            "sentiment_score": 0.8,
+            "extraction_mode": "gemini",
+            "mention_count": 1,
+        }]
+
+        hits = self.scanner._merge_extraction_results(keyword_hits, gemini_hits)
+
+        self.assertEqual(len(hits), 2)
+        self.assertEqual([hit["position"] for hit in hits], [100, 500])
+        self.assertTrue(all("台積電" in hit["context"] for hit in hits))
+        self.assertTrue(all(hit["extraction_mode"] == "gemini" for hit in hits))
+
+    def test_second_pass_merge_does_not_collapse_existing_segments(self):
+        base_hits = [
+            {
+                "stock_code": "2330",
+                "stock_name": "台積電",
+                "context": "第一段談台積電先進製程。",
+                "matched_keyword": "台積電",
+                "position": 100,
+                "extraction_mode": "keyword",
+            },
+            {
+                "stock_code": "2330",
+                "stock_name": "台積電",
+                "context": "第二段談台積電資本支出。",
+                "matched_keyword": "台積電",
+                "position": 500,
+                "extraction_mode": "keyword",
+            },
+        ]
+        extra_hits = [{
+            "stock_code": "2330",
+            "stock_name": "台積電",
+            "context": "第一段談台積電先進製程。",
+            "matched_keyword": "台積電",
+            "position": 100,
+            "sentiment": "bullish",
+            "sentiment_score": 0.8,
+            "extraction_mode": "gemini",
+        }]
+
+        hits = self.scanner._merge_additional_hits(base_hits, extra_hits)
+
+        self.assertEqual(len(hits), 2)
+        self.assertEqual([hit["position"] for hit in hits], [100, 500])
+
     def test_confirmed_whisper_alias_keeps_priority_over_gemini_guess(self):
         text = "維印借到很多AI大客戶的單，營收成長但毛利承壓。"
         hits = self.validate(

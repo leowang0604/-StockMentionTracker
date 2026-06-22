@@ -144,6 +144,27 @@ def run_case(scanner, case_id: str, expected: dict) -> tuple[bool, list[str]]:
     for keyword in expected.get("must_not_highlight", []):
         if keyword in keywords:
             errors.append(f"unexpected matched_keyword {keyword!r}")
+    for code, minimum in expected.get("min_segments", {}).items():
+        count = sum(1 for hit in hits if hit["stock_code"] == code)
+        if count < minimum:
+            errors.append(f"expected at least {minimum} segments for {code}, found {count}")
+    max_context_chars = expected.get("max_context_chars")
+    if max_context_chars is not None:
+        oversized = [
+            (hit["stock_code"], len(hit.get("context", "")))
+            for hit in hits
+            if len(hit.get("context", "")) > max_context_chars
+        ]
+        if oversized:
+            errors.append(f"contexts exceed {max_context_chars} chars: {oversized}")
+    if expected.get("require_keyword_in_context"):
+        missing = [
+            (hit["stock_code"], hit.get("matched_keyword", ""))
+            for hit in hits
+            if hit.get("matched_keyword") and hit["matched_keyword"] not in hit.get("context", "")
+        ]
+        if missing:
+            errors.append(f"matched keywords missing from context: {missing}")
 
     if errors:
         found = ", ".join(sorted(codes)) or "none"

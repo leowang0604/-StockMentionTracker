@@ -70,39 +70,6 @@ func mentionHighlightTerms(stockName name: String, code: String, matchedKeyword:
         .sorted { $0.count > $1.count }
 }
 
-private func normalizedHighlightSource(_ text: String) -> String {
-    text.replacingOccurrences(of: "臺", with: "台")
-}
-
-private func containsOnlyCJK(_ text: String) -> Bool {
-    !text.isEmpty && text.unicodeScalars.allSatisfy { scalar in
-        switch scalar.value {
-        case 0x3400...0x4DBF, 0x4E00...0x9FFF, 0xF900...0xFAFF:
-            return true
-        default:
-            return false
-        }
-    }
-}
-
-private func shouldFuzzyMatch(_ term: String) -> Bool {
-    let normalized = normalizedHighlightSource(term)
-    let count = normalized.count
-    return containsOnlyCJK(normalized) && (3...4).contains(count)
-}
-
-private func oneCharOff(_ lhs: String, _ rhs: String) -> Bool {
-    let left = Array(normalizedHighlightSource(lhs))
-    let right = Array(normalizedHighlightSource(rhs))
-    guard left.count == right.count, !left.isEmpty else { return false }
-    var diffCount = 0
-    for (l, r) in zip(left, right) where l != r {
-        diffCount += 1
-        if diffCount > 1 { return false }
-    }
-    return diffCount == 1
-}
-
 private func highlightRange(
     _ attributed: inout AttributedString,
     offset: Int,
@@ -113,6 +80,24 @@ private func highlightRange(
     attributed[lo..<hi].foregroundColor = .black
     attributed[lo..<hi].backgroundColor = Color.yellow.opacity(0.9)
     attributed[lo..<hi].inlinePresentationIntent = .stronglyEmphasized
+}
+
+/// Keeps legacy oversized scanner contexts readable until their source episode
+/// is replayed. New scanner output is already bounded to the same 303 characters.
+func mentionExcerpt(_ raw: String, terms: [String], maxCharacters: Int = 303) -> String? {
+    let ranges = terms.compactMap { term -> Range<String.Index>? in
+        guard !term.isEmpty else { return nil }
+        return raw.range(of: term, options: .caseInsensitive)
+    }
+    guard let firstMatch = ranges.min(by: { $0.lowerBound < $1.lowerBound }) else {
+        return nil
+    }
+
+    guard raw.count > maxCharacters else { return raw }
+    let matchOffset = raw.distance(from: raw.startIndex, to: firstMatch.lowerBound)
+    let startOffset = max(0, matchOffset - 100)
+    let start = raw.index(raw.startIndex, offsetBy: startOffset)
+    return String(raw[start...].prefix(maxCharacters))
 }
 
 func highlightedMentionText(_ raw: String, terms: [String]) -> AttributedString {
@@ -127,21 +112,6 @@ func highlightedMentionText(_ raw: String, terms: [String]) -> AttributedString 
             searchFrom = found.upperBound
         }
 
-        guard shouldFuzzyMatch(term) else { continue }
-
-        let termChars = Array(term)
-        let rawChars = Array(raw)
-        let windowSize = termChars.count
-        guard rawChars.count >= windowSize else { continue }
-
-        for start in 0...(rawChars.count - windowSize) {
-            let candidate = String(rawChars[start..<(start + windowSize)])
-            if candidate.caseInsensitiveCompare(term) == .orderedSame {
-                continue
-            }
-            guard oneCharOff(candidate, term) else { continue }
-            highlightRange(&attributed, offset: start, length: windowSize)
-        }
     }
     return attributed
 }

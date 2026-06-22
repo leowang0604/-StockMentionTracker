@@ -170,20 +170,29 @@ private struct VideoStockRow: View {
 
             if isExpanded {
                 ForEach(stock.contexts.filter { !$0.text.isEmpty }) { context in
+                    let terms = mentionHighlightTerms(
+                        stockName: stock.name,
+                        code: stock.code,
+                        matchedKeyword: context.matchedKeyword
+                    )
                     VStack(alignment: .leading, spacing: 4) {
                         Text("提及原文")
                             .font(.caption.weight(.medium)).foregroundStyle(.secondary)
-                        Text(highlightedMentionText(
-                            "…\(context.text)…",
-                            terms: mentionHighlightTerms(
-                                stockName: stock.name,
-                                code: stock.code,
-                                matchedKeyword: context.matchedKeyword
-                            )
-                        ))
-                        .font(.caption)
-                        .padding(10)
-                        .background(.quaternary, in: RoundedRectangle(cornerRadius: 8))
+                        if let excerpt = mentionExcerpt(context.text, terms: terms) {
+                            Text(highlightedMentionText(
+                                "…\(excerpt)…",
+                                terms: terms
+                            ))
+                            .font(.caption)
+                            .padding(10)
+                            .background(.quaternary, in: RoundedRectangle(cornerRadius: 8))
+                        } else {
+                            Text("此筆舊資料找不到對應的原文命中詞，等待重新掃描更新。")
+                                .font(.caption)
+                                .foregroundStyle(.orange)
+                                .padding(10)
+                                .background(.quaternary, in: RoundedRectangle(cornerRadius: 8))
+                        }
                     }
                 }
             }

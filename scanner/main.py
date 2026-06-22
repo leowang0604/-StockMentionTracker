@@ -3110,6 +3110,39 @@ def deduplicate_hits(hits: list[dict]) -> list[dict]:
     return result
 
 
+def _mention_context_window(
+    text: str,
+    position: int,
+    term: str,
+    *,
+    before: int = 100,
+    after: int = 200,
+) -> str:
+    """Return a bounded excerpt with the matched term kept near the first third."""
+    if position < 0 or position >= len(text):
+        return ""
+    start = max(0, position - before)
+    end = min(len(text), position + len(term) + after)
+    return text[start:end].replace("\n", " ").strip()
+
+
+def _keyword_position_in_evidence(
+    term: str,
+    transcript: str,
+    evidence: str,
+    *,
+    allow_fuzzy: bool,
+) -> int:
+    """Locate a term in the transcript, preferring the Gemini evidence excerpt."""
+    if evidence:
+        evidence_start = transcript.find(evidence)
+        if evidence_start >= 0:
+            local_pos = _find_keyword_pos(term, evidence, allow_fuzzy=allow_fuzzy)
+            if local_pos >= 0:
+                return evidence_start + local_pos
+    return _find_keyword_pos(term, transcript, allow_fuzzy=allow_fuzzy)
+
+
 # ─────────────────────────────────────────────────────────────────────────────
 # Method B: Gemini LLM-based stock extraction utilities
 # ─────────────────────────────────────────────────────────────────────────────
@@ -4118,7 +4151,9 @@ def _validate_gemini_stocks(
             or _whisper_close and _contains_identity_term(ctx, whisper_orig)
             or _whisper_bare_close and _contains_identity_term(ctx, whisper_orig_bare)
         )
-        # Always re-center context on matched term in full transcript for better window size.
+        # Always re-center context on the matched term in the full transcript.
+        # Gemini occasionally returns the entire transcript as `context`; keeping it
+        # makes the highlight appear thousands of characters below the visible row.
         # Use _find_keyword_pos for 臺/台 normalization + Levenshtein ≤ 1 fuzzy fallback.
         search_term = None
         search_pos  = -1
@@ -4130,19 +4165,39 @@ def _validate_gemini_stocks(
             (candidate, True) for candidate in (stock_keywords + [resolved_name])
         ]
         for candidate, allow_fuzzy in search_candidates:
-            p = _find_keyword_pos(candidate, chunk_text, allow_fuzzy=allow_fuzzy)
+            p = _keyword_position_in_evidence(
+                candidate,
+                chunk_text,
+                ctx,
+                allow_fuzzy=allow_fuzzy,
+            )
             if p >= 0:
                 search_term, search_pos = candidate, p
                 break
-        gemini_ctx = ctx  # preserve Gemini's original context only when it clearly matches the stock
-        if not ctx or not ctx_has_keyword or (search_pos >= 0 and len(ctx) < 80):
-            # Use transcript-based context when Gemini's is missing, wrong, or too short
-            if search_pos >= 0:
-                ctx = chunk_text[max(0, search_pos - 100):search_pos + len(search_term) + 200]
-            elif ctx_has_keyword and gemini_ctx:
-                ctx = gemini_ctx
-            else:
-                ctx = ""
+        gemini_ctx = ctx
+        if search_pos >= 0:
+            ctx = _mention_context_window(chunk_text, search_pos, search_term)
+        elif ctx_has_keyword and gemini_ctx:
+            # Defensive fallback for normalized/fuzzy evidence that could not be
+            # anchored in the transcript. Still cap it around its local identity.
+            local_term = next(
+                (
+                    candidate
+                    for candidate in search_names + [whisper_orig, whisper_orig_bare]
+                    if candidate and _find_keyword_pos(candidate, gemini_ctx, allow_fuzzy=False) >= 0
+                ),
+                "",
+            )
+            local_pos = _find_keyword_pos(local_term, gemini_ctx, allow_fuzzy=False) if local_term else -1
+            ctx = _mention_context_window(gemini_ctx, local_pos, local_term) if local_pos >= 0 else ""
+        else:
+            ctx = ""
+
+        matched_context_term = ""
+        if search_pos >= 0 and search_term:
+            matched_context_term = chunk_text[search_pos:search_pos + len(search_term)]
+        if ctx and matched_context_term and matched_context_term not in ctx:
+            ctx = ""
 
         if not ctx:
             print(f"  [gemini_extract] context rejected for {resolved_code}({resolved_name}) — no reliable keyword-aligned excerpt", file=sys.stderr)
@@ -4315,13 +4370,14 @@ def _validate_gemini_stocks(
             "stock_name":        resolved_name,
             "stock_market":      STOCK_MARKET.get(resolved_code, r.get("market") or "TW"),
             "stock_sector":      STOCK_SECTOR.get(resolved_code),
-            "matched_keyword":   whisper_orig or name,
+            "matched_keyword":   matched_context_term or whisper_orig or name,
             "context":           ctx,
             "sentiment":         sentiment,
             "sentiment_score":   score,
             "whisper_corrected": bool(whisper_orig),
             "extraction_mode":   "gemini",
             "mention_count":     1,
+            "position":          search_pos,
         }
         if correction_decision.get("needs_review"):
             validated_hit["correction_needs_review"] = True
@@ -4401,23 +4457,14 @@ def _gemini_extract_full_video(
         return None
 
     validated = _validate_gemini_stocks(parsed, text, video_ctx=video_ctx)
-    for hit in validated:
-        hit["position"] = 0  # single call, no chunk offset
-
-    # 去重（同一支股票）
-    by_code: dict[str, dict] = {}
-    for hit in validated:
-        code = hit["stock_code"]
-        if code not in by_code:
-            by_code[code] = dict(hit)
-        else:
-            existing = by_code[code]
-            existing["mention_count"] = existing.get("mention_count", 1) + 1
-            if len(hit.get("context", "")) > len(existing.get("context", "")):
-                existing["context"] = hit["context"]
-
-    result = list(by_code.values())
-    print(f"  [gemini_extract] full-video → {len(result)} stocks", file=sys.stderr)
+    # Only collapse overlapping mentions. Distinct positions of the same stock
+    # remain separate rows so the app can display each discussion segment.
+    result = deduplicate_hits(validated) if validated else []
+    unique_codes = len({hit["stock_code"] for hit in result})
+    print(
+        f"  [gemini_extract] full-video → {unique_codes} stocks / {len(result)} segments",
+        file=sys.stderr,
+    )
     return result
 
 
@@ -4427,65 +4474,109 @@ def _merge_extraction_results(
 ) -> list[dict]:
     """
     合併關鍵字命中 + Gemini 命中。
-    - Gemini 結果優先（情緒更準、含 Whisper 修正）
-    - Keyword 補充 Gemini 沒找到的冷門股
-    - 相同代號：用 Gemini 情緒，但若 keyword context 較長則保留
+    - Keyword 的每個不重疊位置都是一個顯示段落，不以股票代號合併
+    - Gemini 補上情緒與修正資訊，但不覆蓋已定位好的短 context
+    - Gemini-only 的音近命中若不與 keyword 段落重疊，仍保留為獨立段落
     """
     if not hits_gemini:
         for h in hits_keyword:
             h.setdefault("extraction_mode", "keyword")
         return hits_keyword
 
-    gemini_codes = {h["stock_code"] for h in hits_gemini}
+    gemini_by_code: dict[str, list[dict]] = {}
+    for hit in hits_gemini:
+        gemini_by_code.setdefault(hit["stock_code"], []).append(hit)
+
     merged: list[dict] = []
+    keyword_positions: dict[str, list[int]] = {}
+    for keyword_hit in hits_keyword:
+        code = keyword_hit["stock_code"]
+        keyword_positions.setdefault(code, []).append(keyword_hit.get("position", -1))
+        gemini_matches = gemini_by_code.get(code, [])
+        if not gemini_matches:
+            hit = dict(keyword_hit)
+            hit.setdefault("extraction_mode", "keyword")
+            merged.append(hit)
+            continue
 
-    # Gemini 結果優先
-    keyword_by_code: dict[str, dict] = {h["stock_code"]: h for h in hits_keyword}
-    for h in hits_gemini:
-        code = h["stock_code"]
-        kw_hit = keyword_by_code.get(code)
-        if kw_hit and len(kw_hit.get("context", "")) > len(h.get("context", "")):
-            h = dict(h)
-            h["context"] = kw_hit["context"]
-        merged.append(h)
+        position = keyword_hit.get("position", -1)
+        representative = min(
+            gemini_matches,
+            key=lambda hit: abs(hit.get("position", position) - position)
+            if hit.get("position", -1) >= 0 and position >= 0
+            else 0,
+        )
+        hit = dict(keyword_hit)
+        for field in (
+            "sentiment",
+            "sentiment_score",
+            "whisper_corrected",
+            "correction_needs_review",
+        ):
+            if field in representative:
+                hit[field] = representative[field]
+        hit["extraction_mode"] = "gemini"
+        merged.append(hit)
 
-    # Keyword 補充（Gemini 沒有的）
-    for h in hits_keyword:
-        if h["stock_code"] not in gemini_codes:
-            h = dict(h)
-            h.setdefault("extraction_mode", "keyword")
-            merged.append(h)
+    for gemini_hit in hits_gemini:
+        code = gemini_hit["stock_code"]
+        position = gemini_hit.get("position", -1)
+        overlaps_keyword = any(
+            position >= 0 and keyword_position >= 0
+            and abs(position - keyword_position) < CONTEXT_CHARS
+            for keyword_position in keyword_positions.get(code, [])
+        )
+        if not overlaps_keyword:
+            merged.append(dict(gemini_hit))
 
-    return merged
+    return deduplicate_hits(merged)
 
 
 def _merge_additional_hits(base_hits: list[dict], extra_hits: list[dict] | None) -> list[dict]:
-    """Merge extra hits into an existing hit list, preferring Gemini-quality fields."""
+    """Merge second-pass hits without collapsing distinct same-stock segments."""
     if not extra_hits:
         return base_hits
 
-    merged_by_code: dict[str, dict] = {h["stock_code"]: dict(h) for h in base_hits}
-    ordered_codes = [h["stock_code"] for h in base_hits]
-
-    for h in extra_hits:
-        code = h["stock_code"]
-        existing = merged_by_code.get(code)
-        if not existing:
-            merged_by_code[code] = dict(h)
-            ordered_codes.append(code)
+    merged = [dict(hit) for hit in base_hits]
+    for extra in extra_hits:
+        code = extra["stock_code"]
+        matching_indices = [
+            index for index, hit in enumerate(merged)
+            if hit["stock_code"] == code
+        ]
+        if not matching_indices:
+            merged.append(dict(extra))
             continue
 
-        merged = dict(existing)
-        if len(h.get("context", "")) > len(existing.get("context", "")):
-            merged["context"] = h["context"]
-        if h.get("extraction_mode") == "gemini":
-            for field in ("sentiment", "sentiment_score", "matched_keyword", "whisper_corrected", "stock_name", "stock_market", "stock_sector"):
-                if field in h and h[field] not in (None, ""):
-                    merged[field] = h[field]
-            merged["extraction_mode"] = "gemini"
-        merged_by_code[code] = merged
+        extra_position = extra.get("position", -1)
+        overlaps_existing = any(
+            extra_position >= 0
+            and merged[index].get("position", -1) >= 0
+            and abs(extra_position - merged[index]["position"]) < CONTEXT_CHARS
+            for index in matching_indices
+        )
 
-    return [merged_by_code[code] for code in ordered_codes]
+        for index in matching_indices:
+            existing = dict(merged[index])
+            if extra.get("extraction_mode") == "gemini":
+                for field in (
+                    "sentiment",
+                    "sentiment_score",
+                    "whisper_corrected",
+                    "correction_needs_review",
+                    "stock_name",
+                    "stock_market",
+                    "stock_sector",
+                ):
+                    if field in extra and extra[field] not in (None, ""):
+                        existing[field] = extra[field]
+                existing["extraction_mode"] = "gemini"
+            merged[index] = existing
+
+        if not overlaps_existing:
+            merged.append(dict(extra))
+
+    return deduplicate_hits(merged)
 
 
 def _second_pass_candidate_codes(
@@ -5565,6 +5656,8 @@ def merge_into_history(
             ctx_entry["extraction_mode"] = m["extraction_mode"]
         if m.get("whisper_corrected"):
             ctx_entry["whisper_corrected"] = True
+        if m.get("mention_count", 1) > 1:
+            ctx_entry["mention_count"] = m["mention_count"]
         ctxs = merged_stocks[code]["contexts"]
         ctxs.append(ctx_entry)
         # Sliding window: keep only the most recent MAX_CONTEXTS_PER_STOCK entries

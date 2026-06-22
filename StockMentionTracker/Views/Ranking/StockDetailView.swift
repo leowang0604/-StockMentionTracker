@@ -301,9 +301,15 @@ struct ContextRowView: View {
                 .buttonStyle(.plain)
 
                 if isExpanded {
-                    Text(highlightedMentionText("…\(context.text)…", terms: highlightTerms))
-                        .font(.caption)
-                        .multilineTextAlignment(.leading)
+                    if let excerpt = mentionExcerpt(context.text, terms: highlightTerms) {
+                        Text(highlightedMentionText("…\(excerpt)…", terms: highlightTerms))
+                            .font(.caption)
+                            .multilineTextAlignment(.leading)
+                    } else {
+                        Text("此筆舊資料找不到對應的原文命中詞，等待重新掃描更新。")
+                            .font(.caption)
+                            .foregroundStyle(.orange)
+                    }
                 }
             }
         }
