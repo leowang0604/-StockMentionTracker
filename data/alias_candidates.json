@@ -3075,9 +3075,10 @@
     "correct_name": "聯電",
     "confidence": "high",
     "max_score": 100,
-    "observations": 1,
-    "distinct_videos": 1,
+    "observations": 2,
+    "distinct_videos": 2,
     "video_ids": [
+      "607efbec-24f7-480a-b5a2-f65a1a383a36",
       "e3633b4f-c3f2-4e69-80a8-42a666834b40"
     ],
     "evidence": [
@@ -3097,6 +3098,23 @@
           "stock_context"
         ],
         "context": "你公司的成長性 上面來做願景 它全部都綁在一起 這個講起來 有脈絡但都綁在一起 但我們還是先回到 台積電身上好了 今天是台電拉尾盤 但是最近說實話 比起其他的股票 甚至比起你看國具 或者是其他的大牛股連電 聯發科大力光 最近超級猛 台積電真的就是 非常的溫和的放在那裡 然後溫和到外資 當然Elysia以前 它不是最主流的外資 可是現在它也是 寒水會解冬 因為大家喜歡聽 喊了都喊不動 台積電現在的問題在哪裡 還是說有人覺得 台積電很容易在法說 會前的半個月開始發動 那因為它是7月中旬 中下旬法說 所以快要進入到發動期了 我這樣講 剛剛講Elysia這種外資的部分 這個 聽聽就好 我會老實講 它是"
+      },
+      {
+        "video_id": "607efbec-24f7-480a-b5a2-f65a1a383a36",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-22",
+        "title": "EP1123｜美伊再吵就看油價，不怕！台積電進入法說發動圈，聯電、世界漲停，先進和成熟製程都缺，大小股都漲，台灣主場很健康？ft.林漢偉.股魚",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "月內 這是他通常行情 最容易發動的時候 再加上前一段時間 幾乎都沒有大漲過 所以他算是最便宜的 領頭羊型的好股票 不能說他領頭羊 一流也小路 就是神山 那麼大的世界地位 台灣地位可是卻最便宜 不過今天連電世界漲 可能有這方面的力度 他們會提升 可是顯然大家一定也不覺得 不可能搬到台積電 所以台積電也漲 因為他太便宜了 這樣的盤 就是剛剛漢文講的非常健康 對啊 所以我覺得這個當然也跟整個 美股的一個強勢股票 他有關 因為英特爾先創而歷史新高 中美關也創而歷史新高 其實在上個禮拜的 費城辦案指數長了6個百分點 那研究機構有一點統系 上禮拜費城辦案指數 30檔股票裡面 有12檔股票是創而歷史新高 那"
       }
     ],
     "phonetic_candidates": [
@@ -3122,7 +3140,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-06-20T19:39:22"
+    "updated_at": "2026-06-22T20:18:39"
   },
   "碩合|3691": {
     "wrong_keyword": "碩合",
@@ -3288,5 +3306,130 @@
       }
     ],
     "updated_at": "2026-06-21T18:36:37"
+  },
+  "艾普|6531": {
+    "wrong_keyword": "艾普",
+    "correct_code": "6531",
+    "correct_name": "愛普*",
+    "confidence": "high",
+    "max_score": 97,
+    "observations": 2,
+    "distinct_videos": 1,
+    "video_ids": [
+      "607efbec-24f7-480a-b5a2-f65a1a383a36"
+    ],
+    "evidence": [
+      {
+        "video_id": "",
+        "channel": "",
+        "date": "",
+        "title": "",
+        "source": "phonetic-discovery",
+        "score": 97,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "佊佋 佋佌 佌位 位低 低住 住佐 佐佑 佑佒 佒体 体佔 佔何 何佖 佖佗 佗佘 佘余 余佚 佚佛 佛作 作佝 佝佞 佞佟 佟你 你佡 佡佢 佢佣 佣佤 佤佥 佥佦 佦佧 佧佨 晶圓代工題材裡面，艾普這家公司正在擴充矽電容產能。 股票市場題材 侐侑 侑侒 侒侓 侓侔 侔侕 侕侖 侖侗 侗侘 侘侙 侙侚 侚供 供侜 侜依 依侞 侞侟 侟侠 侠価 価侢 侢侣 侣侤 侤侥 侥侦 侦侧 侧侨 侨侩 侩侪 侪侫 侫侬 侬侭 侭侮 侮侯 侯侰 侰侱 侱侲 侲侳 侳侴 侴侵 侵侶 侶侷 侷侸 股票市場題材 俠信 信俢 俢俣 俣俤 俤俥 俥俦 俦俧 俧俨 俨俩 俩俪 俪俫 俫俬 俬俭 俭修 修俯 俯俰 俰俱"
+      },
+      {
+        "video_id": "607efbec-24f7-480a-b5a2-f65a1a383a36",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-22",
+        "title": "EP1123｜美伊再吵就看油價，不怕！台積電進入法說發動圈，聯電、世界漲停，先進和成熟製程都缺，大小股都漲，台灣主場很健康？ft.林漢偉.股魚",
+        "source": "phonetic-discovery",
+        "score": 97,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "路搶到現在 那沒有關係 旺宏對不對 旺宏終於起來創了一個小新高 對 他創了一個新高 然後立基店也是大家 等了很久股票 今天也是漲停辦創下這個 短波段的高點 還沒有過濾的高 但你看今天立基店的立金集團 艾普是漲停辦 艾普 對 開開關關 但是艾普的業績是好的 這邊繼續跟大家分享 而且他題材也算不錯 有西電農題材 而且相關的S任未來的一個基體 他的所謂的想像空間 我覺得是非常大 所以你可以看到 就是記憶族群當中 有集團的加持股票特別的強 所以今天我覺得基體的代表 就是所謂的台塑集團 所以今天南亞一次要擴散平台 南亞是因為大模出了報告 看到200塊 但之前確實 我有不錯的朋友 蠻厲害抓到第一根 他那時"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "6531",
+        "name": "愛普*",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "3088",
+        "name": "艾訊",
+        "score": 0.565,
+        "phonetic_similarity": 0.6,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "6121",
+        "name": "新普",
+        "score": 0.565,
+        "phonetic_similarity": 0.6,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-06-22T20:18:41"
+  },
+  "利基電|6770": {
+    "wrong_keyword": "利基電",
+    "correct_code": "6770",
+    "correct_name": "力積電",
+    "confidence": "high",
+    "max_score": 97,
+    "observations": 1,
+    "distinct_videos": 0,
+    "video_ids": [],
+    "evidence": [
+      {
+        "video_id": "",
+        "channel": "",
+        "date": "",
+        "title": "",
+        "source": "full_video_validator",
+        "score": 97,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "市場內容。其他市場內容。其他市場內容。其他市場內容。其他市場內容。其他市場內容。其他市場內容。其他市場內容。其他市場內容。其他市場內容。其他市場內容。其他市場內容。其他市場內容。其他市場內容。後面回到利基電的成熟製程與產能。"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "6770",
+        "name": "力積電",
+        "score": 0.767,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "2330",
+        "name": "台積電",
+        "score": 0.622,
+        "phonetic_similarity": 0.778,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "2303",
+        "name": "聯電",
+        "score": 0.604,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.333
+      }
+    ],
+    "updated_at": "2026-06-22T19:59:01"
   }
 }
