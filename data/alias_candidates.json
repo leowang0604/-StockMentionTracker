@@ -2701,61 +2701,6 @@
     ],
     "wrong_keyword" : "立的"
   },
-  "紅海|2317" : {
-    "confidence" : "high",
-    "correct_code" : "2317",
-    "correct_name" : "鴻海",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "投資癮",
-        "context" : "階是台積電 它是台灣最賺錢的公司 也是市值最大的公司 另外一個是大力光 它是台灣EPS最高的 而當時股價是最高的 那時候股價台剛超過1000多元而已 我們有100萬 也不可能買進100萬 而第三個就是紅海 紅海就是營售最高的公司 但毛利率三率太低了 它的產業廣度 多到你根本看不清楚 所以最後考量只有台積電而已 那你說那時候買台積電 是不是有特別研究嗎 特別厲害嗎 我自己有什麼交易經驗嗎 但是是沒有的 就是剛好的錢 買進剛好的東西 剛好能理解的東西 直到2021年 再一次注意到大力光的時候 當時他們第一次實施了故場股 之後就開始持續追蹤 那個時候自己已經有點資產的 可以開始去買機這間公司 還可以",
-        "date" : "2026-06-21",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "name_distance<=1",
-          "phonetic_top1",
-          "stock_context"
-        ],
-        "score" : 100,
-        "source" : "full_video_validator",
-        "title" : "EP334 投資體驗破壞中",
-        "video_id" : "f578af59-6f24-4682-baee-86c94343207e"
-      }
-    ],
-    "max_score" : 100,
-    "observations" : 1,
-    "phonetic_candidates" : [
-      {
-        "code" : "2317",
-        "name" : "鴻海",
-        "phonetic_similarity" : 1,
-        "score" : 0.825,
-        "text_similarity" : 0.5
-      },
-      {
-        "code" : "1612",
-        "name" : "宏泰",
-        "phonetic_similarity" : 0.857,
-        "score" : 0.557,
-        "text_similarity" : 0
-      },
-      {
-        "code" : "3311",
-        "name" : "閎暉",
-        "phonetic_similarity" : 0.857,
-        "score" : 0.557,
-        "text_similarity" : 0
-      }
-    ],
-    "updated_at" : "2026-06-21T18:36:37",
-    "video_ids" : [
-      "f578af59-6f24-4682-baee-86c94343207e"
-    ],
-    "wrong_keyword" : "紅海"
-  },
   "經向店|2308" : {
     "confidence" : "medium",
     "correct_code" : "2308",
