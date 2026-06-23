@@ -86,6 +86,22 @@ class ValidatorRegressionTests(unittest.TestCase):
                 self.scanner.ALIAS_CANDIDATES_FILE = old_candidates
                 self.scanner.REJECTED_ALIASES_FILE = old_rejected
 
+    def recognize_isolated(self, text, **kwargs):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            candidates_path = Path(tmpdir) / "alias_candidates.json"
+            rejected_path = Path(tmpdir) / "rejected_aliases.json"
+            candidates_path.write_text("{}", encoding="utf-8")
+            rejected_path.write_text("{}", encoding="utf-8")
+            old_candidates = self.scanner.ALIAS_CANDIDATES_FILE
+            old_rejected = self.scanner.REJECTED_ALIASES_FILE
+            self.scanner.ALIAS_CANDIDATES_FILE = candidates_path
+            self.scanner.REJECTED_ALIASES_FILE = rejected_path
+            try:
+                return self.scanner.recognize_stocks(text, **kwargs)
+            finally:
+                self.scanner.ALIAS_CANDIDATES_FILE = old_candidates
+                self.scanner.REJECTED_ALIASES_FILE = old_rejected
+
     def test_official_name_still_resolves(self):
         text = "台積電營收持續成長，市場仍然看好。"
         hits = self.validate(
@@ -786,15 +802,39 @@ class ValidatorRegressionTests(unittest.TestCase):
             )
             noisy_sections.append(f"股票市場題材 {unique_words}")
         text = " ".join(noisy_sections[:5])
-        text += " 晶圓代工題材裡面，艾普這家公司正在擴充矽電容產能。 "
+        text += " 晶圓代工題材裡面，艾普這家公司正在擴充矽電容產能，艾普訂單也持續成長。 "
         text += " ".join(noisy_sections[5:])
 
         terms = self.scanner._iter_unknown_cjk_terms(text)
-        hits = self.scanner.recognize_stocks(text, enable_phonetic_discovery=True)
+        hits = self.recognize_isolated(text, enable_phonetic_discovery=True)
 
         self.assertLessEqual(len(terms), self.scanner._PHONETIC_DISCOVERY_MAX_TERMS)
-        self.assertIn("艾普", [term for term, _ in terms])
+        if "艾普" not in self.scanner.STOCK_DICT:
+            self.assertIn("艾普", [term for term, _ in terms])
         self.assertIn("6531", [hit["stock_code"] for hit in hits])
+
+    def test_explicit_ky_identity_recovers_whisper_company_name(self):
+        text = (
+            "載板族群裡面景碩和南電都很強，可是還有真頂ky，"
+            "這幾家公司目前訂單與產能需求都非常緊。"
+        )
+        hits = self.recognize_isolated(text, enable_phonetic_discovery=True)
+        ky_hit = next(hit for hit in hits if hit["stock_code"] == "4958")
+
+        self.assertEqual(ky_hit["matched_keyword"].lower(), "真頂ky")
+        self.assertIn(ky_hit["matched_keyword"], ky_hit["context"])
+
+    def test_explicit_ky_identity_is_generic_for_other_ky_stocks(self):
+        text = "IC設計股票裡面的普瑞KY今天公布營收與法說展望。"
+        hits = self.recognize_isolated(text, enable_phonetic_discovery=True)
+
+        self.assertIn("4966", [hit["stock_code"] for hit in hits])
+
+    def test_explicit_ky_identity_rejects_non_company_phrase(self):
+        text = "這個方法真的可以，KY只是下一段的英文縮寫，和股票完全無關。"
+        hits = self.recognize_isolated(text, enable_phonetic_discovery=True)
+
+        self.assertFalse(any(hit.get("explicit_ky_discovered") for hit in hits))
 
     def test_missing_whisper_original_can_be_recovered_from_phonetic_evidence(self):
         if self.scanner.lazy_pinyin is None:

@@ -361,6 +361,40 @@ def _phonetic_alias_candidates(wrong_keyword: str, limit: int = 3) -> list[dict]
     return sorted(candidates, key=lambda item: (-item["score"], item["code"], item["name"]))[:limit]
 
 
+def _explicit_ky_candidates(source_term: str, limit: int = 3) -> list[dict]:
+    """Rank only official -KY companies against a transcript name core."""
+    source_phonetic = _phonetic_key(source_term)
+    if not source_phonetic:
+        return []
+
+    candidates: list[dict] = []
+    for code, name in CODE_TO_NAME.items():
+        if (
+            STOCK_MARKET.get(code) != "TW"
+            or not re.search(r"[-－]KY$", name, flags=re.IGNORECASE)
+        ):
+            continue
+        name_core = re.sub(r"[-－]KY$", "", name, flags=re.IGNORECASE).strip()
+        name_phonetic = _phonetic_key(name_core)
+        phonetic_similarity = _similarity(source_phonetic, name_phonetic)
+        text_similarity = _similarity(
+            _phonetic_stock_name(source_term),
+            _phonetic_stock_name(name_core),
+        )
+        candidates.append({
+            "code": code,
+            "name": name,
+            "source_term": source_term,
+            "score": round(0.2 * text_similarity + 0.8 * phonetic_similarity, 3),
+            "phonetic_similarity": round(phonetic_similarity, 3),
+            "text_similarity": round(text_similarity, 3),
+        })
+    return sorted(
+        candidates,
+        key=lambda item: (-item["score"], item["code"], item["name"]),
+    )[:limit]
+
+
 _PHONETIC_OVERRIDE_MIN_SCORE = 0.65
 _PHONETIC_OVERRIDE_MIN_LEAD = 0.10
 
@@ -1917,6 +1951,7 @@ def _iter_unknown_cjk_terms(text: str) -> list[tuple[str, int]]:
             continue
 
         candidates: list[tuple[str, int, bool]] = []
+        seen_candidate_positions: set[tuple[str, int]] = set()
         for window_lo, window_hi in windows:
             lo = max(segment_lo, window_lo)
             hi = min(segment_hi, window_hi)
@@ -1924,8 +1959,10 @@ def _iter_unknown_cjk_terms(text: str) -> list[tuple[str, int]]:
                 continue
             for candidate in _unknown_cjk_candidates_in_range(text, lo, hi):
                 term = candidate[0]
-                if term in seen_terms:
+                key = (term, candidate[1])
+                if term in seen_terms or key in seen_candidate_positions:
                     continue
+                seen_candidate_positions.add(key)
                 candidates.append(candidate)
 
         for term, pos, _ in _spread_candidates(candidates, quota):
@@ -1945,6 +1982,124 @@ def _phonetic_discovery_context_ok(text: str, term: str, pos: int) -> bool:
         _has_stock_context_evidence(ctx, mention_terms=[term], window=40)
         or bool(_context_sector_families(ctx))
     )
+
+
+def _discover_explicit_ky_hits(
+    text: str,
+    *,
+    existing_codes: set[str],
+    video_ctx: dict | None = None,
+) -> list[dict]:
+    """Resolve explicit Chinese-name + KY mentions against official -KY stocks."""
+    if lazy_pinyin is None:
+        return []
+
+    discovered: list[dict] = []
+    added_codes: set[str] = set()
+    rejected_aliases = _load_rejected_aliases()
+    _vctx = video_ctx or {}
+    pattern = re.compile(
+        r"([\u3400-\u9fff]{2,4})\s*[-－]?\s*(KY)",
+        flags=re.IGNORECASE,
+    )
+
+    def has_nearby_peer_identity(local_text: str, exclude_code: str) -> bool:
+        for keyword, code in STOCK_DICT.items():
+            if code == exclude_code or len(keyword.strip()) < 2:
+                continue
+            if _contains_identity_term(local_text, keyword):
+                return True
+        return False
+
+    for match in pattern.finditer(text):
+        raw_prefix = match.group(1)
+        full_term = match.group(0)
+        best: dict | None = None
+        second_score = 0.0
+
+        # Whisper often joins a preceding function word: 「有真頂KY」.
+        # Try every 2–4 character suffix and keep the strongest official KY match.
+        ranked: list[dict] = []
+        for length in range(2, min(4, len(raw_prefix)) + 1):
+            source_term = raw_prefix[-length:]
+            ranked.extend(_explicit_ky_candidates(source_term, limit=2))
+        ranked.sort(key=lambda item: (-item["score"], item["code"], item["source_term"]))
+        if ranked:
+            best = ranked[0]
+            second_score = next(
+                (
+                    item["score"]
+                    for item in ranked[1:]
+                    if item["code"] != best["code"]
+                ),
+                0.0,
+            )
+        if not best:
+            continue
+
+        core_term = best["source_term"]
+        core_offset = raw_prefix.rfind(core_term)
+        core_pos = match.start(1) + core_offset
+        explicit_term = text[core_pos:match.end()]
+        local_text = text[
+            max(0, core_pos - _PHONETIC_DISCOVERY_CONTEXT_WINDOW):
+            min(len(text), match.end() + _PHONETIC_DISCOVERY_CONTEXT_WINDOW)
+        ]
+        lead = best["score"] - second_score
+        code = best["code"]
+        has_context = (
+            _has_stock_context_evidence(local_text, code=code, mention_terms=[explicit_term])
+            or bool(_context_sector_families(local_text))
+            or has_nearby_peer_identity(local_text, code)
+        )
+        if (
+            best["phonetic_similarity"] < 0.90
+            or best["score"] < 0.78
+            or lead < 0.08
+            or not has_context
+            or code in existing_codes
+            or code in added_codes
+            or f"{explicit_term}|{code}" in rejected_aliases
+        ):
+            continue
+
+        ctx = _mention_context_window(text, core_pos, explicit_term)
+        if not ctx or explicit_term not in ctx:
+            continue
+        discovered.append({
+            "stock_code": code,
+            "stock_name": CODE_TO_NAME.get(code, best["name"]),
+            "stock_market": STOCK_MARKET.get(code, "TW"),
+            "stock_sector": STOCK_SECTOR.get(code),
+            "context": ctx,
+            "matched_keyword": explicit_term,
+            "position": core_pos,
+            "phonetic_discovered": True,
+            "explicit_ky_discovered": True,
+            "whisper_corrected": True,
+        })
+        added_codes.add(code)
+        print(
+            f"  [ky-discovery] 「{explicit_term}」→ {code}({best['name']}) "
+            f"score={best['score']} lead={lead:.3f}",
+            file=sys.stderr,
+        )
+        _record_alias_candidate(
+            explicit_term,
+            code,
+            CODE_TO_NAME.get(code, best["name"]),
+            context=ctx,
+            video_ctx=_vctx,
+            source="explicit-ky-discovery",
+            override_info={
+                "override_kind": "explicit_ky",
+                "override_reason": "official_ky_identity_with_clear_phonetic_core",
+                "phonetic_top_score": best["score"],
+                "phonetic_lead": lead,
+            },
+        )
+
+    return discovered
 
 
 def _discover_phonetic_stock_hits(
@@ -3176,6 +3331,12 @@ def recognize_stocks(
             })
 
     if enable_phonetic_discovery:
+        explicit_ky_hits = _discover_explicit_ky_hits(
+            text,
+            existing_codes={h["stock_code"] for h in hits},
+            video_ctx=_vctx,
+        )
+        hits.extend(explicit_ky_hits)
         hits.extend(_discover_phonetic_stock_hits(
             text,
             existing_codes={h["stock_code"] for h in hits},
