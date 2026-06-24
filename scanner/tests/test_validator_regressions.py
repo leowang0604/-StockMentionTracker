@@ -836,6 +836,49 @@ class ValidatorRegressionTests(unittest.TestCase):
 
         self.assertFalse(any(hit.get("explicit_ky_discovered") for hit in hits))
 
+    def test_short_company_gate_rejects_ordinary_language(self):
+        cases = [
+            ("6月想必應該會有更多好成績。", "6625"),
+            ("AI使用率的滲透率加高，但是幅度不如預期。", "8182"),
+            ("我已經是名漢達人，喜歡研究基本面的東西。", "6620"),
+            ("如果少了這兩名大將，開發速度可能比較慢。", "1453"),
+            ("資源維持在少數集中化的公司上面。", "3716"),
+        ]
+        for text, rejected_code in cases:
+            with self.subTest(text=text):
+                hits = self.scanner.recognize_stocks(text)
+                self.assertNotIn(rejected_code, [hit["stock_code"] for hit in hits])
+
+    def test_short_company_gate_preserves_stock_identity_and_lists(self):
+        cases = [
+            ("必應公布營收，市場持續觀察。", "6625"),
+            ("加高今天股價漲停。", "8182"),
+            ("漢達接到新訂單。", "6620"),
+            ("大將股價今天上漲。", "1453"),
+            ("中化控股公布法說內容。", "3716"),
+            ("百一法說提到明年營收。", "6152"),
+            ("景碩、南電、漢達最近都很強。", "6620"),
+            ("大將、百一、中化今天都上漲。", "1453"),
+            ("大將、百一、中化今天都上漲。", "6152"),
+            ("大將、百一、中化今天都上漲。", "3716"),
+        ]
+        for text, expected_code in cases:
+            with self.subTest(text=text, code=expected_code):
+                hits = self.scanner.recognize_stocks(text)
+                self.assertIn(expected_code, [hit["stock_code"] for hit in hits])
+
+    def test_numeric_quantity_cannot_be_phonetic_stock_identity(self):
+        text = "公司準備發行兩百億美元債券來支應AI投資。"
+        decision = self.scanner._resolve_stock_correction(
+            "百億",
+            context=text,
+            suggested_code="6152",
+            policy="override",
+        )
+
+        self.assertEqual(decision["action"], "reject")
+        self.assertEqual(decision["reason"], "numeric_quantity_not_identity")
+
     def test_missing_whisper_original_can_be_recovered_from_phonetic_evidence(self):
         if self.scanner.lazy_pinyin is None:
             self.skipTest("pypinyin is not installed")

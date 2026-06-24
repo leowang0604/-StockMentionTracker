@@ -1556,6 +1556,13 @@ _DIRECT_STOCK_MENTION_CUES: tuple[str, ...] = (
     "這檔", "個股", "股票", "股價", "漲停", "跌停", "營收", "EPS",
     "目標價", "法說", "本益比", "訂單", "獲利", "買進", "賣出",
 )
+_SHORT_IDENTITY_SUFFIX_CUES: tuple[str, ...] = (
+    "股", "股票", "公司", "電子", "科技", "控股", "工業", "企業",
+    "營收", "訂單", "股價", "法說", "EPS", "漲停", "跌停",
+)
+_SHORT_IDENTITY_PREFIX_CUES: tuple[str, ...] = (
+    "看好", "買進", "賣出", "持有", "加碼", "減碼", "投資", "布局",
+)
 
 _EXPLICIT_CORRECTION_CUES: tuple[str, ...] = (
     "口誤指的是", "口誤是", "應該是", "正確是", "更正為", "更正成",
@@ -1582,6 +1589,104 @@ def _local_evidence_window(
 def _has_direct_stock_cue_near_term(text: str, term: str) -> bool:
     nearby = _local_evidence_window(text, term, before=35, after=55)
     return bool(nearby and any(cue in nearby for cue in _DIRECT_STOCK_MENTION_CUES))
+
+
+def _has_short_identity_rescue(
+    text: str,
+    *,
+    keyword: str,
+    code: str,
+    pos: int,
+) -> bool:
+    """Keep short company names when local syntax clearly identifies a stock."""
+    lo = max(0, pos - 45)
+    hi = min(len(text), pos + len(keyword) + 45)
+    local = text[lo:hi]
+    rel_pos = pos - lo
+
+    if code and code in local:
+        return True
+
+    canonical = CODE_TO_NAME.get(code, "")
+    canonical_clean = re.sub(r"[*＊]+$", "", canonical).strip()
+    if canonical_clean != keyword and keyword in canonical_clean and canonical_clean in local:
+        return True
+
+    before = local[max(0, rel_pos - 8):rel_pos]
+    after = local[rel_pos + len(keyword):rel_pos + len(keyword) + 10]
+    if any(before.endswith(cue) for cue in _SHORT_IDENTITY_PREFIX_CUES):
+        return True
+    if any(after.startswith(cue) for cue in _SHORT_IDENTITY_SUFFIX_CUES):
+        return True
+
+    # Preserve explicit stock lists such as「景碩、南電、漢達」or
+    #「大將、百一、中化今天都很強」without requiring a cue per item.
+    connector_nearby = (
+        bool(re.search(r"(?:、|，|,|跟|和|及|與)\s*$", before))
+        or bool(re.match(r"^\s*(?:、|，|,|跟|和|及|與)", after))
+    )
+    if connector_nearby:
+        for other_code, other_name in CODE_TO_NAME.items():
+            if other_code == code:
+                continue
+            other_clean = re.sub(r"(?:[-－]KY|[*＊])+$", "", other_name, flags=re.IGNORECASE).strip()
+            if len(other_clean) >= 2 and other_clean in local:
+                return True
+    return False
+
+
+def _ordinary_short_company_usage_reason(
+    text: str,
+    *,
+    keyword: str,
+    code: str,
+    pos: int,
+) -> str | None:
+    """Reject high-confidence ordinary syntax that happens to equal a company name."""
+    if (
+        STOCK_MARKET.get(code) != "TW"
+        or not re.fullmatch(r"[\u3400-\u9fff]{2,4}", keyword)
+        or _has_short_identity_rescue(text, keyword=keyword, code=code, pos=pos)
+    ):
+        return None
+
+    before = text[max(0, pos - 16):pos]
+    after = text[pos + len(keyword):min(len(text), pos + len(keyword) + 16)]
+
+    # Modal phrase crossing a company-name boundary: 想必應該、勢必應會…
+    if (
+        keyword.startswith("必")
+        and before[-1:] in {"想", "勢", "未", "務", "何"}
+        and after[:1] in {"該", "會", "有", "是", "能", "要"}
+    ):
+        return "modal_phrase"
+
+    # Degree/ratio verbs used as ordinary actions: 滲透率加高、比例加高。
+    if keyword.endswith("高") and re.search(
+        r"(?:滲透率|使用率|比例|比重|幅度|程度|高度|價格|成本|效率)\s*$",
+        before,
+    ):
+        return "degree_change"
+
+    # Person/title phrase: 名漢達人、某某達人。
+    if after.startswith("人") and (before.endswith("名") or keyword.endswith("達")):
+        return "person_title"
+
+    # Quantified common noun: 兩名大將、三位高手。
+    if re.search(r"(?:這|那)?[零〇一二兩三四五六七八九十幾多]+\s*(?:名|位|員|個)\s*$", before):
+        return "quantified_role"
+
+    # Abstract nominalization containing the company name: 集中化。
+    if keyword.endswith("化") and before.endswith(("集", "去", "強", "弱", "優", "劣")):
+        return "abstract_compound"
+
+    return None
+
+
+_CHINESE_NUMERIC_QUANTITY_RE = re.compile(
+    r"^[零〇一二兩三四五六七八九十百千萬億兆\d,.]+"
+    r"(?:萬|億|兆)(?:元|美元|台幣|人民幣|日圓|歐元)?$"
+)
 
 
 def _has_explicit_correction_relation(
@@ -1645,6 +1750,12 @@ def _resolve_stock_correction(
     }
     if not normalized_term or not _contains_identity_term(context or "", original_term):
         result["reason"] = "term_missing_from_context"
+        return result
+    if (
+        _CHINESE_NUMERIC_QUANTITY_RE.fullmatch(original_term)
+        and original_term not in CODE_TO_NAME.values()
+    ):
+        result["reason"] = "numeric_quantity_not_identity"
         return result
     if normalized_term.upper() in {word.upper() for word in WHISPER_ORIG_BLACKLIST}:
         result["reason"] = "blacklisted_original"
@@ -3271,6 +3382,27 @@ def recognize_stocks(
             start = max(0, pos - 100)
             end   = min(len(text), pos + len(keyword) + 200)
             ctx   = text[start:end].replace("\n", " ").strip()
+
+            ordinary_reason = _ordinary_short_company_usage_reason(
+                text,
+                keyword=keyword,
+                code=code,
+                pos=pos,
+            )
+            if ordinary_reason:
+                print(
+                    f"[SKIP] {keyword} at pos={pos} reason=ordinary_company_name"
+                    f" ({ordinary_reason})",
+                    file=sys.stderr,
+                )
+                _skip_log.append({
+                    "keyword": keyword,
+                    "pos": pos,
+                    "reason": "ordinary_company_name",
+                    "detail": ordinary_reason,
+                    **_vctx,
+                })
+                continue
 
             # Validate ambiguous tickers: require specific co-occurrence in context
             if code in CONTEXT_REQUIRED:
