@@ -813,6 +813,52 @@ class ValidatorRegressionTests(unittest.TestCase):
             self.assertIn("艾普", [term for term, _ in terms])
         self.assertIn("6531", [hit["stock_code"] for hit in hits])
 
+    def test_confirmed_hantang_whisper_alias_is_stable(self):
+        text = "設備股裡面，漢堂今天漲停，後面營運和訂單都跟著往上。"
+        hits = self.scanner.recognize_stocks(text)
+
+        hit = next(hit for hit in hits if hit["stock_code"] == "2404")
+        self.assertEqual(hit["stock_name"], "漢唐")
+        self.assertEqual(hit["matched_keyword"], "漢堂")
+
+    def test_phonetic_discovery_logs_high_confidence_candidate_sampling(self):
+        if self.scanner.lazy_pinyin is None:
+            self.skipTest("pypinyin is not installed")
+
+        text = "光通訊股票裡面的聯均今天漲停，股價和營收都很強。"
+        with tempfile.TemporaryDirectory() as tmpdir:
+            candidates_path = Path(tmpdir) / "alias_candidates.json"
+            learned_path = Path(tmpdir) / "learned_aliases.json"
+            rejected_path = Path(tmpdir) / "rejected_aliases.json"
+            candidates_path.write_text(json.dumps({
+                "聯均|3450": {
+                    "wrong_keyword": "聯均",
+                    "correct_code": "3450",
+                    "correct_name": "聯鈞",
+                    "confidence": "high",
+                    "max_score": 100,
+                }
+            }, ensure_ascii=False), encoding="utf-8")
+            learned_path.write_text("{}", encoding="utf-8")
+            rejected_path.write_text("{}", encoding="utf-8")
+            old_candidates = self.scanner.ALIAS_CANDIDATES_FILE
+            old_learned = self.scanner.LEARNED_ALIASES_FILE
+            old_rejected = self.scanner.REJECTED_ALIASES_FILE
+            self.scanner.ALIAS_CANDIDATES_FILE = candidates_path
+            self.scanner.LEARNED_ALIASES_FILE = learned_path
+            self.scanner.REJECTED_ALIASES_FILE = rejected_path
+            self.scanner._PHONETIC_STOCK_INDEX = None
+            try:
+                hits = self.scanner.recognize_stocks(text, enable_phonetic_discovery=True)
+                stats = dict(self.scanner._PHONETIC_DISCOVERY_LAST_STATS)
+            finally:
+                self.scanner.ALIAS_CANDIDATES_FILE = old_candidates
+                self.scanner.LEARNED_ALIASES_FILE = old_learned
+                self.scanner.REJECTED_ALIASES_FILE = old_rejected
+
+        self.assertIn("3450", [hit["stock_code"] for hit in hits])
+        self.assertEqual(stats["watch"]["聯均"]["sampled"], True)
+
     def test_explicit_ky_identity_recovers_whisper_company_name(self):
         text = (
             "載板族群裡面景碩和南電都很強，可是還有真頂ky，"

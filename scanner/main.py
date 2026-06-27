@@ -1345,6 +1345,7 @@ _PHONETIC_DISCOVERY_CONTEXT_WINDOW = 90
 _PHONETIC_DISCOVERY_MAX_PER_TEXT = 5
 _PHONETIC_DISCOVERY_MAX_TERMS = 250
 _PHONETIC_DISCOVERY_SEGMENT_CHARS = 500
+_PHONETIC_DISCOVERY_LAST_STATS: dict = {}
 _PHONETIC_DISCOVERY_STOPWORDS: set[str] = {
     "今天", "昨天", "明天", "現在", "之前", "後來", "最近", "目前", "大家", "我們",
     "他們", "這個", "那個", "如果", "因為", "所以", "但是", "可是", "然後", "其實",
@@ -2041,16 +2042,52 @@ def _spread_candidates(
     ]
 
 
+def _phonetic_discovery_watch_terms() -> set[str]:
+    """High-confidence review aliases worth tracking in discovery diagnostics."""
+    watch: set[str] = set()
+    try:
+        learned = _load_learned_aliases()
+        for key, entry in _load_alias_candidates().items():
+            term = str((entry or {}).get("wrong_keyword") or key.split("|", 1)[0]).strip()
+            code = str((entry or {}).get("correct_code") or "").strip()
+            confidence = str((entry or {}).get("confidence") or "").lower()
+            max_score = int((entry or {}).get("max_score") or 0)
+            if (
+                term
+                and term not in learned
+                and code in CODE_TO_NAME
+                and (confidence == "high" or max_score >= 80)
+            ):
+                watch.add(term)
+    except Exception:
+        return set()
+    return watch
+
+
 def _iter_unknown_cjk_terms(text: str) -> list[tuple[str, int]]:
     """Extract a bounded, transcript-wide sample near stock context markers."""
+    global _PHONETIC_DISCOVERY_LAST_STATS
     text = text or ""
     windows = _phonetic_discovery_windows(text)
+    _PHONETIC_DISCOVERY_LAST_STATS = {
+        "text_len": len(text),
+        "windows": len(windows),
+        "segments": 0,
+        "raw_candidates": 0,
+        "unique_candidates": 0,
+        "sampled_terms": 0,
+        "quota_limited_segments": 0,
+        "max_terms": _PHONETIC_DISCOVERY_MAX_TERMS,
+        "watch": {},
+    }
     if not windows:
         return []
 
     segment_count = max(1, (len(text) + _PHONETIC_DISCOVERY_SEGMENT_CHARS - 1)
                         // _PHONETIC_DISCOVERY_SEGMENT_CHARS)
     base_quota, remainder = divmod(_PHONETIC_DISCOVERY_MAX_TERMS, segment_count)
+    _PHONETIC_DISCOVERY_LAST_STATS["segments"] = segment_count
+    watch_terms = _phonetic_discovery_watch_terms()
 
     found: list[tuple[str, int]] = []
     seen_terms: set[str] = set()
@@ -2075,14 +2112,31 @@ def _iter_unknown_cjk_terms(text: str) -> list[tuple[str, int]]:
                     continue
                 seen_candidate_positions.add(key)
                 candidates.append(candidate)
+                if term in watch_terms:
+                    info = _PHONETIC_DISCOVERY_LAST_STATS["watch"].setdefault(
+                        term, {"positions": [], "sampled": False}
+                    )
+                    if len(info["positions"]) < 5:
+                        info["positions"].append(candidate[1])
 
-        for term, pos, _ in _spread_candidates(candidates, quota):
+        unique_count = len({term for term, _, _ in candidates})
+        _PHONETIC_DISCOVERY_LAST_STATS["raw_candidates"] += len(candidates)
+        _PHONETIC_DISCOVERY_LAST_STATS["unique_candidates"] += unique_count
+        if unique_count > quota:
+            _PHONETIC_DISCOVERY_LAST_STATS["quota_limited_segments"] += 1
+
+        selected = _spread_candidates(candidates, quota)
+        for term, pos, _ in selected:
             if term in seen_terms:
                 continue
             seen_terms.add(term)
             found.append((term, pos))
+            if term in _PHONETIC_DISCOVERY_LAST_STATS["watch"]:
+                _PHONETIC_DISCOVERY_LAST_STATS["watch"][term]["sampled"] = True
 
-    return found[:_PHONETIC_DISCOVERY_MAX_TERMS]
+    found = found[:_PHONETIC_DISCOVERY_MAX_TERMS]
+    _PHONETIC_DISCOVERY_LAST_STATS["sampled_terms"] = len(found)
+    return found
 
 
 def _phonetic_discovery_context_ok(text: str, term: str, pos: int) -> bool:
@@ -2228,13 +2282,26 @@ def _discover_phonetic_stock_hits(
     added_codes: set[str] = set()
     rejected_aliases = _load_rejected_aliases()
     _vctx = video_ctx or {}
+    terms = _iter_unknown_cjk_terms(text)
+    stats = dict(_PHONETIC_DISCOVERY_LAST_STATS)
+    rejection_counts = {
+        "context": 0,
+        "resolver": 0,
+        "duplicate": 0,
+        "final_context": 0,
+        "sector": 0,
+        "rejected_alias": 0,
+    }
+    max_hits_reached = False
 
-    for term, pos in _iter_unknown_cjk_terms(text):
+    for term, pos in terms:
         if len(discovered) >= _PHONETIC_DISCOVERY_MAX_PER_TEXT:
+            max_hits_reached = True
             break
         if term in recognition_dict:
             continue
         if not _phonetic_discovery_context_ok(text, term, pos):
+            rejection_counts["context"] += 1
             continue
 
         decision = _resolve_stock_correction(
@@ -2243,22 +2310,25 @@ def _discover_phonetic_stock_hits(
             policy="discovery",
         )
         if decision["action"] != "accept" or decision["source"] != "phonetic":
+            rejection_counts["resolver"] += 1
             continue
         code = decision["code"]
         lead = decision["lead"]
-        if (
-            code in existing_codes
-            or code in added_codes
-            or f"{term}|{code}" in rejected_aliases
-        ):
+        if code in existing_codes or code in added_codes:
+            rejection_counts["duplicate"] += 1
+            continue
+        if f"{term}|{code}" in rejected_aliases:
+            rejection_counts["rejected_alias"] += 1
             continue
 
         start = max(0, pos - 100)
         end = min(len(text), pos + len(term) + 200)
         ctx = text[start:end].replace("\n", " ").strip()
         if not _has_stock_context_evidence(ctx, code=code, mention_terms=[term]) and not _context_sector_families(ctx):
+            rejection_counts["final_context"] += 1
             continue
         if _has_strong_sector_mismatch(ctx, code):
+            rejection_counts["sector"] += 1
             continue
 
         stock_name = CODE_TO_NAME.get(code, decision["name"] or code)
@@ -2286,6 +2356,28 @@ def _discover_phonetic_stock_hits(
             context=ctx,
             video_ctx=_vctx,
             source="phonetic-discovery",
+        )
+
+    if stats.get("windows"):
+        watch_items = []
+        for term, info in (stats.get("watch") or {}).items():
+            status = "sampled" if info.get("sampled") else "dropped"
+            positions = ",".join(str(pos) for pos in info.get("positions", [])[:3])
+            watch_items.append(f"{term}:{status}@{positions}")
+        watch_text = f" watch={'; '.join(watch_items[:6])}" if watch_items else ""
+        print(
+            "  [phonetic-discovery] scan "
+            f"windows={stats.get('windows', 0)} "
+            f"segments={stats.get('segments', 0)} "
+            f"raw={stats.get('raw_candidates', 0)} "
+            f"unique={stats.get('unique_candidates', 0)} "
+            f"sampled={stats.get('sampled_terms', 0)}/{stats.get('max_terms', _PHONETIC_DISCOVERY_MAX_TERMS)} "
+            f"quota_limited_segments={stats.get('quota_limited_segments', 0)} "
+            f"accepted={len(discovered)} "
+            f"max_hits_reached={max_hits_reached} "
+            f"rejects={rejection_counts}"
+            f"{watch_text}",
+            file=sys.stderr,
         )
 
     return discovered
