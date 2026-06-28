@@ -141,6 +141,21 @@ curl -s -H "Authorization: token $TOKEN" \
 - `[alias-candidate]` — 新增待審核的 Whisper 修正候選
 - `[SKIP]` — 被過濾掉的誤判
 - `[tw_industry]` — 台股產業分類更新
+- `[artifact] transcript saved` — 已把該影片/集數的完整文字保存到本次 Actions artifact
+
+### 下載完整逐字稿 artifact
+
+掃描時 scanner 會把每個已處理項目的文字輸出到 `artifacts/transcripts/`，workflow 會上傳成
+`scan-transcripts-<run_id>` artifact，保留 14 天。這些檔案只用來診斷，不會 commit 到 repo，也不會進
+`data/latest.json`。
+
+用途：遇到 Gemini 顯示 `not in chunk → skipped` 時，可以下載 artifact 搜整集逐字稿，確認該股票名稱是真的完全沒出現，還是只是不在 Gemini 回傳的片段附近。
+
+在 GitHub Actions run 頁面下方 Artifacts 下載，或用 GitHub CLI：
+
+```bash
+gh run download <run_id> -n scan-transcripts-<run_id>
+```
 
 ### 查看 gemini_usage.json
 

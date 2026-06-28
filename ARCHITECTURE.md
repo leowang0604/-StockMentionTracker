@@ -73,10 +73,15 @@ CONTEXT_FORBIDDEN: dict[str, list[str]] # code → 禁止出現的上下文詞
 KEYWORD_PATTERN_OVERRIDE: dict[str, str] # keyword → regex（子字串防誤觸）
 ```
 
-### 3.2 股票偵測流程（每個 channel 的處理）
+### 3.2 股票偵測流程（每個影片 / podcast episode）
 
 ```
-Pass 1：逐影片偵測（無 Gemini）
+Pass 1：取得文字
+  YouTube caption / Whisper / title+description
+       ↓
+  保存 artifacts/transcripts/* 供診斷（不 commit、不進 latest.json）
+
+Pass 2：keyword path
   影片文字（字幕 / Whisper / 標題+描述）
        ↓
   recognize_stocks()          # regex 比對所有關鍵字
@@ -89,7 +94,24 @@ Pass 1：逐影片偵測（無 Gemini）
        ↓
   deduplicate_hits()
 
-Pass 1.5：跨影片批次 Gemini ambiguous filter（一個 channel 一起送）
+Pass 3：Gemini full-video path（extraction_mode=auto/gemini 且文字足夠）
+  _gemini_extract_full_video()
+       ↓
+  _validate_gemini_stocks()
+    - stock name / whisper_original 必須能錨定在原文或局部證據
+    - correction resolver 會檢查音近、領先差距、股票語境、產業衝突
+    - 失敗項目寫 skip_log，例如 not in chunk / low context / sector mismatch
+
+Pass 4：合併 keyword + Gemini
+  _merge_extraction_results()
+    - 同股票不同段落保留為多筆 context
+    - Gemini 情緒優先，keyword 可補 Gemini 沒抓到的項目
+
+Pass 5：sparse second pass（需要時）
+  _gemini_extract_candidates_in_video()
+    - 只針對前面流程推導出的候選 code 補抓，不做全新股票幻想
+
+Pass 6：跨影片批次 Gemini ambiguous filter（一個 channel 一起送）
   _batch_filter_ambiguous_hits(detected)
     - 收集所有影片的 ambiguous hits（_is_ambiguous_hit() 判斷）
     - 每批最多 20 個 hits 合成一次 Gemini 呼叫
@@ -97,10 +119,10 @@ Pass 1.5：跨影片批次 Gemini ambiguous filter（一個 channel 一起送）
     - 回傳 per-hit JSON: {is_stock, corrected_code, corrected_name}
     - 若 corrected_code 非空 → 記錄到 alias_candidates.json，待人工審核
 
-Pass 2：批次情緒分析（一個 channel 一次呼叫）
+Pass 7：批次情緒分析（一個 channel 一次呼叫）
   _batch_channel_sentiments()
 
-Pass 3：組合輸出，存入 data/latest.json
+Pass 8：組合輸出，存入 data/latest.json
 ```
 
 ### 3.3 Gemini 整合
@@ -115,10 +137,12 @@ Pass 3：組合輸出，存入 data/latest.json
 - 閾值警告：超過設定值輸出警告
 
 **呼叫場景**（每次完整掃描）：
-1. 每個 channel 的 ambiguous hits 跨影片批次（`_batch_filter_ambiguous_hits`）— 預計 3-4 次
-2. 每個 channel 的批次情緒分析（`_batch_channel_sentiments`）
-3. US 股票 enriched keywords（`enrich_us_stocks_with_gemini`）
-4. 週摘要生成（`generate_weekly_summary`）
+1. 每個新影片/episode 的 full-video extraction（`_gemini_extract_full_video`，依 `extraction_mode`）
+2. 必要時的 sparse second pass（`_gemini_extract_candidates_in_video`）
+3. 每個 channel 的 ambiguous hits 跨影片批次（`_batch_filter_ambiguous_hits`）
+4. 每個 channel 的批次情緒分析（`_batch_channel_sentiments`）
+5. US 股票 enriched keywords（`enrich_us_stocks_with_gemini`，失敗可用 cache）
+6. 週摘要生成（`generate_weekly_summary`，失敗不影響 scan 結果）
 
 **注意**：同一 UTC 日只能跑一次完整掃描。排程在 UTC 17:00（台灣凌晨 01:00），若當天再手動觸發測試會爆 quota。
 
@@ -128,6 +152,7 @@ Pass 3：組合輸出，存入 data/latest.json
 - `_record_alias_candidate()` 將 Gemini 與 validator 發現的新錯字寫入 `alias_candidates.json`
 - 候選會保留信心分數、不同集數證據與最近上下文
 - Scanner 不會自動升級候選；人工確認後才加入 `ALIASES` 或 `learned_aliases.json`
+- `phonetic discovery` 只在 Whisper 文字啟用，用音近 + 股票語境找高信心候選；正式規則仍以 `learned_aliases.json` / `ALIASES` 為準
 
 ### 3.5 已知誤報防護規則（截至 2026-04-15）
 
@@ -229,6 +254,9 @@ WeeklySummary    // AI 週摘要：text, hotStocks, keyThemes, generatedAt
   max_items: int           # 每個來源最多幾部（預設 5，測試用 3）
   days_back: int           # 往回掃幾天（預設 7）
 ```
+
+每次 scan 會額外上傳 `scan-transcripts-<run_id>` artifact，保存本次處理項目的完整文字 14 天。
+artifact 僅供診斷，不會寫入 `data/latest.json`，也不會被 daily scan commit。
 
 觸發短測試指令：
 ```bash

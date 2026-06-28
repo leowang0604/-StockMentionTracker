@@ -17,6 +17,7 @@ venv/
 dist/
 *.whl
 .pytest_cache/
+artifacts/
 
 # macOS
 .DS_Store

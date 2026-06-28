@@ -45,6 +45,12 @@ SPOTIFY_CLIENT_ID  = os.environ.get("SPOTIFY_CLIENT_ID", "")
 SPOTIFY_CLIENT_SECRET = os.environ.get("SPOTIFY_CLIENT_SECRET", "")
 GEMINI_API_KEY     = os.environ.get("GEMINI_API_KEY", "")
 INTERMEDIATE_GIT_PUSH = os.environ.get("SCANNER_INTERMEDIATE_GIT_PUSH", "false").lower() == "true"
+TRANSCRIPT_ARTIFACT_DIR = Path(
+    os.environ.get(
+        "TRANSCRIPT_ARTIFACT_DIR",
+        str(Path(__file__).parent.parent / "artifacts" / "transcripts"),
+    )
+)
 
 # Path to Netscape-format cookies file (set by workflow from YOUTUBE_COOKIES secret)
 COOKIES_FILE = os.environ.get("YOUTUBE_COOKIES_FILE", "")
@@ -5430,6 +5436,55 @@ def transcribe_audio(audio_path: str) -> str | None:
         print(f"  [whisper] {audio_path}: {e}", file=sys.stderr)
         return None
 
+
+def _safe_artifact_name(value: str, *, max_len: int = 90) -> str:
+    """Return a filesystem-safe, readable artifact filename component."""
+    cleaned = re.sub(r"[^\w\u4e00-\u9fff.-]+", "_", value, flags=re.UNICODE).strip("._")
+    return (cleaned or "untitled")[:max_len]
+
+
+def _save_transcript_artifact(
+    *,
+    source_name: str,
+    item_id: str,
+    title: str,
+    date: str,
+    analysis_source: str,
+    text: str | None,
+) -> None:
+    """Save per-item text for short-lived GitHub Actions artifacts.
+
+    These files are diagnostic only. They are ignored by git and uploaded by
+    the workflow, so they do not change app payloads or scanner decisions.
+    """
+    if not text:
+        return
+    try:
+        TRANSCRIPT_ARTIFACT_DIR.mkdir(parents=True, exist_ok=True)
+        date_part = _safe_artifact_name(date or "unknown-date", max_len=20)
+        source_part = _safe_artifact_name(source_name, max_len=36)
+        id_part = _safe_artifact_name(item_id, max_len=40)
+        title_part = _safe_artifact_name(title, max_len=60)
+        path = TRANSCRIPT_ARTIFACT_DIR / f"{date_part}_{source_part}_{id_part}_{title_part}.txt"
+        header = "\n".join(
+            [
+                f"title: {title}",
+                f"source: {source_name}",
+                f"id: {item_id}",
+                f"date: {date}",
+                f"analysis_source: {analysis_source}",
+                "",
+            ]
+        )
+        path.write_text(header + text, encoding="utf-8")
+        try:
+            display_path = path.relative_to(Path(__file__).parent.parent)
+        except ValueError:
+            display_path = path
+        print(f"  [artifact] transcript saved → {display_path}")
+    except Exception as e:
+        print(f"  [artifact] transcript save failed: {e}", file=sys.stderr)
+
 # ─────────────────────────────────────────────────────────────────────────────
 # YouTube — process one video
 # ─────────────────────────────────────────────────────────────────────────────
@@ -5486,6 +5541,15 @@ def _detect_youtube_video(
         text            = title + " " + video.get("description", "")
         analysis_source = "titleAndDescription"
         print(f"  ⚠ fallback → title+description")
+
+    _save_transcript_artifact(
+        source_name=source_name,
+        item_id=video_id,
+        title=title,
+        date=date,
+        analysis_source=analysis_source,
+        text=text,
+    )
 
     # ── Recognize stocks (雙軌) ────────────────────────────────────────────
     video_ctx = {"video_id": video_id, "channel": source_name, "date": date, "title": title}
@@ -5856,6 +5920,15 @@ def _detect_podcast_episode(
     if text is None:
         text = title + " " + ep.get("description", "")
         analysis_source = "titleAndDescription"
+
+    _save_transcript_artifact(
+        source_name=source_name,
+        item_id=ep["id"],
+        title=title,
+        date=date,
+        analysis_source=analysis_source,
+        text=text,
+    )
 
     video_ctx   = {"video_id": ep["id"], "channel": source_name, "date": date, "title": title}
     hits_keyword = deduplicate_hits(recognize_stocks(

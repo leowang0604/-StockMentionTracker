@@ -100,6 +100,15 @@ jobs:
           TEST_DOWNLOAD_ONLY: ${{ inputs.test_download_only || 'false' }}
         run: python scanner/main.py
 
+      - name: Upload transcript artifacts
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v7
+        with:
+          name: scan-transcripts-${{ github.run_id }}
+          path: artifacts/transcripts/
+          if-no-files-found: ignore
+          retention-days: 14
+
       - name: Commit and push results
         run: |
           git config user.name "github-actions[bot]"

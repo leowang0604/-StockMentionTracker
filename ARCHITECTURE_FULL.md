@@ -187,14 +187,20 @@ _validate_gemini_stocks()（防幻覺核心）
   │
   ├─ 解析代號（直接/Levenshtein/name lookup）
   ├─ WHISPER_ORIG_BLACKLIST 過濾
+  ├─ correction resolver：
+  │   ├─ learned alias / contextual alias / phonetic winner
+  │   ├─ 檢查音近分數、top1 領先幅度、股票語境
+  │   └─ 檢查產業衝突與 rejected_aliases
   ├─ name_appears 檢查：
   │   ├─ stock_keywords in chunk_text?
   │   ├─ whisper_orig in chunk_text + core-name Lev≤1?
-  │   └─ Levenshtein fallback（resolved_name vs chunk）
+  │   ├─ -KY bare-name 支援
+  │   └─ Levenshtein / phonetic evidence fallback
   ├─ Levenshtein fallback 窗口比對
   ├─ 通過→ ctx_has_keyword 檢查（context 是否含關鍵字）
   ├─ 不含→ re-center：用 _find_keyword_pos 找位置重建 context
-  └─ 輸出 validated list
+  ├─ 同一股票多段 context 保留為多筆 hit
+  └─ 輸出 validated list；拒絕項目寫 skip_log
 ```
 
 ### Merge 邏輯
@@ -206,6 +212,7 @@ _merge_extraction_results(hits_keyword, hits_gemini)
 - Gemini 結果優先（情緒分析更準）
 - Keyword 補充 Gemini 沒抓到的（冷門股、只有關鍵字比對能找到的）
 - 相同代號：用 Gemini 情緒，但若 keyword context 比較長則保留 keyword 的 context
+- 同一支股票若在不同段落被提到，保留多筆 context，讓 App 能分段顯示與 highlight
 
 ### 決定用哪個模式
 
@@ -292,10 +299,12 @@ _merge_extraction_results(hits_keyword, hits_gemini)
 }
 ```
 
-自動學習，由 `_save_learned_alias()` 寫入。有嚴格驗證：
+人工確認後保留的穩定 Whisper 錯字對應。Scanner 會把新錯字先寫入
+`alias_candidates.json`，不會因單次 Gemini/phonetic 猜測自動升級到這裡。人工升級前至少要確認：
 1. `correct_code` 必須在 `CODE_TO_NAME` 裡
-2. `CODE_TO_NAME[correct_code]` 必須等於 `correct_name`
-3. `wrong_keyword` 不能已在 `STOCK_DICT`
+2. 錯字詞確實出現在 transcript / artifact
+3. 附近是在討論該股票或同族群，不是普通文字
+4. `wrong_keyword` 不會覆蓋正式股票名稱或高頻普通詞
 
 ### skip_log_YYYY-MM-DD.json
 
@@ -407,7 +416,8 @@ Workflow ID：`250254781`（手動觸發 curl 時用這個）
 
 `stock_code → [required_keywords]`
 
-Keyword path 用：找到關鍵字後，context 裡必須出現 list 中至少一個詞才算命中。**Gemini path 不受此限制**（Gemini 自己判斷語境）。
+Keyword path 用：找到關鍵字後，context 裡必須出現 list 中至少一個詞才算命中。Gemini path 不直接套
+`CONTEXT_REQUIRED`，但 validator 會用「名稱是否真的出現在 chunk / whisper_original 是否可信 / local evidence 是否有股票討論 / 產業語境是否衝突」擋掉幻覺。
 
 ### KEYWORD_PATTERN_OVERRIDE
 
@@ -427,7 +437,28 @@ Gemini 回傳的 `whisper_original` 若在此集合裡，整筆被拒絕（不�
 
 ### learned_aliases.json
 
-持久化儲存的 Whisper 修正對應，每次執行都會讀入並 merge 進 STOCK_DICT。有嚴格三條件驗證，防止 Gemini 亂配對破壞現有關鍵字。
+持久化儲存的 Whisper 修正對應，每次執行都會讀入並 merge 進 STOCK_DICT。現在原則是「人工確認後才進 learned aliases」；scanner 會把新候選寫入 `alias_candidates.json`，不會因單次 Gemini/phonetic 猜測自動升級成永久 alias。
+
+### alias_candidates.json / rejected_aliases.json
+
+- `alias_candidates.json`：記錄 Gemini validator、phonetic discovery、KY discovery 發現的待審候選，包含信心分數、最近上下文、候選排名與觀察次數。
+- `rejected_aliases.json`：人工拒絕後的候選，不會重複排隊，也不會在同次 scan 被當成正式規則。
+
+### phonetic discovery
+
+只在 Whisper 文字啟用，用台股官方名稱建立拼音索引，從股票語境附近的未知詞找音近候選。它可以：
+
+- 在當次 scan 補入高信心 hit
+- 把候選寫入 `alias_candidates.json`
+- 透過 log 顯示 sampled / dropped / reject 原因，診斷長逐字稿是否被 quota 影響
+
+它不會把候選自動寫入 `learned_aliases.json`。穩定錯字仍要人工確認，例如「漢堂」→「漢唐」。
+
+### transcript artifacts
+
+每次 scan 會把已處理項目的完整文字保存到 `artifacts/transcripts/`，workflow 上傳為
+`scan-transcripts-<run_id>` artifact，保留 14 天。artifact 只供診斷，不會 commit，也不會進
+`data/latest.json`。用途是查證 `not in chunk → skipped`：到底整集真的沒出現，還是只是不在 Gemini 回傳片段附近。
 
 ---
 
@@ -441,10 +472,12 @@ GitHub Actions 的 IP 被 YouTube 封鎖，無法下載音訊跑 Whisper。目�
 
 Whisper small 模型在台語夾雜、口音、同音異字上錯誤率高。目前靠：
 - ALIASES（已知錯誤→正確對應）
-- Gemini 自動修正（`whisper_original` 機制）
-- learned_aliases.json 累積學習
+- Gemini validator 的 `whisper_original` 機制
+- phonetic discovery 產生候選與當次高信心補抓
+- alias_candidates.json 人工審核
+- learned_aliases.json 儲存已確認的穩定錯字
 
-但新的錯誤只能遇到後手動加或等 Gemini 學習。
+alias 的定位是「Whisper 穩定錯字」，不是普通文字全部都補 pattern。新的錯字會先進候選池；人工確認後才升級，避免補不完也避免亂抓。
 
 ### 2 字股票名稱的假陽性風險
 
@@ -454,16 +487,17 @@ Whisper small 模型在台語夾雜、口音、同音異字上錯誤率高。目
 
 Gemini 有時會在完全不相關的 context 裡幻覺出某支股票。`_validate_gemini_stocks()` 有多道防線：
 1. `name_appears`：股票名稱或 whisper_original 必須出現在原文（含 core-name Levenshtein 驗證）
-2. Levenshtein fallback（窗口比對）
-3. `ctx_has_keyword`：Gemini 提供的 context 必須包含股票相關詞
+2. correction resolver：音近分數、top1 lead、股票語境、產業衝突、rejected alias
+3. Levenshtein / phonetic fallback（局部窗口比對，不採用整段無錨點文字）
+4. `ctx_has_keyword` / local evidence：Gemini 提供的 context 必須能錨定股票討論
 
-儘管如此，仍會有漏網之魚（如本文件撰寫時的昇陽半導體/意法半導體案例）。
+因此看到 `hallucination? ... not in chunk → skipped` 通常是正常保護。若要確認整集是否真的完全沒有該詞，下載 transcript artifact 搜整份逐字稿。
 
 ### Gemini API 費率
 
 `gemini-2.5-flash-lite`：
-- 免費版：500 RPD（requests per day）
-- 收費版：很便宜但需要設 spend cap 防止爆單
+- 實測 free tier 約 20 RPD，完整掃描同一 UTC 日不要重跑太多次
+- 收費版很便宜但需要設 spend cap 防止爆單
 
 `gemini-2.0-flash` 有 rate limit=0（無法使用）。
 `gemini-2.5-flash`（非 lite）：20 RPD 免費版，超過需付費。
@@ -480,13 +514,14 @@ Gemini 有時會在完全不相關的 context 裡幻覺出某支股票。`_valid
 3. **自建 CI runner**：用自己的 VPS 跑 Actions，解決 YouTube IP 封鎖問題，能真正跑 YouTube 音訊
 4. **向量資料庫去重**：目前 context 去重靠位置比較，若有 embedding 可以語意去重
 
-### 已知 Bug
+### 已知 Bug / 已處理風險
 
-1. **長集數逐字稿 context 窗口**：若同一支股票被提到很多次，只保留 30 個 context，可能遺漏重要的討論段落
-2. **Gemini 對KY股的whisper_original 帶後綴**：目前用 `whisper_orig_bare` 去掉 `-KY` 處理，但若 Gemini 回傳其他格式可能漏
+1. **長集數逐字稿 context 窗口**：每支股票仍有 `MAX_CONTEXTS_PER_STOCK` 上限，避免 JSON 爆大；但同一節目同一股票的多段內容已可保留為多筆 context。
+2. **Gemini 對 KY 股的 whisper_original 帶後綴**：已支援 bare-name / explicit KY discovery，可處理「真頂ky」這類口語或 Whisper 變體；仍需靠 replay/skip_log 觀察新型態。
+3. **phonetic discovery 長逐字稿 sampling**：不做無限制全量掃描以避免時間爆炸；目前有 sampled/dropped/quota log，遇到漏抓時優先看 artifact + log，再決定是否升級 learned alias 或調整 discovery。
 
 ### 待優化
 
-1. **CONTEXT_REQUIRED 只擋 keyword path**：Gemini path 仍可能幻覺出這些股票；應在 Gemini prompt 裡也告知哪些詞需要特定語境
-2. **skip_log 沒有定期清理**：`data/` 目錄裡的 skip_log 檔案會一直累積，需手動清理或加自動清除 90 天以前的 log
-3. **sources.json 由 iOS app 管理但沒有 conflict 保護**：若兩個裝置同時修改，後寫的會覆蓋先寫的
+1. **公司身份 vs 普通文字**：目前用 short-company gate 擋常見誤判；未全面導入外部 registry lookup，避免一次改太大造成漏抓。
+2. **sources.json 由 iOS app 管理但沒有 conflict 保護**：若兩個裝置同時修改，後寫的會覆蓋先寫的。
+3. **baseline replay 覆蓋率**：已有 fixture replay，但仍需要持續把實際出錯片段加入 fixture，才能防止未來 regression。
