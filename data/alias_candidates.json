@@ -647,7 +647,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 6,
+    "observations": 7,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -692,7 +692,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-06-27T17:49:14"
+    "updated_at": "2026-06-28T17:54:43"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -1897,10 +1897,17 @@
     "wrong_keyword": "春田"
   },
   "是開|5324": {
-    "confidence": "high",
+    "wrong_keyword": "是開",
     "correct_code": "5324",
     "correct_name": "士開",
-    "distinct_videos": 1,
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 6,
+    "distinct_videos": 2,
+    "video_ids": [
+      "cbd8a36b-a3de-4f58-a2d0-731a5407c68c",
+      "f167ba05-283e-480b-b8b3-a2d29287692b"
+    ],
     "evidence": [
       {
         "channel": "兆華與股惑仔",
@@ -1918,38 +1925,49 @@
         "source": "phonetic-discovery",
         "title": "EP1118｜多空交戰已結束？下週華許考驗後，重返基本面，選台積電、被動、CPO、記憶體，台股直奔世界第4大，外資該回頭？ft.雷老闆",
         "video_id": "f167ba05-283e-480b-b8b3-a2d29287692b"
+      },
+      {
+        "video_id": "cbd8a36b-a3de-4f58-a2d0-731a5407c68c",
+        "channel": "投資癮",
+        "date": "2026-06-28",
+        "title": "EP335 當市場庫存完銷後",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "而且我也相信 不太可能會有15倍以上的報酬率 所以也沒什麼好比較的 所以有沒有走心這件事情 我覺得是開心跟擔心 但是如果要特別去講這件事情 感覺好像是只有走心的人 才會特別去解釋 但其實也還好啦 不管是開心擔心還是走心 都可以 反正祝大家投資順利 持續獲利 那今天節目先到這裡 我們下次見 掰掰"
       }
     ],
-    "max_score": 100,
-    "observations": 5,
     "phonetic_candidates": [
       {
         "code": "5324",
         "name": "士開",
-        "phonetic_similarity": 1,
         "score": 0.825,
+        "phonetic_similarity": 1.0,
         "text_similarity": 0.5
       },
       {
         "code": "6561",
         "name": "是方",
-        "phonetic_similarity": 0.571,
         "score": 0.546,
+        "phonetic_similarity": 0.571,
         "text_similarity": 0.5
       },
       {
         "code": "1903",
         "name": "士紙",
-        "phonetic_similarity": 0.667,
         "score": 0.433,
-        "text_similarity": 0
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.0
       }
     ],
-    "updated_at": "2026-06-18T21:25:56",
-    "video_ids": [
-      "f167ba05-283e-480b-b8b3-a2d29287692b"
-    ],
-    "wrong_keyword": "是開"
+    "updated_at": "2026-06-28T18:18:50"
   },
   "服貿科|6505": {
     "confidence": "medium",
