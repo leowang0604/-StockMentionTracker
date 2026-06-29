@@ -647,7 +647,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 7,
+    "observations": 8,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -692,7 +692,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-06-28T17:54:43"
+    "updated_at": "2026-06-29T18:54:57"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -3365,5 +3365,230 @@
       }
     ],
     "updated_at": "2026-06-24T19:00:56"
+  },
+  "長龍航|2618": {
+    "wrong_keyword": "長龍航",
+    "correct_code": "2618",
+    "correct_name": "長榮航",
+    "confidence": "high",
+    "max_score": 95,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "97a5988d-66d4-454f-8062-ab8c76a1cbbf"
+    ],
+    "evidence": [
+      {
+        "video_id": "97a5988d-66d4-454f-8062-ab8c76a1cbbf",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-29",
+        "title": "EP1128｜反彈體感不理想，買太滿、高檔套牢變多，信心受動搖？如何降壓又不錯過行情？康寧發展玻璃橋接殺傷CPO？ft.題材獵人 林漢偉",
+        "source": "phonetic-discovery",
+        "score": 95,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1"
+        ],
+        "context": "也就是說接下來你可以看到 今天盤面上很強在生意族群 因為7月中有所謂的生技月 所以就有一些生技股的 一些題材發酵 那但是他能夠做多久 好像就做一兩個禮拜 那你看今天的軍公股 這個雷虎 漢翔 然後亞航 長龍航 待動起來 但是你心裡面會覺得說 他到底可以做多久 好像也就一兩個禮拜 所以你可能就會變成說 以短線的心態 去迎應7 8月份的一個操作 但是重點還是在說 你在這一段時間的操作裡面 一定要去佈局 第四季會好的一個產業 對 所以你就逢低 去減一些便宜 用左側的方式 去累積你一些 看好產業的部位 那等到第四季航行上去之後 我覺得當然就會有 這個發酵的空間 但是這一段時間 大家就會感覺好像那種 垃圾"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2618",
+        "name": "長榮航",
+        "score": 0.833,
+        "phonetic_similarity": 0.923,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "2211",
+        "name": "長榮鋼",
+        "score": 0.667,
+        "phonetic_similarity": 0.846,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "2645",
+        "name": "長榮航太",
+        "score": 0.663,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-06-29T19:11:34"
+  },
+  "上全|3363": {
+    "wrong_keyword": "上全",
+    "correct_code": "3363",
+    "correct_name": "上詮",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "97a5988d-66d4-454f-8062-ab8c76a1cbbf"
+    ],
+    "evidence": [
+      {
+        "video_id": "97a5988d-66d4-454f-8062-ab8c76a1cbbf",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-29",
+        "title": "EP1128｜反彈體感不理想，買太滿、高檔套牢變多，信心受動搖？如何降壓又不錯過行情？康寧發展玻璃橋接殺傷CPO？ft.題材獵人 林漢偉",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "技術 那可能光盛他們未來的布局 是落空的 有可能會遇到比較大的虧損 我覺得大家可能要去衡量一下 大家對產業的瞭解 跟你對你這筆投資 能夠接受他的虧損有多少 去做一個評估 好 大家如果記得的話 哇 我看上全 我真的跌很多 不是說不關心上全 現在上全也是我賣飛的股票 我記得400多 好像就把上全 還是600多就賣完了 從此之後就在等 等 等 等 你說趙華 那你左側現在 這個是不是很好的時機點 我會觀察一些點 例如說 他其實大家都看到 他們已經離三月底 那一波的低點 非常非常的近 講南天一點現行的話 是一個頭部 大頭部 根本就是一個走空的形態 但是你說一左側來看 會不會有點心動 是會的 但是是不是上"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3363",
+        "name": "上詮",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "9939",
+        "name": "宏全",
+        "score": 0.681,
+        "phonetic_similarity": 0.778,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "1316",
+        "name": "上曜",
+        "score": 0.608,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-06-29T19:11:38"
+  },
+  "東園|1504": {
+    "wrong_keyword": "東園",
+    "correct_code": "1504",
+    "correct_name": "東元",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "97a5988d-66d4-454f-8062-ab8c76a1cbbf"
+    ],
+    "evidence": [
+      {
+        "video_id": "97a5988d-66d4-454f-8062-ab8c76a1cbbf",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-29",
+        "title": "EP1128｜反彈體感不理想，買太滿、高檔套牢變多，信心受動搖？如何降壓又不錯過行情？康寧發展玻璃橋接殺傷CPO？ft.題材獵人 林漢偉",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "瑞氣 對 對耶 對 還有艾美特 是 對 他們這樣當股票 都是從低檔上來 就是因為 我覺得市場很敏感 就覺得說 歐洲在強忍氣 那可能接下來全球 會很炎熱氣候 所以做空調的就有機會 所以你看今天什麼大同 東園這種老牌的 家電大廠 股價也慢慢動起來 對 這是題材 超華 果然是題材獵人 對 我們就想到 這樣的一個想像空間 所以我覺得現在 可能大家接下來就會看到 聖因現象裡面 對於所謂的水的治理 也非常的關 非常的重視 所以我們台灣水資源的概念股 我覺得也有機會上來 所以這是第二塊 我覺得就是在所謂的 AI基礎建設當中的 所謂的一些 電 土地 水等等的 我覺得都是大家可以關注的 那第三塊 現在卡住全球的"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "1504",
+        "name": "東元",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "1319",
+        "name": "東陽",
+        "score": 0.663,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "1418",
+        "name": "東華",
+        "score": 0.663,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-06-29T19:12:19"
+  },
+  "附丁|8261": {
+    "wrong_keyword": "附丁",
+    "correct_code": "8261",
+    "correct_name": "富鼎",
+    "confidence": "high",
+    "max_score": 97,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "97a5988d-66d4-454f-8062-ab8c76a1cbbf"
+    ],
+    "evidence": [
+      {
+        "video_id": "97a5988d-66d4-454f-8062-ab8c76a1cbbf",
+        "channel": "兆華與股惑仔",
+        "date": "2026-06-29",
+        "title": "EP1128｜反彈體感不理想，買太滿、高檔套牢變多，信心受動搖？如何降壓又不錯過行情？康寧發展玻璃橋接殺傷CPO？ft.題材獵人 林漢偉",
+        "source": "full_video_validator",
+        "score": 97,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "子 所以這些事情有支撐著 我其實覺得七月的行情 是不錯的 可是我不要自己 應該說每個人都檢視自己 不是每個人都像我覺得 我明明手上有現金 還只有壓力 所以我今天有賣股票 我賣誰呢 我賣了公率元件 我把附丁給賣了 所以手上有附丁的朋友 可以謝謝我了 因為明天可能會賣飛 我沒有權賣 我賣了一半 為什麼 因為我看到安西美在大跌 那我買公率 又運氣好一些些 是買在一個大幅的 期長點之前 沒有什麼翻倍賺 但是是一個短線賺 所以我覺得短線賺 我已經覺得很滿意了 今天我就處分了 公率元件的部分 然後我還有呢 把上個禮拜 我有跟大家講說 行情一熱嘛 不是試吃又來了 很多人會爆牌給我 像那種爆牌的 我就幾乎也都",
+        "override_kind": "phonetic",
+        "override_reason": "clear_phonetic_winner",
+        "original_code": "3711",
+        "original_name": "日月光投控",
+        "phonetic_top_score": 0.65,
+        "phonetic_lead": 0.10799999999999998
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "8261",
+        "name": "富鼎",
+        "score": 0.65,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "1733",
+        "name": "五鼎",
+        "score": 0.542,
+        "phonetic_similarity": 0.833,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "3522",
+        "name": "御嵿",
+        "score": 0.542,
+        "phonetic_similarity": 0.833,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-06-29T19:12:19"
   }
 }
