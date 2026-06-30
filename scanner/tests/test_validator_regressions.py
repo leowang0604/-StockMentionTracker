@@ -394,6 +394,45 @@ class ValidatorRegressionTests(unittest.TestCase):
         )
         self.assertEqual([hit["stock_code"] for hit in hits], ["INTC"])
 
+    def test_gemini_does_not_remap_official_ky_core_to_nearby_stock(self):
+        text = (
+            "氣候改變帶來新的商機，可能也是偏短線的題材，所以短線是有機會的。"
+            "你看今天空調忍氣相關，還有艾美特是對，他們這樣當股票。"
+        )
+        hits = self.validate_isolated(
+            {
+                "name": "艾恩特",
+                "code": "3646",
+                "whisper_original": "艾美特",
+                "context": text,
+                "sentiment": "neutral",
+                "score": 0.5,
+            },
+            text,
+        )
+
+        self.assertNotIn("3646", [hit["stock_code"] for hit in hits])
+
+    def test_gemini_official_ky_core_resolves_to_ky_stock(self):
+        text = (
+            "氣候改變帶來新的商機，可能也是偏短線的題材，所以短線是有機會的。"
+            "你看今天空調忍氣相關，還有艾美特是對，他們這樣當股票。"
+        )
+        hits = self.validate_isolated(
+            {
+                "name": "艾美特",
+                "code": "3646",
+                "context": text,
+                "sentiment": "neutral",
+                "score": 0.5,
+            },
+            text,
+        )
+
+        self.assertEqual([hit["stock_code"] for hit in hits], ["1626"])
+        self.assertEqual(hits[0]["stock_name"], "艾美特-KY")
+        self.assertEqual(hits[0]["matched_keyword"], "艾美特")
+
     def test_trailing_attention_marker_has_clean_spoken_alias(self):
         self.assertEqual(self.scanner.STOCK_DICT.get("愛普"), "6531")
         text = "愛普這次矽電容缺口擴大，市場正在討論後續訂單。"

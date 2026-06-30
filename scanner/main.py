@@ -401,6 +401,20 @@ def _explicit_ky_candidates(source_term: str, limit: int = 3) -> list[dict]:
     )[:limit]
 
 
+def _official_ky_core_code(term: str) -> str | None:
+    """Return the official -KY stock whose spoken core exactly matches term."""
+    normalized = (term or "").strip()
+    if not normalized:
+        return None
+    for code, name in CODE_TO_NAME.items():
+        if STOCK_MARKET.get(code) != "TW":
+            continue
+        name_core = re.sub(r"[-－]KY$", "", name, flags=re.IGNORECASE).strip()
+        if name_core != name and name_core == normalized:
+            return code
+    return None
+
+
 _PHONETIC_OVERRIDE_MIN_SCORE = 0.65
 _PHONETIC_OVERRIDE_MIN_LEAD = 0.10
 
@@ -1769,6 +1783,20 @@ def _resolve_stock_correction(
         return result
 
     rejected = _load_rejected_aliases()
+
+    official_ky_core_code = _official_ky_core_code(normalized_term)
+    if official_ky_core_code and (
+        not suggested_code or suggested_code != official_ky_core_code
+    ):
+        result.update({
+            "code": official_ky_core_code,
+            "name": CODE_TO_NAME.get(official_ky_core_code),
+            "source": "official_ky_core",
+            "score": 1.0,
+            "lead": 1.0,
+            "reason": "term_is_official_ky_core_for_other_stock",
+        })
+        return result
 
     exact_code = (
         STOCK_DICT.get(original_term)
@@ -3284,6 +3312,9 @@ def build_stock_dict(
     for code, name in code_to_name.items():
         name_to_code[code] = code
         name_to_code[name] = code
+        ky_core = re.sub(r"[-－]KY$", "", name, flags=re.IGNORECASE).strip()
+        if ky_core != name and ky_core:
+            name_to_code.setdefault(ky_core, code)
 
     # Validator-only identities are intentionally omitted from stock_dict so
     # short terms such as ON/STM are not matched blindly across transcripts.
@@ -4310,6 +4341,9 @@ def _validate_gemini_stocks(
                 candidate_code = NAME_TO_CODE.get(candidate) or STOCK_DICT.get(candidate)
                 if candidate_code:
                     return candidate_code, candidate
+                ky_core_code = _official_ky_core_code(candidate)
+                if ky_core_code:
+                    return ky_core_code, candidate
             folded_candidates = {candidate.casefold() for candidate in name_candidates}
             for keyword, candidate_code in NAME_TO_CODE.items():
                 if keyword.casefold() in folded_candidates:
