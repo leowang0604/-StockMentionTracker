@@ -702,7 +702,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 9,
+    "observations": 10,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -747,7 +747,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-06-30T18:26:39"
+    "updated_at": "2026-07-01T18:34:06"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -3590,5 +3590,97 @@
       }
     ],
     "updated_at": "2026-06-30T18:43:58"
+  },
+  "中美金|5483": {
+    "wrong_keyword": "中美金",
+    "correct_code": "5483",
+    "correct_name": "中美晶",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "a36a8e7a-4c7d-4870-8a49-6cf276557ff2"
+    ],
+    "evidence": [
+      {
+        "video_id": "a36a8e7a-4c7d-4870-8a49-6cf276557ff2",
+        "channel": "兆華與股惑仔",
+        "date": "2026-07-01",
+        "title": "EP1130｜7月的貪食蛇上攻法？主被動、矽晶圓，剛漲價氣勢強，記憶體、CPO，先漲過的鬼故事變多！下跌最敢接的是廠務工程？ft.型男股神 陳威良",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context",
+          "strong_sector_match"
+        ],
+        "context": "憶體 就直接去買美光 就直接去買韓國的記憶體 也是一種方法 確實 對 好 那我們回到盤面上 其實我自己個人 覺得主規動還有行情之外 細金圓我真的也是覺得 滿有趣的 因為細金圓 雖然環球金有創新高 今天中美金創歷史新高 可是以位階來說 都不算是 非常高角度 對 以位階來說 都是離他們的錢高 不算太遠的地方 尤其是環球金 花了非常多力氣 大家去看 把那個環球金的線圖打開 你就知道他這次 回到一千塊以上 是花了多大的一個 一個很久很久的時間 才回來的 那細金圓確實也在一個 漲價升級的題材裡面 對不對 它是比較後段的 所以我覺得到了下半年了 如果從去年到現在 已經起漲一整年的 沒有經過回蕩修正的 就不",
+        "override_kind": "contextual",
+        "override_reason": "scoped_context_alias",
+        "original_code": "2891",
+        "original_name": "中信金"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "5483",
+        "name": "中美晶",
+        "score": 0.829,
+        "phonetic_similarity": 0.917,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "2891",
+        "name": "中信金",
+        "score": 0.706,
+        "phonetic_similarity": 0.727,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "4702",
+        "name": "中美實",
+        "score": 0.706,
+        "phonetic_similarity": 0.727,
+        "text_similarity": 0.667
+      }
+    ],
+    "updated_at": "2026-07-01T19:07:55"
+  },
+  "Unto|ONTO": {
+    "wrong_keyword": "Unto",
+    "correct_code": "ONTO",
+    "correct_name": "Onto Innovation",
+    "confidence": "high",
+    "max_score": 85,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "5506f3c3-34f6-437e-8590-237e1a241af9"
+    ],
+    "evidence": [
+      {
+        "video_id": "5506f3c3-34f6-437e-8590-237e1a241af9",
+        "channel": "財女珍妮",
+        "date": "2026-07-01",
+        "title": "2026/07/01 (三) 史上最強單季，還能漲嗎？康寧(GLW)變光通最強股！",
+        "source": "full_video_validator",
+        "score": 85,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "stock_context",
+          "code_in_context"
+        ],
+        "context": "是不是也會因為這樣 而有高於預期的成長 那除了艾斯摩爾之外 像是應用材料 或者是像柯雷 它的漲幅 也有達到了5%以上 兩天的漲幅 加上前一天 我們講到的利多消息 應該都有個7%-8%以上吧 或者是像Unto ONTO這一檔公司 因為它跟HBN 也有比較大的一個關係 測試相關的 所以你可以看到 它在這兩天 它的股價也是 非常非常的強勁創高 所以設備股是資本支出 在提高的時候 它會第一個 大家直覺聯想到的公司 那設備股 目前我覺得 很多也是已經漲滿高的 但是因為又有新的支出出來了 代表說它的營收 可以再繼續的灌上去 本來想說設備股 它的產能 或者是它的資本支出週期 可能就是未來兩三年訂單 大家是可"
+      }
+    ],
+    "phonetic_candidates": [],
+    "updated_at": "2026-07-01T19:18:24"
   }
 }
