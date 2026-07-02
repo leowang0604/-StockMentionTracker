@@ -702,7 +702,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 10,
+    "observations": 11,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -747,7 +747,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-07-01T18:34:06"
+    "updated_at": "2026-07-02T18:21:52"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -3597,9 +3597,10 @@
     "correct_name": "中美晶",
     "confidence": "high",
     "max_score": 100,
-    "observations": 1,
-    "distinct_videos": 1,
+    "observations": 2,
+    "distinct_videos": 2,
     "video_ids": [
+      "0da08e88-66a9-4152-a636-ec02d830e286",
       "a36a8e7a-4c7d-4870-8a49-6cf276557ff2"
     ],
     "evidence": [
@@ -3620,6 +3621,27 @@
           "strong_sector_match"
         ],
         "context": "憶體 就直接去買美光 就直接去買韓國的記憶體 也是一種方法 確實 對 好 那我們回到盤面上 其實我自己個人 覺得主規動還有行情之外 細金圓我真的也是覺得 滿有趣的 因為細金圓 雖然環球金有創新高 今天中美金創歷史新高 可是以位階來說 都不算是 非常高角度 對 以位階來說 都是離他們的錢高 不算太遠的地方 尤其是環球金 花了非常多力氣 大家去看 把那個環球金的線圖打開 你就知道他這次 回到一千塊以上 是花了多大的一個 一個很久很久的時間 才回來的 那細金圓確實也在一個 漲價升級的題材裡面 對不對 它是比較後段的 所以我覺得到了下半年了 如果從去年到現在 已經起漲一整年的 沒有經過回蕩修正的 就不",
+        "override_kind": "contextual",
+        "override_reason": "scoped_context_alias",
+        "original_code": "2891",
+        "original_name": "中信金"
+      },
+      {
+        "video_id": "0da08e88-66a9-4152-a636-ec02d830e286",
+        "channel": "兆華與股惑仔",
+        "date": "2026-07-02",
+        "title": "EP1131｜就算美.台.韓去槓桿，外資空單歷史高，也不會崩？真正關鍵在基本面！半信半疑中，7月創高沒問題，9月要小心？ft.AI達人 蔡明翰",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "strong_sector_match"
+        ],
+        "context": "那很早之前 其實講過大宗 那大宗還配一個 以前就大宗尼克森 然後我也不知道 為什麼的印象裡面 大宗就是要接尼克森 好 都同一個族群 那當然 這個公立元件裡面 他也有分不同的功能 那以後漲比較慢的 好像中美金集團裡面的棚城 今天就有點表態 可是他未接相對是 就比較低一些些 可是他就不會那麼犀利 我覺得 我非常認同 明翰講的 如果現在 您的心情是 手上的石骨有點低 當然你台一店 最好還是要有一點 他真的算是最合理的 然後看到強勢族群 如果你沒有 會覺得非常有壓力的 那就只能追了 對 可是風險真的要自負 那被動我覺得也是見仁見智 因為我被動的成本非常低 那為什麼我今天體感不好 因為我被動的 股票還佔",
         "override_kind": "contextual",
         "override_reason": "scoped_context_alias",
         "original_code": "2891",
@@ -3649,7 +3671,7 @@
         "text_similarity": 0.667
       }
     ],
-    "updated_at": "2026-07-01T19:07:55"
+    "updated_at": "2026-07-02T18:46:53"
   },
   "Unto|ONTO": {
     "wrong_keyword": "Unto",
@@ -3682,5 +3704,130 @@
     ],
     "phonetic_candidates": [],
     "updated_at": "2026-07-01T19:18:24"
+  },
+  "驚人電子|2449": {
+    "wrong_keyword": "驚人電子",
+    "correct_code": "2449",
+    "correct_name": "京元電子",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "b6667ca0-0271-4a33-8c7f-ec4f219fe02f"
+    ],
+    "evidence": [
+      {
+        "video_id": "b6667ca0-0271-4a33-8c7f-ec4f219fe02f",
+        "channel": "韭菜畢業班",
+        "date": "2026-07-02",
+        "title": "EP239 | 日月光投控封測漲價 / 台積電法說會",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "phonetic_top1",
+          "stock_context",
+          "weak_sector_match"
+        ],
+        "context": "現應該會持續的往上去走的不然 其實也不會有這麼多人喜歡台積電好那我們在講台積電這件事情的時候 其實我覺得可以想到另外一個很重要的一件事情那也就是所謂的封測廠 那封測廠的話我們最常去提的之前去提的就是像驚人電子 然後在更早急速我們有提過一家公司叫精彩那精彩的話其實跟台積電的合作是 非常的有掛勾的然後再來我覺得這一集可以跟各位來重新聊一件事情就是日月光頭控這家公司 很重要的一件事情那就是以目前來看我們剛剛有講到 所有的頭片量如果持續的往上去提升的話再加上chorus他現在先進封裝的產能在2027年底 他如果可以擴產到每月20萬片那你們覺得這些東西他不需要做任何封裝嗎 不需要做任何的測試嗎這是不可能",
+        "override_kind": "phonetic",
+        "override_reason": "phonetic_top1_needs_review",
+        "original_code": "6214",
+        "original_name": "精誠",
+        "phonetic_top_score": 0.686,
+        "phonetic_lead": 0.061000000000000054,
+        "needs_review": true
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2449",
+        "name": "京元電子",
+        "score": 0.686,
+        "phonetic_similarity": 0.786,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "3465",
+        "name": "進泰電子",
+        "score": 0.625,
+        "phonetic_similarity": 0.692,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "6680",
+        "name": "鑫創電子",
+        "score": 0.565,
+        "phonetic_similarity": 0.6,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-07-02T18:29:25"
+  },
+  "每光|2038": {
+    "wrong_keyword": "每光",
+    "correct_code": "2038",
+    "correct_name": "海光",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "a6ba2025-c64f-478b-837c-b8e14853c87c"
+    ],
+    "evidence": [
+      {
+        "video_id": "a6ba2025-c64f-478b-837c-b8e14853c87c",
+        "channel": "財女珍妮",
+        "date": "2026-07-02",
+        "title": "2026/07/02  (四) META搶生意，AI新戰場開打！#CRWV #NBIS",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "單日的漲跌幅 可以看到昨天最慘的是誰呢 我們剛剛講到科技巨頭 是漲跌互見的嘛 但是最慘最慘的 其實是半導體類股 比如說像是存儲啊 比如說Western Digital 就是WDC 下跌的大概6%左右 每光是下跌的 將近11% 10.6%嘛 然後像應用材料 Land Research 就有柯林研發 這個昨天呢 還很強 就是因為要擴大資本支出嘛 然後帶動的設備股的上漲呢 在昨天其實下跌的幅度 也達到了10%左右 那AMD呢 在前一天的時候 還漲了7% 然後結果在昨天呢 直接把那7%吐回去 揮拿 搏通這一類的 金片股呢 其實昨天的跌幅也不小 大概是1.2%到2.2%不定 那昨天還有一個跌最多 跌最多",
+        "override_kind": "phonetic",
+        "override_reason": "phonetic_top1_needs_review",
+        "original_code": "MU",
+        "original_name": "Micron",
+        "phonetic_top_score": 0.663,
+        "phonetic_lead": 0.0,
+        "needs_review": true
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2038",
+        "name": "海光",
+        "score": 0.663,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "2393",
+        "name": "億光",
+        "score": 0.663,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "6508",
+        "name": "惠光",
+        "score": 0.663,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-07-02T18:56:24"
   }
 }
