@@ -702,7 +702,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 12,
+    "observations": 13,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -747,7 +747,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-07-03T18:05:15"
+    "updated_at": "2026-07-04T17:49:11"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -3597,10 +3597,11 @@
     "correct_name": "中美晶",
     "confidence": "high",
     "max_score": 100,
-    "observations": 2,
-    "distinct_videos": 2,
+    "observations": 3,
+    "distinct_videos": 3,
     "video_ids": [
       "0da08e88-66a9-4152-a636-ec02d830e286",
+      "4851850f-b15c-4ee9-a8fe-1c23e6067ac3",
       "a36a8e7a-4c7d-4870-8a49-6cf276557ff2"
     ],
     "evidence": [
@@ -3646,6 +3647,28 @@
         "override_reason": "scoped_context_alias",
         "original_code": "2891",
         "original_name": "中信金"
+      },
+      {
+        "video_id": "4851850f-b15c-4ee9-a8fe-1c23e6067ac3",
+        "channel": "兆華與股惑仔",
+        "date": "2026-07-03",
+        "title": "EP1132｜各種市場傳言大解讀！非農就業好不好，都殺？三星說要砍價載板、國巨發漲價函卻震盪，瓶頸出現？台光電創高啟示！ft.操盤手 黃豐凱",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context",
+          "strong_sector_match"
+        ],
+        "context": "來你就要開始擔心他 什麼時候開始要有力控出現 也就告訴你 股價的某種程度 已經到一個滿足點 滿足點 所以這邊你就要留意 就是這邊的變化 然後 我還是要幫981 講一下話 就是他是賣了 環球金 可是他買中美金 他是 賣了紙公司 去買某公司 所以我覺得他可能有點擔心 環球金關出來之後 可能股價會比較大的震盪 所以他回去買那個 相對來講 穩定的 比較穩定一點的 但是 一樣也是可以受惠 整個一個細金圓 目前看起來 供需很吃緊的一個狀況 好 因為剛剛講到漲價 真的 從一開始傳 淡質電容漲價 對不對 因為他有機梅 所以有淡質電容 然後到最後變成 全面發漲價 他很可能有一個 勢叫力多已經實現 但是 因為我剛",
+        "override_kind": "contextual",
+        "override_reason": "scoped_context_alias",
+        "original_code": "2891",
+        "original_name": "中信金"
       }
     ],
     "phonetic_candidates": [
@@ -3671,7 +3694,7 @@
         "text_similarity": 0.667
       }
     ],
-    "updated_at": "2026-07-02T18:46:53"
+    "updated_at": "2026-07-04T18:19:58"
   },
   "Unto|ONTO": {
     "wrong_keyword": "Unto",
@@ -3829,5 +3852,67 @@
       }
     ],
     "updated_at": "2026-07-02T18:56:24"
+  },
+  "略光|8249": {
+    "wrong_keyword": "略光",
+    "correct_code": "8249",
+    "correct_name": "菱光",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "2d7b77d8-c828-43f9-b835-5a1a72aa2e38"
+    ],
+    "evidence": [
+      {
+        "video_id": "2d7b77d8-c828-43f9-b835-5a1a72aa2e38",
+        "channel": "股癌",
+        "date": "2026-07-04",
+        "title": "EP676 | 🐬",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "大概快一個月前 跟大家分享到現在 他是持續的在惡化之中 那同時我們有在發現一些 不一樣的東西 其實我是先在 整個台股的族群 沒有注意到說 風策特別的強勢 那當然風策 他其實是蠻廣的一個故事 比較老的像略光 或者說晶圓店 大家要熟悉 有kyac 他本身幫invidia做的 所以他其實已經算是 那種household name 就是大家都知道的 那在過去一陣子 我們只有注意到說 其實整體的族群 是長得還蠻好看的 那也有聽說 在一些IC design house 那當然這可能就不方便去點名 是拿幾家公司 但是在業界的朋友 應該一下是 新有七七煙 然後因為在封裝這邊 是被漲很多 那就我理解 其實在肺炎",
+        "override_kind": "phonetic",
+        "override_reason": "phonetic_top1_needs_review",
+        "original_code": "2382",
+        "original_name": "廣達",
+        "phonetic_top_score": 0.608,
+        "phonetic_lead": 0.027000000000000024,
+        "needs_review": true
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "8249",
+        "name": "菱光",
+        "score": 0.608,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "1752",
+        "name": "南光",
+        "score": 0.581,
+        "phonetic_similarity": 0.625,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "2038",
+        "name": "海光",
+        "score": 0.581,
+        "phonetic_similarity": 0.625,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-07-04T18:06:58"
   }
 }
