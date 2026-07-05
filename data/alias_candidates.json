@@ -702,7 +702,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 13,
+    "observations": 14,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -747,7 +747,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-07-04T17:49:11"
+    "updated_at": "2026-07-05T17:49:21"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -3423,10 +3423,17 @@
     "wrong_keyword": "雅翔"
   },
   "雙紅|3324": {
-    "confidence": "high",
+    "wrong_keyword": "雙紅",
     "correct_code": "3324",
     "correct_name": "雙鴻",
-    "distinct_videos": 1,
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 2,
+    "distinct_videos": 2,
+    "video_ids": [
+      "477acfe4-a44f-4ae9-8520-e2aa5dde9ef5",
+      "6d1e4799-6904-4211-bcdb-192153d0bbbe"
+    ],
     "evidence": [
       {
         "channel": "兆華與股惑仔",
@@ -3451,38 +3458,50 @@
         "source": "full_video_validator",
         "title": "EP1119｜美伊要簽了，油價救了FED開會？今天動能、左側、觀望都有事情做，先買多題材最穩，SpaceX 掛牌，供應鏈還能漲？ft.題材獵人 林漢偉",
         "video_id": "6d1e4799-6904-4211-bcdb-192153d0bbbe"
+      },
+      {
+        "video_id": "477acfe4-a44f-4ae9-8520-e2aa5dde9ef5",
+        "channel": "韭菜畢業班",
+        "date": "2026-07-05",
+        "title": "EP240 | 光通上游 / ABF載板",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context",
+          "weak_sector_match"
+        ],
+        "context": "比較少聊到 像是AWS相關的東西 它到底有沒有辦法pricing 就是價格上面pricing 那我覺得在節目最後 可以跟各位來聊一下散熱這一塊 因為散熱這一塊 我們以往可能會去看的 就是兩家公司 七紅雙紅 然後我們節目早期 其實就講到另外一家公司 也就是第三家 那第三家的話就是麥克 那麥克的話 其實這一家 他以前是在做軍樂片的 就是做軍樂片 然後可能他之前就是沒有設列 怎麼升 但他現在的話基本上 以目前來看的話 2026年的5月 他已經採購了非常多的設備 所以他現在以VC來講 那VC就是軍樂版 那軍樂版的話 他會大幅擴張40% 然後同時 我們看到中國那邊 他的一個自動化 已經達到了70% 所以"
       }
     ],
-    "max_score": 100,
-    "observations": 1,
     "phonetic_candidates": [
       {
         "code": "3324",
         "name": "雙鴻",
-        "phonetic_similarity": 1,
         "score": 0.825,
+        "phonetic_similarity": 1.0,
         "text_similarity": 0.5
       },
       {
         "code": "6506",
         "name": "雙邦",
-        "phonetic_similarity": 0.8,
         "score": 0.695,
+        "phonetic_similarity": 0.8,
         "text_similarity": 0.5
       },
       {
         "code": "4728",
         "name": "雙美",
-        "phonetic_similarity": 0.6,
         "score": 0.565,
+        "phonetic_similarity": 0.6,
         "text_similarity": 0.5
       }
     ],
-    "updated_at": "2026-06-16T21:42:57",
-    "video_ids": [
-      "6d1e4799-6904-4211-bcdb-192153d0bbbe"
-    ],
-    "wrong_keyword": "雙紅"
+    "updated_at": "2026-07-05T17:57:11"
   },
   "馬菲歐|MRVL": {
     "confidence": "medium",
@@ -3914,5 +3933,115 @@
       }
     ],
     "updated_at": "2026-07-04T18:06:58"
+  },
+  "同一|1216": {
+    "wrong_keyword": "同一",
+    "correct_code": "1216",
+    "correct_name": "統一",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "0591d19e-3710-437f-b287-8500b6c9b198"
+    ],
+    "evidence": [
+      {
+        "video_id": "0591d19e-3710-437f-b287-8500b6c9b198",
+        "channel": "投資癮",
+        "date": "2026-07-05",
+        "title": "EP336 內需變不虛",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "幾乎都掉到季線以下的 但從事看到這件事情的時候 會有兩種想法 短線交易者會認為說 到了季線想要走了 開始季線有壓力之類的 但對於長期或波段型操作者來說 他會認為季線可能是一個 長期不絕的買點 會變成同一個金融市場 同一個價位 同一個角度 會有不同的做法跟感受 就好比上禮拜討論的Apple一樣 因為Apple商品的賞價 導致那天股票的下跌 但是那時候我會認為說 我不會把它當作一個 不太好的東西 我反而覺得他們這種策略 是很不錯的 如果是一個中長期投資人來說 他可能就是一個機會 我之前還會擔心說買不夠 那現在因為每次的機會 慢慢把自己的部位給墊上去了 不過你敢會認為說 因為蘋果上漲了 我才這樣講的"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "1216",
+        "name": "統一",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "3321",
+        "name": "同泰",
+        "score": 0.639,
+        "phonetic_similarity": 0.714,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "3552",
+        "name": "同致",
+        "score": 0.639,
+        "phonetic_similarity": 0.714,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-07-05T18:09:38"
+  },
+  "南亞坑|2408": {
+    "wrong_keyword": "南亞坑",
+    "correct_code": "2408",
+    "correct_name": "南亞科",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "0591d19e-3710-437f-b287-8500b6c9b198"
+    ],
+    "evidence": [
+      {
+        "video_id": "0591d19e-3710-437f-b287-8500b6c9b198",
+        "channel": "投資癮",
+        "date": "2026-07-05",
+        "title": "EP336 內需變不虛",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "會有太多的想法 我會持續追蹤 它只是驗證我當時的想法 而不是現在的故事 當作一個買進或賣出的理由 我會持續觀察 持續追蹤 就像過往那些 踩到一些優勢的 一些公司一樣 而且他們的業外收入 還有蠻大別的 南亞坑的部分 但是我發現市場大多數人 只看最後的數字 就拿台塑來舉例好了 它第一屆的本業 是虧實善意的 但是因為業外收入 任列了46.8億元 才會讓它第一屆的EPS 轉坤的尾印大幅提升 而未來幾季 應該都還是有相互贏的東西 但是我也相信 最近的漲幅 很多也都預期在裡面了 只是預期到多少不知道 而後續後製之後 覺得多少我不知道 我覺得市場目前的熱度 就是這麼的狂熱 但是就在那我的角度來說 就是會去做"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2408",
+        "name": "南亞科",
+        "score": 0.739,
+        "phonetic_similarity": 0.778,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "1303",
+        "name": "南亞",
+        "score": 0.594,
+        "phonetic_similarity": 0.556,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "1440",
+        "name": "南紡",
+        "score": 0.55,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.333
+      }
+    ],
+    "updated_at": "2026-07-05T18:09:51"
   }
 }
