@@ -702,7 +702,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 15,
+    "observations": 16,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -747,7 +747,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-07-06T18:48:27"
+    "updated_at": "2026-07-07T18:52:16"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -4043,5 +4043,194 @@
       }
     ],
     "updated_at": "2026-07-05T18:09:51"
+  },
+  "川胡|2059": {
+    "wrong_keyword": "川胡",
+    "correct_code": "2059",
+    "correct_name": "川湖",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 2,
+    "distinct_videos": 1,
+    "video_ids": [
+      "4702b99f-420e-4629-aa94-137fe3bf638f"
+    ],
+    "evidence": [
+      {
+        "video_id": "4702b99f-420e-4629-aa94-137fe3bf638f",
+        "channel": "兆華與股惑仔",
+        "date": "2026-07-07",
+        "title": "EP1134｜鬼故事繼續，哪一條該怕？三星Q2獲利成長19倍，卻引發韓股大跌？熱門股全軍覆沒，6月營收出爐，檢驗該買該賣！ft.AI達人 蔡明翰",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "說 剛剛趙可提到今年散熱就算是 其實基本面沒有任何改變 對不對 但是 市場就是不青睞 他就是呈現比較落後 那我我常講的這個 這個東西呢也是很合理的現象 就譬如說 雞殼啊或者是 或者是華鬼族群 其實之前川胡也整理很久 川胡 對 曾經我印象裡就是那時候是 去年到今年 有人在FB留言我說 川胡到底發生什麼事情 對 也很多人問我說沒有事 就純粹是資金不進來 因為我不會因為他股價弱 而且甚至現行很弱 就跟你講 其實他不好 因為確實他的 他的財報表現就是很好 但是不見得這麼 就是會有辦法吸引資金進去 然後到最近終於開始以後稍微活起來了 那我常常講的 我什麼時候會活起來 你問我也不知道 因為如果以前這個時間"
+      },
+      {
+        "video_id": "4702b99f-420e-4629-aa94-137fe3bf638f",
+        "channel": "兆華與股惑仔",
+        "date": "2026-07-07",
+        "title": "EP1134｜鬼故事繼續，哪一條該怕？三星Q2獲利成長19倍，卻引發韓股大跌？熱門股全軍覆沒，6月營收出爐，檢驗該買該賣！ft.AI達人 蔡明翰",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "說 剛剛趙可提到今年散熱就算是 其實基本面沒有任何改變 對不對 但是 市場就是不青睞 他就是呈現比較落後 那我我常講的這個 這個東西呢也是很合理的現象 就譬如說 雞殼啊或者是 或者是華鬼族群 其實之前川胡也整理很久 川胡 對 曾經我印象裡就是那時候是 去年到今年 有人在FB留言我說 川胡到底發生什麼事情 對 也很多人問我說沒有事 就純粹是資金不進來 因為我不會因為他股價弱 而且甚至現行很弱 就跟你講 其實他不好 因為確實他的 他的財報表現就是很好 但是不見得這麼 就是會有辦法吸引資金進去 然後到最近終於開始以後稍微活起來了 那我常常講的 我什麼時候會活起來 你問我也不知道 因為如果以前這個時間"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2059",
+        "name": "川湖",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "1516",
+        "name": "川飛",
+        "score": 0.581,
+        "phonetic_similarity": 0.625,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "1595",
+        "name": "川寶",
+        "score": 0.581,
+        "phonetic_similarity": 0.625,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-07-07T19:15:09"
+  },
+  "致上|8112": {
+    "wrong_keyword": "致上",
+    "correct_code": "8112",
+    "correct_name": "至上",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "4702b99f-420e-4629-aa94-137fe3bf638f"
+    ],
+    "evidence": [
+      {
+        "video_id": "4702b99f-420e-4629-aa94-137fe3bf638f",
+        "channel": "兆華與股惑仔",
+        "date": "2026-07-07",
+        "title": "EP1134｜鬼故事繼續，哪一條該怕？三星Q2獲利成長19倍，卻引發韓股大跌？熱門股全軍覆沒，6月營收出爐，檢驗該買該賣！ft.AI達人 蔡明翰",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "不斷地成長 那你唯有本業成長賺了更多錢 你才有辦法把你的錢拿去 是繼續養大你的投資這個池子 那這樣才有辦法相輔相成 那長線不斷地投資 而且你必須要有一些規劃 就是說把自己的投資放遠 10年 20年 大致上要什麼樣子 不是不是每天都在談中 就是關心哪個族群最強 然後就把所有的資產 從這裡移到那裡 然後哪裡強再把這裡移到那裡 這種投資就我的觀念 我以前也都是這樣操作 但我後來就會發現 這樣子的情況下 你一輩子等到你真正不想工作的時候 你不可能靠你這個池子能夠退休 因為你存退休金等 不可能每天把你 所有的家產背著到處跑到處跑 不可能你一定有一個 長線放在那邊 讓他慢慢成長的 你短線一部分的資金 要跟"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "8112",
+        "name": "至上",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "4915",
+        "name": "致伸",
+        "score": 0.663,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "2467",
+        "name": "志聖",
+        "score": 0.569,
+        "phonetic_similarity": 0.875,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-07-07T19:15:04"
+  },
+  "檯藥|4746": {
+    "wrong_keyword": "檯藥",
+    "correct_code": "4746",
+    "correct_name": "台耀",
+    "confidence": "high",
+    "max_score": 97,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "6985402e-c3aa-426c-bdf1-e03be03cc3f2"
+    ],
+    "evidence": [
+      {
+        "video_id": "6985402e-c3aa-426c-bdf1-e03be03cc3f2",
+        "channel": "財女珍妮",
+        "date": "2026-07-07",
+        "title": "2026/07/07 (二) 費半反彈，輝達就是漲不動？Kyber延期對供應鏈衝擊大嗎",
+        "source": "full_video_validator",
+        "score": 97,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "級的CCL啊 然後更低界電 撥線布什麼什麼 反正就是更高規格的銅箔之類 反正就全部把它整合在一起嘛 但是呢 這些單價跟毛利 都是高於我們過去一般的PCB嘛 所以你可以看到 第一個衝擊的是誰 檯光店啊 檯藥啊 這些高階材料供應的公司嘛 因為他們在2027年 大家已經在交易說 你今天就是Kyber 去帶動你產品組合的大幅提升了 那如果今天延到2028年好了 那是不是大家就會重新去修正 對於未來一到兩年的這種 獲利的這個上升的速度 或者是你的估值溢價呢 也會開始被重新的修正 所以這個是直接售押的 就是你最高階的 最高階的一定是 受到衝擊最大的 那第二個呢 就是大家可以看到混合影響 或者是影響可能比較",
+        "override_kind": "phonetic",
+        "override_reason": "phonetic_top1_needs_review",
+        "original_code": "6274",
+        "original_name": "台燿",
+        "phonetic_top_score": 0.65,
+        "phonetic_lead": 0.0,
+        "needs_review": true
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "4746",
+        "name": "台耀",
+        "score": 0.65,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "6274",
+        "name": "台燿",
+        "score": 0.65,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "6838",
+        "name": "台新藥",
+        "score": 0.55,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.333
+      }
+    ],
+    "updated_at": "2026-07-07T19:28:32"
   }
 }
