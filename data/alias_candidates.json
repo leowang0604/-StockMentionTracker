@@ -2458,67 +2458,6 @@
     ],
     "wrong_keyword" : "服貿科"
   },
-  "檯藥|4746" : {
-    "confidence" : "high",
-    "correct_code" : "4746",
-    "correct_name" : "台耀",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "財女珍妮",
-        "context" : "級的CCL啊 然後更低界電 撥線布什麼什麼 反正就是更高規格的銅箔之類 反正就全部把它整合在一起嘛 但是呢 這些單價跟毛利 都是高於我們過去一般的PCB嘛 所以你可以看到 第一個衝擊的是誰 檯光店啊 檯藥啊 這些高階材料供應的公司嘛 因為他們在2027年 大家已經在交易說 你今天就是Kyber 去帶動你產品組合的大幅提升了 那如果今天延到2028年好了 那是不是大家就會重新去修正 對於未來一到兩年的這種 獲利的這個上升的速度 或者是你的估值溢價呢 也會開始被重新的修正 所以這個是直接售押的 就是你最高階的 最高階的一定是 受到衝擊最大的 那第二個呢 就是大家可以看到混合影響 或者是影響可能比較",
-        "date" : "2026-07-07",
-        "original_code" : "6274",
-        "original_name" : "台燿",
-        "override_kind" : "phonetic",
-        "override_reason" : "phonetic_top1_needs_review",
-        "phonetic_lead" : 0,
-        "phonetic_top_score" : 0.65,
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "name_distance=2",
-          "phonetic_top1",
-          "stock_context"
-        ],
-        "score" : 97,
-        "source" : "full_video_validator",
-        "title" : "2026\/07\/07 (二) 費半反彈，輝達就是漲不動？Kyber延期對供應鏈衝擊大嗎",
-        "video_id" : "6985402e-c3aa-426c-bdf1-e03be03cc3f2"
-      }
-    ],
-    "max_score" : 97,
-    "observations" : 1,
-    "phonetic_candidates" : [
-      {
-        "code" : "4746",
-        "name" : "台耀",
-        "phonetic_similarity" : 1,
-        "score" : 0.65,
-        "text_similarity" : 0
-      },
-      {
-        "code" : "6274",
-        "name" : "台燿",
-        "phonetic_similarity" : 1,
-        "score" : 0.65,
-        "text_similarity" : 0
-      },
-      {
-        "code" : "6838",
-        "name" : "台新藥",
-        "phonetic_similarity" : 0.667,
-        "score" : 0.55,
-        "text_similarity" : 0.333
-      }
-    ],
-    "updated_at" : "2026-07-07T19:28:32",
-    "video_ids" : [
-      "6985402e-c3aa-426c-bdf1-e03be03cc3f2"
-    ],
-    "wrong_keyword" : "檯藥"
-  },
   "每光|2038" : {
     "confidence" : "high",
     "correct_code" : "2038",
