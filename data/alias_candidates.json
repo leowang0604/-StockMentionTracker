@@ -702,7 +702,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 16,
+    "observations": 17,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -747,7 +747,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-07-07T18:52:16"
+    "updated_at": "2026-07-08T18:10:12"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -4232,5 +4232,38 @@
       }
     ],
     "updated_at": "2026-07-07T19:28:32"
+  },
+  "ASMO|ASML": {
+    "wrong_keyword": "ASMO",
+    "correct_code": "ASML",
+    "correct_name": "ASML",
+    "confidence": "high",
+    "max_score": 98,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "a813b108-af1f-48c6-8cec-c98e867e8112"
+    ],
+    "evidence": [
+      {
+        "video_id": "a813b108-af1f-48c6-8cec-c98e867e8112",
+        "channel": "財女珍妮",
+        "date": "2026-07-08",
+        "title": "2026/07/08 (三) 記憶體大跌，利多不漲，高點沒了嗎？",
+        "source": "full_video_validator",
+        "score": 98,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "stock_context",
+          "weak_sector_match"
+        ],
+        "context": "點喔 其實半導體設備先進風裝 是會跟著 像是海利市 像是美光 他們去擴充HBN 第一任 這一類的策略呢 也更受惠的 因為EUV成績時刻啊 然後還有清洗啊 還有這種測試的設備啊 其實都會需求增加嘛 像是ASMO 就艾斯摩爾 鷹柴啊 Lane Research 柯林研發 柯雷啊 或者是像我們 講到的安兔啊 這一類公司 其實都會是 在供應鏈方面呢 我覺得第一個會去受惠的 然後像風裝測試短也是嘛 所以短期來說我覺得 可能供應鏈受惠的程度呢 Maybe會比競爭對手還要來得更大 但是因為現在的設備股呢 其實漲的也非常多了 所以我覺得大家真的要進場的時候呢 你今天有拉回 你去看一下估值 設備股就是 跟他過去"
+      }
+    ],
+    "phonetic_candidates": [],
+    "updated_at": "2026-07-08T18:58:21"
   }
 }
