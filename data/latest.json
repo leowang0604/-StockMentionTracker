@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-10T18:25:08",
+  "updated_at": "2026-07-11T18:03:39",
   "stocks_ranking": [
     {
       "code": "TSLA",
@@ -1348,6 +1348,18 @@
       "sector": "記憶體",
       "contexts": [
         {
+          "video": "EP678 | 🎮",
+          "channel": "股癌",
+          "date": "2026-07-11",
+          "text": "所以我們就不用有 那個跳下去的那一段 好 當然這是某種駝鳥心態 在我們的角度 會覺得怎麼講 該來的就是閃不掉 該發生的就是會發生 所以千萬不要想藉由 市場關起來 然後去閃一些危險 甚至之前在 忘記是東南亞 來一個國家的股市 那時候也是 他們發現說什麼跌幅太大 怎樣把市場暫時的關起來 一打開直接一波跌到位 所以那個都是只有辦法 去騙自己短期內不受影響 總之就是 這一次的關起來 比較像是閃漲 因為我們去注意到說 在富台這邊 它是 在禮拜五的交易 是上漲了3點多 那當然在夜盤的時候 是有收斂 所以在禮拜一的時候 它不代表會噴這麼多年 還是要考慮一下 國際盤的各種變化 不過就是少一點 那種氣氛的味道 因為",
+          "matched_keyword": "南亞",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
           "video": "EP241 | 南亞科 / 南亞 CCL 漲價",
           "channel": "韭菜畢業班",
           "date": "2026-07-09",
@@ -1697,23 +1709,18 @@
           "sentiment_score": 0.8,
           "video_url": "",
           "extraction_mode": "gemini"
-        },
-        {
-          "video": "EP1125｜美光財報、韓國課稅，其實漲多是最大利空！台達電怎麼了？每次掉單傳聞都給機會，營收才是王道，真正的加碼方式？ft.型男股神 陳威良",
-          "channel": "兆華與股惑仔",
-          "date": "2026-06-24",
-          "text": "的南亞 他們叫他吃骨 但是台話持有南亞的 種類是多的 加上台話本身 他也做了蠻多 電子級的化學材料 所以台話加總一下 我電子級的成分也很高 所以台話今天的漲停 也不意外 那台肅呢 台肅可能就是 台話跟南亞都漲了 那台話跟南亞 可能都會去賣一些子公司 有獲利益助 那我也有賣一些 所以我就可以有業外 可是我覺得三家公司的本質 是不同的 我覺得先漲南亞 再漲台話 再漲台肅 是一個正確的順序 是有道理 有邏輯有效率的 所以其實台股是越來越效率 所以盡量不要就是 自己天馬行空的去想像一些 背後可能 別人看不懂的故事 是 好 當然最近盤面上 有很多的族群在輪動 最後來問一下 像大家現在很關心的 被動雲劍 和這",
-          "matched_keyword": "南亞",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.8,
-          "video_url": "",
-          "extraction_mode": "gemini"
         }
       ],
       "total_mentions": 34,
-      "sentiment_score": 0.579,
+      "sentiment_score": 0.585,
       "daily": {
+        "2026-07-11": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        },
         "2026-07-09": {
           "mentions": 10,
           "bullish": 2,
@@ -1757,8 +1764,8 @@
           "sentiment_score": 0.5
         },
         "2026-06-24": {
-          "mentions": 4,
-          "bullish": 4,
+          "mentions": 3,
+          "bullish": 3,
           "bearish": 0,
           "neutral": 0,
           "sentiment_score": 0.8
@@ -7660,6 +7667,422 @@
       }
     },
     {
+      "code": "META",
+      "name": "Meta",
+      "market": "US",
+      "sector": "雲端/AI",
+      "contexts": [
+        {
+          "video": "EP678 | 🎮",
+          "channel": "股癌",
+          "date": "2026-07-11",
+          "text": "後在美股這邊的話 禮拜五的晚上也都還滿精彩 禮拜四禮拜五 那整體像VL的話 是直接再一次的攻到200億了 就很久沒有看到 invita連續出這種紅K 然後重新的爬上季線 這個長得還滿好看的 那再來就是Meta也是跳上去 那Meta這邊我們就 一樣稍微的再跟大家聊一下 那時候有跟大家分享說 就即便你可能在X上面 看到一些所謂的 這些意見領袖的帳號說 這等於是Meta要退出算力的進展 因為他們要去出售 所謂的閒置的算力 那我們在節目的說法講說 這才不是他要去退出進展 他反而是要double down 那當然也不是只有我們這樣子講 遊戲研調也是有類似的說法 那時候就是在X上面的一些 那種新興的投資帳號 很多",
+          "matched_keyword": "Meta",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword",
+          "mention_count": 2
+        },
+        {
+          "video": "EP678 | 🎮",
+          "channel": "股癌",
+          "date": "2026-07-11",
+          "text": "說法講說 這才不是他要去退出進展 他反而是要double down 那當然也不是只有我們這樣子講 遊戲研調也是有類似的說法 那時候就是在X上面的一些 那種新興的投資帳號 很多都是把他評論成為說 這代表Meta要退出 那後來在Zackber的訪問裡面 好像是昨天還潛填 他出來證實了 就是我們這邊的意見才是對的 就是他並沒有要退出 他甚至是要滿倉殺進去 他要更加用力的做多 那其實我們已經有去注意到 他在未來去Booking的 大家Center這個GWASU是很高的 如果說他真的要說的話 他不會這樣去做Booking 那再來就是其實Meta他本身 就是AI的一個超級大的買房 他買了很多的東西 所以當他今天找",
+          "matched_keyword": "Meta",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP678 | 🎮",
+          "channel": "股癌",
+          "date": "2026-07-11",
+          "text": "甚至是要滿倉殺進去 他要更加用力的做多 那其實我們已經有去注意到 他在未來去Booking的 大家Center這個GWASU是很高的 如果說他真的要說的話 他不會這樣去做Booking 那再來就是其實Meta他本身 就是AI的一個超級大的買房 他買了很多的東西 所以當他今天找到一個出海口 可以去把一些 我們也不要把他稱為是閒置算力 你就把他想像成是說 就是你最新最強大的 像接下來要出VIA Ruby 或是後來的什麼飛門之類的 你會用這個東西拿去算 可能最新的AI模型 那你舊的Hopper要怎麼辦 舊的Hopper其實不會浪費 他雖然不一定會拿去拷訓練 可是他可以拿去做Inferencing 所以他不會",
+          "matched_keyword": "Meta",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP678 | 🎮",
+          "channel": "股癌",
+          "date": "2026-07-11",
+          "text": "你可以去justify這個行為是正確的 因為你這個GPU 不只是在第一線的訓練 或是推論上面可以用 你在後面 就算你沒有要用到 你也可以去出租給別人 所以這算是一個很Bullish的訊號 就是不管是對Meta 或是對於市場來講 我覺得都是這樣子 只是因為可能前陣子的盤不好 所以很多人都會看圖說故事 就要硬把他解釋成為說 他不是一個好的事情 但相信Meta最近的走勢 應該某個程度上 去破解掉這樣的東西 但我們不是很喜歡 去用短線走勢去講故事的人 因為當你這樣講之後 後面講這又再連續回檔個兩根 然後大家就說 這個敘事是不是又改變了 所以有時候那種短線的 我們就把他秉除在外 就是稍微長線一點的訊號 可能拿來",
+          "matched_keyword": "Meta",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.0,
+          "video_url": "",
+          "extraction_mode": "keyword",
+          "mention_count": 2
+        },
+        {
+          "video": "EP678 | 🎮",
+          "channel": "股癌",
+          "date": "2026-07-11",
+          "text": "故事的人 因為當你這樣講之後 後面講這又再連續回檔個兩根 然後大家就說 這個敘事是不是又改變了 所以有時候那種短線的 我們就把他秉除在外 就是稍微長線一點的訊號 可能拿來做觀察 會是比較合適的 但當然Meta這樣子的一個做法 他某程度上對市場會有影響 像那時候我們節目的說法就是說 他對Neocloud的衝擊已經是比較大的 因為等於多一個 超級大的玩家進來 他本身就是AI最大的買房之一 然後現在他也可以把這些東西 丟出來去做競爭 他說不定會有很強的 一個定價的能力 就是會由他去決定 不管是現貨或是一些合約的 GPU或是算力租賃的價格 會怎麼樣去跑 這個某個程度上也代表說 當然可能目前可以看到的 檯面上有",
+          "matched_keyword": "Meta",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP678 | 🎮",
+          "channel": "股癌",
+          "date": "2026-07-11",
+          "text": "些合約的 GPU或是算力租賃的價格 會怎麼樣去跑 這個某個程度上也代表說 當然可能目前可以看到的 檯面上有在搞這些infrastructure 除了本來的三大巨頭 或者說中國的那幾個巨頭之外 那現在連Meta這種 本來都是自用的他也拿出來 那就代表說 後面的這個算力的定價 我們是可以期待 就是如果你用單價來算的話 應該是會更便宜 但總價不一定 為什麼說總價不一定 因為後來大家發現說 你要去跑reasonry 你要去跑 一些那種專家模型 然後要有很長的 解釋的步驟或什麼 其實某程度上會燒掉更多的頭肯 但是就是去解決 可能某種定量的問題來說 以前要用到的成本可能是這樣 只是因為現在會做更精緻化的 某種推論",
+          "matched_keyword": "Meta",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP678 | 🎮",
+          "channel": "股癌",
+          "date": "2026-07-11",
+          "text": "算出來的 那因為說 預期的頭暴率 是有辦法算出來的 所以供應鏈 可能就會開始出現一些 就是過去 可能大家可以 炒很高估值的東西 有機會在這邊 會去做一個熟練 所以這個是大家 在後面要稍微注意一下 就是META來 參加AI租賃大賽 我覺得是好事 可是對於一些細部的東西 像是Neocloud 或是像一些供應鏈 可能去炒本MOM比的 就有機會會開始 要去面對一些現實的鐵拳 那當然他不是一個 不好的事情 就是可能過去 他可以交易在四五十倍 那是因為大家看不清楚 那現在價格都有辦法定出來 頭暴率又算出來的話 那有可能他的那個倍數 就不會到這麼高 但一樣 他如果還是有辦法 更加賺錢的話 光是用一個比較低的倍數 還",
+          "matched_keyword": "Meta",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.333,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "2026/07/10 (五) 股市無視戰爭：美光砸錢、SK Hynix美股上市，Meta三大利多",
+          "channel": "財女珍妮",
+          "date": "2026-07-10",
+          "text": "造更大價值的地方 這個才是我們做投資 最終極的目標嘛 我們希望我們可以藉由投資 賺到更多錢 讓我們的生活品質 可以過得更好 好所以昨天呢 其實為什麼 科技股的表現會這麼強 這個也是我們等一下 會講到的Mata 但是就是因為 AI算力資本支出越來越高 所以昨天Mata的消息出來之後呢 你看到Lumatin 他的股價也是上漲了 超過10% 應該是S&P500指數裡面 表現最好的股票 像INTER 然後像是AMD 股價也都漲很多 那像是Sandage、Question Digital 或者是美光呢 他們其實也在昨天 都有非常 強勁的一個反彈 雖然有一點開高走低的感覺 但是我覺得Mata這個新聞呢 其實有帶動",
+          "matched_keyword": "Mata",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "2026/07/10 (五) 股市無視戰爭：美光砸錢、SK Hynix美股上市，Meta三大利多",
+          "channel": "財女珍妮",
+          "date": "2026-07-10",
+          "text": "票 像INTER 然後像是AMD 股價也都漲很多 那像是Sandage、Question Digital 或者是美光呢 他們其實也在昨天 都有非常 強勁的一個反彈 雖然有一點開高走低的感覺 但是我覺得Mata這個新聞呢 其實有帶動了整個AI的 供應鏈 它有比較好的反應 唯一沒有比較好的反應的是誰呢 大家可以看到 我們在檯面上面的 這個揮打 揮打昨天是下跌了 大概0.7%左右 因為今天S跟我們的GPU通用的 這個處理器呢 它本身可能會有一點排擠效應 但是不用緊張好嗎 因為這種東西 不是一個替代的關係 Mata自己也有講了嘛 就是我們今天呢 還是會依賴他們 我們是有一個 進合關係 就是我們會競爭 但是也會",
+          "matched_keyword": "Mata",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "2026/07/10 (五) 股市無視戰爭：美光砸錢、SK Hynix美股上市，Meta三大利多",
+          "channel": "財女珍妮",
+          "date": "2026-07-10",
+          "text": "可以看到 我們在檯面上面的 這個揮打 揮打昨天是下跌了 大概0.7%左右 因為今天S跟我們的GPU通用的 這個處理器呢 它本身可能會有一點排擠效應 但是不用緊張好嗎 因為這種東西 不是一個替代的關係 Mata自己也有講了嘛 就是我們今天呢 還是會依賴他們 我們是有一個 進合關係 就是我們會競爭 但是也會合作 因為這個餅實在是太大了 所以我們先來講一下 昨天的美光好了 再來講Mata 昨天美光上漲的是 將近5%左右 其實一度是 有更強啦 大概有到80% 我有點忘記它的高點 是在哪邊了 但是呢 它在最後尾盤的時候 是收漲5%嗎 那剛剛有人問我說 美光今天到底會漲還會跌 我自己會認為 你現在如果你是有單的",
+          "matched_keyword": "Mata",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "2026/07/10 (五) 股市無視戰爭：美光砸錢、SK Hynix美股上市，Meta三大利多",
+          "channel": "財女珍妮",
+          "date": "2026-07-10",
+          "text": "的 你稍微等一等一下 或者是你之前有買美光的 我覺得你就不需要在當下 一直不斷的去擴大 你自己在記憶體存儲上面的權重 我覺得是 我自己在他上市之後 我會去關注的一個問題 好 那現在我們就回過頭 來去講Mata這家公司好了 因為我們昨天也有提到一件事情 其實你在看那麼多的供應鏈 不管今天是美股的供應鏈 還是台股的供應鏈好了 他們其實都在看一個東西的顏色 就是這些科技巨頭 這些大型的CSP 它在資本支出上面 它有沒有辦法持續的去擴張 如果今天這些大頭告訴你說 我的資本支出要開始減緩了 大家想想看這些供應鏈 還有辦法有這麼強勁股價的走勢嗎 可是以長期來說 這些CSP它一定會是贏家 為什麼 因為我今天去做了這",
+          "matched_keyword": "Mata",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "2026/07/10 (五) 股市無視戰爭：美光砸錢、SK Hynix美股上市，Meta三大利多",
+          "channel": "財女珍妮",
+          "date": "2026-07-10",
+          "text": "今天去做了這些東西 我不是在接訂單 我是把這些基礎設施都架好了之後 把以後折舊攤體完 我剩下來的就是獲利跟現金流 所以它不用有這種循環性 它可能會有一些淡忘記 但是它的循環性是不會這麼重的 好 那昨天Mata 它的股價是上漲了5% 那我們也看到 它還沒有去超過它的年限 但是有哪一些消息呢 讓大家覺得 Mata是不是真的已經要華麗轉身了 因為你看嘛 它前面的低點其實也沒有破底 然後它繼續往上 有可能就要去挑戰前面波斷的高點了 第一件讓Mata股價漲的原因 就是它的Iris的晶片 在9月的時候要開始量產 這個是露透色 去取得Mata的內部備忘錄 顯示說Mata計劃在9月的時候 開始量產自家設計的AI晶片I",
+          "matched_keyword": "Mata",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "2026/07/10 (五) 股市無視戰爭：美光砸錢、SK Hynix美股上市，Meta三大利多",
+          "channel": "財女珍妮",
+          "date": "2026-07-10",
+          "text": "華麗轉身了 因為你看嘛 它前面的低點其實也沒有破底 然後它繼續往上 有可能就要去挑戰前面波斷的高點了 第一件讓Mata股價漲的原因 就是它的Iris的晶片 在9月的時候要開始量產 這個是露透色 去取得Mata的內部備忘錄 顯示說Mata計劃在9月的時候 開始量產自家設計的AI晶片Iris 然後由博通擔任設計合作夥伴 所以你看昨天的博通 它的股價也是比較強一點的 還有像台積電它會負責製造 所以台積電不管今天是誰 要做產值 它都是賣產 它都是幫大家 誰要賣產值 台積電都是幫它做產值的人 它完全是利於不敗之地 好 更驚人的是呢 Mata它今年 它要把它的整體算力基礎設施 推到七幾瓦左右 那2027年 還會再",
+          "matched_keyword": "Mata",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "2026/07/10 (五) 股市無視戰爭：美光砸錢、SK Hynix美股上市，Meta三大利多",
+          "channel": "財女珍妮",
+          "date": "2026-07-10",
+          "text": "天的博通 它的股價也是比較強一點的 還有像台積電它會負責製造 所以台積電不管今天是誰 要做產值 它都是賣產 它都是幫大家 誰要賣產值 台積電都是幫它做產值的人 它完全是利於不敗之地 好 更驚人的是呢 Mata它今年 它要把它的整體算力基礎設施 推到七幾瓦左右 那2027年 還會再繼續的去翻倍 所以Morgan Stanley上個禮拜 才剛預估說Mata的明年 大概會增加四幾瓦的一個算力 可是現在呢 開始 欸 這個預估呢 要開始慢慢的去做一個上修了 然後Mata的資本支出呢 其實也在持續的上修當中 好 那這個消息呢 出來我們第一個講到的是 直接受惠就是博通嘛 因為Mata它是跟博通呢 去一起合作 然後去",
+          "matched_keyword": "Mata",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "2026/07/10 (五) 股市無視戰爭：美光砸錢、SK Hynix美股上市，Meta三大利多",
+          "channel": "財女珍妮",
+          "date": "2026-07-10",
+          "text": "增加四幾瓦的一個算力 可是現在呢 開始 欸 這個預估呢 要開始慢慢的去做一個上修了 然後Mata的資本支出呢 其實也在持續的上修當中 好 那這個消息呢 出來我們第一個講到的是 直接受惠就是博通嘛 因為Mata它是跟博通呢 去一起合作 然後去做這個晶片設計 那其他呢 還有哪一些公司會受惠呢 像是應用材料 然後柯林研發 柯雷的股價呢 其實這些設備類股 也都上漲了大概4到6%左右 那根據花旗的預測 全球晶圓製造設備的市場呢 預計會從2023年的 1450億美元 到2028年的時候 會成長到2500億美元 除了晶圓製造設備的市場 不斷的成長之外 那包括了我們講到的 整體的供應鏈 比如說敵人 比如說NAND這些",
+          "matched_keyword": "Mata",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "2026/07/10 (五) 股市無視戰爭：美光砸錢、SK Hynix美股上市，Meta三大利多",
+          "channel": "財女珍妮",
+          "date": "2026-07-10",
+          "text": "標價格 因為今天整個供應鏈 你今天你資本支出一啥出去 你今天要蓋資料中心 它就是從處理器 然後到網路 然後到存儲 或者是你再更延伸出去 散熱啊 電力啊這些東西 它都是環環相扣的 好 那第二個原因呢 讓Meta它的股價上漲的 其實我覺得更重要 就是它的MuSpark的1.1首次開始 去收費了 因為今天它在擴大資本支出的時候 其實一開始市場是下跌反應的 它會覺得 你怎麼又要花錢了 資本支出怎麼又要增大了 你今天如果只有投入 但是你看不到新的收入來源的話 那大家還是會擔心你的投資報酬率不好 但是Meta隨後它就去推出了 它這個Spark 1.1的模型 跟它的Meta Model API 所以這個Spark",
+          "matched_keyword": "Meta",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "2026/07/10 (五) 股市無視戰爭：美光砸錢、SK Hynix美股上市，Meta三大利多",
+          "channel": "財女珍妮",
+          "date": "2026-07-10",
+          "text": "投入 但是你看不到新的收入來源的話 那大家還是會擔心你的投資報酬率不好 但是Meta隨後它就去推出了 它這個Spark 1.1的模型 跟它的Meta Model API 所以這個Spark 1.1 是Meta它最新的多模態推理模型 主要應用在哪裡呢 應用在程式設計 工具使用 電腦操作 AI agent 這個長流程的任務 我覺得像AI agent 就是像這幾天 不是像OpenAI也有推出它們新的模型 然後像Gorg也有推出它們新的模型 我覺得AI agent 這個長流程的任務 是現在你今天要推模型 或者是你想要去對客戶收費的時候 你一定要做的東西 因為Agent真的是超級方便 我不知道大家有沒有在使用",
+          "matched_keyword": "Meta",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "2026/07/10 (五) 股市無視戰爭：美光砸錢、SK Hynix美股上市，Meta三大利多",
+          "channel": "財女珍妮",
+          "date": "2026-07-10",
+          "text": "對不對 我前面已經有 前面成功的案例了 所以這就代表說 Meita他的AI投資 其實也是從他內部的 效率工具 開始去往他外部 商業化的平台去做移動 過去Meita他使用AI 他只是說 我可以去改善我的Facebook 或者是Instagram的廣告推薦 去提高點擊率 去增加我使用者的停留時間 主要帶來的收益 都還是在他主要的 營業項目 就是廣告營收裡面 可是如果我現在 我可以去推出API 我可以直接去向開發者 去向企業 去收取模型的使用費的時候 那我的變現的故事 就可以講得更好聽了嘛 而且有個重點 就是 這個是Meita有史以來 第一次對企業開放 付費的API 他的定價是1.25美元 百萬輸入tokens 那",
+          "matched_keyword": "Facebook",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "2026/07/10 (五) 股市無視戰爭：美光砸錢、SK Hynix美股上市，Meta三大利多",
+          "channel": "財女珍妮",
+          "date": "2026-07-10",
+          "text": "Y GPT 我覺得這兩個加起來 真的是打片天下無敵手 我覺得真的是超級強 好 那馬克也有說嘛 他說 欸 今天就是比Germany的系列都還要好嘛 那如果今天真的是成立 或者是真的就是這樣的話 那我覺得META 或許他真的可以在這個地方 去做一個很好的華麗轉身嘛 那大家記不記得 我們在7月2號 這個我就記得了 7月2號的時候 我們那個時候就有講說 META要改變他自己的策略 去賣算力 所以第三件事情呢 就是他也會去探索 他自己的雲端業務嘛 所以我們可以看到 今天META他也在 建立AI雲端業務 然後把多出來的算力 去打包賣給企業的時候 就像AWS 然後微軟的Ager一樣 如果這件事情真的 就是照計畫去做",
+          "matched_keyword": "Meta",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "2026/07/10 (五) 股市無視戰爭：美光砸錢、SK Hynix美股上市，Meta三大利多",
+          "channel": "財女珍妮",
+          "date": "2026-07-10",
+          "text": "索 他自己的雲端業務嘛 所以我們可以看到 今天META他也在 建立AI雲端業務 然後把多出來的算力 去打包賣給企業的時候 就像AWS 然後微軟的Ager一樣 如果這件事情真的 就是照計畫去做進行的話 META的商業模式 就會從廣告公司 然後變成一個廣告 加AI模型 加算力基礎設施的 複合型的科技公司 聽起來是不是就讓大家興奮了 是不是就覺得這故事 又可以再寫好幾年了 所以我先投入資料中心 建立算力 訓練自己的模型 再透過API去開放外部使用 甚至可以把多餘的算力去 包裝成雲端服務 對外出售的時候呢 市場就開始重新解讀 META的資本支出 可能不是亂燒錢了 可能在未來 真的會幫他建立 他自己的互成合了",
+          "matched_keyword": "Meta",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "2026/07/10 (五) 股市無視戰爭：美光砸錢、SK Hynix美股上市，Meta三大利多",
+          "channel": "財女珍妮",
+          "date": "2026-07-10",
+          "text": "奮了 是不是就覺得這故事 又可以再寫好幾年了 所以我先投入資料中心 建立算力 訓練自己的模型 再透過API去開放外部使用 甚至可以把多餘的算力去 包裝成雲端服務 對外出售的時候呢 市場就開始重新解讀 META的資本支出 可能不是亂燒錢了 可能在未來 真的會幫他建立 他自己的互成合了 只是呢 因為現在META每年 還是花超過一千億美元 在發展AI嘛 所以現在確實是一個故事 什麼時候這個故事 可以開始實現 從童話故事 變成真實的現實 我覺得這個還需要一段時間 去讓市場驗證的 但是大家也可以知道嘛 我們剛剛 總結一下我們剛剛講到的 你直接受惠的公司是什麼呢 就是我在擴大資本支出的時候 我在做我自己的 SK晶",
+          "matched_keyword": "Meta",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP677 | 🐎",
+          "channel": "股癌",
+          "date": "2026-07-08",
+          "text": "VR Rubin 一起出來 然後這邊發生說 就是一直去往後延 有些人講說Rubin要要吵 然後現在他甚至講說 就可能不會跟著Rubin要吵 會到飛門才會跑出來 但這個呢 你說他是一個新聞嗎 就像我在臉書跟大家講 他其實真的不是新聞 因為在產業看得到一些 研調或是一些報告的 其實本來就知道說 這個東西他不會像之前 大家想像的這麼快出來 那再不計呢 就你聽我們節目 我們也是有跟大家聊到說 就是他的 那個Kyber的怪物Rack 就是可能會有一些 遞人的狀況 不然說那時候我們去跟大家 分享說在 Computex 看到的東西的時候 就有去提到這一段 那當然不知道要去講說 你看說我們消息比較快 我整個說就",
+          "matched_keyword": "臉書",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "2026/07/08 (三) 記憶體大跌，利多不漲，高點沒了嗎？",
+          "channel": "財女珍妮",
+          "date": "2026-07-08",
+          "text": "覺得是去影響 去推動他下一階段走勢的 關鍵要素 所以大家如果要去看 我們對於輝達的 這個技術面的說法的話 大家可以去看昨天的影片 我們今天就不多講 因為我今天沒有把圖放出來 那另外一個逆勢上漲的呢 是Meta 那Meta在這兩天呢 在上個禮拜的時候 其實大家也知道有很多的 新的消息嘛 比如說他說要賣算力啊 比如說他有 什麼樣 這個新的來源 然後就是一天漲 一天跌啊 讓市場上面也會覺得 現在到底是怎樣 Meta我覺得他現在 他的整體的股價形態呢 也是處在一個比較弱勢的格局 所以你今天真的要有一個 非常強而有力的催化劑 除了你今天要化大餅 你要講一個故事給大家聽 要讓大家認同之外呢 什麼時候有貢獻 這個時",
+          "matched_keyword": "Meta",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
+          "video": "2026/07/08 (三) 記憶體大跌，利多不漲，高點沒了嗎？",
+          "channel": "財女珍妮",
+          "date": "2026-07-08",
+          "text": "家認同之外呢 什麼時候有貢獻 這個時機點呢 我覺得也是蠻重要 那昨天為什麼又上漲了 將近三個percent左右 原因是因為他推出了一個 新的AI圖像生成模型 叫做muse image 他在內檻 在這個Meta AI的 聊天機器人裡面 然後還有像是 Instagram或者是WhatsApp裡面 他都有去 把這個AI圖像生成模型呢 去導入 所以這個是Meta他花了 一年哦 重金打造的這個 成果之一 然後也希望未來呢 他可以有更多應用方面啊 貨幣化之類的 一個效果 所以大家可以看到 Meta現在很清楚 我就是先花大錢 狂砸錢去做這個AI的算力 我可以把我的 基礎設施先做起來 然後把我這些算力呢 如果我內部",
+          "matched_keyword": "Meta",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
+          "video": "2026/07/08 (三) 記憶體大跌，利多不漲，高點沒了嗎？",
+          "channel": "財女珍妮",
+          "date": "2026-07-08",
+          "text": "很重要 這個也是為什麼我們認為 這一段空窗期 其實會震盪的原因就是因為 大家已經開始在思考 在檢查 在等待 AI的這些服務 AI的這些投資 到底能不能實際的 轉換為足夠的回報上面 如果大型業者 比如說META 我今天出現了這個閒置的算力 我要開始去出售或轉足 那短期之內 大家可能覺得你多了一個營收成長 可是死細想一想 又覺得好像有一點不對 那為什麼你會有這些閒置的產能 就會開始有很多不同的分歧 所以AI的需求我覺得是持續的 但是成長率下滑的時候 你必須要靠提高資產利用率 去提高你的獲利能力 如果沒有的話 那對於股價來說 就是一個利空 所以當今天記憶體股 今天半導體類股 它已經變成一個非常擁擠的交易 當",
+          "matched_keyword": "Meta",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
+          "video": "2026/07/07 (二) 費半反彈，輝達就是漲不動？Kyber延期對供應鏈衝擊大嗎",
+          "channel": "財女珍妮",
+          "date": "2026-07-07",
+          "text": "打去做購買 然後依賴度非常的深 但是後來呢 揮打它的主要競爭對手有誰 其實你先不要講AMD好了 你先講那些X跟X掌商 就是這些科技巨頭 比如說像是Google 像是Amazon 像是這個微軟啊 或者是Meta 他們也都會想要做自己的 客製化晶片嘛 那客製化晶片的原因 就是因為這些公司很有錢 有錢的人才會去做ASIC 然後他希望可以在 我揮打有一定程度的供應方面呢 我也可以去 提高我自己的定價權 溢價能力 所以這個是第一個 可以去跟揮打做對打的公司 那第二個當然我們看到就是AMD 這些公司 他也不希望他自己被揮打綁絲 所以如果今天 我們說什麼訓練啊 然後到推論啊 或者是AMD他跟揮打的這個 產品世代可能",
+          "matched_keyword": "Meta",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP1133｜洗籌碼時間，研調機構說輝達機櫃延後出，真假判斷？CCL、載板、被動被殺，勇敢接誰？籌碼躲在功率和軍工，要追嗎？ft.題材獵人 林漢偉",
+          "channel": "兆華與股惑仔",
+          "date": "2026-07-06",
+          "text": "到之後才會正式的一個量產 所以你看我們台灣相關的 台大電光寶科 到細光指數全面性的拉回 那上個禮拜 我記得禮拜來 跟大家講 康寧的玻璃橋街的一個相關題材 又讓公民再疊一次 然後到上個禮拜 你看到所謂的Meta 還有所謂的蘋果 不管是所謂的 未來可能資本支出要遞延 或說蘋果喊到記憶體的報價太貴 你也可以看到 台股相關的漲價概念股 就是全部都被鬼故事洗禮過一波 所以讓大家就覺得說 這盤面上到底有沒有那種 強勢一直漲的股票 那目前來看當然還有公率元件 那公率元件的問題 當然在於說第一個 他們現在變成很多股票被處置 所以籌碼集中在少數的大戶手上 所以一般到這些股票 要不就是開漲停 不然你就不敢追 那變成說 他",
+          "matched_keyword": "Meta",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.667,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP676 | 🐬",
+          "channel": "股癌",
+          "date": "2026-07-04",
+          "text": "著大盤一起行高的 結果就死了 然後就可以確定他就死了 那我猜有機會在下禮拜 或是下禮拜就會去見分曉 到時候我自己是非常期待 但總之我也去完成了 相對應的一個佈局 那在這個禮拜有一個 蠻大的新聞 就是說Meta要去投入 Neocloud的一個建制 也就是他想要去把一些 鱿魚的算力拿出來 出給大家 那這個在市場上立刻 就掀起了蠻多討論 那絕大多數的評論都是認為說 這個就代表說Meta比較完的 所以你去看一些 那X的 他們把它稱為什麼大V 就是整天去發表意見的一些 他都喜歡放那種動漫的頭像 蠻多的意見都是在講說 這個是Meta不完的 那我們這邊講一下 我們自己的看法 因為我們還是 除了自己有一些思考能力之外",
+          "matched_keyword": "Meta",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP676 | 🐬",
+          "channel": "股癌",
+          "date": "2026-07-04",
+          "text": "掀起了蠻多討論 那絕大多數的評論都是認為說 這個就代表說Meta比較完的 所以你去看一些 那X的 他們把它稱為什麼大V 就是整天去發表意見的一些 他都喜歡放那種動漫的頭像 蠻多的意見都是在講說 這個是Meta不完的 那我們這邊講一下 我們自己的看法 因為我們還是 除了自己有一些思考能力之外的 然後再來就是 我們在產業的一些朋友 就我們的理解 當然這可能是我們這一端的一些想法 那後面也都可能會改變 就我們只就當下 所可以拿到的資訊去做一個判斷 Meta他是打算要Double down 什麼意思 就是他是想要去靠這個東西賺錢 他不是說 完了 我的AI算力不知道怎麼用 然後出來租人家好了 他不是這樣 他是打",
+          "matched_keyword": "Meta",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP676 | 🐬",
+          "channel": "股癌",
+          "date": "2026-07-04",
+          "text": "人 所以他其實是想要去做更多建制的 那當然這個後面可以再觀察 各個企業的動向 再去做一個驗證 當然就我們目前所了解到的 那不然說像是一些研調的單位 我有去看了一下 大家所提到的一些資料 提到說 其實在Meta內部 他們是 本來已經出現一些那種分歧的狀態 就是有人想要沖 可是CFOR想要去踩煞車 希望說大家不要這麼沖 但因為現在找到一些解放了 就是說我們可以盡量的沖 因為我們沒有用到的東西 我們可以拿出去租別人 那就導致說 現在公司變成是有共識 那我們確實就可以沖 因為我們可能沒有用到的東西 或者還沒有用到的東西 它不會形成一個浪費 它是有辦法可以去 外租給別人去賺錢的 所以理論上這個事情 應該是要把它",
+          "matched_keyword": "Meta",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        }
+      ],
+      "total_mentions": 32,
+      "sentiment_score": 0.531,
+      "daily": {
+        "2026-07-11": {
+          "mentions": 9,
+          "bullish": 1,
+          "bearish": 3,
+          "neutral": 5,
+          "sentiment_score": 0.426
+        },
+        "2026-07-10": {
+          "mentions": 14,
+          "bullish": 3,
+          "bearish": 1,
+          "neutral": 10,
+          "sentiment_score": 0.571
+        },
+        "2026-07-08": {
+          "mentions": 4,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 4,
+          "sentiment_score": 0.5
+        },
+        "2026-07-07": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-07-06": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.667
+        },
+        "2026-07-04": {
+          "mentions": 3,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 2,
+          "sentiment_score": 0.667
+        }
+      }
+    },
+    {
       "code": "3008",
       "name": "大立光",
       "market": "TW",
@@ -9236,6 +9659,18 @@
       "sector": "ETF・台股指數",
       "contexts": [
         {
+          "video": "EP678 | 🎮",
+          "channel": "股癌",
+          "date": "2026-07-11",
+          "text": "把樹發出來 那以前就發現說 奇怪說每次我樹發這個 都會被罵 大家不覺得市場開車很好吃嗎 後來發現說沒有 只有你覺得 就只有我跟我是沒有朋友覺得 我們那個小小的同溫層 那當然今年可能開始改變 因為今年像0050 都有50幾%的一個報酬率 那大家都在市場裡面賺了蠻多錢 所以就注意到網路風向有點變 當大家都有上車的時候 風向就變了 所以我就覺得 像那個川普的 Trump account 是very smart的一個操作 超級聰明的 因為他讓大家都上車 即便那個數額不一定是很大 他讓只有給多少 1000USD了嗎 可是重點是有些僱主會跟著加碼 有些donor可能會 讓他旗下的企業 也就跟著去加碼 佔出這個政策",
+          "matched_keyword": "0050",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
           "video": "EP240 | 光通上游 / ABF載板",
           "channel": "韭菜畢業班",
           "date": "2026-07-05",
@@ -9583,23 +10018,18 @@
           "sentiment_score": 0.5,
           "video_url": "",
           "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP1106｜又漲了5000點，整理持股、思考出場策略，不是急的時候！被動關不住，記憶體資金回歸，台積電分紅要搞定！ft.紀緯明 小明同學",
-          "channel": "兆華與股惑仔",
-          "date": "2026-05-27",
-          "text": "你要知道是什麼 例如說你想要知道 985A怎麼樣嗎 那我也可以 你上網查一下 其實你就知道985A 確實有跑贏0050 就是在台股多頭市場的時候 這樣的策略看來確實沒有錯 可是並不代表 我手上就沒有0050 只是我已經有一部分的0050了 就是式質型傳統的已經有了 那我想要試試看這種號稱 應該要打敗0050的東西 能不能有這樣的表現 所以我覺得當初我買進的原因 理由講得很清楚 那大家不要變成是 喔 因為趙華買了喔 所以現在這檔怎麼樣呢 那我覺得這樣就會有點那個 你可以去查一下 00985A現在的表現嘛 以及像我們常常講到981A 403A 992A 991A 各自有他們喜歡的領域等等的 那大家也可以",
-          "matched_keyword": "0050",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
         }
       ],
       "total_mentions": 31,
       "sentiment_score": 0.573,
       "daily": {
+        "2026-07-11": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        },
         "2026-07-05": {
           "mentions": 1,
           "bullish": 0,
@@ -9713,11 +10143,11 @@
           "sentiment_score": 0.8
         },
         "2026-05-27": {
-          "mentions": 4,
-          "bullish": 2,
+          "mentions": 3,
+          "bullish": 1,
           "bearish": 0,
           "neutral": 2,
-          "sentiment_score": 0.7
+          "sentiment_score": 0.6
         }
       }
     },
@@ -11714,420 +12144,6 @@
           "bearish": 0,
           "neutral": 8,
           "sentiment_score": 0.5
-        }
-      }
-    },
-    {
-      "code": "META",
-      "name": "Meta",
-      "market": "US",
-      "sector": "雲端/AI",
-      "contexts": [
-        {
-          "video": "2026/07/10 (五) 股市無視戰爭：美光砸錢、SK Hynix美股上市，Meta三大利多",
-          "channel": "財女珍妮",
-          "date": "2026-07-10",
-          "text": "造更大價值的地方 這個才是我們做投資 最終極的目標嘛 我們希望我們可以藉由投資 賺到更多錢 讓我們的生活品質 可以過得更好 好所以昨天呢 其實為什麼 科技股的表現會這麼強 這個也是我們等一下 會講到的Mata 但是就是因為 AI算力資本支出越來越高 所以昨天Mata的消息出來之後呢 你看到Lumatin 他的股價也是上漲了 超過10% 應該是S&P500指數裡面 表現最好的股票 像INTER 然後像是AMD 股價也都漲很多 那像是Sandage、Question Digital 或者是美光呢 他們其實也在昨天 都有非常 強勁的一個反彈 雖然有一點開高走低的感覺 但是我覺得Mata這個新聞呢 其實有帶動",
-          "matched_keyword": "Mata",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "2026/07/10 (五) 股市無視戰爭：美光砸錢、SK Hynix美股上市，Meta三大利多",
-          "channel": "財女珍妮",
-          "date": "2026-07-10",
-          "text": "票 像INTER 然後像是AMD 股價也都漲很多 那像是Sandage、Question Digital 或者是美光呢 他們其實也在昨天 都有非常 強勁的一個反彈 雖然有一點開高走低的感覺 但是我覺得Mata這個新聞呢 其實有帶動了整個AI的 供應鏈 它有比較好的反應 唯一沒有比較好的反應的是誰呢 大家可以看到 我們在檯面上面的 這個揮打 揮打昨天是下跌了 大概0.7%左右 因為今天S跟我們的GPU通用的 這個處理器呢 它本身可能會有一點排擠效應 但是不用緊張好嗎 因為這種東西 不是一個替代的關係 Mata自己也有講了嘛 就是我們今天呢 還是會依賴他們 我們是有一個 進合關係 就是我們會競爭 但是也會",
-          "matched_keyword": "Mata",
-          "analysis_source": "whisper",
-          "sentiment": "bearish",
-          "sentiment_score": 0.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "2026/07/10 (五) 股市無視戰爭：美光砸錢、SK Hynix美股上市，Meta三大利多",
-          "channel": "財女珍妮",
-          "date": "2026-07-10",
-          "text": "可以看到 我們在檯面上面的 這個揮打 揮打昨天是下跌了 大概0.7%左右 因為今天S跟我們的GPU通用的 這個處理器呢 它本身可能會有一點排擠效應 但是不用緊張好嗎 因為這種東西 不是一個替代的關係 Mata自己也有講了嘛 就是我們今天呢 還是會依賴他們 我們是有一個 進合關係 就是我們會競爭 但是也會合作 因為這個餅實在是太大了 所以我們先來講一下 昨天的美光好了 再來講Mata 昨天美光上漲的是 將近5%左右 其實一度是 有更強啦 大概有到80% 我有點忘記它的高點 是在哪邊了 但是呢 它在最後尾盤的時候 是收漲5%嗎 那剛剛有人問我說 美光今天到底會漲還會跌 我自己會認為 你現在如果你是有單的",
-          "matched_keyword": "Mata",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "2026/07/10 (五) 股市無視戰爭：美光砸錢、SK Hynix美股上市，Meta三大利多",
-          "channel": "財女珍妮",
-          "date": "2026-07-10",
-          "text": "的 你稍微等一等一下 或者是你之前有買美光的 我覺得你就不需要在當下 一直不斷的去擴大 你自己在記憶體存儲上面的權重 我覺得是 我自己在他上市之後 我會去關注的一個問題 好 那現在我們就回過頭 來去講Mata這家公司好了 因為我們昨天也有提到一件事情 其實你在看那麼多的供應鏈 不管今天是美股的供應鏈 還是台股的供應鏈好了 他們其實都在看一個東西的顏色 就是這些科技巨頭 這些大型的CSP 它在資本支出上面 它有沒有辦法持續的去擴張 如果今天這些大頭告訴你說 我的資本支出要開始減緩了 大家想想看這些供應鏈 還有辦法有這麼強勁股價的走勢嗎 可是以長期來說 這些CSP它一定會是贏家 為什麼 因為我今天去做了這",
-          "matched_keyword": "Mata",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "2026/07/10 (五) 股市無視戰爭：美光砸錢、SK Hynix美股上市，Meta三大利多",
-          "channel": "財女珍妮",
-          "date": "2026-07-10",
-          "text": "今天去做了這些東西 我不是在接訂單 我是把這些基礎設施都架好了之後 把以後折舊攤體完 我剩下來的就是獲利跟現金流 所以它不用有這種循環性 它可能會有一些淡忘記 但是它的循環性是不會這麼重的 好 那昨天Mata 它的股價是上漲了5% 那我們也看到 它還沒有去超過它的年限 但是有哪一些消息呢 讓大家覺得 Mata是不是真的已經要華麗轉身了 因為你看嘛 它前面的低點其實也沒有破底 然後它繼續往上 有可能就要去挑戰前面波斷的高點了 第一件讓Mata股價漲的原因 就是它的Iris的晶片 在9月的時候要開始量產 這個是露透色 去取得Mata的內部備忘錄 顯示說Mata計劃在9月的時候 開始量產自家設計的AI晶片I",
-          "matched_keyword": "Mata",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "2026/07/10 (五) 股市無視戰爭：美光砸錢、SK Hynix美股上市，Meta三大利多",
-          "channel": "財女珍妮",
-          "date": "2026-07-10",
-          "text": "華麗轉身了 因為你看嘛 它前面的低點其實也沒有破底 然後它繼續往上 有可能就要去挑戰前面波斷的高點了 第一件讓Mata股價漲的原因 就是它的Iris的晶片 在9月的時候要開始量產 這個是露透色 去取得Mata的內部備忘錄 顯示說Mata計劃在9月的時候 開始量產自家設計的AI晶片Iris 然後由博通擔任設計合作夥伴 所以你看昨天的博通 它的股價也是比較強一點的 還有像台積電它會負責製造 所以台積電不管今天是誰 要做產值 它都是賣產 它都是幫大家 誰要賣產值 台積電都是幫它做產值的人 它完全是利於不敗之地 好 更驚人的是呢 Mata它今年 它要把它的整體算力基礎設施 推到七幾瓦左右 那2027年 還會再",
-          "matched_keyword": "Mata",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "2026/07/10 (五) 股市無視戰爭：美光砸錢、SK Hynix美股上市，Meta三大利多",
-          "channel": "財女珍妮",
-          "date": "2026-07-10",
-          "text": "天的博通 它的股價也是比較強一點的 還有像台積電它會負責製造 所以台積電不管今天是誰 要做產值 它都是賣產 它都是幫大家 誰要賣產值 台積電都是幫它做產值的人 它完全是利於不敗之地 好 更驚人的是呢 Mata它今年 它要把它的整體算力基礎設施 推到七幾瓦左右 那2027年 還會再繼續的去翻倍 所以Morgan Stanley上個禮拜 才剛預估說Mata的明年 大概會增加四幾瓦的一個算力 可是現在呢 開始 欸 這個預估呢 要開始慢慢的去做一個上修了 然後Mata的資本支出呢 其實也在持續的上修當中 好 那這個消息呢 出來我們第一個講到的是 直接受惠就是博通嘛 因為Mata它是跟博通呢 去一起合作 然後去",
-          "matched_keyword": "Mata",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "2026/07/10 (五) 股市無視戰爭：美光砸錢、SK Hynix美股上市，Meta三大利多",
-          "channel": "財女珍妮",
-          "date": "2026-07-10",
-          "text": "增加四幾瓦的一個算力 可是現在呢 開始 欸 這個預估呢 要開始慢慢的去做一個上修了 然後Mata的資本支出呢 其實也在持續的上修當中 好 那這個消息呢 出來我們第一個講到的是 直接受惠就是博通嘛 因為Mata它是跟博通呢 去一起合作 然後去做這個晶片設計 那其他呢 還有哪一些公司會受惠呢 像是應用材料 然後柯林研發 柯雷的股價呢 其實這些設備類股 也都上漲了大概4到6%左右 那根據花旗的預測 全球晶圓製造設備的市場呢 預計會從2023年的 1450億美元 到2028年的時候 會成長到2500億美元 除了晶圓製造設備的市場 不斷的成長之外 那包括了我們講到的 整體的供應鏈 比如說敵人 比如說NAND這些",
-          "matched_keyword": "Mata",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "2026/07/10 (五) 股市無視戰爭：美光砸錢、SK Hynix美股上市，Meta三大利多",
-          "channel": "財女珍妮",
-          "date": "2026-07-10",
-          "text": "標價格 因為今天整個供應鏈 你今天你資本支出一啥出去 你今天要蓋資料中心 它就是從處理器 然後到網路 然後到存儲 或者是你再更延伸出去 散熱啊 電力啊這些東西 它都是環環相扣的 好 那第二個原因呢 讓Meta它的股價上漲的 其實我覺得更重要 就是它的MuSpark的1.1首次開始 去收費了 因為今天它在擴大資本支出的時候 其實一開始市場是下跌反應的 它會覺得 你怎麼又要花錢了 資本支出怎麼又要增大了 你今天如果只有投入 但是你看不到新的收入來源的話 那大家還是會擔心你的投資報酬率不好 但是Meta隨後它就去推出了 它這個Spark 1.1的模型 跟它的Meta Model API 所以這個Spark",
-          "matched_keyword": "Meta",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "2026/07/10 (五) 股市無視戰爭：美光砸錢、SK Hynix美股上市，Meta三大利多",
-          "channel": "財女珍妮",
-          "date": "2026-07-10",
-          "text": "投入 但是你看不到新的收入來源的話 那大家還是會擔心你的投資報酬率不好 但是Meta隨後它就去推出了 它這個Spark 1.1的模型 跟它的Meta Model API 所以這個Spark 1.1 是Meta它最新的多模態推理模型 主要應用在哪裡呢 應用在程式設計 工具使用 電腦操作 AI agent 這個長流程的任務 我覺得像AI agent 就是像這幾天 不是像OpenAI也有推出它們新的模型 然後像Gorg也有推出它們新的模型 我覺得AI agent 這個長流程的任務 是現在你今天要推模型 或者是你想要去對客戶收費的時候 你一定要做的東西 因為Agent真的是超級方便 我不知道大家有沒有在使用",
-          "matched_keyword": "Meta",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "2026/07/10 (五) 股市無視戰爭：美光砸錢、SK Hynix美股上市，Meta三大利多",
-          "channel": "財女珍妮",
-          "date": "2026-07-10",
-          "text": "對不對 我前面已經有 前面成功的案例了 所以這就代表說 Meita他的AI投資 其實也是從他內部的 效率工具 開始去往他外部 商業化的平台去做移動 過去Meita他使用AI 他只是說 我可以去改善我的Facebook 或者是Instagram的廣告推薦 去提高點擊率 去增加我使用者的停留時間 主要帶來的收益 都還是在他主要的 營業項目 就是廣告營收裡面 可是如果我現在 我可以去推出API 我可以直接去向開發者 去向企業 去收取模型的使用費的時候 那我的變現的故事 就可以講得更好聽了嘛 而且有個重點 就是 這個是Meita有史以來 第一次對企業開放 付費的API 他的定價是1.25美元 百萬輸入tokens 那",
-          "matched_keyword": "Facebook",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "2026/07/10 (五) 股市無視戰爭：美光砸錢、SK Hynix美股上市，Meta三大利多",
-          "channel": "財女珍妮",
-          "date": "2026-07-10",
-          "text": "Y GPT 我覺得這兩個加起來 真的是打片天下無敵手 我覺得真的是超級強 好 那馬克也有說嘛 他說 欸 今天就是比Germany的系列都還要好嘛 那如果今天真的是成立 或者是真的就是這樣的話 那我覺得META 或許他真的可以在這個地方 去做一個很好的華麗轉身嘛 那大家記不記得 我們在7月2號 這個我就記得了 7月2號的時候 我們那個時候就有講說 META要改變他自己的策略 去賣算力 所以第三件事情呢 就是他也會去探索 他自己的雲端業務嘛 所以我們可以看到 今天META他也在 建立AI雲端業務 然後把多出來的算力 去打包賣給企業的時候 就像AWS 然後微軟的Ager一樣 如果這件事情真的 就是照計畫去做",
-          "matched_keyword": "Meta",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "2026/07/10 (五) 股市無視戰爭：美光砸錢、SK Hynix美股上市，Meta三大利多",
-          "channel": "財女珍妮",
-          "date": "2026-07-10",
-          "text": "索 他自己的雲端業務嘛 所以我們可以看到 今天META他也在 建立AI雲端業務 然後把多出來的算力 去打包賣給企業的時候 就像AWS 然後微軟的Ager一樣 如果這件事情真的 就是照計畫去做進行的話 META的商業模式 就會從廣告公司 然後變成一個廣告 加AI模型 加算力基礎設施的 複合型的科技公司 聽起來是不是就讓大家興奮了 是不是就覺得這故事 又可以再寫好幾年了 所以我先投入資料中心 建立算力 訓練自己的模型 再透過API去開放外部使用 甚至可以把多餘的算力去 包裝成雲端服務 對外出售的時候呢 市場就開始重新解讀 META的資本支出 可能不是亂燒錢了 可能在未來 真的會幫他建立 他自己的互成合了",
-          "matched_keyword": "Meta",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "2026/07/10 (五) 股市無視戰爭：美光砸錢、SK Hynix美股上市，Meta三大利多",
-          "channel": "財女珍妮",
-          "date": "2026-07-10",
-          "text": "奮了 是不是就覺得這故事 又可以再寫好幾年了 所以我先投入資料中心 建立算力 訓練自己的模型 再透過API去開放外部使用 甚至可以把多餘的算力去 包裝成雲端服務 對外出售的時候呢 市場就開始重新解讀 META的資本支出 可能不是亂燒錢了 可能在未來 真的會幫他建立 他自己的互成合了 只是呢 因為現在META每年 還是花超過一千億美元 在發展AI嘛 所以現在確實是一個故事 什麼時候這個故事 可以開始實現 從童話故事 變成真實的現實 我覺得這個還需要一段時間 去讓市場驗證的 但是大家也可以知道嘛 我們剛剛 總結一下我們剛剛講到的 你直接受惠的公司是什麼呢 就是我在擴大資本支出的時候 我在做我自己的 SK晶",
-          "matched_keyword": "Meta",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP677 | 🐎",
-          "channel": "股癌",
-          "date": "2026-07-08",
-          "text": "VR Rubin 一起出來 然後這邊發生說 就是一直去往後延 有些人講說Rubin要要吵 然後現在他甚至講說 就可能不會跟著Rubin要吵 會到飛門才會跑出來 但這個呢 你說他是一個新聞嗎 就像我在臉書跟大家講 他其實真的不是新聞 因為在產業看得到一些 研調或是一些報告的 其實本來就知道說 這個東西他不會像之前 大家想像的這麼快出來 那再不計呢 就你聽我們節目 我們也是有跟大家聊到說 就是他的 那個Kyber的怪物Rack 就是可能會有一些 遞人的狀況 不然說那時候我們去跟大家 分享說在 Computex 看到的東西的時候 就有去提到這一段 那當然不知道要去講說 你看說我們消息比較快 我整個說就",
-          "matched_keyword": "臉書",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "2026/07/08 (三) 記憶體大跌，利多不漲，高點沒了嗎？",
-          "channel": "財女珍妮",
-          "date": "2026-07-08",
-          "text": "覺得是去影響 去推動他下一階段走勢的 關鍵要素 所以大家如果要去看 我們對於輝達的 這個技術面的說法的話 大家可以去看昨天的影片 我們今天就不多講 因為我今天沒有把圖放出來 那另外一個逆勢上漲的呢 是Meta 那Meta在這兩天呢 在上個禮拜的時候 其實大家也知道有很多的 新的消息嘛 比如說他說要賣算力啊 比如說他有 什麼樣 這個新的來源 然後就是一天漲 一天跌啊 讓市場上面也會覺得 現在到底是怎樣 Meta我覺得他現在 他的整體的股價形態呢 也是處在一個比較弱勢的格局 所以你今天真的要有一個 非常強而有力的催化劑 除了你今天要化大餅 你要講一個故事給大家聽 要讓大家認同之外呢 什麼時候有貢獻 這個時",
-          "matched_keyword": "Meta",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        },
-        {
-          "video": "2026/07/08 (三) 記憶體大跌，利多不漲，高點沒了嗎？",
-          "channel": "財女珍妮",
-          "date": "2026-07-08",
-          "text": "家認同之外呢 什麼時候有貢獻 這個時機點呢 我覺得也是蠻重要 那昨天為什麼又上漲了 將近三個percent左右 原因是因為他推出了一個 新的AI圖像生成模型 叫做muse image 他在內檻 在這個Meta AI的 聊天機器人裡面 然後還有像是 Instagram或者是WhatsApp裡面 他都有去 把這個AI圖像生成模型呢 去導入 所以這個是Meta他花了 一年哦 重金打造的這個 成果之一 然後也希望未來呢 他可以有更多應用方面啊 貨幣化之類的 一個效果 所以大家可以看到 Meta現在很清楚 我就是先花大錢 狂砸錢去做這個AI的算力 我可以把我的 基礎設施先做起來 然後把我這些算力呢 如果我內部",
-          "matched_keyword": "Meta",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        },
-        {
-          "video": "2026/07/08 (三) 記憶體大跌，利多不漲，高點沒了嗎？",
-          "channel": "財女珍妮",
-          "date": "2026-07-08",
-          "text": "很重要 這個也是為什麼我們認為 這一段空窗期 其實會震盪的原因就是因為 大家已經開始在思考 在檢查 在等待 AI的這些服務 AI的這些投資 到底能不能實際的 轉換為足夠的回報上面 如果大型業者 比如說META 我今天出現了這個閒置的算力 我要開始去出售或轉足 那短期之內 大家可能覺得你多了一個營收成長 可是死細想一想 又覺得好像有一點不對 那為什麼你會有這些閒置的產能 就會開始有很多不同的分歧 所以AI的需求我覺得是持續的 但是成長率下滑的時候 你必須要靠提高資產利用率 去提高你的獲利能力 如果沒有的話 那對於股價來說 就是一個利空 所以當今天記憶體股 今天半導體類股 它已經變成一個非常擁擠的交易 當",
-          "matched_keyword": "Meta",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        },
-        {
-          "video": "2026/07/07 (二) 費半反彈，輝達就是漲不動？Kyber延期對供應鏈衝擊大嗎",
-          "channel": "財女珍妮",
-          "date": "2026-07-07",
-          "text": "打去做購買 然後依賴度非常的深 但是後來呢 揮打它的主要競爭對手有誰 其實你先不要講AMD好了 你先講那些X跟X掌商 就是這些科技巨頭 比如說像是Google 像是Amazon 像是這個微軟啊 或者是Meta 他們也都會想要做自己的 客製化晶片嘛 那客製化晶片的原因 就是因為這些公司很有錢 有錢的人才會去做ASIC 然後他希望可以在 我揮打有一定程度的供應方面呢 我也可以去 提高我自己的定價權 溢價能力 所以這個是第一個 可以去跟揮打做對打的公司 那第二個當然我們看到就是AMD 這些公司 他也不希望他自己被揮打綁絲 所以如果今天 我們說什麼訓練啊 然後到推論啊 或者是AMD他跟揮打的這個 產品世代可能",
-          "matched_keyword": "Meta",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP1133｜洗籌碼時間，研調機構說輝達機櫃延後出，真假判斷？CCL、載板、被動被殺，勇敢接誰？籌碼躲在功率和軍工，要追嗎？ft.題材獵人 林漢偉",
-          "channel": "兆華與股惑仔",
-          "date": "2026-07-06",
-          "text": "到之後才會正式的一個量產 所以你看我們台灣相關的 台大電光寶科 到細光指數全面性的拉回 那上個禮拜 我記得禮拜來 跟大家講 康寧的玻璃橋街的一個相關題材 又讓公民再疊一次 然後到上個禮拜 你看到所謂的Meta 還有所謂的蘋果 不管是所謂的 未來可能資本支出要遞延 或說蘋果喊到記憶體的報價太貴 你也可以看到 台股相關的漲價概念股 就是全部都被鬼故事洗禮過一波 所以讓大家就覺得說 這盤面上到底有沒有那種 強勢一直漲的股票 那目前來看當然還有公率元件 那公率元件的問題 當然在於說第一個 他們現在變成很多股票被處置 所以籌碼集中在少數的大戶手上 所以一般到這些股票 要不就是開漲停 不然你就不敢追 那變成說 他",
-          "matched_keyword": "Meta",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.667,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP676 | 🐬",
-          "channel": "股癌",
-          "date": "2026-07-04",
-          "text": "著大盤一起行高的 結果就死了 然後就可以確定他就死了 那我猜有機會在下禮拜 或是下禮拜就會去見分曉 到時候我自己是非常期待 但總之我也去完成了 相對應的一個佈局 那在這個禮拜有一個 蠻大的新聞 就是說Meta要去投入 Neocloud的一個建制 也就是他想要去把一些 鱿魚的算力拿出來 出給大家 那這個在市場上立刻 就掀起了蠻多討論 那絕大多數的評論都是認為說 這個就代表說Meta比較完的 所以你去看一些 那X的 他們把它稱為什麼大V 就是整天去發表意見的一些 他都喜歡放那種動漫的頭像 蠻多的意見都是在講說 這個是Meta不完的 那我們這邊講一下 我們自己的看法 因為我們還是 除了自己有一些思考能力之外",
-          "matched_keyword": "Meta",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP676 | 🐬",
-          "channel": "股癌",
-          "date": "2026-07-04",
-          "text": "掀起了蠻多討論 那絕大多數的評論都是認為說 這個就代表說Meta比較完的 所以你去看一些 那X的 他們把它稱為什麼大V 就是整天去發表意見的一些 他都喜歡放那種動漫的頭像 蠻多的意見都是在講說 這個是Meta不完的 那我們這邊講一下 我們自己的看法 因為我們還是 除了自己有一些思考能力之外的 然後再來就是 我們在產業的一些朋友 就我們的理解 當然這可能是我們這一端的一些想法 那後面也都可能會改變 就我們只就當下 所可以拿到的資訊去做一個判斷 Meta他是打算要Double down 什麼意思 就是他是想要去靠這個東西賺錢 他不是說 完了 我的AI算力不知道怎麼用 然後出來租人家好了 他不是這樣 他是打",
-          "matched_keyword": "Meta",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP676 | 🐬",
-          "channel": "股癌",
-          "date": "2026-07-04",
-          "text": "人 所以他其實是想要去做更多建制的 那當然這個後面可以再觀察 各個企業的動向 再去做一個驗證 當然就我們目前所了解到的 那不然說像是一些研調的單位 我有去看了一下 大家所提到的一些資料 提到說 其實在Meta內部 他們是 本來已經出現一些那種分歧的狀態 就是有人想要沖 可是CFOR想要去踩煞車 希望說大家不要這麼沖 但因為現在找到一些解放了 就是說我們可以盡量的沖 因為我們沒有用到的東西 我們可以拿出去租別人 那就導致說 現在公司變成是有共識 那我們確實就可以沖 因為我們可能沒有用到的東西 或者還沒有用到的東西 它不會形成一個浪費 它是有辦法可以去 外租給別人去賺錢的 所以理論上這個事情 應該是要把它",
-          "matched_keyword": "Meta",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP676 | 🐬",
-          "channel": "股癌",
-          "date": "2026-07-04",
-          "text": "人去賺錢的 所以理論上這個事情 應該是要把它解釋為 他們要繼續沖 我覺得目前看會是這樣子 那當然這要等後續的一些事情 去做驗證 只是稍微講一下自己的看法 因為市場上我看 主要都是有看法在講說 這代表說Meta他要退出AI進賽 我不覺得這是他要退出AI進賽 那他只是想要去做 Neocloud的一個business 那外加自己對主客博的一個認識 雖然他不是我媽擠 我也不能是他 就是說我只是有用他產品的 一個消費者 但我們從以前看主客博 就是他是一個非常厲害的 怎麼講 你可以講說是 嗯講抄襲不好聽 就是說在商業上本來 就是大家會互相模仿 去效仿一些成功的商業模式 所以發展說像把Instagram收下來 然後",
-          "matched_keyword": "Meta",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP676 | 🐬",
-          "channel": "股癌",
-          "date": "2026-07-04",
-          "text": "然後在AI時代也是 看到這些巨頭在衝 那聯輸身為一個 他沒有辦法去把 算力對外賣的一個公司 因為你知道這些巨頭其實 他們可以衝 因為就算他的東西用不完 他都可以做成是靠 然後去輸出給別人嘛 那可是呢 Meta的東西是自用的 可是他照樣跟大家衝 那他是一個很猛的公司 就是他只要找到各種 瘋狂浪賤的東西 有這種機會 他都會去衝刺而人 所以主客博我是相信說 他去做的每個東西 他當下都會抓到那個趨勢 當然我們事後回頭看到說 蠻多都是爛尾 就是蠻多都可能會失敗 但是我不會想再算這個 就類似說Google也去 做了蠻多的爛尾投資 就是最後面發現是沒有辦法 可是我認為身為這些巨頭 或是說掌握大量現金流的公司 他們本",
-          "matched_keyword": "Meta",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP676 | 🐬",
-          "channel": "股癌",
-          "date": "2026-07-04",
-          "text": "losus 因為他拿去組 然後結果發現說 媽的他竟然一年就可以回本 他一定是發現說 靠北因為他錢可以這樣子賺 因為本來伊朗的東西 他還是打算自己要拿去建制 這我們知道 XAI現在有點卡關的情形產生 那Meta我們不確定是不是也是卡關 雖然看起來像 但先不管他到底是卡關與否 他一定就是看到了 SpaceX或是X的Closus 原來可以這樣子賺錢 媽的我也要賺 因為這跟他過去的行為模式是一樣的 就是他發現哪邊可能有東西 然後這個池汗你就衝進去 然後那邊賺 所以 這就有機會蠻好搞的 那我有把 相關的一些想法丟到臉書上面 那我看到下面有一個聽眾的留言 就還蠻有趣的 他就說 反正Meta的東西 你知道他就算最後",
-          "matched_keyword": "Meta",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP676 | 🐬",
-          "channel": "股癌",
-          "date": "2026-07-04",
-          "text": "行為模式是一樣的 就是他發現哪邊可能有東西 然後這個池汗你就衝進去 然後那邊賺 所以 這就有機會蠻好搞的 那我有把 相關的一些想法丟到臉書上面 那我看到下面有一個聽眾的留言 就還蠻有趣的 他就說 反正Meta的東西 你知道他就算最後面找不到客人 他也有詐騙集團可以跟他組 這個聽起來像是一個幹話 可是我不知道 越來越覺得有可能 因為Meta的那些詐騙 像最近大家知道 我在臉書上面就那個三寶壩 有一個三寶壩 整天那邊洗 那個就是詐騙 既然你知道這麼簡單的一個東西 他可以用一些keyword或是 我很難想像 這對他來講是一個技術挑戰 我只能夠認為說 這就像是我們當時的判斷 其實Meta是有意的去放行 一些東",
-          "matched_keyword": "Meta",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP676 | 🐬",
-          "channel": "股癌",
-          "date": "2026-07-04",
-          "text": "面就那個三寶壩 有一個三寶壩 整天那邊洗 那個就是詐騙 既然你知道這麼簡單的一個東西 他可以用一些keyword或是 我很難想像 這對他來講是一個技術挑戰 我只能夠認為說 這就像是我們當時的判斷 其實Meta是有意的去放行 一些東西讓他這樣去做 或是說他有意的不要去做 太密集的趕盡殺絕 因為他的金主 很大一部分就是這些詐騙 所以不曉得 搞不好後來 對反正有人跟他租就好了 你只要不要太明白的是 用犯罪集團角度來租 你去報一個某家公司 然後你換個皮 弄個防火牆 你來跟我租算力 我就租你 我就租你 搞不好他可以找到更屌的生意 就是這些那種灰色經濟的東西 不然我很難去想像 我也不想要去感覺 像是抹黑Meta或",
-          "matched_keyword": "Meta",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP676 | 🐬",
-          "channel": "股癌",
-          "date": "2026-07-04",
-          "text": "犯罪集團角度來租 你去報一個某家公司 然後你換個皮 弄個防火牆 你來跟我租算力 我就租你 我就租你 搞不好他可以找到更屌的生意 就是這些那種灰色經濟的東西 不然我很難去想像 我也不想要去感覺 像是抹黑Meta或什麼 可是你知道詐騙的東西 他們會說他們有在抓 他們真的有在抓 我真的有看到 但你知道那個三寶壩 他洗了這麼久 你把三寶壩封掉 有很難嗎 就是我不曉得 甚至我們自己在後台 下一階關鍵自由 說他也不會生效 所以我就感覺說 反正在主客伯 他有很多的觸害口 他先去超classes 然後他跟的時間點又夠快 所以他的算力 應該是有辦法都可以賣掉 然後再來就是 如果後面 他真的要跟別人競爭的話 他又有一些額",
-          "matched_keyword": "Meta",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "2026/07/03 (五) 費半跌回季線，可以買了嗎？特斯拉(TSLA)又大跌了",
-          "channel": "財女珍妮",
-          "date": "2026-07-03",
-          "text": "催化機 好 那我們回到了昨天的半導體 因為昨天半導體 真的是重中之重 跌中之重嘛 對不對 那昨天為什麼費城半導體呢 連續兩天又持續的在下跌 但我覺得第一個導體 我現在當然是我們昨天 在影片裡面提到的 Meta他要去出售他多餘的AI算力 那這個有很多個解讀嘛 第一個就是Meta當然很好啊 但是他昨天也跌嘛 那因為他有一個新的這個營收來源 讓市場上面可以重新對他估值 可是另外一個擔心呢 就是如果你今天 你可以把你自己的算力 去提供給外部的客戶的話 那是不是就表示 你內部的算力並沒有不足 而且呢 你今天有一些閒置的 或者是你今天你的 過去的投資可能太多了 然後已經變成 你必須要去消化 這些閒置的產能 所以這",
-          "matched_keyword": "Meta",
-          "analysis_source": "whisper",
-          "sentiment": "bearish",
-          "sentiment_score": 0.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        }
-      ],
-      "total_mentions": 30,
-      "sentiment_score": 0.589,
-      "daily": {
-        "2026-07-10": {
-          "mentions": 14,
-          "bullish": 3,
-          "bearish": 1,
-          "neutral": 10,
-          "sentiment_score": 0.571
-        },
-        "2026-07-08": {
-          "mentions": 4,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 4,
-          "sentiment_score": 0.5
-        },
-        "2026-07-07": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-07-06": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 0.667
-        },
-        "2026-07-04": {
-          "mentions": 9,
-          "bullish": 4,
-          "bearish": 0,
-          "neutral": 5,
-          "sentiment_score": 0.722
-        },
-        "2026-07-03": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 1,
-          "neutral": 0,
-          "sentiment_score": 0.0
         }
       }
     },
@@ -21274,6 +21290,520 @@
       }
     },
     {
+      "code": "2605",
+      "name": "新興",
+      "market": "TW",
+      "sector": "航運",
+      "contexts": [
+        {
+          "video": "EP1070｜川普演講繼續打伊朗！連假要關注的變化？台積電會到16字頭？櫃買型態依舊強勢，熱門中小股回檔守月線是買點？ft.操盤手 黃豐凱",
+          "channel": "兆華與股惑仔",
+          "date": "2026-04-02",
+          "text": "怎麼收尾 我完全感覺不出來 對 就是 大盤很弱的時候 他們也繼續漲 大盤強的時候 他們還繼續漲 那這樣就是無法無天 就是他們都在漲他們自己的 好 在這樣頭興就繼續買 所以你看 頭興在拱的這些股票 基本上它就沒有在休息 對 包括像我們剛剛提到 像CPO 像ABF 你看我們之前講說 AI的ABF的龍頭是新興 可是連藍店都已經漲超過新興 所以今天新興一關出來 馬上怎麼樣 就要爭回這個面子 本來要漲停的 要不是盤不好的話 對 它就大拉了 我說告訴你 其實大家在看的產業趨勢 沒有什麼改變 那你在講 像之前大家在講說什麼 COPOS 二奈米的設備 像紅塑 它也一直在漲 沒錯 沒有停的 所以我覺得 與其很害怕這",
+          "matched_keyword": "2605",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": null
+        },
+        {
+          "video": "EP1070｜川普演講繼續打伊朗！連假要關注的變化？台積電會到16字頭？櫃買型態依舊強勢，熱門中小股回檔守月線是買點？ft.操盤手 黃豐凱",
+          "channel": "兆華與股惑仔",
+          "date": "2026-04-02",
+          "text": "啊 他怎麼還那麼便宜 對 你就覺得 哎呀 那真的是一個不錯的標的 一樣我們剛剛在講說 當CPU裡面 大家分分都在創新告的時候 不要忘記 跟光森合作的RET 他還在分盤的過程裡面 他也還在修正的過程裡面 他還經過一波的大廠之後 進行整理 是不是應該回頭過來就說 像這個是不是應該也可以買 那我們剛剛講 新興還在漲 新興還在漲 南定還在漲 他的設備公司 也因為這一波進入分盤 然後他又是沒有融資券的 是不是也是一個很好的 減便宜的機會 但是我說 你要減便宜的過程裡面 你要先看他 月線是不是有收穩 如果月線沒有收穩 不要什麼 不要他還在整理 雖然趨勢是對 可是他還在整理 你就不急著去追他 你就等他月線 站回",
+          "matched_keyword": "2605",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": null
+        },
+        {
+          "video": "2026/04/03 (五）美股為什麼又Ｖ轉了？終於要講微軟....為什麼跌？",
+          "channel": "財女珍妮",
+          "date": "2026-04-03",
+          "text": "的處理器呢 他的效能也是越大的 他的耗能呢 其實是越小的 這也讓企業呢 他為了獲取巨大的生產力 他願意不計成本的 去消耗數十億劑的 token 然後租賃市場呢 買方他也會很焦慮嗎 因為我為了 我要保持我順利的穩定性 或者是我在擴張的時候呢 我的順利也要統步的去做成長 所以他必須要跟 AI的實驗室啊 新興的雲端服務商啊 NeoCloud啊 去簽訂一些長期的合約 這不是一年兩年哦 有可能可以搶到4到5年的這種 超大型的租賃合約 而且他們也願意支付超過20%的 預付款 來鎖定這些GPU的產能 進一步呢 去抽乾了市場的流動性 也就是說你今天真的就是 完全公布應求 你想要買到這些算力都還很難的 好 那我們就",
+          "matched_keyword": "2605",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.9,
+          "video_url": null
+        },
+        {
+          "video": "EP1065｜盤中跳水，不安全感轟炸！PCB多檔創高，點名「光模塊」，華通、臻鼎的新商機？中國玻纖擴產，誰不受影響？ft.PCB女王 廖婉婷",
+          "channel": "兆華與股惑仔",
+          "date": "2026-03-26",
+          "text": "MSAP的製程 可是iPhone的板子 因為它已經做非常非常多年了 然後它的版程數沒有 像光模塊的這麼厚 好 所以對比起來 這個整個中產值 市場規模的中產值 其實光模塊很快就要追上iPhone 可是我們回去看 2025年或2024年 其實光模塊這一塊的PCB的產值很小 對 所以對於能做光模塊的廠商 新興化通 整頂 它們等於平白無故 也不能說平白無故 又多了一個新的東西可以做了 對 而且這個市場規模 在兩三年內 瞬間變成一隻iPhone的PCB版的市值 對 你可以想像這幾年 過去幾年曾經我們追逐著 iPhonePCB版的那個時間點 那你現在看到是光模塊 而且光模塊的成長性 在未來兩三年 可能還是倍增",
+          "matched_keyword": "新興",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": ""
+        },
+        {
+          "video": "EP1065｜盤中跳水，不安全感轟炸！PCB多檔創高，點名「光模塊」，華通、臻鼎的新商機？中國玻纖擴產，誰不受影響？ft.PCB女王 廖婉婷",
+          "channel": "兆華與股惑仔",
+          "date": "2026-03-26",
+          "text": "對華通本身的 營收占比的這個結構 的改變 對它護理的成長性 也會出來 那增頂的部分的話 光模塊也會有 第一個位數的營收占比 可是 另外的話就它宅板這塊 也會繼續的成長 對 然後iPhone 今年的折疊機 對它的貢獻度 也會相對比較大 所以 我覺得它們各自有題材 然後都綁了一個 新的光模塊的商機 那新興的部分的話就是 宅板本身就非常好 然後很缺步 所以 反映這個原物料價格上漲 再加上入併之後 整個宅板的面積變大 它的需求會瞬間的暴增 所以它本身 宅板最強的這一塊就很好 然後AI的PCB 訂單也繼續增加 然後 光模塊這一塊 也有 所以其實三件的狀況 都還滿好的 然後另外就是 其實在講光的時候 我們大",
+          "matched_keyword": "新興",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": ""
+        },
+        {
+          "video": "EP1065｜盤中跳水，不安全感轟炸！PCB多檔創高，點名「光模塊」，華通、臻鼎的新商機？中國玻纖擴產，誰不受影響？ft.PCB女王 廖婉婷",
+          "channel": "兆華與股惑仔",
+          "date": "2026-03-26",
+          "text": "增 所以它本身 宅板最強的這一塊就很好 然後AI的PCB 訂單也繼續增加 然後 光模塊這一塊 也有 所以其實三件的狀況 都還滿好的 然後另外就是 其實在講光的時候 我們大家都一直在講CPO 其實如果最後CPO真的 終極目標主要CPO的時候 其實宅板的面積又要更大 所以怎麼聽 當然你們就會覺得說 好像新興才是最好的 可是我覺得股價位階不同 還有獲利的貢獻度 跟影響性不同 所以大家還是可以算一算 對 自己心目中有自己的 本益比空間 那EPS的部分的話 其實各家券商的報告 也都會大概抓一下 好 因為現在宅板就 讓人家有點頭痛的 當然就是評價 到底該怎麼評 對不對 因為 雖然即使你有跟我講說 今年宅板元年",
+          "matched_keyword": "新興",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": ""
+        },
+        {
+          "video": "EP324 用生活記憶股票",
+          "channel": "投資癮",
+          "date": "2026-04-12",
+          "text": "是錯的 不然為什麼在2024年9月的時候 央行要做出信用管制 這其實也證明了 央行的角度是比較中立一點點 他主觀認為 房市的市場過熱了 所以到2024年 從信用管制之後的下一季 雖然還沒有明顯的變化 但2025年整年度 你會發現房市非常的冷 幾乎是快要冷凍的狀況 但其中還有一個小小的差距 2023年新興的2.0出來之後 其實2024年初的時候 整個營建類股大飆升以外 房屋中間裡面唯一的上市公司信義 也在當時創了新高 但是整個市場的氛圍 都圍繞到房地產船上 跟營建類股身上 而後來我們也知道這件事情 現在以事業論的角度 的確 營建股那時候在最高點 房市的價格那時候在最高點 成交上級凍之後到現在 大多數",
+          "matched_keyword": "新興",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": ""
+        },
+        {
+          "video": "EP413｜你投資的其實是一個世界",
+          "channel": "股市隱者",
+          "date": "2026-04-13",
+          "text": "報價 這些每個人 大致上都有一套模式 所以你很難說 它一路的往上噴 因為只要報價太高 需求開始增加 到一定量 就會有人知道說 接下來 可能就會 因為大波不停的 砍單 然後股價開始跌 所以它不會有太多的 那種 沒有想到的機會 這就是 傳產 或是 金農股 或是景氣循環股 那但是呢 如果呢 你會選擇比較 新興 草創 不是那隻 PCB 你找一些很吸引的地方 它風險可能相對的大 它也沒有一定的規則 就像AI 現在 變化的燈的太快 我下一集 會跟大家 再講一次 我覺得 AI 最近真的有很大的改變 而且是 很震撼的改變 我又用了更多東西 然後 下一集再跟大家聊 就像AI 裡面一樣 有一堆東西 它可能有真的有可能",
+          "matched_keyword": "新興",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
+        },
+        {
+          "video": "EP1082｜台股不會跌的病又來了？摸到3萬8！主動式ETF變成資金永動機？選強恆強的PCB、CPO，還是回檔過的記憶體、低軌？ft.型男股神 陳威良",
+          "channel": "兆華與股惑仔",
+          "date": "2026-04-22",
+          "text": "結果後來他就覺得 例如說像明翰 這個晚亭來 菲理工背景的我 也開始研究 什麼是CPU 什麼CPO 什麼是CoA 漸漸的有理解之後 就會發現 知道自己買的是什麼東西了 所以有台積電 有台達電 也有載板的新興南電 好厲害 然後不敢追光通訊 他就研究一下 有哪一些的ETF有光通訊 所以他就用 ETF主動式的 來參與CPO 很聰明了 一下子變成一個大進化 因為做了功課 所以遇到中東戰火衝擊 一度有出現十幾萬元的 未實現虧損 就沒有什麼特別的感受 他講的是 在載板的股票上面 因為我知道我持有的是 產業的趨勢 我覺得你蠻厲害 因為那個時候 我就常常講 長到我不認識了 所以搞不好 連我都會有點沒信心 不過因為我",
+          "matched_keyword": "新興",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP655 | 🐯",
+          "channel": "股癌",
+          "date": "2026-04-22",
+          "text": "底在講什麼? 就其實你這個股票 等於是跑得好好的, 他沒有事情, 可是為什麼你要撿馬他? 因為, 拜託外面一堆東西在噴, 你怎麼可能做得住? 你就只想要每天都去 跟著人家搶漲停的東西, 或是 你看那個新桂谷, 你知道新桂谷 他媽整個壞掉, 新桂好像多少? 300多支標的吧, 就有一天, 好像漲 12%以上的就幾10檔, 然後有好幾家漲到停牌, 那今天就看到 一個電桿廠, 他真的超屌, 他直接上去就, 他好像本來是 開100多吧, 然後直接衝到 1000多塊去, 就是你真的會在 新東區的時候 到底看了什麼東西? 然後外加可能 持消筆漲的, 就是會有一些 朋友跑來講說 今年怎麼樣了? 那你真的會受到影響",
+          "matched_keyword": "新桂谷",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": "",
+          "extraction_mode": "gemini",
+          "whisper_corrected": true
+        },
+        {
+          "video": "EP1087｜Open AI入不敷出，台股各大廠通吃所以不擔心？台達電、聯發科、4大雲端CSP廠法說、FED會議，什麼狀況會回檔？ft.AI達人 蔡明翰",
+          "channel": "兆華與股惑仔",
+          "date": "2026-04-29",
+          "text": "場 非常喜歡看98EA買什麼 那昨天98EA就新增了兩檔股票 是從來沒買過後來新增的 一檔叫旺紅 一檔叫亞德克 這兩檔今天盤面上都算強 當然因為今天 98EA的規模已經很大了 要逼近兩千億了 不會因為新興的這兩檔很厲害 就可以把整個規模拉起來 不過還是滿厲害的 你先看到大盤 櫃買往上走的時候 他們這些主動式ETF 就通通翻紅 所以我覺得這件事情 是真的滿厲害的 那後來下來的時候 他們就可能有一些就收小黑 但我覺得這股勢力 是真的在選股上面滿強的 亞德克今天也很強 所以一個是記憶體 然後一個是機器人 工具機器人比較低位階的 我覺得他們也會是 大家在市場產業上 選股的一個方向 不過畢竟旺紅和群臉 他們",
+          "matched_keyword": "新興",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "2026/05/07(四) 財報好不漲，到底為什麼？#ETN #ANET #ARM #COHR",
+          "channel": "財女珍妮",
+          "date": "2026-05-07",
+          "text": "升溫的隱憂 那連走會可以繼續去做降息的動作 對於資本市場來說就是一件好事 那第二個原因當然就是因為財報的密集發布 大家現在看到 很多的財報其實都是優於預期的 而且大超預期 然後提高未來的展望 然後一片新興向榮 然後AI不死繼續往上對不對 但是今天我們的標題就是 很多的財報公布之後明明就表現的很好 但是股價反而沒有漲 到底是為什麼 我覺得有一個很主要的原因就是 他們在之前真的漲太多了 所以今年你要是在今年以來 就已經翻了一倍了 今年現在才五月初而已 已經翻一倍的股票 或是去年以來 可能已經翻了四五倍以上的股票 那大家都已經把所有的預期 所有的樂觀 所有的東西全部都灌注在股票上面 股價上面的時候 那回",
+          "matched_keyword": "新興",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP1093｜盤中洗一下，兩股力量撐著，Q3才休息？台積電營收月減，IC龍頭股來補漲？載板、CPO、散熱震盪看法？操盤手 黃豐凱",
+          "channel": "兆華與股惑仔",
+          "date": "2026-05-08",
+          "text": "那剛剛有提到散熱 建策今天真的是上通下行 但後來跌停沒所助 對不對 那是不是危機已經過了 其實我覺得今天有很大一個重點 會放在散熱 因為其實我個人覺得 ABF可能就是漲多的回檔 我先講過 我說那時候新興大市場 就是從5 600 目標價往上提到800 那你後來外資在調到以前 基本上 他就沒有先前的推升力道來得強 所以他勢必就是上去之後 壓回來進行個整理 那剛剛南甸又有南亞科 南亞的這個升浪 當然就會讓市場覺得說 是不是大股東看不好了 但是他回到一個正軌 就是說他原本的原料漲價 他現在只是在反映他的報價 所以他一定維持至少兩劑 我覺得就是 去年的日東房 漲了兩劑的報價 從去年第四季到第一季 所以我們",
+          "matched_keyword": "新興",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP663 | 🦘",
+          "channel": "股癌",
+          "date": "2026-05-20",
+          "text": "亞西邊的鄰居烏干達 還有鋼果爆發了伊波拉病毒 我想這就是關於短 要我們繼續關注市場的意思 那只是有個壞壞的想法 想趕快來一個沉默循環 給路上的少年古城上個課 那成長總是在受傷之後 祝孟公家永遠找得到 新興趣 體驗美好的人生 祝福一聽就知道 這位已經心通是我的老朋友 因為他已經知道我的正頭了 我的正頭就是我會 非常投入一個東西 然後直接刷到滿 然後就完異然後就退坑 類似你看 我R1那時候花一百多萬 在買裝備 我現在那個帳號連開都不開 這仔細想想是很恐怖的事情 也就是我到底在幹嘛 我每次都是那種裝備檔 我就是直上 我什麼都直上 玩一玩我就不想玩的手遊 也是 但 其實尼基跟這個中社成來 我現在還是非常趕",
+          "matched_keyword": "新興",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP1101｜外資看台股5萬、聯發科5000元，為何只給國巨最高650元？外資報告解密，從金流看台股熱門族群，不擔心！ft.外資捕手 不魯",
+          "channel": "兆華與股惑仔",
+          "date": "2026-05-20",
+          "text": "可以看得出來 它就正向表列 對 可是我覺得它列出 有一些數字就蠻有趣的 它說在過去的幾年 台股的市值已經從 原本2022年的 兩兆美金變成五兆美金 這個成長是很可觀的 那在MACI指數 台灣在所謂的 新興市場MACI指數 現在已經來到亞洲最大了 是占好像23到24% 這很大 如果你看過去 三年前可能才占 23%之類的 所以自從AI出現以後 台灣的這MACI占比 一直被調升 我們剛剛講的是 新興市場 新興市場就包括 亞洲的話就是日本不是 其他都是新興市場 那如果我們講到 全球的MACI指數 台灣現在已經被 一路提升到2.8%了 我記得我以前在外資的時候 可能台灣是 一趴吧 我記得我們在全世界的市值",
+          "matched_keyword": "新興",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP1103｜Google、輝達、AMD，一棒接一棒讓台灣漲？創收盤新高，泡沫和基本面的平衡，封測還行！投資沒有報酬率最大化，只有最適合！ft.選股教練 陳唯泰",
+          "channel": "兆華與股惑仔",
+          "date": "2026-05-22",
+          "text": "當然是這兩三年跑進來 甚至是這一年才跑進來的人 報酬率都比我們高 那因為我這邊會收到 大家各式各樣的訊息跟詢問 有時候我也會很羨慕大家 就是現在有蠻多管道 可以讓大家有這個資訊的收集之外 股市也非常的新興向 我們難得的迎來了 這個台股的AI紅利 這個史上最大的一波熱潮 未來有沒有我不確定 但是我想跟之前比起來 這波熱潮是最大的 我們都很榮幸在裡面做參與 那我覺得切記一件事情 不管專快或專慢 第一個是我不認為 現在要非常嚴重的看空 現在市場我想這是我們的立場 而我觀察的是基本面 我覺得大家可以練習做這件事情 當今天股票市場有大幅的震盪 如果不是源自於財報出問題 或是我們的金屬口的 年增率出現的狀況等",
+          "matched_keyword": "新興",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP1108｜DELL財報爆衝、兆元宴吃飽，緯創、鴻海、廣達齊漲停，老AI變新火種！下週電腦展開跑，多頭延續到何時？ft.操盤手 黃豐凱",
+          "channel": "兆華與股惑仔",
+          "date": "2026-05-29",
+          "text": "下來 當然對於這個汽車零組件 過去一顆悶的狀態 就大土悶氣 那當然我就覺得 來賓也很厲害 大家就去找 其實有很多的公路元件 二級體元件 他們有做車用市場的 現在就變成AI有切進去 又有車用的復甦 開開新興 又天外飛來一個助力 我覺得這也蠻有趣的 這些都是很奇妙的 而且是往正向發展的一些 利多到台灣來 沒錯 像你今天很多什麼 像什麼強帽 白半 其實他們就卡在這一塊 然後鵬城 然後像昨天 其實很多汽車零件 也漲了第一根 今天又漲第二根 我覺得昨天可能很多人 沒上車 因為他是一開盤就已自作 所以很多昨天 我覺得主力當中 可能昨天就 你會考慮嗎 一大早就進去了 你會考慮嗎 汽車零個純汽車零件 我個人是有看",
+          "matched_keyword": "新興",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP666 | 🍐",
+          "channel": "股癌",
+          "date": "2026-05-30",
+          "text": "從本來是 C-based 的 計費方式變成是 Token-based 的計費方式 所以他們也會隨著 AI 的應用放大 你會注意到他的營收跟獲利的數字 也是會越開越好 在公司去做一些調整之後 他們跟這些新興的 AI 軟體公司 比起來的差別在於說 他們是需要一些轉換期的 因為他本來的收費方式 他並不是符合這個時代的一個收費方式 所以他在轉換期的時候 他會出現一些 不然說像是股價的崩殺 然後或者說一些財源 一些結構上的調整 那個是正常的 但只要可以把它調出來的 特別是像之前有跟大家分享過 只要是 Thunder Mode 的公司 就像 Thunder 還在裡面 他們可以立刻的 破服成熟去做改變 其實蠻多",
+          "matched_keyword": "新興",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP1109｜仁勳開講、開獎！伺服器代工、AI PC、邊緣AI回來，GDP成長率上修9.64%，繼續正循環！怕賣飛又怕回檔，對策是什麼？ft.題材獵人 林漢偉",
+          "channel": "兆華與股惑仔",
+          "date": "2026-06-01",
+          "text": "禮拜五 我們的行政院主記處 也公布了最新的 今年GDP預測 大家還記得之前多少嗎 之前大家都落在 7.5到7.7% 已經很厲害了 一個國家的GDP成長率 可以7%多 已經像是那種 開發中就高速成長的 新興市場才會這個樣子 但我們不是新興市場 我們真的是因為AI的 高速成長 現在上修到9.64% 9.64% 等於是一個不小心 我們可能就有雙位數 10%的一個 所謂的GDP成長率 這個是非常嚇人的 所以上修的同時 我記得以前 就是婉婷也跟我講一件事 因為她看PCB 那PCB不長了 一倍變長兩倍 然後兩倍變長三倍 她也會覺得 同伯及版跟栽版 有一點太誇張了 是不是股價已經領先 基本面太多 但是她說每一次",
+          "matched_keyword": "新興",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP1111｜多頭沒敗象，6萬點也不算高？產業資訊、基本面價值難衡量，用技術面做平衡？重電、CPO、老AI，都會挑戰新高？ft.K線之神 朱家泓",
+          "channel": "兆華與股惑仔",
+          "date": "2026-06-03",
+          "text": "跟網路的礦潮 對 所以 像這樣的大牛股 對不對 他們在這一波起來 有機會去挑戰歷史新高 當然有機會 其實我們現在 廣達在850 其實我們的大盤 為什麼現在 能夠這樣子 一直往上衝 是 就是我講的 這些新興的AI的產業 先領頭先購 那這些老AI 因為他們是老AI 所以他們的公司 還有其他的包袱 並不是只有單純在做AI 像鴻海 那太多了 什麼電動車 也做 這個也做 所以他這個包袱比較重 他不像鴻海 台積電他的經驗 本來他就專 就以這個為主 他其實他很少 他的包袱很少 所以像廣達也一樣 他的產品非常的多 像 iPhone的手機 他都有做 鴻海也有 所以他們在AI的 AI上來講 就像我剛剛講的 我們做股票",
+          "matched_keyword": "新興",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP1115｜只殺一天夠嗎？外資調升國巨、金像電、大立光評價，5月營收持續好，AI底氣勝出！若是再跌升息恐懼，就更該買？ft.AI達人 蔡明翰",
+          "channel": "兆華與股惑仔",
+          "date": "2026-06-09",
+          "text": "都有先去查 其實用這個 台股ETF折益價的APP免費的 有時候看點廣告 就會告訴你目前的折益價 比較頭痛的是 像我昨天就沒有撿到988 988一直有一個 長期小益價的問題 因為它投資在 美股的一些比較新興科技股 就是波動比較大的 那當然也有可能 晚上美股開盤 他就把那個 抑價的部分吃掉 也有可能 可是就小麻煩 那今天有一檔 也是投資美股的ETF 掛牌主動式的402A 這是安聯的 投資在美國以大型股為主 但是也有搭配一些中小型股的 我也很有興趣 因為今天掛牌 我就想今天掛牌 一定破8 安聯的人 應該沒有聽吧 好可能會有聽 但正常 因為他們今天要掛牌 他們一定前兩天買好股 所以導致今天 破發的機率是非",
+          "matched_keyword": "新興",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP333 被綁架的資金",
+          "channel": "投資癮",
+          "date": "2026-06-14",
+          "text": "悄悄的資金進去了 而在這之前 也針對一些營建類股 或注定業者做一些佈局的動作 而最近有開始把一些營建類股 慢慢因為這些好消息 開始慢慢去做一件 我之前在想 下禮拜樣航理監事會 應該會針對兩個點 一個是新興行的部分 另一個是信用管制的部分 而我自己的想法就是 利多消息開始慢慢出境的 只有時間週期也達到我想要的目的 會稍微適度去做一些調整 畢竟在優勢拿到之後 也有開始慢慢做一些調整的動作 而在這件事情之前 也有注意到一件事情 其實營建類股在配齊這件事情 一直以來都給得比較大方一點點 因為它沒有租金的收入 它沒有買賣房子的收入 而這件事情我明顯感受到 它們配齊的幼度非常的高 像我的持股比例 比較多一定的",
+          "matched_keyword": "新興",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP671 | 🌼",
+          "channel": "股癌",
+          "date": "2026-06-17",
+          "text": "不用想說會不會後面 媽又要再開車了 那當然我們這個節目 就要古來比較妨礙 不會去搞房子 之後就是觀察到這個現象 我就發現說 媽台灣的房地產真的是鐵板一塊 然後就在我的感受 真的像是鐵板一塊 特別是那種新興的市真 那也合理 因為最終就是回歸工序 一個地方很多人要搬進來 很多人有住宿 或者說租店面的需求 那那個東西就會存在哪 那即便可能有時候滿殘酷的 就是你會注意到很高的一個流動率 覺得說罵的真的是貪婪的房東 然後搞到很多生意做不起來 但隨著自己的年紀增長之後 其實不會想去罵了 就會覺得說你畢竟媽 如果你自己是房東的話 你會想要在什麼精華地帶 然後把你的東西租得很便宜 租給別人嗎 你可能也不會想要這樣",
+          "matched_keyword": "新興",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "2026/06/17 (三)  Warsh 首秀，FOMC會出意外嗎？",
+          "channel": "財女珍妮",
+          "date": "2026-06-17",
+          "text": "這個報酬率 或者是比如說 AI TAPX的資本支出的報酬率啊 他到底現階段 他的變現的方式是什麼 就是你要從很多不同的角度呢 來做分析跟評估 那 以我們剛剛去講到的這個趨勢下面啊 你也可以看到 其實 新興經理人呢 他們在做一些獲利了解的時候 確實現在的現金水位是有上升的 從之前的3.9%去上升到4.1% 但是這邊又可以講到 為什麼我們認為呢 即便是這樣 大家其實也還沒有轉空 也還沒有變悲觀的原因是因為 3.9%跟4% 相比於過去的水準 其實現金水位 現在都還是一個非常低的狀況 他只是一個 戰術性的調整而已 只是稍微的去緩和 稍微的去降低風險而已 降低暴險 不代表完全撤出嘛 所以我覺得你接下來 你可",
+          "matched_keyword": "新興",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "2026/06/15 (一) 美伊停戰，SpaceX 可以買嗎？#SPCX",
+          "channel": "財女珍妮",
+          "date": "2026-06-15",
+          "text": "類股 然後記憶體 其實表現得也都比較好 可是你說像博通 Meta 或者是Amazon 每光期在上個禮拜的表現 也是比較差一點點的 那就看這個禮拜 現在的利多出來之後 有沒有辦法可以帶動 整個全面的一片新興相容 那譬如說現在 納斯達科指數的期貨盤 也是上漲了1.6%左右 算是在羅素2000指數之後 表現最為強勢的指數類股 然後像S&P500指數跟 稻穹工業指數上漲的幅度大概是1% 好 那除了這個以外 那還有什麼是有可能會去影響到 七大科技巨頭 好像不受青睞的一個原因 就是我們今天在主題 在我們的標題上面講到的 就是SpaceX上市了 是不是真的把過去 我們對於這些大型科技巨頭的偏好 這些資金慢慢的收",
+          "matched_keyword": "新興",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP672 | 🐣",
+          "channel": "股癌",
+          "date": "2026-06-20",
+          "text": "東西 而且甚至 最後面當 怎麼講 就是你吃東西 吃到某個程度之後 因為以前我不敢這樣講 原因是因為 我不敢說我可能懂吃 或是我喜歡吃東西 是因為我就是亂吃 可是 隨著自己的年歲增長 其實你說什麼 各種新興餐廳 各種大家說 屌評的 排隊排不到的私廚 或什麼的 你幾乎能吃了 都吃過之後會發現 食物有趣的點是 當然有些食物 它就是高水準 然後跟 你去吃 會失望 或是 會覺得不好吃的機率是很低 是這樣 可是它還是有分時間點 就你不可能每天都吃一樣的東西 有時候你就是要換一下 有時候你就要去 嘗試一下不一樣的東西 有時候今天就突然覺得 我想吃個海鮮 有時候 連續吃了好多天的海鮮之後 我就突然想吃肉 所以即便",
+          "matched_keyword": "新興",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP1123｜美伊再吵就看油價，不怕！台積電進入法說發動圈，聯電、世界漲停，先進和成熟製程都缺，大小股都漲，台灣主場很健康？ft.林漢偉.股魚",
+          "channel": "兆華與股惑仔",
+          "date": "2026-06-22",
+          "text": "錯 有一些你看好補票 他可能短暫高檔回跌 也許到了無限 也許到實際線關卡 你就可以 這個地方 是不是可以做一個逢低的承接 因為像剛剛提到載版族群 第一個 緊述是最近才開始加強的上漲 但之前是在漲難點跟新興 所以你可以從這樣的一個輪動節奏 沒找到相關的機會 像真領ky也是這樣的一個代表 那再回到記憶族群 最近在華邦電納爾科非常的強 但也發現到今天萬紅 為什麼開始加速補漲 就是因為他之前被關 所以被關的時候 他反而都沒有表現到 那當整個華邦電跟納爾科 把整個漲幅拉開之後 大家就回頭看 哎萬紅好像一百六一百五是便宜的 所以資金就往萬紅去做一個集中 甚至立即點有同樣的一個效果 所以你都可以從你 原本就已經",
+          "matched_keyword": "新興",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP1129｜再次複製走勢，破月線後低量反彈千點，基本面向上、資金緊縮，下跌時選漲價、營收高成長股，大漲想追就守動能原則！ft.選股教練 陳唯泰",
+          "channel": "兆華與股惑仔",
+          "date": "2026-06-30",
+          "text": "是還不到我們過去的 那種盛況 沒有 他族群性比較不強 這兩天有一點點族群性 族群性比較不強 然後還有就是說 因為每家公司所做的藥 其實是各不相同 對 沒有錯 精度也不一樣 他不會說緊縮做的 你看緊縮跟新興電縮 是一樣的東西 對不對 緊縮缺 基本上新興電 可能也會漲價什麼之類的 就類似這樣概念 只是頂多組合上的比率不同 但產品差不多 對 可是藥品的世界 就不太一樣了 就是有人做心臟病的 有人做糖尿病的 等等的藥就不一樣 有人癌症藥等等不一樣 所以說實話 就產業的特性來講 比較難做到所謂的有族群性 所以才會出現像駕華藥 一個人獨走的這種情況 但是其實大多數的這些生技股 像我最近看到的一些 像台剛生 或",
+          "matched_keyword": "新興",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP678 | 🎮",
+          "channel": "股癌",
+          "date": "2026-07-11",
+          "text": "他們要去出售 所謂的閒置的算力 那我們在節目的說法講說 這才不是他要去退出進展 他反而是要double down 那當然也不是只有我們這樣子講 遊戲研調也是有類似的說法 那時候就是在X上面的一些 那種新興的投資帳號 很多都是把他評論成為說 這代表Meta要退出 那後來在Zackber的訪問裡面 好像是昨天還潛填 他出來證實了 就是我們這邊的意見才是對的 就是他並沒有要退出 他甚至是要滿倉殺進去 他要更加用力的做多 那其實我們已經有去注意到 他在未來去Booking的 大家Center這個GWASU是很高的 如果說他真的要說的話 他不會這樣去做Booking 那再來就是其實Meta他本身 就是AI的",
+          "matched_keyword": "新興",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        }
+      ],
+      "total_mentions": 29,
+      "sentiment_score": 0.662,
+      "daily": {
+        "2026-04-02": {
+          "mentions": 2,
+          "bullish": 2,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.7
+        },
+        "2026-04-03": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.9
+        },
+        "2026-03-26": {
+          "mentions": 3,
+          "bullish": 3,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        },
+        "2026-04-12": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.7
+        },
+        "2026-04-13": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-04-22": {
+          "mentions": 2,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.6
+        },
+        "2026-04-29": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        },
+        "2026-05-07": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-05-08": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 1,
+          "neutral": 0,
+          "sentiment_score": 0.0
+        },
+        "2026-05-20": {
+          "mentions": 2,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 2,
+          "sentiment_score": 0.5
+        },
+        "2026-05-22": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 1,
+          "neutral": 0,
+          "sentiment_score": 0.0
+        },
+        "2026-05-29": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        },
+        "2026-05-30": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-06-01": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-06-03": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        },
+        "2026-06-09": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-06-14": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        },
+        "2026-06-17": {
+          "mentions": 2,
+          "bullish": 1,
+          "bearish": 1,
+          "neutral": 0,
+          "sentiment_score": 0.5
+        },
+        "2026-06-15": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        },
+        "2026-06-20": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-06-22": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        },
+        "2026-06-30": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-07-11": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
       "code": "2357",
       "name": "華碩",
       "market": "TW",
@@ -21737,501 +22267,6 @@
           "bearish": 0,
           "neutral": 0,
           "sentiment_score": 1.0
-        }
-      }
-    },
-    {
-      "code": "2605",
-      "name": "新興",
-      "market": "TW",
-      "sector": "航運",
-      "contexts": [
-        {
-          "video": "EP1070｜川普演講繼續打伊朗！連假要關注的變化？台積電會到16字頭？櫃買型態依舊強勢，熱門中小股回檔守月線是買點？ft.操盤手 黃豐凱",
-          "channel": "兆華與股惑仔",
-          "date": "2026-04-02",
-          "text": "怎麼收尾 我完全感覺不出來 對 就是 大盤很弱的時候 他們也繼續漲 大盤強的時候 他們還繼續漲 那這樣就是無法無天 就是他們都在漲他們自己的 好 在這樣頭興就繼續買 所以你看 頭興在拱的這些股票 基本上它就沒有在休息 對 包括像我們剛剛提到 像CPO 像ABF 你看我們之前講說 AI的ABF的龍頭是新興 可是連藍店都已經漲超過新興 所以今天新興一關出來 馬上怎麼樣 就要爭回這個面子 本來要漲停的 要不是盤不好的話 對 它就大拉了 我說告訴你 其實大家在看的產業趨勢 沒有什麼改變 那你在講 像之前大家在講說什麼 COPOS 二奈米的設備 像紅塑 它也一直在漲 沒錯 沒有停的 所以我覺得 與其很害怕這",
-          "matched_keyword": "2605",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.7,
-          "video_url": null
-        },
-        {
-          "video": "EP1070｜川普演講繼續打伊朗！連假要關注的變化？台積電會到16字頭？櫃買型態依舊強勢，熱門中小股回檔守月線是買點？ft.操盤手 黃豐凱",
-          "channel": "兆華與股惑仔",
-          "date": "2026-04-02",
-          "text": "啊 他怎麼還那麼便宜 對 你就覺得 哎呀 那真的是一個不錯的標的 一樣我們剛剛在講說 當CPU裡面 大家分分都在創新告的時候 不要忘記 跟光森合作的RET 他還在分盤的過程裡面 他也還在修正的過程裡面 他還經過一波的大廠之後 進行整理 是不是應該回頭過來就說 像這個是不是應該也可以買 那我們剛剛講 新興還在漲 新興還在漲 南定還在漲 他的設備公司 也因為這一波進入分盤 然後他又是沒有融資券的 是不是也是一個很好的 減便宜的機會 但是我說 你要減便宜的過程裡面 你要先看他 月線是不是有收穩 如果月線沒有收穩 不要什麼 不要他還在整理 雖然趨勢是對 可是他還在整理 你就不急著去追他 你就等他月線 站回",
-          "matched_keyword": "2605",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.7,
-          "video_url": null
-        },
-        {
-          "video": "2026/04/03 (五）美股為什麼又Ｖ轉了？終於要講微軟....為什麼跌？",
-          "channel": "財女珍妮",
-          "date": "2026-04-03",
-          "text": "的處理器呢 他的效能也是越大的 他的耗能呢 其實是越小的 這也讓企業呢 他為了獲取巨大的生產力 他願意不計成本的 去消耗數十億劑的 token 然後租賃市場呢 買方他也會很焦慮嗎 因為我為了 我要保持我順利的穩定性 或者是我在擴張的時候呢 我的順利也要統步的去做成長 所以他必須要跟 AI的實驗室啊 新興的雲端服務商啊 NeoCloud啊 去簽訂一些長期的合約 這不是一年兩年哦 有可能可以搶到4到5年的這種 超大型的租賃合約 而且他們也願意支付超過20%的 預付款 來鎖定這些GPU的產能 進一步呢 去抽乾了市場的流動性 也就是說你今天真的就是 完全公布應求 你想要買到這些算力都還很難的 好 那我們就",
-          "matched_keyword": "2605",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.9,
-          "video_url": null
-        },
-        {
-          "video": "EP1065｜盤中跳水，不安全感轟炸！PCB多檔創高，點名「光模塊」，華通、臻鼎的新商機？中國玻纖擴產，誰不受影響？ft.PCB女王 廖婉婷",
-          "channel": "兆華與股惑仔",
-          "date": "2026-03-26",
-          "text": "MSAP的製程 可是iPhone的板子 因為它已經做非常非常多年了 然後它的版程數沒有 像光模塊的這麼厚 好 所以對比起來 這個整個中產值 市場規模的中產值 其實光模塊很快就要追上iPhone 可是我們回去看 2025年或2024年 其實光模塊這一塊的PCB的產值很小 對 所以對於能做光模塊的廠商 新興化通 整頂 它們等於平白無故 也不能說平白無故 又多了一個新的東西可以做了 對 而且這個市場規模 在兩三年內 瞬間變成一隻iPhone的PCB版的市值 對 你可以想像這幾年 過去幾年曾經我們追逐著 iPhonePCB版的那個時間點 那你現在看到是光模塊 而且光模塊的成長性 在未來兩三年 可能還是倍增",
-          "matched_keyword": "新興",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": ""
-        },
-        {
-          "video": "EP1065｜盤中跳水，不安全感轟炸！PCB多檔創高，點名「光模塊」，華通、臻鼎的新商機？中國玻纖擴產，誰不受影響？ft.PCB女王 廖婉婷",
-          "channel": "兆華與股惑仔",
-          "date": "2026-03-26",
-          "text": "對華通本身的 營收占比的這個結構 的改變 對它護理的成長性 也會出來 那增頂的部分的話 光模塊也會有 第一個位數的營收占比 可是 另外的話就它宅板這塊 也會繼續的成長 對 然後iPhone 今年的折疊機 對它的貢獻度 也會相對比較大 所以 我覺得它們各自有題材 然後都綁了一個 新的光模塊的商機 那新興的部分的話就是 宅板本身就非常好 然後很缺步 所以 反映這個原物料價格上漲 再加上入併之後 整個宅板的面積變大 它的需求會瞬間的暴增 所以它本身 宅板最強的這一塊就很好 然後AI的PCB 訂單也繼續增加 然後 光模塊這一塊 也有 所以其實三件的狀況 都還滿好的 然後另外就是 其實在講光的時候 我們大",
-          "matched_keyword": "新興",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": ""
-        },
-        {
-          "video": "EP1065｜盤中跳水，不安全感轟炸！PCB多檔創高，點名「光模塊」，華通、臻鼎的新商機？中國玻纖擴產，誰不受影響？ft.PCB女王 廖婉婷",
-          "channel": "兆華與股惑仔",
-          "date": "2026-03-26",
-          "text": "增 所以它本身 宅板最強的這一塊就很好 然後AI的PCB 訂單也繼續增加 然後 光模塊這一塊 也有 所以其實三件的狀況 都還滿好的 然後另外就是 其實在講光的時候 我們大家都一直在講CPO 其實如果最後CPO真的 終極目標主要CPO的時候 其實宅板的面積又要更大 所以怎麼聽 當然你們就會覺得說 好像新興才是最好的 可是我覺得股價位階不同 還有獲利的貢獻度 跟影響性不同 所以大家還是可以算一算 對 自己心目中有自己的 本益比空間 那EPS的部分的話 其實各家券商的報告 也都會大概抓一下 好 因為現在宅板就 讓人家有點頭痛的 當然就是評價 到底該怎麼評 對不對 因為 雖然即使你有跟我講說 今年宅板元年",
-          "matched_keyword": "新興",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": ""
-        },
-        {
-          "video": "EP324 用生活記憶股票",
-          "channel": "投資癮",
-          "date": "2026-04-12",
-          "text": "是錯的 不然為什麼在2024年9月的時候 央行要做出信用管制 這其實也證明了 央行的角度是比較中立一點點 他主觀認為 房市的市場過熱了 所以到2024年 從信用管制之後的下一季 雖然還沒有明顯的變化 但2025年整年度 你會發現房市非常的冷 幾乎是快要冷凍的狀況 但其中還有一個小小的差距 2023年新興的2.0出來之後 其實2024年初的時候 整個營建類股大飆升以外 房屋中間裡面唯一的上市公司信義 也在當時創了新高 但是整個市場的氛圍 都圍繞到房地產船上 跟營建類股身上 而後來我們也知道這件事情 現在以事業論的角度 的確 營建股那時候在最高點 房市的價格那時候在最高點 成交上級凍之後到現在 大多數",
-          "matched_keyword": "新興",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.7,
-          "video_url": ""
-        },
-        {
-          "video": "EP413｜你投資的其實是一個世界",
-          "channel": "股市隱者",
-          "date": "2026-04-13",
-          "text": "報價 這些每個人 大致上都有一套模式 所以你很難說 它一路的往上噴 因為只要報價太高 需求開始增加 到一定量 就會有人知道說 接下來 可能就會 因為大波不停的 砍單 然後股價開始跌 所以它不會有太多的 那種 沒有想到的機會 這就是 傳產 或是 金農股 或是景氣循環股 那但是呢 如果呢 你會選擇比較 新興 草創 不是那隻 PCB 你找一些很吸引的地方 它風險可能相對的大 它也沒有一定的規則 就像AI 現在 變化的燈的太快 我下一集 會跟大家 再講一次 我覺得 AI 最近真的有很大的改變 而且是 很震撼的改變 我又用了更多東西 然後 下一集再跟大家聊 就像AI 裡面一樣 有一堆東西 它可能有真的有可能",
-          "matched_keyword": "新興",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": ""
-        },
-        {
-          "video": "EP1082｜台股不會跌的病又來了？摸到3萬8！主動式ETF變成資金永動機？選強恆強的PCB、CPO，還是回檔過的記憶體、低軌？ft.型男股神 陳威良",
-          "channel": "兆華與股惑仔",
-          "date": "2026-04-22",
-          "text": "結果後來他就覺得 例如說像明翰 這個晚亭來 菲理工背景的我 也開始研究 什麼是CPU 什麼CPO 什麼是CoA 漸漸的有理解之後 就會發現 知道自己買的是什麼東西了 所以有台積電 有台達電 也有載板的新興南電 好厲害 然後不敢追光通訊 他就研究一下 有哪一些的ETF有光通訊 所以他就用 ETF主動式的 來參與CPO 很聰明了 一下子變成一個大進化 因為做了功課 所以遇到中東戰火衝擊 一度有出現十幾萬元的 未實現虧損 就沒有什麼特別的感受 他講的是 在載板的股票上面 因為我知道我持有的是 產業的趨勢 我覺得你蠻厲害 因為那個時候 我就常常講 長到我不認識了 所以搞不好 連我都會有點沒信心 不過因為我",
-          "matched_keyword": "新興",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP655 | 🐯",
-          "channel": "股癌",
-          "date": "2026-04-22",
-          "text": "底在講什麼? 就其實你這個股票 等於是跑得好好的, 他沒有事情, 可是為什麼你要撿馬他? 因為, 拜託外面一堆東西在噴, 你怎麼可能做得住? 你就只想要每天都去 跟著人家搶漲停的東西, 或是 你看那個新桂谷, 你知道新桂谷 他媽整個壞掉, 新桂好像多少? 300多支標的吧, 就有一天, 好像漲 12%以上的就幾10檔, 然後有好幾家漲到停牌, 那今天就看到 一個電桿廠, 他真的超屌, 他直接上去就, 他好像本來是 開100多吧, 然後直接衝到 1000多塊去, 就是你真的會在 新東區的時候 到底看了什麼東西? 然後外加可能 持消筆漲的, 就是會有一些 朋友跑來講說 今年怎麼樣了? 那你真的會受到影響",
-          "matched_keyword": "新桂谷",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.7,
-          "video_url": "",
-          "extraction_mode": "gemini",
-          "whisper_corrected": true
-        },
-        {
-          "video": "EP1087｜Open AI入不敷出，台股各大廠通吃所以不擔心？台達電、聯發科、4大雲端CSP廠法說、FED會議，什麼狀況會回檔？ft.AI達人 蔡明翰",
-          "channel": "兆華與股惑仔",
-          "date": "2026-04-29",
-          "text": "場 非常喜歡看98EA買什麼 那昨天98EA就新增了兩檔股票 是從來沒買過後來新增的 一檔叫旺紅 一檔叫亞德克 這兩檔今天盤面上都算強 當然因為今天 98EA的規模已經很大了 要逼近兩千億了 不會因為新興的這兩檔很厲害 就可以把整個規模拉起來 不過還是滿厲害的 你先看到大盤 櫃買往上走的時候 他們這些主動式ETF 就通通翻紅 所以我覺得這件事情 是真的滿厲害的 那後來下來的時候 他們就可能有一些就收小黑 但我覺得這股勢力 是真的在選股上面滿強的 亞德克今天也很強 所以一個是記憶體 然後一個是機器人 工具機器人比較低位階的 我覺得他們也會是 大家在市場產業上 選股的一個方向 不過畢竟旺紅和群臉 他們",
-          "matched_keyword": "新興",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "2026/05/07(四) 財報好不漲，到底為什麼？#ETN #ANET #ARM #COHR",
-          "channel": "財女珍妮",
-          "date": "2026-05-07",
-          "text": "升溫的隱憂 那連走會可以繼續去做降息的動作 對於資本市場來說就是一件好事 那第二個原因當然就是因為財報的密集發布 大家現在看到 很多的財報其實都是優於預期的 而且大超預期 然後提高未來的展望 然後一片新興向榮 然後AI不死繼續往上對不對 但是今天我們的標題就是 很多的財報公布之後明明就表現的很好 但是股價反而沒有漲 到底是為什麼 我覺得有一個很主要的原因就是 他們在之前真的漲太多了 所以今年你要是在今年以來 就已經翻了一倍了 今年現在才五月初而已 已經翻一倍的股票 或是去年以來 可能已經翻了四五倍以上的股票 那大家都已經把所有的預期 所有的樂觀 所有的東西全部都灌注在股票上面 股價上面的時候 那回",
-          "matched_keyword": "新興",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP1093｜盤中洗一下，兩股力量撐著，Q3才休息？台積電營收月減，IC龍頭股來補漲？載板、CPO、散熱震盪看法？操盤手 黃豐凱",
-          "channel": "兆華與股惑仔",
-          "date": "2026-05-08",
-          "text": "那剛剛有提到散熱 建策今天真的是上通下行 但後來跌停沒所助 對不對 那是不是危機已經過了 其實我覺得今天有很大一個重點 會放在散熱 因為其實我個人覺得 ABF可能就是漲多的回檔 我先講過 我說那時候新興大市場 就是從5 600 目標價往上提到800 那你後來外資在調到以前 基本上 他就沒有先前的推升力道來得強 所以他勢必就是上去之後 壓回來進行個整理 那剛剛南甸又有南亞科 南亞的這個升浪 當然就會讓市場覺得說 是不是大股東看不好了 但是他回到一個正軌 就是說他原本的原料漲價 他現在只是在反映他的報價 所以他一定維持至少兩劑 我覺得就是 去年的日東房 漲了兩劑的報價 從去年第四季到第一季 所以我們",
-          "matched_keyword": "新興",
-          "analysis_source": "whisper",
-          "sentiment": "bearish",
-          "sentiment_score": 0.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP663 | 🦘",
-          "channel": "股癌",
-          "date": "2026-05-20",
-          "text": "亞西邊的鄰居烏干達 還有鋼果爆發了伊波拉病毒 我想這就是關於短 要我們繼續關注市場的意思 那只是有個壞壞的想法 想趕快來一個沉默循環 給路上的少年古城上個課 那成長總是在受傷之後 祝孟公家永遠找得到 新興趣 體驗美好的人生 祝福一聽就知道 這位已經心通是我的老朋友 因為他已經知道我的正頭了 我的正頭就是我會 非常投入一個東西 然後直接刷到滿 然後就完異然後就退坑 類似你看 我R1那時候花一百多萬 在買裝備 我現在那個帳號連開都不開 這仔細想想是很恐怖的事情 也就是我到底在幹嘛 我每次都是那種裝備檔 我就是直上 我什麼都直上 玩一玩我就不想玩的手遊 也是 但 其實尼基跟這個中社成來 我現在還是非常趕",
-          "matched_keyword": "新興",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP1101｜外資看台股5萬、聯發科5000元，為何只給國巨最高650元？外資報告解密，從金流看台股熱門族群，不擔心！ft.外資捕手 不魯",
-          "channel": "兆華與股惑仔",
-          "date": "2026-05-20",
-          "text": "可以看得出來 它就正向表列 對 可是我覺得它列出 有一些數字就蠻有趣的 它說在過去的幾年 台股的市值已經從 原本2022年的 兩兆美金變成五兆美金 這個成長是很可觀的 那在MACI指數 台灣在所謂的 新興市場MACI指數 現在已經來到亞洲最大了 是占好像23到24% 這很大 如果你看過去 三年前可能才占 23%之類的 所以自從AI出現以後 台灣的這MACI占比 一直被調升 我們剛剛講的是 新興市場 新興市場就包括 亞洲的話就是日本不是 其他都是新興市場 那如果我們講到 全球的MACI指數 台灣現在已經被 一路提升到2.8%了 我記得我以前在外資的時候 可能台灣是 一趴吧 我記得我們在全世界的市值",
-          "matched_keyword": "新興",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP1103｜Google、輝達、AMD，一棒接一棒讓台灣漲？創收盤新高，泡沫和基本面的平衡，封測還行！投資沒有報酬率最大化，只有最適合！ft.選股教練 陳唯泰",
-          "channel": "兆華與股惑仔",
-          "date": "2026-05-22",
-          "text": "當然是這兩三年跑進來 甚至是這一年才跑進來的人 報酬率都比我們高 那因為我這邊會收到 大家各式各樣的訊息跟詢問 有時候我也會很羨慕大家 就是現在有蠻多管道 可以讓大家有這個資訊的收集之外 股市也非常的新興向 我們難得的迎來了 這個台股的AI紅利 這個史上最大的一波熱潮 未來有沒有我不確定 但是我想跟之前比起來 這波熱潮是最大的 我們都很榮幸在裡面做參與 那我覺得切記一件事情 不管專快或專慢 第一個是我不認為 現在要非常嚴重的看空 現在市場我想這是我們的立場 而我觀察的是基本面 我覺得大家可以練習做這件事情 當今天股票市場有大幅的震盪 如果不是源自於財報出問題 或是我們的金屬口的 年增率出現的狀況等",
-          "matched_keyword": "新興",
-          "analysis_source": "whisper",
-          "sentiment": "bearish",
-          "sentiment_score": 0.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP1108｜DELL財報爆衝、兆元宴吃飽，緯創、鴻海、廣達齊漲停，老AI變新火種！下週電腦展開跑，多頭延續到何時？ft.操盤手 黃豐凱",
-          "channel": "兆華與股惑仔",
-          "date": "2026-05-29",
-          "text": "下來 當然對於這個汽車零組件 過去一顆悶的狀態 就大土悶氣 那當然我就覺得 來賓也很厲害 大家就去找 其實有很多的公路元件 二級體元件 他們有做車用市場的 現在就變成AI有切進去 又有車用的復甦 開開新興 又天外飛來一個助力 我覺得這也蠻有趣的 這些都是很奇妙的 而且是往正向發展的一些 利多到台灣來 沒錯 像你今天很多什麼 像什麼強帽 白半 其實他們就卡在這一塊 然後鵬城 然後像昨天 其實很多汽車零件 也漲了第一根 今天又漲第二根 我覺得昨天可能很多人 沒上車 因為他是一開盤就已自作 所以很多昨天 我覺得主力當中 可能昨天就 你會考慮嗎 一大早就進去了 你會考慮嗎 汽車零個純汽車零件 我個人是有看",
-          "matched_keyword": "新興",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP666 | 🍐",
-          "channel": "股癌",
-          "date": "2026-05-30",
-          "text": "從本來是 C-based 的 計費方式變成是 Token-based 的計費方式 所以他們也會隨著 AI 的應用放大 你會注意到他的營收跟獲利的數字 也是會越開越好 在公司去做一些調整之後 他們跟這些新興的 AI 軟體公司 比起來的差別在於說 他們是需要一些轉換期的 因為他本來的收費方式 他並不是符合這個時代的一個收費方式 所以他在轉換期的時候 他會出現一些 不然說像是股價的崩殺 然後或者說一些財源 一些結構上的調整 那個是正常的 但只要可以把它調出來的 特別是像之前有跟大家分享過 只要是 Thunder Mode 的公司 就像 Thunder 還在裡面 他們可以立刻的 破服成熟去做改變 其實蠻多",
-          "matched_keyword": "新興",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP1109｜仁勳開講、開獎！伺服器代工、AI PC、邊緣AI回來，GDP成長率上修9.64%，繼續正循環！怕賣飛又怕回檔，對策是什麼？ft.題材獵人 林漢偉",
-          "channel": "兆華與股惑仔",
-          "date": "2026-06-01",
-          "text": "禮拜五 我們的行政院主記處 也公布了最新的 今年GDP預測 大家還記得之前多少嗎 之前大家都落在 7.5到7.7% 已經很厲害了 一個國家的GDP成長率 可以7%多 已經像是那種 開發中就高速成長的 新興市場才會這個樣子 但我們不是新興市場 我們真的是因為AI的 高速成長 現在上修到9.64% 9.64% 等於是一個不小心 我們可能就有雙位數 10%的一個 所謂的GDP成長率 這個是非常嚇人的 所以上修的同時 我記得以前 就是婉婷也跟我講一件事 因為她看PCB 那PCB不長了 一倍變長兩倍 然後兩倍變長三倍 她也會覺得 同伯及版跟栽版 有一點太誇張了 是不是股價已經領先 基本面太多 但是她說每一次",
-          "matched_keyword": "新興",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP1111｜多頭沒敗象，6萬點也不算高？產業資訊、基本面價值難衡量，用技術面做平衡？重電、CPO、老AI，都會挑戰新高？ft.K線之神 朱家泓",
-          "channel": "兆華與股惑仔",
-          "date": "2026-06-03",
-          "text": "跟網路的礦潮 對 所以 像這樣的大牛股 對不對 他們在這一波起來 有機會去挑戰歷史新高 當然有機會 其實我們現在 廣達在850 其實我們的大盤 為什麼現在 能夠這樣子 一直往上衝 是 就是我講的 這些新興的AI的產業 先領頭先購 那這些老AI 因為他們是老AI 所以他們的公司 還有其他的包袱 並不是只有單純在做AI 像鴻海 那太多了 什麼電動車 也做 這個也做 所以他這個包袱比較重 他不像鴻海 台積電他的經驗 本來他就專 就以這個為主 他其實他很少 他的包袱很少 所以像廣達也一樣 他的產品非常的多 像 iPhone的手機 他都有做 鴻海也有 所以他們在AI的 AI上來講 就像我剛剛講的 我們做股票",
-          "matched_keyword": "新興",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP1115｜只殺一天夠嗎？外資調升國巨、金像電、大立光評價，5月營收持續好，AI底氣勝出！若是再跌升息恐懼，就更該買？ft.AI達人 蔡明翰",
-          "channel": "兆華與股惑仔",
-          "date": "2026-06-09",
-          "text": "都有先去查 其實用這個 台股ETF折益價的APP免費的 有時候看點廣告 就會告訴你目前的折益價 比較頭痛的是 像我昨天就沒有撿到988 988一直有一個 長期小益價的問題 因為它投資在 美股的一些比較新興科技股 就是波動比較大的 那當然也有可能 晚上美股開盤 他就把那個 抑價的部分吃掉 也有可能 可是就小麻煩 那今天有一檔 也是投資美股的ETF 掛牌主動式的402A 這是安聯的 投資在美國以大型股為主 但是也有搭配一些中小型股的 我也很有興趣 因為今天掛牌 我就想今天掛牌 一定破8 安聯的人 應該沒有聽吧 好可能會有聽 但正常 因為他們今天要掛牌 他們一定前兩天買好股 所以導致今天 破發的機率是非",
-          "matched_keyword": "新興",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP333 被綁架的資金",
-          "channel": "投資癮",
-          "date": "2026-06-14",
-          "text": "悄悄的資金進去了 而在這之前 也針對一些營建類股 或注定業者做一些佈局的動作 而最近有開始把一些營建類股 慢慢因為這些好消息 開始慢慢去做一件 我之前在想 下禮拜樣航理監事會 應該會針對兩個點 一個是新興行的部分 另一個是信用管制的部分 而我自己的想法就是 利多消息開始慢慢出境的 只有時間週期也達到我想要的目的 會稍微適度去做一些調整 畢竟在優勢拿到之後 也有開始慢慢做一些調整的動作 而在這件事情之前 也有注意到一件事情 其實營建類股在配齊這件事情 一直以來都給得比較大方一點點 因為它沒有租金的收入 它沒有買賣房子的收入 而這件事情我明顯感受到 它們配齊的幼度非常的高 像我的持股比例 比較多一定的",
-          "matched_keyword": "新興",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP671 | 🌼",
-          "channel": "股癌",
-          "date": "2026-06-17",
-          "text": "不用想說會不會後面 媽又要再開車了 那當然我們這個節目 就要古來比較妨礙 不會去搞房子 之後就是觀察到這個現象 我就發現說 媽台灣的房地產真的是鐵板一塊 然後就在我的感受 真的像是鐵板一塊 特別是那種新興的市真 那也合理 因為最終就是回歸工序 一個地方很多人要搬進來 很多人有住宿 或者說租店面的需求 那那個東西就會存在哪 那即便可能有時候滿殘酷的 就是你會注意到很高的一個流動率 覺得說罵的真的是貪婪的房東 然後搞到很多生意做不起來 但隨著自己的年紀增長之後 其實不會想去罵了 就會覺得說你畢竟媽 如果你自己是房東的話 你會想要在什麼精華地帶 然後把你的東西租得很便宜 租給別人嗎 你可能也不會想要這樣",
-          "matched_keyword": "新興",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "2026/06/17 (三)  Warsh 首秀，FOMC會出意外嗎？",
-          "channel": "財女珍妮",
-          "date": "2026-06-17",
-          "text": "這個報酬率 或者是比如說 AI TAPX的資本支出的報酬率啊 他到底現階段 他的變現的方式是什麼 就是你要從很多不同的角度呢 來做分析跟評估 那 以我們剛剛去講到的這個趨勢下面啊 你也可以看到 其實 新興經理人呢 他們在做一些獲利了解的時候 確實現在的現金水位是有上升的 從之前的3.9%去上升到4.1% 但是這邊又可以講到 為什麼我們認為呢 即便是這樣 大家其實也還沒有轉空 也還沒有變悲觀的原因是因為 3.9%跟4% 相比於過去的水準 其實現金水位 現在都還是一個非常低的狀況 他只是一個 戰術性的調整而已 只是稍微的去緩和 稍微的去降低風險而已 降低暴險 不代表完全撤出嘛 所以我覺得你接下來 你可",
-          "matched_keyword": "新興",
-          "analysis_source": "whisper",
-          "sentiment": "bearish",
-          "sentiment_score": 0.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "2026/06/15 (一) 美伊停戰，SpaceX 可以買嗎？#SPCX",
-          "channel": "財女珍妮",
-          "date": "2026-06-15",
-          "text": "類股 然後記憶體 其實表現得也都比較好 可是你說像博通 Meta 或者是Amazon 每光期在上個禮拜的表現 也是比較差一點點的 那就看這個禮拜 現在的利多出來之後 有沒有辦法可以帶動 整個全面的一片新興相容 那譬如說現在 納斯達科指數的期貨盤 也是上漲了1.6%左右 算是在羅素2000指數之後 表現最為強勢的指數類股 然後像S&P500指數跟 稻穹工業指數上漲的幅度大概是1% 好 那除了這個以外 那還有什麼是有可能會去影響到 七大科技巨頭 好像不受青睞的一個原因 就是我們今天在主題 在我們的標題上面講到的 就是SpaceX上市了 是不是真的把過去 我們對於這些大型科技巨頭的偏好 這些資金慢慢的收",
-          "matched_keyword": "新興",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP672 | 🐣",
-          "channel": "股癌",
-          "date": "2026-06-20",
-          "text": "東西 而且甚至 最後面當 怎麼講 就是你吃東西 吃到某個程度之後 因為以前我不敢這樣講 原因是因為 我不敢說我可能懂吃 或是我喜歡吃東西 是因為我就是亂吃 可是 隨著自己的年歲增長 其實你說什麼 各種新興餐廳 各種大家說 屌評的 排隊排不到的私廚 或什麼的 你幾乎能吃了 都吃過之後會發現 食物有趣的點是 當然有些食物 它就是高水準 然後跟 你去吃 會失望 或是 會覺得不好吃的機率是很低 是這樣 可是它還是有分時間點 就你不可能每天都吃一樣的東西 有時候你就是要換一下 有時候你就要去 嘗試一下不一樣的東西 有時候今天就突然覺得 我想吃個海鮮 有時候 連續吃了好多天的海鮮之後 我就突然想吃肉 所以即便",
-          "matched_keyword": "新興",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP1123｜美伊再吵就看油價，不怕！台積電進入法說發動圈，聯電、世界漲停，先進和成熟製程都缺，大小股都漲，台灣主場很健康？ft.林漢偉.股魚",
-          "channel": "兆華與股惑仔",
-          "date": "2026-06-22",
-          "text": "錯 有一些你看好補票 他可能短暫高檔回跌 也許到了無限 也許到實際線關卡 你就可以 這個地方 是不是可以做一個逢低的承接 因為像剛剛提到載版族群 第一個 緊述是最近才開始加強的上漲 但之前是在漲難點跟新興 所以你可以從這樣的一個輪動節奏 沒找到相關的機會 像真領ky也是這樣的一個代表 那再回到記憶族群 最近在華邦電納爾科非常的強 但也發現到今天萬紅 為什麼開始加速補漲 就是因為他之前被關 所以被關的時候 他反而都沒有表現到 那當整個華邦電跟納爾科 把整個漲幅拉開之後 大家就回頭看 哎萬紅好像一百六一百五是便宜的 所以資金就往萬紅去做一個集中 甚至立即點有同樣的一個效果 所以你都可以從你 原本就已經",
-          "matched_keyword": "新興",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP1129｜再次複製走勢，破月線後低量反彈千點，基本面向上、資金緊縮，下跌時選漲價、營收高成長股，大漲想追就守動能原則！ft.選股教練 陳唯泰",
-          "channel": "兆華與股惑仔",
-          "date": "2026-06-30",
-          "text": "是還不到我們過去的 那種盛況 沒有 他族群性比較不強 這兩天有一點點族群性 族群性比較不強 然後還有就是說 因為每家公司所做的藥 其實是各不相同 對 沒有錯 精度也不一樣 他不會說緊縮做的 你看緊縮跟新興電縮 是一樣的東西 對不對 緊縮缺 基本上新興電 可能也會漲價什麼之類的 就類似這樣概念 只是頂多組合上的比率不同 但產品差不多 對 可是藥品的世界 就不太一樣了 就是有人做心臟病的 有人做糖尿病的 等等的藥就不一樣 有人癌症藥等等不一樣 所以說實話 就產業的特性來講 比較難做到所謂的有族群性 所以才會出現像駕華藥 一個人獨走的這種情況 但是其實大多數的這些生技股 像我最近看到的一些 像台剛生 或",
-          "matched_keyword": "新興",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        }
-      ],
-      "total_mentions": 28,
-      "sentiment_score": 0.668,
-      "daily": {
-        "2026-04-02": {
-          "mentions": 2,
-          "bullish": 2,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 0.7
-        },
-        "2026-04-03": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 0.9
-        },
-        "2026-03-26": {
-          "mentions": 3,
-          "bullish": 3,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 1.0
-        },
-        "2026-04-12": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 0.7
-        },
-        "2026-04-13": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-04-22": {
-          "mentions": 2,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.6
-        },
-        "2026-04-29": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 1.0
-        },
-        "2026-05-07": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-05-08": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 1,
-          "neutral": 0,
-          "sentiment_score": 0.0
-        },
-        "2026-05-20": {
-          "mentions": 2,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 2,
-          "sentiment_score": 0.5
-        },
-        "2026-05-22": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 1,
-          "neutral": 0,
-          "sentiment_score": 0.0
-        },
-        "2026-05-29": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 1.0
-        },
-        "2026-05-30": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-06-01": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-06-03": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 1.0
-        },
-        "2026-06-09": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-06-14": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 1.0
-        },
-        "2026-06-17": {
-          "mentions": 2,
-          "bullish": 1,
-          "bearish": 1,
-          "neutral": 0,
-          "sentiment_score": 0.5
-        },
-        "2026-06-15": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 1.0
-        },
-        "2026-06-20": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-06-22": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 1.0
-        },
-        "2026-06-30": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
         }
       }
     },
@@ -26976,7 +27011,7 @@
       "code": "CCL",
       "name": "Carnival",
       "market": "US",
-      "sector": "零售電商",
+      "sector": "消費",
       "contexts": [
         {
           "video": "EP213 | 台、美股重點一次說，台股反彈怎麼看？美股極度恐慌後的觀察重點，南俊國際與滑軌需求，設備股後勢",
@@ -28670,7 +28705,7 @@
       "code": "TECH",
       "name": "Bio-Techne",
       "market": "US",
-      "sector": "生技製藥",
+      "sector": "醫療",
       "contexts": [
         {
           "video": "EP653 | 🕊️",
@@ -48588,6 +48623,130 @@
       }
     },
     {
+      "code": "FAST",
+      "name": "Fastenal",
+      "market": "US",
+      "sector": "工業",
+      "contexts": [
+        {
+          "video": "EP666 | 🍐",
+          "channel": "股癌",
+          "date": "2026-05-30",
+          "text": "我這個角色設計出來 我後續要去做一些沿用的話 你要我去整天在那邊 Prompt在那邊嚇的話 那個是不太可能的 就是要有人去做這件事情 所以後面開始會進入一個 我覺得比較精緻化的EI時代 過去是那種 Fast-Foo量產大量鋪出去 然後後面就進入精緻化 那精緻化這邊可以產出一個很大的價值 大概是有這樣的一些想法 所以業務跟商務能力很重要 真的很非常重要 那這邊我們下去會不會 地位可愛又迷人的女朋友 帥氣來大熊熊 來大夢工商 從我男友生日留言到 我生日都快過了半年 還沒有被選上 我男友是你的超級粉絲 連我都被你圈粉 然後自己打開Podcast收聽 不過我跟直男本不一樣的是 我喜歡你好爸爸的那一面 那最近",
+          "matched_keyword": "FAST",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP670 | 🫡",
+          "channel": "股癌",
+          "date": "2026-06-13",
+          "text": "的太帥了 所以大家是允許這件事情 因為世界下 蠻多人是很容易被冒犯 我們不確定說 你這樣子講 會不會有些人說 怎樣有錢了不起 但如果說 我前面是聽眾 你看到我在排隊 因為我真的超級討厭排隊 你給我一個fast pass 我一定幫你付錢 好大概這樣 下面有位 CC Chen 超爽der 撿到留言密碼的勒 夢宮你要去參加NB邀請的10K路跑嗎 這樣我要砸NB參加囉 那突然想不到今天可以問什麼 那我們就會一起唱 Gi就夾到了啦 會會去跑 只是當然 我不確定自己有沒有辦法跑完10K 因為我沒有跑過這麼長 當兵都是跑 好像3K還5K 所以第一次跑這麼長 應該前面會去 稍微的做一點訓練 大概這樣 下面有位 用川普",
+          "matched_keyword": "FAST",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP677 | 🐎",
+          "channel": "股癌",
+          "date": "2026-07-08",
+          "text": "都會自己去做處理 那直話一番說 現在新一代的蠻多 好像是被斷頭 是蠻正常的事情 我就突然間爆掉 然後接著很快又再站回來 那個對他們來講說 叫做家常便飯 也就是呢 現在的年輕人 真的有一種那種 too fast to live too young to die的那種感覺 就是他就是跟你媽的拼了 死了算了 所以他們那種 才是真正的死了算的 就是我們已經是 某個程度上 被掃去隔壁的老人家了 所以當有人在 可能回答那些新的聽眾說 他以前的態度 是比較偏向說 死了算了 衝啊槓桿槓 我說 欸 其實我以前最大的時候 大概也就是槓 2.5倍左右 就是融資開滿 最後就是這樣 那有些東西呢 我一買反正說 哇靠 因為你不能",
+          "matched_keyword": "FAST",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP678 | 🎮",
+          "channel": "股癌",
+          "date": "2026-07-11",
+          "text": "一些那種破敵的情形 那所以因為有 有很多人都在問光 所以就讓我很好奇 去看一下下光的情形 我就有注意到說 他某個程度上 他的一個narrative 會從本來 就是大家是在 聚焦在Narrow and Fast 什麼叫Narrow and Fast 就是說 反正在這個細光的應用上面 因為細本身不會發光 所以他就要放一個 零化銀的雷射去做打光 那可是如果說 今天要把頻寬變大 要去做疊帶的時候 他等於每次都要去重新設計一下 上面的這個元件 那就代表說他花很多錢 那他做法怎麼樣 他就在一個小小的空間之內 然後可以做到非常快速 所以在這個元件的提升方面 就會去投入句子 他會是一個指數化的 這個成本的提升 那現在",
+          "matched_keyword": "FAST",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP678 | 🎮",
+          "channel": "股癌",
+          "date": "2026-07-11",
+          "text": "就會去投入句子 他會是一個指數化的 這個成本的提升 那現在在市場上 開始在討論一個新的做法 是在講說 就是slow But 這個 White White and Slow 就是Narrow and Fast 然後跟 White and Slow 那White and Slow的話 就是透過VIXO的方式 那VIXO大家已經知道 他在消費性已經行至多年 他就是一個比較相對 便宜的一個元件 那如果他的速率 沒有辦法達到怎麼辦 他就代表說 就是多打幾層上去 就多打幾層上去 他可能透過 不管你是用那種Fiber Ray Union 或者說 一些這種 透徑的方式 把光收斂起來 就是說那個平均會變成那邊 那這樣",
+          "matched_keyword": "FAST",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP678 | 🎮",
+          "channel": "股癌",
+          "date": "2026-07-11",
+          "text": "le Out 或者說Scale Across的話 那可能就會去用一些 光的解放 因為同時沒有辦法跑這麼遠的 他會出現一些 這個訊號的快速下降 那一樣的道理就是 你今天如果去討論 Narrow and Fast的話 那他可能是一個 你假設要把訊號打比較遠的話 會用這樣一個解放 那如果你今天是在討論說 Stall and Wide的話 那他可能是在Scale Up Scale In 這部分呢 可能會用到這樣子一個解放 好當然我們不能夠了解的是 市場會不會因為這樣子 就是大家可能注意到一個新的故事 然後就瘋狂的去Scale Out的名字 那導致說就是大家注意到說 傳統大家很喜歡的一些 光的類股它是轉弱的 那",
+          "matched_keyword": "FAST",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP678 | 🎮",
+          "channel": "股癌",
+          "date": "2026-07-11",
+          "text": "那只是往高估值的東西前進 也要去注意說 裡面有一些指紛類 就是說雖然他們嚴格上來說 包一包都是光 只是如果說你把這一包的光 去做一些拆分的話 你就會注意到 好像表現的沒那麼好的 就是Near and Fast Night塊 就是過去最香的這塊的東西 反而是沒有那麼好 大家再賣這個 然後要去轉一些 就是更未來更夢的東西 還蠻有趣的 就是它是一種多重層次的判斷 那只是因為自己有觀察到 這樣的一個現象 也稍微在節目拋磚影域 分享一下 因為這個東西還太新 太潮 可能還很多人不知道 所以有時候我也蠻有趣的 就是在那邊 跟大家 哈啦啦嘞一下之後 然後就會收到很多聽眾的 feedback 就幫我去 更加的完整整個輪",
+          "matched_keyword": "FAST",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        }
+      ],
+      "total_mentions": 7,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-05-30": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-06-13": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-07-08": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-07-11": {
+          "mentions": 4,
+          "bullish": 1,
+          "bearish": 1,
+          "neutral": 2,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
       "code": "2901",
       "name": "欣欣",
       "market": "TW",
@@ -54563,6 +54722,104 @@
       }
     },
     {
+      "code": "8011",
+      "name": "台通",
+      "market": "TW",
+      "sector": "網通",
+      "contexts": [
+        {
+          "video": "EP647 | 🍬",
+          "channel": "股癌",
+          "date": "2026-03-25",
+          "text": "還是持續的 在盤底裡面 所以美國的趨勢扭轉 可能還沒有看到 那鴨骨還是持續的強大 所以自己以下的心態 是認為說鴨骨的好做程度 是遠大於美股 然後之後看有什麼樣的一個 契機在跟大家討論跟分享 那大概這樣 那接下來我們進去 Queer 的部分 第一位林屯以盟工您好 我是林屯以 aka 波老大 那之前聽過台通和和說 叩叩玩會精神換善 不容易達成目標 那想問盟工對此的看法是怎麼樣 那另外想問持機都是拿 M762 還是 AUG 那祝盟工大全家健康 每年每日都能夠順順利利 非常感謝 那首先刺激的話 這兩把硬要拳我也喜歡是 AUG 然後再來我比較喜歡拿叢鋒槍 我喜歡拿那種小型的叢鋒槍 什麼 MP5 之類的 這個",
+          "matched_keyword": "台通",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": ""
+        },
+        {
+          "video": "EP647 | 🍬",
+          "channel": "股癌",
+          "date": "2026-03-25",
+          "text": "夢宮生後的 觀音短 保佑我們今年能夠有喜事 若能夠成真 我一定會請盡所有去愛這個孩子 那謝謝夢宮 祝大家身體健康平安快樂 這個觀音短初一節 好下面一位 max大大 看到出位的IG影片 父愛噴發 對著自己的兒子發出 耶的聲音 覺得反差感好大 平時那個性感富有磁性的嗓音 竟然能夠發出這麼可愛的叫聲 那聽台通李懿成說 他會在小孩洗澡的時候 全裸跳舞給小孩看 主委有做過類似的事情嗎 然後想請問你對處置股的 操作如何 若一檔股票即將進入處置 或是已經進入處置 就會考慮先把資金撤出完 別的標的還是繼續擺著不動 那光通今天好幾顆 等某個今天被拉到 20分處置盤的光通類股 明顯弱很多 那最後祝主委兩個兒子 能夠平",
+          "matched_keyword": "台通",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": ""
+        },
+        {
+          "video": "EP661 | 🚲",
+          "channel": "股癌",
+          "date": "2026-05-13",
+          "text": "衝向歷史新高的快樂操盤手 結帳輸入GOAYE 2026 馬上想單瓶久折折扣無上限 結帳進而滿意簽證 套套四入一合 體驗高潮 疊起傳送門 就在我們的連結 按這邊提供給所有需要的朋友們 剛剛這禮拜帶家人去台中 稍微的走跳一下 那當然也去了 我老婆非常喜歡的餐廳 平臺可可 我們當時差點 因為這個餐廳就搬去台中 那所在節目跟大家講的東西 同手無期 非常誇張 反正我老婆就找到一個 她真的很喜歡的餐廳 然後就問老婆說 她要搬到哪一邊去 所以我們真的認真的去台中 看過幾次房子 那最後面 我自己是覺得 還要有選領口 因為領口下在教育方面 我覺得是非常的方便 就小朋友就念這邊的學校 還可以一路念到高中 就覺得心情特",
+          "matched_keyword": "台通",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
+          "video": "EP668 | 🦞",
+          "channel": "股癌",
+          "date": "2026-06-06",
+          "text": "那確實是一個很好的體驗 那希望你可以持續 維持這樣子的體驗 下面我也 Samo Chin 你混蛋 但我喜歡 聽完上集脫序的 胎教跟祝福 我真的覺得夢工太糟糕 但這就是你 不用覺得這樣不好 那還記得你上台通過的時候 我分享 第一次LISA過來 就帶去給你朋友認識 當下你朋友就幹幹叫 我覺得就是因為你這麼糟糕 還能夠擁有LISA 是我的話 當下一定也是幹幹叫 那by the way 去年底開始 資產好像不容易開始 加速向前 但因為家中太做 貪小便宜去接觸 大陸幣圈的船直銷 那因此 還貸款的一筆錢 那最近為了讓老婆安心 就把每日股都清完 幫助她還貸款 讓我覺得人生好難 不知道 就對 當然家裡遇到這種事情",
+          "matched_keyword": "台通",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP678 | 🎮",
+          "channel": "股癌",
+          "date": "2026-07-11",
+          "text": "順利的遇到 很棒的另外一半 然後再講說 感覺河液也是好老爸 所以他們公佈的是嗎 因為其實我算是可能 手搬車知道了 那非常感謝河液跟我分享 河液是一個很有趣人庫的人 那不知道的人稍微講一下 他是那個隔壁台通的 co-host之一 那也是一個 我覺得非常有趣的人 他會為我帶來很多思想上的衝擊 literally衝擊 你不知道說什麼 事業上有些人在過這麼奇葩的生活 那當然是一個非常好的人 我相信他的孩子一定也會健康 然後也會長得很好 因為他一定是一個非常棒的父親 那再講說 有沒有什麼給咖啡萌新的建議 我覺得就直接從那個什麼 Americano開始就好啦 那所謂的美式咖啡 就是Espresso在加水嘛 那",
+          "matched_keyword": "台通",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        }
+      ],
+      "total_mentions": 5,
+      "sentiment_score": 0.84,
+      "daily": {
+        "2026-03-25": {
+          "mentions": 2,
+          "bullish": 2,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        },
+        "2026-05-13": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.7
+        },
+        "2026-06-06": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        },
+        "2026-07-11": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
       "code": "3714",
       "name": "富采",
       "market": "TW",
@@ -55811,85 +56068,6 @@
           "bearish": 0,
           "neutral": 1,
           "sentiment_score": 0.5
-        }
-      }
-    },
-    {
-      "code": "8011",
-      "name": "台通",
-      "market": "TW",
-      "sector": "網通",
-      "contexts": [
-        {
-          "video": "EP647 | 🍬",
-          "channel": "股癌",
-          "date": "2026-03-25",
-          "text": "還是持續的 在盤底裡面 所以美國的趨勢扭轉 可能還沒有看到 那鴨骨還是持續的強大 所以自己以下的心態 是認為說鴨骨的好做程度 是遠大於美股 然後之後看有什麼樣的一個 契機在跟大家討論跟分享 那大概這樣 那接下來我們進去 Queer 的部分 第一位林屯以盟工您好 我是林屯以 aka 波老大 那之前聽過台通和和說 叩叩玩會精神換善 不容易達成目標 那想問盟工對此的看法是怎麼樣 那另外想問持機都是拿 M762 還是 AUG 那祝盟工大全家健康 每年每日都能夠順順利利 非常感謝 那首先刺激的話 這兩把硬要拳我也喜歡是 AUG 然後再來我比較喜歡拿叢鋒槍 我喜歡拿那種小型的叢鋒槍 什麼 MP5 之類的 這個",
-          "matched_keyword": "台通",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": ""
-        },
-        {
-          "video": "EP647 | 🍬",
-          "channel": "股癌",
-          "date": "2026-03-25",
-          "text": "夢宮生後的 觀音短 保佑我們今年能夠有喜事 若能夠成真 我一定會請盡所有去愛這個孩子 那謝謝夢宮 祝大家身體健康平安快樂 這個觀音短初一節 好下面一位 max大大 看到出位的IG影片 父愛噴發 對著自己的兒子發出 耶的聲音 覺得反差感好大 平時那個性感富有磁性的嗓音 竟然能夠發出這麼可愛的叫聲 那聽台通李懿成說 他會在小孩洗澡的時候 全裸跳舞給小孩看 主委有做過類似的事情嗎 然後想請問你對處置股的 操作如何 若一檔股票即將進入處置 或是已經進入處置 就會考慮先把資金撤出完 別的標的還是繼續擺著不動 那光通今天好幾顆 等某個今天被拉到 20分處置盤的光通類股 明顯弱很多 那最後祝主委兩個兒子 能夠平",
-          "matched_keyword": "台通",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": ""
-        },
-        {
-          "video": "EP661 | 🚲",
-          "channel": "股癌",
-          "date": "2026-05-13",
-          "text": "衝向歷史新高的快樂操盤手 結帳輸入GOAYE 2026 馬上想單瓶久折折扣無上限 結帳進而滿意簽證 套套四入一合 體驗高潮 疊起傳送門 就在我們的連結 按這邊提供給所有需要的朋友們 剛剛這禮拜帶家人去台中 稍微的走跳一下 那當然也去了 我老婆非常喜歡的餐廳 平臺可可 我們當時差點 因為這個餐廳就搬去台中 那所在節目跟大家講的東西 同手無期 非常誇張 反正我老婆就找到一個 她真的很喜歡的餐廳 然後就問老婆說 她要搬到哪一邊去 所以我們真的認真的去台中 看過幾次房子 那最後面 我自己是覺得 還要有選領口 因為領口下在教育方面 我覺得是非常的方便 就小朋友就念這邊的學校 還可以一路念到高中 就覺得心情特",
-          "matched_keyword": "台通",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.7,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        },
-        {
-          "video": "EP668 | 🦞",
-          "channel": "股癌",
-          "date": "2026-06-06",
-          "text": "那確實是一個很好的體驗 那希望你可以持續 維持這樣子的體驗 下面我也 Samo Chin 你混蛋 但我喜歡 聽完上集脫序的 胎教跟祝福 我真的覺得夢工太糟糕 但這就是你 不用覺得這樣不好 那還記得你上台通過的時候 我分享 第一次LISA過來 就帶去給你朋友認識 當下你朋友就幹幹叫 我覺得就是因為你這麼糟糕 還能夠擁有LISA 是我的話 當下一定也是幹幹叫 那by the way 去年底開始 資產好像不容易開始 加速向前 但因為家中太做 貪小便宜去接觸 大陸幣圈的船直銷 那因此 還貸款的一筆錢 那最近為了讓老婆安心 就把每日股都清完 幫助她還貸款 讓我覺得人生好難 不知道 就對 當然家裡遇到這種事情",
-          "matched_keyword": "台通",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        }
-      ],
-      "total_mentions": 4,
-      "sentiment_score": 0.925,
-      "daily": {
-        "2026-03-25": {
-          "mentions": 2,
-          "bullish": 2,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 1.0
-        },
-        "2026-05-13": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 0.7
-        },
-        "2026-06-06": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 1.0
         }
       }
     },
@@ -57866,6 +58044,182 @@
           "sentiment_score": 0.3
         },
         "2026-07-10": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
+      "code": "ADI",
+      "name": "ADI",
+      "market": "US",
+      "sector": "半導體",
+      "contexts": [
+        {
+          "video": "2026/05/05(二) Palantir為什麼不漲？#PLTR #ON #NVDA #MU",
+          "channel": "財女珍妮",
+          "date": "2026-05-05",
+          "text": "他 現在漲上去的時候 才跟我說我要追 所以我覺得 有的時候這個市場 就是歷史不斷的在重複發生 每一次我們跟大家分享的時候 可能是他已經漲上來 或者是什麼 但是我在之前寫文章的時候 比如說我們之前有寫過ADI嘛 亞德諾嘛 比如說我們之前有寫過其他的公司 甚至我大概前一陣子也有寫 CoreWave這家公司 然後裡面也有針對 很多的公司去做一個固執 結果這兩天 其實像CoreWave Nevis他們的股價都非常的強 那我可能也有在某個節目上面講說 我是持有這些公司的 那為什麼我會去持有呢 其實就是因為我覺得 他之前跌得比較多 他可能現在 他的底部是有比較明顯的 所以我把一些光通 電力去把它換過去 就是等於",
+          "matched_keyword": "ADI",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
+          "video": "EP667 | 🌍",
+          "channel": "股癌",
+          "date": "2026-06-03",
+          "text": "的股票呢 那感覺GTC後 資金又回流 Invidia台積電供應鏈 孟公覺得市場 是否會補掌Invidia TSMC 那另外下一波的漲價體財 是否有可能會延伸到 公率半導體IDM 如ON跟PIMIC 如ADI 我覺得這位兄弟 他的敏感度非常好 就是我覺得公率元件 或者是公率半導體 相關的一些公司 其實我們都注意到 他的基本面 有滿顯著的在改善中 所以他確實有可能是 下一波題材的一個汇聚點 可是他的光芒 沒有像 比如說CPU 或者是被動元件 那樣子的全面 因為他市場上 非常喜歡那種 類似戴維斯雙級的東西 反正我ASP可以拉上去 那再來呢 我的PU Ratio也拉上去 這個可能是大家會比較喜歡的 重點是你",
+          "matched_keyword": "ADi",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
+          "video": "EP1113｜太貴了，輝達也在調整記憶體用量？如何評估對AI趨勢的發展？震盪開始、籌好資金，Q3看CPO再起、機器人應用！ft.操盤手 黃豐凱",
+          "channel": "兆華與股惑仔",
+          "date": "2026-06-05",
+          "text": "恐慌 我覺得今天會很恐慌 一個是因為早上的 韓國一開盤就大跌 我們待會就來講這個東西 就是一開盤就大跌 可是昨天台積電還漲啊 昨天台積電還漲 因為昨天西西講的不差 西西講的其實還蠻好 所以昨天的 其實ADI夜盤是漲的 可是今天整個盤是很差 所以台積電 今天也是就受到了 打了一個悶 就他今天也是收跌的 但我覺得這樣也好 為什麼也好 我剛剛講 其實全球有兩個股票 是不能大漲的 一個就是回答 一個就是台積電 因為這兩家都太重要了 他們大漲 其實會把很多資金都吸走 就被拉積配合 所以他們只要不大漲 大家都可以 就是 心存僥倖 覺得這盤還要繼續往上漲 如果他們真的大漲 我覺得這盤可能就真的要開始 準備要回答",
+          "matched_keyword": "ADI",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP678 | 🎮",
+          "channel": "股癌",
+          "date": "2026-07-11",
+          "text": "的一兩個 Q應該都會持續的進行中 那它比較像是一個 母雞拉小雞 因為在一些大廠 他們出現了漲價 所以一些中小 可能就是有辦法 去對應大廠的價格 都可能去做一些調整 那在公率元件方面 我們已經注意到 像ADI 這叫做一個全球 非常大的一個類比IC的廠商 他們也是發出了漲價性 所以其實我們也是注意到說 在公率元件這邊 有一個全面漲價的一個狀態 但公率元件這邊 蠻有趣的 就是它在美股的一些標的 他們就沒有再繼續上去 這邊我也覺得蠻神奇的 因為理論上最缺的是 美股的這些公司 那反而是 台股的一些公率元件 或是一些MOSFET 然後跟後段的封裝 它就走得非常漂亮 那這邊算是 就某個程度上 像是我們那時候去看",
+          "matched_keyword": "ADI",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        }
+      ],
+      "total_mentions": 4,
+      "sentiment_score": 0.625,
+      "daily": {
+        "2026-05-05": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-06-03": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-06-05": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        },
+        "2026-07-11": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
+      "code": "2331",
+      "name": "精英",
+      "market": "TW",
+      "sector": "電腦及週邊設備業",
+      "contexts": [
+        {
+          "video": "EP1096｜CPI衝高嚇倒美股，台、韓股挺得住？現在進場長期投資可以嗎，怎麼做？熱門股重挫原因不一樣，題材對，洗洗就會上？ft.型男股神 陳威良",
+          "channel": "兆華與股惑仔",
+          "date": "2026-05-13",
+          "text": "的 尤其是現在 雖然叫做 主動型ETF的元年 黨數看起來多 但是你跟基金品起來是少的 我覺得現在是精銳進出 就這一批肯定是當年 發基金厲害的人 才敢在這一波 趕快去做這個主動ETF 所以我覺得這一批的精英們 精英超反手們 我們是可以看得 他們對他們有所期待的 沒錯 那今天很謝謝威良 也希望大家知道 最近台股還是一個 很強勢的狀況下 即使您要做長期投資 不要害怕 但是你要記得 堅持下去選對產品 用時間平滑成本 遇到大跌不要驚慌 你的產品是對的時候 那時候就來進行加碼 就好了 我們是幸福的 因為商品很多 那我們今天股貨載 就到這邊囉 我們下次再會 掰掰",
+          "matched_keyword": "精英",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP1099｜美債殖利率衝，美股壓力大？盤中回檔1000點，測4萬點正常？PCB、CPO何時能撿，被動、機器人接棒好事，台積下一檔賣誰？ft.題材獵人 林漢偉",
+          "channel": "兆華與股惑仔",
+          "date": "2026-05-18",
+          "text": "大家應該可以得到很多 更不同 更廣的知識 而在某些的部位上面 我們又看法很一致 所以就等於是 可以加強這些部位的信念 以及瞭解更多不同的投資理念 我覺得這是一個很好的現象 也如果大家有覺得 自己有什麼精英上面 特別幸運的地方 也可以跟我們分享 因為大家都很關心我 必須講 像我之前講 我體檢什麼 大家就很擔心 你的健康怎麼樣 那我要分享 因為我也是有幸運的地方 好 今天很謝謝浩遠哥 那就跟各位骨頭咱們說 掰掰囉 好 大家掰掰",
+          "matched_keyword": "精英",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP677 | 🐎",
+          "channel": "股癌",
+          "date": "2026-07-08",
+          "text": "輩分享 都是pass out 我也pass out 整個掛掉 你最好是在有辦法感受得到 太怪了吧 下面一位real lean 孟公大您好 大概從去年10月開始進入股市 每個月聽您說 績效大爆車 但自己精英輸出 最後發現自己還是比較適合指數投資 但您的節目還是使人獲益良多 常跟我先生聽到笑出來 月底跟我的先生要去美國了 那希望一切順利 也祝您績效繼續長紅 另外我先生Rae 7月9號生日 可以請您跟他說那四個字嗎 謝謝愛您 好 恭喜發財 那再來講說 績效大爆車 其實我們真的不是那種 會去吹自己績效 或是怎麼樣的人 就是如實而去分享 像繞賽也都是會跟大家講 對 我知道大多數去分享股市的 都喜歡講自己多一",
+          "matched_keyword": "精英",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP678 | 🎮",
+          "channel": "股癌",
+          "date": "2026-07-11",
+          "text": "漲多少 我就去問另外一個source 那我稍微的拼湊出來 雖然他們的漲價 會跟著那個國際的同價報價去跑 可是整體來說 大概是有漲10%到20%左右的一個 數字 然後再來就是le time的話 一些比較精英的廠商 甚至是從本來3到4個月跑到 7到8個月左右 所以它是一個非常缺的環節 為什麼會知道這一塊呢 因為身邊的朋友 他們是產業專的 他們在找封裝的source的時候 因為現在封裝廠 大家都知道都很滿 也就是我們跟大家講說 其實封裝是後面蠻多人在注意的題材 因為他們真的都很滿 那當然他們可能去做轉廠 要發現說我在A廠這邊下 我要等超久 我轉去B 那轉去B之後發現媽的出事情 為什麼 因為B雖然它有封裝",
+          "matched_keyword": "精英",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        }
+      ],
+      "total_mentions": 4,
+      "sentiment_score": 0.625,
+      "daily": {
+        "2026-05-13": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        },
+        "2026-05-18": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-07-08": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-07-11": {
           "mentions": 1,
           "bullish": 0,
           "bearish": 0,
@@ -59966,75 +60320,6 @@
       }
     },
     {
-      "code": "ADI",
-      "name": "ADI",
-      "market": "US",
-      "sector": "半導體",
-      "contexts": [
-        {
-          "video": "2026/05/05(二) Palantir為什麼不漲？#PLTR #ON #NVDA #MU",
-          "channel": "財女珍妮",
-          "date": "2026-05-05",
-          "text": "他 現在漲上去的時候 才跟我說我要追 所以我覺得 有的時候這個市場 就是歷史不斷的在重複發生 每一次我們跟大家分享的時候 可能是他已經漲上來 或者是什麼 但是我在之前寫文章的時候 比如說我們之前有寫過ADI嘛 亞德諾嘛 比如說我們之前有寫過其他的公司 甚至我大概前一陣子也有寫 CoreWave這家公司 然後裡面也有針對 很多的公司去做一個固執 結果這兩天 其實像CoreWave Nevis他們的股價都非常的強 那我可能也有在某個節目上面講說 我是持有這些公司的 那為什麼我會去持有呢 其實就是因為我覺得 他之前跌得比較多 他可能現在 他的底部是有比較明顯的 所以我把一些光通 電力去把它換過去 就是等於",
-          "matched_keyword": "ADI",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        },
-        {
-          "video": "EP667 | 🌍",
-          "channel": "股癌",
-          "date": "2026-06-03",
-          "text": "的股票呢 那感覺GTC後 資金又回流 Invidia台積電供應鏈 孟公覺得市場 是否會補掌Invidia TSMC 那另外下一波的漲價體財 是否有可能會延伸到 公率半導體IDM 如ON跟PIMIC 如ADI 我覺得這位兄弟 他的敏感度非常好 就是我覺得公率元件 或者是公率半導體 相關的一些公司 其實我們都注意到 他的基本面 有滿顯著的在改善中 所以他確實有可能是 下一波題材的一個汇聚點 可是他的光芒 沒有像 比如說CPU 或者是被動元件 那樣子的全面 因為他市場上 非常喜歡那種 類似戴維斯雙級的東西 反正我ASP可以拉上去 那再來呢 我的PU Ratio也拉上去 這個可能是大家會比較喜歡的 重點是你",
-          "matched_keyword": "ADi",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        },
-        {
-          "video": "EP1113｜太貴了，輝達也在調整記憶體用量？如何評估對AI趨勢的發展？震盪開始、籌好資金，Q3看CPO再起、機器人應用！ft.操盤手 黃豐凱",
-          "channel": "兆華與股惑仔",
-          "date": "2026-06-05",
-          "text": "恐慌 我覺得今天會很恐慌 一個是因為早上的 韓國一開盤就大跌 我們待會就來講這個東西 就是一開盤就大跌 可是昨天台積電還漲啊 昨天台積電還漲 因為昨天西西講的不差 西西講的其實還蠻好 所以昨天的 其實ADI夜盤是漲的 可是今天整個盤是很差 所以台積電 今天也是就受到了 打了一個悶 就他今天也是收跌的 但我覺得這樣也好 為什麼也好 我剛剛講 其實全球有兩個股票 是不能大漲的 一個就是回答 一個就是台積電 因為這兩家都太重要了 他們大漲 其實會把很多資金都吸走 就被拉積配合 所以他們只要不大漲 大家都可以 就是 心存僥倖 覺得這盤還要繼續往上漲 如果他們真的大漲 我覺得這盤可能就真的要開始 準備要回答",
-          "matched_keyword": "ADI",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        }
-      ],
-      "total_mentions": 3,
-      "sentiment_score": 0.667,
-      "daily": {
-        "2026-05-05": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-06-03": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-06-05": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 1.0
-        }
-      }
-    },
-    {
       "code": "2884",
       "name": "玉山金",
       "market": "TW",
@@ -62020,144 +62305,6 @@
       }
     },
     {
-      "code": "2331",
-      "name": "精英",
-      "market": "TW",
-      "sector": "電腦及週邊設備業",
-      "contexts": [
-        {
-          "video": "EP1096｜CPI衝高嚇倒美股，台、韓股挺得住？現在進場長期投資可以嗎，怎麼做？熱門股重挫原因不一樣，題材對，洗洗就會上？ft.型男股神 陳威良",
-          "channel": "兆華與股惑仔",
-          "date": "2026-05-13",
-          "text": "的 尤其是現在 雖然叫做 主動型ETF的元年 黨數看起來多 但是你跟基金品起來是少的 我覺得現在是精銳進出 就這一批肯定是當年 發基金厲害的人 才敢在這一波 趕快去做這個主動ETF 所以我覺得這一批的精英們 精英超反手們 我們是可以看得 他們對他們有所期待的 沒錯 那今天很謝謝威良 也希望大家知道 最近台股還是一個 很強勢的狀況下 即使您要做長期投資 不要害怕 但是你要記得 堅持下去選對產品 用時間平滑成本 遇到大跌不要驚慌 你的產品是對的時候 那時候就來進行加碼 就好了 我們是幸福的 因為商品很多 那我們今天股貨載 就到這邊囉 我們下次再會 掰掰",
-          "matched_keyword": "精英",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP1099｜美債殖利率衝，美股壓力大？盤中回檔1000點，測4萬點正常？PCB、CPO何時能撿，被動、機器人接棒好事，台積下一檔賣誰？ft.題材獵人 林漢偉",
-          "channel": "兆華與股惑仔",
-          "date": "2026-05-18",
-          "text": "大家應該可以得到很多 更不同 更廣的知識 而在某些的部位上面 我們又看法很一致 所以就等於是 可以加強這些部位的信念 以及瞭解更多不同的投資理念 我覺得這是一個很好的現象 也如果大家有覺得 自己有什麼精英上面 特別幸運的地方 也可以跟我們分享 因為大家都很關心我 必須講 像我之前講 我體檢什麼 大家就很擔心 你的健康怎麼樣 那我要分享 因為我也是有幸運的地方 好 今天很謝謝浩遠哥 那就跟各位骨頭咱們說 掰掰囉 好 大家掰掰",
-          "matched_keyword": "精英",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP677 | 🐎",
-          "channel": "股癌",
-          "date": "2026-07-08",
-          "text": "輩分享 都是pass out 我也pass out 整個掛掉 你最好是在有辦法感受得到 太怪了吧 下面一位real lean 孟公大您好 大概從去年10月開始進入股市 每個月聽您說 績效大爆車 但自己精英輸出 最後發現自己還是比較適合指數投資 但您的節目還是使人獲益良多 常跟我先生聽到笑出來 月底跟我的先生要去美國了 那希望一切順利 也祝您績效繼續長紅 另外我先生Rae 7月9號生日 可以請您跟他說那四個字嗎 謝謝愛您 好 恭喜發財 那再來講說 績效大爆車 其實我們真的不是那種 會去吹自己績效 或是怎麼樣的人 就是如實而去分享 像繞賽也都是會跟大家講 對 我知道大多數去分享股市的 都喜歡講自己多一",
-          "matched_keyword": "精英",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        }
-      ],
-      "total_mentions": 3,
-      "sentiment_score": 0.667,
-      "daily": {
-        "2026-05-13": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 1.0
-        },
-        "2026-05-18": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-07-08": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        }
-      }
-    },
-    {
-      "code": "FAST",
-      "name": "Fastenal",
-      "market": "US",
-      "sector": "工業",
-      "contexts": [
-        {
-          "video": "EP666 | 🍐",
-          "channel": "股癌",
-          "date": "2026-05-30",
-          "text": "我這個角色設計出來 我後續要去做一些沿用的話 你要我去整天在那邊 Prompt在那邊嚇的話 那個是不太可能的 就是要有人去做這件事情 所以後面開始會進入一個 我覺得比較精緻化的EI時代 過去是那種 Fast-Foo量產大量鋪出去 然後後面就進入精緻化 那精緻化這邊可以產出一個很大的價值 大概是有這樣的一些想法 所以業務跟商務能力很重要 真的很非常重要 那這邊我們下去會不會 地位可愛又迷人的女朋友 帥氣來大熊熊 來大夢工商 從我男友生日留言到 我生日都快過了半年 還沒有被選上 我男友是你的超級粉絲 連我都被你圈粉 然後自己打開Podcast收聽 不過我跟直男本不一樣的是 我喜歡你好爸爸的那一面 那最近",
-          "matched_keyword": "FAST",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP670 | 🫡",
-          "channel": "股癌",
-          "date": "2026-06-13",
-          "text": "的太帥了 所以大家是允許這件事情 因為世界下 蠻多人是很容易被冒犯 我們不確定說 你這樣子講 會不會有些人說 怎樣有錢了不起 但如果說 我前面是聽眾 你看到我在排隊 因為我真的超級討厭排隊 你給我一個fast pass 我一定幫你付錢 好大概這樣 下面有位 CC Chen 超爽der 撿到留言密碼的勒 夢宮你要去參加NB邀請的10K路跑嗎 這樣我要砸NB參加囉 那突然想不到今天可以問什麼 那我們就會一起唱 Gi就夾到了啦 會會去跑 只是當然 我不確定自己有沒有辦法跑完10K 因為我沒有跑過這麼長 當兵都是跑 好像3K還5K 所以第一次跑這麼長 應該前面會去 稍微的做一點訓練 大概這樣 下面有位 用川普",
-          "matched_keyword": "FAST",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP677 | 🐎",
-          "channel": "股癌",
-          "date": "2026-07-08",
-          "text": "都會自己去做處理 那直話一番說 現在新一代的蠻多 好像是被斷頭 是蠻正常的事情 我就突然間爆掉 然後接著很快又再站回來 那個對他們來講說 叫做家常便飯 也就是呢 現在的年輕人 真的有一種那種 too fast to live too young to die的那種感覺 就是他就是跟你媽的拼了 死了算了 所以他們那種 才是真正的死了算的 就是我們已經是 某個程度上 被掃去隔壁的老人家了 所以當有人在 可能回答那些新的聽眾說 他以前的態度 是比較偏向說 死了算了 衝啊槓桿槓 我說 欸 其實我以前最大的時候 大概也就是槓 2.5倍左右 就是融資開滿 最後就是這樣 那有些東西呢 我一買反正說 哇靠 因為你不能",
-          "matched_keyword": "FAST",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        }
-      ],
-      "total_mentions": 3,
-      "sentiment_score": 0.5,
-      "daily": {
-        "2026-05-30": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-06-13": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-07-08": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        }
-      }
-    },
-    {
       "code": "4931",
       "name": "新盛力",
       "market": "TW",
@@ -62300,10 +62447,60 @@
       }
     },
     {
+      "code": "BKNG",
+      "name": "Booking Holdings",
+      "market": "US",
+      "sector": "消費",
+      "contexts": [
+        {
+          "video": "EP653 | 🕊️",
+          "channel": "股癌",
+          "date": "2026-04-15",
+          "text": "去搶貨 或者說可能 general purpose 的這些 cpu 不一定拉得到 然後開始有大量的 on base的 custom made cpu 開始要 去去做更多的加單的話 其實除了這些 cpu 相關的一些 lake 一些元件 可能也會都會一起被拉到 那當然說 這裡面有沒有什麼 double booking 一定都是有 可是沒有關係 在第一波就讓記憶體 也是一堆人在囤貨 可是他就是會一直漲 所以有可能 他也會產生一些結構性的問題 也就是 簡單來講 現在在市場裡面的供應是不夠的 那當大家可能在某些特殊的應用上面 需要用到大量的東西 然後有一些新的應用的產生 導致說 哇 我們以前去布的 GPU 跟 ASI",
+          "matched_keyword": "Booking",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
+        },
+        {
+          "video": "EP678 | 🎮",
+          "channel": "股癌",
+          "date": "2026-07-11",
+          "text": "要退出 那後來在Zackber的訪問裡面 好像是昨天還潛填 他出來證實了 就是我們這邊的意見才是對的 就是他並沒有要退出 他甚至是要滿倉殺進去 他要更加用力的做多 那其實我們已經有去注意到 他在未來去Booking的 大家Center這個GWASU是很高的 如果說他真的要說的話 他不會這樣去做Booking 那再來就是其實Meta他本身 就是AI的一個超級大的買房 他買了很多的東西 所以當他今天找到一個出海口 可以去把一些 我們也不要把他稱為是閒置算力 你就把他想像成是說 就是你最新最強大的 像接下來要出VIA Ruby 或是後來的什麼飛門之類的 你會用這個東西拿去算 可能最新的AI模型 那你舊的Hoppe",
+          "matched_keyword": "Booking",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword",
+          "mention_count": 2
+        }
+      ],
+      "total_mentions": 3,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-04-15": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-07-11": {
+          "mentions": 2,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 2,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
       "code": "CDNS",
       "name": "Cadence Design Systems",
       "market": "US",
-      "sector": "企業軟體",
+      "sector": "科技",
       "contexts": [
         {
           "video": "EP649 | 💌",
@@ -62529,7 +62726,7 @@
       "code": "DASH",
       "name": "DoorDash",
       "market": "US",
-      "sector": "零售電商",
+      "sector": "消費",
       "contexts": [
         {
           "video": "EP217 | 台、美股重點一次說，Google TPU 各代產品結構與台廠供應鏈， 台積電封裝技術進展與風險，CPO量產前注意",
@@ -62661,7 +62858,7 @@
       "code": "CHTR",
       "name": "Charter Communications",
       "market": "US",
-      "sector": "通訊媒體",
+      "sector": "高速連接",
       "contexts": [
         {
           "video": "EP649 | 💌",
@@ -65386,7 +65583,7 @@
       "code": "DECK",
       "name": "Deckers Brands",
       "market": "US",
-      "sector": "零售電商",
+      "sector": "消費",
       "contexts": [
         {
           "video": "EP656 | 🍇",
@@ -66837,7 +67034,7 @@
       "code": "NOW",
       "name": "ServiceNow",
       "market": "US",
-      "sector": "企業軟體",
+      "sector": "科技",
       "contexts": [
         {
           "video": "EP666 | 🍐",
@@ -67073,7 +67270,7 @@
       "code": "DDOG",
       "name": "Datadog",
       "market": "US",
-      "sector": "AI軟體",
+      "sector": "科技",
       "contexts": [
         {
           "video": "2026/05/08(五)美股下跌還能買嗎？ #ANET #DDOG #FTNT",
@@ -68952,6 +69149,56 @@
       }
     },
     {
+      "code": "00850",
+      "name": "元大臺灣ESG永續",
+      "market": "TW",
+      "sector": "ETF・台股指數",
+      "contexts": [
+        {
+          "video": "EP1111｜多頭沒敗象，6萬點也不算高？產業資訊、基本面價值難衡量，用技術面做平衡？重電、CPO、老AI，都會挑戰新高？ft.K線之神 朱家泓",
+          "channel": "兆華與股惑仔",
+          "date": "2026-06-03",
+          "text": "沒有 鴻海歷史新高 在1999年 我說 對 是啊 因為那個時候 也是一波的電子 跟網路的礦潮 對 所以 像這樣的大牛股 對不對 他們在這一波起來 有機會去挑戰歷史新高 當然有機會 其實我們現在 廣達在850 其實我們的大盤 為什麼現在 能夠這樣子 一直往上衝 是 就是我講的 這些新興的AI的產業 先領頭先購 那這些老AI 因為他們是老AI 所以他們的公司 還有其他的包袱 並不是只有單純在做AI 像鴻海 那太多了 什麼電動車 也做 這個也做 所以他這個包袱比較重 他不像鴻海 台積電他的經驗 本來他就專 就以這個為主 他其實他很少 他的包袱很少 所以像廣達也一樣 他的產品非常的多 像 iPhone的手機",
+          "matched_keyword": "850",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP678 | 🎮",
+          "channel": "股癌",
+          "date": "2026-07-11",
+          "text": "來 因為大家平常就已經夠忙了 少管理幾個帳號 少處理幾件事其實就差很多 現在下載Sally App 輸入我們的優惠代碼GOAY1 或是透過資訊來的連結 Sally.com-GOAY1 向E-SIM方案850折優惠 希望這次的風災大家都可以全身而退 目前看起來我想應該是還好 但當然我們的Flag比較差太快 因為有時候是什麼外圍環流 才造成一些嚴重的破壞 現階段來看的話 像台北的朋友說 感覺就是一個比較大的下雨天 我們台中的朋友是講說已經出去玩了 那臨口的話沒有辦法出去玩 你感覺那個風災還蠻大的 但相較之下 因為它本來的預期超高 就是我擔心颱風擔心的鑰匙 因為看到大家都說什麼是可能不好 就幾年來最強的颱",
+          "matched_keyword": "850",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        }
+      ],
+      "total_mentions": 2,
+      "sentiment_score": 0.75,
+      "daily": {
+        "2026-06-03": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        },
+        "2026-07-11": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
       "code": "3040",
       "name": "遠見",
       "market": "TW",
@@ -70185,7 +70432,7 @@
       "code": "EA",
       "name": "Electronic Arts",
       "market": "US",
-      "sector": "串流媒體",
+      "sector": "通訊媒體",
       "contexts": [
         {
           "video": "訪談特別篇_產業研究與專職交易生活 ft.田中太郎",
@@ -70425,7 +70672,7 @@
       "code": "BIIB",
       "name": "Biogen",
       "market": "US",
-      "sector": "生技製藥",
+      "sector": "醫療",
       "contexts": [
         {
           "video": "2026/04/16 (四）美股創新高 ，泡沫示警？ASML財報，Tesla AI5晶片設計定案",
@@ -70733,36 +70980,6 @@
           "date": "2026-04-15",
           "text": "然後再來光通也買滿多的，像Lomantin跟Cohirin",
           "matched_keyword": "Lomantin",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": ""
-        }
-      ],
-      "total_mentions": 1,
-      "sentiment_score": 0.5,
-      "daily": {
-        "2026-04-15": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        }
-      }
-    },
-    {
-      "code": "BKNG",
-      "name": "Booking Holdings",
-      "market": "US",
-      "sector": "消費電子",
-      "contexts": [
-        {
-          "video": "EP653 | 🕊️",
-          "channel": "股癌",
-          "date": "2026-04-15",
-          "text": "去搶貨 或者說可能 general purpose 的這些 cpu 不一定拉得到 然後開始有大量的 on base的 custom made cpu 開始要 去去做更多的加單的話 其實除了這些 cpu 相關的一些 lake 一些元件 可能也會都會一起被拉到 那當然說 這裡面有沒有什麼 double booking 一定都是有 可是沒有關係 在第一波就讓記憶體 也是一堆人在囤貨 可是他就是會一直漲 所以有可能 他也會產生一些結構性的問題 也就是 簡單來講 現在在市場裡面的供應是不夠的 那當大家可能在某些特殊的應用上面 需要用到大量的東西 然後有一些新的應用的產生 導致說 哇 我們以前去布的 GPU 跟 ASI",
-          "matched_keyword": "Booking",
           "analysis_source": "whisper",
           "sentiment": "neutral",
           "sentiment_score": 0.5,
@@ -76194,37 +76411,6 @@
       }
     },
     {
-      "code": "00850",
-      "name": "元大臺灣ESG永續",
-      "market": "TW",
-      "sector": "ETF・台股指數",
-      "contexts": [
-        {
-          "video": "EP1111｜多頭沒敗象，6萬點也不算高？產業資訊、基本面價值難衡量，用技術面做平衡？重電、CPO、老AI，都會挑戰新高？ft.K線之神 朱家泓",
-          "channel": "兆華與股惑仔",
-          "date": "2026-06-03",
-          "text": "沒有 鴻海歷史新高 在1999年 我說 對 是啊 因為那個時候 也是一波的電子 跟網路的礦潮 對 所以 像這樣的大牛股 對不對 他們在這一波起來 有機會去挑戰歷史新高 當然有機會 其實我們現在 廣達在850 其實我們的大盤 為什麼現在 能夠這樣子 一直往上衝 是 就是我講的 這些新興的AI的產業 先領頭先購 那這些老AI 因為他們是老AI 所以他們的公司 還有其他的包袱 並不是只有單純在做AI 像鴻海 那太多了 什麼電動車 也做 這個也做 所以他這個包袱比較重 他不像鴻海 台積電他的經驗 本來他就專 就以這個為主 他其實他很少 他的包袱很少 所以像廣達也一樣 他的產品非常的多 像 iPhone的手機",
-          "matched_keyword": "850",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        }
-      ],
-      "total_mentions": 1,
-      "sentiment_score": 1.0,
-      "daily": {
-        "2026-06-03": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 1.0
-        }
-      }
-    },
-    {
       "code": "3085",
       "name": "新零售",
       "market": "TW",
@@ -78365,7 +78551,7 @@
     {
       "sector": "雲端/AI",
       "market": "US",
-      "total_mentions": 168,
+      "total_mentions": 170,
       "stock_codes": [
         "MSFT",
         "GOOGL",
@@ -78539,6 +78725,29 @@
       ]
     },
     {
+      "sector": "電腦及週邊設備業",
+      "market": "TW",
+      "total_mentions": 82,
+      "stock_codes": [
+        "2357",
+        "2376",
+        "3706",
+        "2387",
+        "2353",
+        "2331",
+        "2417",
+        "2352",
+        "2395",
+        "8163",
+        "3712",
+        "9912",
+        "3515",
+        "6928",
+        "3005",
+        "2425"
+      ]
+    },
+    {
       "sector": "金融",
       "market": "US",
       "total_mentions": 82,
@@ -78580,29 +78789,6 @@
       ]
     },
     {
-      "sector": "電腦及週邊設備業",
-      "market": "TW",
-      "total_mentions": 81,
-      "stock_codes": [
-        "2357",
-        "2376",
-        "3706",
-        "2387",
-        "2353",
-        "2331",
-        "2417",
-        "2352",
-        "2395",
-        "8163",
-        "3712",
-        "9912",
-        "3515",
-        "6928",
-        "3005",
-        "2425"
-      ]
-    },
-    {
       "sector": "CPO光通訊",
       "market": "TW",
       "total_mentions": 70,
@@ -78626,7 +78812,7 @@
     {
       "sector": "半導體",
       "market": "US",
-      "total_mentions": 64,
+      "total_mentions": 65,
       "stock_codes": [
         "INTC",
         "ON",
@@ -78669,7 +78855,7 @@
     {
       "sector": "航運",
       "market": "TW",
-      "total_mentions": 62,
+      "total_mentions": 63,
       "stock_codes": [
         "2605",
         "2603",
@@ -78856,6 +79042,18 @@
       ]
     },
     {
+      "sector": "ETF・台股指數",
+      "market": "TW",
+      "total_mentions": 44,
+      "stock_codes": [
+        "0050",
+        "006208",
+        "009816",
+        "00850",
+        "00921"
+      ]
+    },
+    {
       "sector": "組裝代工",
       "market": "TW",
       "total_mentions": 44,
@@ -78865,19 +79063,6 @@
         "2354",
         "2392",
         "4938"
-      ]
-    },
-    {
-      "sector": "零售電商",
-      "market": "US",
-      "total_mentions": 44,
-      "stock_codes": [
-        "CCL",
-        "COST",
-        "WMT",
-        "DASH",
-        "TGT",
-        "DECK"
       ]
     },
     {
@@ -78891,15 +79076,19 @@
       ]
     },
     {
-      "sector": "ETF・台股指數",
-      "market": "TW",
+      "sector": "科技",
+      "market": "US",
       "total_mentions": 43,
       "stock_codes": [
-        "0050",
-        "006208",
-        "009816",
-        "00921",
-        "00850"
+        "SNDK",
+        "GLW",
+        "CDNS",
+        "NOW",
+        "MPWR",
+        "DDOG",
+        "INTU",
+        "TER",
+        "NTAP"
       ]
     },
     {
@@ -78950,19 +79139,6 @@
         "2511",
         "1438",
         "5515"
-      ]
-    },
-    {
-      "sector": "科技",
-      "market": "US",
-      "total_mentions": 37,
-      "stock_codes": [
-        "SNDK",
-        "GLW",
-        "MPWR",
-        "INTU",
-        "TER",
-        "NTAP"
       ]
     },
     {
@@ -79030,12 +79206,17 @@
       ]
     },
     {
-      "sector": "消費電子",
+      "sector": "醫療",
       "market": "US",
       "total_mentions": 33,
       "stock_codes": [
-        "AAPL",
-        "BKNG"
+        "TECH",
+        "UNH",
+        "HUM",
+        "CVS",
+        "BIIB",
+        "CI",
+        "CNC"
       ]
     },
     {
@@ -79050,6 +79231,28 @@
         "00713",
         "00878",
         "00919"
+      ]
+    },
+    {
+      "sector": "消費電子",
+      "market": "US",
+      "total_mentions": 32,
+      "stock_codes": [
+        "AAPL"
+      ]
+    },
+    {
+      "sector": "消費",
+      "market": "US",
+      "total_mentions": 31,
+      "stock_codes": [
+        "CCL",
+        "BKNG",
+        "DASH",
+        "GRMN",
+        "DECK",
+        "NKE",
+        "ABNB"
       ]
     },
     {
@@ -79114,19 +79317,6 @@
       ]
     },
     {
-      "sector": "AI軟體",
-      "market": "US",
-      "total_mentions": 28,
-      "stock_codes": [
-        "AI",
-        "SNOW",
-        "DDOG",
-        "PATH",
-        "PLTR",
-        "MDB"
-      ]
-    },
-    {
       "sector": "金融",
       "market": "TW",
       "total_mentions": 27,
@@ -79140,6 +79330,18 @@
         "2886",
         "2890",
         "00917"
+      ]
+    },
+    {
+      "sector": "AI軟體",
+      "market": "US",
+      "total_mentions": 26,
+      "stock_codes": [
+        "AI",
+        "SNOW",
+        "PATH",
+        "PLTR",
+        "MDB"
       ]
     },
     {
@@ -79224,18 +79426,6 @@
       ]
     },
     {
-      "sector": "生技製藥",
-      "market": "US",
-      "total_mentions": 22,
-      "stock_codes": [
-        "TECH",
-        "MRNA",
-        "BIIB",
-        "LLY",
-        "JNJ"
-      ]
-    },
-    {
       "sector": "網路安全",
       "market": "US",
       "total_mentions": 22,
@@ -79295,13 +79485,14 @@
       ]
     },
     {
-      "sector": "串流媒體",
-      "market": "US",
+      "sector": "網通",
+      "market": "TW",
       "total_mentions": 21,
       "stock_codes": [
-        "NFLX",
-        "DIS",
-        "EA"
+        "2455",
+        "8011",
+        "3025",
+        "6561"
       ]
     },
     {
@@ -79334,14 +79525,36 @@
       ]
     },
     {
-      "sector": "網通",
-      "market": "TW",
+      "sector": "工業",
+      "market": "US",
+      "total_mentions": 21,
+      "stock_codes": [
+        "FAST",
+        "UBER",
+        "MAS",
+        "CAT",
+        "EME",
+        "UPS",
+        "PNR"
+      ]
+    },
+    {
+      "sector": "串流媒體",
+      "market": "US",
       "total_mentions": 20,
       "stock_codes": [
-        "2455",
-        "8011",
-        "3025",
-        "6561"
+        "NFLX",
+        "DIS"
+      ]
+    },
+    {
+      "sector": "零售電商",
+      "market": "US",
+      "total_mentions": 20,
+      "stock_codes": [
+        "COST",
+        "WMT",
+        "TGT"
       ]
     },
     {
@@ -79421,17 +79634,6 @@
       ]
     },
     {
-      "sector": "企業軟體",
-      "market": "US",
-      "total_mentions": 17,
-      "stock_codes": [
-        "ADBE",
-        "IBM",
-        "CDNS",
-        "NOW"
-      ]
-    },
-    {
       "sector": "電腦周邊",
       "market": "TW",
       "total_mentions": 17,
@@ -79445,20 +79647,6 @@
         "3349",
         "3272",
         "3287"
-      ]
-    },
-    {
-      "sector": "工業",
-      "market": "US",
-      "total_mentions": 17,
-      "stock_codes": [
-        "UBER",
-        "FAST",
-        "MAS",
-        "CAT",
-        "EME",
-        "UPS",
-        "PNR"
       ]
     },
     {
@@ -79489,18 +79677,6 @@
         "8080",
         "5508",
         "4113"
-      ]
-    },
-    {
-      "sector": "醫療",
-      "market": "US",
-      "total_mentions": 14,
-      "stock_codes": [
-        "UNH",
-        "HUM",
-        "CVS",
-        "CI",
-        "CNC"
       ]
     },
     {
@@ -79541,6 +79717,15 @@
         "2617",
         "8367",
         "2630"
+      ]
+    },
+    {
+      "sector": "企業軟體",
+      "market": "US",
+      "total_mentions": 13,
+      "stock_codes": [
+        "ADBE",
+        "IBM"
       ]
     },
     {
@@ -79698,17 +79883,6 @@
       ]
     },
     {
-      "sector": "通訊媒體",
-      "market": "US",
-      "total_mentions": 7,
-      "stock_codes": [
-        "CHTR",
-        "T",
-        "VZ",
-        "SATS"
-      ]
-    },
-    {
       "sector": "其他",
       "market": "US",
       "total_mentions": 6,
@@ -79718,6 +79892,17 @@
         "BE",
         "CFLT",
         "BBU"
+      ]
+    },
+    {
+      "sector": "通訊媒體",
+      "market": "US",
+      "total_mentions": 6,
+      "stock_codes": [
+        "T",
+        "VZ",
+        "SATS",
+        "EA"
       ]
     },
     {
@@ -79810,16 +79995,6 @@
       ]
     },
     {
-      "sector": "消費",
-      "market": "US",
-      "total_mentions": 4,
-      "stock_codes": [
-        "GRMN",
-        "NKE",
-        "ABNB"
-      ]
-    },
-    {
       "sector": "文化創意",
       "market": "TW",
       "total_mentions": 4,
@@ -79857,6 +80032,15 @@
       ]
     },
     {
+      "sector": "高速連接",
+      "market": "US",
+      "total_mentions": 3,
+      "stock_codes": [
+        "CHTR",
+        "CRDO"
+      ]
+    },
+    {
       "sector": "電源IC",
       "market": "TW",
       "total_mentions": 3,
@@ -79882,6 +80066,16 @@
         "8440",
         "3551",
         "9955"
+      ]
+    },
+    {
+      "sector": "生技製藥",
+      "market": "US",
+      "total_mentions": 3,
+      "stock_codes": [
+        "MRNA",
+        "LLY",
+        "JNJ"
       ]
     },
     {
@@ -79927,14 +80121,6 @@
       "stock_codes": [
         "6477",
         "6244"
-      ]
-    },
-    {
-      "sector": "高速連接",
-      "market": "US",
-      "total_mentions": 1,
-      "stock_codes": [
-        "CRDO"
       ]
     },
     {
@@ -87119,6 +87305,26 @@
         "SNDK",
         "GOOGL",
         "5007"
+      ],
+      "analysis_source": "whisper",
+      "thumbnail_url": null
+    },
+    {
+      "video_id": "233f8f4d-1bd8-49dd-9744-4867e9012965",
+      "title": "EP678 | 🎮",
+      "channel": "股癌",
+      "date": "2026-07-11",
+      "stocks_found": [
+        "FAST",
+        "2605",
+        "META",
+        "2331",
+        "ADI",
+        "0050",
+        "BKNG",
+        "00850",
+        "1303",
+        "8011"
       ],
       "analysis_source": "whisper",
       "thumbnail_url": null
