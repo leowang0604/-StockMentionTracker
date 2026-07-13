@@ -872,7 +872,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 21,
+    "observations": 22,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -917,7 +917,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-07-12T17:46:53"
+    "updated_at": "2026-07-13T18:24:26"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -4137,5 +4137,170 @@
       "b6667ca0-0271-4a33-8c7f-ec4f219fe02f"
     ],
     "wrong_keyword": "驚人電子"
+  },
+  "一張|8342": {
+    "wrong_keyword": "一張",
+    "correct_code": "8342",
+    "correct_name": "益張",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "730dbd47-b389-44e0-b49f-4a8484dbd2e5"
+    ],
+    "evidence": [
+      {
+        "video_id": "730dbd47-b389-44e0-b49f-4a8484dbd2e5",
+        "channel": "兆華與股惑仔",
+        "date": "2026-07-13",
+        "title": "EP1137｜漲千點氣勢被韓股拖累，基本面和政策緊縮面的戰爭！台積電營收創高，殺中小帳面獲利回吐，放慢一點接，沒損失？ft.題材獵人 林漢偉",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "但是 還是離我當時賣飛的價錢 他還是比那時候高 後面誰來飛太遠 但是這時候要不要減 其實會真的很猶豫 也許只能花一點點的小錢減 要不然你的子彈真的會很快打完 因為它是一個 還算是一個中高價股 對不對 一張 如果你用線股買 還是要八九十萬的公司 所以你的錢會很快就打完 頂多買一點零股 但是買一點零股 你可能會覺得沒什麼意思 就會在這種時間點上面 放慢腳步 拉長戰線 我覺得是很必要的 與其你越接越低 不如你慢慢地接 漲上去的時候 你可能小院探說接的不夠 但這就是運氣跟你的承受度 和你的認知到這邊 像我就是會選擇 那就現在很慢很慢地接 因為他一直在越線附近 一直在機線附近混來混去 那你就慢慢接 搞不"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "8342",
+        "name": "益張",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "2601",
+        "name": "益航",
+        "score": 0.557,
+        "phonetic_similarity": 0.857,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "3567",
+        "name": "逸昌",
+        "score": 0.557,
+        "phonetic_similarity": 0.857,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-07-13T18:41:42"
+  },
+  "間點|8021": {
+    "wrong_keyword": "間點",
+    "correct_code": "8021",
+    "correct_name": "尖點",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "730dbd47-b389-44e0-b49f-4a8484dbd2e5"
+    ],
+    "evidence": [
+      {
+        "video_id": "730dbd47-b389-44e0-b49f-4a8484dbd2e5",
+        "channel": "兆華與股惑仔",
+        "date": "2026-07-13",
+        "title": "EP1137｜漲千點氣勢被韓股拖累，基本面和政策緊縮面的戰爭！台積電營收創高，殺中小帳面獲利回吐，放慢一點接，沒損失？ft.題材獵人 林漢偉",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "分點 或出口年增率 來到22個百分點以上 所以目前來看的話 只要台積電好 我覺得對於台灣電池股 你就不用看得太淡 那反而是 趁著現在台股 很多像剛剛提到的 好的股票跌到季線 跌到半年線的關卡 如果這時間點 你有介入的方法跟工具的話 那下半年只要台股 因為目前蠻多人 還是看台股下半年 有機會到五萬點 所以這個空間拉出來之後 反而你這時間點 敢勇敢佈局的 我覺得都能夠在下半年 交出好的成績單 而且目前來看的話 大家覺得說 那現在旁邊上 會不會資金都跑到台積電去 但我覺得如果說 大家把過去這三年 相關的電池股 跟台積電漲幅 去拉出來看的話會發生到 其實過去這幾年 台積電單一直交出 非常好的成績單 但"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "8021",
+        "name": "尖點",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "2303",
+        "name": "聯電",
+        "score": 0.569,
+        "phonetic_similarity": 0.875,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "6843",
+        "name": "進典",
+        "score": 0.569,
+        "phonetic_similarity": 0.875,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-07-13T18:41:45"
+  },
+  "台大電|2308": {
+    "wrong_keyword": "台大電",
+    "correct_code": "2308",
+    "correct_name": "台達電",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "730dbd47-b389-44e0-b49f-4a8484dbd2e5"
+    ],
+    "evidence": [
+      {
+        "video_id": "730dbd47-b389-44e0-b49f-4a8484dbd2e5",
+        "channel": "兆華與股惑仔",
+        "date": "2026-07-13",
+        "title": "EP1137｜漲千點氣勢被韓股拖累，基本面和政策緊縮面的戰爭！台積電營收創高，殺中小帳面獲利回吐，放慢一點接，沒損失？ft.題材獵人 林漢偉",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "股票 我覺得簡單去講 分成兩塊 就是說 第一個他在未來AI的占比 或說他的一個 相關的所謂的科技的含量 或說他的含金量比較高的 那就是你可以做一個 核心佈局的股票 比方說我們這樣 台灣的三台 台積電 台大電台光電 他們都是當中的代表 那另外一種就是所謂的一個 你現在可以看到 他可能未來半年 或未來一年 他的業績都會很好的股票 那股價遇到拉回的時候 我覺得就可以逢低承接 舉例來講 比方說你可以看到 載板族群 他們就是 未來可能在一年到兩年之內 缺貨缺口的都會非常嚴重 那只說股價現在沒有拉回 但以後遇到拉回 你就可以做一個承接 那又或者是說 像AI相關的一些 重要的核心領主鍵 比方像散熱 像滑軌 "
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2308",
+        "name": "台達電",
+        "score": 0.883,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "2330",
+        "name": "台積電",
+        "score": 0.739,
+        "phonetic_similarity": 0.778,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "8926",
+        "name": "台汽電",
+        "score": 0.739,
+        "phonetic_similarity": 0.778,
+        "text_similarity": 0.667
+      }
+    ],
+    "updated_at": "2026-07-13T18:42:01"
   }
 }
