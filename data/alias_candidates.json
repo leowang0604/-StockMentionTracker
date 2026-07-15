@@ -580,10 +580,19 @@
     "wrong_keyword": "中美金"
   },
   "中美金|5483": {
-    "confidence": "high",
+    "wrong_keyword": "中美金",
     "correct_code": "5483",
     "correct_name": "中美晶",
-    "distinct_videos": 3,
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 4,
+    "distinct_videos": 4,
+    "video_ids": [
+      "0da08e88-66a9-4152-a636-ec02d830e286",
+      "4851850f-b15c-4ee9-a8fe-1c23e6067ac3",
+      "4e6f1716-0c30-47aa-bfd2-9da24b94aa65",
+      "a36a8e7a-4c7d-4870-8a49-6cf276557ff2"
+    ],
     "evidence": [
       {
         "channel": "兆華與股惑仔",
@@ -649,40 +658,53 @@
         "source": "full_video_validator",
         "title": "EP1132｜各種市場傳言大解讀！非農就業好不好，都殺？三星說要砍價載板、國巨發漲價函卻震盪，瓶頸出現？台光電創高啟示！ft.操盤手 黃豐凱",
         "video_id": "4851850f-b15c-4ee9-a8fe-1c23e6067ac3"
+      },
+      {
+        "video_id": "4e6f1716-0c30-47aa-bfd2-9da24b94aa65",
+        "channel": "韭菜畢業班",
+        "date": "2026-07-15",
+        "title": "EP243 | 聯電發光 / 台塑集團",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "strong_sector_match"
+        ],
+        "context": "等一下也可以聊一下 立機電也是自己有出來 再繼續說 他後續的一個佈局是這樣 我們今天這一集也會聊到 所以我們看到 各大族群其實都有所表現 那當然我們 還是有注意到 細金園是有正當休息 那其中我們看到 中美金 他是在細金園 如果大家有看財地圖的話 他氣氛只是 現在是直接飆到最高 那也很明顯的 可以看到他表現 其實是 禮拜三相對最好的 那前幾天表現 其實是 環球金跟合金在做表現 但是我覺得這種東西 就有時候就是這樣 他雖然說今天是這個東西當道 就最強的就是這個東西 但不一定隔天就代表還是他 大家還是要注意一下 那個氣氛值上面的變化 那我覺得 已經漲了兩三天的東西 稍微休息一下 震盪一下 我覺得這也",
+        "override_kind": "contextual",
+        "override_reason": "scoped_context_alias",
+        "original_code": "2891",
+        "original_name": "中信金"
       }
     ],
-    "max_score": 100,
-    "observations": 3,
     "phonetic_candidates": [
       {
         "code": "5483",
         "name": "中美晶",
-        "phonetic_similarity": 0.917,
         "score": 0.829,
+        "phonetic_similarity": 0.917,
         "text_similarity": 0.667
       },
       {
         "code": "2891",
         "name": "中信金",
-        "phonetic_similarity": 0.727,
         "score": 0.706,
+        "phonetic_similarity": 0.727,
         "text_similarity": 0.667
       },
       {
         "code": "4702",
         "name": "中美實",
-        "phonetic_similarity": 0.727,
         "score": 0.706,
+        "phonetic_similarity": 0.727,
         "text_similarity": 0.667
       }
     ],
-    "updated_at": "2026-07-04T18:19:58",
-    "video_ids": [
-      "0da08e88-66a9-4152-a636-ec02d830e286",
-      "4851850f-b15c-4ee9-a8fe-1c23e6067ac3",
-      "a36a8e7a-4c7d-4870-8a49-6cf276557ff2"
-    ],
-    "wrong_keyword": "中美金"
+    "updated_at": "2026-07-15T18:27:41"
   },
   "以聖ky|5243": {
     "confidence": "high",
@@ -872,7 +894,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 23,
+    "observations": 24,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -917,7 +939,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-07-14T17:52:20"
+    "updated_at": "2026-07-15T17:59:15"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -4302,5 +4324,139 @@
       }
     ],
     "updated_at": "2026-07-13T18:42:01"
+  },
+  "滑通|2313": {
+    "wrong_keyword": "滑通",
+    "correct_code": "2313",
+    "correct_name": "華通",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 2,
+    "distinct_videos": 1,
+    "video_ids": [
+      "bbf75380-a0f8-44e6-bd60-2628e7ded65c"
+    ],
+    "evidence": [
+      {
+        "video_id": "bbf75380-a0f8-44e6-bd60-2628e7ded65c",
+        "channel": "兆華與股惑仔",
+        "date": "2026-07-15",
+        "title": "EP1139｜CPI降溫，韓國救市，把千點還給台股，記憶體、載板回血，設備、封測為台積電法說暖身！塑化、散裝能關愛？ft.選股教練 陳唯泰",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "題 就是現在我的這個 情緒上 那時候思維上沒有那麼紅燈 但是他至少也是還是一個黃燈 還沒有到說完全的開綠燈的一個情況 對 但是個股是可以做的 是 對 這邊有蠻多個股 像我們今天看到像是華芳店 像是這個滑通 哇 他們修正的時間都很久了 就很久了 那麼尤其是像 滑通 滑通我想今天很多人關注 這樣怎麼辦 對 那其實他們都有一個共同點 就是他們基本上 股價經過修正 而且有大多數的這個個股 他其實在整個股價的一個 修正的位置點 有些是來到了季線 有些是來到百年線 OK 好 所以在這種情況之下 這種個股 目前我觀察到 今天上漲的個股裡面 蠻多是這一種類型的 所以我覺得對於整個大盤的 我的這邊的一個 頻段就"
+      },
+      {
+        "video_id": "bbf75380-a0f8-44e6-bd60-2628e7ded65c",
+        "channel": "兆華與股惑仔",
+        "date": "2026-07-15",
+        "title": "EP1139｜CPI降溫，韓國救市，把千點還給台股，記憶體、載板回血，設備、封測為台積電法說暖身！塑化、散裝能關愛？ft.選股教練 陳唯泰",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "題 就是現在我的這個 情緒上 那時候思維上沒有那麼紅燈 但是他至少也是還是一個黃燈 還沒有到說完全的開綠燈的一個情況 對 但是個股是可以做的 是 對 這邊有蠻多個股 像我們今天看到像是華芳店 像是這個滑通 哇 他們修正的時間都很久了 就很久了 那麼尤其是像 滑通 滑通我想今天很多人關注 這樣怎麼辦 對 那其實他們都有一個共同點 就是他們基本上 股價經過修正 而且有大多數的這個個股 他其實在整個股價的一個 修正的位置點 有些是來到了季線 有些是來到百年線 OK 好 所以在這種情況之下 這種個股 目前我觀察到 今天上漲的個股裡面 蠻多是這一種類型的 所以我覺得對於整個大盤的 我的這邊的一個 頻段就"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2313",
+        "name": "華通",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "6179",
+        "name": "亞通",
+        "score": 0.639,
+        "phonetic_similarity": 0.714,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "2460",
+        "name": "建通",
+        "score": 0.581,
+        "phonetic_similarity": 0.625,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-07-15T18:41:26"
+  },
+  "影威|1799": {
+    "wrong_keyword": "影威",
+    "correct_code": "1799",
+    "correct_name": "易威",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "bbf75380-a0f8-44e6-bd60-2628e7ded65c"
+    ],
+    "evidence": [
+      {
+        "video_id": "bbf75380-a0f8-44e6-bd60-2628e7ded65c",
+        "channel": "兆華與股惑仔",
+        "date": "2026-07-15",
+        "title": "EP1139｜CPI降溫，韓國救市，把千點還給台股，記憶體、載板回血，設備、封測為台積電法說暖身！塑化、散裝能關愛？ft.選股教練 陳唯泰",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "華對數字很敏感 我是對順子很敏感 然後還有像是這個富士達 富士達他最高的價格 曾經一度二二七五 那麼在近期的 今天收盤價的是一三二零 其實高價的股都腰斬的很多 本益比現在只剩下二十倍左右 那當然還有像影威 這種所謂的測試相關的個股 這些都是之前漲多 然後在最近這一個月 有比較明顯拉回 那我覺得基本面還不錯的公司 那還有一些提早拉回 但提早在低檔做打底的 法案是例如說像是貿聯 貿聯這種個股 提早早就拉回 那麼他在整個的一個股價 其實現在也是將近有 一個多餘的時間在這邊做橫盤 像這種個股我覺得 其實因為他的營收的表現 都還不錯 然後其實股價也經過 兩成甚至兩成以上的修正 像這種個股我覺得 如果是以",
+        "override_kind": "phonetic",
+        "override_reason": "phonetic_top1_needs_review",
+        "original_code": "6515",
+        "original_name": "穎崴",
+        "phonetic_top_score": 0.639,
+        "phonetic_lead": 0.08199999999999996,
+        "needs_review": true
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "1799",
+        "name": "易威",
+        "score": 0.639,
+        "phonetic_similarity": 0.714,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "6515",
+        "name": "穎崴",
+        "score": 0.557,
+        "phonetic_similarity": 0.857,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "3078",
+        "name": "僑威",
+        "score": 0.546,
+        "phonetic_similarity": 0.571,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-07-15T18:41:31"
   }
 }
