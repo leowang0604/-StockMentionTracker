@@ -894,7 +894,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 29,
+    "observations": 30,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -939,7 +939,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-07-20T18:45:50"
+    "updated_at": "2026-07-21T18:03:01"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -3844,10 +3844,17 @@
     "wrong_keyword": "轟害"
   },
   "連發科|2454": {
-    "confidence": "high",
+    "wrong_keyword": "連發科",
     "correct_code": "2454",
     "correct_name": "聯發科",
-    "distinct_videos": 1,
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 2,
+    "distinct_videos": 2,
+    "video_ids": [
+      "6b4cee52-18d9-41ee-b329-db140feca8ba",
+      "6d1e4799-6904-4211-bcdb-192153d0bbbe"
+    ],
     "evidence": [
       {
         "channel": "兆華與股惑仔",
@@ -3865,38 +3872,48 @@
         "source": "full_video_validator",
         "title": "EP1119｜美伊要簽了，油價救了FED開會？今天動能、左側、觀望都有事情做，先買多題材最穩，SpaceX 掛牌，供應鏈還能漲？ft.題材獵人 林漢偉",
         "video_id": "6d1e4799-6904-4211-bcdb-192153d0bbbe"
+      },
+      {
+        "video_id": "6b4cee52-18d9-41ee-b329-db140feca8ba",
+        "channel": "財女珍妮",
+        "date": "2026-07-21",
+        "title": "2026/07/21 晶片股反彈，Nasdaq卻翻黑：AI股票真的止跌了嗎？",
+        "source": "phonetic-discovery",
+        "score": 95,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1"
+        ],
+        "context": "先進封裝 我覺得 台積電他還是扮演了 非常重要的角色嘛 雖然說目前 你沒有確認這個Force晶片 要用誰代工 但是 我覺得 台積電一定在最後 它是可以拿到 這個單的人 那大家第一個 可能又會去想到 連發科 因為連發科之前 是不是有傳出 他去參與了 Google下一代的TPU 可是這個不代表說 他就一定可以直接去取得 這個Google 他最新的Force晶片嘛 因為 這個東西是不一樣的 它是兩個不同的專案 可是 好 那連發科 那我們就先不要把他 當作是收回股 那 如果我們再延伸出去 到其他的 零組件 然後供應鏈裡面 那有哪一些東西 可能會因為 這個新的晶片 而有更好的發展 我覺得記憶體 HBN "
       }
     ],
-    "max_score": 100,
-    "observations": 1,
     "phonetic_candidates": [
       {
         "code": "2454",
         "name": "聯發科",
-        "phonetic_similarity": 1,
         "score": 0.883,
+        "phonetic_similarity": 1.0,
         "text_similarity": 0.667
       },
       {
         "code": "1459",
         "name": "聯發",
-        "phonetic_similarity": 0.75,
         "score": 0.604,
+        "phonetic_similarity": 0.75,
         "text_similarity": 0.333
       },
       {
         "code": "2408",
         "name": "南亞科",
-        "phonetic_similarity": 0.625,
         "score": 0.523,
+        "phonetic_similarity": 0.625,
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-06-16T21:42:56",
-    "video_ids": [
-      "6d1e4799-6904-4211-bcdb-192153d0bbbe"
-    ],
-    "wrong_keyword": "連發科"
+    "updated_at": "2026-07-21T18:32:11"
   },
   "長龍航|2618": {
     "confidence": "high",
