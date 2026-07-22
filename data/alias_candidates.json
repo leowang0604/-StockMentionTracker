@@ -894,7 +894,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 30,
+    "observations": 31,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -939,7 +939,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-07-21T18:03:01"
+    "updated_at": "2026-07-22T17:57:13"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -3232,10 +3232,17 @@
     "wrong_keyword": "立即電"
   },
   "立的|3058": {
-    "confidence": "high",
+    "wrong_keyword": "立的",
     "correct_code": "3058",
     "correct_name": "立德",
-    "distinct_videos": 1,
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 6,
+    "distinct_videos": 2,
+    "video_ids": [
+      "2286dd26-e2e4-4065-af99-0cc4aa165970",
+      "5c726c99-4318-4ac9-80af-cca659cf426a"
+    ],
     "evidence": [
       {
         "channel": "兆華與股惑仔",
@@ -3253,38 +3260,49 @@
         "source": "phonetic-discovery",
         "title": "EP1117｜CPI過關，美伊戰會頓化？1400點V型震盪，決定買賣的依據？下週華許大魔王過後可以放心？ft.股市獅公 李永年",
         "video_id": "2286dd26-e2e4-4065-af99-0cc4aa165970"
+      },
+      {
+        "video_id": "5c726c99-4318-4ac9-80af-cca659cf426a",
+        "channel": "兆華與股惑仔",
+        "date": "2026-07-22",
+        "title": "EP1144｜大跌、大漲之後，外資對被動元件、ABF、CCL、成熟製程產業看法有任何改變嗎？目標價空間更大，買賣的抉擇？ft.外資捕手 不魯",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "就代表說他是逐漸蔓延下來的 沒有錯 可能台積電是第一批 讓大家覺得最沒有問題的漲價 最先進的材料 在AI上面是第一批的漲價 但是當連電也說出 他要漲價的時候 就代表已經擴散出來了 所以漲價這件事情是確立的 而且環遊金也說要漲價 就明明就已經漲了 所以漲價這件事情 不會因為台積電在法說會上面 講了一句說 成熟製程並沒有全面公不應求 他就消失了 大家都無限放大了 那個所有的想像力 哇 這句話很狠喔 真的很狠 連電就直接跌停了 而且當晚的連電ADR就跌10% 台積電講的事情 連電不會不知道 他就只是講說 可能實相裡面 有其中事項沒有 沒有漲 或者是還沒開漲 就是大家有點過度解析 過度分析這一句話 然"
       }
     ],
-    "max_score": 100,
-    "observations": 5,
     "phonetic_candidates": [
       {
         "code": "3058",
         "name": "立德",
-        "phonetic_similarity": 1,
         "score": 0.825,
+        "phonetic_similarity": 1.0,
         "text_similarity": 0.5
       },
       {
-        "code": "2349",
-        "name": "錸德",
-        "phonetic_similarity": 0.8,
-        "score": 0.52,
-        "text_similarity": 0
+        "code": "5344",
+        "name": "立衛",
+        "score": 0.565,
+        "phonetic_similarity": 0.6,
+        "text_similarity": 0.5
       },
       {
-        "code": "4968",
-        "name": "立積",
-        "phonetic_similarity": 0.5,
-        "score": 0.5,
+        "code": "6175",
+        "name": "立敦",
+        "score": 0.565,
+        "phonetic_similarity": 0.6,
         "text_similarity": 0.5
       }
     ],
-    "updated_at": "2026-06-17T21:30:45",
-    "video_ids": [
-      "2286dd26-e2e4-4065-af99-0cc4aa165970"
-    ],
-    "wrong_keyword": "立的"
+    "updated_at": "2026-07-22T18:34:43"
   },
   "細力ky|6415": {
     "confidence": "high",
@@ -4672,5 +4690,148 @@
       }
     ],
     "updated_at": "2026-07-17T18:02:58"
+  },
+  "STM|STM": {
+    "wrong_keyword": "STM",
+    "correct_code": "STM",
+    "correct_name": "STMicroelectronics N.V.",
+    "confidence": "medium",
+    "max_score": 55,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "d18db2fa-bdd7-4c88-91ed-3b37648e0707"
+    ],
+    "evidence": [
+      {
+        "video_id": "d18db2fa-bdd7-4c88-91ed-3b37648e0707",
+        "channel": "股癌",
+        "date": "2026-07-22",
+        "title": "EP681 | 🦉",
+        "source": "full_video_validator",
+        "score": 55,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "stock_context",
+          "code_in_context",
+          "strong_sector_mismatch"
+        ],
+        "context": "的機櫃方案 比起CPU感覺800V 這一塊每股反應的 還沒有很多 是否可以期待下半年 有機會往800V去反應 那以及主要在800V 有特別看好的每股企業嗎 像是Navitas, Wolfsby 然後跟STM 可以啊 其實可以 但是我覺得 可能這個比較難去處理 因為我們現在可能很習慣 我覺得是因為過去的慣性 就是我知道說 可能國際族群在動什麼 然後我們 台灣的去找對應的人 像記憶體或是被動的元件 其實都成立 就會賺錢 那只是像是在公立元件 台灣在噴的時候 每股是沒有噴的 然後每股在更前面 它在噴的時候 台灣是沒有動的 那後面會怎麼樣 老實講不知道 我們只知道說 就像你講的這些 power rel"
+      }
+    ],
+    "phonetic_candidates": [],
+    "updated_at": "2026-07-22T18:17:48"
+  },
+  "台光店|2383": {
+    "wrong_keyword": "台光店",
+    "correct_code": "2383",
+    "correct_name": "台光電",
+    "confidence": "high",
+    "max_score": 97,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "5c726c99-4318-4ac9-80af-cca659cf426a"
+    ],
+    "evidence": [
+      {
+        "video_id": "5c726c99-4318-4ac9-80af-cca659cf426a",
+        "channel": "兆華與股惑仔",
+        "date": "2026-07-22",
+        "title": "EP1144｜大跌、大漲之後，外資對被動元件、ABF、CCL、成熟製程產業看法有任何改變嗎？目標價空間更大，買賣的抉擇？ft.外資捕手 不魯",
+        "source": "full_video_validator",
+        "score": 97,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "中低階的呢 我才剛漲 我漲幅又沒那麼大 我本來就便宜 我從10塊漲到15塊 比人家50塊漲到100塊 當然是我 這個比較好銷售 所以反而像蓮茂就比較瘦 會有這樣一個前提背景 可是我也看到外資 最近對於台光店 台要的報告都還是看多的 都還是看多 其實我剛剛講到 我早一點剛剛講到 那個型態的部分 PCB相關的 這次只有打到月線的 就是ABF是藍店 然後CCL是蓮茂 然後材料是南亞跟台紅 其他都是打到季線的 所以整體來看就知道 這些是比較願意成節的 那只要 就是我們剛剛講到外資 它調整一定是基於基本面的 狀況去調整的 所以這個趨勢只要一直在 它就沒有理由去把它調擦 除非是今天已經到成長不動了 那如果"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2383",
+        "name": "台光電",
+        "score": 0.883,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "4905",
+        "name": "台聯電",
+        "score": 0.604,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "3441",
+        "name": "聯一光電",
+        "score": 0.564,
+        "phonetic_similarity": 0.733,
+        "text_similarity": 0.25
+      }
+    ],
+    "updated_at": "2026-07-22T18:35:00"
+  },
+  "像名|8091": {
+    "wrong_keyword": "像名",
+    "correct_code": "8091",
+    "correct_name": "翔名",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "aa4d76b9-7d61-4da5-bc6a-97d2e7f9e357"
+    ],
+    "evidence": [
+      {
+        "video_id": "aa4d76b9-7d61-4da5-bc6a-97d2e7f9e357",
+        "channel": "財女珍妮",
+        "date": "2026-07-22",
+        "title": "2026/07/22 (三) 油價突破91美元、殖利率升高，晶片股卻暴漲：這次反彈能信嗎？",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "那你就是耐心的等待市場上面 走他原本既定的一個軌道 好 那我們看S&P 500 指數成分股的漲跌幅 也可以看到 昨天表現最好的 應該還是 這種資訊科技 然後半導體類股 那下跌的 包括了我們可以看到 像名聲消費 通訊服務 Google跟Meta 他的表現就會比較差 那你說資金是不是放在防禦股 好像也沒有 因為昨天是比較風險偏好的一個行情 所以之前跌多的 或者是本來就是在風口浪減上的 比如說像Sandisk 比如說像是Western Digital 或者是美光 Inter 然後AMD 他的漲幅都達到了 89%以上 甚至是雙位數的漲幅 這些公司在之前拉回的時候 他的波動其實也是比較大的 再加上我們講"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "8091",
+        "name": "翔名",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "3021",
+        "name": "鴻名",
+        "score": 0.608,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "5878",
+        "name": "台名",
+        "score": 0.536,
+        "phonetic_similarity": 0.556,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-07-22T18:43:57"
   }
 }
