@@ -894,7 +894,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 31,
+    "observations": 32,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -939,7 +939,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-07-22T17:57:13"
+    "updated_at": "2026-07-23T18:03:17"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -1601,10 +1601,17 @@
     "wrong_keyword": "國具"
   },
   "國劇|2327": {
-    "confidence": "high",
+    "wrong_keyword": "國劇",
     "correct_code": "2327",
     "correct_name": "國巨*",
-    "distinct_videos": 1,
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 2,
+    "distinct_videos": 2,
+    "video_ids": [
+      "db32f8c0-a31a-4f2e-b397-1451d7be3f0a",
+      "f167ba05-283e-480b-b8b3-a2d29287692b"
+    ],
     "evidence": [
       {
         "channel": "兆華與股惑仔",
@@ -1622,38 +1629,50 @@
         "source": "full_video_validator",
         "title": "EP1118｜多空交戰已結束？下週華許考驗後，重返基本面，選台積電、被動、CPO、記憶體，台股直奔世界第4大，外資該回頭？ft.雷老闆",
         "video_id": "f167ba05-283e-480b-b8b3-a2d29287692b"
+      },
+      {
+        "video_id": "db32f8c0-a31a-4f2e-b397-1451d7be3f0a",
+        "channel": "韭菜畢業班",
+        "date": "2026-07-23",
+        "title": "EP245 | Google財報與聽眾QA，聯發科ASIC，AMD未來方向，反彈後的想法",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "phonetic_top1",
+          "weak_sector_match",
+          "strong_sector_match"
+        ],
+        "context": "把齒 就是你會覺得說 這個是適合你的局嗎 如果有一些產業 不是你的局的話 你也不要硬去 跟人家臭了鬧 好 最後一個問題就是 請問叔叔怎麼看被動元件 謝謝 好 第一件事情 被動元件 我們一定會去看就是 國劇 那國劇現在已經腰斬了 那第一件事情就是說 他會腰斬下來 他要反彈回去的話 基本上是腰在100% 所以第一個 我覺得以水位的位置來講 他要回去是偏難的 然後 然後第二件事情 就是說現在 我們看到很多被動元件 比較熱門的一些 像華興科 或和盛堂 信長店等等的 他們就很容易進到處置股 然後這個處置股 已經不是五分盤了 是二十分盤 那二十分盤只要已經去的話 其實都會很麻煩 就是要去做任何操作的話 他"
       }
     ],
-    "max_score": 97,
-    "observations": 1,
     "phonetic_candidates": [
       {
         "code": "2327",
         "name": "國巨*",
-        "phonetic_similarity": 1,
         "score": 0.825,
+        "phonetic_similarity": 1.0,
         "text_similarity": 0.5
       },
       {
         "code": "1713",
         "name": "國化",
-        "phonetic_similarity": 0.667,
         "score": 0.608,
+        "phonetic_similarity": 0.667,
         "text_similarity": 0.5
       },
       {
         "code": "6875",
         "name": "國邑*",
-        "phonetic_similarity": 0.6,
         "score": 0.565,
+        "phonetic_similarity": 0.6,
         "text_similarity": 0.5
       }
     ],
-    "updated_at": "2026-06-14T19:28:06",
-    "video_ids": [
-      "f167ba05-283e-480b-b8b3-a2d29287692b"
-    ],
-    "wrong_keyword": "國劇"
+    "updated_at": "2026-07-23T18:14:28"
   },
   "家股文|ORCL": {
     "confidence": "low",
@@ -4833,5 +4852,59 @@
       }
     ],
     "updated_at": "2026-07-22T18:43:57"
+  },
+  "啟紅|6285": {
+    "wrong_keyword": "啟紅",
+    "correct_code": "6285",
+    "correct_name": "啟碁",
+    "confidence": "high",
+    "max_score": 90,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "97a797b8-2184-4875-97e4-42f3c0d603bc"
+    ],
+    "evidence": [
+      {
+        "video_id": "97a797b8-2184-4875-97e4-42f3c0d603bc",
+        "channel": "兆華與股惑仔",
+        "date": "2026-07-23",
+        "title": "EP1145｜受傷沉澱中，google自由現金流轉負，AI賺多花更多、零組件漲價受壓？資本支出慢發酵，靜待股價和基本面平衡點！ft.選股教練 陳唯泰",
+        "source": "full_video_validator",
+        "score": 90,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "stock_context"
+        ],
+        "context": "現 拉回跟修正 然後已經修正過的 像剛剛我們所提到的 像CPU相關的個股 那麼今天像是這個聯亞 3081的聯亞 就是拉到了這個漲停板 而且是連續兩天 都是呈現了一個大漲 那麼其他的 包括像是散熱裡面的啟紅 今天也是有曾經 盤中有看到漲停板的一個價位 他們首先第一個就是 他們要嘛就修正的時間比較久 啟紅來講 他是在今年的4月中建高點 然後就一直拉回修正 但是修正 並沒有說跌得非常的重 而是說他修正的時間 拖得比較久 而且別人都在創高 然後這就顯得散熱 你不是純AI族群嗎 怎麼那麼弱這樣 對 那麼像聯亞的部分 就是比較是屬於 就是一樣是4月中 4月底建高點 但是他這一波修正 就修得比較深一點點 他"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3017",
+        "name": "奇鋐",
+        "score": 0.65,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "1780",
+        "name": "立弘",
+        "score": 0.542,
+        "phonetic_similarity": 0.833,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "2457",
+        "name": "飛宏",
+        "score": 0.464,
+        "phonetic_similarity": 0.714,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-07-23T18:26:36"
   }
 }
