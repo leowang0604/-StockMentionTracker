@@ -894,7 +894,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 32,
+    "observations": 33,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -939,7 +939,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-07-23T18:03:17"
+    "updated_at": "2026-07-24T18:07:43"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -4906,5 +4906,184 @@
       }
     ],
     "updated_at": "2026-07-23T18:26:36"
+  },
+  "巧辛|1563": {
+    "wrong_keyword": "巧辛",
+    "correct_code": "1563",
+    "correct_name": "巧新",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "50452a4f-8c2e-4729-995b-22d1e363e704"
+    ],
+    "evidence": [
+      {
+        "video_id": "50452a4f-8c2e-4729-995b-22d1e363e704",
+        "channel": "兆華與股惑仔",
+        "date": "2026-07-24",
+        "title": "EP1146｜韓國殺招提早上路，油價又破百，要等利空測試跌不動！載板、CCL、矽晶圓看遠都很美，看近會被洗，拉長戰線能收成？ft.操盤手 黃豐凱",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "不要過度的最高 那操作上 基本上 我覺得我們之前來 還是有提到一些 相對比較安全的標定 例如說 我們那時候在講說 銀建股的 新復發 貫德 這些比較穩定 或者是產業裡面 有一些開始跨境半導體業 例如說像巧辛這種 其實他們就相對比較穩定 因為他們矚目的人 相對比較少 但是他們確實產業也有機會 是 好 那還有就是 6月營收 結出來的時候 我們有發現 尤其像現在關稅這件事情 講出來之後 有一些所謂的價值傳產股 它還真的就是 已經有繳出順行的成績單 就是他們在6月的營收 有繳出接近歷史新高 或是近期新高的一個成績單的時候 你會發現這段時間 他們的股價相對也是抗跌的 對 我覺得像 還有像有一些軟體股 也有"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "1563",
+        "name": "巧新",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "2025",
+        "name": "千興",
+        "score": 0.488,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "3057",
+        "name": "喬鼎",
+        "score": 0.488,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-07-24T18:20:48"
+  },
+  "性創電|6680": {
+    "wrong_keyword": "性創電",
+    "correct_code": "6680",
+    "correct_name": "鑫創電子",
+    "confidence": "high",
+    "max_score": 82,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "50452a4f-8c2e-4729-995b-22d1e363e704"
+    ],
+    "evidence": [
+      {
+        "video_id": "50452a4f-8c2e-4729-995b-22d1e363e704",
+        "channel": "兆華與股惑仔",
+        "date": "2026-07-24",
+        "title": "EP1146｜韓國殺招提早上路，油價又破百，要等利空測試跌不動！載板、CCL、矽晶圓看遠都很美，看近會被洗，拉長戰線能收成？ft.操盤手 黃豐凱",
+        "source": "full_video_validator",
+        "score": 82,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "phonetic_top1"
+        ],
+        "context": "報告 然後就調降 但是花旗環球 今天就講說 沒有 他們覺得國劇還是1500 但這樣子 到底要聽誰的 那國劇要開法說了 我覺得這個法說 就蠻值得一聽 國劇或者是其他的 被動元件 例如說另外一個指標股 是性創電 哇 被分盤交易之後 超級弱 這些都可能是 要等他們恢復正常 今天合生堂還是不敵 因為合生堂 算是這一次回當以後 法人比較親愛的 今天也是重挫 所以被動元件 主動元件 都沒有辦法恢復 市場上的順行 反而跌得還是很重 我覺得被動元件 我很早要講 被動元件有兩檔股票 是市場的主流 就是合生堂跟新商店 合生堂跟新商店 小的是他們兩個 所以那時候 他們來講 被動元件的時候 我就特別提說 基本上你要用",
+        "override_kind": "phonetic",
+        "override_reason": "phonetic_top1_needs_review",
+        "original_code": "6173",
+        "original_name": "信昌電",
+        "phonetic_top_score": 0.695,
+        "phonetic_lead": 0.020999999999999908,
+        "needs_review": true
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "6680",
+        "name": "鑫創電子",
+        "score": 0.695,
+        "phonetic_similarity": 0.8,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "6173",
+        "name": "信昌電",
+        "score": 0.674,
+        "phonetic_similarity": 0.857,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "3416",
+        "name": "融程電",
+        "score": 0.581,
+        "phonetic_similarity": 0.714,
+        "text_similarity": 0.333
+      }
+    ],
+    "updated_at": "2026-07-24T18:20:48"
+  },
+  "合生堂|3026": {
+    "wrong_keyword": "合生堂",
+    "correct_code": "3026",
+    "correct_name": "禾伸堂",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "50452a4f-8c2e-4729-995b-22d1e363e704"
+    ],
+    "evidence": [
+      {
+        "video_id": "50452a4f-8c2e-4729-995b-22d1e363e704",
+        "channel": "兆華與股惑仔",
+        "date": "2026-07-24",
+        "title": "EP1146｜韓國殺招提早上路，油價又破百，要等利空測試跌不動！載板、CCL、矽晶圓看遠都很美，看近會被洗，拉長戰線能收成？ft.操盤手 黃豐凱",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "phonetic_top1",
+          "stock_context",
+          "weak_sector_match",
+          "strong_sector_match"
+        ],
+        "context": "0 但這樣子 到底要聽誰的 那國劇要開法說了 我覺得這個法說 就蠻值得一聽 國劇或者是其他的 被動元件 例如說另外一個指標股 是性創電 哇 被分盤交易之後 超級弱 這些都可能是 要等他們恢復正常 今天合生堂還是不敵 因為合生堂 算是這一次回當以後 法人比較親愛的 今天也是重挫 所以被動元件 主動元件 都沒有辦法恢復 市場上的順行 反而跌得還是很重 我覺得被動元件 我很早要講 被動元件有兩檔股票 是市場的主流 就是合生堂跟新商店 合生堂跟新商店 小的是他們兩個 所以那時候 他們來講 被動元件的時候 我就特別提說 基本上你要用 合生堂跟新商店 來去判斷 國劇跟華星科 用他們這兩檔 去做其他的大型的",
+        "override_kind": "phonetic",
+        "override_reason": "clear_phonetic_winner",
+        "original_code": "1618",
+        "original_name": "合機",
+        "phonetic_top_score": 0.708,
+        "phonetic_lead": 0.17799999999999994
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3026",
+        "name": "禾伸堂",
+        "score": 0.708,
+        "phonetic_similarity": 0.909,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "1777",
+        "name": "生泰",
+        "score": 0.53,
+        "phonetic_similarity": 0.636,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "3266",
+        "name": "昇陽",
+        "score": 0.473,
+        "phonetic_similarity": 0.727,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-07-24T18:21:32"
   }
 }
