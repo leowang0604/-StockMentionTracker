@@ -894,7 +894,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 34,
+    "observations": 35,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -939,7 +939,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-07-25T17:45:15"
+    "updated_at": "2026-07-26T17:47:53"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -5085,5 +5085,67 @@
       }
     ],
     "updated_at": "2026-07-24T18:21:32"
+  },
+  "維新|3501": {
+    "wrong_keyword": "維新",
+    "correct_code": "3501",
+    "correct_name": "維熹",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "c3bb35f4-d0cf-4af1-9434-ae2fc3085aa1"
+    ],
+    "evidence": [
+      {
+        "video_id": "c3bb35f4-d0cf-4af1-9434-ae2fc3085aa1",
+        "channel": "投資癮",
+        "date": "2026-07-26",
+        "title": "EP339 投資角色轉換期",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "是鴻海 今年年增率是52.1% 廣達是103% 而惟創是53.9% 櫻葉達是61.6% 仁寶是58.10% 鹽華是73.10% 化汗是57% 技嘉是68.5% 而華碩是55.6% 在觀察名單裡面 只有維新是負9.2% 而其他個股裡面 在六月份的營收 基本上創立的新高 而這部分 其實在過去的股價 都已經稍微反映了 所以目前來說 我不會認為 它是個新的族群 新的亮點 它只是這個禮拜 比較抗點的一個族群 而這個族群 在過去也討論過 主要是圍繞在 第二屆的財報 而其中雖然有些公司 還沒有完整公布 但是他們第二屆的財報 但是他們最晚 是8月10日會公布 而毛利的部分 基本上應該還是很差 但是這個產業 本",
+        "override_kind": "phonetic",
+        "override_reason": "phonetic_top1_needs_review",
+        "original_code": "2377",
+        "original_name": "微星",
+        "phonetic_top_score": 0.717,
+        "phonetic_lead": 0.07799999999999996,
+        "needs_review": true
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3501",
+        "name": "維熹",
+        "score": 0.717,
+        "phonetic_similarity": 0.833,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "6570",
+        "name": "維田",
+        "score": 0.639,
+        "phonetic_similarity": 0.714,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "5202",
+        "name": "力新",
+        "score": 0.608,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-07-26T18:10:49"
   }
 }

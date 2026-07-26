@@ -1,0 +1,117 @@
+[
+  {
+    "keyword": "信大",
+    "pos": 80,
+    "reason": "context_required",
+    "detail": "1109/信大水泥/水泥",
+    "video_id": "f48fd4a9-8ce9-4a4f-abba-bd94e37bb4a1",
+    "channel": "韭菜畢業班",
+    "date": "2026-07-26",
+    "title": "EP246 | 8月財報 / 光通訊"
+  },
+  {
+    "keyword": "統一",
+    "pos": 8232,
+    "reason": "context_required",
+    "detail": "1216/統一企業",
+    "video_id": "f48fd4a9-8ce9-4a4f-abba-bd94e37bb4a1",
+    "channel": "韭菜畢業班",
+    "date": "2026-07-26",
+    "title": "EP246 | 8月財報 / 光通訊"
+  },
+  {
+    "keyword": "力士",
+    "pos": 4649,
+    "reason": "keyword_pattern_override",
+    "detail": null,
+    "video_id": "f48fd4a9-8ce9-4a4f-abba-bd94e37bb4a1",
+    "channel": "韭菜畢業班",
+    "date": "2026-07-26",
+    "title": "EP246 | 8月財報 / 光通訊"
+  },
+  {
+    "keyword": "世界",
+    "pos": 696,
+    "reason": "context_required",
+    "detail": "5347/世界先進",
+    "video_id": "f48fd4a9-8ce9-4a4f-abba-bd94e37bb4a1",
+    "channel": "韭菜畢業班",
+    "date": "2026-07-26",
+    "title": "EP246 | 8月財報 / 光通訊"
+  },
+  {
+    "keyword": "世界",
+    "pos": 8130,
+    "reason": "context_required",
+    "detail": "5347/世界先進",
+    "video_id": "f48fd4a9-8ce9-4a4f-abba-bd94e37bb4a1",
+    "channel": "韭菜畢業班",
+    "date": "2026-07-26",
+    "title": "EP246 | 8月財報 / 光通訊"
+  },
+  {
+    "keyword": "是方",
+    "pos": 4307,
+    "reason": "context_required",
+    "detail": "6561/是方電訊/是方網路",
+    "video_id": "f48fd4a9-8ce9-4a4f-abba-bd94e37bb4a1",
+    "channel": "韭菜畢業班",
+    "date": "2026-07-26",
+    "title": "EP246 | 8月財報 / 光通訊"
+  },
+  {
+    "keyword": "全台",
+    "pos": 11603,
+    "reason": "context_required",
+    "detail": "3038/全台電子/全台科",
+    "video_id": "c3bb35f4-d0cf-4af1-9434-ae2fc3085aa1",
+    "channel": "投資癮",
+    "date": "2026-07-26",
+    "title": "EP339 投資角色轉換期"
+  },
+  {
+    "keyword": "惟創",
+    "reason": "whisper_correction_low_context",
+    "detail": "近音修正缺少股票語境證據: 3231/緯創",
+    "video_id": "c3bb35f4-d0cf-4af1-9434-ae2fc3085aa1",
+    "channel": "投資癮",
+    "date": "2026-07-26",
+    "title": "EP339 投資角色轉換期"
+  },
+  {
+    "keyword": "櫻葉達",
+    "reason": "whisper_correction_rejected",
+    "detail": "統一修正決策拒絕: 櫻葉達->2356/英業達; reason=weak_phonetic_or_context",
+    "video_id": "c3bb35f4-d0cf-4af1-9434-ae2fc3085aa1",
+    "channel": "投資癮",
+    "date": "2026-07-26",
+    "title": "EP339 投資角色轉換期"
+  },
+  {
+    "keyword": "鹽華",
+    "reason": "gemini_extraction_rejected",
+    "detail": "無法對應任何已知股票",
+    "video_id": "c3bb35f4-d0cf-4af1-9434-ae2fc3085aa1",
+    "channel": "投資癮",
+    "date": "2026-07-26",
+    "title": "EP339 投資角色轉換期"
+  },
+  {
+    "keyword": "台湊市保",
+    "reason": "whisper_correction_rejected",
+    "detail": "統一修正決策拒絕: 台湊市保->6505/台塑化; reason=weak_phonetic_or_context",
+    "video_id": "c3bb35f4-d0cf-4af1-9434-ae2fc3085aa1",
+    "channel": "投資癮",
+    "date": "2026-07-26",
+    "title": "EP339 投資角色轉換期"
+  },
+  {
+    "keyword": "Microsoft",
+    "reason": "short_us_identity_missing",
+    "detail": "短英文美股缺少明確股票名/代號/alias 證據: MSFT/Microsoft",
+    "video_id": "c3bb35f4-d0cf-4af1-9434-ae2fc3085aa1",
+    "channel": "投資癮",
+    "date": "2026-07-26",
+    "title": "EP339 投資角色轉換期"
+  }
+]
