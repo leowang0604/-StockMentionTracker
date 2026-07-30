@@ -894,7 +894,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 38,
+    "observations": 39,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -939,7 +939,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-07-29T17:59:30"
+    "updated_at": "2026-07-30T18:05:31"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -2790,10 +2790,17 @@
     "wrong_keyword": "環球菁"
   },
   "環球金|6488": {
-    "confidence": "high",
+    "wrong_keyword": "環球金",
     "correct_code": "6488",
     "correct_name": "環球晶",
-    "distinct_videos": 1,
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 2,
+    "distinct_videos": 2,
+    "video_ids": [
+      "6d1e4799-6904-4211-bcdb-192153d0bbbe",
+      "90933ed5-6756-4e81-a28a-2c96d29c4206"
+    ],
     "evidence": [
       {
         "channel": "兆華與股惑仔",
@@ -2811,38 +2818,49 @@
         "source": "full_video_validator",
         "title": "EP1119｜美伊要簽了，油價救了FED開會？今天動能、左側、觀望都有事情做，先買多題材最穩，SpaceX 掛牌，供應鏈還能漲？ft.題材獵人 林漢偉",
         "video_id": "6d1e4799-6904-4211-bcdb-192153d0bbbe"
+      },
+      {
+        "video_id": "90933ed5-6756-4e81-a28a-2c96d29c4206",
+        "channel": "兆華與股惑仔",
+        "date": "2026-07-30",
+        "title": "EP1150｜市場的理性與不理性？好財報照跌，但資金買單部份股票？融資退、政府護，反攻條件還不夠，可以觀察的事情變很多！ft.選股教練 陳唯泰",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "strong_sector_match"
+        ],
+        "context": "底 有沒有符合我的心意 有時候我要你多 有時候我要你少 這個是市場 很奇妙的共識 對不對 可是市場 現在就是力空就反應 例如說 中國有產DUV 所以美國的設備股 全部都該完蛋 諸如此類 力空就反應 那環球金這個事情是 Google那時候力多不反應嗎 因為Google我有任例 我的一批是大增 就人家說 那業外 我在意的是你的資本支出 幹嘛提高那麼多 別 好 環球金 OK 環球金現在這個東西 對不對 也是算一種業外 它任例它的轉投 值的價值減損 那以後這個減損 也可能再度的回來 回衝回來嘛對不對 我不管 這太嚴重了 這真的太糟了 你怎麼會在市創上面 這個價值減損 再送你一根跌停 這不就是一個很標準"
       }
     ],
-    "max_score": 100,
-    "observations": 1,
     "phonetic_candidates": [
       {
         "code": "6488",
         "name": "環球晶",
-        "phonetic_similarity": 0.909,
         "score": 0.824,
+        "phonetic_similarity": 0.909,
         "text_similarity": 0.667
       },
       {
         "code": "2880",
         "name": "華南金",
-        "phonetic_similarity": 0.7,
         "score": 0.572,
+        "phonetic_similarity": 0.7,
         "text_similarity": 0.333
       },
       {
         "code": "2885",
         "name": "元大金",
-        "phonetic_similarity": 0.6,
         "score": 0.507,
+        "phonetic_similarity": 0.6,
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-06-16T21:42:56",
-    "video_ids": [
-      "6d1e4799-6904-4211-bcdb-192153d0bbbe"
-    ],
-    "wrong_keyword": "環球金"
+    "updated_at": "2026-07-30T18:28:41"
   },
   "略光|8249": {
     "confidence": "high",
@@ -5147,5 +5165,36 @@
       }
     ],
     "updated_at": "2026-07-26T18:10:49"
+  },
+  "INTER|INTC": {
+    "wrong_keyword": "INTER",
+    "correct_code": "INTC",
+    "correct_name": "Intel",
+    "confidence": "medium",
+    "max_score": 65,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "79d5f228-bfee-4dc1-ba87-1f2a4061b904"
+    ],
+    "evidence": [
+      {
+        "video_id": "79d5f228-bfee-4dc1-ba87-1f2a4061b904",
+        "channel": "財女珍妮",
+        "date": "2026-07-30",
+        "title": "AI泡沫，還是槓桿踩踏？Microsoft大漲、Meta重挫：AI燒錢為何兩種命運？｜2026/07/30 (四）",
+        "source": "full_video_validator",
+        "score": 65,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "stock_context"
+        ],
+        "context": "且呢 跌幅直接就是大於大盤指數的跌幅 那很多的公司呢 都已經跌到了 可能年限附近啊 或者是季線以下啊 那我們看回答嘛 就是AID股 昨天也是下跌的將近 要3.6%左右 相比於其他的股票 你看AMDR、INTER 或者是昨天一些設備股 其實呢 它還算跌得比較中位數一點的 你不能說跌得很少 但是呢 它真的相比於其他的公司來說呢 跌幅沒有達到這麼多 那如果今天我們去看 有財報公佈的 大家知道那個泰瑞達就是TERIDYER 他TER這家公司 他昨天也是公佈財報嘛 然後一開盤的時候 是直接大漲了10%左右 因為財報很好嘛 然後表現啊 都是優於市場的預期 結果最後到了尾盤 還是收黑 那昨天呢 還有像是柯雷"
+      }
+    ],
+    "phonetic_candidates": [],
+    "updated_at": "2026-07-30T18:39:46"
   }
 }
