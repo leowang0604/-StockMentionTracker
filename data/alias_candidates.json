@@ -894,7 +894,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 41,
+    "observations": 42,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -939,7 +939,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-08-01T17:46:56"
+    "updated_at": "2026-08-02T17:47:21"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -5196,5 +5196,255 @@
     ],
     "phonetic_candidates": [],
     "updated_at": "2026-07-30T18:39:46"
+  },
+  "行一|4175": {
+    "wrong_keyword": "行一",
+    "correct_code": "4175",
+    "correct_name": "杏一",
+    "confidence": "high",
+    "max_score": 95,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "7361dc64-47a3-4dac-9f62-e701ad685bd7"
+    ],
+    "evidence": [
+      {
+        "video_id": "7361dc64-47a3-4dac-9f62-e701ad685bd7",
+        "channel": "韭菜畢業班",
+        "date": "2026-08-02",
+        "title": "EP248 | 聯發科財報與Google TPU供應鏈，日月光LEAP上修與資本支出，CPO四階段測試設備，費半震盪與台股資金節奏",
+        "source": "phonetic-discovery",
+        "score": 95,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1"
+        ],
+        "context": "學電的一個測試 跟光的測試 一起做一個同步 然後同時 它還需要透過雷射 光纖或是FAU這一塊 光纖陣列 將光訊號 去打到這一個光學影型 那我必須要讓這一個 晶片在高速的運轉下 然後跟Ezik 可以進行一些完整的訊號 還有這種 位元有沒有錯誤率的一個測試 然後如果說確保 OK之後 我才會去出貨給 像是Google 微軟 這些運動大廠 做一個比較好一點的 一個良率 應該說是我要確定 它的良率是OK的 那再講到這一個 SLT的這一塊 就是系統及測試這一塊 的話 我們還是會提到 就是紅進這一家公司 好 所以我們講完了 它總共有分成四個階段 那其實還有一些 第三方檢測的一些實驗室 像是一些材料分析 或是"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "4175",
+        "name": "杏一",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "1216",
+        "name": "統一",
+        "score": 0.608,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "1773",
+        "name": "勝一",
+        "score": 0.546,
+        "phonetic_similarity": 0.571,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-08-02T17:55:33"
+  },
+  "紅康|3587": {
+    "wrong_keyword": "紅康",
+    "correct_code": "3587",
+    "correct_name": "閎康",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "7361dc64-47a3-4dac-9f62-e701ad685bd7"
+    ],
+    "evidence": [
+      {
+        "video_id": "7361dc64-47a3-4dac-9f62-e701ad685bd7",
+        "channel": "韭菜畢業班",
+        "date": "2026-08-02",
+        "title": "EP248 | 聯發科財報與Google TPU供應鏈，日月光LEAP上修與資本支出，CPO四階段測試設備，費半震盪與台股資金節奏",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "這一塊 的話 我們還是會提到 就是紅進這一家公司 好 所以我們講完了 它總共有分成四個階段 那其實還有一些 第三方檢測的一些實驗室 像是一些材料分析 或是可靠度分析 那可能講到 就是範拳 Ether 紅康 這些公司 所以其實我們講到 CPU設備股的時候 我們可以講的是算 我覺得包容萬象 就只是要看你用哪一個角度 去思考這一件事情 那我們再來把重點 我覺得可以回到 日月光身上 那日月光其實這一次 符合我們之前的一個論調 就是說 它其實 大概是有看到全面性的上修 然後理由還是因為 跟台積電的Core 是那邊產能吃緊 然後會有一個Overflow 所以它可以把 NVIDIA Google 還有MD "
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3587",
+        "name": "閎康",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "3332",
+        "name": "幸康",
+        "score": 0.663,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "2002",
+        "name": "中鋼",
+        "score": 0.506,
+        "phonetic_similarity": 0.778,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-08-02T17:55:33"
+  },
+  "陽城|3498": {
+    "wrong_keyword": "陽城",
+    "correct_code": "3498",
+    "correct_name": "陽程",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "7361dc64-47a3-4dac-9f62-e701ad685bd7"
+    ],
+    "evidence": [
+      {
+        "video_id": "7361dc64-47a3-4dac-9f62-e701ad685bd7",
+        "channel": "韭菜畢業班",
+        "date": "2026-08-02",
+        "title": "EP248 | 聯發科財報與Google TPU供應鏈，日月光LEAP上修與資本支出，CPO四階段測試設備，費半震盪與台股資金節奏",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "說像最近的大力光 賢靜光等等的 他們其實都有在做這件事情 然後光偶和那一塊的話 我們就會看到像是 台灣的One Room 然後如果我們講到第二階段 這一個Insertion 2的話 他還有看到 就是像陽城 高明鐵 惠特 這些公司其實他們也都有在做 所以這一個階段的話 比較偏向是他去利用 像台積電的SOIC的這一個技術 像剛剛我們講到的 這一個電子晶片EIC 跟光子晶片PIC 他們去做一個垂直堆疊後 整合成一塊晶圓 所以他的檢測重點在於說 我今天他要同時 導通微弱的光訊號 跟高速的電訊號 那目前的話 他需要的東西就是 自動化的這個量產 量產的這個設備 所以這一個階段 其實Insertion 2的"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3498",
+        "name": "陽程",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "2524",
+        "name": "京城",
+        "score": 0.681,
+        "phonetic_similarity": 0.778,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "2609",
+        "name": "陽明",
+        "score": 0.608,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-08-02T17:55:43"
+  },
+  "士德科技|6735": {
+    "wrong_keyword": "士德科技",
+    "correct_code": "6735",
+    "correct_name": "美達科技",
+    "confidence": "high",
+    "max_score": 97,
+    "observations": 2,
+    "distinct_videos": 1,
+    "video_ids": [
+      "7361dc64-47a3-4dac-9f62-e701ad685bd7"
+    ],
+    "evidence": [
+      {
+        "video_id": "7361dc64-47a3-4dac-9f62-e701ad685bd7",
+        "channel": "韭菜畢業班",
+        "date": "2026-08-02",
+        "title": "EP248 | 聯發科財報與Google TPU供應鏈，日月光LEAP上修與資本支出，CPO四階段測試設備，費半震盪與台股資金節奏",
+        "source": "full_video_validator",
+        "score": 97,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "動化光學探針 講到探針其他 腦袋應該第一個 會想到的應該就會是旺細 然後第二可能就是隱威 焊測或是說晶測 那一或是七七二八 那美國的話可能我們會去想的就是 愛德萬測試 或是說像是Tyred 或是說像是士德科技 這幾家公司 他們其實就可以去 有吃到這一塊餅 所以它利用的東西 其實就是自動化的光學探針 跟檢測晶圓上面的光波島 或是說光學的調變器等這些元件 它能不能正常的去做導光 然後去提早淘汰掉這些不良的用品 好 那到了第二階段的話 也就是光學偶和 大家不知道對於光學偶和是不是 意思之階 我好像之前有聽過 然後第二個的話 就是晶蜜的這個組裝 也是我們俗稱的FAU 哇 講到FAU 其實大家腦袋就可以",
+        "override_kind": "phonetic",
+        "override_reason": "phonetic_top1_needs_review",
+        "original_code": "KLAC",
+        "original_name": "KLA",
+        "phonetic_top_score": 0.608,
+        "phonetic_lead": 0.04300000000000004,
+        "needs_review": true
+      },
+      {
+        "video_id": "7361dc64-47a3-4dac-9f62-e701ad685bd7",
+        "channel": "韭菜畢業班",
+        "date": "2026-08-02",
+        "title": "EP248 | 聯發科財報與Google TPU供應鏈，日月光LEAP上修與資本支出，CPO四階段測試設備，費半震盪與台股資金節奏",
+        "source": "full_video_validator",
+        "score": 97,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "動化光學探針 講到探針其他 腦袋應該第一個 會想到的應該就會是旺細 然後第二可能就是隱威 焊測或是說晶測 那一或是七七二八 那美國的話可能我們會去想的就是 愛德萬測試 或是說像是Tyred 或是說像是士德科技 這幾家公司 他們其實就可以去 有吃到這一塊餅 所以它利用的東西 其實就是自動化的光學探針 跟檢測晶圓上面的光波島 或是說光學的調變器等這些元件 它能不能正常的去做導光 然後去提早淘汰掉這些不良的用品 好 那到了第二階段的話 也就是光學偶和 大家不知道對於光學偶和是不是 意思之階 我好像之前有聽過 然後第二個的話 就是晶蜜的這個組裝 也是我們俗稱的FAU 哇 講到FAU 其實大家腦袋就可以",
+        "override_kind": "phonetic",
+        "override_reason": "phonetic_top1_needs_review",
+        "original_code": "LRCX",
+        "original_name": "Lam Research",
+        "phonetic_top_score": 0.608,
+        "phonetic_lead": 0.04300000000000004,
+        "needs_review": true
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "6735",
+        "name": "美達科技",
+        "score": 0.608,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "7556",
+        "name": "意德士科技",
+        "score": 0.565,
+        "phonetic_similarity": 0.545,
+        "text_similarity": 0.6
+      },
+      {
+        "code": "6763",
+        "name": "綠界科技*",
+        "score": 0.536,
+        "phonetic_similarity": 0.556,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-08-02T17:55:47"
   }
 }
