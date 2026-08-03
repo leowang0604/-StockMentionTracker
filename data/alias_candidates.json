@@ -894,7 +894,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 42,
+    "observations": 43,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -939,7 +939,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-08-02T17:47:21"
+    "updated_at": "2026-08-03T18:30:02"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -5446,5 +5446,60 @@
       }
     ],
     "updated_at": "2026-08-02T17:55:47"
+  },
+  "維穎|6669": {
+    "wrong_keyword": "維穎",
+    "correct_code": "6669",
+    "correct_name": "緯穎",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "78136b17-124c-487a-9a4d-faf3dc95b5e2"
+    ],
+    "evidence": [
+      {
+        "video_id": "78136b17-124c-487a-9a4d-faf3dc95b5e2",
+        "channel": "兆華與股惑仔",
+        "date": "2026-08-03",
+        "title": "EP1152｜亞股我最強，利多會反應，危機解除了嗎？美伊、南韓、日幣一起看，被個股嚇破膽又捨不得放，如何重新調整？ft,題材獵人 林漢偉",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "然後等到航行自然回到高點 我覺得還是有它的難度 因為盤面上 我們剛剛跟大家講的是 有一些股票已經先轉強了 那轉強股票跟誰有關 一個就是基本面好的 對 對 所以你看到今天 我們台股的這個新的 創高股票是維穎 維穎 我剛還有一個說 大家還記得嗎 我一直覺得維穎今年要一變三 因為他出拳 有20塊股率等於是要配兩張股票 我好想參與 但是又一直很毛這樣子 所以就錯過了 對 因為維穎 馬後炮事後論一下 對 因為維穎最近 反而有出報告 就是今年大概有300多塊的EPS 好像目標價就調到滿高的 好像也是萬字頭 對 所以就代表說 我們其實上個禮拜來 我跟大家講過你要怎麼看盤 就是當盤面上 力度會開始反映的時候 "
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "6669",
+        "name": "緯穎",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "8083",
+        "name": "瑞穎",
+        "score": 0.639,
+        "phonetic_similarity": 0.714,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "2377",
+        "name": "微星",
+        "score": 0.557,
+        "phonetic_similarity": 0.857,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-08-03T18:46:06"
   }
 }
