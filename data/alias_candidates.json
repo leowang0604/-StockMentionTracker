@@ -894,7 +894,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 45,
+    "observations": 46,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -939,7 +939,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-08-05T18:13:02"
+    "updated_at": "2026-08-07T17:36:53"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -1887,10 +1887,17 @@
     "wrong_keyword": "富邦電子"
   },
   "川胡|2059": {
-    "confidence": "high",
+    "wrong_keyword": "川胡",
     "correct_code": "2059",
     "correct_name": "川湖",
-    "distinct_videos": 1,
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 3,
+    "distinct_videos": 2,
+    "video_ids": [
+      "26b0eca1-805f-4cbb-865a-308b3842e967",
+      "4702b99f-420e-4629-aa94-137fe3bf638f"
+    ],
     "evidence": [
       {
         "channel": "兆華與股惑仔",
@@ -1925,38 +1932,49 @@
         "source": "full_video_validator",
         "title": "EP1134｜鬼故事繼續，哪一條該怕？三星Q2獲利成長19倍，卻引發韓股大跌？熱門股全軍覆沒，6月營收出爐，檢驗該買該賣！ft.AI達人 蔡明翰",
         "video_id": "4702b99f-420e-4629-aa94-137fe3bf638f"
+      },
+      {
+        "video_id": "26b0eca1-805f-4cbb-865a-308b3842e967",
+        "channel": "兆華與股惑仔",
+        "date": "2026-08-07",
+        "title": "EP1156｜7月營收、半年報密集出爐，好成績卻跌，短線大戶趁機離場？川湖是AI的信任感！觀察投信順向股，回檔接就不怕？ft.操盤手 黃豐凱",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "川胡已經 率先登上萬元的寶座 現在已經是老二的位階 老二的位階 我覺得其實這樣也還蠻好的 就告訴你說 AI伺服器的零組件裡面 其實還是有廠商 獲利是很好的 不像大家想說 會來有這個殺價競爭的一個部分 川胡 昨天在錄這個理財單秀之前 我們在捧那句說 川胡這也太誇張了 就搞得自己是一個IP股人 對 就是毛利率8幾% 做華鬼 就做華鬼 可能大家對於AI用的華鬼 沒有辦法想像 因為我們一想到華鬼 就抽地 華鬼 這樣我也講得也太low 可是真的以前的感受就是 川胡那時候長到 以前就已經覺得很誇張了 就還長到1萬 還長到那麼高的毛利率 所以我覺得很好的一件事情是 雖然今天可能沒有族群 新的領頭 因為華鬼領"
       }
     ],
-    "max_score": 100,
-    "observations": 2,
     "phonetic_candidates": [
       {
         "code": "2059",
         "name": "川湖",
-        "phonetic_similarity": 1,
         "score": 0.825,
+        "phonetic_similarity": 1.0,
         "text_similarity": 0.5
       },
       {
         "code": "1516",
         "name": "川飛",
-        "phonetic_similarity": 0.625,
         "score": 0.581,
+        "phonetic_similarity": 0.625,
         "text_similarity": 0.5
       },
       {
         "code": "1595",
         "name": "川寶",
-        "phonetic_similarity": 0.625,
         "score": 0.581,
+        "phonetic_similarity": 0.625,
         "text_similarity": 0.5
       }
     ],
-    "updated_at": "2026-07-07T19:15:09",
-    "video_ids": [
-      "4702b99f-420e-4629-aa94-137fe3bf638f"
-    ],
-    "wrong_keyword": "川胡"
+    "updated_at": "2026-08-07T17:55:34"
   },
   "廣宏科|3287": {
     "confidence": "high",
@@ -5501,5 +5519,60 @@
       }
     ],
     "updated_at": "2026-08-03T18:46:06"
+  },
+  "盛鴻|8403": {
+    "wrong_keyword": "盛鴻",
+    "correct_code": "8403",
+    "correct_name": "盛弘",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "e4c5954a-4816-4ca4-a6cb-f1796deaaa2f"
+    ],
+    "evidence": [
+      {
+        "video_id": "e4c5954a-4816-4ca4-a6cb-f1796deaaa2f",
+        "channel": "韭菜畢業班",
+        "date": "2026-08-06",
+        "title": "EP249 | 美國限制中國後，AI股還有第二波行情嗎？",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "一定會跟股價呈現一個正比 但是只是要跟大家講說 當行情好的時候 我覺得市場買大的東西 應該還會是在產業面那一塊 好 那再來就是說 如果今天講到PCB的話 另外一個我們會去看的 大家也可以去看 可能就是盛鴻科技 因為以NVIDIA這一家公司來看的話 PCB的占比 盛鴻科技占了大約45%附近 那CCL的這一塊 通波基板這一塊的話 台光電站的占比 是有三成五到四成 所以光這兩家公司 其實對我來說 它就是一個很好去觀察的 很重要的一個占比 當然還有像是盛鴻科技 這一家公司在未來 也有機會可以跨到10%的 這樣子的一個市占率 所以其實就是這三家 它 Maybe我們就可以看到 接下來的PCB的發展 或CC"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "8403",
+        "name": "盛弘",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "3324",
+        "name": "雙鴻",
+        "score": 0.695,
+        "phonetic_similarity": 0.8,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "2014",
+        "name": "中鴻",
+        "score": 0.681,
+        "phonetic_similarity": 0.778,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-08-07T17:44:16"
   }
 }
