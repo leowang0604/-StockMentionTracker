@@ -585,12 +585,13 @@
     "correct_name": "中美晶",
     "confidence": "high",
     "max_score": 100,
-    "observations": 4,
-    "distinct_videos": 4,
+    "observations": 5,
+    "distinct_videos": 5,
     "video_ids": [
       "0da08e88-66a9-4152-a636-ec02d830e286",
       "4851850f-b15c-4ee9-a8fe-1c23e6067ac3",
       "4e6f1716-0c30-47aa-bfd2-9da24b94aa65",
+      "82fbcab9-7810-413e-92c7-d6bbc4b64484",
       "a36a8e7a-4c7d-4870-8a49-6cf276557ff2"
     ],
     "evidence": [
@@ -679,6 +680,28 @@
         "override_reason": "scoped_context_alias",
         "original_code": "2891",
         "original_name": "中信金"
+      },
+      {
+        "video_id": "82fbcab9-7810-413e-92c7-d6bbc4b64484",
+        "channel": "韭菜畢業班",
+        "date": "2026-08-09",
+        "title": "EP250 | 處置股規則大改，熱門股會更好做嗎 ？",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context",
+          "strong_sector_match"
+        ],
+        "context": "個消息而受到太大幅度的影響 那因為主要原因 我們其實就分成幾個層面 來跟大家聊一下好了 以台灣的太陽來講 我們可能會去看就是帽迪 但是帽迪他 其實在2010年就已經成立了美國的職公司了 然後再來就像是中美金跟聯合再生 其實在2026年的7月21日的時候 也有宣佈他們會去在美國投資太陽的模組廠 所以在地的採購這些補貼他也會遲到 同時也是可以 就是之後如果出現這種消息的話 並不會影響著太多 另外一件事就我們可以看到 像環球金 他也在美國投資了7.5B美元 去設置一個矽金原廠 所以這個也其實也就完全符合 現在美國本土產能要求這件事情 那其實在這樣子的狀況之下 不需要繳這一個232關稅的前提之下 我覺",
+        "override_kind": "contextual",
+        "override_reason": "scoped_context_alias",
+        "original_code": "2891",
+        "original_name": "中信金"
       }
     ],
     "phonetic_candidates": [
@@ -704,7 +727,7 @@
         "text_similarity": 0.667
       }
     ],
-    "updated_at": "2026-07-15T18:27:41"
+    "updated_at": "2026-08-09T17:25:11"
   },
   "以聖ky|5243": {
     "confidence": "high",
@@ -894,7 +917,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 47,
+    "observations": 48,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -939,7 +962,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-08-08T17:16:30"
+    "updated_at": "2026-08-09T17:17:19"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -5574,5 +5597,59 @@
       }
     ],
     "updated_at": "2026-08-07T17:44:16"
+  },
+  "竹生科技|6739": {
+    "wrong_keyword": "竹生科技",
+    "correct_code": "6739",
+    "correct_name": "竹陞科技",
+    "confidence": "high",
+    "max_score": 95,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "82fbcab9-7810-413e-92c7-d6bbc4b64484"
+    ],
+    "evidence": [
+      {
+        "video_id": "82fbcab9-7810-413e-92c7-d6bbc4b64484",
+        "channel": "韭菜畢業班",
+        "date": "2026-08-09",
+        "title": "EP250 | 處置股規則大改，熱門股會更好做嗎 ？",
+        "source": "phonetic-discovery",
+        "score": 95,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1"
+        ],
+        "context": "然後在F這邊跟大家講一下 就是處置股 有一些東西其實已經會 提前的解除處置 那是也就是說下週 你們應該就會看到 像是台盛科衛華科 或說像是大量核酸糖愛普 那上櫃的有像是中碳針 花星光 環宇 光潔合金 竹生科技 創新服務 其實都是我們很常聽到的東西 譬如像創新服務的話 可能就會看的就是TGV 然後愛普的話 當然就是IPD 細電容那一塊 那環宇的話就光通那一塊 合金的話可能就是細金圓那一塊 然後大量的話 可能就跟PCB那一塊 所以其實就是熱門的東西 其實都是有包在這裡面 然後一次處置出來之後 我們會去看一下 它在下週的反應 有沒有表現的是往上來往下 就可以看一下市場上面的 熱度是想要往哪個方向去走"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "6739",
+        "name": "竹陞科技",
+        "score": 0.912,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.75
+      },
+      {
+        "code": "7768",
+        "name": "頌勝科技",
+        "score": 0.625,
+        "phonetic_similarity": 0.692,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "6791",
+        "name": "虎門科技",
+        "score": 0.608,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-08-09T17:24:53"
   }
 }
