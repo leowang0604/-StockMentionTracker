@@ -917,7 +917,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 48,
+    "observations": 49,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -962,7 +962,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-08-09T17:17:19"
+    "updated_at": "2026-08-10T17:40:18"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -5651,5 +5651,231 @@
       }
     ],
     "updated_at": "2026-08-09T17:24:53"
+  },
+  "為剛|3260": {
+    "wrong_keyword": "為剛",
+    "correct_code": "3260",
+    "correct_name": "威剛",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "a5fce8a0-50df-40c6-9a67-e2b225fe00b6"
+    ],
+    "evidence": [
+      {
+        "video_id": "a5fce8a0-50df-40c6-9a67-e2b225fe00b6",
+        "channel": "兆華與股惑仔",
+        "date": "2026-08-10",
+        "title": "EP1157｜漲回45000點但意猶未盡？股價跌50%，要漲100%才回得來！別管多空交戰、彈完沒，趁盤轉穩，快把配置做起來！ft.題材獵人 林漢偉",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "因為外資上半年賣了1.5兆 那下半年我說不多 你回補個一兆就好了 那台股當然創新高 就會有很大的空間 所以這時候 我覺得大家就會去想說 那到底ETF該怎麼樣配置 那我覺得其實也是一個 很好檢視點 因為剛好台股 從上上禮拜四 見到波段地點 經過7天 那有很多強制股 7天可能股價 是漲了6 70%都有 像那個蓮芽 然後蓮君 然後還有這個什麼 相關的這個蓮帽 對 蓮帽啊 他也是創新高 蓮帽創新高 因為外資也是生品 歷史新高 其實我今天看到好多外資在生品 對 好猛 就是我的意思是 在跌的時候 你看到有些外資 我那時候還念了一下對不對 降兩趴目標價 也拿出來講 還大型外資 可是最近的話 大家是生品的報告"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3260",
+        "name": "威剛",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "2231",
+        "name": "為升",
+        "score": 0.581,
+        "phonetic_similarity": 0.625,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "1203",
+        "name": "味王",
+        "score": 0.557,
+        "phonetic_similarity": 0.857,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-08-10T17:57:32"
+  },
+  "蓮芽|3081": {
+    "wrong_keyword": "蓮芽",
+    "correct_code": "3081",
+    "correct_name": "聯亞",
+    "confidence": "high",
+    "max_score": 97,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "a5fce8a0-50df-40c6-9a67-e2b225fe00b6"
+    ],
+    "evidence": [
+      {
+        "video_id": "a5fce8a0-50df-40c6-9a67-e2b225fe00b6",
+        "channel": "兆華與股惑仔",
+        "date": "2026-08-10",
+        "title": "EP1157｜漲回45000點但意猶未盡？股價跌50%，要漲100%才回得來！別管多空交戰、彈完沒，趁盤轉穩，快把配置做起來！ft.題材獵人 林漢偉",
+        "source": "full_video_validator",
+        "score": 97,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "這時候 我覺得大家就會去想說 那到底ETF該怎麼樣配置 那我覺得其實也是一個 很好檢視點 因為剛好台股 從上上禮拜四 見到波段地點 經過7天 那有很多強制股 7天可能股價 是漲了6 70%都有 像那個蓮芽 然後蓮君 然後還有這個什麼 相關的這個蓮帽 對 蓮帽啊 他也是創新高 蓮帽創新高 因為外資也是生品 歷史新高 其實我今天看到好多外資在生品 對 好猛 就是我的意思是 在跌的時候 你看到有些外資 我那時候還念了一下對不對 降兩趴目標價 也拿出來講 還大型外資 可是最近的話 大家是生品的報告非常多 對 所以我覺得 其實經過這7天 大家就是從原本金魂未定 現在慢慢可以回來 檢視你手上的石股 那我覺"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3081",
+        "name": "聯亞",
+        "score": 0.65,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "1459",
+        "name": "聯發",
+        "score": 0.542,
+        "phonetic_similarity": 0.833,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "2482",
+        "name": "連宇",
+        "score": 0.542,
+        "phonetic_similarity": 0.833,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-08-10T17:57:49"
+  },
+  "蓮君|3450": {
+    "wrong_keyword": "蓮君",
+    "correct_code": "3450",
+    "correct_name": "聯鈞",
+    "confidence": "high",
+    "max_score": 97,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "a5fce8a0-50df-40c6-9a67-e2b225fe00b6"
+    ],
+    "evidence": [
+      {
+        "video_id": "a5fce8a0-50df-40c6-9a67-e2b225fe00b6",
+        "channel": "兆華與股惑仔",
+        "date": "2026-08-10",
+        "title": "EP1157｜漲回45000點但意猶未盡？股價跌50%，要漲100%才回得來！別管多空交戰、彈完沒，趁盤轉穩，快把配置做起來！ft.題材獵人 林漢偉",
+        "source": "full_video_validator",
+        "score": 97,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "覺得大家就會去想說 那到底ETF該怎麼樣配置 那我覺得其實也是一個 很好檢視點 因為剛好台股 從上上禮拜四 見到波段地點 經過7天 那有很多強制股 7天可能股價 是漲了6 70%都有 像那個蓮芽 然後蓮君 然後還有這個什麼 相關的這個蓮帽 對 蓮帽啊 他也是創新高 蓮帽創新高 因為外資也是生品 歷史新高 其實我今天看到好多外資在生品 對 好猛 就是我的意思是 在跌的時候 你看到有些外資 我那時候還念了一下對不對 降兩趴目標價 也拿出來講 還大型外資 可是最近的話 大家是生品的報告非常多 對 所以我覺得 其實經過這7天 大家就是從原本金魂未定 現在慢慢可以回來 檢視你手上的石股 那我覺得檢視手上",
+        "override_kind": "phonetic",
+        "override_reason": "clear_phonetic_winner",
+        "original_code": "2303",
+        "original_name": "聯電",
+        "phonetic_top_score": 0.65,
+        "phonetic_lead": 0.186
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3450",
+        "name": "聯鈞",
+        "score": 0.65,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "1229",
+        "name": "聯華",
+        "score": 0.464,
+        "phonetic_similarity": 0.714,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "1806",
+        "name": "冠軍",
+        "score": 0.464,
+        "phonetic_similarity": 0.714,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-08-10T17:57:49"
+  },
+  "維剛|3260": {
+    "wrong_keyword": "維剛",
+    "correct_code": "3260",
+    "correct_name": "威剛",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "a5fce8a0-50df-40c6-9a67-e2b225fe00b6"
+    ],
+    "evidence": [
+      {
+        "video_id": "a5fce8a0-50df-40c6-9a67-e2b225fe00b6",
+        "channel": "兆華與股惑仔",
+        "date": "2026-08-10",
+        "title": "EP1157｜漲回45000點但意猶未盡？股價跌50%，要漲100%才回得來！別管多空交戰、彈完沒，趁盤轉穩，快把配置做起來！ft.題材獵人 林漢偉",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "低價庫存用完之後 如果明年漲價 我們看到開始放緩了 會不會造成毛利率的壓力 那我覺得這一點 你可以看到其他模組廠 剛剛提到像創建 像雨災 其實他們的第二季的EPS 都是單季W成長 但是在所謂的實權 在維剛 你會發現到他們第二季的EPS 成長幅度明顯在放緩 那代表說第一個 他們可能吸收 第二件事情 他們第一季普估省的速度不夠快 所以你看到維剛毛利率是三率三降 是 我覺得這些都是模組廠 我覺得看起來比較大壓力的來源 所以整體上來看 我會覺得 如果以記憶體來看 你真的要做一個到年底的規劃 那有拉回 我覺得大家應該首選 可能還是以這個記憶體製造廠為主 就難免 雖然我們講了很久這樣的想法 就是記憶體的話"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3260",
+        "name": "威剛",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "1203",
+        "name": "味王",
+        "score": 0.557,
+        "phonetic_similarity": 0.857,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "5608",
+        "name": "四維航",
+        "score": 0.55,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.333
+      }
+    ],
+    "updated_at": "2026-08-10T17:57:50"
   }
 }
