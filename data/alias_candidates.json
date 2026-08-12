@@ -917,7 +917,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 50,
+    "observations": 51,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -962,7 +962,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-08-11T17:45:10"
+    "updated_at": "2026-08-12T17:45:42"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -1404,10 +1404,17 @@
     "wrong_keyword": "台慶科"
   },
   "台盛科|3532": {
-    "confidence": "high",
+    "wrong_keyword": "台盛科",
     "correct_code": "3532",
     "correct_name": "台勝科",
-    "distinct_videos": 1,
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 3,
+    "distinct_videos": 2,
+    "video_ids": [
+      "6d1e4799-6904-4211-bcdb-192153d0bbbe",
+      "d86bbd8d-81f8-43eb-ade0-805bcbe02c1d"
+    ],
     "evidence": [
       {
         "channel": "兆華與股惑仔",
@@ -1425,38 +1432,50 @@
         "source": "full_video_validator",
         "title": "EP1119｜美伊要簽了，油價救了FED開會？今天動能、左側、觀望都有事情做，先買多題材最穩，SpaceX 掛牌，供應鏈還能漲？ft.題材獵人 林漢偉",
         "video_id": "6d1e4799-6904-4211-bcdb-192153d0bbbe"
+      },
+      {
+        "video_id": "d86bbd8d-81f8-43eb-ade0-805bcbe02c1d",
+        "channel": "兆華與股惑仔",
+        "date": "2026-08-12",
+        "title": "EP1159｜美超微、流明財報依舊好，晚上CPI是反彈考驗站？載板、矽晶圓、記憶體、被動選秀，誰是狀元籤？ft.型男股神 陳威良",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context",
+          "strong_sector_match"
+        ],
+        "context": "可是如果以所謂 大家都漲了 我想要買比較這個合理便宜 還比較偏談少的漲價題材 細金園你會怎麼看 如果這一波因為先抓反彈的話 可能我心目中的選擇順位 重新洗牌 怎麼樣 我們直接給 第一名應該會是先看 台盛科 喔 好 你現在是在細金園裡面做牌名 細金園裡面 那第二名的話 還是環球金 那第三名才是合金 為什麼 這個邏輯是這樣 如果大家先看今天的股價 雖然說好像收牌沒差別 都漲停 不過從開盤的氣勢 有差別的 其實今天是台盛科領著 合金 還有環球金 一起工賞停的 好 所以台盛科是先漲停的 對 那可能這個多少 多少根 就七月營收的表現有關 那整體來看 因為累計前七個月的營收 的年增率來說的話 台盛科是將近"
       }
     ],
-    "max_score": 100,
-    "observations": 2,
     "phonetic_candidates": [
       {
         "code": "3532",
         "name": "台勝科",
-        "phonetic_similarity": 1,
         "score": 0.883,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "3265",
+        "name": "台星科",
+        "score": 0.688,
+        "phonetic_similarity": 0.7,
         "text_similarity": 0.667
       },
       {
         "code": "6464",
         "name": "台數科",
-        "phonetic_similarity": 0.7,
         "score": 0.688,
-        "text_similarity": 0.667
-      },
-      {
-        "code": "4551",
-        "name": "智伸科",
         "phonetic_similarity": 0.7,
-        "score": 0.572,
-        "text_similarity": 0.333
+        "text_similarity": 0.667
       }
     ],
-    "updated_at": "2026-06-17T21:00:12",
-    "video_ids": [
-      "6d1e4799-6904-4211-bcdb-192153d0bbbe"
-    ],
-    "wrong_keyword": "台盛科"
+    "updated_at": "2026-08-12T18:18:59"
   },
   "合金加金|5880": {
     "confidence": "high",
@@ -1569,10 +1588,17 @@
     "wrong_keyword": "同一"
   },
   "國具|2327": {
-    "confidence": "high",
+    "wrong_keyword": "國具",
     "correct_code": "2327",
     "correct_name": "國巨*",
-    "distinct_videos": 1,
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 2,
+    "distinct_videos": 2,
+    "video_ids": [
+      "2286dd26-e2e4-4065-af99-0cc4aa165970",
+      "d86bbd8d-81f8-43eb-ade0-805bcbe02c1d"
+    ],
     "evidence": [
       {
         "channel": "兆華與股惑仔",
@@ -1590,38 +1616,57 @@
         "source": "full_video_validator",
         "title": "EP1117｜CPI過關，美伊戰會頓化？1400點V型震盪，決定買賣的依據？下週華許大魔王過後可以放心？ft.股市獅公 李永年",
         "video_id": "2286dd26-e2e4-4065-af99-0cc4aa165970"
+      },
+      {
+        "video_id": "d86bbd8d-81f8-43eb-ade0-805bcbe02c1d",
+        "channel": "兆華與股惑仔",
+        "date": "2026-08-12",
+        "title": "EP1159｜美超微、流明財報依舊好，晚上CPI是反彈考驗站？載板、矽晶圓、記憶體、被動選秀，誰是狀元籤？ft.型男股神 陳威良",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "phonetic_top1",
+          "stock_context",
+          "weak_sector_match",
+          "strong_sector_match"
+        ],
+        "context": "漏掉誰的話 因為我把整個被動元件 大廠小廠都掃過一輪 發現如果以位季來看 站上季線的第一個 就3026合身堂 第二個6834天鵝科技 這個是以薄末 厚末店主為主的公司 相對來看 其他的被動元件 尤其像國具或華辛科 凱美 新商店等等 這些目前來看的話 都還在努力的反攻當中 不過還沒有來到季線的一個位階 所以這個其實就開始在反映 就是族群的一個分化 再來譬如說以載版來講的話 今年8046 南電出關 直接就是亮燈漲停版 而且看起來 他大概就是 再漲個一兩根紅K 可能就可以回到歷史的最高附近了 因為今天已經站上1200 但是昨天開法說會的 495把真頂ky 今天卻是大跌了超過三爬 所以這代表就是說 現",
+        "override_kind": "phonetic",
+        "override_reason": "clear_phonetic_winner",
+        "original_code": "1312",
+        "original_name": "國喬",
+        "phonetic_top_score": 0.825,
+        "phonetic_lead": 0.21699999999999997
       }
     ],
-    "max_score": 97,
-    "observations": 1,
     "phonetic_candidates": [
       {
         "code": "2327",
         "name": "國巨*",
-        "phonetic_similarity": 1,
         "score": 0.825,
+        "phonetic_similarity": 1.0,
         "text_similarity": 0.5
       },
       {
         "code": "1713",
         "name": "國化",
-        "phonetic_similarity": 0.667,
         "score": 0.608,
+        "phonetic_similarity": 0.667,
         "text_similarity": 0.5
       },
       {
-        "code": "2406",
-        "name": "國碩",
-        "phonetic_similarity": 0.571,
-        "score": 0.546,
+        "code": "6875",
+        "name": "國邑*",
+        "score": 0.565,
+        "phonetic_similarity": 0.6,
         "text_similarity": 0.5
       }
     ],
-    "updated_at": "2026-06-17T21:30:51",
-    "video_ids": [
-      "2286dd26-e2e4-4065-af99-0cc4aa165970"
-    ],
-    "wrong_keyword": "國具"
+    "updated_at": "2026-08-12T18:18:58"
   },
   "國劇|2327": {
     "wrong_keyword": "國劇",
@@ -4599,11 +4644,12 @@
     "correct_code": "4958",
     "correct_name": "臻鼎-KY",
     "confidence": "high",
-    "max_score": 70,
-    "observations": 1,
-    "distinct_videos": 1,
+    "max_score": 85,
+    "observations": 2,
+    "distinct_videos": 2,
     "video_ids": [
-      "a275583d-746e-416d-a7ca-7bf69a134775"
+      "a275583d-746e-416d-a7ca-7bf69a134775",
+      "d86bbd8d-81f8-43eb-ade0-805bcbe02c1d"
     ],
     "evidence": [
       {
@@ -4620,6 +4666,28 @@
           "phonetic_top1"
         ],
         "context": "對不對 換一點現金回來 但不代表全部賣光光 變成超級低持股 就是說沒關係 那我就等你到哪裡哪裡 就像剛剛講的 可能大家會覺得 以南亞科來說 因為我比較不做記憶體 我舉別的例子來好了 假設 假設大家買真頂ky好了 覺得說怎麼可能 兩百多漲到六百多 所以等他回到兩百多 我再買 真頂ky回到兩百多 我覺得大家都不敢碰栽板的 對啊 現在五百多看就不敢 然後以緊縮 大家知道我緊縮成本很低 可是最近也跌到 我覺得有點感覺 因為畢竟你會看到他 從這個可能我買的時候 一百塊好了 曾經要到一千塊 然後回來 那你就真的吐掉了 很大一段的獲利 可是如果你說 今天頂酌又回到一百塊 那趙桓你不是應該O in而不會 第一",
+        "override_kind": "explicit_ky",
+        "override_reason": "official_ky_identity_with_clear_phonetic_core",
+        "original_code": "4958",
+        "original_name": "臻鼎-KY",
+        "phonetic_top_score": 0.8,
+        "phonetic_lead": 0.30000000000000004
+      },
+      {
+        "video_id": "d86bbd8d-81f8-43eb-ade0-805bcbe02c1d",
+        "channel": "兆華與股惑仔",
+        "date": "2026-08-12",
+        "title": "EP1159｜美超微、流明財報依舊好，晚上CPI是反彈考驗站？載板、矽晶圓、記憶體、被動選秀，誰是狀元籤？ft.型男股神 陳威良",
+        "source": "explicit-ky-discovery",
+        "score": 85,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "再來譬如說以載版來講的話 今年8046 南電出關 直接就是亮燈漲停版 而且看起來 他大概就是 再漲個一兩根紅K 可能就可以回到歷史的最高附近了 因為今天已經站上1200 但是昨天開法說會的 495把真頂ky 今天卻是大跌了超過三爬 所以這代表就是說 現在做股票已經不太像 上半年那種氛圍 雨露均沾 雞犬生天 好像載版其實 說起來也不過只有四檔股票 也可以如此的分歧 這代表就是說現在市場的資金 就有剛才提到的 聰明錢真的是還蠻挑剔的 是 因為剛剛講到載版 我們也有跟大家聊 各自可能有的是ABF比較多 有的是BT載版比較多 有的是反而部分受惠於蘋果 可能要有iPhone 18等等的拉貨槽 各自的領域",
         "override_kind": "explicit_ky",
         "override_reason": "official_ky_identity_with_clear_phonetic_core",
         "original_code": "4958",
@@ -4651,7 +4719,7 @@
         "text_similarity": 0.0
       }
     ],
-    "updated_at": "2026-07-17T18:02:30"
+    "updated_at": "2026-08-12T18:18:35"
   },
   "日電帽|3090": {
     "wrong_keyword": "日電帽",
@@ -5877,5 +5945,59 @@
       }
     ],
     "updated_at": "2026-08-10T17:57:50"
+  },
+  "金山墊|8042": {
+    "wrong_keyword": "金山墊",
+    "correct_code": "8042",
+    "correct_name": "金山電",
+    "confidence": "high",
+    "max_score": 95,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "d86bbd8d-81f8-43eb-ade0-805bcbe02c1d"
+    ],
+    "evidence": [
+      {
+        "video_id": "d86bbd8d-81f8-43eb-ade0-805bcbe02c1d",
+        "channel": "兆華與股惑仔",
+        "date": "2026-08-12",
+        "title": "EP1159｜美超微、流明財報依舊好，晚上CPI是反彈考驗站？載板、矽晶圓、記憶體、被動選秀，誰是狀元籤？ft.型男股神 陳威良",
+        "source": "phonetic-discovery",
+        "score": 95,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1"
+        ],
+        "context": "那這一波 他在彈的時候 也是中規中矩的彈 可是他對我來說就是產業地位 因為他是保護元件 他就跟所謂的電力電阻 這種東西是非常有高度相關的 所以我也會優先看心情 我就比較不敢再回去看 當初這個日電帽 金山墊 甚至核生糖下來 我也會想說 當初都沒有參與到那麼夭的股票 但是我也不是那麼敢 但核生糖也是有他的產業地位 對不對 他的AI比重也是高的 所以我覺得 大家如果想要再去做一次被動元件 上一次一起往聖誕樹上上去的時候 真的叫無差別 到後面變成無差別 甚至我覺得業績比較好 本業比比較合理 反而長得比較慢 確實 對 對 那六華替大家都溜的一樣 就通通溜下來了 長得不多的 那就溜 那個山就沒那麼高 就這"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "8042",
+        "name": "金山電",
+        "score": 0.883,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "2368",
+        "name": "金像電",
+        "score": 0.604,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "3322",
+        "name": "建舜電",
+        "score": 0.542,
+        "phonetic_similarity": 0.833,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-08-12T18:18:47"
   }
 }
