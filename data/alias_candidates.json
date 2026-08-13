@@ -917,7 +917,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 51,
+    "observations": 52,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -962,7 +962,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-08-12T17:45:42"
+    "updated_at": "2026-08-13T17:45:43"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -5999,5 +5999,183 @@
       }
     ],
     "updated_at": "2026-08-12T18:18:47"
+  },
+  "台數|6464": {
+    "wrong_keyword": "台數",
+    "correct_code": "6464",
+    "correct_name": "台數科",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "f3ef33a7-da73-4f73-8fa6-32532da6c5ac"
+    ],
+    "evidence": [
+      {
+        "video_id": "f3ef33a7-da73-4f73-8fa6-32532da6c5ac",
+        "channel": "兆華與股惑仔",
+        "date": "2026-08-13",
+        "title": "EP1160｜CPI降低升息疑慮，好財報有好反應，華碩、廣達一線軍歸隊，漲價升級中小股續航，明年是否「再度發育」？ft.選股教練 陳唯泰",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "憶體 IC設計 金豪科 那石泉 這個是模組喔 模組其實滿委屈 是因為大家一直很懷疑 到底他們手上的庫存 要怎麼賣 他們手上的庫存 是高價的庫存 還是低價的庫存 但至少他納入了 兩檔 是記憶體 他還買了台數 台數應該是大型股啦 但是應該是買不多 所以就排在這次 新增裡面 他買了一檔 叫創新服務 就是碳針 他買了擁置科技 這也是碳針 他不是買隱威跟旺戲喔 他買的是比較後面的喔 然後他還買了麥克 這個是散熱 這邊大概稍微唸一下 就發現還有間點 鑽針 男子墊 比較落後長的PCB 所以他還是在 我們的漲價升級題材裡面 頗多著墨 我覺得這個事情是 不管這個基金 大家說奇怪 買這些是本土 主力幫他操盤嗎 但",
+        "override_kind": "phonetic",
+        "override_reason": "phonetic_top1_needs_review",
+        "original_code": "1301",
+        "original_name": "台塑",
+        "phonetic_top_score": 0.721,
+        "phonetic_lead": 0.0040000000000000036,
+        "needs_review": true
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "6464",
+        "name": "台數科",
+        "score": 0.721,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "1301",
+        "name": "台塑",
+        "score": 0.717,
+        "phonetic_similarity": 0.833,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "1304",
+        "name": "台聚",
+        "score": 0.608,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-08-13T18:02:47"
+  },
+  "群衣|6664": {
+    "wrong_keyword": "群衣",
+    "correct_code": "6664",
+    "correct_name": "群翊",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "f3ef33a7-da73-4f73-8fa6-32532da6c5ac"
+    ],
+    "evidence": [
+      {
+        "video_id": "f3ef33a7-da73-4f73-8fa6-32532da6c5ac",
+        "channel": "兆華與股惑仔",
+        "date": "2026-08-13",
+        "title": "EP1160｜CPI降低升息疑慮，好財報有好反應，華碩、廣達一線軍歸隊，漲價升級中小股續航，明年是否「再度發育」？ft.選股教練 陳唯泰",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "有這種 就是有固定收益 然後他在整個這個 這個稅率的考量上 他有一些 所謂的一個 避稅的一個效果的這些 這些所謂的這個商品 大家也是ok 去做個參考 就是我那時候 列出來像 00927我比較常講這個 群衣台灣半導體 主動安捏台灣高息 984A我也有講過 然後凱基的00952 也是訴求 就是它是AI50 然後包括 就星光台灣半導體 3000904 還有像前陣子 我們也有聊過00923 923雖然是半年配 但是它的息蠻高的 對 它也是配資本利得 其實最近有滿多 我們講到的ETF 都有在講這件事情 所以我覺得 我會開始做 這方面的遺傳 提供給大家參考 但是當然不是單筆 對單筆 我的個性還是在 它有買",
+        "override_kind": "phonetic",
+        "override_reason": "clear_phonetic_winner",
+        "original_code": "00892",
+        "original_name": "富邦台灣半導體",
+        "phonetic_top_score": 0.825,
+        "phonetic_lead": 0.244
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "6664",
+        "name": "群翊",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "6024",
+        "name": "群益期",
+        "score": 0.581,
+        "phonetic_similarity": 0.714,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "6412",
+        "name": "群電",
+        "score": 0.546,
+        "phonetic_similarity": 0.571,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-08-13T18:02:57"
+  },
+  "AMD假|AMD": {
+    "wrong_keyword": "AMD假",
+    "correct_code": "AMD",
+    "correct_name": "AMD",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "4c7284f8-826a-4576-b9f8-b7426b41513f"
+    ],
+    "evidence": [
+      {
+        "video_id": "4c7284f8-826a-4576-b9f8-b7426b41513f",
+        "channel": "財女珍妮",
+        "date": "2026-08-13",
+        "title": "2026/08/13 (四) 訂單爆發，股價卻不漲？ #NBIS #CSCO #COHR #CBRS",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "stock_context",
+          "code_in_context"
+        ],
+        "context": "常在講 你今天除了他的發射業務 他的starting 他的一個通訊業務之外 寫他跟AI的資本支出 也是息息相關的 在上個禮拜 這個老馬也有表示 我之後就是要用NVIDIA的晶片 我們要用AMD的 所以AMD假昨天 其實也是受惠在 這種AI資本支出 然後我的親兒子 非常的孝順 對不對 股價漲了那麼多 那我當然也是 同樣受惠 股價能長了3%左右 好 那我們就進入到今天的重頭戲 因為真的有很多財報 其實就算我每天已經講那麼多財報了 我覺得好像都還是講不完 然後寫也寫不完 所以大家如果有什麼 有興趣的公司 其實也可以在我們的留言下面告訴我 然後之後 因為財報已經快要結束了 那等到結束之後 就會需要找題"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "8044",
+        "name": "網家",
+        "score": 0.371,
+        "phonetic_similarity": 0.571,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "2221",
+        "name": "大甲",
+        "score": 0.325,
+        "phonetic_similarity": 0.5,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "2376",
+        "name": "技嘉",
+        "score": 0.325,
+        "phonetic_similarity": 0.5,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-08-13T18:15:13"
   }
 }
