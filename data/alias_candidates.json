@@ -917,7 +917,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 52,
+    "observations": 53,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -962,7 +962,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-08-13T17:45:43"
+    "updated_at": "2026-08-14T17:41:50"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -5156,9 +5156,10 @@
     "correct_name": "禾伸堂",
     "confidence": "high",
     "max_score": 100,
-    "observations": 1,
-    "distinct_videos": 1,
+    "observations": 2,
+    "distinct_videos": 2,
     "video_ids": [
+      "02e8cc00-e914-48f9-874b-d6cb14edccb8",
       "50452a4f-8c2e-4729-995b-22d1e363e704"
     ],
     "evidence": [
@@ -5180,6 +5181,30 @@
           "strong_sector_match"
         ],
         "context": "0 但這樣子 到底要聽誰的 那國劇要開法說了 我覺得這個法說 就蠻值得一聽 國劇或者是其他的 被動元件 例如說另外一個指標股 是性創電 哇 被分盤交易之後 超級弱 這些都可能是 要等他們恢復正常 今天合生堂還是不敵 因為合生堂 算是這一次回當以後 法人比較親愛的 今天也是重挫 所以被動元件 主動元件 都沒有辦法恢復 市場上的順行 反而跌得還是很重 我覺得被動元件 我很早要講 被動元件有兩檔股票 是市場的主流 就是合生堂跟新商店 合生堂跟新商店 小的是他們兩個 所以那時候 他們來講 被動元件的時候 我就特別提說 基本上你要用 合生堂跟新商店 來去判斷 國劇跟華星科 用他們這兩檔 去做其他的大型的",
+        "override_kind": "phonetic",
+        "override_reason": "clear_phonetic_winner",
+        "original_code": "1618",
+        "original_name": "合機",
+        "phonetic_top_score": 0.708,
+        "phonetic_lead": 0.17799999999999994
+      },
+      {
+        "video_id": "02e8cc00-e914-48f9-874b-d6cb14edccb8",
+        "channel": "兆華與股惑仔",
+        "date": "2026-08-14",
+        "title": "EP1161｜外資回補、投信觀望，反彈6千點市場情緒沒恢復，好處是有標準！繼續漲價南亞、台光電近前高，怕跌價群聯不振？ft.操盤手 黃豐凱",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "phonetic_top1",
+          "weak_sector_match",
+          "strong_sector_match"
+        ],
+        "context": "我們今天時間其實已經不太多了 所以我們 被動員間沒有辦法多說 如果被動員間想多聽一點 可以嗎 我覺得 被動員間基本上前一波是 極權升天 到這一段 其實你昨天有沒有發現一件事情 昨天國劇在漲的時候 其實合生堂就默默地下來了 就告訴你說 合生堂也覺得 自己也長得差不多 該進行整理了 但我個人覺得 主要規格的這些被動員間 目前看起來都還是缺 都還是缺 所以我覺得你可以 從MLCC的角度來看 這一波我覺得 一定要MLCC這些族群 都大漲之後 這些其他的旅電龍 才會跟著漲 所以你要優先看的 就是像合生堂 像國劇跟華信科 他們是在MLCC 相對奮而戰比較大的 這也是主流規格 他們要站穩市場之後 接下來這股",
         "override_kind": "phonetic",
         "override_reason": "clear_phonetic_winner",
         "original_code": "1618",
@@ -5211,7 +5236,7 @@
         "text_similarity": 0.0
       }
     ],
-    "updated_at": "2026-07-24T18:21:32"
+    "updated_at": "2026-08-14T17:53:41"
   },
   "維新|3501": {
     "wrong_keyword": "維新",
@@ -6177,5 +6202,148 @@
       }
     ],
     "updated_at": "2026-08-13T18:15:13"
+  },
+  "台灣的|3045": {
+    "wrong_keyword": "台灣的",
+    "correct_code": "3045",
+    "correct_name": "台灣大",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "02e8cc00-e914-48f9-874b-d6cb14edccb8"
+    ],
+    "evidence": [
+      {
+        "video_id": "02e8cc00-e914-48f9-874b-d6cb14edccb8",
+        "channel": "兆華與股惑仔",
+        "date": "2026-08-14",
+        "title": "EP1161｜外資回補、投信觀望，反彈6千點市場情緒沒恢復，好處是有標準！繼續漲價南亞、台光電近前高，怕跌價群聯不振？ft.操盤手 黃豐凱",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "明年的展望 那今天很謝謝凱哥 也希望大家在這個六日 剛剛好禮拜五休息一下 六日多做一點點 自己配置上的功課 要不要賣啦 要不要重新調整啊 這個位階 反而我覺得蠻好的 因為我們已經證明了 在基本面上面 台灣的AI訂單是非常非常多的 好 那就跟各位朋友說掰掰囉 大家掰掰 昭華掰掰 下週見囉 下週晚應該回來 掰掰"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3045",
+        "name": "台灣大",
+        "score": 0.802,
+        "phonetic_similarity": 0.875,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "2633",
+        "name": "台灣高鐵",
+        "score": 0.554,
+        "phonetic_similarity": 0.583,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "1336",
+        "name": "台翰",
+        "score": 0.523,
+        "phonetic_similarity": 0.625,
+        "text_similarity": 0.333
+      }
+    ],
+    "updated_at": "2026-08-14T17:53:19"
+  },
+  "圍影|6669": {
+    "wrong_keyword": "圍影",
+    "correct_code": "6669",
+    "correct_name": "緯穎",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 2,
+    "distinct_videos": 1,
+    "video_ids": [
+      "02e8cc00-e914-48f9-874b-d6cb14edccb8"
+    ],
+    "evidence": [
+      {
+        "video_id": "02e8cc00-e914-48f9-874b-d6cb14edccb8",
+        "channel": "兆華與股惑仔",
+        "date": "2026-08-14",
+        "title": "EP1161｜外資回補、投信觀望，反彈6千點市場情緒沒恢復，好處是有標準！繼續漲價南亞、台光電近前高，怕跌價群聯不振？ft.操盤手 黃豐凱",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "phonetic_top1",
+          "stock_context",
+          "strong_sector_match"
+        ],
+        "context": "現在終究是比較紛亂的 以及還有提醒 最近的話 有法說半年報 一定一定要聽一下 最基本的 例如說創新高 三綠三深 這個大概就是票房保證了 華碩 今天還是非常強 我們看到一千塊以上的華碩了 對不對 還有像圍影 因為繳出來的成績也非常好 所以我們看到一個 創新高的圍影 然後臺光店 他也逼近了前面的新高位置了 幾乎就是真正的 穿過水吳衡 已經回來了 所以當我們看到 這一些領頭羊的時候 我們對應起 他們相對應的族群 就可以從同族群知道 其實市場的共識 都是往這些類股去走 對不對 大型代工也有 中小型零組件也有 完全不用對 臺股的基本面跟發展 失去信心 還有我之前有跟大家聊到的 這一波下沙 到底有沒有把所",
+        "override_kind": "phonetic",
+        "override_reason": "phonetic_top1_needs_review",
+        "original_code": "3231",
+        "original_name": "緯創",
+        "phonetic_top_score": 0.65,
+        "phonetic_lead": 0.01100000000000001,
+        "needs_review": true
+      },
+      {
+        "video_id": "02e8cc00-e914-48f9-874b-d6cb14edccb8",
+        "channel": "兆華與股惑仔",
+        "date": "2026-08-14",
+        "title": "EP1161｜外資回補、投信觀望，反彈6千點市場情緒沒恢復，好處是有標準！繼續漲價南亞、台光電近前高，怕跌價群聯不振？ft.操盤手 黃豐凱",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "phonetic_top1",
+          "stock_context",
+          "strong_sector_match"
+        ],
+        "context": "現在終究是比較紛亂的 以及還有提醒 最近的話 有法說半年報 一定一定要聽一下 最基本的 例如說創新高 三綠三深 這個大概就是票房保證了 華碩 今天還是非常強 我們看到一千塊以上的華碩了 對不對 還有像圍影 因為繳出來的成績也非常好 所以我們看到一個 創新高的圍影 然後臺光店 他也逼近了前面的新高位置了 幾乎就是真正的 穿過水吳衡 已經回來了 所以當我們看到 這一些領頭羊的時候 我們對應起 他們相對應的族群 就可以從同族群知道 其實市場的共識 都是往這些類股去走 對不對 大型代工也有 中小型零組件也有 完全不用對 臺股的基本面跟發展 失去信心 還有我之前有跟大家聊到的 這一波下沙 到底有沒有把所",
+        "override_kind": "phonetic",
+        "override_reason": "phonetic_top1_needs_review",
+        "original_code": "2383",
+        "original_name": "台光電",
+        "phonetic_top_score": 0.65,
+        "phonetic_lead": 0.01100000000000001,
+        "needs_review": true
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "6669",
+        "name": "緯穎",
+        "score": 0.65,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "6637",
+        "name": "醫影",
+        "score": 0.639,
+        "phonetic_similarity": 0.714,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "6144",
+        "name": "得利影",
+        "score": 0.604,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.333
+      }
+    ],
+    "updated_at": "2026-08-14T17:53:46"
   }
 }
