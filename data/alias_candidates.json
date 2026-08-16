@@ -917,7 +917,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 54,
+    "observations": 55,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -962,7 +962,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-08-15T17:04:38"
+    "updated_at": "2026-08-16T17:04:21"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -1674,9 +1674,10 @@
     "correct_name": "國巨*",
     "confidence": "high",
     "max_score": 100,
-    "observations": 2,
-    "distinct_videos": 2,
+    "observations": 3,
+    "distinct_videos": 3,
     "video_ids": [
+      "db2768a4-1aac-45c3-a2ff-433784e6420a",
       "db32f8c0-a31a-4f2e-b397-1451d7be3f0a",
       "f167ba05-283e-480b-b8b3-a2d29287692b"
     ],
@@ -1715,6 +1716,30 @@
           "strong_sector_match"
         ],
         "context": "把齒 就是你會覺得說 這個是適合你的局嗎 如果有一些產業 不是你的局的話 你也不要硬去 跟人家臭了鬧 好 最後一個問題就是 請問叔叔怎麼看被動元件 謝謝 好 第一件事情 被動元件 我們一定會去看就是 國劇 那國劇現在已經腰斬了 那第一件事情就是說 他會腰斬下來 他要反彈回去的話 基本上是腰在100% 所以第一個 我覺得以水位的位置來講 他要回去是偏難的 然後 然後第二件事情 就是說現在 我們看到很多被動元件 比較熱門的一些 像華興科 或和盛堂 信長店等等的 他們就很容易進到處置股 然後這個處置股 已經不是五分盤了 是二十分盤 那二十分盤只要已經去的話 其實都會很麻煩 就是要去做任何操作的話 他"
+      },
+      {
+        "video_id": "db2768a4-1aac-45c3-a2ff-433784e6420a",
+        "channel": "韭菜畢業班",
+        "date": "2026-08-16",
+        "title": "EP251 | Google AI晶片換人做 / HBM降規後該怎麼做",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "phonetic_top1",
+          "weak_sector_match",
+          "strong_sector_match"
+        ],
+        "context": "我們才不會在節目上 一直跟大家吹說N9N10 最屌了 這個東西一定大家以後要特別注意 我們多次強調這東西 真的是很遠的東西 其實我覺得重關 我們最後幫各位總結一下 禮拜五的金流好了 被動元件的話 其實國劇也是有 比較出現一個大幅度的跌幅 大概是6% 那群聯的話也是一樣 就是有跌大概89% 那群聯他 最近公布出來財報之後 確實是很漂亮 但是市場開始不買單 就是模組廠相關的東西 反而製造廠的東西 比較多人願意買單 這個也是記憶體 目前的一個 大家要去比較關注的一件事情 就是我在跟田中的訪談的時候 也有講到這一件事情 就是說 整個產業族群 其實大家要注意 就是分歧開始拉高的非常的多 就以前我們看產業",
+        "override_kind": "phonetic",
+        "override_reason": "clear_phonetic_winner",
+        "original_code": "2303",
+        "original_name": "聯電",
+        "phonetic_top_score": 0.825,
+        "phonetic_lead": 0.21699999999999997
       }
     ],
     "phonetic_candidates": [
@@ -1740,7 +1765,7 @@
         "text_similarity": 0.5
       }
     ],
-    "updated_at": "2026-07-23T18:14:28"
+    "updated_at": "2026-08-16T17:12:10"
   },
   "家股文|ORCL": {
     "confidence": "low",
@@ -6345,5 +6370,151 @@
       }
     ],
     "updated_at": "2026-08-14T17:53:46"
+  },
+  "CCO|CCO": {
+    "wrong_keyword": "CCO",
+    "correct_code": "CCO",
+    "correct_name": "Clear Channel Outdoor Holdings, Inc.",
+    "confidence": "medium",
+    "max_score": 55,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "db2768a4-1aac-45c3-a2ff-433784e6420a"
+    ],
+    "evidence": [
+      {
+        "video_id": "db2768a4-1aac-45c3-a2ff-433784e6420a",
+        "channel": "韭菜畢業班",
+        "date": "2026-08-16",
+        "title": "EP251 | Google AI晶片換人做 / HBM降規後該怎麼做",
+        "source": "full_video_validator",
+        "score": 55,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "stock_context",
+          "code_in_context",
+          "strong_sector_mismatch"
+        ],
+        "context": "部分也會受惠 另外一件事情就是說 我們看到肉眼可見的 ODM這一件事情 它也會一起隨之而受惠 因為它就是整機櫃 你今天整機櫃可以出的更多 那你當然勢必會一起往上去走了 當然還是有一件事情 就是PCB跟CCO 因為你今天如果要繼續出的話 你的成數一定是要更多的 所以我們才會看到 為什麼最近的CCO表現的也不差 那我覺得這一件事情 看似一個利空的事情 也沒比它可能會 帶動了很多產業 終於有一些突破的動能 我可以往上去看 更高的這個PVR 我願意給你到更高的價格 我自己的思考模式會是這樣 那但是真的要講優先級的話 可能第一個看來 還是就是ODM組裝那塊 因為你就等於說實際上面 你多出來 那再來就是 ",
+        "override_kind": "exact_alias",
+        "override_reason": "known_identity_or_approved_alias",
+        "original_code": "8046",
+        "original_name": "南電"
+      }
+    ],
+    "phonetic_candidates": [],
+    "updated_at": "2026-08-16T17:12:10"
+  },
+  "以發|6425": {
+    "wrong_keyword": "以發",
+    "correct_code": "6425",
+    "correct_name": "易發",
+    "confidence": "high",
+    "max_score": 95,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "89866855-1341-41f8-b189-885e479cb199"
+    ],
+    "evidence": [
+      {
+        "video_id": "89866855-1341-41f8-b189-885e479cb199",
+        "channel": "投資癮",
+        "date": "2026-08-16",
+        "title": "EP342 市場中被遺忘的資金",
+        "source": "phonetic-discovery",
+        "score": 95,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1"
+        ],
+        "context": "硬兼具的那幾節目 那幾節目除了軟體類股以外 還有那些老AI的類股 就是那些電腦周邊族群或代工廠上面 他們在那個禮拜非常的強勢 所以那段時間應該有大資金進去了 所以那個點到現在收購案確定這個點之間 你可以發現 7月份的那個下點 跟軟體股來說 完全沒有任何的關係 所以那個時候市場整片在討論恐慌訊息的時候 我覺得很訝異 其實那個時候的市場 只疊兩種類股 一個是一線主流個股 就一大堆散戶跟融資戶的那個個股 第二個就是貴買市場的公司 因為那時候面臨了斷頭潮 所以排除這兩段的重災區以外的公司 其實他們還是走自己的路 市場永遠都有派對的 而這邊再回答你的問題 你說這個WD沒辦法操作 要怎麼做呢 其實你就不能"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "6425",
+        "name": "易發",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "1459",
+        "name": "聯發",
+        "score": 0.5,
+        "phonetic_similarity": 0.5,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "6526",
+        "name": "達發",
+        "score": 0.5,
+        "phonetic_similarity": 0.5,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-08-16T17:22:37"
+  },
+  "貴盟|5306": {
+    "wrong_keyword": "貴盟",
+    "correct_code": "5306",
+    "correct_name": "桂盟",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "89866855-1341-41f8-b189-885e479cb199"
+    ],
+    "evidence": [
+      {
+        "video_id": "89866855-1341-41f8-b189-885e479cb199",
+        "channel": "投資癮",
+        "date": "2026-08-16",
+        "title": "EP342 市場中被遺忘的資金",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "目前也開始慢慢做一些 小小貨力了結 這大概就是三個禮拜之前 做一些正確決定的 一些紅利了 那接下來還是往下面走 這禮拜有看到一些 船長類股表現比較強勢 除了自行車的 各股表現強勁以外 像巨大、梅伊達或貴盟 但是因為船長來說 船長類股比較沒有想像空間 所以它的價格容易被受限 除非得到一個價值去區間 像是南亞塑化類股一樣 而今天幾年的調整之後 巨大在第二季的財報 開始一些稅後獲利了 年增230% EPS是1.62元 對比今年第一季還虧了0.5億元 單季由虧轉贏 但是過去的投資人應該有發現 其實在那段下跌時間 巨大、梅伊達、貴盟 股價是沒有下跌的 它是緩緩上漲的 而公司的說法是 之前說到美國的 強迫"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "5306",
+        "name": "桂盟",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "1447",
+        "name": "力鵬",
+        "score": 0.371,
+        "phonetic_similarity": 0.571,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "2022",
+        "name": "聚亨",
+        "score": 0.371,
+        "phonetic_similarity": 0.571,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-08-16T17:22:38"
   }
 }
