@@ -917,7 +917,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 56,
+    "observations": 57,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -962,7 +962,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-08-17T17:13:06"
+    "updated_at": "2026-08-18T17:13:35"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -6516,5 +6516,123 @@
       }
     ],
     "updated_at": "2026-08-16T17:22:38"
+  },
+  "華邦電視|2344": {
+    "wrong_keyword": "華邦電視",
+    "correct_code": "2344",
+    "correct_name": "華邦電",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "8c80fe14-a995-4123-80ec-5e2584d44df2"
+    ],
+    "evidence": [
+      {
+        "video_id": "8c80fe14-a995-4123-80ec-5e2584d44df2",
+        "channel": "韭菜畢業班",
+        "date": "2026-08-18",
+        "title": "訪談特別篇 : 崩盤之後，我們是怎麼想的 ？",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context",
+          "strong_sector_match"
+        ],
+        "context": "我覺得大家可以觀察一件事情是 就是 今天強的明天會不會強會不會續強 這件事情的重點在於 有續強代表 你有可能會賺錢 但是 除非你做的是極短線 那就不考慮 我覺得像今天就蠻酷的 今天立即練漲停 然後 華邦電視開漲停然後收平盤 嗯 萊亞科是也是開高 我就開 開四趴吧 那時候點一的一趴 剛好我就覺得這個很靠北 就是他理論上來說應該一起動的 嗯 但現在完全是分歧到爆哎 確實 然後我覺得大家可以觀察一些 你認為 假設 今天萌萌公司開了一個 非常屌的一個財報 嗯 隔天會不會開漲停 嗯 這件事情的意義是什麼 嗯 意義是 盤到底好不好做 你認為他會漲停的但他開平盤 有財報很好這件事情 你要怎麼去定義財報很好這"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2344",
+        "name": "華邦電",
+        "score": 0.773,
+        "phonetic_similarity": 0.786,
+        "text_similarity": 0.75
+      },
+      {
+        "code": "6788",
+        "name": "華景電",
+        "score": 0.593,
+        "phonetic_similarity": 0.643,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "6578",
+        "name": "達邦蛋白",
+        "score": 0.505,
+        "phonetic_similarity": 0.643,
+        "text_similarity": 0.25
+      }
+    ],
+    "updated_at": "2026-08-18T17:31:29"
+  },
+  "萊亞科|2408": {
+    "wrong_keyword": "萊亞科",
+    "correct_code": "2408",
+    "correct_name": "南亞科",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "8c80fe14-a995-4123-80ec-5e2584d44df2"
+    ],
+    "evidence": [
+      {
+        "video_id": "8c80fe14-a995-4123-80ec-5e2584d44df2",
+        "channel": "韭菜畢業班",
+        "date": "2026-08-18",
+        "title": "訪談特別篇 : 崩盤之後，我們是怎麼想的 ？",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context",
+          "strong_sector_match"
+        ],
+        "context": "就是 今天強的明天會不會強會不會續強 這件事情的重點在於 有續強代表 你有可能會賺錢 但是 除非你做的是極短線 那就不考慮 我覺得像今天就蠻酷的 今天立即練漲停 然後 華邦電視開漲停然後收平盤 嗯 萊亞科是也是開高 我就開 開四趴吧 那時候點一的一趴 剛好我就覺得這個很靠北 就是他理論上來說應該一起動的 嗯 但現在完全是分歧到爆哎 確實 然後我覺得大家可以觀察一些 你認為 假設 今天萌萌公司開了一個 非常屌的一個財報 嗯 隔天會不會開漲停 嗯 這件事情的意義是什麼 嗯 意義是 盤到底好不好做 你認為他會漲停的但他開平盤 有財報很好這件事情 你要怎麼去定義財報很好這件事情 因為如果你單純用 呃 ",
+        "override_kind": "phonetic",
+        "override_reason": "clear_phonetic_winner",
+        "original_code": "3034",
+        "original_name": "聯詠",
+        "phonetic_top_score": 0.698,
+        "phonetic_lead": 0.17499999999999993
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2408",
+        "name": "南亞科",
+        "score": 0.698,
+        "phonetic_similarity": 0.714,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "2454",
+        "name": "聯發科",
+        "score": 0.523,
+        "phonetic_similarity": 0.625,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "8401",
+        "name": "白紗科",
+        "score": 0.523,
+        "phonetic_similarity": 0.625,
+        "text_similarity": 0.333
+      }
+    ],
+    "updated_at": "2026-08-18T17:31:29"
   }
 }
