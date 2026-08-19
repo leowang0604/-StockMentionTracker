@@ -917,7 +917,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 57,
+    "observations": 58,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -962,7 +962,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-08-18T17:13:35"
+    "updated_at": "2026-08-19T17:12:32"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -6634,5 +6634,121 @@
       }
     ],
     "updated_at": "2026-08-18T17:31:29"
+  },
+  "楊明|2609": {
+    "wrong_keyword": "楊明",
+    "correct_code": "2609",
+    "correct_name": "陽明",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "af770a16-3fee-4698-9f38-748400c9b0f4"
+    ],
+    "evidence": [
+      {
+        "video_id": "af770a16-3fee-4698-9f38-748400c9b0f4",
+        "channel": "韭菜畢業班",
+        "date": "2026-08-19",
+        "title": "EP252 | 散熱股回穩 /  航運股再啟 ？",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context",
+          "weak_sector_match"
+        ],
+        "context": "的話 是升到了 6714美元 那所以這整個 狀況下 都導致現在的 運價其實是往上去走的 利潤才會開始出現 那我們回到 台灣的貨櫃 航運身上來看好了 以長榮來講的話 七月份的營收 年增是43% 然後呢 楊明的話 他的年增的話 也是35% 萬海的營收 其實相對最多 他的年增幅度 是到了50%以上 所以其實七月份 來看的話 他們其實都有 創下一個新高 現在整個航運的話 他算是 大頭已經開始 在走往上去走了 那台灣的大頭 幾個大頭 也一起往上去走 狀況下 散裝航運就一起 與陸軍戰的 往上去走 但如果我們今天 是去看產 散裝的一些指數的話 也沒有到 非常的漂亮啦 所以在這部分 來看的話 我們還要去注意 "
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2609",
+        "name": "陽明",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "4420",
+        "name": "光明",
+        "score": 0.681,
+        "phonetic_similarity": 0.778,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "6188",
+        "name": "廣明",
+        "score": 0.681,
+        "phonetic_similarity": 0.778,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-08-19T18:08:30"
+  },
+  "種族ky|5871": {
+    "wrong_keyword": "種族ky",
+    "correct_code": "5871",
+    "correct_name": "中租-KY",
+    "confidence": "high",
+    "max_score": 85,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "c4bba9ba-1827-4242-b99a-8e4692bc8909"
+    ],
+    "evidence": [
+      {
+        "video_id": "c4bba9ba-1827-4242-b99a-8e4692bc8909",
+        "channel": "兆華與股惑仔",
+        "date": "2026-08-19",
+        "title": "EP1165｜科技大廠隱藏債務3兆美元，費半跌這個？高利率環境是問題，但不會馬上爆？台股順勢打腳，高息低本益比的很多？ft.選股教練 陳唯泰",
+        "source": "explicit-ky-discovery",
+        "score": 85,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "但我最近 我也是在做類似這樣子的一個動作 我們在上一集 我們跟大家講 我都記住 我比較focus 在一些ky的隔骨上面 對 那ky的隔骨 當然它也有避稅上面的優勢 所以這部分我在有些拉回 例如說像 種族ky像 我就會長時間去就關注 這一檔我覺得很多人可能也想問 因為當初他在大陸 有所謂的壞帳的疑慮 導致有非常多人 你就放棄他了對不對 加上這個也有一些 人在網路上批評 這類型的公司 可能會是放高利貸的公司 山島猴子就這種工造成的 所以對他有點影響 可是其實他的狀態是回溫的 但大家都不聊了 前三 那時候他現在公告他們的字結數 前面七個月份的字結數 我剛剛看了一下 他前面七個月的字結數 最後是6.9",
+        "override_kind": "explicit_ky",
+        "override_reason": "official_ky_identity_with_clear_phonetic_core",
+        "original_code": "5871",
+        "original_name": "中租-KY",
+        "phonetic_top_score": 0.8,
+        "phonetic_lead": 0.2290000000000001
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "5871",
+        "name": "中租-KY",
+        "score": 0.65,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "2243",
+        "name": "宏旭-KY",
+        "score": 0.506,
+        "phonetic_similarity": 0.778,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "3168",
+        "name": "眾福科",
+        "score": 0.506,
+        "phonetic_similarity": 0.778,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-08-19T18:21:55"
   }
 }
