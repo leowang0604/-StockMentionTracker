@@ -4770,66 +4770,6 @@
     ],
     "wrong_keyword" : "移頂"
   },
-  "種族ky|5871" : {
-    "confidence" : "high",
-    "correct_code" : "5871",
-    "correct_name" : "中租-KY",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "兆華與股惑仔",
-        "context" : "但我最近 我也是在做類似這樣子的一個動作 我們在上一集 我們跟大家講 我都記住 我比較focus 在一些ky的隔骨上面 對 那ky的隔骨 當然它也有避稅上面的優勢 所以這部分我在有些拉回 例如說像 種族ky像 我就會長時間去就關注 這一檔我覺得很多人可能也想問 因為當初他在大陸 有所謂的壞帳的疑慮 導致有非常多人 你就放棄他了對不對 加上這個也有一些 人在網路上批評 這類型的公司 可能會是放高利貸的公司 山島猴子就這種工造成的 所以對他有點影響 可是其實他的狀態是回溫的 但大家都不聊了 前三 那時候他現在公告他們的字結數 前面七個月份的字結數 我剛剛看了一下 他前面七個月的字結數 最後是6.9",
-        "date" : "2026-08-19",
-        "original_code" : "5871",
-        "original_name" : "中租-KY",
-        "override_kind" : "explicit_ky",
-        "override_reason" : "official_ky_identity_with_clear_phonetic_core",
-        "phonetic_lead" : 0.2290000000000001,
-        "phonetic_top_score" : 0.8,
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "phonetic_top1",
-          "stock_context"
-        ],
-        "score" : 85,
-        "source" : "explicit-ky-discovery",
-        "title" : "EP1165｜科技大廠隱藏債務3兆美元，費半跌這個？高利率環境是問題，但不會馬上爆？台股順勢打腳，高息低本益比的很多？ft.選股教練 陳唯泰",
-        "video_id" : "c4bba9ba-1827-4242-b99a-8e4692bc8909"
-      }
-    ],
-    "max_score" : 85,
-    "observations" : 1,
-    "phonetic_candidates" : [
-      {
-        "code" : "5871",
-        "name" : "中租-KY",
-        "phonetic_similarity" : 1,
-        "score" : 0.65,
-        "text_similarity" : 0
-      },
-      {
-        "code" : "2243",
-        "name" : "宏旭-KY",
-        "phonetic_similarity" : 0.778,
-        "score" : 0.506,
-        "text_similarity" : 0
-      },
-      {
-        "code" : "3168",
-        "name" : "眾福科",
-        "phonetic_similarity" : 0.778,
-        "score" : 0.506,
-        "text_similarity" : 0
-      }
-    ],
-    "updated_at" : "2026-08-19T18:21:55",
-    "video_ids" : [
-      "c4bba9ba-1827-4242-b99a-8e4692bc8909"
-    ],
-    "wrong_keyword" : "種族ky"
-  },
   "立即電|2472" : {
     "confidence" : "high",
     "correct_code" : "2472",
