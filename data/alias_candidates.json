@@ -917,7 +917,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 58,
+    "observations": 59,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -962,7 +962,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-08-19T17:12:32"
+    "updated_at": "2026-08-20T17:14:54"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -6750,5 +6750,66 @@
       }
     ],
     "updated_at": "2026-08-19T18:21:55"
+  },
+  "國差|2504": {
+    "wrong_keyword": "國差",
+    "correct_code": "2504",
+    "correct_name": "國產",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "5da829b6-8279-4b00-a8f9-0266883c8573"
+    ],
+    "evidence": [
+      {
+        "video_id": "5da829b6-8279-4b00-a8f9-0266883c8573",
+        "channel": "兆華與股惑仔",
+        "date": "2026-08-20",
+        "title": "EP1166｜量縮好布局，大型法人資金也在等出手，世界第一、寡占、高研發，ASIC、先進封裝、設備，難以預估的爆增大市場！ft.產業隊長 張捷",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "的 反而又一個一個回來 所以 跌時重止 你看台積電 2400 2500 跌到2100 又回到2300 南亞科450 跌到350 360 又回到550 這不只是回前高 而且還創新高 那被動元件有 我們講國差 1200 跌到400多 被動元件為什麼就變國差 我們不要點名 因為被動元件有些公司 我們已經很尊敬 好 跌到400多 漲到6700 可是你從1200來看 這個6700 還是 不是腰斬 是膝蓋斬 斬到六七成 所以很簡單 我們講國距 第一季賺兩塊多 第二季賺三塊多 我都算五塊 今年賺二十塊 1200 本一筆是六十倍 海利市如果告訴你 我本一筆六倍 台積電告訴你 我本一筆十六倍 回答也十六倍 那六",
+        "override_kind": "phonetic",
+        "override_reason": "clear_phonetic_winner",
+        "original_code": "2327",
+        "original_name": "國巨*",
+        "phonetic_top_score": 0.732,
+        "phonetic_lead": 0.124
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2504",
+        "name": "國產",
+        "score": 0.732,
+        "phonetic_similarity": 0.857,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "1713",
+        "name": "國化",
+        "score": 0.608,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "1312",
+        "name": "國喬",
+        "score": 0.546,
+        "phonetic_similarity": 0.571,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-08-20T17:31:24"
   }
 }
