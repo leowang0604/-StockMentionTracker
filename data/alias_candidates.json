@@ -1237,7 +1237,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 61,
+    "observations": 62,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1282,7 +1282,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-08-22T17:03:59"
+    "updated_at": "2026-08-23T17:07:13"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -6742,5 +6742,201 @@
       }
     ],
     "updated_at": "2026-08-21T17:27:49"
+  },
+  "金國光|6209": {
+    "wrong_keyword": "金國光",
+    "correct_code": "6209",
+    "correct_name": "今國光",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "f0e65d2f-b948-4cdc-8089-620a3c0f9387"
+    ],
+    "evidence": [
+      {
+        "video_id": "f0e65d2f-b948-4cdc-8089-620a3c0f9387",
+        "channel": "投資癮",
+        "date": "2026-08-23",
+        "title": "EP343 平衡型的投資",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context",
+          "strong_sector_match"
+        ],
+        "context": "高的話 就會有更多好消息出現 我覺得這些訊息 都不足以一次法收回的消息還要精準 其實很多時候 我們要的不是那些訊息 我們要的是精準度 但是除了大力光以外 會其他看一些光學族群 會去觀察像玉金光 亞光 金國光 陽明光等等 像CPO的部分 就是從聯亞 華興光 波羅維等等 所以你把整個包套起來觀察 我會把它變成一個 CPO跟光學院建一個族群 或其把它列入一個名單之內的 這有點像七月初以前討論過的 像是被動元件的族群 集體的族群 或是公率半導體的族群 你只要把它一個族群 列成一列一列的去觀察 其實你就可以知道 市場的動向在哪裡了 所以大力光的說法一樣沒變 最快是2027年年中會亮產 而且即使亮產了 亮"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "6209",
+        "name": "今國光",
+        "score": 0.883,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "8249",
+        "name": "菱光",
+        "score": 0.589,
+        "phonetic_similarity": 0.727,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "3530",
+        "name": "晶相光",
+        "score": 0.535,
+        "phonetic_similarity": 0.643,
+        "text_similarity": 0.333
+      }
+    ],
+    "updated_at": "2026-08-23T17:27:05"
+  },
+  "華興光|4979": {
+    "wrong_keyword": "華興光",
+    "correct_code": "4979",
+    "correct_name": "華星光",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 2,
+    "distinct_videos": 1,
+    "video_ids": [
+      "f0e65d2f-b948-4cdc-8089-620a3c0f9387"
+    ],
+    "evidence": [
+      {
+        "video_id": "f0e65d2f-b948-4cdc-8089-620a3c0f9387",
+        "channel": "投資癮",
+        "date": "2026-08-23",
+        "title": "EP343 平衡型的投資",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "weak_sector_match",
+          "strong_sector_match"
+        ],
+        "context": "不足以一次法收回的消息還要精準 其實很多時候 我們要的不是那些訊息 我們要的是精準度 但是除了大力光以外 會其他看一些光學族群 會去觀察像玉金光 亞光 金國光 陽明光等等 像CPO的部分 就是從聯亞 華興光 波羅維等等 所以你把整個包套起來觀察 我會把它變成一個 CPO跟光學院建一個族群 或其把它列入一個名單之內的 這有點像七月初以前討論過的 像是被動元件的族群 集體的族群 或是公率半導體的族群 你只要把它一個族群 列成一列一列的去觀察 其實你就可以知道 市場的動向在哪裡了 所以大力光的說法一樣沒變 最快是2027年年中會亮產 而且即使亮產了 亮能還不是很大 而這一半上漲20多% 我覺得只是市"
+      },
+      {
+        "video_id": "f0e65d2f-b948-4cdc-8089-620a3c0f9387",
+        "channel": "投資癮",
+        "date": "2026-08-23",
+        "title": "EP343 平衡型的投資",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "weak_sector_match",
+          "strong_sector_match"
+        ],
+        "context": "不足以一次法收回的消息還要精準 其實很多時候 我們要的不是那些訊息 我們要的是精準度 但是除了大力光以外 會其他看一些光學族群 會去觀察像玉金光 亞光 金國光 陽明光等等 像CPO的部分 就是從聯亞 華興光 波羅維等等 所以你把整個包套起來觀察 我會把它變成一個 CPO跟光學院建一個族群 或其把它列入一個名單之內的 這有點像七月初以前討論過的 像是被動元件的族群 集體的族群 或是公率半導體的族群 你只要把它一個族群 列成一列一列的去觀察 其實你就可以知道 市場的動向在哪裡了 所以大力光的說法一樣沒變 最快是2027年年中會亮產 而且即使亮產了 亮能還不是很大 而這一半上漲20多% 我覺得只是市",
+        "override_kind": "phonetic",
+        "override_reason": "clear_phonetic_winner",
+        "original_code": "6164",
+        "original_name": "華興",
+        "phonetic_top_score": 0.883,
+        "phonetic_lead": 0.27
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "4979",
+        "name": "華星光",
+        "score": 0.883,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "6164",
+        "name": "華興",
+        "score": 0.613,
+        "phonetic_similarity": 0.583,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "3406",
+        "name": "玉晶光",
+        "score": 0.604,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.333
+      }
+    ],
+    "updated_at": "2026-08-23T17:27:14"
+  },
+  "波羅維|3163": {
+    "wrong_keyword": "波羅維",
+    "correct_code": "3163",
+    "correct_name": "波若威",
+    "confidence": "high",
+    "max_score": 82,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "f0e65d2f-b948-4cdc-8089-620a3c0f9387"
+    ],
+    "evidence": [
+      {
+        "video_id": "f0e65d2f-b948-4cdc-8089-620a3c0f9387",
+        "channel": "投資癮",
+        "date": "2026-08-23",
+        "title": "EP343 平衡型的投資",
+        "source": "full_video_validator",
+        "score": 82,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "phonetic_top1"
+        ],
+        "context": "次法收回的消息還要精準 其實很多時候 我們要的不是那些訊息 我們要的是精準度 但是除了大力光以外 會其他看一些光學族群 會去觀察像玉金光 亞光 金國光 陽明光等等 像CPO的部分 就是從聯亞 華興光 波羅維等等 所以你把整個包套起來觀察 我會把它變成一個 CPO跟光學院建一個族群 或其把它列入一個名單之內的 這有點像七月初以前討論過的 像是被動元件的族群 集體的族群 或是公率半導體的族群 你只要把它一個族群 列成一列一列的去觀察 其實你就可以知道 市場的動向在哪裡了 所以大力光的說法一樣沒變 最快是2027年年中會亮產 而且即使亮產了 亮能還不是很大 而這一半上漲20多% 我覺得只是市場還它一",
+        "override_kind": "phonetic",
+        "override_reason": "clear_phonetic_winner",
+        "original_code": "2359",
+        "original_name": "所羅門",
+        "phonetic_top_score": 0.685,
+        "phonetic_lead": 0.20700000000000007
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3163",
+        "name": "波若威",
+        "score": 0.685,
+        "phonetic_similarity": 0.875,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "2359",
+        "name": "所羅門",
+        "score": 0.478,
+        "phonetic_similarity": 0.556,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "3581",
+        "name": "博磊",
+        "score": 0.406,
+        "phonetic_similarity": 0.625,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-08-23T17:27:14"
   }
 }
