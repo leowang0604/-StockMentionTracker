@@ -1237,7 +1237,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 62,
+    "observations": 63,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1282,7 +1282,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-08-23T17:07:13"
+    "updated_at": "2026-08-24T17:18:25"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -6938,5 +6938,178 @@
       }
     ],
     "updated_at": "2026-08-23T17:27:14"
+  },
+  "會洋KY|2637": {
+    "wrong_keyword": "會洋KY",
+    "correct_code": "2637",
+    "correct_name": "慧洋-KY",
+    "confidence": "high",
+    "max_score": 82,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "e44d93e8-9875-4e63-9262-c30238dbf643"
+    ],
+    "evidence": [
+      {
+        "video_id": "e44d93e8-9875-4e63-9262-c30238dbf643",
+        "channel": "兆華與股惑仔",
+        "date": "2026-08-24",
+        "title": "EP1168｜美國債壓、南部放假，低量等表態！高息科技、非電、原物料，看跌停的比看漲停有趣？航海王怎麼當？ft.題材獵人 林漢偉",
+        "source": "explicit-ky-discovery",
+        "score": 82,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "phonetic_top1"
+        ],
+        "context": "貨櫃三雄 長榮 陽明 萬海 這三家公司 目前本益比都還在10倍左右 明年來看長榮跟萬海 都還有機會維持一個高值利率 所以他們最近在上禮拜 大概下半週開始 都看到投信的買盤 積極在卡位一些航運股 甚至連會洋KY 所以我覺得這兩個區塊 看起來就是剛剛提到的 從美債利率的上揚 那資金就比較偏好 這些高值利率 低本益比的概念股 那如果說能夠 伴隨著漲價的題材 那我覺得它可能動能就會更強 所以你看到 今天盤面上雖然說 航運股有一點點開高走低 但如果大家去追蹤一下 SCFI的運價指數 上個禮拜是連續四周的上漲 那當中美東縣的一個價格 已經來到將近快要到疫情的新高 大概每40幅 已經逼近到1萬美元 那就代表",
+        "override_kind": "explicit_ky",
+        "override_reason": "official_ky_identity_with_clear_phonetic_core",
+        "original_code": "2637",
+        "original_name": "慧洋-KY",
+        "phonetic_top_score": 0.9,
+        "phonetic_lead": 0.34299999999999997
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2637",
+        "name": "慧洋-KY",
+        "score": 0.912,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.75
+      },
+      {
+        "code": "5907",
+        "name": "大洋-KY",
+        "score": 0.696,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.75
+      },
+      {
+        "code": "6573",
+        "name": "虹揚-KY",
+        "score": 0.63,
+        "phonetic_similarity": 0.7,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-08-24T17:36:04"
+  },
+  "環語ky|4991": {
+    "wrong_keyword": "環語ky",
+    "correct_code": "4991",
+    "correct_name": "環宇-KY",
+    "confidence": "high",
+    "max_score": 85,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "e44d93e8-9875-4e63-9262-c30238dbf643"
+    ],
+    "evidence": [
+      {
+        "video_id": "e44d93e8-9875-4e63-9262-c30238dbf643",
+        "channel": "兆華與股惑仔",
+        "date": "2026-08-24",
+        "title": "EP1168｜美國債壓、南部放假，低量等表態！高息科技、非電、原物料，看跌停的比看漲停有趣？航海王怎麼當？ft.題材獵人 林漢偉",
+        "source": "explicit-ky-discovery",
+        "score": 85,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "的影響 雖然說大家覺得 成長性很好 但是畢竟我們講說 跟美債之魚比較起來 好像就造成他們的估值 上升的空間受到壓抑 所以今天盤面上 當然有一些光通不錯 像光環 股價是創價 好像是歷史的新高 對 但是像環語ky ITky 這些所謂的 零化因概念 好 今天吃的跌停 對 因為他們都是高本益比 是 對 所以我覺得這個就代表說 如果大家現階段 真的要做一個比較積極的操作 第一個把利率的一個 它的區間先定好 簡單就是說 美債利率在30年期 在5.2%以上 然後10年期大概在4.65%以上的話 我覺得大家對這種高本益的股票 就是以拉回來站在買方 那如果說利率在走高的話 你就可以把資金比較偏向一些 價值型的股",
+        "override_kind": "explicit_ky",
+        "override_reason": "official_ky_identity_with_clear_phonetic_core",
+        "original_code": "4991",
+        "original_name": "環宇-KY",
+        "phonetic_top_score": 0.9,
+        "phonetic_lead": 0.464
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "4991",
+        "name": "環宇-KY",
+        "score": 0.738,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.25
+      },
+      {
+        "code": "2413",
+        "name": "環科",
+        "score": 0.494,
+        "phonetic_similarity": 0.625,
+        "text_similarity": 0.25
+      },
+      {
+        "code": "1104",
+        "name": "環泥",
+        "score": 0.412,
+        "phonetic_similarity": 0.5,
+        "text_similarity": 0.25
+      }
+    ],
+    "updated_at": "2026-08-24T17:36:04"
+  },
+  "貿易聯|3665": {
+    "wrong_keyword": "貿易聯",
+    "correct_code": "3665",
+    "correct_name": "貿聯-KY",
+    "confidence": "medium",
+    "max_score": 65,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "e44d93e8-9875-4e63-9262-c30238dbf643"
+    ],
+    "evidence": [
+      {
+        "video_id": "e44d93e8-9875-4e63-9262-c30238dbf643",
+        "channel": "兆華與股惑仔",
+        "date": "2026-08-24",
+        "title": "EP1168｜美國債壓、南部放假，低量等表態！高息科技、非電、原物料，看跌停的比看漲停有趣？航海王怎麼當？ft.題材獵人 林漢偉",
+        "source": "full_video_validator",
+        "score": 65,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "stock_context"
+        ],
+        "context": "看到 為什麼會有一天漲停一天跌停 就是很多格式充大戶 也嫌不下來 他可能就是今天看到跌下來買 明天漲上去就充掉 充完了隔天就會下來 就如此類的在做 但是有一些我覺得比較特別的例如說 我就問漢偉哥說 像貿易聯KY 大家都覺得不錯的公司 怎麼忽然今天是一根電停板 這可能就可以有值得探討的空間 是不是有機會 他再連續一點 像我之前講的旺戲 比較有機會撿到 好公司的便宜價 我覺得當然今天 當然貿易聯KY大家會覺得 好像也蠻奇怪的 因為他公布出來第二季的季報 其實一片子相較上一季 是成員明顯的成長 我覺得第一季好像賺大概10塊多吧 第二季公布出來是15塊多 所以他這個第二季的一片子 也是創造歷史的新高 "
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "1710",
+        "name": "東聯",
+        "score": 0.478,
+        "phonetic_similarity": 0.556,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "2024",
+        "name": "志聯",
+        "score": 0.478,
+        "phonetic_similarity": 0.556,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "4168",
+        "name": "醣聯",
+        "score": 0.478,
+        "phonetic_similarity": 0.556,
+        "text_similarity": 0.333
+      }
+    ],
+    "updated_at": "2026-08-24T17:36:36"
   }
 }
