@@ -1237,7 +1237,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 64,
+    "observations": 65,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1282,7 +1282,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-08-25T17:18:36"
+    "updated_at": "2026-08-26T18:29:16"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -7111,5 +7111,60 @@
       }
     ],
     "updated_at": "2026-08-24T17:36:36"
+  },
+  "花紙|1905": {
+    "wrong_keyword": "花紙",
+    "correct_code": "1905",
+    "correct_name": "華紙",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "cbe7cfbd-a3ce-476d-895d-d318c9343ccd"
+    ],
+    "evidence": [
+      {
+        "video_id": "cbe7cfbd-a3ce-476d-895d-d318c9343ccd",
+        "channel": "兆華與股惑仔",
+        "date": "2026-08-26",
+        "title": "EP1170｜輝達首批Vera Rubin裝機了，能逆轉法說必跌魔咒嗎？行情預備備…Q4電子、傳產、原物料都有話題，很熱鬧！ft.選股教練 陳唯泰",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "大安森林公園一樣 不賺錢 紙箱 很缺 包裁現在很貴 然後現在貨運 那麼地發達 對不對 快遞什麼的 不賺錢 衛生紙 家家戶戶 都好像永遠怕沒有辦法 插屁股一樣 都在統衛生紙 不賺錢 這就是我覺得 花紙 花紙 這紙葉到底發生什麼事 探全這東西 其實它有一些評價的 這些方法 對 所以其實 我說實話 它並不像大家想的 我今天只要種了樹 我就可以賣錢 叫它探全 對 我今天種了樹 我種出去的樹 它到底可不可以幫忙 二氧化碳消化多少 這個是有 國際級的專業 評鑑機構去評鑑的 然後評鑑完之後 才可以按照你的這個等級 去 例如說給價格 這個其實說實話 有一點點困難 我覺得這個 大家想得太簡單了 好 但是我必須說"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "1905",
+        "name": "華紙",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "6615",
+        "name": "慧智",
+        "score": 0.542,
+        "phonetic_similarity": 0.833,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "1903",
+        "name": "士紙",
+        "score": 0.5,
+        "phonetic_similarity": 0.5,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-08-26T19:09:34"
   }
 }
