@@ -247,10 +247,17 @@
     "wrong_keyword": "FOP"
   },
   "INTER|INTC": {
-    "confidence": "medium",
+    "wrong_keyword": "INTER",
     "correct_code": "INTC",
     "correct_name": "Intel",
-    "distinct_videos": 1,
+    "confidence": "medium",
+    "max_score": 65,
+    "observations": 2,
+    "distinct_videos": 2,
+    "video_ids": [
+      "79d5f228-bfee-4dc1-ba87-1f2a4061b904",
+      "f46319eb-bae4-401b-a480-453d111456a4"
+    ],
     "evidence": [
       {
         "channel": "財女珍妮",
@@ -266,16 +273,25 @@
         "source": "full_video_validator",
         "title": "AI泡沫，還是槓桿踩踏？Microsoft大漲、Meta重挫：AI燒錢為何兩種命運？｜2026/07/30 (四）",
         "video_id": "79d5f228-bfee-4dc1-ba87-1f2a4061b904"
+      },
+      {
+        "video_id": "f46319eb-bae4-401b-a480-453d111456a4",
+        "channel": "財女珍妮",
+        "date": "2026-08-27",
+        "title": "2026/08/27(四) 輝達財報大勝，股價為何先跌後漲？#CRM #CRWD",
+        "source": "full_video_validator",
+        "score": 65,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "stock_context"
+        ],
+        "context": "有漲到1%左右 現在大概又是漲了 0.75%左右 但是我覺得還是要延續到 等一下晚上的動能 或者是等一下台股開盤的時候 你就可以看到 是不是有一些慶祝的行情嘛 所以除了揮達在等財報之外呢 像是AMD、INTER 其實都是上漲的嘛 分別上漲了0.4% 跟0.9%左右 那像光通 昨天其實反彈的幅度 就會比較大一點點 像是Lomantan、Coherent 這些公司 或者是像Credo這種 就是跟高速互聯 比較相關的公司 或是Astralapse 這些公司呢 其實他的表現也相對比較好 然後還有一些存儲的版款 存儲昨天你看像 STX、WD-C 其實表現也都還蠻好的嘛 好 所以我們要進一步的來講了 揮達"
       }
     ],
-    "max_score": 65,
-    "observations": 1,
     "phonetic_candidates": [],
-    "updated_at": "2026-07-30T18:39:46",
-    "video_ids": [
-      "79d5f228-bfee-4dc1-ba87-1f2a4061b904"
-    ],
-    "wrong_keyword": "INTER"
+    "updated_at": "2026-08-28T01:45:34"
   },
   "Light, A.O.I|3711": {
     "confidence": "medium",
@@ -1237,7 +1253,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 65,
+    "observations": 66,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1282,7 +1298,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-08-26T18:29:16"
+    "updated_at": "2026-08-28T01:11:36"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -7166,5 +7182,311 @@
       }
     ],
     "updated_at": "2026-08-26T19:09:34"
+  },
+  "有意|9962": {
+    "wrong_keyword": "有意",
+    "correct_code": "9962",
+    "correct_name": "有益",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "e035b7c8-bcdb-4445-bbc5-8ee3e40fc7fa"
+    ],
+    "evidence": [
+      {
+        "video_id": "e035b7c8-bcdb-4445-bbc5-8ee3e40fc7fa",
+        "channel": "兆華與股惑仔",
+        "date": "2026-08-27",
+        "title": "EP1171｜輝達明年成長70%，AI霸主氣魄！毛利率要擔心嗎？台股壓尾盤但氣氛變好，老AI有殖，新技術有夢，記得停利！ft.型男股神 陳威良",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "那我不曉得是不是呢 兩岸隔了一個海峽之後 這個 題材的流行也會有一個時間查 查到這麼久嗎 是不是 我也不是清楚 不過最近確實 坊間開始大量流傳 這個8039臺鴻的小作文 而且我昨天收到一個小作 還蠻有意思的 他用最後一個目標價 然後建議強力買進 那根據2027年預估EPS 這個16塊錢 然後30倍本益比 那 結果他算出來的目標價 並不是16成30 明明是488 結果他給的目標價650 為什麼 所以這個小作文 可能是國文老師教的數學 覺得好像充滿了一些瑕疵 有點為了寒靜而寒靜 不曉得現在聽眾朋友有沒有 手邊也有收到過那一篇 那其實我覺得 當然你都可以收集資訊 不過提醒大家 有時候小作文 真的是 "
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "9962",
+        "name": "有益",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "2596",
+        "name": "綠意",
+        "score": 0.435,
+        "phonetic_similarity": 0.4,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "7584",
+        "name": "樂意",
+        "score": 0.435,
+        "phonetic_similarity": 0.4,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-08-28T01:25:02"
+  },
+  "生意科技|6130": {
+    "wrong_keyword": "生意科技",
+    "correct_code": "6130",
+    "correct_name": "上亞科技",
+    "confidence": "high",
+    "max_score": 97,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "e035b7c8-bcdb-4445-bbc5-8ee3e40fc7fa"
+    ],
+    "evidence": [
+      {
+        "video_id": "e035b7c8-bcdb-4445-bbc5-8ee3e40fc7fa",
+        "channel": "兆華與股惑仔",
+        "date": "2026-08-27",
+        "title": "EP1171｜輝達明年成長70%，AI霸主氣魄！毛利率要擔心嗎？台股壓尾盤但氣氛變好，老AI有殖，新技術有夢，記得停利！ft.型男股神 陳威良",
+        "source": "full_video_validator",
+        "score": 97,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "看技術籌碼 然後用你的想像 那股價就去創造這個 夢想的空間本夢筆 那當然就這一波來講的話 PTFV其實說實在的話 大概應該是兩個月前 剩後三個月前 中國有稍微流行過一段時間 那他們也有對應了廠商 叫做生意科技 那時候曾經一度大漲 但是後來他已經領先下跌 那我不曉得是不是呢 兩岸隔了一個海峽之後 這個 題材的流行也會有一個時間查 查到這麼久嗎 是不是 我也不是清楚 不過最近確實 坊間開始大量流傳 這個8039臺鴻的小作文 而且我昨天收到一個小作 還蠻有意思的 他用最後一個目標價 然後建議強力買進 那根據2027年預估EPS 這個16塊錢 然後30倍本益比 那 結果他算出來的目標價 並不是16成3",
+        "override_kind": "phonetic",
+        "override_reason": "phonetic_top1_needs_review",
+        "original_code": "6674",
+        "original_name": "鋐寶科技",
+        "phonetic_top_score": 0.707,
+        "phonetic_lead": 0.04399999999999993,
+        "needs_review": true
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "6130",
+        "name": "上亞科技",
+        "score": 0.707,
+        "phonetic_similarity": 0.818,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "4767",
+        "name": "誠泰科技",
+        "score": 0.663,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "6739",
+        "name": "竹陞科技",
+        "score": 0.554,
+        "phonetic_similarity": 0.583,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-08-28T01:25:25"
+  },
+  "灰達|3211": {
+    "wrong_keyword": "灰達",
+    "correct_code": "3211",
+    "correct_name": "順達",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "2cab75a2-4f6d-4220-9ea3-c43f2bbeba55"
+    ],
+    "evidence": [
+      {
+        "video_id": "2cab75a2-4f6d-4220-9ea3-c43f2bbeba55",
+        "channel": "財女珍妮",
+        "date": "2026-08-28",
+        "title": "2026/08/28(五) 輝達能撐住AI股嗎？軟體股大反彈 #CRM #CRWD #MRVL",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "看看 好 再看一下 昨天美股收盤的表現 稻穹工業指數上漲0.2% S&P 500指數上漲0.7% 納斯達克100指數上漲1.4% 費全半導體指數上漲2.3% 羅素2000指數上漲0.3% 那當然我們的灰達黃爸爸 帶領了美股往前衝 但是如果今天我們去看 整體的盤面的話 以稻穹工業指數來說 以前我們都講說 稻穹就是價值股 傳產股的天下 但是現在呢 稻穹也慢慢漲成了 科技股的樣子 稻穹30檔成分股裡面 只有6檔是上漲的 其中5檔呢 是Salesforce 灰達 IBM 微軟 蘋果 這些科技公司 所以你說現在 稻穹跟AI有沒有關係 其實也是還蠻有關係的嘛 是不是 好 可是昨天如果我們去看 利率的話 直",
+        "override_kind": "phonetic",
+        "override_reason": "phonetic_top1_needs_review",
+        "original_code": "NVDA",
+        "original_name": "NVIDIA",
+        "phonetic_top_score": 0.608,
+        "phonetic_lead": 0.0,
+        "needs_review": true
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3211",
+        "name": "順達",
+        "score": 0.608,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "4549",
+        "name": "桓達",
+        "score": 0.608,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "6576",
+        "name": "逸達",
+        "score": 0.565,
+        "phonetic_similarity": 0.6,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-08-28T01:35:48"
+  },
+  "Octa|OKTA": {
+    "wrong_keyword": "Octa",
+    "correct_code": "OKTA",
+    "correct_name": "Okta",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "2cab75a2-4f6d-4220-9ea3-c43f2bbeba55"
+    ],
+    "evidence": [
+      {
+        "video_id": "2cab75a2-4f6d-4220-9ea3-c43f2bbeba55",
+        "channel": "財女珍妮",
+        "date": "2026-08-28",
+        "title": "2026/08/28(五) 輝達能撐住AI股嗎？軟體股大反彈 #CRM #CRWD #MRVL",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "stock_context",
+          "code_in_context"
+        ],
+        "context": "合理的 那這幾天呢 我們也會再寫新的文章 來跟大家做更新 那如果有興趣的話 可以再到專欄去看新的文章 好 那我們剛剛講到的身份安全嘛 身份認證嘛 其實昨天有另外一家公司 漲了30% 那這家公司呢 就是Octa這家公司 OKTA 那你看這三家公司 其實都在講一樣的事情嘛 我們從 Salesforce 然後講到CrossTrack 講到Octa這些公司 它其實都是在告訴我們 其實這些軟體公司呢 它不是不會因為AI賺錢 它不是被AI取代 而是客戶需要時間 知道他們要怎麼樣去扭轉 我過往的行信 然後我過往的一些 工作模式 我要去導入AI 但是我還是要有一些 前置作業跟教育啊 那你這個前置作業跟教育的時"
+      }
+    ],
+    "phonetic_candidates": [],
+    "updated_at": "2026-08-28T01:35:49"
+  },
+  "揮達|3211": {
+    "wrong_keyword": "揮達",
+    "correct_code": "3211",
+    "correct_name": "順達",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "f46319eb-bae4-401b-a480-453d111456a4"
+    ],
+    "evidence": [
+      {
+        "video_id": "f46319eb-bae4-401b-a480-453d111456a4",
+        "channel": "財女珍妮",
+        "date": "2026-08-27",
+        "title": "2026/08/27(四) 輝達財報大勝，股價為何先跌後漲？#CRM #CRWD",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "哈囉,大家好,我是 Jenny 今天繼續來跟大家分享美股近期的大小事 今天是 2026 年的 8 月 27 號 禮拜四 接下來跟大家分享的主題是 揮達財報大勝,股價為什麼盤後先跌後漲 我覺得大家更想問的問題是 那今天開盤之後呢,會不會繼續載跌 那如果你想要每天快速掌握美股的變化 看懂 AI 產業跟公司的財報 記得先訂閱頻道,開啟小鈴鐺 也幫今天的直播按個讚 你的支持會讓更多同仁看到這個節目 也可以讓我們動力可以分享最新的財經資訊 先來看一下昨天美股的表現 盜窮公約指數下跌 0.2% S&P 500 指數是下跌 0.02% 基本上就是收在平盤的附",
+        "override_kind": "phonetic",
+        "override_reason": "phonetic_top1_needs_review",
+        "original_code": "NVDA",
+        "original_name": "NVIDIA",
+        "phonetic_top_score": 0.608,
+        "phonetic_lead": 0.0,
+        "needs_review": true
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3211",
+        "name": "順達",
+        "score": 0.608,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "4549",
+        "name": "桓達",
+        "score": 0.608,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "6576",
+        "name": "逸達",
+        "score": 0.565,
+        "phonetic_similarity": 0.6,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-08-28T01:45:34"
+  },
+  "SalesForce|CRM": {
+    "wrong_keyword": "SalesForce",
+    "correct_code": "CRM",
+    "correct_name": "Salesforce",
+    "confidence": "high",
+    "max_score": 90,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "f46319eb-bae4-401b-a480-453d111456a4"
+    ],
+    "evidence": [
+      {
+        "video_id": "f46319eb-bae4-401b-a480-453d111456a4",
+        "channel": "財女珍妮",
+        "date": "2026-08-27",
+        "title": "2026/08/27(四) 輝達財報大勝，股價為何先跌後漲？#CRM #CRWD",
+        "source": "full_video_validator",
+        "score": 90,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "stock_context"
+        ],
+        "context": "情 可不可以延續下去呢 軟體股在最近 因為有很多的財報公佈 今天不知道來不來得及 就是我們今天要講 SalesForce跟CrossTrack這兩家公司 在盤後 都是上漲了超過10% 我們前兩天才講過SalesForce 就是說 它的營收成長率 沒有辦法去超過兩位數的水準嘛 所以股價一直被壓在地上大 這一次呢 喔 營收年增率有超過10% 好像是11%吧 我剛剛在看財報的時候 所以呢 市場對於 這個AI末日論啊 還有對於 公司的這個緩慢的成長速度呢 稍微有了一點點信心 再加上公司的管理層 也告訴大家 所謂的AI末日呢 大概已經過去了啦 我們現在要迎來 是一個真正可以貨幣化 真正太弱流強 而我們就"
+      }
+    ],
+    "phonetic_candidates": [],
+    "updated_at": "2026-08-28T01:45:43"
   }
 }
