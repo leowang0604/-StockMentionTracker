@@ -1253,7 +1253,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 66,
+    "observations": 67,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1298,7 +1298,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-08-28T01:11:36"
+    "updated_at": "2026-08-29T00:45:11"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -7488,5 +7488,59 @@
     ],
     "phonetic_candidates": [],
     "updated_at": "2026-08-28T01:45:43"
+  },
+  "機優|5452": {
+    "wrong_keyword": "機優",
+    "correct_code": "5452",
+    "correct_name": "佶優",
+    "confidence": "high",
+    "max_score": 95,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "49b808a3-1423-441f-b298-3cbfaf5e5f1f"
+    ],
+    "evidence": [
+      {
+        "video_id": "49b808a3-1423-441f-b298-3cbfaf5e5f1f",
+        "channel": "兆華與股惑仔",
+        "date": "2026-08-28",
+        "title": "EP1172｜輝達破除魔咒，台股創反彈新高！投信曾經愛過的京元電、金像電起漲了，探針等回補，但欣興被搜索怎麼辦？ft.操盤手 黃豐凱",
+        "source": "phonetic-discovery",
+        "score": 95,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1"
+        ],
+        "context": "是有內控嗎 你覺得幫他做的事情 對不對 其實今天尾盤有一點點 就有人想要撿這個便宜 因為尾盤是有稍微收繳的 就表示有人覺得說 好像影響不太大 但是我個人比較像趙華的想法 就是說 因為他是投信的機優生 機優生是什麼 就是你沒有考100分 你就是不乖 不乖我就不愛你 不愛你就麻煩了 因為他們現在很愛他 你不愛他這樣就麻煩了 所以我常常講說 他就算不賣他 去買緊塑 他以後只買緊塑 這個對這個行情的變化 還是有影響很大 所以這個可以大家去注意一下 好 花點力氣跟大家聊著 不過剛剛也有提到 以前有一些投信的愛股 終於在今天看起來也OK的 例如說像金元殿 金像殿這一類的等等的 今天有點像是那種 比較落後的"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "5452",
+        "name": "佶優",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "3356",
+        "name": "奇偶",
+        "score": 0.52,
+        "phonetic_similarity": 0.8,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "8341",
+        "name": "日友",
+        "score": 0.52,
+        "phonetic_similarity": 0.8,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-08-29T00:58:52"
   }
 }
