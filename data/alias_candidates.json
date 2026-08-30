@@ -1253,7 +1253,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 68,
+    "observations": 69,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1298,7 +1298,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-08-29T19:32:44"
+    "updated_at": "2026-08-30T19:30:46"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -7542,5 +7542,67 @@
       }
     ],
     "updated_at": "2026-08-29T00:58:52"
+  },
+  "會達|3211": {
+    "wrong_keyword": "會達",
+    "correct_code": "3211",
+    "correct_name": "順達",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "c7229467-0cbd-48f8-92a5-cfa07136907d"
+    ],
+    "evidence": [
+      {
+        "video_id": "c7229467-0cbd-48f8-92a5-cfa07136907d",
+        "channel": "韭菜畢業班",
+        "date": "2026-08-30",
+        "title": "EP255 | 升息 / 欣興檢調",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "了一件事情 就是你如果 你能想像的話 我的空間是更大 所以他才會在當天 噴得比較多一點 我們先姑且不認禮拜我的走私 但是至少財報的那一天 財報的那一天 其實就有公佈出來他的氣勢 好另外一件事情就是說 會達這一次在AWS那一塊 成功拿下200萬克GPU的訂單 所以他 對於之前我們有講到 有些人可能會有疑慮 Google的TPU的威脅 或是說像是 Chinium這些智能晶片的一些威脅的話 他其實是有重生這一塊 所以就比較算是 免除掉市場的疑慮 另外一件事情就是說 以前我們過去追蹤到的 可能就是一些大型CSP廠 這個資本支出 只佔了FIDA數據中心業務的一半 另外一半是來自AiCloud 或是NEO",
+        "override_kind": "phonetic",
+        "override_reason": "phonetic_top1_needs_review",
+        "original_code": "NVDA",
+        "original_name": "NVIDIA",
+        "phonetic_top_score": 0.608,
+        "phonetic_lead": 0.0,
+        "needs_review": true
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3211",
+        "name": "順達",
+        "score": 0.608,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "4549",
+        "name": "桓達",
+        "score": 0.608,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "6576",
+        "name": "逸達",
+        "score": 0.565,
+        "phonetic_similarity": 0.6,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-08-30T19:39:17"
   }
 }
