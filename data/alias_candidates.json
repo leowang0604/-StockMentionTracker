@@ -1253,7 +1253,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 69,
+    "observations": 70,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1298,7 +1298,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-08-30T19:30:46"
+    "updated_at": "2026-08-31T21:40:06"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -4499,10 +4499,18 @@
     "wrong_keyword": "盛鴻"
   },
   "真頂ky|4958": {
-    "confidence": "high",
+    "wrong_keyword": "真頂ky",
     "correct_code": "4958",
     "correct_name": "臻鼎-KY",
-    "distinct_videos": 2,
+    "confidence": "high",
+    "max_score": 85,
+    "observations": 3,
+    "distinct_videos": 3,
+    "video_ids": [
+      "a275583d-746e-416d-a7ca-7bf69a134775",
+      "d86bbd8d-81f8-43eb-ade0-805bcbe02c1d",
+      "dbb62609-b8ec-4995-85a8-41c643834ec6"
+    ],
     "evidence": [
       {
         "channel": "兆華與股惑仔",
@@ -4546,39 +4554,55 @@
         "source": "explicit-ky-discovery",
         "title": "EP1159｜美超微、流明財報依舊好，晚上CPI是反彈考驗站？載板、矽晶圓、記憶體、被動選秀，誰是狀元籤？ft.型男股神 陳威良",
         "video_id": "d86bbd8d-81f8-43eb-ade0-805bcbe02c1d"
+      },
+      {
+        "video_id": "dbb62609-b8ec-4995-85a8-41c643834ec6",
+        "channel": "兆華與股惑仔",
+        "date": "2026-08-31",
+        "title": "EP1173｜華許說完讓升息機率大增，9月魔咒能破嗎？MSCI拉尾，Q4還有做夢行情！欣興賣不掉怎辦，盤點各利空該有的跌幅？ft.題材獵人 林漢偉",
+        "source": "explicit-ky-discovery",
+        "score": 48,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "phonetic_top1",
+          "weak_sector_match",
+          "strong_sector_mismatch"
+        ],
+        "context": "就先掛嘛 就能賣一定先賣 賣不掉的話 明天如果再一根 那就又觸到投信的停損點 停損點 那大家該怎麼處理 這就是大家現在會比較擔心的 但是會轉單給誰呢 其實六日就有人聊說 如果他是一般的PCB版 那可能真頂ky 會轉給金像墊 會轉給鑑頂 甚至會轉給這個華通 HDI 就是看他到底是哪一塊 現在有問題 然後再來 這些事情還不是我們說的算 你要看美國 美國人買這些產品說什麼 這很現實 說實話很現實 如果有人覺得我還是照買 因為很缺 我沒有在意你 習產地遮蔭之眼 逼之眼 可能事情就比較容易過去 但如果追究起來說 那這批我全部都不行 都不能買 這家公司的東西 可能很多東西都不能買 那個東西延續到後面 就比",
+        "override_kind": "explicit_ky",
+        "override_reason": "official_ky_identity_with_clear_phonetic_core",
+        "original_code": "4958",
+        "original_name": "臻鼎-KY",
+        "phonetic_top_score": 0.8,
+        "phonetic_lead": 0.30000000000000004
       }
     ],
-    "max_score": 85,
-    "observations": 2,
     "phonetic_candidates": [
       {
         "code": "4958",
         "name": "臻鼎-KY",
-        "phonetic_similarity": 1,
         "score": 0.65,
-        "text_similarity": 0
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.0
       },
       {
         "code": "5543",
         "name": "桓鼎-KY",
-        "phonetic_similarity": 0.7,
         "score": 0.455,
-        "text_similarity": 0
+        "phonetic_similarity": 0.7,
+        "text_similarity": 0.0
       },
       {
         "code": "1558",
         "name": "伸興",
-        "phonetic_similarity": 0.6,
         "score": 0.39,
-        "text_similarity": 0
+        "phonetic_similarity": 0.6,
+        "text_similarity": 0.0
       }
     ],
-    "updated_at": "2026-08-12T18:18:35",
-    "video_ids": [
-      "a275583d-746e-416d-a7ca-7bf69a134775",
-      "d86bbd8d-81f8-43eb-ade0-805bcbe02c1d"
-    ],
-    "wrong_keyword": "真頂ky"
+    "updated_at": "2026-08-31T21:54:54"
   },
   "碩合|3691": {
     "confidence": "high",
@@ -7604,5 +7628,127 @@
       }
     ],
     "updated_at": "2026-08-30T19:39:17"
+  },
+  "環語 KY|4991": {
+    "wrong_keyword": "環語 KY",
+    "correct_code": "4991",
+    "correct_name": "環宇-KY",
+    "confidence": "high",
+    "max_score": 97,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "dbb62609-b8ec-4995-85a8-41c643834ec6"
+    ],
+    "evidence": [
+      {
+        "video_id": "dbb62609-b8ec-4995-85a8-41c643834ec6",
+        "channel": "兆華與股惑仔",
+        "date": "2026-08-31",
+        "title": "EP1173｜華許說完讓升息機率大增，9月魔咒能破嗎？MSCI拉尾，Q4還有做夢行情！欣興賣不掉怎辦，盤點各利空該有的跌幅？ft.題材獵人 林漢偉",
+        "source": "explicit-ky-discovery",
+        "score": 97,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "實在國際股市沒有特別強 但台灣的林花英概念股特別強 你看全新說 我拿到一匹林花英的雞板 我拿到一匹雞板囉 對 就直接拉長平板 那林雅說我五年長 因為沒有供應的問題 股價今天也創下歷史的新高 然後文貿 環語 KY IT KY等等 那我覺得都代表說 其實台灣的資金 對於光通訊章的想像題材 還是特別的強 那今天連上全 這些也都是利空不跌而轉長 我覺得都是有一些族群性的存在 那當聯亞都能夠從1300塊 再度重返容量 歷史新高 對 太猛了 那就代表說 我覺得市場對這個族群的認同度 是高的 所以你就可以看到 今天連這個光學鏡頭股 他們為什麼能夠重返容量 也是因為光通訊的關係 所以這一整塊可以一併來看 就是",
+        "override_kind": "explicit_ky",
+        "override_reason": "official_ky_identity_with_clear_phonetic_core",
+        "original_code": "4991",
+        "original_name": "環宇-KY",
+        "phonetic_top_score": 0.9,
+        "phonetic_lead": 0.5
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "4991",
+        "name": "環宇-KY",
+        "score": 0.86,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.6
+      },
+      {
+        "code": "1338",
+        "name": "廣華-KY",
+        "score": 0.53,
+        "phonetic_similarity": 0.6,
+        "text_similarity": 0.4
+      },
+      {
+        "code": "5543",
+        "name": "桓鼎-KY",
+        "score": 0.53,
+        "phonetic_similarity": 0.6,
+        "text_similarity": 0.4
+      }
+    ],
+    "updated_at": "2026-08-31T21:54:54"
+  },
+  "星星|8183": {
+    "wrong_keyword": "星星",
+    "correct_code": "8183",
+    "correct_name": "精星",
+    "confidence": "high",
+    "max_score": 95,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "dbb62609-b8ec-4995-85a8-41c643834ec6"
+    ],
+    "evidence": [
+      {
+        "video_id": "dbb62609-b8ec-4995-85a8-41c643834ec6",
+        "channel": "兆華與股惑仔",
+        "date": "2026-08-31",
+        "title": "EP1173｜華許說完讓升息機率大增，9月魔咒能破嗎？MSCI拉尾，Q4還有做夢行情！欣興賣不掉怎辦，盤點各利空該有的跌幅？ft.題材獵人 林漢偉",
+        "source": "full_video_validator",
+        "score": 95,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1"
+        ],
+        "context": "日我就收到很多小作文了 也有說因為這一次的重災區 其實不是載板 星星被掃到的是PCB類的 或者是HDI版 所以6日就很多人在沙盤推演說 那可能會轉單到哪裡啊 誰可能受惠啊 不過我想最麻煩的就是 手上有星星的朋友 甚至投信 6日都有在討論 到底要怎麼樣把星星處理掉 但顯然今天3000多張的話 投信是處理不完的 甚至一般的三位朋友 可能掛單也賣不掉 那到底接下來的態勢如何發展 我先來歡迎今天的來賓 禮拜一幾乎固定就是他啦 我們的題材獵人漢偉哥 抓好哥就沒有搭好 因為上禮拜五的時候 消息剛傳出來 又是傳在這種1.20分的時候 所以星星的往下殺 大家可能還沒有意識到 有這麼嚴重 但是隨著6日的案情進展",
+        "override_kind": "phonetic",
+        "override_reason": "phonetic_top1_needs_review",
+        "original_code": "3037",
+        "original_name": "欣興",
+        "phonetic_top_score": 0.744,
+        "phonetic_lead": 0.08099999999999996,
+        "needs_review": true
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "8183",
+        "name": "精星",
+        "score": 0.744,
+        "phonetic_similarity": 0.875,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "1617",
+        "name": "榮星",
+        "score": 0.663,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "3025",
+        "name": "星通",
+        "score": 0.663,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-08-31T21:55:20"
   }
 }
