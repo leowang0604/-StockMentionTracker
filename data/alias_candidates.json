@@ -1253,7 +1253,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 70,
+    "observations": 71,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1298,7 +1298,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-08-31T21:40:06"
+    "updated_at": "2026-09-01T19:39:21"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -7750,5 +7750,182 @@
       }
     ],
     "updated_at": "2026-08-31T21:55:20"
+  },
+  "是新KY|3661": {
+    "wrong_keyword": "是新KY",
+    "correct_code": "3661",
+    "correct_name": "世芯-KY",
+    "confidence": "high",
+    "max_score": 85,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "fbff7eb8-704e-466e-af65-02d8ab666c61"
+    ],
+    "evidence": [
+      {
+        "video_id": "fbff7eb8-704e-466e-af65-02d8ab666c61",
+        "channel": "兆華與股惑仔",
+        "date": "2026-09-01",
+        "title": "EP1174｜聯發科和輝達結盟，台灣AI晶片10年大夢！大立光和聯亞，CPO純度不同？欣興沒跌停的看法，PCB照走業績之路！ft.AI達人蔡明翰",
+        "source": "explicit-ky-discovery",
+        "score": 85,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "今天非常的開心 然後也可以看到 例如說像今天 整個探針系列 也受到激勵 隱威 旺戲 通通都往上衝 整個高價的股票 通通都回來了 我覺得這是很有趣的 然後還有IP股 IP股當然今天創意 是創高後壓迴 但是新KY 利忘 IP股門也是容易 在這一波社會的 有全面都發動 那俠帶著明天有半導體戰 所以整個設備股 封測股 也都全體先進製程 全體一起被帶動 這個機率效果很驚人的原因是 台灣就是這麼一條 完整的產業供應鏈 那剛剛還提到 另外一個傳奇叫大力光 連發科跟大力光 都曾經是台股的史上的股王 攜態雙股王 兩個都俠帶著 非常強悍的氣勢回來 昨天有西光子論壇 那台積電提到一件事情是說 2027年西光子的普遍",
+        "override_kind": "explicit_ky",
+        "override_reason": "official_ky_identity_with_clear_phonetic_core",
+        "original_code": "3661",
+        "original_name": "世芯-KY",
+        "phonetic_top_score": 0.8,
+        "phonetic_lead": 0.35700000000000004
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3661",
+        "name": "世芯-KY",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "4557",
+        "name": "永新-KY",
+        "score": 0.624,
+        "phonetic_similarity": 0.556,
+        "text_similarity": 0.75
+      },
+      {
+        "code": "6451",
+        "name": "訊芯-KY",
+        "score": 0.581,
+        "phonetic_similarity": 0.625,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-09-01T19:58:02"
+  },
+  "新陽|1419": {
+    "wrong_keyword": "新陽",
+    "correct_code": "1419",
+    "correct_name": "新紡",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "fbff7eb8-704e-466e-af65-02d8ab666c61"
+    ],
+    "evidence": [
+      {
+        "video_id": "fbff7eb8-704e-466e-af65-02d8ab666c61",
+        "channel": "兆華與股惑仔",
+        "date": "2026-09-01",
+        "title": "EP1174｜聯發科和輝達結盟，台灣AI晶片10年大夢！大立光和聯亞，CPO純度不同？欣興沒跌停的看法，PCB照走業績之路！ft.AI達人蔡明翰",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "然的事情都排除 好 就回到星星本身 就各自好的公司 還是好的公司 我覺得這個 沒有什麼樣的問題 那星星本身 也要回到你自己持股 成本跟水位 我沒有講 如果剛好有人就說 蛤 我剛好禮拜 我看他創高 覺得新陽難耐就去買 這樣你壓力一定比較大 對不對 因為你 一定就限套了十幾二十% 那一定就是要按照 當初你買 他只是想要賺一個短線天頭 可是沒想到卻變成 一個套勞情況的話 可能就是得減 我個人覺得 持股的成本高 聽到剛剛明翰講的 你是風險存在的 那你到底扛不扛得住 這是起義 如果持股成本很低 搞不好一百兩百塊 就買星星的 我是根本就覺得沒差 對 就像我之前跟大家分享 我很久以前買了緊縮 其實中間很難再",
+        "override_kind": "phonetic",
+        "override_reason": "phonetic_top1_needs_review",
+        "original_code": "3037",
+        "original_name": "欣興",
+        "phonetic_top_score": 0.732,
+        "phonetic_lead": 0.0,
+        "needs_review": true
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "1419",
+        "name": "新紡",
+        "score": 0.732,
+        "phonetic_similarity": 0.857,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "2032",
+        "name": "新鋼",
+        "score": 0.732,
+        "phonetic_similarity": 0.857,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "4919",
+        "name": "新唐",
+        "score": 0.732,
+        "phonetic_similarity": 0.857,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-09-01T19:58:29"
+  },
+  "連發|1459": {
+    "wrong_keyword": "連發",
+    "correct_code": "1459",
+    "correct_name": "聯發",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "bf6d3544-a101-4050-bd3c-acfe9708a17f"
+    ],
+    "evidence": [
+      {
+        "video_id": "bf6d3544-a101-4050-bd3c-acfe9708a17f",
+        "channel": "財女珍妮",
+        "date": "2026-09-01",
+        "title": "2026/09/01(二) 輝達(NVDA)砸35億美元投資聯發科，買什麼？",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "期AI發展 所以是一個非常大規模的工程整合 他們說雙方正在執行的產品路線圖呢 是長達了10年 所以揮達這一次 你投入35億美元呢 你認購的是什麼 就是連發科海外的可轉換公司站嗎 我不是直接用現金收購 連發科的普通股 那可轉換公司站讓揮達呢 可以先取得債權人的位置 如果未來連發科的股價 他們兩個的合作成果 去達到了轉換的條件的話 那揮達也有可能會取得 股權上場的空間嘛 所以這是一筆呢 還蠻划算的交易 不管是在技術啊 市場啊 或者是未來的股價上面 只要AI可以持續的發展下去 只要AI可以持續的成長的話 就是一個共贏 或者是揮達以大影的一個局面 那對於連發科來說呢 其實我剛講共贏嘛 就是你今天你可以"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "1459",
+        "name": "聯發",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "2482",
+        "name": "連宇",
+        "score": 0.608,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "2454",
+        "name": "聯發科",
+        "score": 0.604,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.333
+      }
+    ],
+    "updated_at": "2026-09-01T20:07:37"
   }
 }
