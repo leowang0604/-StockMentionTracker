@@ -1253,7 +1253,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 71,
+    "observations": 72,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1298,7 +1298,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-09-01T19:39:21"
+    "updated_at": "2026-09-02T19:32:22"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -7927,5 +7927,168 @@
       }
     ],
     "updated_at": "2026-09-01T20:07:37"
+  },
+  "加登|3680": {
+    "wrong_keyword": "加登",
+    "correct_code": "3680",
+    "correct_name": "家登",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "c9011eb5-5492-430d-9a2a-562ea7d80c8a"
+    ],
+    "evidence": [
+      {
+        "video_id": "c9011eb5-5492-430d-9a2a-562ea7d80c8a",
+        "channel": "韭菜畢業班",
+        "date": "2026-09-02",
+        "title": "EP256 | 聯發科 / 矽光子",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "合在一起的話 它其實就會導致訊號延遲 它會直接縮減 10 到 20 倍 所以其實是快非常的多的 然後另外一件事情就是說 細光紙的這一塊繼續拉出來講 看到上游 IT 或連亞 先進製程的這些耗材 可能看到加登 紅塑 萬潤 其實在這一次 都有一點點 受到一些利多的影響 那我們就會持續的去看一下 這一次展覽之後 它可以帶來什麼東西 然後另外一件事情就是說 最近的 CPO 屬實算是非常的強 那我們看到像從光學鏡頭那邊 就可以看到大力光 然後玉金光 那他們其實都有所表現 那另外一個就是在 禮拜二的時候 有看到比較強的 就是光學檢測這一塊 有正式的被大家關注到 光學檢測這一塊的話 在之前禮拜二 APP 語音"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3680",
+        "name": "家登",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "3048",
+        "name": "益登",
+        "score": 0.639,
+        "phonetic_similarity": 0.714,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "2374",
+        "name": "佳能",
+        "score": 0.557,
+        "phonetic_similarity": 0.857,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-09-02T19:57:11"
+  },
+  "國央|2505": {
+    "wrong_keyword": "國央",
+    "correct_code": "2505",
+    "correct_name": "國揚",
+    "confidence": "high",
+    "max_score": 95,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "da988ff9-6e62-4993-9a12-a15baa6c2c8d"
+    ],
+    "evidence": [
+      {
+        "video_id": "da988ff9-6e62-4993-9a12-a15baa6c2c8d",
+        "channel": "兆華與股惑仔",
+        "date": "2026-09-02",
+        "title": "EP1175｜最後測試時間？9月升息機率破70%，全球央行升息潮？台達電瑕疵傳言，輝達新機能順利量產？避險到不太跌的股票？ft.選股教練 陳唯泰",
+        "source": "phonetic-discovery",
+        "score": 95,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1"
+        ],
+        "context": "到 這個證券戶去 這樣的態勢有明顯一些 那當然大家都知道 美國擔心生息嗎 然後還有就是 公在直立率跑上去 大家應該也已經理解了 他跟高科技股 中間就容易形成敲敲板 直立率上去 高科技股就受壓抑 現在各國央行 似乎也在吹生息風 例如日央 日央 日本的公債直立率 2%多 快要3% 這個都不是 我們以前會想像得到的現象 當生息的環境 就是資金比較容易回流到 各大央行 銀行去的一個狀況 所以今天維泰怎麼觀察呢 昨天我們自然 有自己開心的原因 但是今天開始 我們是不是要回到 看油價的臉色 然後看生息進度的臉色 好的 我想今天的這個盤式 很有趣 今天其實在整個指數的部分 是很明顯的一個下跌 那麼在價捐指數"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2505",
+        "name": "國揚",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "8936",
+        "name": "國統",
+        "score": 0.639,
+        "phonetic_similarity": 0.714,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "5410",
+        "name": "國眾",
+        "score": 0.581,
+        "phonetic_similarity": 0.625,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-09-02T20:09:30"
+  },
+  "日央|6208": {
+    "wrong_keyword": "日央",
+    "correct_code": "6208",
+    "correct_name": "日揚",
+    "confidence": "high",
+    "max_score": 95,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "da988ff9-6e62-4993-9a12-a15baa6c2c8d"
+    ],
+    "evidence": [
+      {
+        "video_id": "da988ff9-6e62-4993-9a12-a15baa6c2c8d",
+        "channel": "兆華與股惑仔",
+        "date": "2026-09-02",
+        "title": "EP1175｜最後測試時間？9月升息機率破70%，全球央行升息潮？台達電瑕疵傳言，輝達新機能順利量產？避險到不太跌的股票？ft.選股教練 陳唯泰",
+        "source": "phonetic-discovery",
+        "score": 95,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1"
+        ],
+        "context": "明顯一些 那當然大家都知道 美國擔心生息嗎 然後還有就是 公在直立率跑上去 大家應該也已經理解了 他跟高科技股 中間就容易形成敲敲板 直立率上去 高科技股就受壓抑 現在各國央行 似乎也在吹生息風 例如日央 日央 日本的公債直立率 2%多 快要3% 這個都不是 我們以前會想像得到的現象 當生息的環境 就是資金比較容易回流到 各大央行 銀行去的一個狀況 所以今天維泰怎麼觀察呢 昨天我們自然 有自己開心的原因 但是今天開始 我們是不是要回到 看油價的臉色 然後看生息進度的臉色 好的 我想今天的這個盤式 很有趣 今天其實在整個指數的部分 是很明顯的一個下跌 那麼在價捐指數 中長是下跌了784. 然後跌"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "6208",
+        "name": "日揚",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "6752",
+        "name": "叡揚",
+        "score": 0.557,
+        "phonetic_similarity": 0.857,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "3564",
+        "name": "其陽",
+        "score": 0.542,
+        "phonetic_similarity": 0.833,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-09-02T20:09:31"
   }
 }
