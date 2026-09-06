@@ -2953,62 +2953,6 @@
     ],
     "wrong_keyword" : "士德科技"
   },
-  "大力光|3008" : {
-    "confidence" : "high",
-    "correct_code" : "3008",
-    "correct_name" : "大立光",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "投資癮",
-        "context" : "階的成長獲利 或是下一半iPhone 18 Pro 可能會在4800萬畫素裡面 首度導入可變光圈 除了可能在Pro Max 上面獨享以外 前鏡頭2400萬畫素 Pro Max的長焦可能會到6倍 而其中大力光 是可變光圈的主要供應商 而預警光是第二大供應鏈 而整個光學族群 在這一個月裡來 都有代量代價的表現 但依照目前的狀況 都是傳聞 而且真的發生的時候 那個力度的反應 有沒有高過於大家的期待 如果有的話 價格可能會持續上去 如果沒有的話 就可能會出現一定的壓力 而兩間公司出關的時間 9月9號是預警光 9月12號是大力光 剛剛也就是蘋果發表會的那個凌晨 而依照食物上面的 我認為處置股的影響 還是",
-        "date" : "2026-09-06",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "name_distance<=1",
-          "phonetic_top1",
-          "stock_context",
-          "strong_sector_mismatch"
-        ],
-        "score" : 80,
-        "source" : "full_video_validator",
-        "title" : "EP345 投資的速度與幅度",
-        "video_id" : "f4c5a11e-4d82-4698-8192-167f7448a952"
-      }
-    ],
-    "max_score" : 80,
-    "observations" : 1,
-    "phonetic_candidates" : [
-      {
-        "code" : "3008",
-        "name" : "大立光",
-        "phonetic_similarity" : 1,
-        "score" : 0.883,
-        "text_similarity" : 0.667
-      },
-      {
-        "code" : "3218",
-        "name" : "大學光",
-        "phonetic_similarity" : 0.7,
-        "score" : 0.688,
-        "text_similarity" : 0.667
-      },
-      {
-        "code" : "2038",
-        "name" : "海光",
-        "phonetic_similarity" : 0.778,
-        "score" : 0.622,
-        "text_similarity" : 0.333
-      }
-    ],
-    "updated_at" : "2026-09-06T19:04:03",
-    "video_ids" : [
-      "f4c5a11e-4d82-4698-8192-167f7448a952"
-    ],
-    "wrong_keyword" : "大力光"
-  },
   "家股文|ORCL" : {
     "confidence" : "low",
     "correct_code" : "ORCL",
