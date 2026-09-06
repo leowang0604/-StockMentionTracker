@@ -1253,7 +1253,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 75,
+    "observations": 76,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1298,7 +1298,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-09-05T18:36:58"
+    "updated_at": "2026-09-06T18:40:52"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -7425,10 +7425,11 @@
     "correct_name": "順達",
     "confidence": "high",
     "max_score": 100,
-    "observations": 1,
-    "distinct_videos": 1,
+    "observations": 2,
+    "distinct_videos": 2,
     "video_ids": [
-      "f46319eb-bae4-401b-a480-453d111456a4"
+      "f46319eb-bae4-401b-a480-453d111456a4",
+      "f4c5a11e-4d82-4698-8192-167f7448a952"
     ],
     "evidence": [
       {
@@ -7447,6 +7448,30 @@
           "stock_context"
         ],
         "context": "哈囉,大家好,我是 Jenny 今天繼續來跟大家分享美股近期的大小事 今天是 2026 年的 8 月 27 號 禮拜四 接下來跟大家分享的主題是 揮達財報大勝,股價為什麼盤後先跌後漲 我覺得大家更想問的問題是 那今天開盤之後呢,會不會繼續載跌 那如果你想要每天快速掌握美股的變化 看懂 AI 產業跟公司的財報 記得先訂閱頻道,開啟小鈴鐺 也幫今天的直播按個讚 你的支持會讓更多同仁看到這個節目 也可以讓我們動力可以分享最新的財經資訊 先來看一下昨天美股的表現 盜窮公約指數下跌 0.2% S&P 500 指數是下跌 0.02% 基本上就是收在平盤的附",
+        "override_kind": "phonetic",
+        "override_reason": "phonetic_top1_needs_review",
+        "original_code": "NVDA",
+        "original_name": "NVIDIA",
+        "phonetic_top_score": 0.608,
+        "phonetic_lead": 0.0,
+        "needs_review": true
+      },
+      {
+        "video_id": "f4c5a11e-4d82-4698-8192-167f7448a952",
+        "channel": "投資癮",
+        "date": "2026-09-06",
+        "title": "EP345 投資的速度與幅度",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "但如果沒辦法抓到這個點的時候 那就慢一點點 比方說原本是日式交易的 變成周內交易 如果是周內交易的 變成周朵交易 你只要放慢一點步調 不要跟市場這麼貼近 你自然而然就可以解決這件事情了 現在上禮拜 揮達投資聯發客可轉債的部分 我認為這部分 沒有太多利多的消息 也不是什麼太多利空的消息 有資金來台灣投資是好事 但對於雙方來說各有利弊 以過去來說 揮達投資的公司真的太多了 過去投資在OpenAI 又投入Intel 而這段時間 投入的可轉債以外 這禮拜用129.3億美元 投入Hacking Face 我把這幾個報告看完之後 我覺得這部分 是補足揮達在晶片之外的 生態系的兩端 而聯發客公佈這件事情的訊",
         "override_kind": "phonetic",
         "override_reason": "phonetic_top1_needs_review",
         "original_code": "NVDA",
@@ -7479,7 +7504,7 @@
         "text_similarity": 0.5
       }
     ],
-    "updated_at": "2026-08-28T01:45:34"
+    "updated_at": "2026-09-06T19:03:43"
   },
   "SalesForce|CRM": {
     "wrong_keyword": "SalesForce",
@@ -8090,5 +8115,155 @@
       }
     ],
     "updated_at": "2026-09-02T20:09:31"
+  },
+  "NAT|NAT": {
+    "wrong_keyword": "NAT",
+    "correct_code": "NAT",
+    "correct_name": "NORDIC AMERICAN TANKERS Ltd",
+    "confidence": "medium",
+    "max_score": 55,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "b74e0f40-863c-4422-a19c-15283f344805"
+    ],
+    "evidence": [
+      {
+        "video_id": "b74e0f40-863c-4422-a19c-15283f344805",
+        "channel": "韭菜畢業班",
+        "date": "2026-09-06",
+        "title": "EP257 | 48000點不遠了 ？",
+        "source": "full_video_validator",
+        "score": 55,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "stock_context",
+          "code_in_context",
+          "strong_sector_mismatch"
+        ],
+        "context": "一些動能了 好那其實有幾個原因 第一個原因就是 我們會看像Del這一次的財報 好重點不在於Del財報 到底營收的數字 在於他裡面的電話會議 主管機有講的一句話 缺到爆 他把D-RUN講了三次 然後他把NAT也講了三次 所以這兩件事情 其實呼應到另外 我幫大家回想一下 有沒有想過 NVIDIA其實有發生過類似的事情 NVIDIA有講過 現在HBN的狀況下 所以限縮了我們的天花板 如果你今天HBN給我到位了 我的天花板會更高 Del也是給出了差不多的建議 好那我們來看 漲價的循環這件事情 現在是不是還成立呢 在9月份的D-RUN跟NAT的現貨價格 大約還有20%的上漲空間 好 另外一個重要的訊息就",
+        "override_kind": "exact_alias",
+        "override_reason": "known_identity_or_approved_alias",
+        "original_code": "AMD",
+        "original_name": "AMD"
+      }
+    ],
+    "phonetic_candidates": [],
+    "updated_at": "2026-09-06T18:49:20"
+  },
+  "大力光|3008": {
+    "wrong_keyword": "大力光",
+    "correct_code": "3008",
+    "correct_name": "大立光",
+    "confidence": "high",
+    "max_score": 80,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "f4c5a11e-4d82-4698-8192-167f7448a952"
+    ],
+    "evidence": [
+      {
+        "video_id": "f4c5a11e-4d82-4698-8192-167f7448a952",
+        "channel": "投資癮",
+        "date": "2026-09-06",
+        "title": "EP345 投資的速度與幅度",
+        "source": "full_video_validator",
+        "score": 80,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context",
+          "strong_sector_mismatch"
+        ],
+        "context": "階的成長獲利 或是下一半iPhone 18 Pro 可能會在4800萬畫素裡面 首度導入可變光圈 除了可能在Pro Max 上面獨享以外 前鏡頭2400萬畫素 Pro Max的長焦可能會到6倍 而其中大力光 是可變光圈的主要供應商 而預警光是第二大供應鏈 而整個光學族群 在這一個月裡來 都有代量代價的表現 但依照目前的狀況 都是傳聞 而且真的發生的時候 那個力度的反應 有沒有高過於大家的期待 如果有的話 價格可能會持續上去 如果沒有的話 就可能會出現一定的壓力 而兩間公司出關的時間 9月9號是預警光 9月12號是大力光 剛剛也就是蘋果發表會的那個凌晨 而依照食物上面的 我認為處置股的影響 還是"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3008",
+        "name": "大立光",
+        "score": 0.883,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "3218",
+        "name": "大學光",
+        "score": 0.688,
+        "phonetic_similarity": 0.7,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "2038",
+        "name": "海光",
+        "score": 0.622,
+        "phonetic_similarity": 0.778,
+        "text_similarity": 0.333
+      }
+    ],
+    "updated_at": "2026-09-06T19:04:03"
+  },
+  "滑星科|2492": {
+    "wrong_keyword": "滑星科",
+    "correct_code": "2492",
+    "correct_name": "華新科",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "f4c5a11e-4d82-4698-8192-167f7448a952"
+    ],
+    "evidence": [
+      {
+        "video_id": "f4c5a11e-4d82-4698-8192-167f7448a952",
+        "channel": "投資癮",
+        "date": "2026-09-06",
+        "title": "EP345 投資的速度與幅度",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "phonetic_top1",
+          "stock_context",
+          "weak_sector_match",
+          "strong_sector_match"
+        ],
+        "context": "但他們持有的部位 快速減少 持有1000張以上的人 持有的部位減少的速度更快 所以那些早期的買家正在下降部位 短線交易者的資金集中在小資金身上 而且不是只有果據 連帶去觀察其他被動元件的個股 現在的滑星科和身上等等 都是一樣的狀況 融資預約大部分集中在4到7月 而股東戶數 也在這段時間大幅度的上升 所以會認為 公關行銷還是比較強硬一點點 而不是實際買賣上面獲利者 大資金的股東還是有相對的影響力 所以重新評估一下 處置股的部分 大家可能會稍微理性一點點 對於處置股的東西 我會認為說可以做資金的輪轉 上次的教訓會對於這些新鮮 有一些些小小的警惕 就像我練拳一樣 我去年因為打拳的時候斷掉了我的手 接"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2492",
+        "name": "華新科",
+        "score": 0.694,
+        "phonetic_similarity": 0.889,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "3059",
+        "name": "華晶科",
+        "score": 0.694,
+        "phonetic_similarity": 0.889,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "3265",
+        "name": "台星科",
+        "score": 0.667,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.667
+      }
+    ],
+    "updated_at": "2026-09-06T19:04:46"
   }
 }
