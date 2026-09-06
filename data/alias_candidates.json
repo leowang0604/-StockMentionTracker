@@ -4796,63 +4796,6 @@
     ],
     "wrong_keyword" : "波羅維"
   },
-  "滑星科|2492" : {
-    "confidence" : "high",
-    "correct_code" : "2492",
-    "correct_name" : "華新科",
-    "distinct_videos" : 1,
-    "evidence" : [
-      {
-        "channel" : "投資癮",
-        "context" : "但他們持有的部位 快速減少 持有1000張以上的人 持有的部位減少的速度更快 所以那些早期的買家正在下降部位 短線交易者的資金集中在小資金身上 而且不是只有果據 連帶去觀察其他被動元件的個股 現在的滑星科和身上等等 都是一樣的狀況 融資預約大部分集中在4到7月 而股東戶數 也在這段時間大幅度的上升 所以會認為 公關行銷還是比較強硬一點點 而不是實際買賣上面獲利者 大資金的股東還是有相對的影響力 所以重新評估一下 處置股的部分 大家可能會稍微理性一點點 對於處置股的東西 我會認為說可以做資金的輪轉 上次的教訓會對於這些新鮮 有一些些小小的警惕 就像我練拳一樣 我去年因為打拳的時候斷掉了我的手 接",
-        "date" : "2026-09-06",
-        "reasons" : [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "name_distance=2",
-          "phonetic_top1",
-          "stock_context",
-          "weak_sector_match",
-          "strong_sector_match"
-        ],
-        "score" : 100,
-        "source" : "full_video_validator",
-        "title" : "EP345 投資的速度與幅度",
-        "video_id" : "f4c5a11e-4d82-4698-8192-167f7448a952"
-      }
-    ],
-    "max_score" : 100,
-    "observations" : 1,
-    "phonetic_candidates" : [
-      {
-        "code" : "2492",
-        "name" : "華新科",
-        "phonetic_similarity" : 0.889,
-        "score" : 0.694,
-        "text_similarity" : 0.333
-      },
-      {
-        "code" : "3059",
-        "name" : "華晶科",
-        "phonetic_similarity" : 0.889,
-        "score" : 0.694,
-        "text_similarity" : 0.333
-      },
-      {
-        "code" : "3265",
-        "name" : "台星科",
-        "phonetic_similarity" : 0.667,
-        "score" : 0.667,
-        "text_similarity" : 0.667
-      }
-    ],
-    "updated_at" : "2026-09-06T19:04:46",
-    "video_ids" : [
-      "f4c5a11e-4d82-4698-8192-167f7448a952"
-    ],
-    "wrong_keyword" : "滑星科"
-  },
   "滑通|2313" : {
     "confidence" : "high",
     "correct_code" : "2313",
