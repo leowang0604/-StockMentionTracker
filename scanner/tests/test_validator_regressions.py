@@ -999,12 +999,22 @@ class ValidatorRegressionTests(unittest.TestCase):
 
     def test_shared_resolver_accepts_scoped_context_alias(self):
         text = "被動元件族群裡面的滑星科，最近營收與股價都很強。"
-        decision = self.scanner._resolve_stock_correction(
-            "滑星科",
-            context=text,
-            suggested_code="3265",
-            policy="override",
-        )
+        # Keep this test focused on the scoped rule. A manual review may later
+        # promote the same alias into the global lookup indexes.
+        learned_stock_code = self.scanner.STOCK_DICT.pop("滑星科", None)
+        learned_name_code = self.scanner.NAME_TO_CODE.pop("滑星科", None)
+        try:
+            decision = self.scanner._resolve_stock_correction(
+                "滑星科",
+                context=text,
+                suggested_code="3265",
+                policy="override",
+            )
+        finally:
+            if learned_stock_code is not None:
+                self.scanner.STOCK_DICT["滑星科"] = learned_stock_code
+            if learned_name_code is not None:
+                self.scanner.NAME_TO_CODE["滑星科"] = learned_name_code
         self.assertEqual(decision["action"], "accept")
         self.assertEqual(decision["code"], "2492")
         self.assertEqual(decision["source"], "contextual_alias")
