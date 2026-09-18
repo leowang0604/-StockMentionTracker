@@ -1355,7 +1355,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 77,
+    "observations": 78,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1400,7 +1400,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-09-17T22:27:34"
+    "updated_at": "2026-09-18T19:15:08"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -8479,5 +8479,60 @@
       }
     ],
     "updated_at": "2026-09-18T00:40:43"
+  },
+  "利旺|3529": {
+    "wrong_keyword": "利旺",
+    "correct_code": "3529",
+    "correct_name": "力旺",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "c624169f-dd8d-4382-b15f-166b10159b63"
+    ],
+    "evidence": [
+      {
+        "video_id": "c624169f-dd8d-4382-b15f-166b10159b63",
+        "channel": "兆華與股惑仔",
+        "date": "2026-09-18",
+        "title": "EP1187｜台灣不升，半導體高升？市場氣氛好轉，哪些產業就算漲停還是便宜？拚創高還是等補漲？CoWos太滿，英特爾有機會了？ft.操盤手 黃豐凱",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "有這種事情 基本上還是有很多時間 可以讓大家去佈局的 就像剛剛講到的 雖然在APP股裡面 創意現在得天賭後 看來到明年 都目前聽到的訊息 都還是得天賭後 都還得天賭後 可是如果大家喜歡 像Apple 利旺 或是四星ky好了 他們可能就是需要花一點時間 可是位階相對 會比較低一點點 而他們也有 他們各自的技術實力 也沒有那麼差 那昨天的話 其實每一股 有一檔股票也漲不少 叫做Intel 我們已經這三四年來 不斷地處理 就是Intel 到底會不會超車台積電 雖然 我們可以很 斬釘截鐵的說不容易 不過 Intel最近的動作 真的是滿多的 所以不定時 還是會引起大家的擔憂 就像Intel成立五 昨天就"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3529",
+        "name": "力旺",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "1475",
+        "name": "業旺",
+        "score": 0.608,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "6219",
+        "name": "富旺",
+        "score": 0.608,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-09-18T19:27:21"
   }
 }
