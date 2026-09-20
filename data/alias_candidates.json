@@ -1355,7 +1355,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 79,
+    "observations": 80,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1400,7 +1400,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-09-19T18:59:41"
+    "updated_at": "2026-09-20T19:05:37"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -8534,5 +8534,182 @@
       }
     ],
     "updated_at": "2026-09-18T19:27:21"
+  },
+  "臺藥|6274": {
+    "wrong_keyword": "臺藥",
+    "correct_code": "6274",
+    "correct_name": "台燿",
+    "confidence": "high",
+    "max_score": 72,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "61d39e2c-b521-4d68-a460-c02cd0031dc7"
+    ],
+    "evidence": [
+      {
+        "video_id": "61d39e2c-b521-4d68-a460-c02cd0031dc7",
+        "channel": "韭菜畢業班",
+        "date": "2026-09-20",
+        "title": "EP260 | CCL 真的不需要了嗎 ？聯電東山再起",
+        "source": "full_video_validator",
+        "score": 72,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "phonetic_top3",
+          "phonetic_conflict",
+          "stock_context"
+        ],
+        "context": "CL的這一塊 所以因為要做這些事情的升級 臺光電其實就已經規劃 每月的一萬一百萬張的產能 它必須要去轉向在AI的 這種栽培版CCL身上 那反而為什麼他們會在這個時候 要去瘋狂的擴產 然後可能我們看到像臺藥 泰國新廠那邊 三月底也開出了30萬的月產能 然後EXCRE需求級 它還是持續的吃到 另外一個就是聯貿 它目前主要聚焦的就是 通用型 一個通用型的伺服器機板 那通用型的伺服器機板的話 大概占了六成左右 其實公司當然不是低能額 就是會一直擴產就代表有需求 但是我現在就是有一種感覺 是我們以往熟知的這些龍頭的概念股 譬如我們再舉例一個 像國具好了 那臺光電 他們最近就是很容易 受到一些消息的影響 ",
+        "override_kind": "exact_alias",
+        "override_reason": "known_identity_or_approved_alias",
+        "original_code": "3338",
+        "original_name": "泰碩"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "1737",
+        "name": "臺鹽",
+        "score": 0.717,
+        "phonetic_similarity": 0.833,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "4746",
+        "name": "台耀",
+        "score": 0.65,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "6274",
+        "name": "台燿",
+        "score": 0.65,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-09-20T19:11:20"
+  },
+  "金元店|8042": {
+    "wrong_keyword": "金元店",
+    "correct_code": "8042",
+    "correct_name": "金山電",
+    "confidence": "high",
+    "max_score": 97,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "ba3326f1-950a-4ea2-82a7-e33b80fcd808"
+    ],
+    "evidence": [
+      {
+        "video_id": "ba3326f1-950a-4ea2-82a7-e33b80fcd808",
+        "channel": "投資癮",
+        "date": "2026-09-20",
+        "title": "EP347 新走勢配舊故事",
+        "source": "full_video_validator",
+        "score": 97,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "但量能還是不夠大 所以從這個角度來看也可以知道 基本面的部分依然沒有轉差 依然持續成長 但是因為市場的量能 沒有辦法放大 所以右側交代上面 才會比較難做一點點 另外的族群 主要是封測族群 像封測族群的金元店 第二季的EPS2.04元 5G的新高 上半年的營業利率 年增51% 系格在第二季的部分 EPS2.55元 是近40G的新高 資本支出上銷的88億元 新權的第二季的EPS是2.44元 毛利率40.2% 價當率第一季70% 第二季73% 第三季的部分 預估持續上升 公司的第三季營收 雙成長雙季增 上半年的資本支出 是70.1億元 明年會更高 而且目前 他調降他的股利 配發率來配合 而第六月光的",
+        "override_kind": "phonetic",
+        "override_reason": "phonetic_top1_needs_review",
+        "original_code": "2449",
+        "original_name": "京元電子",
+        "phonetic_top_score": 0.648,
+        "phonetic_lead": 0.04400000000000004,
+        "needs_review": true
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "8042",
+        "name": "金山電",
+        "score": 0.648,
+        "phonetic_similarity": 0.818,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "2368",
+        "name": "金像電",
+        "score": 0.604,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "2449",
+        "name": "京元電子",
+        "score": 0.598,
+        "phonetic_similarity": 0.786,
+        "text_similarity": 0.25
+      }
+    ],
+    "updated_at": "2026-09-20T19:18:02"
+  },
+  "系格|6257": {
+    "wrong_keyword": "系格",
+    "correct_code": "6257",
+    "correct_name": "矽格",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "ba3326f1-950a-4ea2-82a7-e33b80fcd808"
+    ],
+    "evidence": [
+      {
+        "video_id": "ba3326f1-950a-4ea2-82a7-e33b80fcd808",
+        "channel": "投資癮",
+        "date": "2026-09-20",
+        "title": "EP347 新走勢配舊故事",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "然持續成長 但是因為市場的量能 沒有辦法放大 所以右側交代上面 才會比較難做一點點 另外的族群 主要是封測族群 像封測族群的金元店 第二季的EPS2.04元 5G的新高 上半年的營業利率 年增51% 系格在第二季的部分 EPS2.55元 是近40G的新高 資本支出上銷的88億元 新權的第二季的EPS是2.44元 毛利率40.2% 價當率第一季70% 第二季73% 第三季的部分 預估持續上升 公司的第三季營收 雙成長雙季增 上半年的資本支出 是70.1億元 明年會更高 而且目前 他調降他的股利 配發率來配合 而第六月光的部分 第二季的基本EPS4.8元 18G的新高 稀釋之後4.6億元 整理來說"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "6257",
+        "name": "矽格",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "1227",
+        "name": "佳格",
+        "score": 0.565,
+        "phonetic_similarity": 0.6,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "6231",
+        "name": "系微",
+        "score": 0.565,
+        "phonetic_similarity": 0.6,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-09-20T19:18:02"
   }
 }
