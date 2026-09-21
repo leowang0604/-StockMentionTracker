@@ -1355,7 +1355,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 80,
+    "observations": 81,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1400,7 +1400,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-09-20T19:05:37"
+    "updated_at": "2026-09-21T20:40:49"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -8711,5 +8711,66 @@
       }
     ],
     "updated_at": "2026-09-20T19:18:02"
+  },
+  "晶圓電|2449": {
+    "wrong_keyword": "晶圓電",
+    "correct_code": "2449",
+    "correct_name": "京元電子",
+    "confidence": "high",
+    "max_score": 85,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "3fc1f823-d81d-4fa7-9188-488d0e21b123"
+    ],
+    "evidence": [
+      {
+        "video_id": "3fc1f823-d81d-4fa7-9188-488d0e21b123",
+        "channel": "兆華與股惑仔",
+        "date": "2026-09-21",
+        "title": "EP1188｜美中AI談、台股AI彈，川習會、台積電論壇、中秋連假前，漲停低價股迷人，但重挫的龍頭型股票才能放過節？ft.題材獵人 林漢偉",
+        "source": "full_video_validator",
+        "score": 85,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "你喜歡的股票 去做一些分批的成績 因為都是高價的股票 所以可能大家都是要用那種 一部分的資金來規劃 那這個所謂的 彈針卡的一個拉回 但我們剛剛提到 如果同樣情況 那你看到星權 星權股價反而最近很強 那晶圓電有風 也有測的 股價也慢慢轉向上去 所以才會跟大家講 不是產業面的問題 應該是個別 可能在籌碼上面 受到一定的一個影響 那大家我們講 剛剛那個一個所謂的產業的分析 是要跟大家講 目前看起來 我們並沒有看到 彈針卡有真的很大的一個 產業面的反轉 所以反過來就是 大家可以去做一些 遇到倒霉式的一個低檔的承接 我們來舉幾個例子 像剛剛提到的聯發科今天創新高 但8月份聯發科其實非常弱 他一度跌破半年",
+        "override_kind": "phonetic",
+        "override_reason": "phonetic_top1_needs_review",
+        "original_code": "1503",
+        "original_name": "士電",
+        "phonetic_top_score": 0.645,
+        "phonetic_lead": 0.041000000000000036,
+        "needs_review": true
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2449",
+        "name": "京元電子",
+        "score": 0.645,
+        "phonetic_similarity": 0.857,
+        "text_similarity": 0.25
+      },
+      {
+        "code": "3257",
+        "name": "虹冠電",
+        "score": 0.604,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "8042",
+        "name": "金山電",
+        "score": 0.604,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.333
+      }
+    ],
+    "updated_at": "2026-09-21T20:58:06"
   }
 }
