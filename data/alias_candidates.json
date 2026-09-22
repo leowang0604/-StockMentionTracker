@@ -1355,7 +1355,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 81,
+    "observations": 82,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1400,7 +1400,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-09-21T20:40:49"
+    "updated_at": "2026-09-22T19:55:38"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -8772,5 +8772,66 @@
       }
     ],
     "updated_at": "2026-09-21T20:58:06"
+  },
+  "世新KY|3661": {
+    "wrong_keyword": "世新KY",
+    "correct_code": "3661",
+    "correct_name": "世芯-KY",
+    "confidence": "high",
+    "max_score": 97,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "3a268dd1-91d1-40ae-bcdd-cf522774a0b7"
+    ],
+    "evidence": [
+      {
+        "video_id": "3a268dd1-91d1-40ae-bcdd-cf522774a0b7",
+        "channel": "兆華與股惑仔",
+        "date": "2026-09-22",
+        "title": "EP1189｜台股創歷史新高！長上影線不怕，美股跟上就化解，Intel、Meta大漲是正面情緒表態，盤點真AI續航力個股？ft.AI達人 蔡明翰",
+        "source": "explicit-ky-discovery",
+        "score": 97,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "外資出報告直接給他上調到1萬元 我記得 明凱也有講過創意 還有前兩天我們有聊IP 如果大家喜歡 趨勢強的就是追創意 因為台積電子公司直接受惠 趨勢最好創新高萬里無雲 喜歡等 就等什麼利忘啊 愛普啊 世新KY有他自己 可能營收目前沒有達到 市場上預期的狀態 所以今天就算你去等 利忘的人其實也有賺到錢 那就是看你高低上面的一些想法 那還有友達講了好幾次就是說 之前趙華一直都講說群創 現在友達在複製群創 當時的那個story 賣場啊 賣場的對象 應該是台積電 大家要留意 台積電到目前為止沒有正面 承認過他買了群創的廠 跟友達的廠 但是市場上的人都了然於兇 那他裝科廠應該是賣給台積電 那有傳輸跟int",
+        "override_kind": "explicit_ky",
+        "override_reason": "official_ky_identity_with_clear_phonetic_core",
+        "original_code": "3661",
+        "original_name": "世芯-KY",
+        "phonetic_top_score": 0.9,
+        "phonetic_lead": 0.457
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3661",
+        "name": "世芯-KY",
+        "score": 0.912,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.75
+      },
+      {
+        "code": "4557",
+        "name": "永新-KY",
+        "score": 0.624,
+        "phonetic_similarity": 0.556,
+        "text_similarity": 0.75
+      },
+      {
+        "code": "6451",
+        "name": "訊芯-KY",
+        "score": 0.581,
+        "phonetic_similarity": 0.625,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-09-22T20:11:24"
   }
 }
