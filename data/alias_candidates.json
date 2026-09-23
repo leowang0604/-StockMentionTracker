@@ -1355,7 +1355,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 82,
+    "observations": 83,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1400,7 +1400,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-09-22T19:55:38"
+    "updated_at": "2026-09-23T19:52:41"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -4955,10 +4955,17 @@
     "wrong_keyword": "漢堂"
   },
   "灰達|3211": {
-    "confidence": "high",
+    "wrong_keyword": "灰達",
     "correct_code": "3211",
     "correct_name": "順達",
-    "distinct_videos": 1,
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 2,
+    "distinct_videos": 2,
+    "video_ids": [
+      "2cab75a2-4f6d-4220-9ea3-c43f2bbeba55",
+      "7de9c284-4ccd-4247-bbb7-c12d35676d4f"
+    ],
     "evidence": [
       {
         "channel": "財女珍妮",
@@ -4982,38 +4989,56 @@
         "source": "full_video_validator",
         "title": "2026/08/28(五) 輝達能撐住AI股嗎？軟體股大反彈 #CRM #CRWD #MRVL",
         "video_id": "2cab75a2-4f6d-4220-9ea3-c43f2bbeba55"
+      },
+      {
+        "video_id": "7de9c284-4ccd-4247-bbb7-c12d35676d4f",
+        "channel": "財女珍妮",
+        "date": "2026-09-23",
+        "title": "2026/09/23(三) 費半續強，台股創高，反彈剛開始？",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "體相關的類估 還是持續的向上反彈 Mata昨天在前一天上漲了11%之後 昨天是小跌了0.6%左右 但是半導體 像是AMD還是上漲了1.3% Intel還是上漲了1.7% ARM還是上漲了3.2%左右 灰達呢 在昨天也是上漲了0.7% 以及美光 美光在昨天是上漲了5% 市場繼續買進半導體 然後還有延伸出去 開始跟Mata有一些合作的公司 比如說像Shopify 比如說像Papel這些公司 它也是有不錯的表現 但是我們今天還要再跟大家討論一個話題 這個話題是什麼呢 就是當你的AI帶領 幫你做很多事情 上網訂票 規劃旅遊行程 甚至可以登入你的一些隱私的帳戶 那我們今天過往的消費習慣 是不是也會有所改",
+        "override_kind": "phonetic",
+        "override_reason": "phonetic_top1_needs_review",
+        "original_code": "NVDA",
+        "original_name": "NVIDIA",
+        "phonetic_top_score": 0.608,
+        "phonetic_lead": 0.0,
+        "needs_review": true
       }
     ],
-    "max_score": 100,
-    "observations": 1,
     "phonetic_candidates": [
       {
         "code": "3211",
         "name": "順達",
-        "phonetic_similarity": 0.667,
         "score": 0.608,
+        "phonetic_similarity": 0.667,
         "text_similarity": 0.5
       },
       {
         "code": "4549",
         "name": "桓達",
-        "phonetic_similarity": 0.667,
         "score": 0.608,
+        "phonetic_similarity": 0.667,
         "text_similarity": 0.5
       },
       {
         "code": "6576",
         "name": "逸達",
-        "phonetic_similarity": 0.6,
         "score": 0.565,
+        "phonetic_similarity": 0.6,
         "text_similarity": 0.5
       }
     ],
-    "updated_at": "2026-08-28T01:35:48",
-    "video_ids": [
-      "2cab75a2-4f6d-4220-9ea3-c43f2bbeba55"
-    ],
-    "wrong_keyword": "灰達"
+    "updated_at": "2026-09-23T20:33:12"
   },
   "為剛|3260": {
     "confidence": "high",
