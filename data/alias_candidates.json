@@ -781,10 +781,17 @@
     "wrong_keyword": "一張"
   },
   "上全|3363": {
-    "confidence": "high",
+    "wrong_keyword": "上全",
     "correct_code": "3363",
     "correct_name": "上詮",
-    "distinct_videos": 1,
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 2,
+    "distinct_videos": 2,
+    "video_ids": [
+      "401131f0-6382-4caa-abfd-3e6b5dda0c73",
+      "97a5988d-66d4-454f-8062-ab8c76a1cbbf"
+    ],
     "evidence": [
       {
         "channel": "兆華與股惑仔",
@@ -802,38 +809,49 @@
         "source": "phonetic-discovery",
         "title": "EP1128｜反彈體感不理想，買太滿、高檔套牢變多，信心受動搖？如何降壓又不錯過行情？康寧發展玻璃橋接殺傷CPO？ft.題材獵人 林漢偉",
         "video_id": "97a5988d-66d4-454f-8062-ab8c76a1cbbf"
+      },
+      {
+        "video_id": "401131f0-6382-4caa-abfd-3e6b5dda0c73",
+        "channel": "財女珍妮",
+        "date": "2026-09-24",
+        "title": "2026/09/24(四) 10年債破5%，AI要回檔？",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "家現在看到 昨天我們看到比較強的是這一塊 但是現在 其實真的都是有在輪動當中的 像你如果去看上櫃的話 比如說金冊 昨天大跌超過6%嘛 但是你說這種AI測試的部分 沒有了嗎 沒有啊 那你說CPU呢 像是上全啊 或是華興光啊 這一類股票 在昨天其實也是比較弱的 但是 它也只是因為可能之前有反彈 然後 可能現在外資法人 他們可能開始有一些動作的時候 然後就開始有一些變化 建設之前不是也是很慘嗎 對不對 但是後來大家消化了之後 好的公司或者是你真的有基本面 你真的有營收成長的公司 他還是可以在被挫殺 或者是在情緒的殺盤之後呢 他開始往上的 所以如果我們再去帶 昨天台灣的這個製造業生產的數據啊 或者是相"
       }
     ],
-    "max_score": 100,
-    "observations": 1,
     "phonetic_candidates": [
       {
         "code": "3363",
         "name": "上詮",
-        "phonetic_similarity": 1,
         "score": 0.825,
+        "phonetic_similarity": 1.0,
         "text_similarity": 0.5
       },
       {
         "code": "9939",
         "name": "宏全",
-        "phonetic_similarity": 0.778,
         "score": 0.681,
+        "phonetic_similarity": 0.778,
         "text_similarity": 0.5
       },
       {
         "code": "1316",
         "name": "上曜",
-        "phonetic_similarity": 0.667,
         "score": 0.608,
+        "phonetic_similarity": 0.667,
         "text_similarity": 0.5
       }
     ],
-    "updated_at": "2026-06-29T19:11:38",
-    "video_ids": [
-      "97a5988d-66d4-454f-8062-ab8c76a1cbbf"
-    ],
-    "wrong_keyword": "上全"
+    "updated_at": "2026-09-24T20:36:59"
   },
   "中美金|2891": {
     "confidence": "high",
@@ -1355,7 +1373,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 83,
+    "observations": 84,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1400,7 +1418,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-09-23T19:52:41"
+    "updated_at": "2026-09-24T20:11:49"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -8858,5 +8876,120 @@
       }
     ],
     "updated_at": "2026-09-22T20:11:24"
+  },
+  "見測|3653": {
+    "wrong_keyword": "見測",
+    "correct_code": "3653",
+    "correct_name": "健策",
+    "confidence": "high",
+    "max_score": 97,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "e7ba1ffd-a161-4a69-952e-e31d53948d0a"
+    ],
+    "evidence": [
+      {
+        "video_id": "e7ba1ffd-a161-4a69-952e-e31d53948d0a",
+        "channel": "兆華與股惑仔",
+        "date": "2026-09-24",
+        "title": "EP1191｜台股高標過中秋，連假觀察重心是油價！CCL、載板甩開陰霾，投信節後要追績效，台積電供應鏈是首選？ft.操盤手 黃豐凱",
+        "source": "full_video_validator",
+        "score": 97,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "開始在集結了 就是如果你這個ABFCC 基本上還是很弱 那你就要擔心中秋節過後 你的報股過年可能 報股過中秋可能是有點問題 可是目前這個主力部隊開始在集結 雖然今天沒有很亮眼 因為今天最亮眼的應該還是見測 但是我覺得見測的量的往上走 基本上是因為他型態突破 他不是法人大買 你還要搞清楚 基本上老實講 目前見測的一片是 要跟晶片結合這件事情 其實老實講還有一點難度 因為在這個結合的上面 他在製程上面 目前還在一個瓶頸的過程裡面 所以他只跟你講說 他們認為 未來還是會從兩片式回來一片式 沒錯 製程上是這樣沒錯 但是在製程上面 目前很實際的就是 這個三二片 要跟晶片結合這件事情 而且要很平整 其實這",
+        "override_kind": "phonetic",
+        "override_reason": "phonetic_top1_needs_review",
+        "original_code": "6510",
+        "original_name": "精測",
+        "phonetic_top_score": 0.65,
+        "phonetic_lead": 0.04200000000000004,
+        "needs_review": true
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3653",
+        "name": "健策",
+        "score": 0.65,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "6510",
+        "name": "精測",
+        "score": 0.608,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "7856",
+        "name": "漢測",
+        "score": 0.608,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-09-24T20:25:52"
+  },
+  "指甲公司|ZS": {
+    "wrong_keyword": "指甲公司",
+    "correct_code": "ZS",
+    "correct_name": "Zscaler",
+    "confidence": "medium",
+    "max_score": 65,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "401131f0-6382-4caa-abfd-3e6b5dda0c73"
+    ],
+    "evidence": [
+      {
+        "video_id": "401131f0-6382-4caa-abfd-3e6b5dda0c73",
+        "channel": "財女珍妮",
+        "date": "2026-09-24",
+        "title": "2026/09/24(四) 10年債破5%，AI要回檔？",
+        "source": "full_video_validator",
+        "score": 65,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "stock_context"
+        ],
+        "context": "是後來 大家市場情緒消化了以後 表現的好像就沒有那麼的好 但是在最近 市場上面又重新的 再把這些資金 再把關注的程度 去放到這幾家公司上面了 我覺得除了這四家公司之外 其實我們近期 講到Zscaler指甲公司 或者是相關的一些 跟資安有關 像Okada 最近其實股價的表現 也是還蠻強的 其實他們也都是跟身份認證 他們也都是跟 你整個工作流程的管理 資安的管理 其實有比較大的關係 所以我還是照我們之前講的 就是你如果今天 真的要看軟體股的話 其實是可以從資安的領域 去做一個切入 我覺得它算是一個 比較好 或者是至少你可以比較 能看到它未來的能見度的 一個產業 好 我們最後十分鐘 一樣我們就延續昨"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2035",
+        "name": "唐榮公司",
+        "score": 0.454,
+        "phonetic_similarity": 0.429,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "5245",
+        "name": "智晶",
+        "score": 0.379,
+        "phonetic_similarity": 0.583,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "6768",
+        "name": "志強-KY",
+        "score": 0.379,
+        "phonetic_similarity": 0.583,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-09-24T20:36:53"
   }
 }
