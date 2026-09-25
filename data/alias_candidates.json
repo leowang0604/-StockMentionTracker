@@ -1373,7 +1373,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 84,
+    "observations": 85,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1418,7 +1418,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-09-24T20:11:49"
+    "updated_at": "2026-09-25T20:10:19"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -8991,5 +8991,67 @@
       }
     ],
     "updated_at": "2026-09-24T20:36:53"
+  },
+  "四星|2377": {
+    "wrong_keyword": "四星",
+    "correct_code": "2377",
+    "correct_name": "微星",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "d017e545-6f40-44a3-a9d2-79a6ca988b5f"
+    ],
+    "evidence": [
+      {
+        "video_id": "d017e545-6f40-44a3-a9d2-79a6ca988b5f",
+        "channel": "財女珍妮",
+        "date": "2026-09-25",
+        "title": "2026/09/25(五) 中秋變盤？AI最大瓶頸在哪？",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "就是在 ASP 或者是 IPR 這一類的題材 它去做一個操作 那因為 就是昨天大概就是 這個精心科 M3E 這一類的 在節後的時候 如果今天可以有更多的 ASP 設計的 這些服務 或者是創意 或者是 四星啊 相關的這些公司 它還可以維持比較強勢的話 其實我覺得 大家都可以再去做一個 關注跟 看你有沒有要去做一些配置 因為我自己會認為 這一類的公司 它其實獲利的動能 其實相對來說是比較強的 你今天你的獲利動能強 你的 EPS 彈性比較高的話 其實在股價的表現上面 有的時候它只要一發動 它的動能其實也相對 會是比較強勢一點點的 好 那我們就 今天先分享到這邊 也祝大家有一個愉快的廉價 對不對 每天",
+        "override_kind": "phonetic",
+        "override_reason": "phonetic_top1_needs_review",
+        "original_code": "3661",
+        "original_name": "世芯-KY",
+        "phonetic_top_score": 0.639,
+        "phonetic_lead": 0.0,
+        "needs_review": true
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2377",
+        "name": "微星",
+        "score": 0.639,
+        "phonetic_similarity": 0.714,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "5007",
+        "name": "三星",
+        "score": 0.639,
+        "phonetic_similarity": 0.714,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "8183",
+        "name": "精星",
+        "score": 0.581,
+        "phonetic_similarity": 0.625,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-09-25T20:19:23"
   }
 }
