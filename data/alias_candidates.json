@@ -1373,7 +1373,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 85,
+    "observations": 86,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1418,7 +1418,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-09-25T20:10:19"
+    "updated_at": "2026-09-26T19:27:55"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -4011,10 +4011,17 @@
     "updated_at": "2026-09-17T23:24:42"
   },
   "星星|8183": {
-    "confidence": "high",
+    "wrong_keyword": "星星",
     "correct_code": "8183",
     "correct_name": "精星",
-    "distinct_videos": 1,
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 2,
+    "distinct_videos": 2,
+    "video_ids": [
+      "6e0078b2-5a15-4f1d-95dd-16545ab2a236",
+      "dbb62609-b8ec-4995-85a8-41c643834ec6"
+    ],
     "evidence": [
       {
         "channel": "兆華與股惑仔",
@@ -4037,38 +4044,56 @@
         "source": "full_video_validator",
         "title": "EP1173｜華許說完讓升息機率大增，9月魔咒能破嗎？MSCI拉尾，Q4還有做夢行情！欣興賣不掉怎辦，盤點各利空該有的跌幅？ft.題材獵人 林漢偉",
         "video_id": "dbb62609-b8ec-4995-85a8-41c643834ec6"
+      },
+      {
+        "video_id": "6e0078b2-5a15-4f1d-95dd-16545ab2a236",
+        "channel": "股癌",
+        "date": "2026-09-26",
+        "title": "EP700 | 🪭",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "一位 死老鼠夢功 有沒有突然不會做股票的時候 有啊 很常有啊 拜託 那我就是七八月的時候 就覺得自己不會做股票 他說上半年的 我積效破200% 七月大家一起死 那之後開始進入 完全不會做股票的階段 買星星隔天公司 就被剪掉的搜索 買台達結果一動也不動 買旺戲影威跟微影 結果莫名下殺 任培台達店隔天就噴上去 昨天任培 旺戲轉倉到某光通 結果今天差點跌停 我有點不曉得 要怎麼友善的面對這個世界 不動就繼續跌 動了就噴上去 很多反指標都能夠自嘲 但我只覺得整個世界都是黑暗的 也不能夠欠怒家人 所以只能夠一直憋著 然後目前除了用烤肉的名義 去買木灘以外 還有什麼選項 這位兄弟其實 很明顯你在做的就是動",
+        "override_kind": "phonetic",
+        "override_reason": "phonetic_top1_needs_review",
+        "original_code": "1315",
+        "original_name": "達新",
+        "phonetic_top_score": 0.744,
+        "phonetic_lead": 0.08099999999999996,
+        "needs_review": true
       }
     ],
-    "max_score": 95,
-    "observations": 1,
     "phonetic_candidates": [
       {
         "code": "8183",
         "name": "精星",
-        "phonetic_similarity": 0.875,
         "score": 0.744,
+        "phonetic_similarity": 0.875,
         "text_similarity": 0.5
       },
       {
         "code": "1617",
         "name": "榮星",
-        "phonetic_similarity": 0.75,
         "score": 0.663,
+        "phonetic_similarity": 0.75,
         "text_similarity": 0.5
       },
       {
         "code": "3025",
         "name": "星通",
-        "phonetic_similarity": 0.75,
         "score": 0.663,
+        "phonetic_similarity": 0.75,
         "text_similarity": 0.5
       }
     ],
-    "updated_at": "2026-08-31T21:55:20",
-    "video_ids": [
-      "dbb62609-b8ec-4995-85a8-41c643834ec6"
-    ],
-    "wrong_keyword": "星星"
+    "updated_at": "2026-09-26T19:38:52"
   },
   "春天|2010": {
     "confidence": "high",
@@ -9053,5 +9078,192 @@
       }
     ],
     "updated_at": "2026-09-25T20:19:23"
+  },
+  "lumentum|LITE": {
+    "wrong_keyword": "lumentum",
+    "correct_code": "LITE",
+    "correct_name": "Lumentum",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "6e0078b2-5a15-4f1d-95dd-16545ab2a236"
+    ],
+    "evidence": [
+      {
+        "video_id": "6e0078b2-5a15-4f1d-95dd-16545ab2a236",
+        "channel": "股癌",
+        "date": "2026-09-26",
+        "title": "EP700 | 🪭",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "stock_context",
+          "strong_sector_match"
+        ],
+        "context": "這蔡藍族那邊瞎買啊 然後但還OK啦 就是買到的東西 也都是我自己 蠻喜歡的東西 IFX就是 可能會稍微的嫌她牛皮一點 但如果你要往公寓元件去看的話 就是一定是一定會看到的公司 那Google沒有問題 lumentum 光同口譯輪兩個全包了嘛 那blume energy 就是你要去賭那個什麼 表貨供典嘛 有些人會搭台灣的一些supplication 我們就不去點名的 那個有些人會直接把他包裕包看 所以他也是data center 整個整體的敘事嘛 那康寧玻璃很合理啊 就是他家基本上也是 有點那種光的味道 光的形狀在 所以搭配前面光的組合 跟terridine的機台 然後在外加amd CPU 這個"
+      }
+    ],
+    "phonetic_candidates": [],
+    "updated_at": "2026-09-26T19:38:52"
+  },
+  "amd|AMD": {
+    "wrong_keyword": "amd",
+    "correct_code": "AMD",
+    "correct_name": "AMD",
+    "confidence": "medium",
+    "max_score": 65,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "6e0078b2-5a15-4f1d-95dd-16545ab2a236"
+    ],
+    "evidence": [
+      {
+        "video_id": "6e0078b2-5a15-4f1d-95dd-16545ab2a236",
+        "channel": "股癌",
+        "date": "2026-09-26",
+        "title": "EP700 | 🪭",
+        "source": "full_video_validator",
+        "score": 65,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "stock_context"
+        ],
+        "context": "直接把他包裕包看 所以他也是data center 整個整體的敘事嘛 那康寧玻璃很合理啊 就是他家基本上也是 有點那種光的味道 光的形狀在 所以搭配前面光的組合 跟terridine的機台 然後在外加amd CPU 這個是一個很全面的組合 我剛剛前面那邊小嘴 你一下蔡英卒就說你什麼都有 但其實這個配置 感覺是選得還蠻漂亮的 我講的是講說以過去來講 這個未來的話 裡面有些東西 我現在可能不一定會挑的 但整體來說是 是還蠻不錯的一個選擇 那只會聽creep跟no surprise 會很可憐嗎 不會 就是以前我們確實會有那種 聽團仔的憂鬱 會覺得自己很屌 如果說別人是只聽那種 可能最有名的歌 我們就"
+      }
+    ],
+    "phonetic_candidates": [],
+    "updated_at": "2026-09-26T19:38:52"
+  },
+  "微影|2377": {
+    "wrong_keyword": "微影",
+    "correct_code": "2377",
+    "correct_name": "微星",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "6e0078b2-5a15-4f1d-95dd-16545ab2a236"
+    ],
+    "evidence": [
+      {
+        "video_id": "6e0078b2-5a15-4f1d-95dd-16545ab2a236",
+        "channel": "股癌",
+        "date": "2026-09-26",
+        "title": "EP700 | 🪭",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "託 那我就是七八月的時候 就覺得自己不會做股票 他說上半年的 我積效破200% 七月大家一起死 那之後開始進入 完全不會做股票的階段 買星星隔天公司 就被剪掉的搜索 買台達結果一動也不動 買旺戲影威跟微影 結果莫名下殺 任培台達店隔天就噴上去 昨天任培 旺戲轉倉到某光通 結果今天差點跌停 我有點不曉得 要怎麼友善的面對這個世界 不動就繼續跌 動了就噴上去 很多反指標都能夠自嘲 但我只覺得整個世界都是黑暗的 也不能夠欠怒家人 所以只能夠一直憋著 然後目前除了用烤肉的名義 去買木灘以外 還有什麼選項 這位兄弟其實 很明顯你在做的就是動能 就是你就是看什麼東西 強就去追誰 只是 如果是看強去追的話 ",
+        "override_kind": "phonetic",
+        "override_reason": "phonetic_top1_needs_review",
+        "original_code": "9912",
+        "original_name": "偉聯",
+        "phonetic_top_score": 0.732,
+        "phonetic_lead": 0.08199999999999996,
+        "needs_review": true
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2377",
+        "name": "微星",
+        "score": 0.732,
+        "phonetic_similarity": 0.857,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "6669",
+        "name": "緯穎",
+        "score": 0.65,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "6637",
+        "name": "醫影",
+        "score": 0.639,
+        "phonetic_similarity": 0.714,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-09-26T19:38:52"
+  },
+  "某光通|4903": {
+    "wrong_keyword": "某光通",
+    "correct_code": "4903",
+    "correct_name": "聯光通",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "6e0078b2-5a15-4f1d-95dd-16545ab2a236"
+    ],
+    "evidence": [
+      {
+        "video_id": "6e0078b2-5a15-4f1d-95dd-16545ab2a236",
+        "channel": "股癌",
+        "date": "2026-09-26",
+        "title": "EP700 | 🪭",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "積效破200% 七月大家一起死 那之後開始進入 完全不會做股票的階段 買星星隔天公司 就被剪掉的搜索 買台達結果一動也不動 買旺戲影威跟微影 結果莫名下殺 任培台達店隔天就噴上去 昨天任培 旺戲轉倉到某光通 結果今天差點跌停 我有點不曉得 要怎麼友善的面對這個世界 不動就繼續跌 動了就噴上去 很多反指標都能夠自嘲 但我只覺得整個世界都是黑暗的 也不能夠欠怒家人 所以只能夠一直憋著 然後目前除了用烤肉的名義 去買木灘以外 還有什麼選項 這位兄弟其實 很明顯你在做的就是動能 就是你就是看什麼東西 強就去追誰 只是 如果是看強去追的話 怎麼會買台達呢 因為台達早就已經轉空了 就他的那個型態 也是長得",
+        "override_kind": "phonetic",
+        "override_reason": "clear_phonetic_winner",
+        "original_code": "2492",
+        "original_name": "華新科",
+        "phonetic_top_score": 0.683,
+        "phonetic_lead": 0.133
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "4903",
+        "name": "聯光通",
+        "score": 0.683,
+        "phonetic_similarity": 0.692,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "4956",
+        "name": "光鋐",
+        "score": 0.55,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "8916",
+        "name": "光隆",
+        "score": 0.55,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.333
+      }
+    ],
+    "updated_at": "2026-09-26T19:38:52"
   }
 }
