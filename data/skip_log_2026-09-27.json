@@ -1,0 +1,136 @@
+[
+  {
+    "keyword": "信大",
+    "pos": 6318,
+    "reason": "context_required",
+    "detail": "1109/信大水泥/水泥",
+    "video_id": "569359af-e583-4c25-aac6-c4e048bf77f9",
+    "channel": "投資癮",
+    "date": "2026-09-27",
+    "title": "EP348 長期投資的自然配置"
+  },
+  {
+    "keyword": "大成",
+    "pos": 12990,
+    "reason": "context_required",
+    "detail": "1210/大成食品/雞肉/飼料/食品股",
+    "video_id": "569359af-e583-4c25-aac6-c4e048bf77f9",
+    "channel": "投資癮",
+    "date": "2026-09-27",
+    "title": "EP348 長期投資的自然配置"
+  },
+  {
+    "keyword": "大量",
+    "pos": 5967,
+    "reason": "context_required",
+    "detail": "3167/大量電子",
+    "video_id": "569359af-e583-4c25-aac6-c4e048bf77f9",
+    "channel": "投資癮",
+    "date": "2026-09-27",
+    "title": "EP348 長期投資的自然配置"
+  },
+  {
+    "keyword": "大量",
+    "pos": 9702,
+    "reason": "context_required",
+    "detail": "3167/大量電子",
+    "video_id": "569359af-e583-4c25-aac6-c4e048bf77f9",
+    "channel": "投資癮",
+    "date": "2026-09-27",
+    "title": "EP348 長期投資的自然配置"
+  },
+  {
+    "keyword": "數字",
+    "pos": 10324,
+    "reason": "context_required",
+    "detail": "5287/數字科技",
+    "video_id": "569359af-e583-4c25-aac6-c4e048bf77f9",
+    "channel": "投資癮",
+    "date": "2026-09-27",
+    "title": "EP348 長期投資的自然配置"
+  },
+  {
+    "keyword": "數字",
+    "pos": 13003,
+    "reason": "context_required",
+    "detail": "5287/數字科技",
+    "video_id": "569359af-e583-4c25-aac6-c4e048bf77f9",
+    "channel": "投資癮",
+    "date": "2026-09-27",
+    "title": "EP348 長期投資的自然配置"
+  },
+  {
+    "keyword": "數字",
+    "pos": 14235,
+    "reason": "context_required",
+    "detail": "5287/數字科技",
+    "video_id": "569359af-e583-4c25-aac6-c4e048bf77f9",
+    "channel": "投資癮",
+    "date": "2026-09-27",
+    "title": "EP348 長期投資的自然配置"
+  },
+  {
+    "keyword": "全家",
+    "pos": 14163,
+    "reason": "context_required",
+    "detail": "5903/全家便利/FamilyMart",
+    "video_id": "569359af-e583-4c25-aac6-c4e048bf77f9",
+    "channel": "投資癮",
+    "date": "2026-09-27",
+    "title": "EP348 長期投資的自然配置"
+  },
+  {
+    "keyword": "iPhone",
+    "reason": "gemini_extraction_rejected",
+    "detail": "無法對應任何已知股票",
+    "video_id": "569359af-e583-4c25-aac6-c4e048bf77f9",
+    "channel": "投資癮",
+    "date": "2026-09-27",
+    "title": "EP348 長期投資的自然配置"
+  },
+  {
+    "keyword": "Microsoft",
+    "reason": "short_us_identity_missing",
+    "detail": "短英文美股缺少明確股票名/代號/alias 證據: MSFT/Microsoft",
+    "video_id": "569359af-e583-4c25-aac6-c4e048bf77f9",
+    "channel": "投資癮",
+    "date": "2026-09-27",
+    "title": "EP348 長期投資的自然配置"
+  },
+  {
+    "keyword": "Petentia",
+    "reason": "gemini_extraction_rejected",
+    "detail": "無法對應任何已知股票",
+    "video_id": "569359af-e583-4c25-aac6-c4e048bf77f9",
+    "channel": "投資癮",
+    "date": "2026-09-27",
+    "title": "EP348 長期投資的自然配置"
+  },
+  {
+    "keyword": "006208",
+    "reason": "gemini_extraction_rejected",
+    "detail": "名稱未出現在原文（可能幻覺）: 006208/富邦台50",
+    "video_id": "569359af-e583-4c25-aac6-c4e048bf77f9",
+    "channel": "投資癮",
+    "date": "2026-09-27",
+    "title": "EP348 長期投資的自然配置"
+  },
+  {
+    "keyword": "台塑事寶",
+    "reason": "whisper_correction_rejected",
+    "detail": "統一修正決策拒絕: 台塑事寶->1301/台塑; reason=weak_phonetic_or_context",
+    "video_id": "569359af-e583-4c25-aac6-c4e048bf77f9",
+    "channel": "投資癮",
+    "date": "2026-09-27",
+    "title": "EP348 長期投資的自然配置"
+  },
+  {
+    "keyword": "美國英特爾",
+    "reason": "whisper_correction_rejected",
+    "detail": "統一修正決策拒絕: 美國英特爾->INTC/Intel; reason=weak_phonetic_or_context",
+    "video_id": "569359af-e583-4c25-aac6-c4e048bf77f9",
+    "channel": "投資癮",
+    "date": "2026-09-27",
+    "title": "EP348 長期投資的自然配置"
+  }
+]
