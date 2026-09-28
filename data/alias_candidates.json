@@ -1373,7 +1373,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 87,
+    "observations": 88,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1418,7 +1418,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-09-27T19:54:08"
+    "updated_at": "2026-09-28T22:18:29"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -9265,5 +9265,60 @@
       }
     ],
     "updated_at": "2026-09-26T19:38:52"
+  },
+  "聯店|2303": {
+    "wrong_keyword": "聯店",
+    "correct_code": "2303",
+    "correct_name": "聯電",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "a9cae68a-69bc-45d0-b84d-162f40637b5f"
+    ],
+    "evidence": [
+      {
+        "video_id": "a9cae68a-69bc-45d0-b84d-162f40637b5f",
+        "channel": "韭菜畢業班",
+        "date": "2026-09-28",
+        "title": "EP261 | 中秋連假後，10月行情怎麼看",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "就可以在第一時間 收到我們節目的官方通知 那如果對於產業集群故事上沒有 發帳號朋友也歡迎起來 韭菜畢業拜託過APP Android Phone都可以直接搜尋下載 免費試用 因為我們上一集有聊過 洪志跟聯店的主要的一些題材 然後洪志滿幸運的 其實我原本一直以為 就是洪志他在這一場法說會完之後 他是直接一根 應該是有機會直接一根鎖死掌庭 然後就是連下去都沒有 但當然中間有洗下去 大概可能到一趴吧 然後又再給他鎖回去 真的滿靠北 就滿洗的這樣子 他整體看起來市場是滿滿一塔 這一次法說會講的東西 其實簡單來說 他就是營收整個翻倍 然後也該接到的大單都有接到 然後跟B1的合作 我覺得算也滿樂觀的 那我們"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2303",
+        "name": "聯電",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "2347",
+        "name": "聯強",
+        "score": 0.681,
+        "phonetic_similarity": 0.778,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "2431",
+        "name": "聯昌",
+        "score": 0.608,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-09-28T22:26:03"
   }
 }
