@@ -1373,7 +1373,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 88,
+    "observations": 89,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1418,7 +1418,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-09-28T22:18:29"
+    "updated_at": "2026-09-29T21:05:38"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -9320,5 +9320,122 @@
       }
     ],
     "updated_at": "2026-09-28T22:26:03"
+  },
+  "旺信|6223": {
+    "wrong_keyword": "旺信",
+    "correct_code": "6223",
+    "correct_name": "旺矽",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "81e38a75-c830-4984-88a7-c91a697a6327"
+    ],
+    "evidence": [
+      {
+        "video_id": "81e38a75-c830-4984-88a7-c91a697a6327",
+        "channel": "兆華與股惑仔",
+        "date": "2026-09-29",
+        "title": "EP1192｜台股還想放假？美債殖利率創高，壓抑盤面但不會致命！所有技術、搶單鬼故事，都只是評價的來回，把握就對！ft.AI達人 蔡明翰",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "把聽到的事況 跟大家做補充 然後我覺得 我和明翰都是一樣的 其實我覺得不用幫發哥叫區 我的意思是 每一個人手上 如果有發哥的不要怕 那如果沒發哥的 就是找機會 像剛剛講到探針 我一直在看 大家知道我對旺信很有興趣嗎 旺信現在就是手那個5000塊 只要到那個5000塊 你就看到量又放大了 你說那些大量去買的人 會是一般的散戶嗎 一家5000塊的公司 應該不是 所以他接近那裡就會有人接 並不代表說破5000 不可能 但是這就是一個很重要的sign 就是大家會覺得 他在那個位置 已經出現了想買的價值 有一些大量的 不然法人也好 資金大不裂 好 願意在那邊卡位 我覺得他可以參考 但是會馬上上去就不一定"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "6223",
+        "name": "旺矽",
+        "score": 0.732,
+        "phonetic_similarity": 0.857,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "3705",
+        "name": "永信",
+        "score": 0.639,
+        "phonetic_similarity": 0.714,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "5521",
+        "name": "工信",
+        "score": 0.639,
+        "phonetic_similarity": 0.714,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-09-29T21:18:56"
+  },
+  "眉光|2038": {
+    "wrong_keyword": "眉光",
+    "correct_code": "2038",
+    "correct_name": "海光",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "d0dd4697-ac7f-4a9e-bc57-ff2f7d99d01e"
+    ],
+    "evidence": [
+      {
+        "video_id": "d0dd4697-ac7f-4a9e-bc57-ff2f7d99d01e",
+        "channel": "財女珍妮",
+        "date": "2026-09-29",
+        "title": "2026/09/29(二) Nvidia 撒1500億美元回購、AMD買AI公司，競爭越來越大了？",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "價一定會先反應 即便是今天 他實際上面在數據上面 還沒有太多的貢獻 但是他一定可以先 帶給市場一些 不一樣的想像的空間 這個就已經 我覺得算是還滿補的一個東西 好 那 這禮拜還有一個很重要的事情 就是眉光的財報 所以大家如果這禮拜要關注說 半導體 或者是納斯達克 科技股 有沒有辦法有進一步的 上秀的垂滑機的話 我覺得還是在眉光上面 所以這禮拜真的要講的話 我覺得 眉光的財報裡面 就可以去看 他們對於未來的需求 以及目前的合約的價值 就是你有沒有辦法 再繼續的去提高 你自己在未來的出貨量能 或者是你的價格 因為眉光現在的毛利 真的非常非常高了 已經是一個超級賺錢的公司 他都已經快要接近 90%嗎",
+        "override_kind": "phonetic",
+        "override_reason": "phonetic_top1_needs_review",
+        "original_code": "MCHP",
+        "original_name": "Microchip Tech",
+        "phonetic_top_score": 0.663,
+        "phonetic_lead": 0.0,
+        "needs_review": true
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2038",
+        "name": "海光",
+        "score": 0.663,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "2393",
+        "name": "億光",
+        "score": 0.663,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "6508",
+        "name": "惠光",
+        "score": 0.663,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-09-29T21:25:58"
   }
 }
