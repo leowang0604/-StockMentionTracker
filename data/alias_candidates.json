@@ -117,10 +117,17 @@
     "wrong_keyword": "ARN"
   },
   "ASMO|ASML": {
-    "confidence": "high",
+    "wrong_keyword": "ASMO",
     "correct_code": "ASML",
     "correct_name": "ASML",
-    "distinct_videos": 1,
+    "confidence": "high",
+    "max_score": 98,
+    "observations": 2,
+    "distinct_videos": 2,
+    "video_ids": [
+      "7c46d359-d54a-4cef-8997-18cfb6e0770d",
+      "a813b108-af1f-48c6-8cec-c98e867e8112"
+    ],
     "evidence": [
       {
         "channel": "財女珍妮",
@@ -138,16 +145,26 @@
         "source": "full_video_validator",
         "title": "2026/07/08 (三) 記憶體大跌，利多不漲，高點沒了嗎？",
         "video_id": "a813b108-af1f-48c6-8cec-c98e867e8112"
+      },
+      {
+        "video_id": "7c46d359-d54a-4cef-8997-18cfb6e0770d",
+        "channel": "財女珍妮",
+        "date": "2026-09-30",
+        "title": "2026/09/30(三) 油價跌了，長債為什麼還在跌？OpenAI加入代理人競爭，台積電擴廠設備股飆",
+        "source": "full_video_validator",
+        "score": 90,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "stock_context"
+        ],
+        "context": "所以有基本面確實沒錯 但是如果你去追高的話 其實我覺得風險通常都會是比較高的 那我們去對應到美股其實也是一樣 因為你看台股的設備股很強嘛 然後到晚上的時候 昨天 像是硬裁 昨天像是柯頂研發 柯蕾啊 ASMO啊 ASMO啊 這一類的股票 這一類的公司 它的其實它 也相對來說 它的表現是比較好一點點的 因為如果今天真的台積電要擴廠 大家每次都在關注台積電的資本支出嘛 你接你資本支出 你扎的錢夠多 那你要買的東西 對不對 你要買的東西 這些廠商 他就可以有訂單可以承接 可以有營收可以去灌進去 所以對於這一類 晶圓廠 它一定也是會有 比較好的一個 前景展望 然後前景上修啊 但是 我覺得它對於目前啊 就"
       }
     ],
-    "max_score": 98,
-    "observations": 1,
     "phonetic_candidates": [],
-    "updated_at": "2026-07-08T18:58:21",
-    "video_ids": [
-      "a813b108-af1f-48c6-8cec-c98e867e8112"
-    ],
-    "wrong_keyword": "ASMO"
+    "updated_at": "2026-09-30T21:49:35"
   },
   "Airdrop|MSFT": {
     "confidence": "medium",
@@ -726,10 +743,17 @@
     "wrong_keyword": "nv"
   },
   "一張|8342": {
-    "confidence": "high",
+    "wrong_keyword": "一張",
     "correct_code": "8342",
     "correct_name": "益張",
-    "distinct_videos": 1,
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 2,
+    "distinct_videos": 2,
+    "video_ids": [
+      "730dbd47-b389-44e0-b49f-4a8484dbd2e5",
+      "806c884a-70ff-43e5-9377-62e92a34fdc9"
+    ],
     "evidence": [
       {
         "channel": "兆華與股惑仔",
@@ -747,38 +771,49 @@
         "source": "phonetic-discovery",
         "title": "EP1137｜漲千點氣勢被韓股拖累，基本面和政策緊縮面的戰爭！台積電營收創高，殺中小帳面獲利回吐，放慢一點接，沒損失？ft.題材獵人 林漢偉",
         "video_id": "730dbd47-b389-44e0-b49f-4a8484dbd2e5"
+      },
+      {
+        "video_id": "806c884a-70ff-43e5-9377-62e92a34fdc9",
+        "channel": "兆華與股惑仔",
+        "date": "2026-09-30",
+        "title": "EP1193｜台股作夢行情明顯，LED、太陽能、面板全發動，AI轉機比獲利數據還重要？美股再加油跟上、台股會更強？ft.題材獵人 林漢偉",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "相對高點 我覺得其實這個 能夠有這樣的一個 勇敢的人比較少 所以他們資金 我這樣阻力去拉升 這些所謂的轉機股的優勢在哪 就是說你對一般散戶 對一般投資大眾來講 你叫我去買那個兩三百塊 五六百塊股票 投一張我覺得會有壓力 但你買那種十幾塊 二十幾塊的頭一張就覺得 啊我就是小賭一勤 玩看看也不會的差多少 所以發現到這些所謂的 轉機股四大產業股票拉上上來 之後容易吸引到所謂的 散戶的資金進駐 所以反而拉起來都是那種 一波流漲的非常快的 那但最近最強就是在所謂的 面板族群 不管是從剛剛講的 有達創價十幾人新高 那群創今天是重新 站到季線以上也轉強 那連這個採金 也在今天也出現了發動 那我們還是跟大家講"
       }
     ],
-    "max_score": 100,
-    "observations": 1,
     "phonetic_candidates": [
       {
         "code": "8342",
         "name": "益張",
-        "phonetic_similarity": 1,
         "score": 0.825,
+        "phonetic_similarity": 1.0,
         "text_similarity": 0.5
       },
       {
         "code": "2601",
         "name": "益航",
-        "phonetic_similarity": 0.857,
         "score": 0.557,
-        "text_similarity": 0
+        "phonetic_similarity": 0.857,
+        "text_similarity": 0.0
       },
       {
         "code": "3567",
         "name": "逸昌",
-        "phonetic_similarity": 0.857,
         "score": 0.557,
-        "text_similarity": 0
+        "phonetic_similarity": 0.857,
+        "text_similarity": 0.0
       }
     ],
-    "updated_at": "2026-07-13T18:41:42",
-    "video_ids": [
-      "730dbd47-b389-44e0-b49f-4a8484dbd2e5"
-    ],
-    "wrong_keyword": "一張"
+    "updated_at": "2026-09-30T21:39:44"
   },
   "上全|3363": {
     "wrong_keyword": "上全",
@@ -786,10 +821,11 @@
     "correct_name": "上詮",
     "confidence": "high",
     "max_score": 100,
-    "observations": 2,
-    "distinct_videos": 2,
+    "observations": 3,
+    "distinct_videos": 3,
     "video_ids": [
       "401131f0-6382-4caa-abfd-3e6b5dda0c73",
+      "7c46d359-d54a-4cef-8997-18cfb6e0770d",
       "97a5988d-66d4-454f-8062-ab8c76a1cbbf"
     ],
     "evidence": [
@@ -826,6 +862,23 @@
           "stock_context"
         ],
         "context": "家現在看到 昨天我們看到比較強的是這一塊 但是現在 其實真的都是有在輪動當中的 像你如果去看上櫃的話 比如說金冊 昨天大跌超過6%嘛 但是你說這種AI測試的部分 沒有了嗎 沒有啊 那你說CPU呢 像是上全啊 或是華興光啊 這一類股票 在昨天其實也是比較弱的 但是 它也只是因為可能之前有反彈 然後 可能現在外資法人 他們可能開始有一些動作的時候 然後就開始有一些變化 建設之前不是也是很慘嗎 對不對 但是後來大家消化了之後 好的公司或者是你真的有基本面 你真的有營收成長的公司 他還是可以在被挫殺 或者是在情緒的殺盤之後呢 他開始往上的 所以如果我們再去帶 昨天台灣的這個製造業生產的數據啊 或者是相"
+      },
+      {
+        "video_id": "7c46d359-d54a-4cef-8997-18cfb6e0770d",
+        "channel": "財女珍妮",
+        "date": "2026-09-30",
+        "title": "2026/09/30(三) 油價跌了，長債為什麼還在跌？OpenAI加入代理人競爭，台積電擴廠設備股飆",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "的話 其實還是年減嘛 年減也將近有百分之三十 所以 它的漲停 我覺得也 找不到什麼特別 就是很大的一個原因啦 而且如果你去看其他 可能跟它有類似題材的 比如說光通好了 其實也沒有一起走牆啊 比如說什麼上全啊 布洛威啊 聯亞這一類的公司 其實也都是在疊嘛 所以我覺得感覺好像 你說資金有沒有走到光通呢 我覺得好像 目前看起來其實也還沒有 那就像我們之前講到 散熱其實這兩天也是休息的 載板其實也是休息的 所以我覺得 這種輪動的狀況呢 其實還是蠻明顯的 但是如果你是看好 AI長期的發展 我覺得 都是找一些指標性的公司 比如說載板就是星星景素嘛 這個就很明顯嘛 那比如說 如果你要看S8 或者是如果你要看"
       }
     ],
     "phonetic_candidates": [
@@ -851,7 +904,7 @@
         "text_similarity": 0.5
       }
     ],
-    "updated_at": "2026-09-24T20:36:59"
+    "updated_at": "2026-09-30T21:49:35"
   },
   "中美金|2891": {
     "confidence": "high",
@@ -927,33 +980,22 @@
     "wrong_keyword": "中美金"
   },
   "中美金|5483": {
-    "confidence": "high",
+    "wrong_keyword": "中美金",
     "correct_code": "5483",
     "correct_name": "中美晶",
-    "distinct_videos": 5,
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 6,
+    "distinct_videos": 6,
+    "video_ids": [
+      "0da08e88-66a9-4152-a636-ec02d830e286",
+      "4851850f-b15c-4ee9-a8fe-1c23e6067ac3",
+      "4e6f1716-0c30-47aa-bfd2-9da24b94aa65",
+      "806c884a-70ff-43e5-9377-62e92a34fdc9",
+      "82fbcab9-7810-413e-92c7-d6bbc4b64484",
+      "a36a8e7a-4c7d-4870-8a49-6cf276557ff2"
+    ],
     "evidence": [
-      {
-        "channel": "兆華與股惑仔",
-        "context": "憶體 就直接去買美光 就直接去買韓國的記憶體 也是一種方法 確實 對 好 那我們回到盤面上 其實我自己個人 覺得主規動還有行情之外 細金圓我真的也是覺得 滿有趣的 因為細金圓 雖然環球金有創新高 今天中美金創歷史新高 可是以位階來說 都不算是 非常高角度 對 以位階來說 都是離他們的錢高 不算太遠的地方 尤其是環球金 花了非常多力氣 大家去看 把那個環球金的線圖打開 你就知道他這次 回到一千塊以上 是花了多大的一個 一個很久很久的時間 才回來的 那細金圓確實也在一個 漲價升級的題材裡面 對不對 它是比較後段的 所以我覺得到了下半年了 如果從去年到現在 已經起漲一整年的 沒有經過回蕩修正的 就不",
-        "date": "2026-07-01",
-        "original_code": "2891",
-        "original_name": "中信金",
-        "override_kind": "contextual",
-        "override_reason": "scoped_context_alias",
-        "reasons": [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "name_distance<=1",
-          "phonetic_top1",
-          "stock_context",
-          "strong_sector_match"
-        ],
-        "score": 100,
-        "source": "full_video_validator",
-        "title": "EP1130｜7月的貪食蛇上攻法？主被動、矽晶圓，剛漲價氣勢強，記憶體、CPO，先漲過的鬼故事變多！下跌最敢接的是廠務工程？ft.型男股神 陳威良",
-        "video_id": "a36a8e7a-4c7d-4870-8a49-6cf276557ff2"
-      },
       {
         "channel": "兆華與股惑仔",
         "context": "那很早之前 其實講過大宗 那大宗還配一個 以前就大宗尼克森 然後我也不知道 為什麼的印象裡面 大宗就是要接尼克森 好 都同一個族群 那當然 這個公立元件裡面 他也有分不同的功能 那以後漲比較慢的 好像中美金集團裡面的棚城 今天就有點表態 可是他未接相對是 就比較低一些些 可是他就不會那麼犀利 我覺得 我非常認同 明翰講的 如果現在 您的心情是 手上的石骨有點低 當然你台一店 最好還是要有一點 他真的算是最合理的 然後看到強勢族群 如果你沒有 會覺得非常有壓力的 那就只能追了 對 可是風險真的要自負 那被動我覺得也是見仁見智 因為我被動的成本非常低 那為什麼我今天體感不好 因為我被動的 股票還佔",
@@ -1039,42 +1081,54 @@
         "source": "full_video_validator",
         "title": "EP250 | 處置股規則大改，熱門股會更好做嗎 ？",
         "video_id": "82fbcab9-7810-413e-92c7-d6bbc4b64484"
+      },
+      {
+        "video_id": "806c884a-70ff-43e5-9377-62e92a34fdc9",
+        "channel": "兆華與股惑仔",
+        "date": "2026-09-30",
+        "title": "EP1193｜台股作夢行情明顯，LED、太陽能、面板全發動，AI轉機比獲利數據還重要？美股再加油跟上、台股會更強？ft.題材獵人 林漢偉",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context",
+          "strong_sector_match"
+        ],
+        "context": "像今天太陽能也很厲害 然後好幾次我跟漢偉哥講說 太陽能今天好像有反應 我們要聊嗎 他都說 再多看幾天好了 因為這個延續性真的不好 對 可是看來 他已經這兩天的狀況是好的 像今天 包括一個比較綜合性像中美金 他有細金圓 他也有太陽能 他今天就漲停板 到底是漲細金圓 還是漲太陽能 總之 四大產業現在看起來不慘了 對啊 那我覺得當然台股 俗稱的四大產業是真的很慘 因為你如果不慎投資到 四大產業當中的公司 那不是說 你被套牢可以解決的 很多是會面到下市的風險 所以蠻多人可能投資太陽能 不小心就買到下市的股票 那投資面板 面板的公司就直接不見了 像華盈就不見了 不見了 對 然後像所謂的低潤也是一樣 你看",
+        "override_kind": "contextual",
+        "override_reason": "scoped_context_alias",
+        "original_code": "2891",
+        "original_name": "中信金"
       }
     ],
-    "max_score": 100,
-    "observations": 5,
     "phonetic_candidates": [
       {
         "code": "5483",
         "name": "中美晶",
-        "phonetic_similarity": 0.917,
         "score": 0.829,
+        "phonetic_similarity": 0.917,
         "text_similarity": 0.667
       },
       {
         "code": "2891",
         "name": "中信金",
-        "phonetic_similarity": 0.727,
         "score": 0.706,
+        "phonetic_similarity": 0.727,
         "text_similarity": 0.667
       },
       {
         "code": "4702",
         "name": "中美實",
-        "phonetic_similarity": 0.727,
         "score": 0.706,
+        "phonetic_similarity": 0.727,
         "text_similarity": 0.667
       }
     ],
-    "updated_at": "2026-08-09T17:25:11",
-    "video_ids": [
-      "0da08e88-66a9-4152-a636-ec02d830e286",
-      "4851850f-b15c-4ee9-a8fe-1c23e6067ac3",
-      "4e6f1716-0c30-47aa-bfd2-9da24b94aa65",
-      "82fbcab9-7810-413e-92c7-d6bbc4b64484",
-      "a36a8e7a-4c7d-4870-8a49-6cf276557ff2"
-    ],
-    "wrong_keyword": "中美金"
+    "updated_at": "2026-09-30T21:40:00"
   },
   "以發|6425": {
     "confidence": "high",
@@ -1373,7 +1427,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 89,
+    "observations": 90,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1418,7 +1472,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-09-29T21:05:38"
+    "updated_at": "2026-09-30T21:03:12"
   },
   "創造力|3443": {
     "confidence": "high",
