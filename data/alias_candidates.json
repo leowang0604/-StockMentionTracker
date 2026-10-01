@@ -985,38 +985,18 @@
     "correct_name": "中美晶",
     "confidence": "high",
     "max_score": 100,
-    "observations": 6,
-    "distinct_videos": 6,
+    "observations": 7,
+    "distinct_videos": 7,
     "video_ids": [
       "0da08e88-66a9-4152-a636-ec02d830e286",
       "4851850f-b15c-4ee9-a8fe-1c23e6067ac3",
       "4e6f1716-0c30-47aa-bfd2-9da24b94aa65",
       "806c884a-70ff-43e5-9377-62e92a34fdc9",
       "82fbcab9-7810-413e-92c7-d6bbc4b64484",
-      "a36a8e7a-4c7d-4870-8a49-6cf276557ff2"
+      "a36a8e7a-4c7d-4870-8a49-6cf276557ff2",
+      "dfc29c49-1cbb-4889-8050-8da76b7df44b"
     ],
     "evidence": [
-      {
-        "channel": "兆華與股惑仔",
-        "context": "那很早之前 其實講過大宗 那大宗還配一個 以前就大宗尼克森 然後我也不知道 為什麼的印象裡面 大宗就是要接尼克森 好 都同一個族群 那當然 這個公立元件裡面 他也有分不同的功能 那以後漲比較慢的 好像中美金集團裡面的棚城 今天就有點表態 可是他未接相對是 就比較低一些些 可是他就不會那麼犀利 我覺得 我非常認同 明翰講的 如果現在 您的心情是 手上的石骨有點低 當然你台一店 最好還是要有一點 他真的算是最合理的 然後看到強勢族群 如果你沒有 會覺得非常有壓力的 那就只能追了 對 可是風險真的要自負 那被動我覺得也是見仁見智 因為我被動的成本非常低 那為什麼我今天體感不好 因為我被動的 股票還佔",
-        "date": "2026-07-02",
-        "original_code": "2891",
-        "original_name": "中信金",
-        "override_kind": "contextual",
-        "override_reason": "scoped_context_alias",
-        "reasons": [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "name_distance<=1",
-          "phonetic_top1",
-          "strong_sector_match"
-        ],
-        "score": 100,
-        "source": "full_video_validator",
-        "title": "EP1131｜就算美.台.韓去槓桿，外資空單歷史高，也不會崩？真正關鍵在基本面！半信半疑中，7月創高沒問題，9月要小心？ft.AI達人 蔡明翰",
-        "video_id": "0da08e88-66a9-4152-a636-ec02d830e286"
-      },
       {
         "channel": "兆華與股惑仔",
         "context": "來你就要開始擔心他 什麼時候開始要有力控出現 也就告訴你 股價的某種程度 已經到一個滿足點 滿足點 所以這邊你就要留意 就是這邊的變化 然後 我還是要幫981 講一下話 就是他是賣了 環球金 可是他買中美金 他是 賣了紙公司 去買某公司 所以我覺得他可能有點擔心 環球金關出來之後 可能股價會比較大的震盪 所以他回去買那個 相對來講 穩定的 比較穩定一點的 但是 一樣也是可以受惠 整個一個細金圓 目前看起來 供需很吃緊的一個狀況 好 因為剛剛講到漲價 真的 從一開始傳 淡質電容漲價 對不對 因為他有機梅 所以有淡質電容 然後到最後變成 全面發漲價 他很可能有一個 勢叫力多已經實現 但是 因為我剛",
@@ -1103,6 +1083,28 @@
         "override_reason": "scoped_context_alias",
         "original_code": "2891",
         "original_name": "中信金"
+      },
+      {
+        "video_id": "dfc29c49-1cbb-4889-8050-8da76b7df44b",
+        "channel": "兆華與股惑仔",
+        "date": "2026-10-01",
+        "title": "EP1194｜10月首日創收盤新高！村田大漲，被動元件進入漲價循環了嗎？載板幾個利空都解決？設備、矽晶圓還是便宜股？ft.型男股神 陳威良",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context",
+          "strong_sector_match"
+        ],
+        "context": "之間 不僅是有股價的聯動 更是直接就是 受惠於業績的成長 環球金賺多少錢 中美金就是依照 它的持股比率來任列 對 所以昨天也很明顯 環球金 不知道大家盤怎麼注意到 環球金在昨天 亮燈漲停版之後 沒多久中美金就亮燈了 那接著才是合金 所以看起來這個就是 股價它的聯動性 有高有低的差異 合金大和之前的話 散戶朋友一定是比較喜歡的 最多 就是100多塊錢的股票 比較好入手 但是也因為這樣 我覺得這一波在反彈的時候 它就壓力比較大一點 它就需要比較長的時間整理 所以像今天它就 相對之下它就 反而是它比較脾弱 那老大環球金雖然之前 它漲得好像比較緩 可是畢竟我覺得 它就是有那個產業地位 它的小缺點就是 ",
+        "override_kind": "contextual",
+        "override_reason": "scoped_context_alias",
+        "original_code": "1560",
+        "original_name": "中砂"
       }
     ],
     "phonetic_candidates": [
@@ -1128,7 +1130,7 @@
         "text_similarity": 0.667
       }
     ],
-    "updated_at": "2026-09-30T21:40:00"
+    "updated_at": "2026-10-01T21:37:56"
   },
   "以發|6425": {
     "confidence": "high",
@@ -1427,7 +1429,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 90,
+    "observations": 91,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1472,7 +1474,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-09-30T21:03:12"
+    "updated_at": "2026-10-01T21:25:44"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -5247,10 +5249,18 @@
     "wrong_keyword": "環球菁"
   },
   "環球金|6488": {
-    "confidence": "high",
+    "wrong_keyword": "環球金",
     "correct_code": "6488",
     "correct_name": "環球晶",
-    "distinct_videos": 2,
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 3,
+    "distinct_videos": 3,
+    "video_ids": [
+      "6d1e4799-6904-4211-bcdb-192153d0bbbe",
+      "90933ed5-6756-4e81-a28a-2c96d29c4206",
+      "dfc29c49-1cbb-4889-8050-8da76b7df44b"
+    ],
     "evidence": [
       {
         "channel": "兆華與股惑仔",
@@ -5285,39 +5295,50 @@
         "source": "phonetic-discovery",
         "title": "EP1150｜市場的理性與不理性？好財報照跌，但資金買單部份股票？融資退、政府護，反攻條件還不夠，可以觀察的事情變很多！ft.選股教練 陳唯泰",
         "video_id": "90933ed5-6756-4e81-a28a-2c96d29c4206"
+      },
+      {
+        "video_id": "dfc29c49-1cbb-4889-8050-8da76b7df44b",
+        "channel": "兆華與股惑仔",
+        "date": "2026-10-01",
+        "title": "EP1194｜10月首日創收盤新高！村田大漲，被動元件進入漲價循環了嗎？載板幾個利空都解決？設備、矽晶圓還是便宜股？ft.型男股神 陳威良",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context",
+          "strong_sector_match"
+        ],
+        "context": "快 那麼明顯 因為畢竟他本來就是比較穩健 跟客戶都是簽 長期合約為主 但是隨著目前的 細金圓報價也是提升 所以漲價也會慢慢開始 反映在新的合約 那最主要就是位階低 那我覺得 如果看細金圓的話就是 通常環球金在動的時候 合金或台盛科股 性會再活潑一點 所以如果你喜歡看高價 抓低價的 我覺得在這個族群 它是可以的 它是可以的 那當然還有就是 中美金是環球金的母公司 那畢竟它是以 權益法的任列獲利 所以就是 它跟環球金之間 不僅是有股價的聯動 更是直接就是 受惠於業績的成長 環球金賺多少錢 中美金就是依照 它的持股比率來任列 對 所以昨天也很明顯 環球金 不知道大家盤怎麼注意到 環球金在昨天 亮燈漲"
       }
     ],
-    "max_score": 100,
-    "observations": 2,
     "phonetic_candidates": [
       {
         "code": "6488",
         "name": "環球晶",
-        "phonetic_similarity": 0.909,
         "score": 0.824,
+        "phonetic_similarity": 0.909,
         "text_similarity": 0.667
       },
       {
         "code": "2880",
         "name": "華南金",
-        "phonetic_similarity": 0.7,
         "score": 0.572,
+        "phonetic_similarity": 0.7,
         "text_similarity": 0.333
       },
       {
         "code": "2885",
         "name": "元大金",
-        "phonetic_similarity": 0.6,
         "score": 0.507,
+        "phonetic_similarity": 0.6,
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-07-30T18:28:41",
-    "video_ids": [
-      "6d1e4799-6904-4211-bcdb-192153d0bbbe",
-      "90933ed5-6756-4e81-a28a-2c96d29c4206"
-    ],
-    "wrong_keyword": "環球金"
+    "updated_at": "2026-10-01T21:37:42"
   },
   "環語 KY|4991": {
     "confidence": "high",
@@ -9491,5 +9512,180 @@
       }
     ],
     "updated_at": "2026-09-29T21:25:58"
+  },
+  "性腸電|6173": {
+    "wrong_keyword": "性腸電",
+    "correct_code": "6173",
+    "correct_name": "信昌電",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "dfc29c49-1cbb-4889-8050-8da76b7df44b"
+    ],
+    "evidence": [
+      {
+        "video_id": "dfc29c49-1cbb-4889-8050-8da76b7df44b",
+        "channel": "兆華與股惑仔",
+        "date": "2026-10-01",
+        "title": "EP1194｜10月首日創收盤新高！村田大漲，被動元件進入漲價循環了嗎？載板幾個利空都解決？設備、矽晶圓還是便宜股？ft.型男股神 陳威良",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "phonetic_top1",
+          "stock_context",
+          "weak_sector_match",
+          "strong_sector_match"
+        ],
+        "context": "時候再去做 發動攻擊的時候 我覺得相對就會輕鬆很多 那我們今天早上在看盤的時候 就發現 今天這個氣勢 大概跟8月9月不太一樣 8月9月我們講到 被動元件的時候 大概印象中 就是剩兩檔股票為主 核酸糖 性腸電 沒錯 大概就是兩檔為主 那9月下旬之後多了一檔小腰股 就是3620光劫 除此之外 大部分的被動元件 其實都沒有細 可是今天很不一樣 就是是由國劇帶動 一早直接開高 跳空開高 因為更早之前 8點日本開盤 摩奧塔春田製造所 就已經大漲了 對那國劇開高之後 這一次不一樣了 沒有軟下去 硬起來了 對 我看到所長廳 我想說看你等一下被打開 沒有 大家如果去看他今天的 江坡土 好好地欣賞他一下 開高之",
+        "override_kind": "phonetic",
+        "override_reason": "phonetic_top1_needs_review",
+        "original_code": "2492",
+        "original_name": "華新科",
+        "phonetic_top_score": 0.717,
+        "phonetic_lead": 0.09999999999999998,
+        "needs_review": true
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "6173",
+        "name": "信昌電",
+        "score": 0.717,
+        "phonetic_similarity": 0.923,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "3416",
+        "name": "融程電",
+        "score": 0.617,
+        "phonetic_similarity": 0.769,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "2368",
+        "name": "金像電",
+        "score": 0.567,
+        "phonetic_similarity": 0.692,
+        "text_similarity": 0.333
+      }
+    ],
+    "updated_at": "2026-10-01T21:37:51"
+  },
+  "錦碩|2357": {
+    "wrong_keyword": "錦碩",
+    "correct_code": "2357",
+    "correct_name": "華碩",
+    "confidence": "high",
+    "max_score": 75,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "dfc29c49-1cbb-4889-8050-8da76b7df44b"
+    ],
+    "evidence": [
+      {
+        "video_id": "dfc29c49-1cbb-4889-8050-8da76b7df44b",
+        "channel": "兆華與股惑仔",
+        "date": "2026-10-01",
+        "title": "EP1194｜10月首日創收盤新高！村田大漲，被動元件進入漲價循環了嗎？載板幾個利空都解決？設備、矽晶圓還是便宜股？ft.型男股神 陳威良",
+        "source": "full_video_validator",
+        "score": 75,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_conflict",
+          "stock_context"
+        ],
+        "context": "點吃不下 然後主動元件也一起漲 所以主被動 有時候他們可能會包成一起 然後一起來做上漲 那像今天有一個強很強 就是載板 載板今天也很猛 這個南電被調高目標價 好像1700塊吧 總之今天南電創歷史新高 錦碩也創歷史新高 今天還有很可愛的網友 有傳訊息說 趙花 你的錦碩真的變1000了 因為這個故事是這樣的 就是錦碩 我是兩位數的時候有買 應該說三位數10幾塊有買 後來跌到90幾塊有買 那後來股災跌到70幾塊 就是去年對等關稅的時候 我就好好咬牙 忍好了 後來上去的時候 這個載板就變成一個腰骨族群了 他就一直漲 一直漲 我也沒辦法加碼 我就抱著這個 平均成本有兩位數的錦碩 一直看 然後我就有一天開"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3189",
+        "name": "景碩",
+        "score": 0.744,
+        "phonetic_similarity": 0.875,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "6491",
+        "name": "晶碩",
+        "score": 0.744,
+        "phonetic_similarity": 0.875,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "6953",
+        "name": "家碩",
+        "score": 0.732,
+        "phonetic_similarity": 0.857,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-10-01T21:37:51"
+  },
+  "有達|2409": {
+    "wrong_keyword": "有達",
+    "correct_code": "2409",
+    "correct_name": "友達",
+    "confidence": "high",
+    "max_score": 80,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "c2cb9aa3-b355-49fe-b1eb-aa8504673326"
+    ],
+    "evidence": [
+      {
+        "video_id": "c2cb9aa3-b355-49fe-b1eb-aa8504673326",
+        "channel": "財女珍妮",
+        "date": "2026-10-01",
+        "title": "2026/10/01(四) 美光#MU 財報好，市場還在怕？用一檔ETF佈局 AI 產業趨勢",
+        "source": "full_video_validator",
+        "score": 80,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context",
+          "strong_sector_mismatch"
+        ],
+        "context": "資金除了台積電 有撐住一下之外呢 你說中小型股 或者是 AI供應鏈的擴散呢 其實也是有在進行當中的 那昨天被問到的 就是 因為也會有一些同學私訊 我或者是觀眾私訊嘛 他就說 昨天的面板表現得非常好 有達昨天直接漲停嘛 群創昨天也是非常非常強 而且量直接就是直接灌起來 然後表現得非常非常的好 那我覺得這個呢 其實就是一種 怎麼講呢 這個市場的話題性 事件型的交易 那原因就是因為 就有消息傳出說 灰達正在評估下一代 AI晶片封裝使用玻璃機板 這也不是一個新消息嘛 對不對 那為什麼面板廠 會跟AI封裝扯上關係呢 就是因為面板產業 本來就很熟悉大尺寸的玻璃加工啊 精密製程啊 相關的設備 有達其實之前也"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2409",
+        "name": "友達",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "6576",
+        "name": "逸達",
+        "score": 0.565,
+        "phonetic_similarity": 0.6,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "9962",
+        "name": "有益",
+        "score": 0.565,
+        "phonetic_similarity": 0.6,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-10-01T21:44:04"
   }
 }
