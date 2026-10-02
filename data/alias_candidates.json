@@ -1429,7 +1429,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 91,
+    "observations": 92,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1474,7 +1474,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-10-01T21:25:44"
+    "updated_at": "2026-10-02T21:03:19"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -9687,5 +9687,170 @@
       }
     ],
     "updated_at": "2026-10-01T21:44:04"
+  },
+  "河晶|6182": {
+    "wrong_keyword": "河晶",
+    "correct_code": "6182",
+    "correct_name": "合晶",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "8862ab35-c765-4e0b-8673-a4e21c85814f"
+    ],
+    "evidence": [
+      {
+        "video_id": "8862ab35-c765-4e0b-8673-a4e21c85814f",
+        "channel": "兆華與股惑仔",
+        "date": "2026-10-02",
+        "title": "EP1195｜大盤創高、ETF沒有，投信Q4資金從保守轉積極？各種「晶」怎麼選，被動、封測一定買，CPO、玻璃基板最有夢？ft.操盤手 黃豐凱",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context",
+          "strong_sector_match"
+        ],
+        "context": "細晶圓 或是有人說 像上游有一些累晶材料 那大家可能不見得 在每一家能夠分得很清楚 可是今天他們掌飾蠻清楚的 例如說老大環球晶 細晶圓的霸主 大家今天是掌庭板 然後之前家晶很強 結果今天漢蕾也來了 河晶也動了 穩帽也動了 可能各自有不同的三五足題材 有的是缺什麼靈化音 有的是什麼碳化系 有的是深化加 要搞清楚還真的不是很容易 因為他們也可能 每一種都有只是比例的不同 那現在看起來 這些精緻背的都在動了 我們有沒有一個先後瞬息 或是你內心覺得 投信會比較喜歡哪一種 我個人覺得 其實上一波其實也有漲過 對不對 然後就掉下來了 那上一波漲的時候 其實漲最兇的其實是河晶 河晶 對 可是我覺得這一波上來"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "6182",
+        "name": "合晶",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "5245",
+        "name": "智晶",
+        "score": 0.639,
+        "phonetic_similarity": 0.714,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "3016",
+        "name": "嘉晶",
+        "score": 0.546,
+        "phonetic_similarity": 0.571,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-10-02T21:12:11"
+  },
+  "漢蕾|3707": {
+    "wrong_keyword": "漢蕾",
+    "correct_code": "3707",
+    "correct_name": "漢磊",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "8862ab35-c765-4e0b-8673-a4e21c85814f"
+    ],
+    "evidence": [
+      {
+        "video_id": "8862ab35-c765-4e0b-8673-a4e21c85814f",
+        "channel": "兆華與股惑仔",
+        "date": "2026-10-02",
+        "title": "EP1195｜大盤創高、ETF沒有，投信Q4資金從保守轉積極？各種「晶」怎麼選，被動、封測一定買，CPO、玻璃基板最有夢？ft.操盤手 黃豐凱",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "西 晶圓很廣 細晶圓 或是有人說 像上游有一些累晶材料 那大家可能不見得 在每一家能夠分得很清楚 可是今天他們掌飾蠻清楚的 例如說老大環球晶 細晶圓的霸主 大家今天是掌庭板 然後之前家晶很強 結果今天漢蕾也來了 河晶也動了 穩帽也動了 可能各自有不同的三五足題材 有的是缺什麼靈化音 有的是什麼碳化系 有的是深化加 要搞清楚還真的不是很容易 因為他們也可能 每一種都有只是比例的不同 那現在看起來 這些精緻背的都在動了 我們有沒有一個先後瞬息 或是你內心覺得 投信會比較喜歡哪一種 我個人覺得 其實上一波其實也有漲過 對不對 然後就掉下來了 那上一波漲的時候 其實漲最兇的其實是河晶 河晶 對 可是我"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3707",
+        "name": "漢磊",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "3402",
+        "name": "漢科",
+        "score": 0.608,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "7856",
+        "name": "漢測",
+        "score": 0.608,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-10-02T21:12:24"
+  },
+  "敵人|MU": {
+    "wrong_keyword": "敵人",
+    "correct_code": "MU",
+    "correct_name": "Micron",
+    "confidence": "low",
+    "max_score": 35,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "5cfcb8e1-a1f0-48c2-8f49-7f32638b5857"
+    ],
+    "evidence": [
+      {
+        "video_id": "5cfcb8e1-a1f0-48c2-8f49-7f32638b5857",
+        "channel": "財女珍妮",
+        "date": "2026-10-02",
+        "title": "2026/10/02(五) 美債重挫，還能抱嗎？埃森哲#ACN 大漲軟體回溫，被動又動了",
+        "source": "full_video_validator",
+        "score": 35,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "stock_context",
+          "strong_sector_mismatch"
+        ],
+        "context": "動作 那有一些動能 因為現在有一些真的是蠻強的嘛 那你就可以去找一些動能的 然後來補足這個博通 他現在比較弱勢的一個部分 好那昨天美光 美光昨天也是很精彩 大家不覺得嗎 美光因為我自己也有相關的 這個敵人啊 存儲啊 相關的股票嘛 那昨天美光一開盤的時候呢 其實相比於早上盤後 都不太動 一開盤我記得下跌的 大概是3% 4%左右 但是尾盤呢 然後後來大家可以看到 其實是收漲了3% 表示市場在消化了美光 它的財報之後 不管今天是對於過去的營運表現 或是對於未來的展望 其實都是比較樂觀的 而且美光自己也有講到嘛 他其實有蠻多的長期策略的合約 那我其實有去看美光的財報 因為昨天有一位聽眾在YouTube"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "7839",
+        "name": "達人網",
+        "score": 0.406,
+        "phonetic_similarity": 0.444,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "1570",
+        "name": "力肯",
+        "score": 0.39,
+        "phonetic_similarity": 0.6,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "1233",
+        "name": "天仁",
+        "score": 0.371,
+        "phonetic_similarity": 0.571,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-10-02T21:20:49"
   }
 }
