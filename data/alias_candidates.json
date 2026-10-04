@@ -1429,7 +1429,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 93,
+    "observations": 94,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1474,7 +1474,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-10-03T19:31:46"
+    "updated_at": "2026-10-04T19:49:59"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -9852,5 +9852,122 @@
       }
     ],
     "updated_at": "2026-10-02T21:20:49"
+  },
+  "大重控|3701": {
+    "wrong_keyword": "大重控",
+    "correct_code": "3701",
+    "correct_name": "大眾控",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "d5e765b7-41b3-4eaf-870d-e38df3874221"
+    ],
+    "evidence": [
+      {
+        "video_id": "d5e765b7-41b3-4eaf-870d-e38df3874221",
+        "channel": "韭菜畢業班",
+        "date": "2026-10-04",
+        "title": "EP263 | 光通訊 / 友達&環球晶",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "strong_sector_match"
+        ],
+        "context": "光通訊 化合物半導體元件 好化合物半導體元件的話 裡面就看到像文貌 林雅、IET、環語 全部都噴到你老媽不認識 然後其他的還有看到什麼 像是最近光通訊 光模組 組裝那一塊 像什麼GIS 潛艇 光盛 大重控 其實都有看到一些洞的 就等於說 光的這個訊號出來之後 確實是有 扎扎實質的把台股 也帶動得起來一下 好 那我們剛剛都已經講到 光通訊裡面的這一個 化合物半導體元件 裡面有提到的是文貌 因為林雅 我相信大家應該都是 清楚不過了 他就是只要老大哥 長起來之後 其實動能都還算補得非常快 但是其實最近 以我們剛剛所講到的 這一個化合物半導體元件 最強的動能 如果是用氣氛值來看的話 是高達20.9的文"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3701",
+        "name": "大眾控",
+        "score": 0.883,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "2027",
+        "name": "大成鋼",
+        "score": 0.53,
+        "phonetic_similarity": 0.636,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "3570",
+        "name": "大塚",
+        "score": 0.53,
+        "phonetic_similarity": 0.636,
+        "text_similarity": 0.333
+      }
+    ],
+    "updated_at": "2026-10-04T19:58:59"
+  },
+  "大力工|2535": {
+    "wrong_keyword": "大力工",
+    "correct_code": "2535",
+    "correct_name": "達欣工",
+    "confidence": "high",
+    "max_score": 97,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "71e3aa94-832c-4934-bd3b-89b38efd3f1d"
+    ],
+    "evidence": [
+      {
+        "video_id": "71e3aa94-832c-4934-bd3b-89b38efd3f1d",
+        "channel": "投資癮",
+        "date": "2026-10-04",
+        "title": "EP349 這次輪到非常態",
+        "source": "full_video_validator",
+        "score": 97,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "它沒有持續上漲的時候 它就沒有它的延續性 如果你投入股票進去之後 你只是把錢放在裡面而已 有些公司很好 我相信它未來也會很好 只有了部位不太會退 只會不停的找機會去墊高自己的部位 像長期以來 台積電 大力工 台工電 歷程的 綠等等的 美股的部分可能是蘋果 輝達 Google等等 都是一些過去 現在 跟未來的短期之間 不會想要出新的公司 而當我在過去拿到優勢的時候 就會變成這種動態調整的感覺 像現在台塑士柏又創了日子新高 啟動的南亞已經翻得快要十倍了 對我來說 我沒有完全出新公司 我只是動態的調整 但如果一間公司在一個地方 盤整了半年 一年 在拿到優勢的情況下 對我自己來說 也不會產生太多的焦慮",
+        "override_kind": "phonetic",
+        "override_reason": "phonetic_top1_needs_review",
+        "original_code": "3008",
+        "original_name": "大立光",
+        "phonetic_top_score": 0.622,
+        "phonetic_lead": 0.0,
+        "needs_review": true
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2535",
+        "name": "達欣工",
+        "score": 0.622,
+        "phonetic_similarity": 0.778,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "3008",
+        "name": "大立光",
+        "score": 0.622,
+        "phonetic_similarity": 0.778,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "3167",
+        "name": "大量",
+        "score": 0.604,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.333
+      }
+    ],
+    "updated_at": "2026-10-04T20:14:12"
   }
 }
