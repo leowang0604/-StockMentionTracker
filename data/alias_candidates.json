@@ -1429,7 +1429,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 94,
+    "observations": 95,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1474,7 +1474,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-10-04T19:49:59"
+    "updated_at": "2026-10-05T22:57:00"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -3200,10 +3200,18 @@
     "wrong_keyword": "富邦電子"
   },
   "川胡|2059": {
-    "confidence": "high",
+    "wrong_keyword": "川胡",
     "correct_code": "2059",
     "correct_name": "川湖",
-    "distinct_videos": 2,
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 4,
+    "distinct_videos": 3,
+    "video_ids": [
+      "26b0eca1-805f-4cbb-865a-308b3842e967",
+      "2ab06549-3dbe-46fc-be1c-073e6192126d",
+      "4702b99f-420e-4629-aa94-137fe3bf638f"
+    ],
     "evidence": [
       {
         "channel": "兆華與股惑仔",
@@ -3255,39 +3263,49 @@
         "source": "phonetic-discovery",
         "title": "EP1156｜7月營收、半年報密集出爐，好成績卻跌，短線大戶趁機離場？川湖是AI的信任感！觀察投信順向股，回檔接就不怕？ft.操盤手 黃豐凱",
         "video_id": "26b0eca1-805f-4cbb-865a-308b3842e967"
+      },
+      {
+        "video_id": "2ab06549-3dbe-46fc-be1c-073e6192126d",
+        "channel": "兆華與股惑仔",
+        "date": "2026-10-05",
+        "title": "EP1196｜期指先摸5萬點！CCL鬼故事是最佳買點，台光電、聯茂營收刷新高！怕賣飛、又怕回檔的情境再現，該怎麼做最平衡？ft.題材獵人 林漢偉",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "這個AI 輝達供應的股票 應該是 還蠻明顯的 就是基本面第四季 會非常好的公司 所以不管是在所謂PCB 或說你看到散熱 其實我覺得他們在第四季 都能夠交出非常好的成績單 所以你看今天 我們台灣的股後 川胡也是 從大概我記得是 8月份吧 媒體還去挖出來 川胡的發家處在哪裡的時候 股價就見到歷史高點 一路盤疊 但來到10月份 他股價今天是漲停版 也很簡單 因為要公佈9月營收了 那法人說其實第三季 台股的EPS王應該是川胡 他會轉營群聯 所以這個我覺得就是 基本面的一個保護 就是說 有些公司真的 你也不知道他什麼時候會落底 但你相信一件事情 他的業績 他的毛率 他的市佔率 並沒有因為短向股價的一個轉"
       }
     ],
-    "max_score": 100,
-    "observations": 3,
     "phonetic_candidates": [
       {
         "code": "2059",
         "name": "川湖",
-        "phonetic_similarity": 1,
         "score": 0.825,
+        "phonetic_similarity": 1.0,
         "text_similarity": 0.5
       },
       {
         "code": "1516",
         "name": "川飛",
-        "phonetic_similarity": 0.625,
         "score": 0.581,
+        "phonetic_similarity": 0.625,
         "text_similarity": 0.5
       },
       {
         "code": "1595",
         "name": "川寶",
-        "phonetic_similarity": 0.625,
         "score": 0.581,
+        "phonetic_similarity": 0.625,
         "text_similarity": 0.5
       }
     ],
-    "updated_at": "2026-08-07T17:55:34",
-    "video_ids": [
-      "26b0eca1-805f-4cbb-865a-308b3842e967",
-      "4702b99f-420e-4629-aa94-137fe3bf638f"
-    ],
-    "wrong_keyword": "川胡"
+    "updated_at": "2026-10-05T23:17:17"
   },
   "巧辛|1563": {
     "confidence": "high",
@@ -7647,10 +7665,18 @@
     "wrong_keyword": "連發"
   },
   "連發科|2454": {
-    "confidence": "high",
+    "wrong_keyword": "連發科",
     "correct_code": "2454",
     "correct_name": "聯發科",
-    "distinct_videos": 2,
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 3,
+    "distinct_videos": 3,
+    "video_ids": [
+      "3fdcc477-33fa-465c-8bca-bd8afa18e6fa",
+      "6b4cee52-18d9-41ee-b329-db140feca8ba",
+      "6d1e4799-6904-4211-bcdb-192153d0bbbe"
+    ],
     "evidence": [
       {
         "channel": "兆華與股惑仔",
@@ -7684,39 +7710,49 @@
         "source": "phonetic-discovery",
         "title": "2026/07/21 晶片股反彈，Nasdaq卻翻黑：AI股票真的止跌了嗎？",
         "video_id": "6b4cee52-18d9-41ee-b329-db140feca8ba"
+      },
+      {
+        "video_id": "3fdcc477-33fa-465c-8bca-bd8afa18e6fa",
+        "channel": "財女珍妮",
+        "date": "2026-10-05",
+        "title": "2026/10/05(一) 非農這麼弱，長債為何跌？",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "麼關係 但是跟我們台灣的投資人 其實有很大的關係 而且你也可以看到台股跟美股的聯動 其實是還滿高的 那我覺得台股 在上個禮拜的時候 其實又創了歷史新高 那台積電其實是下跌的 或者是你可以看到一些全職 連發科 紅海 台達電 都是下跌 那最強的是誰呢 其實就是我們過去一個禮拜 都在講的ABF 或者是PCB 剛真頂其實昨天也是直接漲停 禮拜五的時候也是漲停 然後像是我們講到的 星星 景數 南電 其實也都是繼續在創高 所以ABF這個部分 或者是你說載板的部分 其實現在就是供不應求 我們已經講到很多次了 在之前的這個疑慮消失了之後 我們可以看到的都是 現在的營收都還是持續的大幅的增加 然後他們還是持續的"
       }
     ],
-    "max_score": 100,
-    "observations": 2,
     "phonetic_candidates": [
       {
         "code": "2454",
         "name": "聯發科",
-        "phonetic_similarity": 1,
         "score": 0.883,
+        "phonetic_similarity": 1.0,
         "text_similarity": 0.667
       },
       {
         "code": "1459",
         "name": "聯發",
-        "phonetic_similarity": 0.75,
         "score": 0.604,
+        "phonetic_similarity": 0.75,
         "text_similarity": 0.333
       },
       {
         "code": "2408",
         "name": "南亞科",
-        "phonetic_similarity": 0.625,
         "score": 0.523,
+        "phonetic_similarity": 0.625,
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-07-21T18:32:11",
-    "video_ids": [
-      "6b4cee52-18d9-41ee-b329-db140feca8ba",
-      "6d1e4799-6904-4211-bcdb-192153d0bbbe"
-    ],
-    "wrong_keyword": "連發科"
+    "updated_at": "2026-10-05T23:28:52"
   },
   "金國光|6209": {
     "confidence": "high",
@@ -9969,5 +10005,181 @@
       }
     ],
     "updated_at": "2026-10-04T20:14:12"
+  },
+  "C部數據|WDC": {
+    "wrong_keyword": "C部數據",
+    "correct_code": "WDC",
+    "correct_name": "Western Digital",
+    "confidence": "medium",
+    "max_score": 65,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "3fdcc477-33fa-465c-8bca-bd8afa18e6fa"
+    ],
+    "evidence": [
+      {
+        "video_id": "3fdcc477-33fa-465c-8bca-bd8afa18e6fa",
+        "channel": "財女珍妮",
+        "date": "2026-10-05",
+        "title": "2026/10/05(一) 非農這麼弱，長債為何跌？",
+        "source": "full_video_validator",
+        "score": 65,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "stock_context"
+        ],
+        "context": "講到另外一個部分 就是在存儲的部分 大家如果看YouTube的話 你可以看到排面上面 在半老體 或者是在科技AI相關的 這個板塊裡面 有幾家公司表現的超級差 比如說像是Western Digital C部數據跟CGEDC結兩家公司 都跌了大概有10%左右 那CGED是S&P 500指數裡面 禮拜五應該是表現 最差的公司質疑 原因是什麼 奇怪 為什麼 之前存儲部都好好的嗎 現在需求也還是非常的強 這兩家公司既然會跌得這麼深 原因就是因為日經報導 頭緒把計畫在2027年 快季年度以前 去大幅提高AI資料中心用的 HDD的產能 具體來說 就是頭緒把預計投資 大概3.8億美元 在菲律賓的工廠 去提升他"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "5287",
+        "name": "數字",
+        "score": 0.331,
+        "phonetic_similarity": 0.375,
+        "text_similarity": 0.25
+      },
+      {
+        "code": "6464",
+        "name": "台數科",
+        "score": 0.331,
+        "phonetic_similarity": 0.375,
+        "text_similarity": 0.25
+      },
+      {
+        "code": "1219",
+        "name": "福壽",
+        "score": 0.325,
+        "phonetic_similarity": 0.5,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-10-05T23:29:00"
+  },
+  "星星|1617": {
+    "wrong_keyword": "星星",
+    "correct_code": "1617",
+    "correct_name": "榮星",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "3fdcc477-33fa-465c-8bca-bd8afa18e6fa"
+    ],
+    "evidence": [
+      {
+        "video_id": "3fdcc477-33fa-465c-8bca-bd8afa18e6fa",
+        "channel": "財女珍妮",
+        "date": "2026-10-05",
+        "title": "2026/10/05(一) 非農這麼弱，長債為何跌？",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "或者是你可以看到一些全職 連發科 紅海 台達電 都是下跌 那最強的是誰呢 其實就是我們過去一個禮拜 都在講的ABF 或者是PCB 剛真頂其實昨天也是直接漲停 禮拜五的時候也是漲停 然後像是我們講到的 星星 景數 南電 其實也都是繼續在創高 所以ABF這個部分 或者是你說載板的部分 其實現在就是供不應求 我們已經講到很多次了 在之前的這個疑慮消失了之後 我們可以看到的都是 現在的營收都還是持續的大幅的增加 然後他們還是持續的在擴散 而且獲利確實也是有在增加 因為你今天你的規格 越來越複雜的時候 其實你的報價 一定也會跟著去做提升 所以我覺得 大家在看這一類股票的時候 第一個營收當然沒有什麼好去質",
+        "override_kind": "phonetic",
+        "override_reason": "phonetic_top1_needs_review",
+        "original_code": "3037",
+        "original_name": "欣興",
+        "phonetic_top_score": 0.663,
+        "phonetic_lead": 0.0,
+        "needs_review": true
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "1617",
+        "name": "榮星",
+        "score": 0.663,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "3025",
+        "name": "星通",
+        "score": 0.663,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "5007",
+        "name": "三星",
+        "score": 0.581,
+        "phonetic_similarity": 0.625,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-10-05T23:29:00"
+  },
+  "經波若微|3163": {
+    "wrong_keyword": "經波若微",
+    "correct_code": "3163",
+    "correct_name": "波若威",
+    "confidence": "high",
+    "max_score": 97,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "3fdcc477-33fa-465c-8bca-bd8afa18e6fa"
+    ],
+    "evidence": [
+      {
+        "video_id": "3fdcc477-33fa-465c-8bca-bd8afa18e6fa",
+        "channel": "財女珍妮",
+        "date": "2026-10-05",
+        "title": "2026/10/05(一) 非農這麼弱，長債為何跌？",
+        "source": "full_video_validator",
+        "score": 97,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "那其實我們剛剛已經有講到 其實你在看美股的時候 Lumantna或者是Coheron這些公司 其實在上個禮拜的表現 也都還滿強勁的 那在台灣的部分 像是細光紙 CPU相關的概念股 比如說穩貌 連壓力 經波若微這一類的公司 啪啪的 你也可以看到 其實也都已經開始有一些擴散 或者是他已經開始去反映 相關的一些題材性了 所以這一類的東西 其實就是我們之前講到 你今天AI資料中心 除了GPU之外 GPU是之前缺貨的 現在感覺就沒那麼缺了 但是缺的是什麼呢 未來如果需要更高速的連接 低延遲 速度更快 800G變成1.6T 或什麼之類的 那你今天你光的佔比 一定會持續的提高 所以現在來說 可能很多人會覺得",
+        "override_kind": "phonetic",
+        "override_reason": "clear_phonetic_winner",
+        "original_code": "6510",
+        "original_name": "精測",
+        "phonetic_top_score": 0.608,
+        "phonetic_lead": 0.22899999999999998
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3163",
+        "name": "波若威",
+        "score": 0.608,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "4951",
+        "name": "精拓科",
+        "score": 0.379,
+        "phonetic_similarity": 0.583,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "3006",
+        "name": "晶豪科",
+        "score": 0.325,
+        "phonetic_similarity": 0.5,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-10-05T23:29:08"
   }
 }
