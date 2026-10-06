@@ -1429,7 +1429,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 95,
+    "observations": 96,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1474,7 +1474,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-10-05T22:57:00"
+    "updated_at": "2026-10-06T21:17:55"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -10181,5 +10181,102 @@
       }
     ],
     "updated_at": "2026-10-05T23:29:08"
+  },
+  "MD|MD": {
+    "wrong_keyword": "MD",
+    "correct_code": "MD",
+    "correct_name": "Pediatrix Medical Group, Inc.",
+    "confidence": "high",
+    "max_score": 85,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "cdb370f3-3fbc-484f-aad7-05367393f2a9"
+    ],
+    "evidence": [
+      {
+        "video_id": "cdb370f3-3fbc-484f-aad7-05367393f2a9",
+        "channel": "兆華與股惑仔",
+        "date": "2026-10-06",
+        "title": "EP1197｜輝達、AMD創高，AI成長率壓制公債殖利率？半導體、PCB是大局！基本面沒變但氣氛變了，再度回落的可能性？ft.紀緯明 小明同學",
+        "source": "full_video_validator",
+        "score": 85,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "stock_context",
+          "code_in_context"
+        ],
+        "context": "所以今天雖然沒有供過去 也看得出來 到了這個關前難免會情趣 但我想後面要過不是那麼難的事情 可是我們也必須釐清一個狀況 像我們有很多AI上的好消息 例如說像昨天晚上美股 你可以看到灰打在創歷史新高 MD因為這個蘇麻蘇之峰 今天來台灣囉 MD今年以來的股價 也是越來越強悍 它也是在一個歷史新高的位置 所以當今天這些所謂的AI大型美國公司 都已經來創歷史新高了 後世肯定是不看蛋 這個後世肯定是不看蛋 但是是不是大家就要很foam地覺得說 那就好像要一路漲上去都不會回頭 沒有 因為現在你說 好像雖然我們不管所謂的美債直率率 已經又創下了二幾年來的新高 可是它終究對於市場上的資金的來回 它偶爾就會形成",
+        "override_kind": "exact_alias",
+        "override_reason": "known_identity_or_approved_alias",
+        "original_code": "AMD",
+        "original_name": "AMD"
+      }
+    ],
+    "phonetic_candidates": [],
+    "updated_at": "2026-10-06T21:29:00"
+  },
+  "勇光|1711": {
+    "wrong_keyword": "勇光",
+    "correct_code": "1711",
+    "correct_name": "永光",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "cdb370f3-3fbc-484f-aad7-05367393f2a9"
+    ],
+    "evidence": [
+      {
+        "video_id": "cdb370f3-3fbc-484f-aad7-05367393f2a9",
+        "channel": "兆華與股惑仔",
+        "date": "2026-10-06",
+        "title": "EP1197｜輝達、AMD創高，AI成長率壓制公債殖利率？半導體、PCB是大局！基本面沒變但氣氛變了，再度回落的可能性？ft.紀緯明 小明同學",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "像達星財 他就年增可能不到20% 也是歷史新高 可是年增沒那麼帥 不過他反映了 因為他位階已經殺到很低了 殺到夠低 那你已經漲幅低於平均了 所以你的營收年增 也許不用高於平均 你就可以開始動了 像今天勇光這一類的 光陽科也動了 所以今天特化族群 顯然也是一個在 整體半導體設備供應鏈裡面 我覺得相對未接 大部分偏低的一個族群 OK 這邊的話 衍生出的是一個交易的策略 也是我個人蠻喜歡用的策略 就是目前的台股 至少在最近一個月 我有觀察到一個現象 什麼現象 也就是只要前面兩個禮拜 這一個族群都沒有動 都在休息的 他很有可能 因為任何一個小小的利多就點火 像我們這個最近的應該就是PCB嘛 沒動什麼台",
+        "override_kind": "phonetic",
+        "override_reason": "clear_phonetic_winner",
+        "original_code": "2301",
+        "original_name": "光寶科",
+        "phonetic_top_score": 0.825,
+        "phonetic_lead": 0.1439999999999999
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "1711",
+        "name": "永光",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "8249",
+        "name": "菱光",
+        "score": 0.681,
+        "phonetic_similarity": 0.778,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "1752",
+        "name": "南光",
+        "score": 0.608,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-10-06T21:29:05"
   }
 }
