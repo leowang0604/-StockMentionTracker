@@ -1429,7 +1429,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 96,
+    "observations": 97,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1474,7 +1474,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-10-06T21:17:55"
+    "updated_at": "2026-10-07T21:38:57"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -4017,9 +4017,10 @@
     "correct_name": "旺矽",
     "confidence": "high",
     "max_score": 100,
-    "observations": 2,
-    "distinct_videos": 2,
+    "observations": 3,
+    "distinct_videos": 3,
     "video_ids": [
+      "459e1965-ee6e-48f9-914c-8f0880b00774",
       "ed8d0ac9-94f6-4132-98ea-81aaa8613a0c",
       "fe5ddf1a-0954-40ec-badf-31e925066ecb"
     ],
@@ -4057,6 +4058,23 @@
           "stock_context"
         ],
         "context": "它比較 股信有點被 像之前那一波大家受傷很重 就是它被關到處置之外 大戶也跑不掉 那它的獲利也是大家 其中比較低的 是 對 那擁置又跟聯發科 有很好的關係 我覺得這個是一個考量 但我自己喜歡中間 就是旺戲這樣的公司 對 那旺戲也發生過在法說的時候 大家覺得對它的期待 不止它講的那樣 對 可是這種我就會特別留意 老沒事來囉 連續疊兩根 我就會蠻關注它的 不一定會V轉 但市場會越來越聰明 你看像昨天的那個建策 又在講這個軍樂片的用途 什麼極片變極片 結果疊停之後就馬上打開了 因為市場根本就知道 每次都是玩這個遊戲 但是公司有沒有切進NV有 公司有沒有在出貨有 有 然後就不會像上次那樣 連續性疊停了"
+      },
+      {
+        "video_id": "459e1965-ee6e-48f9-914c-8f0880b00774",
+        "channel": "財女珍妮",
+        "date": "2026-10-07",
+        "title": "2026/10/07(三) Google鎖定核電，Marvell上調指引，AI輪動創高",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "後來發現成交量 會比較好的 可以讓大家知道 市場上面的主流 就是動能是在哪邊 資金是往哪邊去流 那昨天像是AI封裝測試 其實也還蠻強的 像是系格 其實就有漲停 然後歷程也是上漲了 大概4到5%左右吧 旺戲 你這種 這種 就是封裝測試 要探針卡相關的東西 其實也會因為 就是AI晶片的量 整個提升上來 他的需求也會變多 為什麼呢 是因為AI晶片 你的運算的核心越多 功耗越快 傳輸速度越快 你今年 你更量率這種東西 你更應該要繼續把他去往上拉高 所以不管今天是在探針卡 測試的時間拉長 測試版 測試的設備規格都會提高 所以這個是昨天 可能市場上面有去反映的 那為什麼系格他會漲停 可能是9月營收出來 其"
       }
     ],
     "phonetic_candidates": [
@@ -4082,7 +4100,7 @@
         "text_similarity": 0.5
       }
     ],
-    "updated_at": "2026-09-17T23:24:42"
+    "updated_at": "2026-10-07T22:21:26"
   },
   "星星|8183": {
     "wrong_keyword": "星星",
@@ -8842,9 +8860,10 @@
     "correct_name": "矽格",
     "confidence": "high",
     "max_score": 100,
-    "observations": 1,
-    "distinct_videos": 1,
+    "observations": 2,
+    "distinct_videos": 2,
     "video_ids": [
+      "459e1965-ee6e-48f9-914c-8f0880b00774",
       "ba3326f1-950a-4ea2-82a7-e33b80fcd808"
     ],
     "evidence": [
@@ -8864,6 +8883,23 @@
           "stock_context"
         ],
         "context": "然持續成長 但是因為市場的量能 沒有辦法放大 所以右側交代上面 才會比較難做一點點 另外的族群 主要是封測族群 像封測族群的金元店 第二季的EPS2.04元 5G的新高 上半年的營業利率 年增51% 系格在第二季的部分 EPS2.55元 是近40G的新高 資本支出上銷的88億元 新權的第二季的EPS是2.44元 毛利率40.2% 價當率第一季70% 第二季73% 第三季的部分 預估持續上升 公司的第三季營收 雙成長雙季增 上半年的資本支出 是70.1億元 明年會更高 而且目前 他調降他的股利 配發率來配合 而第六月光的部分 第二季的基本EPS4.8元 18G的新高 稀釋之後4.6億元 整理來說"
+      },
+      {
+        "video_id": "459e1965-ee6e-48f9-914c-8f0880b00774",
+        "channel": "財女珍妮",
+        "date": "2026-10-07",
+        "title": "2026/10/07(三) Google鎖定核電，Marvell上調指引，AI輪動創高",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "上面 就不是以市值去做呈現 我們就是以成交量去做呈現 因為我後來發現成交量 會比較好的 可以讓大家知道 市場上面的主流 就是動能是在哪邊 資金是往哪邊去流 那昨天像是AI封裝測試 其實也還蠻強的 像是系格 其實就有漲停 然後歷程也是上漲了 大概4到5%左右吧 旺戲 你這種 這種 就是封裝測試 要探針卡相關的東西 其實也會因為 就是AI晶片的量 整個提升上來 他的需求也會變多 為什麼呢 是因為AI晶片 你的運算的核心越多 功耗越快 傳輸速度越快 你今年 你更量率這種東西 你更應該要繼續把他去往上拉高 所以不管今天是在探針卡 測試的時間拉長 測試版 測試的設備規格都會提高 所以這個是昨天 可能市場"
       }
     ],
     "phonetic_candidates": [
@@ -8889,7 +8925,7 @@
         "text_similarity": 0.5
       }
     ],
-    "updated_at": "2026-09-20T19:18:02"
+    "updated_at": "2026-10-07T22:21:26"
   },
   "晶圓電|2449": {
     "wrong_keyword": "晶圓電",
@@ -10278,5 +10314,307 @@
       }
     ],
     "updated_at": "2026-10-06T21:29:05"
+  },
+  "加金|3049": {
+    "wrong_keyword": "加金",
+    "correct_code": "3049",
+    "correct_name": "精金",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "31a78ee1-f19e-471b-a260-f011a8184bc3"
+    ],
+    "evidence": [
+      {
+        "video_id": "31a78ee1-f19e-471b-a260-f011a8184bc3",
+        "channel": "韭菜畢業班",
+        "date": "2026-10-07",
+        "title": "EP264 | 被動元件/ 光頡&台光電",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "講什麼共同點 那上一集其實我們有提到 產業相關的題材 最近發酵得非常的快 然後同時就是我覺得 還有另外一個我們看市場焦點的話 很多都是小鬼骨當道 可能像什麼最近比較強勢的 可能像合一 然後再來可能像 加金或說灌溪店這種 我們也不能說他就是 很小很小的股票 只不過就是很標的 連續五天上榜的東西的話 可能就是這些東西 然後甚至連漢蕾 南茂 金星科最近其實都有在動起來 或台亞 就是一些小鬼骨 最近就是很強勢 然後他可能 中間可能殺下去 甚至找盤有碰到跌停 但是他上漲的幅度都很快 這個我覺得目前看起來 有一種 formal 的感覺就是在這裡面 然後如果是我們講大型股票 就是那種超過兩千塊 三千塊的股票",
+        "override_kind": "phonetic",
+        "override_reason": "phonetic_top1_needs_review",
+        "original_code": "3323",
+        "original_name": "加百裕",
+        "phonetic_top_score": 0.639,
+        "phonetic_lead": 0.08199999999999996,
+        "needs_review": true
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3049",
+        "name": "精金",
+        "score": 0.639,
+        "phonetic_similarity": 0.714,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "3016",
+        "name": "嘉晶",
+        "score": 0.557,
+        "phonetic_similarity": 0.857,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "6715",
+        "name": "嘉基",
+        "score": 0.542,
+        "phonetic_similarity": 0.833,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-10-07T22:00:33"
+  },
+  "灌溪店|2466": {
+    "wrong_keyword": "灌溪店",
+    "correct_code": "2466",
+    "correct_name": "冠西電",
+    "confidence": "high",
+    "max_score": 85,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "31a78ee1-f19e-471b-a260-f011a8184bc3"
+    ],
+    "evidence": [
+      {
+        "video_id": "31a78ee1-f19e-471b-a260-f011a8184bc3",
+        "channel": "韭菜畢業班",
+        "date": "2026-10-07",
+        "title": "EP264 | 被動元件/ 光頡&台光電",
+        "source": "full_video_validator",
+        "score": 85,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "同點 那上一集其實我們有提到 產業相關的題材 最近發酵得非常的快 然後同時就是我覺得 還有另外一個我們看市場焦點的話 很多都是小鬼骨當道 可能像什麼最近比較強勢的 可能像合一 然後再來可能像 加金或說灌溪店這種 我們也不能說他就是 很小很小的股票 只不過就是很標的 連續五天上榜的東西的話 可能就是這些東西 然後甚至連漢蕾 南茂 金星科最近其實都有在動起來 或台亞 就是一些小鬼骨 最近就是很強勢 然後他可能 中間可能殺下去 甚至找盤有碰到跌停 但是他上漲的幅度都很快 這個我覺得目前看起來 有一種 formal 的感覺就是在這裡面 然後如果是我們講大型股票 就是那種超過兩千塊 三千塊的股票 反而他",
+        "override_kind": "phonetic",
+        "override_reason": "clear_phonetic_winner",
+        "original_code": "4973",
+        "original_name": "廣穎電通",
+        "phonetic_top_score": 0.65,
+        "phonetic_lead": 0.195
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2466",
+        "name": "冠西電",
+        "score": 0.65,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "2316",
+        "name": "楠梓電",
+        "score": 0.455,
+        "phonetic_similarity": 0.7,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "5315",
+        "name": "光聯",
+        "score": 0.455,
+        "phonetic_similarity": 0.7,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-10-07T22:00:34"
+  },
+  "萬起|2701": {
+    "wrong_keyword": "萬起",
+    "correct_code": "2701",
+    "correct_name": "萬企",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "7bb081ec-42db-44bb-9a92-7acf96a2e568"
+    ],
+    "evidence": [
+      {
+        "video_id": "7bb081ec-42db-44bb-9a92-7acf96a2e568",
+        "channel": "兆華與股惑仔",
+        "date": "2026-10-07",
+        "title": "EP1198｜指數不動，但類股輪流復活！9月營收要關注幾面向，ETF誰比大盤領先創高？CPO、被動增溫中，記憶體鈍化怎看？ft.型男股神 陳威良",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "底接出來的這個年報 應該是會漂亮到不行 會有很多的想像空間 那到11月的時候 其實第三季的機保學 陸續出來 應該都是非常好成績 因為我們今年也攜帶了 非常強勁的出口數據 外銷訂單等等的 但是我們是從5萬起 剛剛有講到 今年太厲害了 10月初我們就到歷史新高了 所以從5萬起往後選的話 可能在類股的倫動上 大家就不一定能夠掌握那麼的仔細 那買這個市值行嗎 買零零五零嗎 還是會有很多人覺得 我只是跟著大盤還不夠滿意 有沒有什麼解方 其實買什麼這倒是 投資策略的第二部曲 那我覺得第一部曲 最重要最根本 就是你總要先開始 你一定要先有開始 那其實我問過很多投資朋友 大家的心態就是 第一點的時候想要等指紋"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2701",
+        "name": "萬企",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "2615",
+        "name": "萬海",
+        "score": 0.608,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "4543",
+        "name": "萬在",
+        "score": 0.608,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-10-07T22:13:15"
+  },
+  "擁置科|6683": {
+    "wrong_keyword": "擁置科",
+    "correct_code": "6683",
+    "correct_name": "雍智科技",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "7bb081ec-42db-44bb-9a92-7acf96a2e568"
+    ],
+    "evidence": [
+      {
+        "video_id": "7bb081ec-42db-44bb-9a92-7acf96a2e568",
+        "channel": "兆華與股惑仔",
+        "date": "2026-10-07",
+        "title": "EP1198｜指數不動，但類股輪流復活！9月營收要關注幾面向，ETF誰比大盤領先創高？CPO、被動增溫中，記憶體鈍化怎看？ft.型男股神 陳威良",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "phonetic_top1",
+          "stock_context",
+          "code_in_context"
+        ],
+        "context": "會認為像類似這種 就是營收確實還在成長 而且他的單月成長幅度還很強 年增幅度是114% 但股價還沒有過高 我覺得這個倒是可以去做留意 那另外像大家知道說 聯發科普遍基於後望 那其實我覺得有一檔股票 是擁置科6683 他就是長期跟聯發科 合作的供應鏈夥伴 主要就是從測試版到探爭卡 那他9月營收也是創歷史新高 那股價其實相對 目前的位階我覺得也不算高 還在整理當中 像這種就是 明顯就是業績有往上 那股價可能 不一定是說在絕對的地板 不過相對的可能在右下角 附近或是均線整理的糾結處附近 這個都是可以去做追蹤 因為聯發科今天又來了 對不對 又在講說 博通現在跟谷歌的狀況比較密切 是不是在這個TPU上面",
+        "override_kind": "phonetic",
+        "override_reason": "phonetic_top1_needs_review",
+        "original_code": "2301",
+        "original_name": "光寶科",
+        "phonetic_top_score": 0.619,
+        "phonetic_lead": 0.06899999999999995,
+        "needs_review": true
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "6683",
+        "name": "雍智科技",
+        "score": 0.619,
+        "phonetic_similarity": 0.818,
+        "text_similarity": 0.25
+      },
+      {
+        "code": "6609",
+        "name": "瀧澤科",
+        "score": 0.55,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "3535",
+        "name": "晶彩科",
+        "score": 0.478,
+        "phonetic_similarity": 0.556,
+        "text_similarity": 0.333
+      }
+    ],
+    "updated_at": "2026-10-07T22:13:37"
+  },
+  "波通|2397": {
+    "wrong_keyword": "波通",
+    "correct_code": "2397",
+    "correct_name": "友通",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "459e1965-ee6e-48f9-914c-8f0880b00774"
+    ],
+    "evidence": [
+      {
+        "video_id": "459e1965-ee6e-48f9-914c-8f0880b00774",
+        "channel": "財女珍妮",
+        "date": "2026-10-07",
+        "title": "2026/10/07(三) Google鎖定核電，Marvell上調指引，AI輪動創高",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context",
+          "strong_sector_match"
+        ],
+        "context": "跌 所以是拖累廢半 表現沒有科技股 那是達克指數 好的原因之一 那像Intel或者是美光 昨天也是下跌的 好 那表現比較好的是誰呢 像是NVIDIA 雖然說只上漲了0.14% 但是也是創高了 AMD 波通 馬費歐 都是在昨天表現比較好的 軟體股在昨天其實表現得也還不錯 所以我覺得 現在市場上面呢 有的時候會擔心說 NVIDIA的股價在過去一個禮拜 漲幅達到了將近要5%左右 創下歷史新高 然後現在有很多的資金都 移到這個AI概念股上面 你如果去看傳產醫療 銀行 消費 股票都還在下滑 有一個最大的擔憂是 現在S&P 500指數不到一半的成份股 股價是站在200日年限 這一條移動平均線之上的 那過於",
+        "override_kind": "phonetic",
+        "override_reason": "phonetic_top1_needs_review",
+        "original_code": "AVGO",
+        "original_name": "Broadcom",
+        "phonetic_top_score": 0.639,
+        "phonetic_lead": 0.031000000000000028,
+        "needs_review": true
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2397",
+        "name": "友通",
+        "score": 0.639,
+        "phonetic_similarity": 0.714,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "2471",
+        "name": "資通",
+        "score": 0.608,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "6179",
+        "name": "亞通",
+        "score": 0.608,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-10-07T22:21:22"
   }
 }
