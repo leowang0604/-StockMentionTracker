@@ -985,40 +985,19 @@
     "correct_name": "中美晶",
     "confidence": "high",
     "max_score": 100,
-    "observations": 7,
-    "distinct_videos": 7,
+    "observations": 8,
+    "distinct_videos": 8,
     "video_ids": [
       "0da08e88-66a9-4152-a636-ec02d830e286",
       "4851850f-b15c-4ee9-a8fe-1c23e6067ac3",
       "4e6f1716-0c30-47aa-bfd2-9da24b94aa65",
+      "5de1d356-c872-4704-ac95-f15b4b112d8a",
       "806c884a-70ff-43e5-9377-62e92a34fdc9",
       "82fbcab9-7810-413e-92c7-d6bbc4b64484",
       "a36a8e7a-4c7d-4870-8a49-6cf276557ff2",
       "dfc29c49-1cbb-4889-8050-8da76b7df44b"
     ],
     "evidence": [
-      {
-        "channel": "兆華與股惑仔",
-        "context": "來你就要開始擔心他 什麼時候開始要有力控出現 也就告訴你 股價的某種程度 已經到一個滿足點 滿足點 所以這邊你就要留意 就是這邊的變化 然後 我還是要幫981 講一下話 就是他是賣了 環球金 可是他買中美金 他是 賣了紙公司 去買某公司 所以我覺得他可能有點擔心 環球金關出來之後 可能股價會比較大的震盪 所以他回去買那個 相對來講 穩定的 比較穩定一點的 但是 一樣也是可以受惠 整個一個細金圓 目前看起來 供需很吃緊的一個狀況 好 因為剛剛講到漲價 真的 從一開始傳 淡質電容漲價 對不對 因為他有機梅 所以有淡質電容 然後到最後變成 全面發漲價 他很可能有一個 勢叫力多已經實現 但是 因為我剛",
-        "date": "2026-07-03",
-        "original_code": "2891",
-        "original_name": "中信金",
-        "override_kind": "contextual",
-        "override_reason": "scoped_context_alias",
-        "reasons": [
-          "known_stock_code",
-          "code_name_match",
-          "original_in_context",
-          "name_distance<=1",
-          "phonetic_top1",
-          "stock_context",
-          "strong_sector_match"
-        ],
-        "score": 100,
-        "source": "full_video_validator",
-        "title": "EP1132｜各種市場傳言大解讀！非農就業好不好，都殺？三星說要砍價載板、國巨發漲價函卻震盪，瓶頸出現？台光電創高啟示！ft.操盤手 黃豐凱",
-        "video_id": "4851850f-b15c-4ee9-a8fe-1c23e6067ac3"
-      },
       {
         "channel": "韭菜畢業班",
         "context": "等一下也可以聊一下 立機電也是自己有出來 再繼續說 他後續的一個佈局是這樣 我們今天這一集也會聊到 所以我們看到 各大族群其實都有所表現 那當然我們 還是有注意到 細金園是有正當休息 那其中我們看到 中美金 他是在細金園 如果大家有看財地圖的話 他氣氛只是 現在是直接飆到最高 那也很明顯的 可以看到他表現 其實是 禮拜三相對最好的 那前幾天表現 其實是 環球金跟合金在做表現 但是我覺得這種東西 就有時候就是這樣 他雖然說今天是這個東西當道 就最強的就是這個東西 但不一定隔天就代表還是他 大家還是要注意一下 那個氣氛值上面的變化 那我覺得 已經漲了兩三天的東西 稍微休息一下 震盪一下 我覺得這也",
@@ -1105,6 +1084,28 @@
         "override_reason": "scoped_context_alias",
         "original_code": "1560",
         "original_name": "中砂"
+      },
+      {
+        "video_id": "5de1d356-c872-4704-ac95-f15b4b112d8a",
+        "channel": "財女珍妮",
+        "date": "2026-10-08",
+        "title": "2026/10/08(四) FED還想升息AI行情撐得住？",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context",
+          "strong_sector_match"
+        ],
+        "context": "或者是擁擠交易的地方呢 我覺得光通 其實大家也可以做參考 因為光通感覺好像從 前幾天開始也才剛起漲嘛 像是光盛啊 連亞啊 昨天其實表現得也還不錯 還有像細金圓的部分 我覺得細金圓像是 台盛科 或者是中美金 合金這一類的 在昨天表現也非常強 那我覺得細金圓 像我們之前講到 它是一個 基本面看起來需求都很強 但是股價的波動 其實有的時候很難去抓的一個部分 那昨天是看起來呢 是整個族群好像都有提振起來 那半導體的景氣回溫 然後像記憶體的擴產啊 產能利用率啊 漲價的題材啊 我覺得這些細金圓 其實都是有抓到的 所以只要接下來這幾家公司呢 它是真的在 獲利在營收方面有上來的話 或許它也是有一些 題材可以去",
+        "override_kind": "contextual",
+        "override_reason": "scoped_context_alias",
+        "original_code": "2891",
+        "original_name": "中信金"
       }
     ],
     "phonetic_candidates": [
@@ -1130,7 +1131,7 @@
         "text_similarity": 0.667
       }
     ],
-    "updated_at": "2026-10-01T21:37:56"
+    "updated_at": "2026-10-08T21:59:16"
   },
   "以發|6425": {
     "confidence": "high",
@@ -1429,7 +1430,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 97,
+    "observations": 98,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1474,7 +1475,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-10-07T21:38:57"
+    "updated_at": "2026-10-08T21:34:48"
   },
   "創造力|3443": {
     "confidence": "high",
