@@ -1430,7 +1430,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 100,
+    "observations": 101,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1475,7 +1475,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-10-10T20:21:16"
+    "updated_at": "2026-10-11T20:38:24"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -10617,5 +10617,113 @@
       }
     ],
     "updated_at": "2026-10-07T22:21:22"
+  },
+  "台光電影|2383": {
+    "wrong_keyword": "台光電影",
+    "correct_code": "2383",
+    "correct_name": "台光電",
+    "confidence": "high",
+    "max_score": 70,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "de9b5d87-9c68-4350-a881-46f756dfecf6"
+    ],
+    "evidence": [
+      {
+        "video_id": "de9b5d87-9c68-4350-a881-46f756dfecf6",
+        "channel": "韭菜畢業班",
+        "date": "2026-10-11",
+        "title": "EP265 | 光通創高 / 大立光&信驊",
+        "source": "full_video_validator",
+        "score": 70,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "phonetic_top1"
+        ],
+        "context": "那當然你說最後我們就總結一下 現在的狀況的話 其實以產業地圖來看 被動元件 好甚至可能看到實營元件 或是說一些玻璃纖維布期 都有一些動作 那ccl的話其實也是一樣 就是中間有遇到一些波折 但是你會看到台光電影是 瞬間又爬回去六千塊了 所以在抱這些 我們講大家眾所皆知的個股的前提 其實你就要去注意就是 譬如像你抱南亞好了 他可能之前就是會一直 給你正當一直洗好 洗到你老媽不認識 洗兩個月之後呢 他可能就一波可能從 Maybe 250塊 230塊一路拉到了300多塊 然後這一波就是 這一個之前有願意等的人等 下一個成本 所以你今天在抱這種 我們已經講產業講了很多次的 或是說其實你都已經找到 基本面"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2383",
+        "name": "台光電",
+        "score": 0.75,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.75
+      },
+      {
+        "code": "4905",
+        "name": "台聯電",
+        "score": 0.541,
+        "phonetic_similarity": 0.562,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "2308",
+        "name": "台達電",
+        "score": 0.5,
+        "phonetic_similarity": 0.5,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-10-11T20:45:19"
+  },
+  "光潔|3624": {
+    "wrong_keyword": "光潔",
+    "correct_code": "3624",
+    "correct_name": "光頡",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "de9b5d87-9c68-4350-a881-46f756dfecf6"
+    ],
+    "evidence": [
+      {
+        "video_id": "de9b5d87-9c68-4350-a881-46f756dfecf6",
+        "channel": "韭菜畢業班",
+        "date": "2026-10-11",
+        "title": "EP265 | 光通創高 / 大立光&信驊",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "有基本面的股票 但是都還是持續的休息 但是你會發現中小型個股 還是在我們上一集 講完之後 他還是有繼續動作 譬如像最近的市場焦點 產業地圖上面 像十一元件或被動元件 被動元件我們上一集 有提到的可能像光潔法說 我也講了不錯之後 開跑計的是開 6% 7% 中間有正當一下 但是最後又鎖回去 就是被動的想法上還是 我覺得算是對的道路 就是整體還是算非常的強 然後再來就是小鬼股那一塊 我自己最近 還是在大多數時間 針對小鬼股 我還是做短 然後看能不能爭取一些利益空間 那目前連續做了幾天的狀況 像一個禮拜吧 我覺得勝率還算 ok 當然不是說到百發百中 就是每一次都一定要賺到錢什麼 但是至少我覺得以小鬼股"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3624",
+        "name": "光頡",
+        "score": 0.744,
+        "phonetic_similarity": 0.875,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "4420",
+        "name": "光明",
+        "score": 0.608,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "5315",
+        "name": "光聯",
+        "score": 0.608,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-10-11T20:45:23"
   }
 }
