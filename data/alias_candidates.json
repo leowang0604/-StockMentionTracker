@@ -821,10 +821,11 @@
     "correct_name": "上詮",
     "confidence": "high",
     "max_score": 100,
-    "observations": 3,
-    "distinct_videos": 3,
+    "observations": 4,
+    "distinct_videos": 4,
     "video_ids": [
       "401131f0-6382-4caa-abfd-3e6b5dda0c73",
+      "7a9fa5fb-88ba-44a1-8bcf-d5d3388291f0",
       "7c46d359-d54a-4cef-8997-18cfb6e0770d",
       "97a5988d-66d4-454f-8062-ab8c76a1cbbf"
     ],
@@ -879,6 +880,23 @@
           "stock_context"
         ],
         "context": "的話 其實還是年減嘛 年減也將近有百分之三十 所以 它的漲停 我覺得也 找不到什麼特別 就是很大的一個原因啦 而且如果你去看其他 可能跟它有類似題材的 比如說光通好了 其實也沒有一起走牆啊 比如說什麼上全啊 布洛威啊 聯亞這一類的公司 其實也都是在疊嘛 所以我覺得感覺好像 你說資金有沒有走到光通呢 我覺得好像 目前看起來其實也還沒有 那就像我們之前講到 散熱其實這兩天也是休息的 載板其實也是休息的 所以我覺得 這種輪動的狀況呢 其實還是蠻明顯的 但是如果你是看好 AI長期的發展 我覺得 都是找一些指標性的公司 比如說載板就是星星景素嘛 這個就很明顯嘛 那比如說 如果你要看S8 或者是如果你要看"
+      },
+      {
+        "video_id": "7a9fa5fb-88ba-44a1-8bcf-d5d3388291f0",
+        "channel": "兆華與股惑仔",
+        "date": "2026-10-12",
+        "title": "EP1200｜台股世界強，大立光幫誰開法會？337調查影響？設備股9月入帳怎麼看？南亞.南亞科史上最強季報！ft.題材獵人 林漢偉",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "可惜 所以大家會有點擔心友達 但我剛剛也跟浩宇哥聊了 友達不是這個裡面的 最重要的成分股 友達那麼大 友達要的還是賣場之後 在整個後段封測的轉型 跟台積電的接上軌這件事情 那還有 大家會想到另外的就是上全 因為上全也跟台積電在合作 開發FAU的部分 那為什麼那麼慢呢 你那麼慢 你說不出來一個 很具體的時間 可是大力光現在說出來 那是不是大力光就可能取代你 或是比你還超前 我想這是大家在今天盤面上 會擔心上全的原因 對 因為大力光的法說 會上禮拜真的非常精彩 第一個當然在於它本身 毛利是創造13年的新低 所以原本大家今天盤前 都很擔心 這個老實數 對於這個手機市場的展望 或毛利的下滑 對於整個一"
       }
     ],
     "phonetic_candidates": [
@@ -904,7 +922,7 @@
         "text_similarity": 0.5
       }
     ],
-    "updated_at": "2026-09-30T21:49:35"
+    "updated_at": "2026-10-12T23:04:28"
   },
   "中美金|2891": {
     "confidence": "high",
@@ -1430,7 +1448,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 101,
+    "observations": 102,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1475,7 +1493,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-10-11T20:38:24"
+    "updated_at": "2026-10-12T22:45:13"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -3506,10 +3524,17 @@
     "wrong_keyword": "建准"
   },
   "影威|1799": {
-    "confidence": "high",
+    "wrong_keyword": "影威",
     "correct_code": "1799",
     "correct_name": "易威",
-    "distinct_videos": 1,
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 2,
+    "distinct_videos": 2,
+    "video_ids": [
+      "7a9fa5fb-88ba-44a1-8bcf-d5d3388291f0",
+      "bbf75380-a0f8-44e6-bd60-2628e7ded65c"
+    ],
     "evidence": [
       {
         "channel": "兆華與股惑仔",
@@ -3533,38 +3558,56 @@
         "source": "full_video_validator",
         "title": "EP1139｜CPI降溫，韓國救市，把千點還給台股，記憶體、載板回血，設備、封測為台積電法說暖身！塑化、散裝能關愛？ft.選股教練 陳唯泰",
         "video_id": "bbf75380-a0f8-44e6-bd60-2628e7ded65c"
+      },
+      {
+        "video_id": "7a9fa5fb-88ba-44a1-8bcf-d5d3388291f0",
+        "channel": "兆華與股惑仔",
+        "date": "2026-10-12",
+        "title": "EP1200｜台股世界強，大立光幫誰開法會？337調查影響？設備股9月入帳怎麼看？南亞.南亞科史上最強季報！ft.題材獵人 林漢偉",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "得大立光 應該是今天盤面上的一個重點 的熱點之一 另外可以看到 有一些族群的性轉強 我覺得都有那種悄悄反而相異 像今天我覺得很典型 是在所謂的探爭卡的部分 對 回來了 上次剛好也是上禮拜四 有人會說 影威跟旺戲跌得 超多價錢怎麼選 我說如果你能都買 你當然都買 但是如果 都兩檔都五千多 像我就很專心在Follow旺戲 我就會 就是持續鎖定旺戲就對了 我沒有辦法同時 就是傻錢在那麼多檔上 那今天兩檔表現都不錯 旺戲是漲停版 對 旺戲漲停 然後影威大漲七個百分點 但之前我們大家很愛抽那個汗測 發片跌停版 所以我覺得它有一點 就類似所謂的 抱歉 汗測我就沒有留意它 它今天跌停版 對 它今天跌停版 而",
+        "override_kind": "phonetic",
+        "override_reason": "phonetic_top1_needs_review",
+        "original_code": "6515",
+        "original_name": "穎崴",
+        "phonetic_top_score": 0.639,
+        "phonetic_lead": 0.08199999999999996,
+        "needs_review": true
       }
     ],
-    "max_score": 100,
-    "observations": 1,
     "phonetic_candidates": [
       {
         "code": "1799",
         "name": "易威",
-        "phonetic_similarity": 0.714,
         "score": 0.639,
+        "phonetic_similarity": 0.714,
         "text_similarity": 0.5
       },
       {
         "code": "6515",
         "name": "穎崴",
-        "phonetic_similarity": 0.857,
         "score": 0.557,
-        "text_similarity": 0
+        "phonetic_similarity": 0.857,
+        "text_similarity": 0.0
       },
       {
         "code": "3078",
         "name": "僑威",
-        "phonetic_similarity": 0.571,
         "score": 0.546,
+        "phonetic_similarity": 0.571,
         "text_similarity": 0.5
       }
     ],
-    "updated_at": "2026-07-15T18:41:31",
-    "video_ids": [
-      "bbf75380-a0f8-44e6-bd60-2628e7ded65c"
-    ],
-    "wrong_keyword": "影威"
+    "updated_at": "2026-10-12T23:04:34"
   },
   "復橋|1815": {
     "confidence": "high",
@@ -4018,10 +4061,11 @@
     "correct_name": "旺矽",
     "confidence": "high",
     "max_score": 100,
-    "observations": 3,
-    "distinct_videos": 3,
+    "observations": 5,
+    "distinct_videos": 4,
     "video_ids": [
       "459e1965-ee6e-48f9-914c-8f0880b00774",
+      "7a9fa5fb-88ba-44a1-8bcf-d5d3388291f0",
       "ed8d0ac9-94f6-4132-98ea-81aaa8613a0c",
       "fe5ddf1a-0954-40ec-badf-31e925066ecb"
     ],
@@ -4076,6 +4120,40 @@
           "stock_context"
         ],
         "context": "後來發現成交量 會比較好的 可以讓大家知道 市場上面的主流 就是動能是在哪邊 資金是往哪邊去流 那昨天像是AI封裝測試 其實也還蠻強的 像是系格 其實就有漲停 然後歷程也是上漲了 大概4到5%左右吧 旺戲 你這種 這種 就是封裝測試 要探針卡相關的東西 其實也會因為 就是AI晶片的量 整個提升上來 他的需求也會變多 為什麼呢 是因為AI晶片 你的運算的核心越多 功耗越快 傳輸速度越快 你今年 你更量率這種東西 你更應該要繼續把他去往上拉高 所以不管今天是在探針卡 測試的時間拉長 測試版 測試的設備規格都會提高 所以這個是昨天 可能市場上面有去反映的 那為什麼系格他會漲停 可能是9月營收出來 其"
+      },
+      {
+        "video_id": "7a9fa5fb-88ba-44a1-8bcf-d5d3388291f0",
+        "channel": "兆華與股惑仔",
+        "date": "2026-10-12",
+        "title": "EP1200｜台股世界強，大立光幫誰開法會？337調查影響？設備股9月入帳怎麼看？南亞.南亞科史上最強季報！ft.題材獵人 林漢偉",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "今天我覺得很典型 是在所謂的探爭卡的部分 對 回來了 上次剛好也是上禮拜四 有人會說 影威跟旺戲跌得 超多價錢怎麼選 我說如果你能都買 你當然都買 但是如果 都兩檔都五千多 像我就很專心在Follow旺戲 我就會 就是持續鎖定旺戲就對了 我沒有辦法同時 就是傻錢在那麼多檔上 那今天兩檔表現都不錯 旺戲是漲停版 對 旺戲漲停 然後影威大漲七個百分點 但之前我們大家很愛抽那個汗測 發片跌停版 所以我覺得它有一點 就類似所謂的 抱歉 汗測我就沒有留意它 它今天跌停版 對 它今天跌停版 而且它是破法 而且我只看到旺戲 漲停版 OK 對 就是當初它這個 發行家的當天的地點 被跌破了 所以如果說有抽鮮到 "
+      },
+      {
+        "video_id": "7a9fa5fb-88ba-44a1-8bcf-d5d3388291f0",
+        "channel": "兆華與股惑仔",
+        "date": "2026-10-12",
+        "title": "EP1200｜台股世界強，大立光幫誰開法會？337調查影響？設備股9月入帳怎麼看？南亞.南亞科史上最強季報！ft.題材獵人 林漢偉",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "得 超多價錢怎麼選 我說如果你能都買 你當然都買 但是如果 都兩檔都五千多 像我就很專心在Follow旺戲 我就會 就是持續鎖定旺戲就對了 我沒有辦法同時 就是傻錢在那麼多檔上 那今天兩檔表現都不錯 旺戲是漲停版 對 旺戲漲停 然後影威大漲七個百分點 但之前我們大家很愛抽那個汗測 發片跌停版 所以我覺得它有一點 就類似所謂的 抱歉 汗測我就沒有留意它 它今天跌停版 對 它今天跌停版 而且它是破法 而且我只看到旺戲 漲停版 OK 對 就是當初它這個 發行家的當天的地點 被跌破了 所以如果說有抽鮮到 沒有賣的人 可能今天這個 獲利會大幅度的回徒 那其實它還反映到 就是說整個通族群當中 其實都可以看"
       }
     ],
     "phonetic_candidates": [
@@ -4101,7 +4179,7 @@
         "text_similarity": 0.5
       }
     ],
-    "updated_at": "2026-10-07T22:21:26"
+    "updated_at": "2026-10-12T23:04:34"
   },
   "星星|8183": {
     "wrong_keyword": "星星",
@@ -10725,5 +10803,67 @@
       }
     ],
     "updated_at": "2026-10-11T20:45:23"
+  },
+  "南殿|8046": {
+    "wrong_keyword": "南殿",
+    "correct_code": "8046",
+    "correct_name": "南電",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "7a9fa5fb-88ba-44a1-8bcf-d5d3388291f0"
+    ],
+    "evidence": [
+      {
+        "video_id": "7a9fa5fb-88ba-44a1-8bcf-d5d3388291f0",
+        "channel": "兆華與股惑仔",
+        "date": "2026-10-12",
+        "title": "EP1200｜台股世界強，大立光幫誰開法會？337調查影響？設備股9月入帳怎麼看？南亞.南亞科史上最強季報！ft.題材獵人 林漢偉",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context",
+          "weak_sector_match"
+        ],
+        "context": "來的走勢 那你會看到是 載板那一邊 還是記憶體這邊 還是南亞本人 我覺得可以引用 台塑的董事長的一句話 他其實在 我記得上禮拜 在這個紡織展上面 他有針對他們集團 旗下幾家公司的一些評論 他說明年相關南殿 他的展望看得非常好 那南亞維持一個成長的軌道 那南亞科就表現還不錯 所以你可以知道 在集團當中 目前他們的看法是 明年的南亞 跟南殿的成長性會比較好 南亞科大概維持一個高檔持平 還是賺錢的經濟母 但是比較爆發性沒有那麼強 所以大家知道你可以看到 像今天公布的 南亞跟南亞科的一個記報 其實兩家數字都非常的好 但是因為南亞科 就是有一點烤得太好 太早了 對 他毛病就比較了 所以他已經一百分太久了",
+        "override_kind": "phonetic",
+        "override_reason": "clear_phonetic_winner",
+        "original_code": "1303",
+        "original_name": "南亞",
+        "phonetic_top_score": 0.825,
+        "phonetic_lead": 0.16199999999999992
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "8046",
+        "name": "南電",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "5450",
+        "name": "南良",
+        "score": 0.663,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "1410",
+        "name": "南染",
+        "score": 0.639,
+        "phonetic_similarity": 0.714,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-10-12T23:04:46"
   }
 }
