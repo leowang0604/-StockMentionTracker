@@ -1448,7 +1448,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 102,
+    "observations": 103,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1493,7 +1493,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-10-12T22:45:13"
+    "updated_at": "2026-10-13T21:35:38"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -10865,5 +10865,60 @@
       }
     ],
     "updated_at": "2026-10-12T23:04:46"
+  },
+  "大於|1445": {
+    "wrong_keyword": "大於",
+    "correct_code": "1445",
+    "correct_name": "大宇",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "90282731-9478-4e46-b5f1-6f6571f4ccc4"
+    ],
+    "evidence": [
+      {
+        "video_id": "90282731-9478-4e46-b5f1-6f6571f4ccc4",
+        "channel": "財女珍妮",
+        "date": "2026-10-13",
+        "title": "2026/10/13(二) AI缺資金嗎，費半為何再崩潰？",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "核心生意 也就是他的Facebook 這些推薦的東西 可以透過他的AI去提高用戶的使用時間 提高用戶的廣告推薦 跟商家的轉換率 再加上消費者 他願意付錢去買這個AI agent的話 那可能就有1加1 大於2這種加成的效果 然後再加上META現在 他的估值大概也是在24倍 Forward PE左右 所以大家也會覺得 24倍如果以一個軟體公司 以一個平台公司來講的話 也不是一個非常昂貴的價格 那市場當然就會比較集中 資金在這種可以變現 然後有競爭優勢 然後估值合理的公司 那是不是跟我們剛剛講到的 現在可能會有短缺的評級 然後如果資金放緩的話 會有需求的下滑 再加上估值比較高的公司 大家一對照之下 "
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "1445",
+        "name": "大宇",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "1521",
+        "name": "大億",
+        "score": 0.663,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "1609",
+        "name": "大亞",
+        "score": 0.663,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-10-13T22:01:24"
   }
 }
