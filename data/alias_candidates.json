@@ -1448,7 +1448,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 103,
+    "observations": 104,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1493,7 +1493,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-10-13T21:35:38"
+    "updated_at": "2026-10-14T20:21:32"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -10920,5 +10920,113 @@
       }
     ],
     "updated_at": "2026-10-13T22:01:24"
+  },
+  "台尼|1101": {
+    "wrong_keyword": "台尼",
+    "correct_code": "1101",
+    "correct_name": "台泥",
+    "confidence": "high",
+    "max_score": 95,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "2cea7ca6-efaf-4dda-9904-3a9f05fe3ba2"
+    ],
+    "evidence": [
+      {
+        "video_id": "2cea7ca6-efaf-4dda-9904-3a9f05fe3ba2",
+        "channel": "兆華與股惑仔",
+        "date": "2026-10-14",
+        "title": "EP1202｜塑化驚奇，傳產也有做夢行情？航運.紡織.汽零件有機會嗎？黃金右下角和資金效率的抉擇，如何判斷起風了？ft.選股教練 陳唯泰",
+        "source": "phonetic-discovery",
+        "score": 95,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1"
+        ],
+        "context": "如說從原本的 所謂這個一般化學 轉成特化這一些 我覺得這個其實會是 投信他們在選擇標的的時候 會去特別做考慮的地方 所以我現在投信這邊 他最近買了什麼 最近買了什麼 台塑化的遠東星 有 台塑化 華興 台尼 南亞 台塑 然後大成岡 大成岡也來了 然後長榮 潤泰星 這些其實都是 過去比較少看到投信在買超 但是在近期 是明顯買超 而且買超張數排名上 排名在前段班的 沒錯 對啊 所以我就講說 好吧 那 既然風向是這麼吹 我們就尊重市場 台塑 台塑化 台塑化是真的買非常多 台塑的話大家也可以去看 投信每天都是一萬多張的在買 台塑 最近 當然也有可能被動師買盤 我們可以觀察一下 但是就真的在買 所以我也會"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "1101",
+        "name": "台泥",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "1473",
+        "name": "台南",
+        "score": 0.608,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "1722",
+        "name": "台肥",
+        "score": 0.608,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-10-14T20:39:07"
+  },
+  "潤泰星|9945": {
+    "wrong_keyword": "潤泰星",
+    "correct_code": "9945",
+    "correct_name": "潤泰新",
+    "confidence": "high",
+    "max_score": 95,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "2cea7ca6-efaf-4dda-9904-3a9f05fe3ba2"
+    ],
+    "evidence": [
+      {
+        "video_id": "2cea7ca6-efaf-4dda-9904-3a9f05fe3ba2",
+        "channel": "兆華與股惑仔",
+        "date": "2026-10-14",
+        "title": "EP1202｜塑化驚奇，傳產也有做夢行情？航運.紡織.汽零件有機會嗎？黃金右下角和資金效率的抉擇，如何判斷起風了？ft.選股教練 陳唯泰",
+        "source": "phonetic-discovery",
+        "score": 95,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1"
+        ],
+        "context": "這個其實會是 投信他們在選擇標的的時候 會去特別做考慮的地方 所以我現在投信這邊 他最近買了什麼 最近買了什麼 台塑化的遠東星 有 台塑化 華興 台尼 南亞 台塑 然後大成岡 大成岡也來了 然後長榮 潤泰星 這些其實都是 過去比較少看到投信在買超 但是在近期 是明顯買超 而且買超張數排名上 排名在前段班的 沒錯 對啊 所以我就講說 好吧 那 既然風向是這麼吹 我們就尊重市場 台塑 台塑化 台塑化是真的買非常多 台塑的話大家也可以去看 投信每天都是一萬多張的在買 台塑 最近 當然也有可能被動師買盤 我們可以觀察一下 但是就真的在買 所以我也會講說 這個第四季吹傳產風 我會格外留意 因為他可能會擴"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "9945",
+        "name": "潤泰新",
+        "score": 0.818,
+        "phonetic_similarity": 0.9,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "2915",
+        "name": "潤泰全",
+        "score": 0.623,
+        "phonetic_similarity": 0.6,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "8463",
+        "name": "潤泰材",
+        "score": 0.623,
+        "phonetic_similarity": 0.6,
+        "text_similarity": 0.667
+      }
+    ],
+    "updated_at": "2026-10-14T20:39:07"
   }
 }
