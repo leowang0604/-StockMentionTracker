@@ -1448,7 +1448,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 104,
+    "observations": 105,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1493,7 +1493,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-10-14T20:21:32"
+    "updated_at": "2026-10-15T20:05:09"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -11028,5 +11028,52 @@
       }
     ],
     "updated_at": "2026-10-14T20:39:07"
+  },
+  "nvdr|NVDA": {
+    "wrong_keyword": "nvdr",
+    "correct_code": "NVDA",
+    "correct_name": "NVIDIA",
+    "confidence": "medium",
+    "max_score": 65,
+    "observations": 2,
+    "distinct_videos": 2,
+    "video_ids": [
+      "32538262-5ed2-4790-bfef-14e4589896cb",
+      "eeb06ba1-df7a-4e14-9284-b66c7389bdb4"
+    ],
+    "evidence": [
+      {
+        "video_id": "32538262-5ed2-4790-bfef-14e4589896cb",
+        "channel": "財女珍妮",
+        "date": "2026-10-15",
+        "title": "2026/10/15(四) 通膨超標，股債一起崩 #CRWV #ASML",
+        "source": "full_video_validator",
+        "score": 65,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "stock_context"
+        ],
+        "context": "得半導體公司 又是屬於另一層 就是我們剛剛講到的 新型雲端服務商 然後再講到 這個terra one這種 就是 大型csp就是 第一 就是第一位的這種 大型雲端服務商嘛對不對 但是再往下去走的話 像是nvdr 財機店ice more 其實目前也都是有 實際訂單的公司 而且他們也是有技術實力 就是技術的門檻比較高 然後現金流 或者是定價能力 也比較強的公司 昨天也是一起被帶下來啊 那昨天最重要的財報 ice more有給我們什麼樣的訊號呢 ice more大家都知道嘛 他就是曝光機 然後半導體的設備 euv 紫紫外光 即紫外光曝光機 然後也是先進的邏輯晶片啊 先進製程啊 DRAM啊這一類的 產品"
+      },
+      {
+        "video_id": "eeb06ba1-df7a-4e14-9284-b66c7389bdb4",
+        "channel": "財女珍妮",
+        "date": "2026-10-15",
+        "title": "2026/10/15(四) 通膨超標，股債一起崩 #CRWV #ASML",
+        "source": "full_video_validator",
+        "score": 65,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "stock_context"
+        ],
+        "context": "得半導體公司 又是屬於另一層 就是我們剛剛講到的 新型雲端服務商 然後再講到 這個terra one這種 就是 大型csp就是 第一 就是第一位的這種 大型雲端服務商嘛對不對 但是再往下去走的話 像是nvdr 財機店ice more 其實目前也都是有 實際訂單的公司 而且他們也是有技術實力 就是技術的門檻比較高 然後現金流 或者是定價能力 也比較強的公司 昨天也是一起被帶下來啊 那昨天最重要的財報 ice more有給我們什麼樣的訊號呢 ice more大家都知道嘛 他就是曝光機 然後半導體的設備 euv 紫紫外光 即紫外光曝光機 然後也是先進的邏輯晶片啊 先進製程啊 DRAM啊這一類的 產品"
+      }
+    ],
+    "phonetic_candidates": [],
+    "updated_at": "2026-10-15T20:51:39"
   }
 }

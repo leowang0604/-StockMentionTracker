@@ -1,0 +1,390 @@
+[
+  {
+    "keyword": "信大",
+    "pos": 5284,
+    "reason": "context_required",
+    "detail": "1109/信大水泥/水泥",
+    "video_id": "f87df5eb-8246-4c1d-a2c4-d97397b13965",
+    "channel": "韭菜畢業班",
+    "date": "2026-10-14",
+    "title": "EP266 | 台塑集團 / 台積電法說"
+  },
+  {
+    "keyword": "百一",
+    "pos": 4351,
+    "reason": "keyword_pattern_override",
+    "detail": null,
+    "video_id": "f87df5eb-8246-4c1d-a2c4-d97397b13965",
+    "channel": "韭菜畢業班",
+    "date": "2026-10-14",
+    "title": "EP266 | 台塑集團 / 台積電法說"
+  },
+  {
+    "keyword": "中台",
+    "pos": 5080,
+    "reason": "context_required",
+    "detail": "6923",
+    "video_id": "f87df5eb-8246-4c1d-a2c4-d97397b13965",
+    "channel": "韭菜畢業班",
+    "date": "2026-10-14",
+    "title": "EP266 | 台塑集團 / 台積電法說"
+  },
+  {
+    "keyword": "貨櫃行運",
+    "reason": "whisper_correction_rejected",
+    "detail": "統一修正決策拒絕: 貨櫃行運->2603/長榮; reason=weak_phonetic_or_context",
+    "video_id": "f87df5eb-8246-4c1d-a2c4-d97397b13965",
+    "channel": "韭菜畢業班",
+    "date": "2026-10-14",
+    "title": "EP266 | 台塑集團 / 台積電法說"
+  },
+  {
+    "keyword": "台鴻",
+    "reason": "gemini_extraction_rejected",
+    "detail": "無法對應任何已知股票",
+    "video_id": "f87df5eb-8246-4c1d-a2c4-d97397b13965",
+    "channel": "韭菜畢業班",
+    "date": "2026-10-14",
+    "title": "EP266 | 台塑集團 / 台積電法說"
+  },
+  {
+    "keyword": "台俊",
+    "reason": "gemini_extraction_rejected",
+    "detail": "無法對應任何已知股票",
+    "video_id": "f87df5eb-8246-4c1d-a2c4-d97397b13965",
+    "channel": "韭菜畢業班",
+    "date": "2026-10-14",
+    "title": "EP266 | 台塑集團 / 台積電法說"
+  },
+  {
+    "keyword": "騰會電子",
+    "reason": "gemini_extraction_rejected",
+    "detail": "名稱未出現在原文（可能幻覺）: 6672/騰輝電子-KY",
+    "video_id": "f87df5eb-8246-4c1d-a2c4-d97397b13965",
+    "channel": "韭菜畢業班",
+    "date": "2026-10-14",
+    "title": "EP266 | 台塑集團 / 台積電法說"
+  },
+  {
+    "keyword": "統一",
+    "pos": 876,
+    "reason": "context_required",
+    "detail": "1216/統一企業",
+    "video_id": "fc126990-b1d9-41b5-8f0e-34002f76f8ee",
+    "channel": "兆華與股惑仔",
+    "date": "2026-10-15",
+    "title": "EP1203｜外資史上最大賣超、期貨空單近10萬口，CPI超出預期、CoreWeave債券風暴、台積電法說會評估！風險和機會？ft.PCB女王 廖婉婷"
+  },
+  {
+    "keyword": "聯發",
+    "pos": 930,
+    "reason": "context_required",
+    "detail": "1459/聯發紡/紡織/棉紗/聯發股",
+    "video_id": "fc126990-b1d9-41b5-8f0e-34002f76f8ee",
+    "channel": "兆華與股惑仔",
+    "date": "2026-10-15",
+    "title": "EP1203｜外資史上最大賣超、期貨空單近10萬口，CPI超出預期、CoreWeave債券風暴、台積電法說會評估！風險和機會？ft.PCB女王 廖婉婷"
+  },
+  {
+    "keyword": "2025",
+    "pos": 12744,
+    "reason": "context_required",
+    "detail": "千興",
+    "video_id": "fc126990-b1d9-41b5-8f0e-34002f76f8ee",
+    "channel": "兆華與股惑仔",
+    "date": "2026-10-15",
+    "title": "EP1203｜外資史上最大賣超、期貨空單近10萬口，CPI超出預期、CoreWeave債券風暴、台積電法說會評估！風險和機會？ft.PCB女王 廖婉婷"
+  },
+  {
+    "keyword": "安心",
+    "pos": 6568,
+    "reason": "context_required",
+    "detail": "安心食品/1259",
+    "video_id": "fc126990-b1d9-41b5-8f0e-34002f76f8ee",
+    "channel": "兆華與股惑仔",
+    "date": "2026-10-15",
+    "title": "EP1203｜外資史上最大賣超、期貨空單近10萬口，CPI超出預期、CoreWeave債券風暴、台積電法說會評估！風險和機會？ft.PCB女王 廖婉婷"
+  },
+  {
+    "keyword": "數字",
+    "pos": 1606,
+    "reason": "context_required",
+    "detail": "5287/數字科技",
+    "video_id": "fc126990-b1d9-41b5-8f0e-34002f76f8ee",
+    "channel": "兆華與股惑仔",
+    "date": "2026-10-15",
+    "title": "EP1203｜外資史上最大賣超、期貨空單近10萬口，CPI超出預期、CoreWeave債券風暴、台積電法說會評估！風險和機會？ft.PCB女王 廖婉婷"
+  },
+  {
+    "keyword": "數字",
+    "pos": 1659,
+    "reason": "context_required",
+    "detail": "5287/數字科技",
+    "video_id": "fc126990-b1d9-41b5-8f0e-34002f76f8ee",
+    "channel": "兆華與股惑仔",
+    "date": "2026-10-15",
+    "title": "EP1203｜外資史上最大賣超、期貨空單近10萬口，CPI超出預期、CoreWeave債券風暴、台積電法說會評估！風險和機會？ft.PCB女王 廖婉婷"
+  },
+  {
+    "keyword": "數字",
+    "pos": 1732,
+    "reason": "context_required",
+    "detail": "5287/數字科技",
+    "video_id": "fc126990-b1d9-41b5-8f0e-34002f76f8ee",
+    "channel": "兆華與股惑仔",
+    "date": "2026-10-15",
+    "title": "EP1203｜外資史上最大賣超、期貨空單近10萬口，CPI超出預期、CoreWeave債券風暴、台積電法說會評估！風險和機會？ft.PCB女王 廖婉婷"
+  },
+  {
+    "keyword": "數字",
+    "pos": 6459,
+    "reason": "context_required",
+    "detail": "5287/數字科技",
+    "video_id": "fc126990-b1d9-41b5-8f0e-34002f76f8ee",
+    "channel": "兆華與股惑仔",
+    "date": "2026-10-15",
+    "title": "EP1203｜外資史上最大賣超、期貨空單近10萬口，CPI超出預期、CoreWeave債券風暴、台積電法說會評估！風險和機會？ft.PCB女王 廖婉婷"
+  },
+  {
+    "keyword": "數字",
+    "pos": 10392,
+    "reason": "context_required",
+    "detail": "5287/數字科技",
+    "video_id": "fc126990-b1d9-41b5-8f0e-34002f76f8ee",
+    "channel": "兆華與股惑仔",
+    "date": "2026-10-15",
+    "title": "EP1203｜外資史上最大賣超、期貨空單近10萬口，CPI超出預期、CoreWeave債券風暴、台積電法說會評估！風險和機會？ft.PCB女王 廖婉婷"
+  },
+  {
+    "keyword": "數字",
+    "pos": 10503,
+    "reason": "context_required",
+    "detail": "5287/數字科技",
+    "video_id": "fc126990-b1d9-41b5-8f0e-34002f76f8ee",
+    "channel": "兆華與股惑仔",
+    "date": "2026-10-15",
+    "title": "EP1203｜外資史上最大賣超、期貨空單近10萬口，CPI超出預期、CoreWeave債券風暴、台積電法說會評估！風險和機會？ft.PCB女王 廖婉婷"
+  },
+  {
+    "keyword": "Cowweave",
+    "reason": "gemini_extraction_rejected",
+    "detail": "無法對應任何已知股票",
+    "video_id": "fc126990-b1d9-41b5-8f0e-34002f76f8ee",
+    "channel": "兆華與股惑仔",
+    "date": "2026-10-15",
+    "title": "EP1203｜外資史上最大賣超、期貨空單近10萬口，CPI超出預期、CoreWeave債券風暴、台積電法說會評估！風險和機會？ft.PCB女王 廖婉婷"
+  },
+  {
+    "keyword": "KowaiF",
+    "reason": "whisper_correction_rejected",
+    "detail": "統一修正決策拒絕: KowaiF->AVGO/Broadcom; reason=no_supported_candidate",
+    "video_id": "fc126990-b1d9-41b5-8f0e-34002f76f8ee",
+    "channel": "兆華與股惑仔",
+    "date": "2026-10-15",
+    "title": "EP1203｜外資史上最大賣超、期貨空單近10萬口，CPI超出預期、CoreWeave債券風暴、台積電法說會評估！風險和機會？ft.PCB女王 廖婉婷"
+  },
+  {
+    "keyword": "KowaiF",
+    "reason": "whisper_correction_rejected",
+    "detail": "統一修正決策拒絕: KowaiF->NVDA/NVIDIA; reason=no_supported_candidate",
+    "video_id": "fc126990-b1d9-41b5-8f0e-34002f76f8ee",
+    "channel": "兆華與股惑仔",
+    "date": "2026-10-15",
+    "title": "EP1203｜外資史上最大賣超、期貨空單近10萬口，CPI超出預期、CoreWeave債券風暴、台積電法說會評估！風險和機會？ft.PCB女王 廖婉婷"
+  },
+  {
+    "keyword": "KowaiF",
+    "reason": "whisper_correction_rejected",
+    "detail": "統一修正決策拒絕: KowaiF->GOOGL/Alphabet; reason=no_supported_candidate",
+    "video_id": "fc126990-b1d9-41b5-8f0e-34002f76f8ee",
+    "channel": "兆華與股惑仔",
+    "date": "2026-10-15",
+    "title": "EP1203｜外資史上最大賣超、期貨空單近10萬口，CPI超出預期、CoreWeave債券風暴、台積電法說會評估！風險和機會？ft.PCB女王 廖婉婷"
+  },
+  {
+    "keyword": "台光電",
+    "reason": "gemini_extraction_rejected",
+    "detail": "名稱未出現在原文（可能幻覺）: 2383/台光電",
+    "video_id": "fc126990-b1d9-41b5-8f0e-34002f76f8ee",
+    "channel": "兆華與股惑仔",
+    "date": "2026-10-15",
+    "title": "EP1203｜外資史上最大賣超、期貨空單近10萬口，CPI超出預期、CoreWeave債券風暴、台積電法說會評估！風險和機會？ft.PCB女王 廖婉婷"
+  },
+  {
+    "keyword": "台間",
+    "reason": "whisper_correction_rejected",
+    "detail": "統一修正決策拒絕: 台間->3532/台勝科; reason=sector_mismatch",
+    "video_id": "fc126990-b1d9-41b5-8f0e-34002f76f8ee",
+    "channel": "兆華與股惑仔",
+    "date": "2026-10-15",
+    "title": "EP1203｜外資史上最大賣超、期貨空單近10萬口，CPI超出預期、CoreWeave債券風暴、台積電法說會評估！風險和機會？ft.PCB女王 廖婉婷"
+  },
+  {
+    "keyword": "台鴻",
+    "reason": "gemini_extraction_rejected",
+    "detail": "無法對應任何已知股票",
+    "video_id": "fc126990-b1d9-41b5-8f0e-34002f76f8ee",
+    "channel": "兆華與股惑仔",
+    "date": "2026-10-15",
+    "title": "EP1203｜外資史上最大賣超、期貨空單近10萬口，CPI超出預期、CoreWeave債券風暴、台積電法說會評估！風險和機會？ft.PCB女王 廖婉婷"
+  },
+  {
+    "keyword": "台軍",
+    "reason": "gemini_extraction_rejected",
+    "detail": "無法對應任何已知股票",
+    "video_id": "fc126990-b1d9-41b5-8f0e-34002f76f8ee",
+    "channel": "兆華與股惑仔",
+    "date": "2026-10-15",
+    "title": "EP1203｜外資史上最大賣超、期貨空單近10萬口，CPI超出預期、CoreWeave債券風暴、台積電法說會評估！風險和機會？ft.PCB女王 廖婉婷"
+  },
+  {
+    "keyword": "0098EA",
+    "reason": "gemini_extraction_rejected",
+    "detail": "名稱未出現在原文（可能幻覺）: 00980A/主動野村臺灣優選",
+    "video_id": "fc126990-b1d9-41b5-8f0e-34002f76f8ee",
+    "channel": "兆華與股惑仔",
+    "date": "2026-10-15",
+    "title": "EP1203｜外資史上最大賣超、期貨空單近10萬口，CPI超出預期、CoreWeave債券風暴、台積電法說會評估！風險和機會？ft.PCB女王 廖婉婷"
+  },
+  {
+    "keyword": "大量",
+    "pos": 1148,
+    "reason": "context_required",
+    "detail": "3167/大量電子",
+    "video_id": "32538262-5ed2-4790-bfef-14e4589896cb",
+    "channel": "財女珍妮",
+    "date": "2026-10-15",
+    "title": "2026/10/15(四) 通膨超標，股債一起崩 #CRWV #ASML"
+  },
+  {
+    "keyword": "大量",
+    "pos": 7210,
+    "reason": "context_required",
+    "detail": "3167/大量電子",
+    "video_id": "32538262-5ed2-4790-bfef-14e4589896cb",
+    "channel": "財女珍妮",
+    "date": "2026-10-15",
+    "title": "2026/10/15(四) 通膨超標，股債一起崩 #CRWV #ASML"
+  },
+  {
+    "keyword": "力士",
+    "pos": 6693,
+    "reason": "keyword_pattern_override",
+    "detail": null,
+    "video_id": "32538262-5ed2-4790-bfef-14e4589896cb",
+    "channel": "財女珍妮",
+    "date": "2026-10-15",
+    "title": "2026/10/15(四) 通膨超標，股債一起崩 #CRWV #ASML"
+  },
+  {
+    "keyword": "Core with Nebius",
+    "reason": "gemini_extraction_rejected",
+    "detail": "無法對應任何已知股票",
+    "video_id": "32538262-5ed2-4790-bfef-14e4589896cb",
+    "channel": "財女珍妮",
+    "date": "2026-10-15",
+    "title": "2026/10/15(四) 通膨超標，股債一起崩 #CRWV #ASML"
+  },
+  {
+    "keyword": "dale",
+    "reason": "whisper_correction_rejected",
+    "detail": "統一修正決策拒絕: dale->DELL/Dell; reason=no_supported_candidate",
+    "video_id": "32538262-5ed2-4790-bfef-14e4589896cb",
+    "channel": "財女珍妮",
+    "date": "2026-10-15",
+    "title": "2026/10/15(四) 通膨超標，股債一起崩 #CRWV #ASML"
+  },
+  {
+    "keyword": "艾斯摩爾",
+    "reason": "gemini_extraction_rejected",
+    "detail": "無法對應任何已知股票",
+    "video_id": "32538262-5ed2-4790-bfef-14e4589896cb",
+    "channel": "財女珍妮",
+    "date": "2026-10-15",
+    "title": "2026/10/15(四) 通膨超標，股債一起崩 #CRWV #ASML"
+  },
+  {
+    "keyword": "大量",
+    "pos": 1148,
+    "reason": "context_required",
+    "detail": "3167/大量電子",
+    "video_id": "eeb06ba1-df7a-4e14-9284-b66c7389bdb4",
+    "channel": "財女珍妮",
+    "date": "2026-10-15",
+    "title": "2026/10/15(四) 通膨超標，股債一起崩 #CRWV #ASML"
+  },
+  {
+    "keyword": "大量",
+    "pos": 7210,
+    "reason": "context_required",
+    "detail": "3167/大量電子",
+    "video_id": "eeb06ba1-df7a-4e14-9284-b66c7389bdb4",
+    "channel": "財女珍妮",
+    "date": "2026-10-15",
+    "title": "2026/10/15(四) 通膨超標，股債一起崩 #CRWV #ASML"
+  },
+  {
+    "keyword": "力士",
+    "pos": 6693,
+    "reason": "keyword_pattern_override",
+    "detail": null,
+    "video_id": "eeb06ba1-df7a-4e14-9284-b66c7389bdb4",
+    "channel": "財女珍妮",
+    "date": "2026-10-15",
+    "title": "2026/10/15(四) 通膨超標，股債一起崩 #CRWV #ASML"
+  },
+  {
+    "keyword": "Core with Nebius",
+    "reason": "gemini_extraction_rejected",
+    "detail": "無法對應任何已知股票",
+    "video_id": "eeb06ba1-df7a-4e14-9284-b66c7389bdb4",
+    "channel": "財女珍妮",
+    "date": "2026-10-15",
+    "title": "2026/10/15(四) 通膨超標，股債一起崩 #CRWV #ASML"
+  },
+  {
+    "keyword": "Dale",
+    "reason": "gemini_extraction_rejected",
+    "detail": "名稱未出現在原文（可能幻覺）: DELL/Dell",
+    "video_id": "eeb06ba1-df7a-4e14-9284-b66c7389bdb4",
+    "channel": "財女珍妮",
+    "date": "2026-10-15",
+    "title": "2026/10/15(四) 通膨超標，股債一起崩 #CRWV #ASML"
+  },
+  {
+    "keyword": "Coal Reef",
+    "reason": "gemini_extraction_rejected",
+    "detail": "無法對應任何已知股票",
+    "video_id": "eeb06ba1-df7a-4e14-9284-b66c7389bdb4",
+    "channel": "財女珍妮",
+    "date": "2026-10-15",
+    "title": "2026/10/15(四) 通膨超標，股債一起崩 #CRWV #ASML"
+  },
+  {
+    "keyword": "Napirus",
+    "reason": "gemini_extraction_rejected",
+    "detail": "無法對應任何已知股票",
+    "video_id": "eeb06ba1-df7a-4e14-9284-b66c7389bdb4",
+    "channel": "財女珍妮",
+    "date": "2026-10-15",
+    "title": "2026/10/15(四) 通膨超標，股債一起崩 #CRWV #ASML"
+  },
+  {
+    "keyword": "ice more",
+    "reason": "gemini_extraction_rejected",
+    "detail": "無法對應任何已知股票",
+    "video_id": "eeb06ba1-df7a-4e14-9284-b66c7389bdb4",
+    "channel": "財女珍妮",
+    "date": "2026-10-15",
+    "title": "2026/10/15(四) 通膨超標，股債一起崩 #CRWV #ASML"
+  },
+  {
+    "keyword": "Veron",
+    "reason": "gemini_extraction_rejected",
+    "detail": "名稱未出現在原文（可能幻覺）: VZ/Verizon",
+    "video_id": "eeb06ba1-df7a-4e14-9284-b66c7389bdb4",
+    "channel": "財女珍妮",
+    "date": "2026-10-15",
+    "title": "2026/10/15(四) 通膨超標，股債一起崩 #CRWV #ASML"
+  }
+]
