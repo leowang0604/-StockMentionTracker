@@ -1448,7 +1448,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 107,
+    "observations": 108,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1493,7 +1493,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-10-17T18:53:56"
+    "updated_at": "2026-10-18T19:00:49"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -11075,5 +11075,66 @@
     ],
     "phonetic_candidates": [],
     "updated_at": "2026-10-15T20:51:39"
+  },
+  "加聯誼|6153": {
+    "wrong_keyword": "加聯誼",
+    "correct_code": "6153",
+    "correct_name": "嘉聯益",
+    "confidence": "high",
+    "max_score": 97,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "19565778-f0e4-4e5d-81f8-ccd70ceae5de"
+    ],
+    "evidence": [
+      {
+        "video_id": "19565778-f0e4-4e5d-81f8-ccd70ceae5de",
+        "channel": "投資癮",
+        "date": "2026-10-18",
+        "title": "EP351 不要跟錢過不去",
+        "source": "full_video_validator",
+        "score": 97,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "音樂創的新高 來到年增36% 公司表示說 是不是光模板跟IC載板 這三塊加起來 年增超過3倍 另外一部分是台鴻 台鴻的部分在過去這一段時間 一直以來都是媒體的焦點 反而是這禮拜比較亮眼的地方 是台軍跟加聯誼 這兩件公司在9月以後 完全沒有什麼公司的發言 也沒有什麼財報的變化 但是公司在這禮拜的漲勢 是非常強勁的 而依照這些事件公司來說 我自己對台鴻會比較有一些想法 因為它算是我這六年來 唯一有停損超過8位數的單一個股 其他個股我都沒有太大的停損部分 但對於我這些公司的長期走勢 我還是沒有太大的影響 我為了要追蹤這間公司 還是有留下小部分的部位 在市場裡面 這禮拜連續漲停 市場是說 它在NVID",
+        "override_kind": "phonetic",
+        "override_reason": "clear_phonetic_winner",
+        "original_code": "1229",
+        "original_name": "聯華",
+        "phonetic_top_score": 0.767,
+        "phonetic_lead": 0.28900000000000003
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "6153",
+        "name": "嘉聯益",
+        "score": 0.767,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "3081",
+        "name": "聯亞",
+        "score": 0.478,
+        "phonetic_similarity": 0.556,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "3323",
+        "name": "加百裕",
+        "score": 0.478,
+        "phonetic_similarity": 0.556,
+        "text_similarity": 0.333
+      }
+    ],
+    "updated_at": "2026-10-18T19:20:00"
   }
 }
