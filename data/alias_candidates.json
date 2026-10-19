@@ -1448,7 +1448,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 108,
+    "observations": 109,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1493,7 +1493,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-10-18T19:00:49"
+    "updated_at": "2026-10-19T21:16:49"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -6731,10 +6731,17 @@
     "wrong_keyword": "群衣"
   },
   "致上|8112": {
-    "confidence": "high",
+    "wrong_keyword": "致上",
     "correct_code": "8112",
     "correct_name": "至上",
-    "distinct_videos": 1,
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 2,
+    "distinct_videos": 2,
+    "video_ids": [
+      "4702b99f-420e-4629-aa94-137fe3bf638f",
+      "86545c14-1198-4ec9-9163-d66af244d2f5"
+    ],
     "evidence": [
       {
         "channel": "兆華與股惑仔",
@@ -6752,38 +6759,49 @@
         "source": "phonetic-discovery",
         "title": "EP1134｜鬼故事繼續，哪一條該怕？三星Q2獲利成長19倍，卻引發韓股大跌？熱門股全軍覆沒，6月營收出爐，檢驗該買該賣！ft.AI達人 蔡明翰",
         "video_id": "4702b99f-420e-4629-aa94-137fe3bf638f"
+      },
+      {
+        "video_id": "86545c14-1198-4ec9-9163-d66af244d2f5",
+        "channel": "兆華與股惑仔",
+        "date": "2026-10-19",
+        "title": "EP1205｜又測季線，是好買點嗎？AI融資、記憶體、超級財報周、期中選舉、戰亂，止穩條件？鋸齒狀前行，回檔時優先選擇？ft.題材獵人 林漢偉",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "有更嚴重的一個消息 我覺得目前來看 並沒有看到這樣的情況 剛剛提到嘛 這一波我覺得最主要的源頭 就是因為通膨利率 所造成的資金的一個輪動 那這種東西我覺得第一個 就是11月3號 美國其中捐贈之後 大致上我覺得伊朗的問題 應該有機會慢慢去做一些淡化 那對於油價的衝擊 也有機會做一些降溫的情況 最近油價走高 我覺得有部分是因為折倫斯 其實又跟川普翻臉了 所以讓整個俄羅斯跟烏克蘭的一個 能源危機也開始重演 那這個當然對於整個川普的選情 是不利的 所以我會跟大家講 就是說美國其中選舉 是我們現在比較短線上看到 市場沒有完全反映 這個力空消息的一個 比較大的一個灰犀牛的存在 也就是說大家目前美國的主流 "
       }
     ],
-    "max_score": 100,
-    "observations": 1,
     "phonetic_candidates": [
       {
         "code": "8112",
         "name": "至上",
-        "phonetic_similarity": 1,
         "score": 0.825,
+        "phonetic_similarity": 1.0,
         "text_similarity": 0.5
       },
       {
         "code": "4915",
         "name": "致伸",
-        "phonetic_similarity": 0.75,
         "score": 0.663,
+        "phonetic_similarity": 0.75,
         "text_similarity": 0.5
       },
       {
         "code": "2467",
         "name": "志聖",
-        "phonetic_similarity": 0.875,
         "score": 0.569,
-        "text_similarity": 0
+        "phonetic_similarity": 0.875,
+        "text_similarity": 0.0
       }
     ],
-    "updated_at": "2026-07-07T19:15:04",
-    "video_ids": [
-      "4702b99f-420e-4629-aa94-137fe3bf638f"
-    ],
-    "wrong_keyword": "致上"
+    "updated_at": "2026-10-19T21:26:44"
   },
   "花紙|1905": {
     "confidence": "high",
@@ -11136,5 +11154,60 @@
       }
     ],
     "updated_at": "2026-10-18T19:20:00"
+  },
+  "雄式|2731": {
+    "wrong_keyword": "雄式",
+    "correct_code": "2731",
+    "correct_name": "雄獅",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "d42bc49c-b56e-4174-bfbe-be1a3806623a"
+    ],
+    "evidence": [
+      {
+        "video_id": "d42bc49c-b56e-4174-bfbe-be1a3806623a",
+        "channel": "財女珍妮",
+        "date": "2026-10-19",
+        "title": "2026/10/19(一) AI股災，資金鏈出問題？該抄底還是該離場",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "高走低 也不能說開多高 就是一開始在開盤的時候 好像還有撐住在那邊 但是尾盤大家起床的時候一看 花生什麼事情對不對 美在直率也下滑啦 可是AI跟半導體類股 還是持續的下跌 我們到底是不是要進入到 一個雄式的呢 我覺得八字好像都還沒一撇 如果你去看費城半導體指數 確實啦 它從目前反彈的高點下來的幅度 將近要20% 那我們常常在講說 20%就是一個技術性的雄式 或者是從在更之前的 創高的一個高點下來 大概也是將近30%左右 所以如果你只看科技股制 看半導體類股的話 你當然覺得我們現在 已經要進入雄式了 可是如果你去看S&P500指數 去看可能到窮工業指數好了 現在距離高點 也不過就是23%的距離而"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2731",
+        "name": "雄獅",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "2073",
+        "name": "雄順",
+        "score": 0.681,
+        "phonetic_similarity": 0.778,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "6721",
+        "name": "信實",
+        "score": 0.488,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-10-19T21:32:21"
   }
 }
