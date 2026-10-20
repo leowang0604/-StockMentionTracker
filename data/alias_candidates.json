@@ -1448,7 +1448,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 109,
+    "observations": 110,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1493,7 +1493,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-10-19T21:16:49"
+    "updated_at": "2026-10-20T20:09:57"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -11209,5 +11209,232 @@
       }
     ],
     "updated_at": "2026-10-19T21:32:21"
+  },
+  "新技|6160": {
+    "wrong_keyword": "新技",
+    "correct_code": "6160",
+    "correct_name": "欣技",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "ad25bf4e-8620-43cf-9c23-5258541019a1"
+    ],
+    "evidence": [
+      {
+        "video_id": "ad25bf4e-8620-43cf-9c23-5258541019a1",
+        "channel": "兆華與股惑仔",
+        "date": "2026-10-20",
+        "title": "EP1206｜高盛挺CoreWeave先止血？台幣貶破32.5要留意，PCB材料不夠撐盤，等半導體回神！投信Q4的企圖心？ft.型男股神 陳威良",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "成交量7000多億 一直在萎縮 高價股就比較沒有那麼討好 然後再來的話 可能就是需要更新的 就是到底你在這個展覽裡面 有沒有這個同伯 同伯基板相關更新的技術 MC 不是MC 當你能夠證明 你拿到的這個新技術 是未來有可能要用的時候 或是明年你可能就有一些業績 會漲價會進來之類的 我覺得市場又會重新有興趣 其實市場現在對新技術 不是沒興趣 他只是稍微有點頓話 那剛剛威梁也講了 可是如果只靠這一些小族群 次族群新技術的股票漲 整個大局是起不來的 可是大家也可以從這個 盤面的氣氛看到是 只要今天盤面一旦指紋 然後大家又重新回到 耶 會重新發展 資本支出傻千 那他們就會是一批很好的生力軍 不過跌下來 "
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "6160",
+        "name": "欣技",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "2420",
+        "name": "新巨",
+        "score": 0.695,
+        "phonetic_similarity": 0.8,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "9944",
+        "name": "新麗",
+        "score": 0.695,
+        "phonetic_similarity": 0.8,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-10-20T20:18:40"
+  },
+  "聖輝|5536": {
+    "wrong_keyword": "聖輝",
+    "correct_code": "5536",
+    "correct_name": "聖暉*",
+    "confidence": "high",
+    "max_score": 97,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "ad25bf4e-8620-43cf-9c23-5258541019a1"
+    ],
+    "evidence": [
+      {
+        "video_id": "ad25bf4e-8620-43cf-9c23-5258541019a1",
+        "channel": "兆華與股惑仔",
+        "date": "2026-10-20",
+        "title": "EP1206｜高盛挺CoreWeave先止血？台幣貶破32.5要留意，PCB材料不夠撐盤，等半導體回神！投信Q4的企圖心？ft.型男股神 陳威良",
+        "source": "phonetic-discovery",
+        "score": 97,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "都視為是買不夠的朋友 找機會再去做加碼 廠物工程部分來看的話 當然跟台積電的全球大擴廠有關 估計目前大概全世界 大概差不多台積電 同時有20座廠房正在興建當中 這些都是釋放給 包括像漢堂 亞翔 凡軒 聖輝 這些相關的無城市工程廠商的訂單 所以上述提到的個股 普遍大概平均大家也看 在手訂單應該都是有千億元之普 像漢堂甚至 它的訂單是來到1900億元 這個部分都是非常明確的 所以我覺得雖然股價 可能並不是那麼樣的搶眼 也沒有一股作氣就往上攻 不過每一次在拉回的過程當中 其實你對於只要 業績跟訂單數字是有堅定的 信心的話我覺得真的不用害怕 那分享我自己的例子 其實我在很早以前 因為漢堂曾經是我 就是"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "5536",
+        "name": "聖暉*",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "1734",
+        "name": "杏輝",
+        "score": 0.581,
+        "phonetic_similarity": 0.625,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "3523",
+        "name": "迎輝",
+        "score": 0.581,
+        "phonetic_similarity": 0.625,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-10-20T20:18:41"
+  },
+  "合身堂|3026": {
+    "wrong_keyword": "合身堂",
+    "correct_code": "3026",
+    "correct_name": "禾伸堂",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "ad25bf4e-8620-43cf-9c23-5258541019a1"
+    ],
+    "evidence": [
+      {
+        "video_id": "ad25bf4e-8620-43cf-9c23-5258541019a1",
+        "channel": "兆華與股惑仔",
+        "date": "2026-10-20",
+        "title": "EP1206｜高盛挺CoreWeave先止血？台幣貶破32.5要留意，PCB材料不夠撐盤，等半導體回神！投信Q4的企圖心？ft.型男股神 陳威良",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "phonetic_top1",
+          "stock_context",
+          "code_in_context",
+          "weak_sector_match",
+          "strong_sector_match"
+        ],
+        "context": "所 延伸出來的上游的一些材料 不過因為相關的標的 驅子可數 加上他們的市值 成交金額的規模等等 其實都不夠大 沒辦法去吸引大型的資金 即便有些族群裡面 像領頭羊跑出來 像比如說今天被動元件的 3026合身堂 今天亮燈掌停板 可是你會發現到 在盤中 如果你用以前的 一些想法或習慣 我看合身堂掌停板 如果我去買華興科 我去買金山店或買國具 可能會被修理 所以這代表就是說 族群其實少了一個 整體性 然後也少了延續性 所以就現階段來講的話 確實 我會建議大家就是 站在買方思考 把你的思考 是切換到買方那一邊 不要想著去放空 或想著想要 趕快要出股票 要大量的減碼 因為其實 行情沒有那麼可怕 但是確實近",
+        "override_kind": "phonetic",
+        "override_reason": "clear_phonetic_winner",
+        "original_code": "3704",
+        "original_name": "合勤控",
+        "phonetic_top_score": 0.767,
+        "phonetic_lead": 0.325
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3026",
+        "name": "禾伸堂",
+        "score": 0.767,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "3704",
+        "name": "合勤控",
+        "score": 0.442,
+        "phonetic_similarity": 0.5,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "6103",
+        "name": "合邦",
+        "score": 0.442,
+        "phonetic_similarity": 0.5,
+        "text_similarity": 0.333
+      }
+    ],
+    "updated_at": "2026-10-20T20:18:50"
+  },
+  "加股文|ORCL": {
+    "wrong_keyword": "加股文",
+    "correct_code": "ORCL",
+    "correct_name": "Oracle",
+    "confidence": "medium",
+    "max_score": 65,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "930ae0d6-fd06-400c-8152-9bb85c21a821"
+    ],
+    "evidence": [
+      {
+        "video_id": "930ae0d6-fd06-400c-8152-9bb85c21a821",
+        "channel": "財女珍妮",
+        "date": "2026-10-20",
+        "title": "2026/10/20(二) 費半止跌，反彈該跑嗎？之我好期待才報季快點來",
+        "source": "full_video_validator",
+        "score": 65,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "stock_context"
+        ],
+        "context": "得可能啊 Amazon 可能稍微的比較高一點 因為 Amazon 呢 它可能會從現在 我的槓桿倍數可能不到一倍 可是上升到明年 2027 年的時候 可能會到 1.6 倍左右 那更不用說 Oracle 加股文了嘛 加股文現在基本上 跟這些大型的巨頭相比 它就是一個高槓桿的公司 它現在呢 它在精調整後它的槓桿率呢 到 2027 年 2028 年 甚至會非常接近 4.5 倍的數字 這個 4.5 倍啊 已經是到了一個降頻的門檻 也就是說我現在在我的債務的評級上面呢 我就已經比這些大型科技巨頭還要差 那接下來有沒有可能 因為總體經濟環境的關係 利率變高的關係 經濟有可能變差的關係 讓市場上面呢 繼續對它"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "8182",
+        "name": "加高",
+        "score": 0.442,
+        "phonetic_similarity": 0.5,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "8462",
+        "name": "柏文",
+        "score": 0.442,
+        "phonetic_similarity": 0.5,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "1525",
+        "name": "江申",
+        "score": 0.433,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-10-20T20:25:23"
   }
 }
