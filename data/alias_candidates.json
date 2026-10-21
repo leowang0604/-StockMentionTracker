@@ -1448,7 +1448,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 110,
+    "observations": 111,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1493,7 +1493,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-10-20T20:09:57"
+    "updated_at": "2026-10-21T20:23:37"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -5369,9 +5369,10 @@
     "correct_name": "環球晶",
     "confidence": "high",
     "max_score": 100,
-    "observations": 3,
-    "distinct_videos": 3,
+    "observations": 4,
+    "distinct_videos": 4,
     "video_ids": [
+      "0f3a44b6-0345-402a-886f-f0ee78cd2f82",
       "6d1e4799-6904-4211-bcdb-192153d0bbbe",
       "90933ed5-6756-4e81-a28a-2c96d29c4206",
       "dfc29c49-1cbb-4889-8050-8da76b7df44b"
@@ -5428,6 +5429,24 @@
           "strong_sector_match"
         ],
         "context": "快 那麼明顯 因為畢竟他本來就是比較穩健 跟客戶都是簽 長期合約為主 但是隨著目前的 細金圓報價也是提升 所以漲價也會慢慢開始 反映在新的合約 那最主要就是位階低 那我覺得 如果看細金圓的話就是 通常環球金在動的時候 合金或台盛科股 性會再活潑一點 所以如果你喜歡看高價 抓低價的 我覺得在這個族群 它是可以的 它是可以的 那當然還有就是 中美金是環球金的母公司 那畢竟它是以 權益法的任列獲利 所以就是 它跟環球金之間 不僅是有股價的聯動 更是直接就是 受惠於業績的成長 環球金賺多少錢 中美金就是依照 它的持股比率來任列 對 所以昨天也很明顯 環球金 不知道大家盤怎麼注意到 環球金在昨天 亮燈漲"
+      },
+      {
+        "video_id": "0f3a44b6-0345-402a-886f-f0ee78cd2f82",
+        "channel": "兆華與股惑仔",
+        "date": "2026-10-21",
+        "title": "EP1207｜外資為何賣這麼多？Q4關注內資金流，AI股不能越跌越撿？型態最強+營收最強是首選，已知道的利空都不會造成崩盤！ft.外資捕手 不魯",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context",
+          "strong_sector_match"
+        ],
+        "context": "水摸魚摸一把 可是我不太敢長期抱它 所以後來合金回答的時候 說實話很多散戶朋友受傷 那我自己表現得過 一定是環球金 因為它是最大的龍頭 全世界第二大第三大 如果它把事創併進來 當時就世界第一大了 可是環球金圓很討厭的問題 它竟然就是不成長 它竟然那個業績 你看了就是會覺得 涼涼的還黏緊這樣子 因為它長約還沒有走完 它明年可能會正式的長這樣 好像也有環球金的同學 有提到明年會 真的會漲價幅度比較明確 所以我個人是喜歡環球金的 然後我對它每一季 要任列這個業外事創 到底是虧損還是賺錢這個事情 我是比較覺得煩惱的 好 但無論如何 我覺得呼應不如講一件事 如果今天金流不在它身上的時候 我不會貿然去摸底"
       }
     ],
     "phonetic_candidates": [
@@ -5453,7 +5472,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-10-01T21:37:42"
+    "updated_at": "2026-10-21T21:01:31"
   },
   "環語 KY|4991": {
     "confidence": "high",
@@ -11436,5 +11455,66 @@
       }
     ],
     "updated_at": "2026-10-20T20:25:23"
+  },
+  "預金光|3406": {
+    "wrong_keyword": "預金光",
+    "correct_code": "3406",
+    "correct_name": "玉晶光",
+    "confidence": "high",
+    "max_score": 97,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "0f3a44b6-0345-402a-886f-f0ee78cd2f82"
+    ],
+    "evidence": [
+      {
+        "video_id": "0f3a44b6-0345-402a-886f-f0ee78cd2f82",
+        "channel": "兆華與股惑仔",
+        "date": "2026-10-21",
+        "title": "EP1207｜外資為何賣這麼多？Q4關注內資金流，AI股不能越跌越撿？型態最強+營收最強是首選，已知道的利空都不會造成崩盤！ft.外資捕手 不魯",
+        "source": "full_video_validator",
+        "score": 97,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "然後基本上 趙華喜歡這些東西 你就去挑幾檔買 其實應該就買不錯了 好 剛剛講到的說 形態沒有被破壞的 像我們昨天打人 就在聊光學的部分 其實雖然大力光 是回跌的比較多 回到法說會前那個位置了 可是 預金光卻非常的強 預金光就首越線 他昨天還有跟3M 3M合作的那個消息 所以今天直接又拉一根 漲停辦 所以有時候 為什麼不如會講說 你就去找那些 創新高型態好的 因為他們也可能 會在這一波態勢裡面 有人照顧 就呈現一個強很強的狀況 對 而且通常會說為什麼 你不管什麼時候找 型態好的 其中一個點 以交易的角度來說 因為你很知道 你該守哪裡 例如說你就是被買 了不起就哪裡 不如預期跌破了 你就走 你不會",
+        "override_kind": "phonetic",
+        "override_reason": "clear_phonetic_winner",
+        "original_code": "1711",
+        "original_name": "永光",
+        "phonetic_top_score": 0.708,
+        "phonetic_lead": 0.136
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3406",
+        "name": "玉晶光",
+        "score": 0.708,
+        "phonetic_similarity": 0.909,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "2385",
+        "name": "群光",
+        "score": 0.572,
+        "phonetic_similarity": 0.7,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "2393",
+        "name": "億光",
+        "score": 0.572,
+        "phonetic_similarity": 0.7,
+        "text_similarity": 0.333
+      }
+    ],
+    "updated_at": "2026-10-21T21:01:49"
   }
 }
