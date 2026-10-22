@@ -748,11 +748,12 @@
     "correct_name": "益張",
     "confidence": "high",
     "max_score": 100,
-    "observations": 2,
-    "distinct_videos": 2,
+    "observations": 3,
+    "distinct_videos": 3,
     "video_ids": [
       "730dbd47-b389-44e0-b49f-4a8484dbd2e5",
-      "806c884a-70ff-43e5-9377-62e92a34fdc9"
+      "806c884a-70ff-43e5-9377-62e92a34fdc9",
+      "de715979-3032-4b4a-ac52-562355bbb821"
     ],
     "evidence": [
       {
@@ -788,6 +789,23 @@
           "stock_context"
         ],
         "context": "相對高點 我覺得其實這個 能夠有這樣的一個 勇敢的人比較少 所以他們資金 我這樣阻力去拉升 這些所謂的轉機股的優勢在哪 就是說你對一般散戶 對一般投資大眾來講 你叫我去買那個兩三百塊 五六百塊股票 投一張我覺得會有壓力 但你買那種十幾塊 二十幾塊的頭一張就覺得 啊我就是小賭一勤 玩看看也不會的差多少 所以發現到這些所謂的 轉機股四大產業股票拉上上來 之後容易吸引到所謂的 散戶的資金進駐 所以反而拉起來都是那種 一波流漲的非常快的 那但最近最強就是在所謂的 面板族群 不管是從剛剛講的 有達創價十幾人新高 那群創今天是重新 站到季線以上也轉強 那連這個採金 也在今天也出現了發動 那我們還是跟大家講"
+      },
+      {
+        "video_id": "de715979-3032-4b4a-ac52-562355bbb821",
+        "channel": "財女珍妮",
+        "date": "2026-10-22",
+        "title": "2026/10/22(四)  AI巨頭財報夠好嗎？ #TSLA #META #LRCX #TXN #IBM",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "你自己的第二成長曲線 那特斯拉現在的估值呢 當然就是在他的第二成長曲線上面 好那我覺得 我們剛剛有講到毛利率上升是一個亮點嗎 第二個亮點呢 我覺得是 市場上面有注意到的 就是現金流的部分 大家可以看這一張特斯拉的簡報上面呢 最下面的這一塊 公司在本季呢 營運現金流 就是靠營業活動所賺來的現金流 達到了63億美元 那資本支出是多少呢 47億美元 自由現金流就是 營運現金 減掉你的資本支出 達到了15.3億美元左右 這邊為什麼是一個亮點 因為市場本來擔心特斯拉 同時去投資的 cybercap 或者是 ultimus 或者是 AI 算力 晶片工廠之類的嘛 你有可能會出現大規模的現金消耗 你有可能你的"
       }
     ],
     "phonetic_candidates": [
@@ -813,7 +831,7 @@
         "text_similarity": 0.0
       }
     ],
-    "updated_at": "2026-09-30T21:39:44"
+    "updated_at": "2026-10-22T20:53:56"
   },
   "上全|3363": {
     "wrong_keyword": "上全",
@@ -1448,7 +1466,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 111,
+    "observations": 112,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1493,7 +1511,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-10-21T20:23:37"
+    "updated_at": "2026-10-22T20:20:40"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -11516,5 +11534,211 @@
       }
     ],
     "updated_at": "2026-10-21T21:01:49"
+  },
+  "滑通|2397": {
+    "wrong_keyword": "滑通",
+    "correct_code": "2397",
+    "correct_name": "友通",
+    "confidence": "high",
+    "max_score": 72,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "c51a10cc-41d7-47be-8572-fd604bebf1b9"
+    ],
+    "evidence": [
+      {
+        "video_id": "c51a10cc-41d7-47be-8572-fd604bebf1b9",
+        "channel": "韭菜畢業班",
+        "date": "2026-10-22",
+        "title": "EP268 | 台股暴跌它上漲 / 關於收購這件事",
+        "source": "full_video_validator",
+        "score": 72,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_conflict",
+          "strong_sector_match"
+        ],
+        "context": "會長什麼樣子吧 那我再跟各位最後補充一下 我們其實比較少聊到的 NCEP的這一塊 NCEP其實我們腦袋 第一個想到他就是光收發模組 那他這個成長的這一個動能 其實第一個聯想到會是真頂 第二個可能就是滑通 那其實我自己目前看起來 我覺得真頂他的那個貢獻的比例 感覺又更多了一點點 譬如我們現在看到 真頂他現在過去 以前他的主要的 我們講的他的對他的印象 就是手機板或說消費電子大廠 規模很大 但是景氣循環就非常的明顯 但是我們可以看到現在 CDT正在要做的東西 就是他要去延伸到AI伺服器 特別是光收發模組 以及IC載版的那一塊 整體的營收結構來看的話 高附加價值的產品 他的占比營收到2026年的話 ",
+        "override_kind": "sector",
+        "override_reason": "unique_nearby_name_with_sector_match:友通",
+        "original_code": "2313",
+        "original_name": "華通"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2313",
+        "name": "華通",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "6179",
+        "name": "亞通",
+        "score": 0.639,
+        "phonetic_similarity": 0.714,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "2460",
+        "name": "建通",
+        "score": 0.581,
+        "phonetic_similarity": 0.625,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-10-22T20:28:00"
+  },
+  "SPAX|SPCX": {
+    "wrong_keyword": "SPAX",
+    "correct_code": "SPCX",
+    "correct_name": "SpaceX",
+    "confidence": "medium",
+    "max_score": 65,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "c51a10cc-41d7-47be-8572-fd604bebf1b9"
+    ],
+    "evidence": [
+      {
+        "video_id": "c51a10cc-41d7-47be-8572-fd604bebf1b9",
+        "channel": "韭菜畢業班",
+        "date": "2026-10-22",
+        "title": "EP268 | 台股暴跌它上漲 / 關於收購這件事",
+        "source": "full_video_validator",
+        "score": 65,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "stock_context"
+        ],
+        "context": "大的那個買氣的那一個力道 其實大家都還沒有回來 就大家其實都還是 有一點小緊張 然後隨時都會掉下去的那種感覺 畢竟很多短期均線 其實都還沒有站上 第二個股可能也是一樣 那我們第一個來跟大家聊的 就是SPAX的財報 那SPAX的財報其實現在 你不太能只用就是 它就是一家火箭公司來去理解 它其實就是裡面包含的東西 是AI算力軟體服務 或是Starlink的這一個衛星網路 還有商業的發射 或是Star ship 以及它字眼晶片 其實都放在了同一個 這一個我們講的 資本的大鍋裡面 然後成長速度現在因為很快 那同時它當然有自己的風險 就是資本支出以及執行的風險 其實對它來講都是一場好賭的 那現在其實之前"
+      }
+    ],
+    "phonetic_candidates": [],
+    "updated_at": "2026-10-22T20:28:05"
+  },
+  "四星KY|3661": {
+    "wrong_keyword": "四星KY",
+    "correct_code": "3661",
+    "correct_name": "世芯-KY",
+    "confidence": "high",
+    "max_score": 85,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "4cb90a66-83c8-4ed3-8cb1-6b6e1eb70986"
+    ],
+    "evidence": [
+      {
+        "video_id": "4cb90a66-83c8-4ed3-8cb1-6b6e1eb70986",
+        "channel": "兆華與股惑仔",
+        "date": "2026-10-22",
+        "title": "EP1208｜META好財報也失靈，台股殺破季線，擔心撒錢無法回收，又怕出貨建廠遞延？連假將至的定心時間，風雨會過去？ft.選股教練 陳唯泰",
+        "source": "full_video_validator",
+        "score": 85,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "一個產業趨勢 像風車是一個 對風車明年產能開出來 只有營收就會出來 那我覺得AC也是一個 我覺得AC也是一個 AC他明年 叫今年應該也是 還是會大幅度的一個成長 所以剛剛特別Check了一下 包括像是四星KY 他的營收表現其實在9月份 9月份營收表現其實是好的 他9月份營收是年月雙征 而且年增496% 月增13.7% OK 我覺得這個其實就相當相當的不錯 然後其他的像創意 也是年月雙征 雖然說年增率有稍微有點下滑 但是這個是沒辦法的事情 不然他就會進入到一個 所謂高機器的一個表現 然後甚至 那你有沒有看到 我覺得比較不一樣 因為他的結構上 他可能還有一些手機晶片 相關的這些其他營收戰筆 但我們",
+        "override_kind": "phonetic",
+        "override_reason": "phonetic_top1_needs_review",
+        "original_code": "4439",
+        "original_name": "冠星-KY",
+        "phonetic_top_score": 0.663,
+        "phonetic_lead": 0.01100000000000001,
+        "needs_review": true
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3661",
+        "name": "世芯-KY",
+        "score": 0.663,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "4439",
+        "name": "冠星-KY",
+        "score": 0.652,
+        "phonetic_similarity": 0.6,
+        "text_similarity": 0.75
+      },
+      {
+        "code": "4157",
+        "name": "太景*-KY",
+        "score": 0.608,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-10-22T20:42:51"
+  },
+  "上起|6123": {
+    "wrong_keyword": "上起",
+    "correct_code": "6123",
+    "correct_name": "上奇",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "de715979-3032-4b4a-ac52-562355bbb821"
+    ],
+    "evidence": [
+      {
+        "video_id": "de715979-3032-4b4a-ac52-562355bbb821",
+        "channel": "財女珍妮",
+        "date": "2026-10-22",
+        "title": "2026/10/22(四)  AI巨頭財報夠好嗎？ #TSLA #META #LRCX #TXN #IBM",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "哈囉大家好,我是捷擬今天繼續來跟大家分享美股近期的大小事 今天是2026年的10月22號禮拜四 今天要來跟大家分享的主題是 AI巨頭的財報夠好嗎? 你看美股在財報公佈之後一下漲一下跌的 感覺到現在早上起來呢 看到期貨盤又繼續往下了 昨天漲的都還不夠今天跌的對不對 我們今天要來講特斯拉、META 或者是柯林研發、德州儀器、IBM這幾家公司的財報 從現在開始每天都有滿滿的財報大平台 老實跟各位說實在是太興奮了 因為每天要跟大家分享什麼美衣戰爭、油價、直立率 老實說那些主題都已經講到爛掉了 現在就是看美衣戰爭有沒有辦法結束 然後直率有沒有辦法往下 通膨預期有沒有辦法往下 剩下來全部都是交給生產力的事"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "6123",
+        "name": "上奇",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "2049",
+        "name": "上銀",
+        "score": 0.663,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "4770",
+        "name": "上品",
+        "score": 0.663,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-10-22T20:53:52"
   }
 }
