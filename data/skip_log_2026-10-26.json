@@ -1,0 +1,58 @@
+[
+  {
+    "keyword": "新產",
+    "pos": 6334,
+    "reason": "keyword_pattern_override",
+    "detail": null,
+    "video_id": "dbb64d31-59da-46f5-bae3-ea2c87cfcc94",
+    "channel": "韭菜畢業班",
+    "date": "2026-10-26",
+    "title": "EP269 | 停止下跌的幾個訊號 / 台股美股金流想法"
+  },
+  {
+    "keyword": "新產",
+    "pos": 6378,
+    "reason": "keyword_pattern_override",
+    "detail": null,
+    "video_id": "dbb64d31-59da-46f5-bae3-ea2c87cfcc94",
+    "channel": "韭菜畢業班",
+    "date": "2026-10-26",
+    "title": "EP269 | 停止下跌的幾個訊號 / 台股美股金流想法"
+  },
+  {
+    "keyword": "日月光",
+    "reason": "gemini_extraction_rejected",
+    "detail": "名稱未出現在原文（可能幻覺）: 3711/日月光投控",
+    "video_id": "dbb64d31-59da-46f5-bae3-ea2c87cfcc94",
+    "channel": "韭菜畢業班",
+    "date": "2026-10-26",
+    "title": "EP269 | 停止下跌的幾個訊號 / 台股美股金流想法"
+  },
+  {
+    "keyword": "就我會去看一下他",
+    "reason": "whisper_correction_rejected",
+    "detail": "統一修正決策拒絕: 就我會去看一下他->3661/世芯-KY; reason=term_missing_from_context",
+    "video_id": "dbb64d31-59da-46f5-bae3-ea2c87cfcc94",
+    "channel": "韭菜畢業班",
+    "date": "2026-10-26",
+    "title": "EP269 | 停止下跌的幾個訊號 / 台股美股金流想法"
+  },
+  {
+    "keyword": "Dividend",
+    "reason": "gemini_extraction_rejected",
+    "detail": "無法對應任何已知股票",
+    "video_id": "dbb64d31-59da-46f5-bae3-ea2c87cfcc94",
+    "channel": "韭菜畢業班",
+    "date": "2026-10-26",
+    "title": "EP269 | 停止下跌的幾個訊號 / 台股美股金流想法"
+  },
+  {
+    "keyword": "ZSS",
+    "reason": "gemini_extraction_rejected",
+    "detail": "名稱未出現在原文（可能幻覺）: ZS/Zscaler",
+    "video_id": "dbb64d31-59da-46f5-bae3-ea2c87cfcc94",
+    "channel": "韭菜畢業班",
+    "date": "2026-10-26",
+    "title": "EP269 | 停止下跌的幾個訊號 / 台股美股金流想法"
+  }
+]
