@@ -1466,7 +1466,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 116,
+    "observations": 117,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1511,7 +1511,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-10-26T21:13:57"
+    "updated_at": "2026-10-27T21:00:57"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -11740,5 +11740,115 @@
       }
     ],
     "updated_at": "2026-10-22T20:53:52"
+  },
+  "台要|1101": {
+    "wrong_keyword": "台要",
+    "correct_code": "1101",
+    "correct_name": "台泥",
+    "confidence": "high",
+    "max_score": 75,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "22ccf278-c1ba-4d8b-abeb-9c37fe7b8929"
+    ],
+    "evidence": [
+      {
+        "video_id": "22ccf278-c1ba-4d8b-abeb-9c37fe7b8929",
+        "channel": "兆華與股惑仔",
+        "date": "2026-10-27",
+        "title": "EP1209｜開高走低震800點，CCL怎麼了？多空拉鋸戰，美期中選舉後分曉？俄烏戰這次真有解？AI新創舉債問題掀倒閉潮？ft.型男股神 陳威良",
+        "source": "full_video_validator",
+        "score": 75,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_conflict",
+          "stock_context"
+        ],
+        "context": "490劑 所以我今天有去掛 台光電今天也若難 今天若難的股票滿多的 滿多的 對 台達電聯發科之外 同伯基板裡面 像台光電 今天有到4685 也是非常非常的低 然後是跟他的前低 4635 只差一點點 那台要 今天也跌停板 對 中間有打開 但是中 最後還是跌停板 然後我就有問 我兩個說 今天CCL發生什麼事 因為我看來看去 像上禮拜的話 南亞有被喘 南亞有說 市場說南亞的M9 材料送認證的時候 沒有過 南亞趕快出來發重訊 不是 我們都很順利 你們可能講到是別的公司 不管我是 而且他單月字節 是很厲害這樣子 對 所以為什麼CCL 今天會有這樣的一個走勢 甚至今天的PCB 其實都不理想 對 我覺得有一"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "4746",
+        "name": "台耀",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "6274",
+        "name": "台燿",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "2340",
+        "name": "台亞",
+        "score": 0.717,
+        "phonetic_similarity": 0.833,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-10-27T21:10:08"
+  },
+  "聯貿|6213": {
+    "wrong_keyword": "聯貿",
+    "correct_code": "6213",
+    "correct_name": "聯茂",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "22ccf278-c1ba-4d8b-abeb-9c37fe7b8929"
+    ],
+    "evidence": [
+      {
+        "video_id": "22ccf278-c1ba-4d8b-abeb-9c37fe7b8929",
+        "channel": "兆華與股惑仔",
+        "date": "2026-10-27",
+        "title": "EP1209｜開高走低震800點，CCL怎麼了？多空拉鋸戰，美期中選舉後分曉？俄烏戰這次真有解？AI新創舉債問題掀倒閉潮？ft.型男股神 陳威良",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "少 應該不至於受到什麼傷害 但是反而是在 如果是在今天 看到它字節單月 九月賺了4.42元 超強 如果你在開高的時候 有利多追進去 反而短線上面 又會稍微被燙到手 同樣的類似情況 你可以看到 CC有的聯貿 它也是公告了 九月份字節 很厲害3.54元 單月EPS暴增 但是問題是 如果你是看到利多去追價 那就有可能 這邊有小小的吃虧 小小的又被套勞一下了 但是如果是 逢集結的時候去接 我覺得 相對來說 勝率應該會比較高 那當然 超跌過後 也比較容易創造出 超額報酬 所以我覺得 因為大盤現在就是 剛剛前面提到 多空僵局 那還沒有 明顯的 哪一邊站上風 所以行情走勢 會比較黏 那通常黏的時候 我們的 "
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "6213",
+        "name": "聯茂",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "6821",
+        "name": "聯寶",
+        "score": 0.732,
+        "phonetic_similarity": 0.857,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "1459",
+        "name": "聯發",
+        "score": 0.639,
+        "phonetic_similarity": 0.714,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-10-27T21:10:09"
   }
 }
