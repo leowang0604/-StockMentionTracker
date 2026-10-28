@@ -1466,7 +1466,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 117,
+    "observations": 118,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1511,7 +1511,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-10-27T21:00:57"
+    "updated_at": "2026-10-28T21:22:59"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -11850,5 +11850,264 @@
       }
     ],
     "updated_at": "2026-10-27T21:10:09"
+  },
+  "長性|1717": {
+    "wrong_keyword": "長性",
+    "correct_code": "1717",
+    "correct_name": "長興",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "499a0c9f-1a36-4d5b-b9ca-ee2b2510e0bd"
+    ],
+    "evidence": [
+      {
+        "video_id": "499a0c9f-1a36-4d5b-b9ca-ee2b2510e0bd",
+        "channel": "股癌",
+        "date": "2026-10-28",
+        "title": "EP709 | ⭐",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "那時候的Parentee 因為他們也是有很多的員工配股 然後也是被大家講說 他在看股東門之鎧 然後一直配給員工 那時候是幾十塊的事情 後來噴爆 所以這個都不一定是問題 前提就是他可以持續的 有很棒的成長性 有很棒的營收跟獲利開出來 所以現在講的就是 他的這一份財報跟公司的 未來的各種的預期 如果是要往好的方向走的話 他就必須要去維持一個 很好成長性 那如果說今天沒有 很好成長性的話 就會火燒草營 就是各種問題都會爆炸 不管是他未來要 Promise去付出的算力的錢 然後又或是他現在可能已經 欠的錢 那或甚至是這樣 Dario他自己本身都有提到 如果公司沒有繼續的成長 跟做這些採購的話 他會直接"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "1717",
+        "name": "長興",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "2603",
+        "name": "長榮",
+        "score": 0.681,
+        "phonetic_similarity": 0.778,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "5534",
+        "name": "長虹",
+        "score": 0.681,
+        "phonetic_similarity": 0.778,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-10-28T21:41:01"
+  },
+  "穩冒|3105": {
+    "wrong_keyword": "穩冒",
+    "correct_code": "3105",
+    "correct_name": "穩懋",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "88796b4d-9b03-43bf-acb8-e59f0c16f003"
+    ],
+    "evidence": [
+      {
+        "video_id": "88796b4d-9b03-43bf-acb8-e59f0c16f003",
+        "channel": "韭菜畢業班",
+        "date": "2026-10-28",
+        "title": "EP270 | 記憶體財報  /  智原&穩懋",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "要跟各位分享一下 這一次的法說看到的一些東西 好那再來就是 這一次法說我覺得比較有亮點的 也是在10月28號 很先進很快速的東西 來幫大家整理一下 那就是我們前面幾集 其實有跟各位聊到的 穩冒老哥 那穩冒老哥這一次 講一個簡單的結論 就是他第三季的毛利率 其實從上一季的28.2% 提升到了37.4% 我覺得很多 就是如果說我們單純的 用這一塊來看的話 其實之前我們看公司派那邊說出來 可能就是要過幾季 它才會有到30幾%的這個數字 因為大家比較小看這一個攀升 可能我們講 至少5%到6%的毛利率 其實它對於整體的表現來講 我們會很去思考這件 它的EPS就會相對的很漂亮 就你後續看到EPS的話 其實"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3105",
+        "name": "穩懋",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "6761",
+        "name": "穩得",
+        "score": 0.5,
+        "phonetic_similarity": 0.5,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "2324",
+        "name": "仁寶",
+        "score": 0.433,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-10-28T21:51:00"
+  },
+  "Amex|6933": {
+    "wrong_keyword": "Amex",
+    "correct_code": "6933",
+    "correct_name": "AMAX-KY",
+    "confidence": "high",
+    "max_score": 85,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "88796b4d-9b03-43bf-acb8-e59f0c16f003"
+    ],
+    "evidence": [
+      {
+        "video_id": "88796b4d-9b03-43bf-acb8-e59f0c16f003",
+        "channel": "韭菜畢業班",
+        "date": "2026-10-28",
+        "title": "EP270 | 記憶體財報  /  智原&穩懋",
+        "source": "full_video_validator",
+        "score": 85,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "stock_context",
+          "code_in_context"
+        ],
+        "context": "出個斗篷 全部都是物理致命 裝備我打一道一下 那基本上屁滾尿樓 屁滾尿樓 屁滾尿樓 想請問最近有一檔有創新的 創新高的股票 代號6933 有業人商積極 HOST MAX 帶動的轉型效益有料嗎 你講的是Amex吧 有料啊 Amex 然後再來就是 我們在講話的同時 VRT他公布出來 我們剛剛前面有講 他是直接爆噴的 然後Amex的話 現在主要在看的東西的話 已經是他在做 就是基礎設施的那一塊 然後成長的 你只要Neocloud繼續生長 然後或是說 可能企業的AI繼續往上去走的話 那這一塊年貨成長率都還蠻掉的 然後他之前公布出來 他已經收至少 年增也都有30% 30% 40% 我覺得還算OK 就是只"
+      }
+    ],
+    "phonetic_candidates": [],
+    "updated_at": "2026-10-28T21:51:20"
+  },
+  "未剛|3260": {
+    "wrong_keyword": "未剛",
+    "correct_code": "3260",
+    "correct_name": "威剛",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "a9e970ea-7cfe-4fb5-a9b2-3f9b6a455b4f"
+    ],
+    "evidence": [
+      {
+        "video_id": "a9e970ea-7cfe-4fb5-a9b2-3f9b6a455b4f",
+        "channel": "兆華與股惑仔",
+        "date": "2026-10-28",
+        "title": "EP1210｜今年破季線第3次，能有信心再反攻？需求遞延但沒消失，AI大廠互相融資，我們負責收錢？做短、做長的思維？ft.操盤手 楊雲翔",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "線的一個交易裡面 我可能比較偏向類似這樣的一個朋友 因為它也是都達到大概1800附近 可能相對就是一個低點 又上去 潘董很努力地在講 現在好 都講完了 其實到處都講了 接下來可能就讓市場機制去決定 像未剛我們也有聊過它 它也是之前控庫存 所以它的九月營開出來的時候 大家覺得我怎麼出現越減了 因為它要控它的庫存 所以市場有點抓不準 可是也因為已經賺很多錢了 所以我們也有提到說 第四季有可能有一些ETF 在所謂的找高古習的時候 會考慮模組廠 所以這個時候 也許就會有籌碼的一株 那今天的未剛自然 也是一個跌身的反彈 那剛剛提到 市場上有很多機體最近的新聞 除了剛剛講到的現金很多 馬斯克自己也說 這個"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3260",
+        "name": "威剛",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "1203",
+        "name": "味王",
+        "score": 0.557,
+        "phonetic_similarity": 0.857,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "1584",
+        "name": "精剛",
+        "score": 0.5,
+        "phonetic_similarity": 0.5,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-10-28T22:05:00"
+  },
+  "天鴻科|6667": {
+    "wrong_keyword": "天鴻科",
+    "correct_code": "6667",
+    "correct_name": "信紘科",
+    "confidence": "high",
+    "max_score": 97,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "a9e970ea-7cfe-4fb5-a9b2-3f9b6a455b4f"
+    ],
+    "evidence": [
+      {
+        "video_id": "a9e970ea-7cfe-4fb5-a9b2-3f9b6a455b4f",
+        "channel": "兆華與股惑仔",
+        "date": "2026-10-28",
+        "title": "EP1210｜今年破季線第3次，能有信心再反攻？需求遞延但沒消失，AI大廠互相融資，我們負責收錢？做短、做長的思維？ft.操盤手 楊雲翔",
+        "source": "full_video_validator",
+        "score": 97,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "上全真的完全做不出來 所以他覺得明後年 會有一點百家爭 大家都可以做出來的一個狀況 好 但無論如何 影響各式看 美股回台股嗎 昨天光通訊反攻 康寧採報很好 對 因為不只康寧 昨天大概最強的是天鴻 對 天鴻科 天鴻科 因為他基本上 加拿大這個公司 他最主要說他 本來是在 我們講說800G這一塊 明年確定說2027年 大概就直接是衝到1.6T 所以說明年是大量量產 量產情況下 不是說這個只有量產 他的客源也很清楚 應該我覺得說 他當然沒有講 只是說很大的CSP公司 我覺得應該就是TPU 就是Google 對 所以這一塊來講就是說 今天可能是因為 這個大廠的因素 因為如果加盤後 可能超過15%的這個",
+        "override_kind": "phonetic",
+        "override_reason": "phonetic_top1_needs_review",
+        "original_code": "1233",
+        "original_name": "天仁",
+        "phonetic_top_score": 0.637,
+        "phonetic_lead": 0.0,
+        "needs_review": true
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "6667",
+        "name": "信紘科",
+        "score": 0.637,
+        "phonetic_similarity": 0.8,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "6937",
+        "name": "天虹",
+        "score": 0.637,
+        "phonetic_similarity": 0.8,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "6693",
+        "name": "廣閎科",
+        "score": 0.589,
+        "phonetic_similarity": 0.727,
+        "text_similarity": 0.333
+      }
+    ],
+    "updated_at": "2026-10-28T22:05:10"
   }
 }
