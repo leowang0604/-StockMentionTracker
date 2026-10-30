@@ -1466,7 +1466,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 119,
+    "observations": 120,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1511,7 +1511,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-10-29T21:28:11"
+    "updated_at": "2026-10-30T21:08:53"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -12109,5 +12109,262 @@
       }
     ],
     "updated_at": "2026-10-28T22:05:10"
+  },
+  "蓮茂|6213": {
+    "wrong_keyword": "蓮茂",
+    "correct_code": "6213",
+    "correct_name": "聯茂",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "59350531-696e-4a6c-b8b4-556a3c9ccd68"
+    ],
+    "evidence": [
+      {
+        "video_id": "59350531-696e-4a6c-b8b4-556a3c9ccd68",
+        "channel": "兆華與股惑仔",
+        "date": "2026-10-30",
+        "title": "EP1212｜亞馬遜、英特爾都爆雷，台股殺破半年線，明知自由現金流會更糟，為何市場突然怕？再一次機會還是真正的危機？ft.操盤手 黃豐凱",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "到數字變好 但其實他不是真的是不好 他有點像之前的這個 DR的狀況一樣 就是價格可以開始好起來 好 這就是為什麼那時候 大哥 二哥漲不動的時候 像蓮茂三哥就在漲 還有我們一次在聊 金居有做到高階同伯 蓮茂一直在送認證 還在努力 可是後來金居不做的 有一些中低價的 這個同伯 中低階的 蓮茂拿去了之後漲價了 是 所以有一些在這個市場上 是受惠於這件事情 我覺得記憶體這一題 有一點難解 就是說 當我今天記憶體的價格 到最後是鬆動的話 我覺得大家也會對AI的需求 會有一點點的疑慮 可是我覺得消費性電子 應該會復活 因為那個真的就是寫零零的 立論就已經不高了 還要在這邊 跟你斜海奮戰 而且已經三四年了 "
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "6213",
+        "name": "聯茂",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "2481",
+        "name": "強茂",
+        "score": 0.663,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "8150",
+        "name": "南茂",
+        "score": 0.639,
+        "phonetic_similarity": 0.714,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-10-30T21:20:34"
+  },
+  "優達|2409": {
+    "wrong_keyword": "優達",
+    "correct_code": "2409",
+    "correct_name": "友達",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "59350531-696e-4a6c-b8b4-556a3c9ccd68"
+    ],
+    "evidence": [
+      {
+        "video_id": "59350531-696e-4a6c-b8b4-556a3c9ccd68",
+        "channel": "兆華與股惑仔",
+        "date": "2026-10-30",
+        "title": "EP1212｜亞馬遜、英特爾都爆雷，台股殺破半年線，明知自由現金流會更糟，為何市場突然怕？再一次機會還是真正的危機？ft.操盤手 黃豐凱",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "對 評價便宜先疊了 然後本一比 對應到明年可能十多倍 直立率四五% 又回到 風又回到這個上面來 所以我覺得這個就是 市場上面的起落 在情緒上面的起伏 對 但是看到這些 像最近開法說的公司 除了台大店 優達 昨天講他是這個影轉盔 即使他已經確認 中科廠賣給台積電也沒用 今天還是吃蝶亭 所以最近在法說會上 好像怎麼樣講 也沒有辦法 把大家的信心講回來 聯定也是 國劇也是 沒有 我覺得 你要把題材股跟基本面 有料的公司拆開來看 你說像玉京光 優達 其實他們都是在吵題材 就是 呃 我說 玉京光基本面還行 我一個私募 然後有誰要來認 我就啦啦啦啦啦啦 對 然後你大盤一不行 他就掉下來 有大家也是 我要賣"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2409",
+        "name": "友達",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "6576",
+        "name": "逸達",
+        "score": 0.565,
+        "phonetic_similarity": 0.6,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "3211",
+        "name": "順達",
+        "score": 0.5,
+        "phonetic_similarity": 0.5,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-10-30T21:20:34"
+  },
+  "NXP|NXP": {
+    "wrong_keyword": "NXP",
+    "correct_code": "NXP",
+    "correct_name": "NUVEEN SELECT TAX FREE INCOME PORTFOLIO",
+    "confidence": "high",
+    "max_score": 85,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "59350531-696e-4a6c-b8b4-556a3c9ccd68"
+    ],
+    "evidence": [
+      {
+        "video_id": "59350531-696e-4a6c-b8b4-556a3c9ccd68",
+        "channel": "兆華與股惑仔",
+        "date": "2026-10-30",
+        "title": "EP1212｜亞馬遜、英特爾都爆雷，台股殺破半年線，明知自由現金流會更糟，為何市場突然怕？再一次機會還是真正的危機？ft.操盤手 黃豐凱",
+        "source": "full_video_validator",
+        "score": 85,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "stock_context",
+          "code_in_context"
+        ],
+        "context": "一陣子廣達講說 他要把HP的產線停掉 因為他居然不讓他漲價 不願意共提時間 他已經受不了了 他要把他的線停掉 所以告訴你說 其實PC端 是真的不太好 但是你會發覺 昨天在大跌的過程裡面 其實像TI 像NXP 都還是上漲的 表示什麼 表示資金 其實有點往避險的方向去 就是說他們 雖然知道PC不好 可是再不好 也不會像這些股價 像是位階比較高的 族群來的危險 所以資金其實避到這個地方去 所以其實市場上有點怪 邏輯有點怪 就是你覺得PC不好 有像這些類比公司 應該股價要落 可是因為PC不好 這些類比股價的IC 反而相對位階比較低 好 那我們回頭來看 基本上目前的大盤的位置 我們常常講 如果月線下彎的",
+        "override_kind": "exact_alias",
+        "override_reason": "known_identity_or_approved_alias",
+        "original_code": "1528",
+        "original_name": "恩德"
+      }
+    ],
+    "phonetic_candidates": [],
+    "updated_at": "2026-10-30T21:20:43"
+  },
+  "玉京光|3406": {
+    "wrong_keyword": "玉京光",
+    "correct_code": "3406",
+    "correct_name": "玉晶光",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "59350531-696e-4a6c-b8b4-556a3c9ccd68"
+    ],
+    "evidence": [
+      {
+        "video_id": "59350531-696e-4a6c-b8b4-556a3c9ccd68",
+        "channel": "兆華與股惑仔",
+        "date": "2026-10-30",
+        "title": "EP1212｜亞馬遜、英特爾都爆雷，台股殺破半年線，明知自由現金流會更糟，為何市場突然怕？再一次機會還是真正的危機？ft.操盤手 黃豐凱",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "所以最近在法說會上 好像怎麼樣講 也沒有辦法 把大家的信心講回來 聯定也是 國劇也是 沒有 我覺得 你要把題材股跟基本面 有料的公司拆開來看 你說像玉京光 優達 其實他們都是在吵題材 就是 呃 我說 玉京光基本面還行 我一個私募 然後有誰要來認 我就啦啦啦啦啦啦 對 然後你大盤一不行 他就掉下來 有大家也是 我要賣廠房 賣老本 是賣老本 賣廠房 消息出來 市場不是繼續給掌聲 而是直接怎麼樣 直接潑冷水 就告訴你 你就是這樣子而已 但是我這幾天觀察到 就是有些公司其實真的還不錯 譬如說像 我看了家公司 明年大概可以賺到 接近20塊 股價才200多塊 所以我覺得其實 市場上其實還是有很多 有這種公"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3406",
+        "name": "玉晶光",
+        "score": 0.883,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "4979",
+        "name": "華星光",
+        "score": 0.604,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "1711",
+        "name": "永光",
+        "score": 0.589,
+        "phonetic_similarity": 0.727,
+        "text_similarity": 0.333
+      }
+    ],
+    "updated_at": "2026-10-30T21:20:43"
+  },
+  "聯定|2303": {
+    "wrong_keyword": "聯定",
+    "correct_code": "2303",
+    "correct_name": "聯電",
+    "confidence": "high",
+    "max_score": 85,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "59350531-696e-4a6c-b8b4-556a3c9ccd68"
+    ],
+    "evidence": [
+      {
+        "video_id": "59350531-696e-4a6c-b8b4-556a3c9ccd68",
+        "channel": "兆華與股惑仔",
+        "date": "2026-10-30",
+        "title": "EP1212｜亞馬遜、英特爾都爆雷，台股殺破半年線，明知自由現金流會更糟，為何市場突然怕？再一次機會還是真正的危機？ft.操盤手 黃豐凱",
+        "source": "full_video_validator",
+        "score": 85,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top3",
+          "phonetic_conflict",
+          "stock_context"
+        ],
+        "context": "對 但是看到這些 像最近開法說的公司 除了台大店 優達 昨天講他是這個影轉盔 即使他已經確認 中科廠賣給台積電也沒用 今天還是吃蝶亭 所以最近在法說會上 好像怎麼樣講 也沒有辦法 把大家的信心講回來 聯定也是 國劇也是 沒有 我覺得 你要把題材股跟基本面 有料的公司拆開來看 你說像玉京光 優達 其實他們都是在吵題材 就是 呃 我說 玉京光基本面還行 我一個私募 然後有誰要來認 我就啦啦啦啦啦啦 對 然後你大盤一不行 他就掉下來 有大家也是 我要賣廠房 賣老本 是賣老本 賣廠房 消息出來 市場不是繼續給掌聲 而是直接怎麼樣 直接潑冷水 就告訴你 你就是這樣子而已 但是我這幾天觀察到 就是有些公司"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3550",
+        "name": "聯穎",
+        "score": 0.744,
+        "phonetic_similarity": 0.875,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "2347",
+        "name": "聯強",
+        "score": 0.681,
+        "phonetic_similarity": 0.778,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "2303",
+        "name": "聯電",
+        "score": 0.663,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-10-30T21:20:43"
   }
 }
