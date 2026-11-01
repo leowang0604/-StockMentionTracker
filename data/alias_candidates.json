@@ -748,9 +748,10 @@
     "correct_name": "益張",
     "confidence": "high",
     "max_score": 100,
-    "observations": 3,
-    "distinct_videos": 3,
+    "observations": 4,
+    "distinct_videos": 4,
     "video_ids": [
+      "6832f4c1-31e7-46e5-a025-6202e7658d8a",
       "730dbd47-b389-44e0-b49f-4a8484dbd2e5",
       "806c884a-70ff-43e5-9377-62e92a34fdc9",
       "de715979-3032-4b4a-ac52-562355bbb821"
@@ -806,6 +807,23 @@
           "stock_context"
         ],
         "context": "你自己的第二成長曲線 那特斯拉現在的估值呢 當然就是在他的第二成長曲線上面 好那我覺得 我們剛剛有講到毛利率上升是一個亮點嗎 第二個亮點呢 我覺得是 市場上面有注意到的 就是現金流的部分 大家可以看這一張特斯拉的簡報上面呢 最下面的這一塊 公司在本季呢 營運現金流 就是靠營業活動所賺來的現金流 達到了63億美元 那資本支出是多少呢 47億美元 自由現金流就是 營運現金 減掉你的資本支出 達到了15.3億美元左右 這邊為什麼是一個亮點 因為市場本來擔心特斯拉 同時去投資的 cybercap 或者是 ultimus 或者是 AI 算力 晶片工廠之類的嘛 你有可能會出現大規模的現金消耗 你有可能你的"
+      },
+      {
+        "video_id": "6832f4c1-31e7-46e5-a025-6202e7658d8a",
+        "channel": "韭菜畢業班",
+        "date": "2026-11-01",
+        "title": "EP271 | 006208 1拆8 分割，想把一半資金押進去 ？我給朋友的真心建議",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "經一猜四了 那目前猜股這件事情在猜股 你有沒有覺得越來越常發生 就是大家都知道這個東西 他可以刺激一些買盤 好那刺激買盤的主要原因是什麼 我覺得就是減便宜的心態 就等於說以前可能 我們講006208 一張可能沒必要240 他現在如果一猜八一張變30塊 一張30塊就等於說一張3萬塊 一張3萬塊 你我他都可能可以買得起 就一個月就是補一張 一個月就補一張 然後你看著他從一張十張 50張100張慢慢的疊上去 那一個感覺就會挺舒服的 然後特別是在配股配洗澡 爽 一直有人發錢給你的那種感覺 所以我覺得大多數人都還是蠻喜歡 一個就是一整張的 他比較不會說零股 因為零股他其實有一個時間差 然後再加上他就是沒"
       }
     ],
     "phonetic_candidates": [
@@ -831,7 +849,7 @@
         "text_similarity": 0.0
       }
     ],
-    "updated_at": "2026-10-22T20:53:56"
+    "updated_at": "2026-11-01T21:04:38"
   },
   "上全|3363": {
     "wrong_keyword": "上全",
@@ -1466,7 +1484,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 121,
+    "observations": 122,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1511,7 +1529,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-10-31T20:19:49"
+    "updated_at": "2026-11-01T20:53:09"
   },
   "創造力|3443": {
     "confidence": "high",
