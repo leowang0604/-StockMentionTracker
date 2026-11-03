@@ -857,9 +857,10 @@
     "correct_name": "上詮",
     "confidence": "high",
     "max_score": 100,
-    "observations": 4,
-    "distinct_videos": 4,
+    "observations": 5,
+    "distinct_videos": 5,
     "video_ids": [
+      "3bd53720-74a9-4220-9cf0-16bc94cf8550",
       "401131f0-6382-4caa-abfd-3e6b5dda0c73",
       "7a9fa5fb-88ba-44a1-8bcf-d5d3388291f0",
       "7c46d359-d54a-4cef-8997-18cfb6e0770d",
@@ -933,6 +934,23 @@
           "stock_context"
         ],
         "context": "可惜 所以大家會有點擔心友達 但我剛剛也跟浩宇哥聊了 友達不是這個裡面的 最重要的成分股 友達那麼大 友達要的還是賣場之後 在整個後段封測的轉型 跟台積電的接上軌這件事情 那還有 大家會想到另外的就是上全 因為上全也跟台積電在合作 開發FAU的部分 那為什麼那麼慢呢 你那麼慢 你說不出來一個 很具體的時間 可是大力光現在說出來 那是不是大力光就可能取代你 或是比你還超前 我想這是大家在今天盤面上 會擔心上全的原因 對 因為大力光的法說 會上禮拜真的非常精彩 第一個當然在於它本身 毛利是創造13年的新低 所以原本大家今天盤前 都很擔心 這個老實數 對於這個手機市場的展望 或毛利的下滑 對於整個一"
+      },
+      {
+        "video_id": "3bd53720-74a9-4220-9cf0-16bc94cf8550",
+        "channel": "兆華與股惑仔",
+        "date": "2026-11-02",
+        "title": "EP1213｜半年線掙扎，美期中選舉是短期因素，自由現金流、訂單遞延和債信問題，要跌多少才夠？接近7月低點的股票檢驗！ft.題材獵人 林漢偉",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "做一個立刻的攤平 我覺得目前來看 好像還沒看到時間點 你說這個 要去超敵的人 我覺得也可以再等等 因為整個所謂的AI電力需求 這個區塊的產業 沒有整齊在轉強 那可以看到有部分的 比方說像 聯電 或說像上全 或說一些光通訊股票 對 我怎麼沒有念到上全 我剛剛有念到嗎 沒有 好像沒有 對啊 上全是 沒有 沒有上全完全就是回到低點 因為他們抓這個60日 我覺得那時候可能就不太準 要抓90日了 對嗎 抓到7月份 對 所以可能他7月份 有更低的低點 然後現在可能有反彈上來 所以回測還沒有破低 但我覺得這些都代表說 其實他們可能像聯電 我覺得他也是 展望稍微保守一些些 那加上說現在盤是氛圍不好 他比較平常"
       }
     ],
     "phonetic_candidates": [
@@ -958,7 +976,7 @@
         "text_similarity": 0.5
       }
     ],
-    "updated_at": "2026-10-12T23:04:28"
+    "updated_at": "2026-11-03T00:01:23"
   },
   "中美金|2891": {
     "confidence": "high",
@@ -1484,7 +1502,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 122,
+    "observations": 123,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1529,7 +1547,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-11-01T20:53:09"
+    "updated_at": "2026-11-02T23:43:44"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -7981,10 +7999,17 @@
     "wrong_keyword": "金國光"
   },
   "金山墊|8042": {
-    "confidence": "high",
+    "wrong_keyword": "金山墊",
     "correct_code": "8042",
     "correct_name": "金山電",
-    "distinct_videos": 1,
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 2,
+    "distinct_videos": 2,
+    "video_ids": [
+      "3bd53720-74a9-4220-9cf0-16bc94cf8550",
+      "d86bbd8d-81f8-43eb-ade0-805bcbe02c1d"
+    ],
     "evidence": [
       {
         "channel": "兆華與股惑仔",
@@ -8001,38 +8026,49 @@
         "source": "phonetic-discovery",
         "title": "EP1159｜美超微、流明財報依舊好，晚上CPI是反彈考驗站？載板、矽晶圓、記憶體、被動選秀，誰是狀元籤？ft.型男股神 陳威良",
         "video_id": "d86bbd8d-81f8-43eb-ade0-805bcbe02c1d"
+      },
+      {
+        "video_id": "3bd53720-74a9-4220-9cf0-16bc94cf8550",
+        "channel": "兆華與股惑仔",
+        "date": "2026-11-02",
+        "title": "EP1213｜半年線掙扎，美期中選舉是短期因素，自由現金流、訂單遞延和債信問題，要跌多少才夠？接近7月低點的股票檢驗！ft.題材獵人 林漢偉",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "停的真正 是不是有小作文 對 因為我們今天看到 所謂的太陽右墊 然後看到這個所謂的 相關的被動元圓大廠 其實都表現都還好 所以單純就核實上自己殺到跌停板 連帶到華興科也被拖了下來 那一些比較中小型的 金山墊 日電帽等等 但像什麼九毫這些股價 又能夠拉長停板 所以代表說其實在被動元圓族群 第一個他們都已經跌到很深的位置了 這邊我覺得是不用殺低 但是你要期待他能不能再複製 可能今年這個六七月份的一個榮景 現在看起來也是有難度的 那另外戲劇員族群 我覺得也同樣的一個現象 所以我覺得在整個台股的 電子族群輪動當中 是真的可以看到 就是說能夠單當主流 在創高股票越來越少 那我覺得這一點就要等待 可能所謂"
       }
     ],
-    "max_score": 95,
-    "observations": 1,
     "phonetic_candidates": [
       {
         "code": "8042",
         "name": "金山電",
-        "phonetic_similarity": 1,
         "score": 0.883,
+        "phonetic_similarity": 1.0,
         "text_similarity": 0.667
       },
       {
         "code": "2368",
         "name": "金像電",
-        "phonetic_similarity": 0.75,
         "score": 0.604,
+        "phonetic_similarity": 0.75,
         "text_similarity": 0.333
       },
       {
         "code": "3322",
         "name": "建舜電",
-        "phonetic_similarity": 0.833,
         "score": 0.542,
-        "text_similarity": 0
+        "phonetic_similarity": 0.833,
+        "text_similarity": 0.0
       }
     ],
-    "updated_at": "2026-08-12T18:18:47",
-    "video_ids": [
-      "d86bbd8d-81f8-43eb-ade0-805bcbe02c1d"
-    ],
-    "wrong_keyword": "金山墊"
+    "updated_at": "2026-11-03T00:00:45"
   },
   "長龍航|2618": {
     "confidence": "high",
@@ -12384,5 +12420,180 @@
       }
     ],
     "updated_at": "2026-10-30T21:20:43"
+  },
+  "紅達電|2498": {
+    "wrong_keyword": "紅達電",
+    "correct_code": "2498",
+    "correct_name": "宏達電",
+    "confidence": "high",
+    "max_score": 95,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "3bd53720-74a9-4220-9cf0-16bc94cf8550"
+    ],
+    "evidence": [
+      {
+        "video_id": "3bd53720-74a9-4220-9cf0-16bc94cf8550",
+        "channel": "兆華與股惑仔",
+        "date": "2026-11-02",
+        "title": "EP1213｜半年線掙扎，美期中選舉是短期因素，自由現金流、訂單遞延和債信問題，要跌多少才夠？接近7月低點的股票檢驗！ft.題材獵人 林漢偉",
+        "source": "phonetic-discovery",
+        "score": 95,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1"
+        ],
+        "context": "就撈這個60天的股價 大概有跌到相對低 也就是大概跟7月份的那一次地點 差異不大的 那這邊稍微唸一下給 漢偉哥聽 比較指標的 例如說連電 台達電 金人寶 金寶跟人寶 國巨望紅 志邦 台光電 超風一拳 紅達電 這個紅達電 為什麼要唸呢 因為漢偉哥 對這個是有研究的 漢祥 星雨航空 順達 星日星星星星星星星星的好慘 這個iPhone Duo到底有那麼難用嗎 我有看到好幾隻時機 我覺得很漂亮 有那麼糟嗎 群創 貿念ky 神達 金誠可 康書奇蹟 環球金 這個 維穎 泰金寶 這個就跟金寶差不多 美麗達跟紅泉 這裡面聽完以後 你會對 哪一些產業或領域覺得 躲到這邊有點可憐 我覺得先可以把傳輸排除 可是傳輸"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2498",
+        "name": "宏達電",
+        "score": 0.883,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "2308",
+        "name": "台達電",
+        "score": 0.623,
+        "phonetic_similarity": 0.6,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "2412",
+        "name": "中華電",
+        "score": 0.604,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.333
+      }
+    ],
+    "updated_at": "2026-11-03T00:00:46"
+  },
+  "廢半|5425": {
+    "wrong_keyword": "廢半",
+    "correct_code": "5425",
+    "correct_name": "台半",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "3bd53720-74a9-4220-9cf0-16bc94cf8550"
+    ],
+    "evidence": [
+      {
+        "video_id": "3bd53720-74a9-4220-9cf0-16bc94cf8550",
+        "channel": "兆華與股惑仔",
+        "date": "2026-11-02",
+        "title": "EP1213｜半年線掙扎，美期中選舉是短期因素，自由現金流、訂單遞延和債信問題，要跌多少才夠？接近7月低點的股票檢驗！ft.題材獵人 林漢偉",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "時間過了之後 可能傍晚晚上各自還有其他活動的 就進行的參與年底真的是一個活動很多的日子 那今天呢 本來以為 我本來想說 要疊個千點吧 就是在奮力的殺出來 因為上個禮拜五的時候 美股的夜盤又在暴跌 這個廢半大跌 也反映這個intel還出現了 所謂 他自己個人在 美股史上的最大單日跌幅有到30%之多 但我自己六日在家裡面 我有細細去回憶這些事情 就是到底這件事情 台股要不要跟著 反映那麼多 第一個當然是 如果我們看所謂的這個富台企 確實今天有可能是要跌一千多點的 但是因為今天早上一開始 這個韓股就算是指紋了 然後再加上美股在盤後 他們是有稍微收斂的 所以我們其實今天 有一點算是 沒有那麼慘重 就有",
+        "override_kind": "phonetic",
+        "override_reason": "clear_phonetic_winner",
+        "original_code": "INTC",
+        "original_name": "Intel",
+        "phonetic_top_score": 0.608,
+        "phonetic_lead": 0.237
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "5425",
+        "name": "台半",
+        "score": 0.608,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "1201",
+        "name": "味全",
+        "score": 0.371,
+        "phonetic_similarity": 0.571,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "1203",
+        "name": "味王",
+        "score": 0.371,
+        "phonetic_similarity": 0.571,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-11-03T00:00:59"
+  },
+  "泰金寶|9105": {
+    "wrong_keyword": "泰金寶",
+    "correct_code": "9105",
+    "correct_name": "泰金寶-DR",
+    "confidence": "high",
+    "max_score": 70,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "3bd53720-74a9-4220-9cf0-16bc94cf8550"
+    ],
+    "evidence": [
+      {
+        "video_id": "3bd53720-74a9-4220-9cf0-16bc94cf8550",
+        "channel": "兆華與股惑仔",
+        "date": "2026-11-02",
+        "title": "EP1213｜半年線掙扎，美期中選舉是短期因素，自由現金流、訂單遞延和債信問題，要跌多少才夠？接近7月低點的股票檢驗！ft.題材獵人 林漢偉",
+        "source": "full_video_validator",
+        "score": 70,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "phonetic_top1"
+        ],
+        "context": "漢祥 星雨航空 順達 星日星星星星星星星星的好慘 這個iPhone Duo到底有那麼難用嗎 我有看到好幾隻時機 我覺得很漂亮 有那麼糟嗎 群創 貿念ky 神達 金誠可 康書奇蹟 環球金 這個 維穎 泰金寶 這個就跟金寶差不多 美麗達跟紅泉 這裡面聽完以後 你會對 哪一些產業或領域覺得 躲到這邊有點可憐 我覺得先可以把傳輸排除 可是傳輸最近 是蠻逆勢的嗎 對 那當然比較偏向所謂的防禦跟價值 所以我覺得比較偏向 就是說可能大盤不好啊 電子不好的時候 至今會輪動過去 那大部分產業的部分 可能還是面臨到一些成長性 不太夠的問題 所以我覺得穿山谷可能不是大家 覺得委屈可以馬上進場的一個標的 但如果你是純",
+        "override_kind": "phonetic",
+        "override_reason": "phonetic_top1_needs_review",
+        "original_code": "2312",
+        "original_name": "金寶",
+        "phonetic_top_score": 0.742,
+        "phonetic_lead": 0.07499999999999996,
+        "needs_review": true
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "9105",
+        "name": "泰金寶-DR",
+        "score": 0.742,
+        "phonetic_similarity": 0.818,
+        "text_similarity": 0.6
+      },
+      {
+        "code": "2312",
+        "name": "金寶",
+        "score": 0.667,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "6629",
+        "name": "泰金-KY",
+        "score": 0.608,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-11-03T00:01:19"
   }
 }
