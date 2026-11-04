@@ -1502,7 +1502,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 124,
+    "observations": 125,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1547,7 +1547,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-11-03T22:04:55"
+    "updated_at": "2026-11-04T22:15:58"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -12595,5 +12595,262 @@
       }
     ],
     "updated_at": "2026-11-03T00:01:19"
+  },
+  "環宇KY|4991": {
+    "wrong_keyword": "環宇KY",
+    "correct_code": "4991",
+    "correct_name": "環宇-KY",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "0999aa6e-6642-4f61-ab9b-09bb09cdf702"
+    ],
+    "evidence": [
+      {
+        "video_id": "0999aa6e-6642-4f61-ab9b-09bb09cdf702",
+        "channel": "兆華與股惑仔",
+        "date": "2026-11-04",
+        "title": "EP1215｜放量拉出下影線，能否止跌的評估方式？美期中選舉，參眾兩院都丟了，會影響AI政策嗎？跌到7月低點的指標股！ft.選股教練 陳唯泰",
+        "source": "explicit-ky-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "價卻跌了非常多的 一個好的反轉代表 今天其實這個行情的一個 表現上來講 其實我在12點的時候 我有特別看了一下 今天的一個重處的股票 跌了一半的股票 有全新文貿 華興科 統興 綠盛 雙劍 川湖富士達 環宇KY 環球金 金城 金豪科 聯亞 訊息KY 加幣其雙虹 紅雞資訊 油田 漢達 智茂 這是跌停版的 那當然超過9%的有 台表科 中碳增 金居 系列KY 然後 達航科技 寫喜合金 望戲 聯義光華邦店 順達跟星星店 其實我今天盤中 我有問我的學生說 你們有沒有覺得 今天的沙盤 都在沙一些 比較重要的雞優股 已經沙已這次了 我覺得還好 我覺得今天是比較 降臨說川湖 川湖之前雖然說有跌 可是沒有跌到跌停",
+        "override_kind": "explicit_ky",
+        "override_reason": "official_ky_identity_with_clear_phonetic_core",
+        "original_code": "4991",
+        "original_name": "環宇-KY",
+        "phonetic_top_score": 1.0,
+        "phonetic_lead": 0.6
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "4991",
+        "name": "環宇-KY",
+        "score": 1.0,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 1.0
+      },
+      {
+        "code": "1338",
+        "name": "廣華-KY",
+        "score": 0.565,
+        "phonetic_similarity": 0.6,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "5543",
+        "name": "桓鼎-KY",
+        "score": 0.565,
+        "phonetic_similarity": 0.6,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-11-04T22:40:14"
+  },
+  "雙劍|4764": {
+    "wrong_keyword": "雙劍",
+    "correct_code": "4764",
+    "correct_name": "雙鍵",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 2,
+    "distinct_videos": 1,
+    "video_ids": [
+      "0999aa6e-6642-4f61-ab9b-09bb09cdf702"
+    ],
+    "evidence": [
+      {
+        "video_id": "0999aa6e-6642-4f61-ab9b-09bb09cdf702",
+        "channel": "兆華與股惑仔",
+        "date": "2026-11-04",
+        "title": "EP1215｜放量拉出下影線，能否止跌的評估方式？美期中選舉，參眾兩院都丟了，會影響AI政策嗎？跌到7月低點的指標股！ft.選股教練 陳唯泰",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "明顯的往下掉 而股價卻跌了非常多的 一個好的反轉代表 今天其實這個行情的一個 表現上來講 其實我在12點的時候 我有特別看了一下 今天的一個重處的股票 跌了一半的股票 有全新文貿 華興科 統興 綠盛 雙劍 川湖富士達 環宇KY 環球金 金城 金豪科 聯亞 訊息KY 加幣其雙虹 紅雞資訊 油田 漢達 智茂 這是跌停版的 那當然超過9%的有 台表科 中碳增 金居 系列KY 然後 達航科技 寫喜合金 望戲 聯義光華邦店 順達跟星星店 其實我今天盤中 我有問我的學生說 你們有沒有覺得 今天的沙盤 都在沙一些 比較重要的雞優股 已經沙已這次了 我覺得還好 我覺得今天是比較 降臨說川湖 川湖之前雖然說有跌"
+      },
+      {
+        "video_id": "0999aa6e-6642-4f61-ab9b-09bb09cdf702",
+        "channel": "兆華與股惑仔",
+        "date": "2026-11-04",
+        "title": "EP1215｜放量拉出下影線，能否止跌的評估方式？美期中選舉，參眾兩院都丟了，會影響AI政策嗎？跌到7月低點的指標股！ft.選股教練 陳唯泰",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "明顯的往下掉 而股價卻跌了非常多的 一個好的反轉代表 今天其實這個行情的一個 表現上來講 其實我在12點的時候 我有特別看了一下 今天的一個重處的股票 跌了一半的股票 有全新文貿 華興科 統興 綠盛 雙劍 川湖富士達 環宇KY 環球金 金城 金豪科 聯亞 訊息KY 加幣其雙虹 紅雞資訊 油田 漢達 智茂 這是跌停版的 那當然超過9%的有 台表科 中碳增 金居 系列KY 然後 達航科技 寫喜合金 望戲 聯義光華邦店 順達跟星星店 其實我今天盤中 我有問我的學生說 你們有沒有覺得 今天的沙盤 都在沙一些 比較重要的雞優股 已經沙已這次了 我覺得還好 我覺得今天是比較 降臨說川湖 川湖之前雖然說有跌"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "4764",
+        "name": "雙鍵",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "5516",
+        "name": "雙喜",
+        "score": 0.63,
+        "phonetic_similarity": 0.7,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "6506",
+        "name": "雙邦",
+        "score": 0.63,
+        "phonetic_similarity": 0.7,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-11-04T22:40:40"
+  },
+  "紅雞資訊|6811": {
+    "wrong_keyword": "紅雞資訊",
+    "correct_code": "6811",
+    "correct_name": "宏碁資訊",
+    "confidence": "medium",
+    "max_score": 67,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "0999aa6e-6642-4f61-ab9b-09bb09cdf702"
+    ],
+    "evidence": [
+      {
+        "video_id": "0999aa6e-6642-4f61-ab9b-09bb09cdf702",
+        "channel": "兆華與股惑仔",
+        "date": "2026-11-04",
+        "title": "EP1215｜放量拉出下影線，能否止跌的評估方式？美期中選舉，參眾兩院都丟了，會影響AI政策嗎？跌到7月低點的指標股！ft.選股教練 陳唯泰",
+        "source": "full_video_validator",
+        "score": 67,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "phonetic_top1",
+          "stock_context",
+          "strong_sector_mismatch"
+        ],
+        "context": "表現上來講 其實我在12點的時候 我有特別看了一下 今天的一個重處的股票 跌了一半的股票 有全新文貿 華興科 統興 綠盛 雙劍 川湖富士達 環宇KY 環球金 金城 金豪科 聯亞 訊息KY 加幣其雙虹 紅雞資訊 油田 漢達 智茂 這是跌停版的 那當然超過9%的有 台表科 中碳增 金居 系列KY 然後 達航科技 寫喜合金 望戲 聯義光華邦店 順達跟星星店 其實我今天盤中 我有問我的學生說 你們有沒有覺得 今天的沙盤 都在沙一些 比較重要的雞優股 已經沙已這次了 我覺得還好 我覺得今天是比較 降臨說川湖 川湖之前雖然說有跌 可是沒有跌到跌停版 然後星星店 他們其實之前有 跌可是也沒有說出現 這麼這麼",
+        "override_kind": "phonetic",
+        "override_reason": "phonetic_top1_needs_review",
+        "original_code": "6690",
+        "original_name": "安碁資訊",
+        "phonetic_top_score": 0.766,
+        "phonetic_lead": 0.049000000000000044,
+        "needs_review": true
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "6811",
+        "name": "宏碁資訊",
+        "score": 0.766,
+        "phonetic_similarity": 0.909,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "6697",
+        "name": "東捷資訊",
+        "score": 0.717,
+        "phonetic_similarity": 0.833,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "6898",
+        "name": "程曦資訊",
+        "score": 0.663,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-11-04T22:40:44"
+  },
+  "系列KY|6415": {
+    "wrong_keyword": "系列KY",
+    "correct_code": "6415",
+    "correct_name": "矽力*-KY",
+    "confidence": "high",
+    "max_score": 85,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "0999aa6e-6642-4f61-ab9b-09bb09cdf702"
+    ],
+    "evidence": [
+      {
+        "video_id": "0999aa6e-6642-4f61-ab9b-09bb09cdf702",
+        "channel": "兆華與股惑仔",
+        "date": "2026-11-04",
+        "title": "EP1215｜放量拉出下影線，能否止跌的評估方式？美期中選舉，參眾兩院都丟了，會影響AI政策嗎？跌到7月低點的指標股！ft.選股教練 陳唯泰",
+        "source": "full_video_validator",
+        "score": 85,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "股票 有全新文貿 華興科 統興 綠盛 雙劍 川湖富士達 環宇KY 環球金 金城 金豪科 聯亞 訊息KY 加幣其雙虹 紅雞資訊 油田 漢達 智茂 這是跌停版的 那當然超過9%的有 台表科 中碳增 金居 系列KY 然後 達航科技 寫喜合金 望戲 聯義光華邦店 順達跟星星店 其實我今天盤中 我有問我的學生說 你們有沒有覺得 今天的沙盤 都在沙一些 比較重要的雞優股 已經沙已這次了 我覺得還好 我覺得今天是比較 降臨說川湖 川湖之前雖然說有跌 可是沒有跌到跌停版 然後星星店 他們其實之前有 跌可是也沒有說出現 這麼這麼弱勢的一個表現 也是 對 所以其實我覺得 今天有一點點就是 最 就是說我不能夠說 最",
+        "override_kind": "phonetic",
+        "override_reason": "phonetic_top1_needs_review",
+        "original_code": "PSKY",
+        "original_name": "Paramount Skydance Corporation",
+        "phonetic_top_score": 0.732,
+        "phonetic_lead": 0.09299999999999997,
+        "needs_review": true
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "6415",
+        "name": "矽力*-KY",
+        "score": 0.732,
+        "phonetic_similarity": 0.857,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "6962",
+        "name": "奕力-KY",
+        "score": 0.639,
+        "phonetic_similarity": 0.714,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "1341",
+        "name": "富林-KY",
+        "score": 0.546,
+        "phonetic_similarity": 0.571,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-11-04T22:40:44"
   }
 }
