@@ -1502,7 +1502,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 125,
+    "observations": 126,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1547,7 +1547,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-11-04T22:15:58"
+    "updated_at": "2026-11-05T22:24:17"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -12852,5 +12852,66 @@
       }
     ],
     "updated_at": "2026-11-04T22:40:44"
+  },
+  "博童|6997": {
+    "wrong_keyword": "博童",
+    "correct_code": "6997",
+    "correct_name": "博弘",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "ee1a310a-4dc0-4c84-8ae5-67cceafce51e"
+    ],
+    "evidence": [
+      {
+        "video_id": "ee1a310a-4dc0-4c84-8ae5-67cceafce51e",
+        "channel": "財女珍妮",
+        "date": "2026-11-05",
+        "title": "2026/11/05(四)  AI建設可能放緩，費半大跌，美股在漲什麼？",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "會被下修 所以我覺得昨天半導體 其實在疊這個 但是你說它是不是真的造成 基本面的繁裝 我覺得沒有 而且如果大家去看一下 半導體現在有一些公司 它的一個估值的話 其實我覺得它的估值 像是Avida 像是博童 都已經到了20倍以下了 我覺得這個就是時間的問題而已 那我昨天也有看到有聽眾 在我的YouTube下面的影片留言 就說那像美光啊 或者是一些存儲啊 他們現在的本益比 其實也是超級低嘛 那為什麼這一類的公司 它的跌幅就那麼慘了 其實大家要知道 如果今天是像Avida 博童這一類 他們是屬於IC設計嘛 屬於這種 青資產的公司 而且他們的產品呢 其實比較不是那種標準化的 通常我們在看 股票的時候 ",
+        "override_kind": "phonetic",
+        "override_reason": "clear_phonetic_winner",
+        "original_code": "AVGO",
+        "original_name": "Broadcom",
+        "phonetic_top_score": 0.717,
+        "phonetic_lead": 0.25299999999999995
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "6997",
+        "name": "博弘",
+        "score": 0.717,
+        "phonetic_similarity": 0.833,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "1906",
+        "name": "寶隆",
+        "score": 0.464,
+        "phonetic_similarity": 0.714,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "2397",
+        "name": "友通",
+        "score": 0.464,
+        "phonetic_similarity": 0.714,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-11-05T22:46:41"
   }
 }
