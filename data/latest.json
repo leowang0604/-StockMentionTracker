@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-06T22:02:53",
+  "updated_at": "2026-11-07T20:54:09",
   "stocks_ranking": [
     {
       "code": "8299",
@@ -8982,6 +8982,18 @@
       "sector": "其他",
       "contexts": [
         {
+          "video": "EP712 | 🦌",
+          "channel": "股癌",
+          "date": "2026-11-07",
+          "text": "那只是為什麼後來 他們會變成這樣 可能就是 人類的一種宿命 那我們有在離別人娘 然後年輕人就會說 幹你這些老人家趕快去實習室 那下面有位 Max 安安夢宮 可以藉由您的Podcast來拋磚引玉嗎 想問台南有沒有處理 筆過敏很厲害的 早上起來 鼻子塞要快掛了 那有去診所看 筆中格彎曲加下筆假處理 要13萬 對經濟上的負擔有點大 那想看聽眾有沒有其他 更好的處理方式 謝謝 祝大家被民主黨這波 搞過之後 機效可以依然重返巔峰 那說實在 這個是我們好像第二次 被民主黨轟到 就是這個節目以來 那上一次轟完之後 後來很快又再行高了 但希望這一次也可以這樣子 那再講說這個鼻子 之前跟大家分享 就是我去台中看一個",
+          "matched_keyword": "台南",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
           "video": "EP711 | 🕊️🐦🦚🦜🦉🦅🐦🐧",
           "channel": "股癌",
           "date": "2026-11-04",
@@ -9329,23 +9341,18 @@
           "sentiment_score": 1.0,
           "video_url": "",
           "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP662 | ⛑️",
-          "channel": "股癌",
-          "date": "2026-05-16",
-          "text": "00之類的 然後後車廂打開來 裡面會有一些 什麼花束跟氣球飛起 還有一些綁帶 那即便可能 像之前有一個求婚到一半 就警察經過 然後臨檢他發現說 剛才裡面有KM 但至少8加9 在驚喜的準備上 這個是很多台南都跟不上的 就台南最會準備驚喜的 那一群人應該就是8加9 那其他呢 我覺得 因為就是說你的時間 花在哪 你的成就在哪 那時間也是有限的 都在忙著賺錢 都在忙著工作 都在忙著打手遊 他可能就沒有空 去搞一些有的沒有的事情 那所以就 他是一個取捨 那我覺得 當然這不是一個 幫自己開脫的好事 我還是會鼓勵 就是各位男生 要給老婆驚喜 像我跟大家分享我的求婚 我就說 我做得很爛 希望大家不要跟我一樣爛 是",
-          "matched_keyword": "台南",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
         }
       ],
       "total_mentions": 31,
       "sentiment_score": 0.581,
       "daily": {
+        "2026-11-07": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
         "2026-11-04": {
           "mentions": 1,
           "bullish": 0,
@@ -9494,11 +9501,11 @@
           "sentiment_score": 0.5
         },
         "2026-05-16": {
-          "mentions": 2,
+          "mentions": 1,
           "bullish": 1,
           "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.75
+          "neutral": 0,
+          "sentiment_score": 1.0
         }
       }
     },
@@ -14168,6 +14175,18 @@
       "sector": "ETF・台股指數",
       "contexts": [
         {
+          "video": "EP712 | 🦌",
+          "channel": "股癌",
+          "date": "2026-11-07",
+          "text": "附下去 所以也當成是一個 用戶的心得給你分享 那下面一位 Ethan 艾大丹大 現在就算中87顆黃金格 還來得及嗎 那最近第二段七八糟 不過還好我在9月就滿滿的 慢慢的把 他寫滿滿的 滿滿的把部位換成0050 那讓我在絕境中 沒有那麼慌張 不過痛苦還是會有 我們公司最佳大力導入AI 我是樂觀其成的 但想到公司一堆不做事 礙於現狀的老人在那邊抱怨 就覺得很煩 希望公司通通把他們都優化走 最後出來大家一家人 身體健健康康聽眾績效的大報社 那這個我必須得說 在我自己度過了 差不多32、33歲的生日之後 我優感的感受到 其實我們現在就是年輕人 想要太除掉的一些對象 就是不要把話說太快 以前小時候說 乾那一堆他",
+          "matched_keyword": "0050",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
           "video": "EP1217｜擋AI發展爆恐慌，3737史上最大跌點！台指期和台積電跌停、直接到年線，金管會、國安說話了，企業自救會開始？ft.操盤手 黃豐凱",
           "channel": "兆華與股惑仔",
           "date": "2026-11-06",
@@ -14514,23 +14533,18 @@
           "sentiment_score": 0.5,
           "video_url": "",
           "extraction_mode": "gemini"
-        },
-        {
-          "video": "EP348 長期投資的自然配置",
-          "channel": "投資癮",
-          "date": "2026-09-27",
-          "text": "立即性的危險 但是總是會去想說 對未來做了一點點的準備 現在大家看一些指數型的基金 到現在價格一直創新高 大家可能會誤以為 過去一直以來 指數型基金都是一個 好的投資方式 但其實在2003年 剛發行的0050的時候 他其實在掛牌五年多後 還笑低點的時候 價格還在發行價格附近 你很難想像現在 創新高的005000620吧 而那五年的時間 市場很多標股 所以當時投入 指數型基金的人 可能會被當作傻瓜來看 而現在回頭看看 當然是一個很好的報首率 但是在當時的市場裡面 是沒有人看好的 而如果說一個 長期投資的投資人來說 當時投入到現在 他拿了一個很好的報首 而如果重新一個角度 現在才開始做一個 長期投資配置的",
-          "matched_keyword": "0050",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "gemini"
         }
       ],
       "total_mentions": 30,
       "sentiment_score": 0.497,
       "daily": {
+        "2026-11-07": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
         "2026-11-06": {
           "mentions": 1,
           "bullish": 0,
@@ -14623,13 +14637,6 @@
           "sentiment_score": 0.5
         },
         "2026-09-30": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-09-27": {
           "mentions": 1,
           "bullish": 0,
           "bearish": 0,
@@ -16885,6 +16892,18 @@
       "sector": "晶圓代工",
       "contexts": [
         {
+          "video": "EP712 | 🦌",
+          "channel": "股癌",
+          "date": "2026-11-07",
+          "text": "今天去砍一些 那種小料件或啥小的 其實我去砍你的料 老實講你不能對我怎麼樣 我們合約沒有簽說什麼 你會有什麼賠償條款 或是你要付很多的當賠償 就算有那可能數字也不高 那但如果你今天要去砍 覺得說你要砍TSM訂單的話 那個代價就會是蠻大的 首先就是 有可能你一些付出去的錢 你拿不回來 再來就是等到下次你有需要的時候 人家就不會放location給你 他就是不會讓你有辦法可以下單 那可是一些比較旁邊的 那種什麼類似機構件 或是一些那種工業什麼沖壓鍵 這些東西 他被砍單的代價 可能是相對低一些的 所以我是不知道說馬斯克根據什麼 可是人家世界首富 所以他的消息來源 是比大家強大非常多 終於觀察一下這件事情",
+          "matched_keyword": "TSM",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
           "video": "EP1217｜擋AI發展爆恐慌，3737史上最大跌點！台指期和台積電跌停、直接到年線，金管會、國安說話了，企業自救會開始？ft.操盤手 黃豐凱",
           "channel": "兆華與股惑仔",
           "date": "2026-11-06",
@@ -17231,23 +17250,18 @@
           "sentiment_score": 0.5,
           "video_url": "",
           "extraction_mode": "gemini"
-        },
-        {
-          "video": "EP710 | 🍒",
-          "channel": "股癌",
-          "date": "2026-10-31",
-          "text": "是L 結果還是超級小 根本穿不下 所以後面是買了2XL之後 才有辦法把它套上去 然後再搭配一個夾法 那本來在前一天的時候 還是你知道就是一遊黑遊 大家都蠻高興的 然後在當天 其實心情巨差 因為禮拜五的台股就已經在崩了 那在禮拜五晚上更是崩到爛掉 所以禮拜一還要再面對一次 但總之就是 因為我本來這一次的規劃這樣 就像是禮拜三那集節目講的 我覺得啦 因為已經出了一個反彈了 那這個反彈其實已經等很久 你知道我心中想的 是像那個Mel Gibson 大家有沒有看過那個什麼 美爾吉波訊 有演一部就要不要去反抗 統治的 忘記整個劇情大概長什麼樣子 反正總之就是有一個迷因是 Hold 他就叫大家先忍住 先控調控",
-          "matched_keyword": "台股",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "gemini"
         }
       ],
       "total_mentions": 30,
       "sentiment_score": 0.54,
       "daily": {
+        "2026-11-07": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
         "2026-11-06": {
           "mentions": 8,
           "bullish": 0,
@@ -17288,13 +17302,6 @@
           "bullish": 0,
           "bearish": 0,
           "neutral": 4,
-          "sentiment_score": 0.5
-        },
-        "2026-10-31": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
           "sentiment_score": 0.5
         }
       }
@@ -33263,6 +33270,30 @@
       "sector": "串流媒體",
       "contexts": [
         {
+          "video": "EP712 | 🦌",
+          "channel": "股癌",
+          "date": "2026-11-07",
+          "text": "母女均安 但一時泛覽 導致後面產檢不勝照到它的機機 但看到您也是兩個代把的 我也釋懷了 小弟每次的產檢都有參與 看著自己的兒子慢慢長大 真的是難以形容的喜悅 也好想多聽聽您分享育兒姬 二不知道您怎麼看Netflix這一檔股票 最後希望您可以送給 吉央在13號出生的木杰 以及他今天生日的媽媽 那四個字生日快樂 也期待您加入三角洲的夢宮行列 這是什麼東西 這是你們玩某個遊戲 又在裡面亂開工會 我發現很多人打遊戲 喜歡拿我的名字進去裡面 他媽媽瞎嗶嗶亂娶 然後亂嗆人 拜託收斂一點好不好 再講說兒子 確實我以前是曾經講過說 因為是兒子 有一點失望的心情 那時候是被我老婆幹爆 但是我到現在 我畢竟說我並不是在那邊 想",
+          "matched_keyword": "Netflix",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
+          "video": "EP712 | 🦌",
+          "channel": "股癌",
+          "date": "2026-11-07",
+          "text": "心的 那我自己身邊的捏軟仔 有了兒子之後 我感覺他們也蠻開心的 雖然時不時會抱怨一下說 媽的有夠皮啊 什麼跟姐姐或是跟妹妹比差很多 當然大家也都蠻喜歡兒子的 所以抽到兒子也是很快樂的 那再來怎麼樣看 Netflix這一檔股票 我已經很久沒有追 幾年前的節目有 那時候就是一直在等他噴 然後最後面受不了我就下車 因為他每次往飛往地上飛 那最終是有飛上去 但是我就沒有賺到那一段 那你說現在怎麼樣看 我還是蠻喜歡他 因為至少我家裡Netflix定了 我從來都沒有想要去消塌 那有時候都還是可以上去看一些 有趣的東西 雖然我不會每天看 但我覺得這筆訂閱費 我會持續的附下去 所以也當成是一個 用戶的心得給你分享 那下面一",
+          "matched_keyword": "Netflix",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
           "video": "2026/10/22(四)  AI巨頭財報夠好嗎？ #TSLA #META #LRCX #TXN #IBM",
           "channel": "財女珍妮",
           "date": "2026-10-22",
@@ -33597,35 +33628,18 @@
           "sentiment_score": 0.5,
           "video_url": "",
           "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP665 | 🌸",
-          "channel": "股癌",
-          "date": "2026-05-27",
-          "text": "腦中閃過的第一個字 感謝啦 力量的力吧 雖然這個可能發了名字 連乖乖哥哥 現在突然間就想要力量的力 那在講說 是自己取的還是算命的 都自己取的 諾亞就是因為那時候看 有一個德國影集叫做Dark 然後在Netflix上面 非常好看 然後裡面的一個 異爭異奇的角色 就叫做Noir 所以就決定要叫做諾亞 然後很多人都以為說 你們是不是在信教 沒有沒有沒有 沒有在信教 就是單純 那時候看這個影集 覺得Noir這個角色 非常的帥 所以就叫Noir 那終於就叫諾亞 想說就只有一個名字 比較簡單 那另外一個孩子的話 是因為我們很喜歡 Kylian Murphy 就是一個演員 真的很帥 就是奧本海默那個主角 那從以前就很喜",
-          "matched_keyword": "Netflix",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP1092｜美伊和平利多用掉了，下一個刺激市場的會是降息？投信一定要買，低位階、有權值的被動元件、老AI、電源來了！ft.股科大夫 容逸燊",
-          "channel": "兆華與股惑仔",
-          "date": "2026-05-07",
-          "text": "了 那這個狀況下 去搶這種跌升反彈 而且是已經反彈上來的記憶體 就會稍微比較辛苦些些 因為畢竟整個族群 都還是連動了 像我們節目的觀眾朋友 聽眾朋友都非常的專業 你會分得清楚  DDR4  DDR5 Netflix 模組的 哪一些是做哪一個區塊的 但是很多的朋友說實在 他搞不清楚記憶體 到底什麼是做什麼 他可能看到記憶體就買了 他也不知道說 這公司到底是做哪個區塊的 細項什麼 所以目前如果要切入記憶體的話 建議還是往 跟 AI 未來會有相關的 像是 8299 群聯 未來在做 AI 的硬碟 如果採用 SSD 的時候 確實是會使用到 在他的 Netflix 另外像是 4967 10 拳 也是股價創高了 也是未來",
-          "matched_keyword": "Netflix",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
         }
       ],
       "total_mentions": 30,
-      "sentiment_score": 0.443,
+      "sentiment_score": 0.427,
       "daily": {
+        "2026-11-07": {
+          "mentions": 2,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 2,
+          "sentiment_score": 0.5
+        },
         "2026-10-22": {
           "mentions": 1,
           "bullish": 0,
@@ -33744,20 +33758,6 @@
           "bearish": 0,
           "neutral": 1,
           "sentiment_score": 0.5
-        },
-        "2026-05-27": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-05-07": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 1.0
         }
       }
     },
@@ -44449,7 +44449,7 @@
       "code": "TECH",
       "name": "Bio-Techne",
       "market": "US",
-      "sector": "醫療",
+      "sector": "生技製藥",
       "contexts": [
         {
           "video": "EP653 | 🕊️",
@@ -69448,6 +69448,166 @@
       }
     },
     {
+      "code": "DIS",
+      "name": "Disney",
+      "market": "US",
+      "sector": "串流媒體",
+      "contexts": [
+        {
+          "video": "EP649 | 💌",
+          "channel": "股癌",
+          "date": "2026-04-01",
+          "text": "還是來個寶可夢公仔 比較便宜實在小孩也 沒錯 這位兄弟講的東西 就是我們送位家長 很多時候會 他也不能夠說是一個問題 但最後面你會意識到說 這個是我異鄉情願 就是你會覺得說 小朋友一定要什麼 之前跟大家分享過 就是你可能帶下去一個 不知道 就是很貴的遊樂設施之類的 可是你特地重金 帶他飛去日本 什麼Disney Land 然後他給你 整趟都在哭 隨便舉例 反而是你可能在機場 後機的時候 旁邊有一個小玩具店 然後小朋友在那邊玩得超開心 所以你就會發現說 就是小朋友要的東西 真的很簡單 不像網路幹文說 女人要的很簡單 沒有 女人要的東西蠻難的 那小朋友要的東西 真的很簡單 這個是真的很簡單 所以一些那種 就是",
+          "matched_keyword": "DIS",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": null
+        },
+        {
+          "video": "EP645 | 🎱",
+          "channel": "股癌",
+          "date": "2026-03-18",
+          "text": "愛你 這位妹妹的意思 就是說 是不是越摳的人 才可以當有錢人 不是 不一定 因為像我自己也是有 訂艾爾達 艾爾達好像是一次付三年 我其實也是沒有什麼在看 像WBC 就是人家跟我講說 這場很好看 那我就把它打開來看一下 所以就是放在那邊 我會對訂閱 像絕來說 最近也很少在看 Prime Video或是Disney 就比較少看 可是我都會放著 那這跟有錢與否 我覺得也沒有什麼關係 就是你知道 每個人的注意力 都是有限的 下的娛樂態度 有限可能就不想要在這個地方花錢 那當然絕對不要去看 盜版的東西 我還是覺得說 要盡量支持正版 其實以前我們小時候 都是看一堆盜版的東西 沒有辦法 因為那時候真的是像 那個什麼 是",
+          "matched_keyword": "Disney",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": ""
+        },
+        {
+          "video": "EP657 | 🐫",
+          "channel": "股癌",
+          "date": "2026-04-29",
+          "text": "主動型ETF 那不知道大家有什麼印象 這個一兩年前是高股息ETF 那時候真的就是無腦買高股息ETF 就會噴 然後成份股也都會噴 那再往前的話 不知道大家還記不記得 ARKK 那我講這個 當然不是要去 DIS腰磁金木 因為腰磁金木的選股 我自己都非常喜歡 那個像是我自己會喜歡的選股 那只能夠說就是 反正很多時候 就是江山帶有才人出來 我們當然喜歡說腰磁金木 可以忘個十年 然後擊敗巴菲特的這個賭約之類的 那當然實際上 按照過往的經驗 就是你要長期的贏大盤 真的是一個很不容易的事情 那你說要不要 我們就自己 跑去買這個大盤或是台積電車 為什麼要買這個東西 那你是這樣子覺得 你就可以這樣子做 那你如果覺得說",
+          "matched_keyword": "DIS",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "2026/05/07(四) 財報好不漲，到底為什麼？#ETN #ANET #ARM #COHR",
+          "channel": "財女珍妮",
+          "date": "2026-05-07",
+          "text": "確保 我未來的產能不會缺 在產能不會缺的情況之下 你才有可能可以掌握定價權 你才有可能可以讓你的營收持續的增長嘛 所以這個是昨天灰打 他一個很重要的 這個利多的消息 好 那還有一個事情 大家有發現昨天迪士尼長了8%嗎 他是昨天盤錢的財報喔 然後財報出來之後其實股價就漲 那昨天也是漲了8%左右 那也不知道大家有沒有去看這個 穿著Prada的惡魔 因為他已經是20年前的片了嘛 我跟你講 電影院裡面超多人 就是我假日的時候跟我朋友去看 然後超多人都要去看這部片 然後我覺得這一次呢 其實除了就是 當然我們大家都是在回歸20年前 這個安海社會啊 或者是美人島 就是他們幾個主角 他們在這個戲裡面 或者是在這個非",
+          "matched_keyword": "迪士尼",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "2026/05/07(四) 財報好不漲，到底為什麼？#ETN #ANET #ARM #COHR",
+          "channel": "財女珍妮",
+          "date": "2026-05-07",
+          "text": "ssning的這個 新片 我忘記他的電影名稱是什麼 內部片也很好看 然後我直接就是在電影院裡面落淚 因為我覺得很感人 好 所以就是跟大家分享一下 近期呢 我覺得有蠻多好的電影 然後大家可以進去看 然後迪士尼也是 有提到這個 Tranquil Parada的惡魔嘛 然後也有提到他們 整體的一個營運狀況呢 其實有改善 所以就積極的股價上漲 但是沒有人care 好不好 迪士尼不是AI股 所以不要理他對不對 我們接下來呢 就是繼續講 我們要講的東西 好 因為今天很多財報 我本來是想要講這個 SpaceX跟 Enthorbita的一個合作 因為他就是提供他 所有的算力嘛 但是 因為我覺得時間應該是美湖 所以我",
+          "matched_keyword": "迪士尼",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP666 | 🍐",
+          "channel": "股癌",
+          "date": "2026-05-30",
+          "text": "點是 就是你現在已經看到表態 那你敢不敢再跟著 再拘逐推 就類似說 你看到老AI表態 你要不要再拘逐推 那我就講我的意見 就是我覺得這些東西 其實都是好的 我們本來就不會在它 可能攀著的時候 我就去亂DIS他或什麼的 那只是 就是你還是會有一個輕重緩急 就類似說 一樣是被動員間 你會選擇去壓 你覺得它可能是 在後面會更缺的東西 拉長看 最終都是會回到基本面 那哪個東西 可能是在後面漲價 會漲最多的 可能是毛利藥身 會是最高的 或是最缺乏的 或是房間裡面的大象 就是大家可能隱約知道 有一個東西在那 可是真的還沒有注意到 那可能就會是大家想要去 專注的一個重點 所以下的盤面 我個人認為 反正就是一個 非",
+          "matched_keyword": "DIS",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP712 | 🦌",
+          "channel": "股癌",
+          "date": "2026-11-07",
+          "text": "什麼事情之後 我就跑去黃居跑步 那邊跑也沒有在想市場的事情 反而是在想說 我要怎麼樣在月底可以完成辦 所以我覺得有一些 那種心底的企圖是還蠻重要的 那順利的跑完回來之後 我們那一天剛好就是 安排了要去迪士尼 所以我在路上稍微的下單之後 我們就在迪士尼樂園裡面 我連看盤的時間都沒有 就是我連開心 難過 或是有各種情緒的機會都沒有 開心怎麼樣 就是因為畢竟就是開盤買蝶田 就是直接就賺到一些 那只是後來老實講有點害怕 所以有些東西就直接把它當沖掉 因為我已經覺得我前面買太早 就已經出事了 所以我不應該再太躁進 所以就把一些部位 那種超低的當沖掉 因為一開始你就知道他是恐慌的 可是就還是覺得怪怪 雖然後來盤",
+          "matched_keyword": "迪士尼",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP712 | 🦌",
+          "channel": "股癌",
+          "date": "2026-11-07",
+          "text": "是又感覺不對 又因為什麼事件 我又調一調去 雖然我們講說這個隨機應變的一種 可是當這樣的變化太多的時候 也就是說雜訊太多 或者是波動太大的時候 最好還是要稍微的緩下來 我就覺得說 還有我們剛好那一天是迪士尼的行程 那我們在樂園裡面 是玩得非常開心 就是帶小兒子一起看遊行 還是一樣覺得 迪士尼真的是一個非常美好的地方 然後同時就一直看到朋友在那邊傳訊息 就每個都在哀 每個都在叫 然後有些朋友就會說 那個錶頂就算大家都有 不好意思 因為我可能有點卡住 要把東西砍出來 就大家已經在那邊寫一條 說沒關係 你就丟 你需要就丟 所以我自己真的蠻信心的 然後就是因為在過去 我們也經歷過幾次 像這樣子的絕地大屠殺",
+          "matched_keyword": "迪士尼",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP712 | 🦌",
+          "channel": "股癌",
+          "date": "2026-11-07",
+          "text": "樣子的絕地大屠殺 這一次應該是我在 過往的大屠殺裡面 算是處理的 相對有餘裕的 就是雖然我們一定是 我們很多部位都還是會在場上 給他幹之類的 可是心情上沒有受到很大的影響 就至少我還是有辦法 跟孩子在迪士尼裡面玩 然後一起搭乘一些設施 看遊行 走來走去 我覺得我又更加進步了 我可能要再進化成為一個 不一樣的人 所以我後來也可以理解 就是我們的節目講到後來 就大家可能覺得 這個人發生很多改變 然後我現在會講說 他早期的節目 可能對大家比較有幫助 沒有 我覺得那是因為 我階段不一樣 就是我認為 我是走到一個更好的方向 所以理論上 我會覺得我現在講的東西 絕對比早期的東西更加的 不敢說有智慧 可是一定是早",
+          "matched_keyword": "迪士尼",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        }
+      ],
+      "total_mentions": 9,
+      "sentiment_score": 0.667,
+      "daily": {
+        "2026-04-01": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-03-18": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-04-29": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-05-07": {
+          "mentions": 2,
+          "bullish": 2,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        },
+        "2026-05-30": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-11-07": {
+          "mentions": 3,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 2,
+          "sentiment_score": 0.667
+        }
+      }
+    },
+    {
       "code": "2640",
       "name": "大車隊",
       "market": "TW",
@@ -76486,123 +76646,6 @@
       }
     },
     {
-      "code": "DIS",
-      "name": "Disney",
-      "market": "US",
-      "sector": "串流媒體",
-      "contexts": [
-        {
-          "video": "EP649 | 💌",
-          "channel": "股癌",
-          "date": "2026-04-01",
-          "text": "還是來個寶可夢公仔 比較便宜實在小孩也 沒錯 這位兄弟講的東西 就是我們送位家長 很多時候會 他也不能夠說是一個問題 但最後面你會意識到說 這個是我異鄉情願 就是你會覺得說 小朋友一定要什麼 之前跟大家分享過 就是你可能帶下去一個 不知道 就是很貴的遊樂設施之類的 可是你特地重金 帶他飛去日本 什麼Disney Land 然後他給你 整趟都在哭 隨便舉例 反而是你可能在機場 後機的時候 旁邊有一個小玩具店 然後小朋友在那邊玩得超開心 所以你就會發現說 就是小朋友要的東西 真的很簡單 不像網路幹文說 女人要的很簡單 沒有 女人要的東西蠻難的 那小朋友要的東西 真的很簡單 這個是真的很簡單 所以一些那種 就是",
-          "matched_keyword": "DIS",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": null
-        },
-        {
-          "video": "EP645 | 🎱",
-          "channel": "股癌",
-          "date": "2026-03-18",
-          "text": "愛你 這位妹妹的意思 就是說 是不是越摳的人 才可以當有錢人 不是 不一定 因為像我自己也是有 訂艾爾達 艾爾達好像是一次付三年 我其實也是沒有什麼在看 像WBC 就是人家跟我講說 這場很好看 那我就把它打開來看一下 所以就是放在那邊 我會對訂閱 像絕來說 最近也很少在看 Prime Video或是Disney 就比較少看 可是我都會放著 那這跟有錢與否 我覺得也沒有什麼關係 就是你知道 每個人的注意力 都是有限的 下的娛樂態度 有限可能就不想要在這個地方花錢 那當然絕對不要去看 盜版的東西 我還是覺得說 要盡量支持正版 其實以前我們小時候 都是看一堆盜版的東西 沒有辦法 因為那時候真的是像 那個什麼 是",
-          "matched_keyword": "Disney",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": ""
-        },
-        {
-          "video": "EP657 | 🐫",
-          "channel": "股癌",
-          "date": "2026-04-29",
-          "text": "主動型ETF 那不知道大家有什麼印象 這個一兩年前是高股息ETF 那時候真的就是無腦買高股息ETF 就會噴 然後成份股也都會噴 那再往前的話 不知道大家還記不記得 ARKK 那我講這個 當然不是要去 DIS腰磁金木 因為腰磁金木的選股 我自己都非常喜歡 那個像是我自己會喜歡的選股 那只能夠說就是 反正很多時候 就是江山帶有才人出來 我們當然喜歡說腰磁金木 可以忘個十年 然後擊敗巴菲特的這個賭約之類的 那當然實際上 按照過往的經驗 就是你要長期的贏大盤 真的是一個很不容易的事情 那你說要不要 我們就自己 跑去買這個大盤或是台積電車 為什麼要買這個東西 那你是這樣子覺得 你就可以這樣子做 那你如果覺得說",
-          "matched_keyword": "DIS",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "2026/05/07(四) 財報好不漲，到底為什麼？#ETN #ANET #ARM #COHR",
-          "channel": "財女珍妮",
-          "date": "2026-05-07",
-          "text": "確保 我未來的產能不會缺 在產能不會缺的情況之下 你才有可能可以掌握定價權 你才有可能可以讓你的營收持續的增長嘛 所以這個是昨天灰打 他一個很重要的 這個利多的消息 好 那還有一個事情 大家有發現昨天迪士尼長了8%嗎 他是昨天盤錢的財報喔 然後財報出來之後其實股價就漲 那昨天也是漲了8%左右 那也不知道大家有沒有去看這個 穿著Prada的惡魔 因為他已經是20年前的片了嘛 我跟你講 電影院裡面超多人 就是我假日的時候跟我朋友去看 然後超多人都要去看這部片 然後我覺得這一次呢 其實除了就是 當然我們大家都是在回歸20年前 這個安海社會啊 或者是美人島 就是他們幾個主角 他們在這個戲裡面 或者是在這個非",
-          "matched_keyword": "迪士尼",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "2026/05/07(四) 財報好不漲，到底為什麼？#ETN #ANET #ARM #COHR",
-          "channel": "財女珍妮",
-          "date": "2026-05-07",
-          "text": "ssning的這個 新片 我忘記他的電影名稱是什麼 內部片也很好看 然後我直接就是在電影院裡面落淚 因為我覺得很感人 好 所以就是跟大家分享一下 近期呢 我覺得有蠻多好的電影 然後大家可以進去看 然後迪士尼也是 有提到這個 Tranquil Parada的惡魔嘛 然後也有提到他們 整體的一個營運狀況呢 其實有改善 所以就積極的股價上漲 但是沒有人care 好不好 迪士尼不是AI股 所以不要理他對不對 我們接下來呢 就是繼續講 我們要講的東西 好 因為今天很多財報 我本來是想要講這個 SpaceX跟 Enthorbita的一個合作 因為他就是提供他 所有的算力嘛 但是 因為我覺得時間應該是美湖 所以我",
-          "matched_keyword": "迪士尼",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP666 | 🍐",
-          "channel": "股癌",
-          "date": "2026-05-30",
-          "text": "點是 就是你現在已經看到表態 那你敢不敢再跟著 再拘逐推 就類似說 你看到老AI表態 你要不要再拘逐推 那我就講我的意見 就是我覺得這些東西 其實都是好的 我們本來就不會在它 可能攀著的時候 我就去亂DIS他或什麼的 那只是 就是你還是會有一個輕重緩急 就類似說 一樣是被動員間 你會選擇去壓 你覺得它可能是 在後面會更缺的東西 拉長看 最終都是會回到基本面 那哪個東西 可能是在後面漲價 會漲最多的 可能是毛利藥身 會是最高的 或是最缺乏的 或是房間裡面的大象 就是大家可能隱約知道 有一個東西在那 可是真的還沒有注意到 那可能就會是大家想要去 專注的一個重點 所以下的盤面 我個人認為 反正就是一個 非",
-          "matched_keyword": "DIS",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        }
-      ],
-      "total_mentions": 6,
-      "sentiment_score": 0.667,
-      "daily": {
-        "2026-04-01": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-03-18": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-04-29": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-05-07": {
-          "mentions": 2,
-          "bullish": 2,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 1.0
-        },
-        "2026-05-30": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        }
-      }
-    },
-    {
       "code": "JPM",
       "name": "JPMorgan",
       "market": "US",
@@ -79696,7 +79739,7 @@
       "code": "T",
       "name": "AT&T",
       "market": "US",
-      "sector": "通訊媒體",
+      "sector": "高速連接",
       "contexts": [
         {
           "video": "2026/04/27(一) 費半創紀18連漲，還能進場嗎？Intel暴漲20%，財報透露什麼？",
@@ -86894,7 +86937,7 @@
       "code": "GLW",
       "name": "Corning Inc.",
       "market": "US",
-      "sector": "科技",
+      "sector": "光通訊",
       "contexts": [
         {
           "video": "EP225 | 台、美股重點一次說，消費性電腦與緯穎展望，康寧與AAOI長約發酵，聽眾QA",
@@ -94596,7 +94639,7 @@
       "code": "CHTR",
       "name": "Charter Communications",
       "market": "US",
-      "sector": "通訊媒體",
+      "sector": "高速連接",
       "contexts": [
         {
           "video": "EP649 | 💌",
@@ -100414,7 +100457,7 @@
       "code": "ABNB",
       "name": "Airbnb",
       "market": "US",
-      "sector": "消費",
+      "sector": "零售電商",
       "contexts": [
         {
           "video": "2026/04/02 (四）史上最大IPO， SpaceX 要來了！",
@@ -102585,7 +102628,7 @@
       "code": "SATS",
       "name": "EchoStar",
       "market": "US",
-      "sector": "通訊媒體",
+      "sector": "高速連接",
       "contexts": [
         {
           "video": "2026/03/24 (二）川普TACO， 反彈該跑？輝達(NVDA) 佈局電力",
@@ -103095,7 +103138,7 @@
       "code": "EA",
       "name": "Electronic Arts",
       "market": "US",
-      "sector": "消費電子",
+      "sector": "消費",
       "contexts": [
         {
           "video": "訪談特別篇_產業研究與專職交易生活 ft.田中太郎",
@@ -111927,6 +111970,68 @@
           "sentiment_score": 1.0
         }
       }
+    },
+    {
+      "code": "2033",
+      "name": "佳大",
+      "market": "TW",
+      "sector": "鋼鐵工業",
+      "contexts": [
+        {
+          "video": "EP712 | 🦌",
+          "channel": "股癌",
+          "date": "2026-11-07",
+          "text": "艾大丹大 現在就算中87顆黃金格 還來得及嗎 那最近第二段七八糟 不過還好我在9月就滿滿的 慢慢的把 他寫滿滿的 滿滿的把部位換成0050 那讓我在絕境中 沒有那麼慌張 不過痛苦還是會有 我們公司最佳大力導入AI 我是樂觀其成的 但想到公司一堆不做事 礙於現狀的老人在那邊抱怨 就覺得很煩 希望公司通通把他們都優化走 最後出來大家一家人 身體健健康康聽眾績效的大報社 那這個我必須得說 在我自己度過了 差不多32、33歲的生日之後 我優感的感受到 其實我們現在就是年輕人 想要太除掉的一些對象 就是不要把話說太快 以前小時候說 乾那一堆他媽老人家 失慰素殘 在那邊佔人家資源 趕快進觀財好不好 然後後來",
+          "matched_keyword": "佳大",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-11-07": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
+      "code": "AMGN",
+      "name": "Amgen",
+      "market": "US",
+      "sector": "生技製藥",
+      "contexts": [
+        {
+          "video": "EP712 | 🦌",
+          "channel": "股癌",
+          "date": "2026-11-07",
+          "text": "的影響 就越來越小 它其實會變成是 籌碼或是說情緒的一些展現 所以當今天市場就已經直接 交給你更大的 其實我覺得這裡 線就會變成自己跟我們會看的東西 那首先像我會期待的就是 在未來的幾年 大家看一下國安進來 其實國安進來都非常早 甚至是有點太早 因為按照過往的慣例 其實應該可能要在3萬點 那附近才會進來 因為大家以前都是講 整個10年前 之後還有時候會提早開進來 只是這是真的非常早就開進來 那以過往這個國安基金的表現 當然一下AI都很好用 大家可以查 就可以直接立刻回測 也不是說每次進來就已經最低點 像上一次進來 2027我記得就是買完之後 後面還有一段 只是當然就是離底不遠了 那我是覺得以下這種",
+          "matched_keyword": "安進",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        }
+      ],
+      "total_mentions": 1,
+      "sentiment_score": 0.5,
+      "daily": {
+        "2026-11-07": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
     }
   ],
   "sectors_ranking": [
@@ -112602,6 +112707,19 @@
       ]
     },
     {
+      "sector": "零售電商",
+      "market": "US",
+      "total_mentions": 59,
+      "stock_codes": [
+        "COST",
+        "WMT",
+        "BKNG",
+        "TGT",
+        "DASH",
+        "ABNB"
+      ]
+    },
+    {
       "sector": "ETF・台股指數",
       "market": "TW",
       "total_mentions": 57,
@@ -112613,33 +112731,6 @@
         "00922",
         "00921",
         "009802"
-      ]
-    },
-    {
-      "sector": "零售電商",
-      "market": "US",
-      "total_mentions": 57,
-      "stock_codes": [
-        "COST",
-        "WMT",
-        "BKNG",
-        "TGT",
-        "DASH"
-      ]
-    },
-    {
-      "sector": "科技",
-      "market": "US",
-      "total_mentions": 55,
-      "stock_codes": [
-        "SNDK",
-        "INTU",
-        "NOW",
-        "MPWR",
-        "GLW",
-        "TER",
-        "NTAP",
-        "SWKS"
       ]
     },
     {
@@ -112675,6 +112766,20 @@
         "4938",
         "2354",
         "2392"
+      ]
+    },
+    {
+      "sector": "科技",
+      "market": "US",
+      "total_mentions": 51,
+      "stock_codes": [
+        "SNDK",
+        "INTU",
+        "NOW",
+        "MPWR",
+        "TER",
+        "NTAP",
+        "SWKS"
       ]
     },
     {
@@ -112741,6 +112846,17 @@
       ]
     },
     {
+      "sector": "光通訊",
+      "market": "US",
+      "total_mentions": 47,
+      "stock_codes": [
+        "COHR",
+        "LITE",
+        "GLW",
+        "AAOI"
+      ]
+    },
+    {
       "sector": "塑膠工業",
       "market": "TW",
       "total_mentions": 45,
@@ -112766,16 +112882,6 @@
       ]
     },
     {
-      "sector": "光通訊",
-      "market": "US",
-      "total_mentions": 43,
-      "stock_codes": [
-        "COHR",
-        "LITE",
-        "AAOI"
-      ]
-    },
-    {
       "sector": "電信",
       "market": "TW",
       "total_mentions": 43,
@@ -112783,20 +112889,6 @@
         "3045",
         "2412",
         "4904"
-      ]
-    },
-    {
-      "sector": "消費",
-      "market": "US",
-      "total_mentions": 42,
-      "stock_codes": [
-        "CCL",
-        "GRMN",
-        "DECK",
-        "ABNB",
-        "EXPE",
-        "NKE",
-        "F"
       ]
     },
     {
@@ -112809,6 +112901,33 @@
         "ASML",
         "ONTO",
         "LRCX"
+      ]
+    },
+    {
+      "sector": "消費",
+      "market": "US",
+      "total_mentions": 41,
+      "stock_codes": [
+        "CCL",
+        "GRMN",
+        "DECK",
+        "EXPE",
+        "NKE",
+        "EA",
+        "F"
+      ]
+    },
+    {
+      "sector": "生技製藥",
+      "market": "US",
+      "total_mentions": 41,
+      "stock_codes": [
+        "TECH",
+        "MRNA",
+        "JNJ",
+        "BIIB",
+        "LLY",
+        "AMGN"
       ]
     },
     {
@@ -112832,16 +112951,12 @@
       ]
     },
     {
-      "sector": "醫療",
+      "sector": "串流媒體",
       "market": "US",
       "total_mentions": 39,
       "stock_codes": [
-        "TECH",
-        "UNH",
-        "HUM",
-        "CVS",
-        "CI",
-        "CNC"
+        "NFLX",
+        "DIS"
       ]
     },
     {
@@ -112876,15 +112991,6 @@
         "TSLA",
         "RIVN",
         "NIO"
-      ]
-    },
-    {
-      "sector": "串流媒體",
-      "market": "US",
-      "total_mentions": 36,
-      "stock_codes": [
-        "NFLX",
-        "DIS"
       ]
     },
     {
@@ -112986,15 +113092,6 @@
       ]
     },
     {
-      "sector": "消費電子",
-      "market": "US",
-      "total_mentions": 33,
-      "stock_codes": [
-        "AAPL",
-        "EA"
-      ]
-    },
-    {
       "sector": "ETF",
       "market": "TW",
       "total_mentions": 33,
@@ -113055,6 +113152,14 @@
         "2482",
         "6196",
         "3518"
+      ]
+    },
+    {
+      "sector": "消費電子",
+      "market": "US",
+      "total_mentions": 32,
+      "stock_codes": [
+        "AAPL"
       ]
     },
     {
@@ -113340,14 +113445,15 @@
       ]
     },
     {
-      "sector": "生技製藥",
+      "sector": "高速連接",
       "market": "US",
-      "total_mentions": 17,
+      "total_mentions": 18,
       "stock_codes": [
-        "MRNA",
-        "JNJ",
-        "BIIB",
-        "LLY"
+        "CRDO",
+        "T",
+        "ALAB",
+        "CHTR",
+        "SATS"
       ]
     },
     {
@@ -113388,6 +113494,18 @@
       ]
     },
     {
+      "sector": "醫療",
+      "market": "US",
+      "total_mentions": 16,
+      "stock_codes": [
+        "UNH",
+        "HUM",
+        "CVS",
+        "CI",
+        "CNC"
+      ]
+    },
+    {
       "sector": "油電燃氣業",
       "market": "TW",
       "total_mentions": 15,
@@ -113397,26 +113515,16 @@
       ]
     },
     {
-      "sector": "通訊媒體",
-      "market": "US",
-      "total_mentions": 15,
-      "stock_codes": [
-        "VZ",
-        "T",
-        "CHTR",
-        "SATS"
-      ]
-    },
-    {
       "sector": "鋼鐵工業",
       "market": "TW",
-      "total_mentions": 14,
+      "total_mentions": 15,
       "stock_codes": [
         "3004",
         "2038",
         "2010",
         "2032",
-        "2014"
+        "2014",
+        "2033"
       ]
     },
     {
@@ -113528,15 +113636,6 @@
       ]
     },
     {
-      "sector": "高速連接",
-      "market": "US",
-      "total_mentions": 9,
-      "stock_codes": [
-        "CRDO",
-        "ALAB"
-      ]
-    },
-    {
       "sector": "綠能環保",
       "market": "TW",
       "total_mentions": 9,
@@ -113594,6 +113693,14 @@
       "total_mentions": 7,
       "stock_codes": [
         "CHPT"
+      ]
+    },
+    {
+      "sector": "通訊媒體",
+      "market": "US",
+      "total_mentions": 6,
+      "stock_codes": [
+        "VZ"
       ]
     },
     {
@@ -127185,6 +127292,23 @@
         "AMZN",
         "MSFT",
         "6239"
+      ],
+      "analysis_source": "whisper",
+      "thumbnail_url": null
+    },
+    {
+      "video_id": "4fc7e5b8-4d4d-4e4c-ae20-96c2e0f9af45",
+      "title": "EP712 | 🦌",
+      "channel": "股癌",
+      "date": "2026-11-07",
+      "stocks_found": [
+        "2330",
+        "AMGN",
+        "0050",
+        "2033",
+        "NFLX",
+        "DIS",
+        "1473"
       ],
       "analysis_source": "whisper",
       "thumbnail_url": null
