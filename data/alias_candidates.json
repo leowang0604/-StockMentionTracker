@@ -1502,7 +1502,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 128,
+    "observations": 129,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1547,7 +1547,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-11-07T20:34:16"
+    "updated_at": "2026-11-08T20:48:36"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -12913,5 +12913,60 @@
       }
     ],
     "updated_at": "2026-11-05T22:46:41"
+  },
+  "安基|6477": {
+    "wrong_keyword": "安基",
+    "correct_code": "6477",
+    "correct_name": "安集",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "b25b0462-bd82-4e61-9f4f-ff5ed206fb32"
+    ],
+    "evidence": [
+      {
+        "video_id": "b25b0462-bd82-4e61-9f4f-ff5ed206fb32",
+        "channel": "韭菜畢業班",
+        "date": "2026-11-08",
+        "title": "EP273 | 國安基金護盤就能抄底 ？台股反彈還差一個關鍵",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "面對 好 那我們這一集 主要會聊幾個重點 第一個重點就是融資斷頭 到底什麼叫做融資斷頭 那現在融資的維持率 大概是多少 可能可以分成上市跟上櫃 來跟各位來聊 第二件事情 上禮拜五 其實就很近的時間 國安基金宣布要進場 那國安基金到底在安什麼東西 在安欣雅嗎 歷年的國安基金到底做了哪些事情 他們到底買了哪些股票 以及現在的這個成交量 以外資來講 可能每天輕輕鬆鬆 就可以賣個一千億一千五百億的狀況之下 國安基金的五千億還有用嗎 這些錢夠嗎 我也是我覺得這一集可以跟各位來聊的 還有一個我覺得很有趣的一個切角 就是其他國家是否也有國安基金 還是只有台灣自己有國安基金 其他人可能沒有 這樣子還有用嗎 最"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "6477",
+        "name": "安集",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "6174",
+        "name": "安碁",
+        "score": 0.663,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "1259",
+        "name": "安心",
+        "score": 0.565,
+        "phonetic_similarity": 0.6,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-11-08T20:57:58"
   }
 }
