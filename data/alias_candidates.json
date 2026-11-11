@@ -1502,7 +1502,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 131,
+    "observations": 132,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1547,7 +1547,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-11-10T21:59:49"
+    "updated_at": "2026-11-11T23:07:41"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -11534,10 +11534,11 @@
     "correct_name": "玉晶光",
     "confidence": "high",
     "max_score": 97,
-    "observations": 1,
-    "distinct_videos": 1,
+    "observations": 2,
+    "distinct_videos": 2,
     "video_ids": [
-      "0f3a44b6-0345-402a-886f-f0ee78cd2f82"
+      "0f3a44b6-0345-402a-886f-f0ee78cd2f82",
+      "915c1123-da17-44a4-b602-1280772f5371"
     ],
     "evidence": [
       {
@@ -11556,6 +11557,29 @@
           "stock_context"
         ],
         "context": "然後基本上 趙華喜歡這些東西 你就去挑幾檔買 其實應該就買不錯了 好 剛剛講到的說 形態沒有被破壞的 像我們昨天打人 就在聊光學的部分 其實雖然大力光 是回跌的比較多 回到法說會前那個位置了 可是 預金光卻非常的強 預金光就首越線 他昨天還有跟3M 3M合作的那個消息 所以今天直接又拉一根 漲停辦 所以有時候 為什麼不如會講說 你就去找那些 創新高型態好的 因為他們也可能 會在這一波態勢裡面 有人照顧 就呈現一個強很強的狀況 對 而且通常會說為什麼 你不管什麼時候找 型態好的 其中一個點 以交易的角度來說 因為你很知道 你該守哪裡 例如說你就是被買 了不起就哪裡 不如預期跌破了 你就走 你不會",
+        "override_kind": "phonetic",
+        "override_reason": "clear_phonetic_winner",
+        "original_code": "1711",
+        "original_name": "永光",
+        "phonetic_top_score": 0.708,
+        "phonetic_lead": 0.136
+      },
+      {
+        "video_id": "915c1123-da17-44a4-b602-1280772f5371",
+        "channel": "兆華與股惑仔",
+        "date": "2026-11-11",
+        "title": "EP1220｜市場情緒這裡已經變了？台積電投資Anthropic、OpenAI、加發股利，滿單的底氣！回彈6千點重新起跑？ft.型男股神 陳威良",
+        "source": "full_video_validator",
+        "score": 97,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "可能900 或者8字頭就已經有吸引力 那一度還下殺到 讓大家可以用跟 亞馬遜一樣的價格 你不用私募 沒有錯 你在股票市場就可以買 對 我覺得這真的就是一種 危機入市非常好的機會 當然類似的情況 還有像預金光 預金光之前 他的私募是3M認走的 那也一度就是下殺到 幾乎也就是回到3M的成本 對 那最近剛好 就是在觀察這個主題 跟這個方向 發現蠻有意思的 有一些個股 這個確實有可能 會因為一時市場的恐慌 然後撒過頭了 那這種時候其實真的就是 大家可以去檢視 當然如果你在搭配說 10月營收或第三期財報 它又是亮眼的 那真的投資起來 那個把握度就會更高 你看就像監點 監點的限增 388塊 然後等大家股票",
         "override_kind": "phonetic",
         "override_reason": "clear_phonetic_winner",
         "original_code": "1711",
@@ -11587,7 +11611,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-10-21T21:01:49"
+    "updated_at": "2026-11-11T23:27:39"
   },
   "滑通|2397": {
     "wrong_keyword": "滑通",
@@ -11685,10 +11709,11 @@
     "correct_name": "世芯-KY",
     "confidence": "high",
     "max_score": 85,
-    "observations": 1,
-    "distinct_videos": 1,
+    "observations": 2,
+    "distinct_videos": 2,
     "video_ids": [
-      "4cb90a66-83c8-4ed3-8cb1-6b6e1eb70986"
+      "4cb90a66-83c8-4ed3-8cb1-6b6e1eb70986",
+      "915c1123-da17-44a4-b602-1280772f5371"
     ],
     "evidence": [
       {
@@ -11706,6 +11731,29 @@
           "stock_context"
         ],
         "context": "一個產業趨勢 像風車是一個 對風車明年產能開出來 只有營收就會出來 那我覺得AC也是一個 我覺得AC也是一個 AC他明年 叫今年應該也是 還是會大幅度的一個成長 所以剛剛特別Check了一下 包括像是四星KY 他的營收表現其實在9月份 9月份營收表現其實是好的 他9月份營收是年月雙征 而且年增496% 月增13.7% OK 我覺得這個其實就相當相當的不錯 然後其他的像創意 也是年月雙征 雖然說年增率有稍微有點下滑 但是這個是沒辦法的事情 不然他就會進入到一個 所謂高機器的一個表現 然後甚至 那你有沒有看到 我覺得比較不一樣 因為他的結構上 他可能還有一些手機晶片 相關的這些其他營收戰筆 但我們",
+        "override_kind": "phonetic",
+        "override_reason": "phonetic_top1_needs_review",
+        "original_code": "4439",
+        "original_name": "冠星-KY",
+        "phonetic_top_score": 0.663,
+        "phonetic_lead": 0.01100000000000001,
+        "needs_review": true
+      },
+      {
+        "video_id": "915c1123-da17-44a4-b602-1280772f5371",
+        "channel": "兆華與股惑仔",
+        "date": "2026-11-11",
+        "title": "EP1220｜市場情緒這裡已經變了？台積電投資Anthropic、OpenAI、加發股利，滿單的底氣！回彈6千點重新起跑？ft.型男股神 陳威良",
+        "source": "full_video_validator",
+        "score": 85,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "的股價 即便短線供到這裡 距離亞馬遜的4239元的成本 都還很遠 對 所以這個都是 大家可以去留意跟追蹤 那當然還是強調 私募的價格不表示 馬上一定就會漲回來 但是你可能可以 搭配其他的條件 當然這個四星KY 也很吃亞馬遜的訂單 他的跌也是因為 亞馬遜訂單的入賬 就是比預期的慢一些些 所以之前在跌 不過大陸東都認他了 總是會分給他的 不可能說 我都已經花那麼多錢 認了一家這樣的公司 然後最後把他餓死了 這不可能 所以 因為亞馬遜前一陣子 也是落難概念之一 真的 就是 沒有 我們那時候很寄望 在10月中下旬的時候 美股的超級財報 可以一家就一家 就不是 一家倒一家 不管你是 怎麼說 結果那時候 ",
         "override_kind": "phonetic",
         "override_reason": "phonetic_top1_needs_review",
         "original_code": "4439",
@@ -11738,7 +11786,7 @@
         "text_similarity": 0.5
       }
     ],
-    "updated_at": "2026-10-22T20:42:51"
+    "updated_at": "2026-11-11T23:27:39"
   },
   "上起|6123": {
     "wrong_keyword": "上起",
@@ -12968,5 +13016,60 @@
       }
     ],
     "updated_at": "2026-11-08T20:57:58"
+  },
+  "生態|1777": {
+    "wrong_keyword": "生態",
+    "correct_code": "1777",
+    "correct_name": "生泰",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "5efa0892-4cb9-4f82-a1fc-21f0a49a2b9c"
+    ],
+    "evidence": [
+      {
+        "video_id": "5efa0892-4cb9-4f82-a1fc-21f0a49a2b9c",
+        "channel": "股癌",
+        "date": "2026-11-11",
+        "title": "EP713 | 🌲",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "分擔一些風險 我們幫你做 所以我們幫你把所有周圍的基礎設施 跟一些你不想做的麻煩事 全部都幫你包了 接著讓這些團隊 可以無後顧之憂的往前衝 這就是我們的目標 也非常感謝一下 越來越多夥伴的加入 我們的生態系越來越完整 其實是相信 假以時就應該也不用太久 那大家就可以看到一個 非常強韌的 台灣新創遊戲的生態系 我覺得生態系是非常重要的 那當然我們不是說什麼 在我們之前沒有這樣子的東西 其實有很多前輩 曾經在前面努力過 那只是在我們加入之後 我們希望可以把它做得更好 我們希望可以把他 推到一個更大的舞台 那希望一切都可以順利成功 大概這樣 那也簡單的跟我們的聽眾報告一下 因為是非常感謝我們各位聽眾"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "1777",
+        "name": "生泰",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "1720",
+        "name": "生達",
+        "score": 0.663,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "8072",
+        "name": "陞泰",
+        "score": 0.65,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-11-11T23:18:32"
   }
 }
