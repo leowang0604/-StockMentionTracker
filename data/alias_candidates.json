@@ -1502,7 +1502,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 132,
+    "observations": 133,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1547,7 +1547,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-11-11T23:07:41"
+    "updated_at": "2026-11-12T22:28:31"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -13071,5 +13071,115 @@
       }
     ],
     "updated_at": "2026-11-11T23:18:32"
+  },
+  "麗台|2465": {
+    "wrong_keyword": "麗台",
+    "correct_code": "2465",
+    "correct_name": "麗臺",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "c7f020f5-b0d0-4759-aefb-b7ad85fde9b6"
+    ],
+    "evidence": [
+      {
+        "video_id": "c7f020f5-b0d0-4759-aefb-b7ad85fde9b6",
+        "channel": "兆華與股惑仔",
+        "date": "2026-11-12",
+        "title": "EP1221｜怕輝達董事會「殺仁誅勳」，台廠供應鏈恐生變？短線仍在遞延、庫存、毛利率、負債的考驗，回檔擠水分是好事？ft.題材獵人 林漢偉",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "為就像剛剛講的 如果輝達這件事情 是全面性的擴散的話 我剛剛看了一下 美股的一個盤後盤 對 今天輝達 但盤後大疊是必然的 但剛剛看到MD 其實股價盤後是上漲 MD在這一波會一直在慶祝 像台股像有一家叫麗台 他結果變成為腰股了 他就是MD概念 每天都在漲停班 對 那伯通在盤後 也是成績上漲 也在慶祝 所以就代表說 其實他反映的是 AI需求並沒有 因為黃雲勳的匪文而停止 而是這些訂單會開始轉移 所以大家也可以看到今天盤面上 也很有趣的現象是 剛剛提到 MD概念股立台連續拉漲停班 接著細致來股票 其實創意在盤中非常建立是新高 專委盤壓回來 那四星KY盤中也是那間大漲 沒錯 所以大家也認為說 那輝達不"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2465",
+        "name": "麗臺",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "5520",
+        "name": "力泰",
+        "score": 0.65,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "3379",
+        "name": "彬台",
+        "score": 0.608,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-11-12T22:51:59"
+  },
+  "高級|5439": {
+    "wrong_keyword": "高級",
+    "correct_code": "5439",
+    "correct_name": "高技",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "6e5c47d7-776c-4502-a5eb-3d9b53183cde"
+    ],
+    "evidence": [
+      {
+        "video_id": "6e5c47d7-776c-4502-a5eb-3d9b53183cde",
+        "channel": "財女珍妮",
+        "date": "2026-11-12",
+        "title": "2026/11/12(四) 輝達遭降評，股價跌完了？",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "有沒有辦法去撐的過去 但是我覺得還有一個 蠻有可能的情境 提供給大家做個參考 不知道大家會不會有這樣的一個想法 就是我們有沒有想過 NVIDIA最壞最壞的情況 我們剛剛已經有講了 就是黃仁勳去離開 最高級的職位 就是執行長這個位置 那如果今天 好一種是 利空出境嘛 就是如果今天真的決定 罷免黃仁勳 或者是真的 有找了一個代理人 或者是怎麼樣之類的 那股價呢 當然一開始會重疊嘛 但是 因為現在不管你說基本面啊 最壞的情況就是這樣 然後到型臺面 他可能也已經到了 一個前播的地點了 那當大家覺得 市場已經沒有再更壞的消息 再去衝擊NVIDIA的股價的時候 這邊會不會就會進入到 一個整理的區間 或者是"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "5439",
+        "name": "高技",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "8996",
+        "name": "高力",
+        "score": 0.695,
+        "phonetic_similarity": 0.8,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "2906",
+        "name": "高林",
+        "score": 0.608,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-11-12T23:02:02"
   }
 }
