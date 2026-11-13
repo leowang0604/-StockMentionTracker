@@ -1502,7 +1502,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 133,
+    "observations": 134,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1547,7 +1547,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-11-12T22:28:31"
+    "updated_at": "2026-11-13T22:15:37"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -13181,5 +13181,60 @@
       }
     ],
     "updated_at": "2026-11-12T23:02:02"
+  },
+  "雙虹|3324": {
+    "wrong_keyword": "雙虹",
+    "correct_code": "3324",
+    "correct_name": "雙鴻",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "696f866b-297e-46a3-84ab-8aec551c300e"
+    ],
+    "evidence": [
+      {
+        "video_id": "696f866b-297e-46a3-84ab-8aec551c300e",
+        "channel": "兆華與股惑仔",
+        "date": "2026-11-13",
+        "title": "EP1222｜黃仁勳請辭、財務長暫代，ASIC自研晶片先歡慶，輝達供應鏈擔心利潤，卻也可能迎轉單？台廠受傷、受惠全解析！ft.操盤手 黃豐凱",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "weak_sector_match"
+        ],
+        "context": "這個揮打的依賴度高的 好那我這邊也孽一下給凱哥 讓他凱哥來幫我們解讀 例如說技嘉廣達 其實在揮打的供應鏈裡面 可能都有五六十趴的 一個占比 金圓店齊鴻 工業復聯這個不在台灣 這個都有大概四五成 星星 雙虹 影威 這個可能都有四成 秦城大概三成 臺光店大概三成 鴻海 尾創大概兩三成 宏靜大概兩成 音樂達兩成 錦塑大概15% 這個是券商先排出來 當然不只這些 還有非常多 所以這邊凱哥 可以幫我們講一下 你覺得有哪一些 大概不太會 就算是財務長 就算未來是庫克 Anyway 誰來 都不太會受到影響 或是真的要擔心一下的 大家比較多討論的 應該就是散熱 但是我覺得散熱影響 不太大 因為散熱的機構件 其"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3324",
+        "name": "雙鴻",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "5534",
+        "name": "長虹",
+        "score": 0.695,
+        "phonetic_similarity": 0.8,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "6506",
+        "name": "雙邦",
+        "score": 0.695,
+        "phonetic_similarity": 0.8,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-11-13T22:27:47"
   }
 }
