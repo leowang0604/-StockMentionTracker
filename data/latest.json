@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13T22:39:38",
+  "updated_at": "2026-11-14T21:14:04",
   "stocks_ranking": [
     {
       "code": "NVDA",
@@ -7,6 +7,42 @@
       "market": "US",
       "sector": "AI晶片",
       "contexts": [
+        {
+          "video": "EP714 | 🥏",
+          "channel": "股癌",
+          "date": "2026-11-14",
+          "text": "其他人發現這條路可行 他們才去做 你如果讓他們去重新來過 就沒有老皇在前面帶路的話 他願不願意丟這麼多的錢 去開這些規格 要不要這樣去評 那不一定 我覺得那個速度一定會有所減緩 所以老皇的磁石 對於 NVIDIA 公司來講 首先我是覺得 因為 NVIDIA 他是已經跌到 以 Ford P 來講 那個是十倍以下的股票 就是說 AI 的一個大領頭 跌成這樣的狗樣 這個是蠻嚇人的 那開始市場有一些 rumor 在講 搞不好後面他會去用 buyback 方式把他轟上去 有什麼的 我是相信說 就是 NVIDIA 本來就不是一個 很貴的股票 然後現在又在外加 他出了這個狀況之後 他大跌 所以有些人可能在裡面 去找尋一",
+          "matched_keyword": "NVIDIA",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP714 | 🥏",
+          "channel": "股癌",
+          "date": "2026-11-14",
+          "text": "或是美國大通令 都在講說 要讓teamcook去接 如果teamcook去接的話 因為他已經在過去 演過太多次了 不管是在蘋果的supply chain 或是後來的Nike 然後再到 我們家所知道的NVIDIA 如果說你派一個那種 供應鏈管理大師 進來做這一塊的話 那我覺得就會加速 供應鏈之間的進程 特別是其實我們在 蘋果伺服器這邊 雖然外面的新聞很少 但我們在過往是 有適度的去披露一下 我們在供應鏈看到的狀態 就覺得說 他的伺服器其實做得超級精緻 他把server當成是那種 就是可能消費級的筆電 在左非常精緻 然後什麼排線都排得很好 上面還有雷雕什麼的 那可是他在規格的提升上面 並沒有像 NVIDIA",
+          "matched_keyword": "NVIDIA",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP714 | 🥏",
+          "channel": "股癌",
+          "date": "2026-11-14",
+          "text": "供應鏈看到的狀態 就覺得說 他的伺服器其實做得超級精緻 他把server當成是那種 就是可能消費級的筆電 在左非常精緻 然後什麼排線都排得很好 上面還有雷雕什麼的 那可是他在規格的提升上面 並沒有像 NVIDIA這樣的蟲 而且甚至他是有時候會拿那種 筆電的晶片來鬥看看之類的 所以他會比較龜一點 然後比較標準化一點 如果是這樣子的話 其實對整個supply chain 也不是什麼太好的事情 如果說今天 真的是會讓teamcook or any other這種 就是他的專業 是管理supply chain 那可能不是太好的事情 我們其實需要的是一個 會賣夢 然後會從 甚至有些人會講說 他在那麼喇叭的人 像這種",
+          "matched_keyword": "NVIDIA",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
         {
           "video": "EP1222｜黃仁勳請辭、財務長暫代，ASIC自研晶片先歡慶，輝達供應鏈擔心利潤，卻也可能迎轉單？台廠受傷、受惠全解析！ft.操盤手 黃豐凱",
           "channel": "兆華與股惑仔",
@@ -342,54 +378,24 @@
           "video_url": "",
           "extraction_mode": "keyword",
           "mention_count": 2
-        },
-        {
-          "video": "2026/11/13(五)  黃仁勳辭職，利空出盡了？NVDA夠便宜了嗎？",
-          "channel": "財女珍妮",
-          "date": "2026-11-13",
-          "text": "大 而且你要想 這些CSP 它同時也是在做自己的晶片 第三個可能性 就是毛利率 毛利率有可能 其實它是往下走的 那第四個就是供應鏈 比如說電力 台積電的產能 它會不會有瓶頸 去把這個成長卡住 那之前 黃仁勳他常常來台灣 大家也說 他感覺好像來顧產能的 就是看 他可以分配到多少的產能 然後才可以讓他 未來的隱收持續的成長 第五個就是接班 現在還不確定 然後第六個就是什麼 出口管制 有可能會再收緊 第七個是什麼 就是我們講到的 AI 閉環 你今天有這個循環出資的問題 那過去 都是黃仁勳他在主導這一切 他等於就是變成 AI 央行 對不對 誰需要錢 我可能就借你 然後有一些貸款 入股之類的 可是現在如果換了",
-          "matched_keyword": "黃仁勳",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword",
-          "mention_count": 2
-        },
-        {
-          "video": "2026/11/13(五)  黃仁勳辭職，利空出盡了？NVDA夠便宜了嗎？",
-          "channel": "財女珍妮",
-          "date": "2026-11-13",
-          "text": "這個也是一個變數 所以如果我們以這幾個 我們剛剛講到的一些重點 七大關注焦點去看的話 我們就照這個順序看 第一個就是 獲利 景氣循環 是不是正處在一個高峰 那這個高峰 其實還是要回過頭來 你不能只看 NVIDIA 而已 你要看的是 Amazon 微軟 Google 這幾家公司 他們的資本支出 那今年大概 幾家公司的資本支出合計 是 7500 億美元 然後明年有可能會到一兆美元 這一兆美元 是市場上面的集體共識 或者是整個市場上面分析師的估計 但是你說有沒有一些雜音呢 比如說微軟這季資本支出地獄預期 他把一部分產能延後到 2027 年上半年 那 Google 維持全年區間 可是 Color 自由限力有已經變",
-          "matched_keyword": "NVIDIA",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "2026/11/13(五)  黃仁勳辭職，利空出盡了？NVDA夠便宜了嗎？",
-          "channel": "財女珍妮",
-          "date": "2026-11-13",
-          "text": "股價去算的時候 你的估值可能就不是 12 倍啦 你可能就是 18 倍啊 20 倍左右的一個水準嘛 那我們再來看 第二個因素是什麼 就是我們剛剛有講到 波通為什麼最近在漲 波通為什麼也會被視為 是這個 NVIDIA 允諾的一個受惠者 就是因為現在 NVIDIA 很多的客戶 他是大型的 CSP 那這些大客戶自己也有在做晶片 Google TPU 亞馬遜有 Trainian 或者是微軟他也有 Maya 或者是 Mata 他也有這個 Mita 或者是什麼之類的嘛 Open AI 也跟 Brocon 合作嘛 用來做這個推論的晶片啊 或什麼之類的 所以今天 Brocon 它自己有預期 就是波通自己有預期 它 2027",
-          "matched_keyword": "NVIDIA",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
         }
       ],
-      "total_mentions": 45,
-      "sentiment_score": 0.489,
+      "total_mentions": 44,
+      "sentiment_score": 0.477,
       "daily": {
+        "2026-11-14": {
+          "mentions": 3,
+          "bullish": 0,
+          "bearish": 1,
+          "neutral": 2,
+          "sentiment_score": 0.333
+        },
         "2026-11-13": {
-          "mentions": 45,
+          "mentions": 41,
           "bullish": 6,
           "bearish": 7,
-          "neutral": 32,
-          "sentiment_score": 0.489
+          "neutral": 28,
+          "sentiment_score": 0.488
         }
       }
     },
@@ -399,6 +405,30 @@
       "market": "US",
       "sector": "AI晶片",
       "contexts": [
+        {
+          "video": "EP714 | 🥏",
+          "channel": "股癌",
+          "date": "2026-11-14",
+          "text": "然後跟100% Liquid Cooling 在VR Rubin這邊 這個是一個那種技術的大邀件 那其實就是要像有老皇 這樣的一個狂人在那邊推 那才有辦法 因為他這樣子推 他就會導致他的競爭對手 像是AMD就我們講的 那種專業池漢 整天跟他後面的 他就會追他的規格 那再來就是我們其實知道在 Google 這邊 也是一樣 反正就大家都會參考 老皇現在推什麼東西 就去跟著做 那因為老皇有大量的資本 跟大量的供應鏈的掌控能力 所以他可以 coordinate 出來一些 那種 solution 可能是大家在過往 是不太敢去想像 可以在這麼短時間內把他逗出來的 可是因為他弄出來 這個像是怎樣 就是類似那種大模",
+          "matched_keyword": "AMD",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
+          "video": "EP714 | 🥏",
+          "channel": "股癌",
+          "date": "2026-11-14",
+          "text": "相信 你這家公司 我給你這麼高的一個倍數 是因為我知道 每次老黃開什麼規格 你就會梗 那可是現在可能就是 這個說法就會被動搖 這是大家治療主義的 那當然 我們看到市場上 立刻反應就是 ASIC 然後跟AMD 都直接射出去噴出去 那這個我覺得是一個 非常吸反應的想像 因為大家覺得 可能NVU會接受調查 NVU會去調一些訂單 他們必須要砍掉一些東西 那所以可能會 讓別人趁血入 這個我是覺得 還蠻合理的 就這個trade在OK 但是我覺得這個trade 他應該也會是一個 就比較偏向說那種短期噴很多 可是他直接變成 跟那種大波段直接出去的話 沒有這麼容易 可能還是需要一些交叉的影響 就是可能最後面 老黃他的",
+          "matched_keyword": "AMD",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 0.7,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
         {
           "video": "EP1222｜黃仁勳請辭、財務長暫代，ASIC自研晶片先歡慶，輝達供應鏈擔心利潤，卻也可能迎轉單？台廠受傷、受惠全解析！ft.操盤手 黃豐凱",
           "channel": "兆華與股惑仔",
@@ -744,35 +774,18 @@
           "sentiment_score": 0.5,
           "video_url": "",
           "extraction_mode": "keyword"
-        },
-        {
-          "video": "2026/11/09(一) 輝達(NVDA)信任考驗，拖累AI反彈？",
-          "channel": "財女珍妮",
-          "date": "2026-11-09",
-          "text": "認 它現在就是弱勢 可是在弱勢的格局裡面 哪一些公司是可以有 長線的競爭優勢的價格合理的 那這個時候我們再去買 那說禮拜五的時候 確實AI相關的類估 它的表現是比較強的 而且反彈的幅度也比較大 你看像AMD其實上漲了11%左右 Intel也是上漲了7.7% 那像之前跌比較兇的 這些設備股 在上個禮拜其實也大概有 5-6%以上的漲幅 那設備股其實我們在近期 也有跟大家分享過 當它在之前高肚架的時候 你不要去動它 可是在往下的時候 其實你就可以看一下 它相對於過去的一個估值 是不是到了一個比較合理 甚至被低估的一個水準 那整體來說 我覺得現在就是一個 你可以去減便宜 但是你不要想說 會像之前一樣 每次都",
-          "matched_keyword": "AMD",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.7,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        },
-        {
-          "video": "2026/11/09(一) 輝達(NVDA)信任考驗，拖累AI反彈？",
-          "channel": "財女珍妮",
-          "date": "2026-11-09",
-          "text": "拔掉之後 那公司的估值 它還可以有剩下多少容錯的空間 這個我覺得也是投資人裡面 面對比較大的風險 那再來的風險 就是中國跟出口管制的政治壓力嘛 因為黃仁勳他們之前 不要講說這個NVIDIA好了 你說像AMD 或者是像很多的這個設備商 他們都有蠻大的業務 其實是在中國市場 中國市場對他們來說是非常重要的 像是黃仁勳在之前 公開討論的時候 他有講啊 你今天如果 中國 美國害怕的話 你不去跟中國市場競爭 那你等於就是在扶植中國的 廠商 他可以自立自強 你只要給他時間 他在未來都有可能會越來越好嘛 那甚至在未來可能 我也不需要這麼的去依賴美國的公司了 所以今天黃仁勳 他一直在遊說美國政府去放寬 對於中國晶片",
-          "matched_keyword": "AMD",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.7,
-          "video_url": "",
-          "extraction_mode": "gemini"
         }
       ],
       "total_mentions": 41,
       "sentiment_score": 0.551,
       "daily": {
+        "2026-11-14": {
+          "mentions": 2,
+          "bullish": 2,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 0.7
+        },
         "2026-11-13": {
           "mentions": 16,
           "bullish": 5,
@@ -800,13 +813,6 @@
           "bearish": 5,
           "neutral": 2,
           "sentiment_score": 0.551
-        },
-        "2026-11-09": {
-          "mentions": 2,
-          "bullish": 2,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 0.7
         }
       }
     },
@@ -816,6 +822,30 @@
       "market": "US",
       "sector": "雲端/AI",
       "contexts": [
+        {
+          "video": "EP714 | 🥏",
+          "channel": "股癌",
+          "date": "2026-11-14",
+          "text": "邀件 那其實就是要像有老皇 這樣的一個狂人在那邊推 那才有辦法 因為他這樣子推 他就會導致他的競爭對手 像是AMD就我們講的 那種專業池漢 整天跟他後面的 他就會追他的規格 那再來就是我們其實知道在 Google 這邊 也是一樣 反正就大家都會參考 老皇現在推什麼東西 就去跟著做 那因為老皇有大量的資本 跟大量的供應鏈的掌控能力 所以他可以 coordinate 出來一些 那種 solution 可能是大家在過往 是不太敢去想像 可以在這麼短時間內把他逗出來的 可是因為他弄出來 這個像是怎樣 就是類似那種大模型吧 大家都會知道說 中國的模型 其實跟在美國的模型後面 那如果沒有美國模型 在前面去開疆屁圖的話",
+          "matched_keyword": "Google",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP714 | 🥏",
+          "channel": "股癌",
+          "date": "2026-11-14",
+          "text": "有這種假設 所以我覺得直上 某個程度上 它是追求一種心靈平靜 然後就是 我已經知道說 這個最好的東西 可能就是長這個樣子 在預算可以接受的狀況之下 那我就不用再去想它 我就不用再去思考 也不用再上網去Google一大堆 你有沒有去試過 就是你買那種什麼赤頂規 然後最後面 你買回來之後 一直上網去Google 假設買到頂規會是什麼樣 我很討厭那種感受 所以我就覺得 就是直上的堆 但這不代表不比價 然後是比價是 肯定會做的事情 比價是很快樂的事情 然後拜託 你幹嘛當一個 媽被人家削的那種臭盤子 那下面一位Aaron 夢工老大想問你 你結婚生小孩 房子要登記在 老婆的名下合理嗎 如果再簽出軌 要晉升出戶這個協議",
+          "matched_keyword": "Google",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
         {
           "video": "EP1222｜黃仁勳請辭、財務長暫代，ASIC自研晶片先歡慶，輝達供應鏈擔心利潤，卻也可能迎轉單？台廠受傷、受惠全解析！ft.操盤手 黃豐凱",
           "channel": "兆華與股惑仔",
@@ -1159,36 +1189,18 @@
           "sentiment_score": 0.5,
           "video_url": "",
           "extraction_mode": "keyword"
-        },
-        {
-          "video": "2026/11/10(二) 輝達跌誰接棒，AMD，GOOG趁勢起？",
-          "channel": "財女珍妮",
-          "date": "2026-11-10",
-          "text": "26年的時候 當然表現比較低 因為現階段就是在一個 巨額支出 然後頭暴率可能還沒有非常好的階段 但是我們看未來呢 27年然後到29年呢 大概可以維持在一個15%左右的一個水準的時候呢 那只要未來 這個Google 它在這個TPU 或者是在AI的獲利能力上面 可以有顯著的提升 我們就抓15%到20%好了 那現在只要在20 被左右的Forward P 我覺得都是一個算合理的水位 可以去分批布局的水位 所以當Google它的股價開始往下的時候呢 其實你就可以去關注它 以一個想要去做長期投資的投資人來講 比如說我自取為一個價值投資人對不對 你當然不可能希望在Google 大概30倍本益比的時候去買嘛 但是如果已經",
-          "matched_keyword": "Google",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": "",
-          "extraction_mode": "keyword",
-          "mention_count": 2
-        },
-        {
-          "video": "2026/11/10(二) 輝達跌誰接棒，AMD，GOOG趁勢起？",
-          "channel": "財女珍妮",
-          "date": "2026-11-10",
-          "text": "都是一個算合理的水位 可以去分批布局的水位 所以當Google它的股價開始往下的時候呢 其實你就可以去關注它 以一個想要去做長期投資的投資人來講 比如說我自取為一個價值投資人對不對 你當然不可能希望在Google 大概30倍本益比的時候去買嘛 但是如果已經到20倍左右的本益比的時候呢 那或許就是一個 蠻值得去分批介入的一個時間點 因為我們也不知道到底會跌到哪邊嘛 我們只能取一個相對的低點 那這個相對的低點呢 其實 就會是用過去的一個估值表現 以及你可以跟同業去做一個比較 然後還有看整個產業的一個方向跟動能 大概是怎麼樣來去做一個決定 好 那如果今天我們再從Google去延伸 因為數據中心這個東西 現在為什",
-          "matched_keyword": "Google",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 1.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
         }
       ],
-      "total_mentions": 39,
-      "sentiment_score": 0.615,
+      "total_mentions": 38,
+      "sentiment_score": 0.578,
       "daily": {
+        "2026-11-14": {
+          "mentions": 2,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 2,
+          "sentiment_score": 0.5
+        },
         "2026-11-13": {
           "mentions": 9,
           "bullish": 5,
@@ -1211,11 +1223,11 @@
           "sentiment_score": 0.467
         },
         "2026-11-10": {
-          "mentions": 18,
-          "bullish": 7,
+          "mentions": 15,
+          "bullish": 4,
           "bearish": 4,
           "neutral": 7,
-          "sentiment_score": 0.62
+          "sentiment_score": 0.544
         }
       }
     },
@@ -7255,6 +7267,18 @@
       "sector": "AI設計",
       "contexts": [
         {
+          "video": "EP714 | 🥏",
+          "channel": "股癌",
+          "date": "2026-11-14",
+          "text": "下 發現自己的創造力是大幅的提升 然後過往你可能開發一個遊戲 你不只是要會說故事 你可能自己還要懂一點coding 什麼都要懂一點 你一個人要當一百個人用之類的 然後下載一些新的工具的輔助之下 我覺得創意跟說故事的能力 變得非常的重要 當然執行力是從以前到現在 都是一個非常重要的東西 如果你可以把這些東西 都處理好的話 在新工具的一個加持之下 其實是有機會可以產出 就是你過往無法想像的那種生產力 然後讓你的目標可以更快的達成 希望在台灣可以有更多這種 超棒的團隊被我們跳到 其實我們都是很認真 隨時在scanning 我現在要在市場上有什麼有趣的機會 跟我們在看股票的感覺很像 就是我一直去看著 都希",
+          "matched_keyword": "創意",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
           "video": "EP1222｜黃仁勳請辭、財務長暫代，ASIC自研晶片先歡慶，輝達供應鏈擔心利潤，卻也可能迎轉單？台廠受傷、受惠全解析！ft.操盤手 黃豐凱",
           "channel": "兆華與股惑仔",
           "date": "2026-11-13",
@@ -7602,23 +7626,18 @@
           "sentiment_score": 0.8,
           "video_url": "",
           "extraction_mode": "gemini"
-        },
-        {
-          "video": "EP1190｜產業巡禮，明年比今年成長性更高，晶圓、ASIC、設備、封測出列！今年是成長高峰的記憶體、PCB，重挫也能接？ft.產業隊長 張捷",
-          "channel": "兆華與股惑仔",
-          "date": "2026-09-23",
-          "text": "兩奈米 其實兩率是比較低的 所以才會有一些 有些公司有雜音 有些公司毛利率比較低 有些公司越來越沒有雜音 股價就漲得越來越快 那我覺得其實 重見無風 大巧不公 大家去看營收 甚至去看毛利獲利 其實包括創意跟聯發科 都排在前面 其實他們的毛利營收 甚至獲利 甚至是越來越多這個東西 會越來越清楚 覺得這個部分的方案 你就可以著重在創新高 就是最強的股票上面 大概是這樣 好 那因為我們 除了看這個Ethiq剛剛相關的 有問到AC設計 他能夠延伸到 例如說 嫌棄風裝 或是設備股上面去嗎 是的 那我想 今天其實我帶另外一個乾貨就是說 其實台灣其實這一段時間很難做 那包括像有一些漲價的熄火了 甚至有一些利空",
-          "matched_keyword": "創意",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.8,
-          "video_url": "",
-          "extraction_mode": "gemini"
         }
       ],
       "total_mentions": 32,
-      "sentiment_score": 0.75,
+      "sentiment_score": 0.756,
       "daily": {
+        "2026-11-14": {
+          "mentions": 1,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 0,
+          "sentiment_score": 1.0
+        },
         "2026-11-13": {
           "mentions": 3,
           "bullish": 3,
@@ -7739,8 +7758,8 @@
           "sentiment_score": 0.8
         },
         "2026-09-23": {
-          "mentions": 8,
-          "bullish": 8,
+          "mentions": 7,
+          "bullish": 7,
           "bearish": 0,
           "neutral": 0,
           "sentiment_score": 0.8
@@ -7753,6 +7772,42 @@
       "market": "US",
       "sector": "消費電子",
       "contexts": [
+        {
+          "video": "EP714 | 🥏",
+          "channel": "股癌",
+          "date": "2026-11-14",
+          "text": "趕著大家走 那只要這些公司 他們可以去符合老黃的要求 你去做出那些看起來非常科幻的東西 你就可以獲得超額報酬 你就可以拿到很多錢 那當然這些東西 我相信有照理率 他一定會慢慢的減損掉 就是他就會類似像Apple這樣子 就是可能最早賺Apple錢也是不錯 可是這後面你發現說 就是他們有那種供應鏈管理大師Tim Cook 所以就會把這個價格壓到 其實蠻多人後來 也是不想要去接Apple的訂單 那我覺得就是伺服器的一個推進 就是後面走到那種標準化的時代 就是不像現在可能是百家爭名 大家還在競爭 還在搶壞權的時候 那他最後面一定也會進入那種 競爭的時代 消價競爭的時代 所以就會跟過往的PCNB 然後後來手機差不",
+          "matched_keyword": "Apple",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
+          "video": "EP714 | 🥏",
+          "channel": "股癌",
+          "date": "2026-11-14",
+          "text": "超高速的衝 一定是沒有辦法 就是他一定是會有所改變的 那當然你說 如果他的國運很好 後面又再遇到什麼 像 Tim Cook 這樣一個 很棒的接班人 那可能有機會 因為 Tim Cook 當時也是在 蘋果公司裡面被養了一陣子 那老黃這家公司 他比較麻煩的點是 他一個人是 直接對到了 幾十個主管都要匯保這樣 所以他們的組織是比較扁平的 那因為這樣子 包含說在過去的訪問裡面 他也提到 他並沒有去做接班人的計畫 所以比較麻煩的點是 你現在很難去找到一個人 可以所以的來取代老黃 那他的職能並不是 只是在公司裡面 去做決策 他跟構念 那些範疇也不是沒有意義的 有辦法可以去secure 到最大量的產能 有這樣",
+          "matched_keyword": "蘋果",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
+          "video": "EP714 | 🥏",
+          "channel": "股癌",
+          "date": "2026-11-14",
+          "text": "還有另外一年 我比較小心一下 因為他也在市場上 有人在喘 其實一些什麼大歪姿 或是美國大通令 都在講說 要讓teamcook去接 如果teamcook去接的話 因為他已經在過去 演過太多次了 不管是在蘋果的supply chain 或是後來的Nike 然後再到 我們家所知道的NVIDIA 如果說你派一個那種 供應鏈管理大師 進來做這一塊的話 那我覺得就會加速 供應鏈之間的進程 特別是其實我們在 蘋果伺服器這邊 雖然外面的新聞很少 但我們在過往是 有適度的去披露一下 我們在供應鏈看到的狀態 就覺得說 他的伺服器其實做得超級精緻 他把server當成是那種 就是可能消費級的筆電 在左非常精緻 然後什麼",
+          "matched_keyword": "蘋果",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
         {
           "video": "2026/11/13(五)  黃仁勳辭職，利空出盡了？NVDA夠便宜了嗎？",
           "channel": "財女珍妮",
@@ -8077,47 +8132,18 @@
           "sentiment_score": 0.5,
           "video_url": "",
           "extraction_mode": "gemini"
-        },
-        {
-          "video": "2026/11/03(二) 美股盤中Ａ轉，蘋果(AAPL)也不行了嗎？",
-          "channel": "財女珍妮",
-          "date": "2026-11-03",
-          "text": "-OY其實達到23%左右 那2026年之後 其實大概就是維持在 10%左右的一個表現 那如果今天 你沒有一個非常主要的衝刺力 然後去把你的EPS的預測 去把它上提的話 你覺得現在30幾倍的本益比 對於Apple來說 就算你給他一點溢價好了 你把它跟軟體上去作比 我給你20倍的溢價 20倍本益比好不好 那你現在30幾倍 我覺得也是有一點太貴了嘛 所以呢 這個是我對於Apple的看法 我覺得你要嘛 就是等到他真的很便宜的時候再買 要嘛就是等到他真的去回測到 可能長期均線的時候 你再去做佈局 我覺得這個會是一個比較穩當的策略啦 那當然 未來你要追蹤的東西 就是你的毛利率可不可以守住嘛 然後你的研發成本 有沒有",
-          "matched_keyword": "Apple",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        },
-        {
-          "video": "2026/11/02(一) 期中選舉之選後必漲嗎，買股是不是要趁現在？",
-          "channel": "財女珍妮",
-          "date": "2026-11-02",
-          "text": "有的時候這個跌呢 都是很快 然後很高速的 然後幅度很大的 但是漲呢 漲是可以漲的比較久 而且是慢慢的 可以讓你有上車機會的 所以呢 還是回到了這個 S&P500指數的表現 那上個禮拜呢 Apple就是蘋果公司呢 再次的奪回 全球最有價值公司的寶座嘛 市值達到了5.03兆美元 去超過了NVIDIA的4.93兆美元 那我們可以看到呢 蘋果它現在搶的是什麼呢 就是大家都在擔心 自由現金流的時候 那蘋果在2026才年呢 它的自由現金流預計 將會成長38% 達到1420億美元 而其他的公司在跌什麼呢 像是Intel 因為大幅的資本支出 面臨財務壓力嘛 出現付的現金流嘛 或者是其他 像是Google啊 Ama",
-          "matched_keyword": "蘋果",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.8,
-          "video_url": "",
-          "extraction_mode": "gemini"
-        },
-        {
-          "video": "EP271 | 006208 1拆8 分割，想把一半資金押進去 ？我給朋友的真心建議",
-          "channel": "韭菜畢業班",
-          "date": "2026-11-01",
-          "text": "只是分散風險 回答完之後 這個修正兄弟就給我另外一個論點 他說 分拆是不是一定會上漲 那我覺得 今天我聽到這件事情的時候 我覺得OK 那蠻合理的 因為我們今天聽到 可能每一股那邊 Tesla 或是說 Apple NVIDIA 其實都有經歷過分股 那如果你把它還原原本的價值的話 那股價早就飛到你老媽不認識了 都是很天價的 他一定勢必是要這樣做 他勢必這樣做 我其實就是增加流通性 然後再增加就是說 這個東西他其實 大家就只要 focus 在你這一家公司上 我可能只要知道 Tesla 可能未來表現得很好的話 那我就願意繼續考他 或 Apple 表現得很好 我就願意繼續考他 但 6200 或 0050 這種追蹤",
-          "matched_keyword": "Apple",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.667,
-          "video_url": "",
-          "extraction_mode": "keyword"
         }
       ],
       "total_mentions": 31,
-      "sentiment_score": 0.574,
+      "sentiment_score": 0.559,
       "daily": {
+        "2026-11-14": {
+          "mentions": 3,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 3,
+          "sentiment_score": 0.5
+        },
         "2026-11-13": {
           "mentions": 1,
           "bullish": 1,
@@ -8168,25 +8194,11 @@
           "sentiment_score": 0.583
         },
         "2026-11-03": {
-          "mentions": 13,
+          "mentions": 12,
           "bullish": 0,
           "bearish": 0,
-          "neutral": 13,
+          "neutral": 12,
           "sentiment_score": 0.5
-        },
-        "2026-11-02": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 0.8
-        },
-        "2026-11-01": {
-          "mentions": 1,
-          "bullish": 1,
-          "bearish": 0,
-          "neutral": 0,
-          "sentiment_score": 0.667
         }
       }
     },
@@ -10190,7 +10202,7 @@
       "code": "CCL",
       "name": "Carnival",
       "market": "US",
-      "sector": "消費電子",
+      "sector": "消費",
       "contexts": [
         {
           "video": "EP272 | 別只看0050正2賺多少，看懂「報酬背後的代價」才是關鍵",
@@ -12284,6 +12296,18 @@
       "sector": "航太國防",
       "contexts": [
         {
+          "video": "EP714 | 🥏",
+          "channel": "股癌",
+          "date": "2026-11-14",
+          "text": "他波動變大 風險變大 那有一些變數 我們也不確定後面會怎麼樣 那我就想等到文定一年再來看 而且其實現在市場上 像我們上集所提到的 Castle 像過來的東西 這個Castle就是 KSSEL 反正就是SpaceX跟你BDL 他們有去做合作 然後去把 是不是打到太空去 那這個東西其實 它的量沒有太大 好 但問題是這個東西 其實就比較不會去受到 就是所謂的 現在到底是 可能持消筆長 GPU要下去 什麼ASIC要上來 那之後假設發現 其實沒有這麼嚴重 或是說調查一些轉機 又變成反過來 那很難 那個去缺短線的東西 對我們來講 不是一個這麼喜歡的東西 所以我們反而是開始會把 以我自己來講 就是資金會去移到那一些 可",
+          "matched_keyword": "SpaceX",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
           "video": "2026/11/12(四) 輝達遭降評，股價跌完了？",
           "channel": "財女珍妮",
           "date": "2026-11-12",
@@ -12632,23 +12656,18 @@
           "sentiment_score": 0.5,
           "video_url": "",
           "extraction_mode": "keyword"
-        },
-        {
-          "video": "2026/10/12(一) 美股甩不掉5%長債？SpaceX殺進電信業，巨頭集體大跌",
-          "channel": "財女珍妮",
-          "date": "2026-10-12",
-          "text": "他今天還要取得一些 監管的批准 你要去建置網路 你要去證明說 我今天在任何的時間點 監封時間點 然後比較清淡的時間 我的通話品質 都可以達到日常使用的水準 所以你說現在 這個Starting 或者是SpaceX 他馬上就可以去取代 這三大電信商嗎 沒有 但是什麼東西 就是投資 就是所有的行為 都是建立在你對於 公司的預期之上 所以今天三大電信商 本來是寡贊的地位 在那邊躺著賺 對不對 未來突然出現了馬斯克 突然出現了一個非常資本雄厚 技術路線完全不同的競爭者 那不確定性就會上升 那當然股價就是先跌再說 先拋再說 所以我覺得 今年改變的是什麼呢 我們拿三家公司裡面 其中一家公司 這個Growing的網站",
-          "matched_keyword": "SpaceX",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
         }
       ],
       "total_mentions": 31,
-      "sentiment_score": 0.561,
+      "sentiment_score": 0.545,
       "daily": {
+        "2026-11-14": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 1,
+          "neutral": 0,
+          "sentiment_score": 0.0
+        },
         "2026-11-12": {
           "mentions": 1,
           "bullish": 0,
@@ -12727,11 +12746,11 @@
           "sentiment_score": 0.5
         },
         "2026-10-12": {
-          "mentions": 5,
+          "mentions": 4,
           "bullish": 2,
           "bearish": 1,
-          "neutral": 2,
-          "sentiment_score": 0.6
+          "neutral": 1,
+          "sentiment_score": 0.625
         }
       }
     },
@@ -14680,6 +14699,30 @@
       "sector": "雲端/AI",
       "contexts": [
         {
+          "video": "EP714 | 🥏",
+          "channel": "股癌",
+          "date": "2026-11-14",
+          "text": "果想要有一些 額外收入 對交易有研究 想要可能大家分 往前衝 或者說在大數的拼音之下 可以長得更快的話 那大家可以去參考一下 優勢資本 這個是我們老朋友 優秀的優 然後是呢 是公式的 是優勢資本 他們臉書的賬號上面 下來也開始在發一些真材 那劉老闆有請我稍微的 幫忙他們推廣一下 他們的地友其實是滿好的 就是說 如果你可以順利的通關 他儲備交易員的話 你三個月是可以累積新資 40萬 然後漸進式的拿上去 就是說你如果有成功的 跑完就可以拿到40萬 那算是非常不錯 他也是在業界 就是薪水是非常感給的 所以如果對於交易 是有興趣的朋友們 其實可以去嘗試看看 那再來 接下來我們就來進入上話題 我們先繼續老黃",
+          "matched_keyword": "臉書",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP714 | 🥏",
+          "channel": "股癌",
+          "date": "2026-11-14",
+          "text": "在消息出來當下 被市場視為是一個力空出境 然後直接屌反彈一波 我覺得也滿好笑的 就是你其實會發現 市場是一個沒有這麼容易理解的東西 因為老黃的東西就是很容易會傳到 就是可能交易圈以外 你就注意到就整個臉書的合照 大家都在評論這件事情 然後每個人看到就說 啊這個疊定的什麼 然後就是surprise 給你一個大掌 所以你就會發現 其實在市場都判斷 你不是這麼吸反應的 那人家都會提早去pricing一些事情 所以他真的是沒有這麼好拆 就是不要太容易的去做出一些結論 因為這個是可能在市場裡面 一短期來說 是有機會受傷害的東西 然後當然我覺得長期來說 做出一些那種很基本的判斷 然後他可能在後續的規劃上 路線",
+          "matched_keyword": "臉書",
+          "analysis_source": "whisper",
+          "sentiment": "bullish",
+          "sentiment_score": 1.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
           "video": "2026/11/13(五)  黃仁勳辭職，利空出盡了？NVDA夠便宜了嗎？",
           "channel": "財女珍妮",
           "date": "2026-11-13",
@@ -15014,35 +15057,18 @@
           "sentiment_score": 0.5,
           "video_url": "",
           "extraction_mode": "gemini"
-        },
-        {
-          "video": "EP1211｜昨天漲點今天吐！法說後聯電跌停、台達電重挫看法？微軟少花錢大漲、Google現金流轉負大跌，為何台股都怕？ft.選股教練 陳唯泰",
-          "channel": "兆華與股惑仔",
-          "date": "2026-10-29",
-          "text": "都跌到極限下又站回來了 總是希望這一次 不要折磨大家太久 可是就算折磨得久一點 也沒有非常奇怪 因為局勢還是有一點淋亂 昨天講的就是 很多的AI大廠之間 產生了一個也很奇妙的勇動機 互相借錢 因為像Meta 他辦了一個募資 就這個募資是五倍的超額認購 也等於是 只要是大廠出來要錢的時候 市場都挺買單的 不但銀行要給他錢 揮打也要給他錢 博通也要給他錢 好多其他的AI大廠 都要給Meta錢 那現在呢 博通的錢哪裡來 其實博通也是跟銀行拿錢 博通也是跟銀行辦了一個募資 他就拿了錢 拿了錢去投別人這樣子 所以這個市場就變得很奇妙 不過我們的解讀就是 總之大廠有拿到錢就好啦 因為大廠要做資本支出 要投到台灣",
-          "matched_keyword": "Meta",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP1210｜今年破季線第3次，能有信心再反攻？需求遞延但沒消失，AI大廠互相融資，我們負責收錢？做短、做長的思維？ft.操盤手 楊雲翔",
-          "channel": "兆華與股惑仔",
-          "date": "2026-10-28",
-          "text": "把工程完成的時間 會比想像中 目前可能都會有一點點 這樣的壓力在 我覺得大家要理解 可是訂單有沒有到 訂單都有到 這可以非常非常確定 然後剛剛也提到說 大廠們像昨天晚上的博通 說他會一起融資 參與一些Meta的投資 因為Meta也在融資 然後Meta的融資裡面 揮打搖參與 所以銀行也願意借錢 給這些大廠 這些大廠之間 還互相參與融資借錢 我也借錢給你 但我自己肯定也跟銀行借錢 真的超級有趣 錢這個東西很有趣 資金雖然說 大家說硬鈔票就好了 也沒那麼簡單 不可能各國或是美國政府 就不停的硬鈔票 那沒有辦法解決 它會變通膨 鈔票會變不值錢 所以也不是只靠這件事情 所以現在變成是 你錢這麼多的情況下 你要借",
-          "matched_keyword": "Meta",
-          "analysis_source": "whisper",
-          "sentiment": "bearish",
-          "sentiment_score": 0.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
         }
       ],
       "total_mentions": 30,
-      "sentiment_score": 0.419,
+      "sentiment_score": 0.452,
       "daily": {
+        "2026-11-14": {
+          "mentions": 2,
+          "bullish": 1,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.75
+        },
         "2026-11-13": {
           "mentions": 3,
           "bullish": 1,
@@ -15126,20 +15152,6 @@
           "bearish": 0,
           "neutral": 5,
           "sentiment_score": 0.46
-        },
-        "2026-10-29": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
-        },
-        "2026-10-28": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 1,
-          "neutral": 0,
-          "sentiment_score": 0.0
         }
       }
     },
@@ -18803,6 +18815,18 @@
       "sector": "晶圓代工",
       "contexts": [
         {
+          "video": "EP714 | 🥏",
+          "channel": "股癌",
+          "date": "2026-11-14",
+          "text": "的 可是你就在那邊打牆 想說 他為什麼昨天買 今天要賣 沒有 那可能是不同人 這個是要小心的 然後再來講說 無法脫離習慣 比價的窮酸養如何養成凡是直上 沒有 其實直上跟比價是兩件事情 就我今天去直上一台筆電 我一台腳踏車 一個滑鼠 一個手機 我還是會比價 我買頂規 你便宜我三五千塊 我還是會去跟那個便宜三五千的買 我還是會去用One Searcher 去比那個價格 即便對 你可能是買一些那種 超級酷的東西 他的價格很高 可是不代表我們不比價 我們還是會比價 比價是一定會比的 你在 國票市場買東西 也是在比價 你說那P1成數是幾倍 那都是比價 哎拜託 那只是直上是另外一件事 那為什麼會養成直上的習慣",
+          "matched_keyword": "台筆電",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "gemini"
+        },
+        {
           "video": "EP1222｜黃仁勳請辭、財務長暫代，ASIC自研晶片先歡慶，輝達供應鏈擔心利潤，卻也可能迎轉單？台廠受傷、受惠全解析！ft.操盤手 黃豐凱",
           "channel": "兆華與股惑仔",
           "date": "2026-11-13",
@@ -19149,23 +19173,18 @@
           "sentiment_score": 0.8,
           "video_url": "",
           "extraction_mode": "gemini"
-        },
-        {
-          "video": "EP1219｜還是得神山！10月營收創新高，如何判斷輝達仁勳黃黃、AI監管不影響台灣訂單？哪些股票利空測試完，重新起跑？ft.AI達人 蔡明翰",
-          "channel": "兆華與股惑仔",
-          "date": "2026-11-10",
-          "text": "的這個正向 所以我常常講的 這個有點類似 當一個地震 有很多很多的這些愚震 最後主震相對上就不會太大 我覺得那個概念 其實是合理的 而且有時候 投資人可能沒辦法感受 我常常講的 就以前我的論點都會說 台積電的說法就是它的營收 到29年可以維持25%增長 25%增長代表就是每3到4年 它的營收會增長一倍 所以如果毛利率不變 它獲利成長一倍 如果本益不變 代表它股價成長一倍 所以我覺得合理的期待 如果你買指數或台積電 只要AI的競賽還沒結束之前 硬體還在成長的過程當中 你每投資3到4年 預期有接近一倍左右的成長 是非常合理的 但是有一個問題 台積電這兩年 它的成長幅度是來到4成 4成的概念就跟25%不一",
-          "matched_keyword": "台積電",
-          "analysis_source": "whisper",
-          "sentiment": "bullish",
-          "sentiment_score": 0.8,
-          "video_url": "",
-          "extraction_mode": "gemini"
         }
       ],
       "total_mentions": 30,
-      "sentiment_score": 0.63,
+      "sentiment_score": 0.62,
       "daily": {
+        "2026-11-14": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
         "2026-11-13": {
           "mentions": 2,
           "bullish": 0,
@@ -19188,8 +19207,8 @@
           "sentiment_score": 0.5
         },
         "2026-11-10": {
-          "mentions": 12,
-          "bullish": 12,
+          "mentions": 11,
+          "bullish": 11,
           "bearish": 0,
           "neutral": 0,
           "sentiment_score": 0.8
@@ -45321,10 +45340,22 @@
           "sentiment_score": 0.5,
           "video_url": "",
           "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP714 | 🥏",
+          "channel": "股癌",
+          "date": "2026-11-14",
+          "text": "我知道就是 你覺得說 你現在在Instagram上面 看到很多那種喝酒的賬號 他們就只喜歡 拍那種最貴的東西 其實我後來也覺得 這是一個非常熟悉的事情 就是代表說 你其實沒有品味 你只會喝Price Tech 那當然這是在我探索的時候 才會有這樣的一個認識 所以我後來想一想 那我可能就是去找一些 可能蠻特別的地塊 或是說 我自己喝過 我覺得蠻不錯的東西 把它做一個組合 那這樣可能會有一點故事性 就是你要什麼有什麼 那所以我就找了一個 1998的Bondy Sanding 就剛好我的庫存裡面 有什麼東西我就把它拿出來 那再來還有一個 2016的Awesome 這個其實是有一點 太年輕的 但我覺得OK 因",
+          "matched_keyword": "TECH",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
         }
       ],
-      "total_mentions": 23,
-      "sentiment_score": 0.63,
+      "total_mentions": 24,
+      "sentiment_score": 0.604,
       "daily": {
         "2026-04-15": {
           "mentions": 1,
@@ -45423,6 +45454,13 @@
           "bearish": 0,
           "neutral": 1,
           "sentiment_score": 0.5
+        },
+        "2026-11-14": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 1,
+          "neutral": 0,
+          "sentiment_score": 0.0
         }
       }
     },
@@ -71388,7 +71426,7 @@
       "code": "FAST",
       "name": "Fastenal",
       "market": "US",
-      "sector": "工業",
+      "sector": "零售電商",
       "contexts": [
         {
           "video": "EP666 | 🍐",
@@ -80972,7 +81010,7 @@
       "code": "T",
       "name": "AT&T",
       "market": "US",
-      "sector": "通訊媒體",
+      "sector": "AI網路",
       "contexts": [
         {
           "video": "2026/04/27(一) 費半創紀18連漲，還能進場嗎？Intel暴漲20%，財報透露什麼？",
@@ -88106,7 +88144,7 @@
       "code": "GLW",
       "name": "Corning Inc.",
       "market": "US",
-      "sector": "光通訊",
+      "sector": "科技",
       "contexts": [
         {
           "video": "EP225 | 台、美股重點一次說，消費性電腦與緯穎展望，康寧與AAOI長約發酵，聽眾QA",
@@ -88187,7 +88225,7 @@
       "code": "DDOG",
       "name": "Datadog",
       "market": "US",
-      "sector": "網路安全",
+      "sector": "AI軟體",
       "contexts": [
         {
           "video": "2026/05/08(五)美股下跌還能買嗎？ #ANET #DDOG #FTNT",
@@ -95905,10 +95943,79 @@
       }
     },
     {
+      "code": "2496",
+      "name": "卓越",
+      "market": "TW",
+      "sector": "其他業",
+      "contexts": [
+        {
+          "video": "EP239 | 日月光投控封測漲價 / 台積電法說會",
+          "channel": "韭菜畢業班",
+          "date": "2026-07-02",
+          "text": "我們驕傲的產業仔我們現在看到跌停其實第一個想法我們不會覺得這個是下跌 或者是說這個就是不好的東西其實我們會把它想成是一個價值上面的體現 我們是降低成本所以我們上禮拜就是再降低成本而已 所以我們會追求更卓越的一個獲利那這個禮拜目前看起來市場終於想起來我們的 細菌園 爸爸有漲價 然後再來就是公率半導體有公率變距距那現在跟田中太郎早上 有時候因為 盤你也知道我們做波段的不會一直在那邊調 然後現在打囉就算輸了我會跟對面全平就說謝謝子佼謝謝子佼 受益兩多我覺得你們打的真的是非常好謝謝把我們打爆這樣子 然後再來就是雖然低谷衛星還在天上屬星星一閃一閃沒有亮晶晶 然後記憶體現在其實有點像禮拜整體表現的算蠻失憶的",
+          "matched_keyword": "卓越",
+          "analysis_source": "whisper",
+          "sentiment": "bearish",
+          "sentiment_score": 0.0,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP690 | ⛳",
+          "channel": "股癌",
+          "date": "2026-08-22",
+          "text": "實他的產能是比較難拿到 當然我們不知道等到這一波的循環 走到後期會長什麼樣子 可以現階段來講 這些IC Design Partner 不然說像之前的L-Chip 為什麼會有一些客戶找到下單 除了他們有卓越的一些設計能力之外 再來就是他們有卡到一些產能 所以還是有可能會為了產能 所以他就會去找各路的夥伴去做嘗試 並不會完全的 就是所有東西都拉回來 是在自己這邊去做下單 夥伴這邊應該在後期會越來越偏向 是走就是COT的路線 也就是他們最主要的收入 可能會是NRE IP授權 然後直接設計服務的費用 這個應該是Google要去推的路線 所以甚至你可以想像成 剛才我們第一階段的解法是 因為大家都往跌的方向去",
+          "matched_keyword": "卓越",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        },
+        {
+          "video": "EP714 | 🥏",
+          "channel": "股癌",
+          "date": "2026-11-14",
+          "text": "樣子 就是可能 因為看到他的一些八卦的行為 看他不爽 或者說之前就已經覺得 整天被洗板很不爽 就是搶倒中文推 大家知道 沒有人是無法被取代的 這句話我可能是不敢苟同 這個老黃確實是在AI時代 他做出了卓越的貢獻 那如果說有在供應鏈裡面 看著他怎麼樣去督促供應鏈的朋友們 更會有這樣的一個感受 就是因為有一條瘋狗在那邊 然後他媽的整天 這個規格的提升 他提升速度之快 他有點像他說拿著鞭子 在後面趕著大家走 那只要這些公司 他們可以去符合老黃的要求 你去做出那些看起來非常科幻的東西 你就可以獲得超額報酬 你就可以拿到很多錢 那當然這些東西 我相信有照理率 他一定會慢慢的減損掉 就是他就會類似像Apple",
+          "matched_keyword": "卓越",
+          "analysis_source": "whisper",
+          "sentiment": "neutral",
+          "sentiment_score": 0.5,
+          "video_url": "",
+          "extraction_mode": "keyword"
+        }
+      ],
+      "total_mentions": 3,
+      "sentiment_score": 0.333,
+      "daily": {
+        "2026-07-02": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 1,
+          "neutral": 0,
+          "sentiment_score": 0.0
+        },
+        "2026-08-22": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        },
+        "2026-11-14": {
+          "mentions": 1,
+          "bullish": 0,
+          "bearish": 0,
+          "neutral": 1,
+          "sentiment_score": 0.5
+        }
+      }
+    },
+    {
       "code": "CDNS",
       "name": "Cadence Design Systems",
       "market": "US",
-      "sector": "企業軟體",
+      "sector": "AI軟體",
       "contexts": [
         {
           "video": "EP649 | 💌",
@@ -96141,7 +96248,7 @@
       "code": "CHTR",
       "name": "Charter Communications",
       "market": "US",
-      "sector": "通訊媒體",
+      "sector": "AI網路",
       "contexts": [
         {
           "video": "EP649 | 💌",
@@ -97881,7 +97988,7 @@
       "code": "DECK",
       "name": "Deckers Brands",
       "market": "US",
-      "sector": "零售電商",
+      "sector": "消費電子",
       "contexts": [
         {
           "video": "EP656 | 🍇",
@@ -100908,56 +101015,6 @@
           "bearish": 0,
           "neutral": 0,
           "sentiment_score": 1.0
-        }
-      }
-    },
-    {
-      "code": "2496",
-      "name": "卓越",
-      "market": "TW",
-      "sector": "其他業",
-      "contexts": [
-        {
-          "video": "EP239 | 日月光投控封測漲價 / 台積電法說會",
-          "channel": "韭菜畢業班",
-          "date": "2026-07-02",
-          "text": "我們驕傲的產業仔我們現在看到跌停其實第一個想法我們不會覺得這個是下跌 或者是說這個就是不好的東西其實我們會把它想成是一個價值上面的體現 我們是降低成本所以我們上禮拜就是再降低成本而已 所以我們會追求更卓越的一個獲利那這個禮拜目前看起來市場終於想起來我們的 細菌園 爸爸有漲價 然後再來就是公率半導體有公率變距距那現在跟田中太郎早上 有時候因為 盤你也知道我們做波段的不會一直在那邊調 然後現在打囉就算輸了我會跟對面全平就說謝謝子佼謝謝子佼 受益兩多我覺得你們打的真的是非常好謝謝把我們打爆這樣子 然後再來就是雖然低谷衛星還在天上屬星星一閃一閃沒有亮晶晶 然後記憶體現在其實有點像禮拜整體表現的算蠻失憶的",
-          "matched_keyword": "卓越",
-          "analysis_source": "whisper",
-          "sentiment": "bearish",
-          "sentiment_score": 0.0,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        },
-        {
-          "video": "EP690 | ⛳",
-          "channel": "股癌",
-          "date": "2026-08-22",
-          "text": "實他的產能是比較難拿到 當然我們不知道等到這一波的循環 走到後期會長什麼樣子 可以現階段來講 這些IC Design Partner 不然說像之前的L-Chip 為什麼會有一些客戶找到下單 除了他們有卓越的一些設計能力之外 再來就是他們有卡到一些產能 所以還是有可能會為了產能 所以他就會去找各路的夥伴去做嘗試 並不會完全的 就是所有東西都拉回來 是在自己這邊去做下單 夥伴這邊應該在後期會越來越偏向 是走就是COT的路線 也就是他們最主要的收入 可能會是NRE IP授權 然後直接設計服務的費用 這個應該是Google要去推的路線 所以甚至你可以想像成 剛才我們第一階段的解法是 因為大家都往跌的方向去",
-          "matched_keyword": "卓越",
-          "analysis_source": "whisper",
-          "sentiment": "neutral",
-          "sentiment_score": 0.5,
-          "video_url": "",
-          "extraction_mode": "keyword"
-        }
-      ],
-      "total_mentions": 2,
-      "sentiment_score": 0.25,
-      "daily": {
-        "2026-07-02": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 1,
-          "neutral": 0,
-          "sentiment_score": 0.0
-        },
-        "2026-08-22": {
-          "mentions": 1,
-          "bullish": 0,
-          "bearish": 0,
-          "neutral": 1,
-          "sentiment_score": 0.5
         }
       }
     },
@@ -104338,7 +104395,7 @@
       "code": "SATS",
       "name": "EchoStar",
       "market": "US",
-      "sector": "AI網路",
+      "sector": "通訊媒體",
       "contexts": [
         {
           "video": "2026/03/24 (二）川普TACO， 反彈該跑？輝達(NVDA) 佈局電力",
@@ -104848,7 +104905,7 @@
       "code": "EA",
       "name": "Electronic Arts",
       "market": "US",
-      "sector": "串流媒體",
+      "sector": "消費電子",
       "contexts": [
         {
           "video": "訪談特別篇_產業研究與專職交易生活 ft.田中太郎",
@@ -108625,7 +108682,7 @@
       "code": "DLTR",
       "name": "Dollar Tree",
       "market": "US",
-      "sector": "民生消費",
+      "sector": "零售電商",
       "contexts": [
         {
           "video": "2026/05/29(五) 川普投顧再發威，DELL大漲40%",
@@ -108782,7 +108839,7 @@
       "code": "NTAP",
       "name": "NetApp",
       "market": "US",
-      "sector": "科技",
+      "sector": "企業軟體",
       "contexts": [
         {
           "video": "2026/06/01(一) COMPUTEX出狠招，輝達還能漲嗎？",
@@ -110905,7 +110962,7 @@
       "code": "F",
       "name": "Ford Motor Company",
       "market": "US",
-      "sector": "消費",
+      "sector": "電動車",
       "contexts": [
         {
           "video": "EP687 | 🐧",
@@ -113776,7 +113833,7 @@
     {
       "sector": "雲端/AI",
       "market": "US",
-      "total_mentions": 190,
+      "total_mentions": 189,
       "stock_codes": [
         "GOOGL",
         "MSFT",
@@ -113948,16 +114005,6 @@
       ]
     },
     {
-      "sector": "AI晶片",
-      "market": "US",
-      "total_mentions": 116,
-      "stock_codes": [
-        "NVDA",
-        "AMD",
-        "MRVL"
-      ]
-    },
-    {
       "sector": "光電業",
       "market": "TW",
       "total_mentions": 116,
@@ -113989,6 +114036,16 @@
         "3049",
         "2466",
         "3149"
+      ]
+    },
+    {
+      "sector": "AI晶片",
+      "market": "US",
+      "total_mentions": 115,
+      "stock_codes": [
+        "NVDA",
+        "AMD",
+        "MRVL"
       ]
     },
     {
@@ -114285,6 +114342,20 @@
       ]
     },
     {
+      "sector": "零售電商",
+      "market": "US",
+      "total_mentions": 66,
+      "stock_codes": [
+        "COST",
+        "WMT",
+        "FAST",
+        "BKNG",
+        "TGT",
+        "DASH",
+        "DLTR"
+      ]
+    },
+    {
       "sector": "電源供應器",
       "market": "TW",
       "total_mentions": 65,
@@ -114316,15 +114387,6 @@
         "3035",
         "5274",
         "6533"
-      ]
-    },
-    {
-      "sector": "消費電子",
-      "market": "US",
-      "total_mentions": 62,
-      "stock_codes": [
-        "AAPL",
-        "CCL"
       ]
     },
     {
@@ -114368,19 +114430,6 @@
       ]
     },
     {
-      "sector": "零售電商",
-      "market": "US",
-      "total_mentions": 59,
-      "stock_codes": [
-        "COST",
-        "WMT",
-        "BKNG",
-        "TGT",
-        "DASH",
-        "DECK"
-      ]
-    },
-    {
       "sector": "ETF・台股指數",
       "market": "TW",
       "total_mentions": 57,
@@ -114395,17 +114444,15 @@
       ]
     },
     {
-      "sector": "網路安全",
+      "sector": "AI網路",
       "market": "US",
       "total_mentions": 55,
       "stock_codes": [
-        "NET",
-        "ZS",
-        "CRWD",
-        "DDOG",
-        "PANW",
-        "FTNT",
-        "OKTA"
+        "AVGO",
+        "CSCO",
+        "T",
+        "ANET",
+        "CHTR"
       ]
     },
     {
@@ -114427,6 +114474,34 @@
       "stock_codes": [
         "2454",
         "3034"
+      ]
+    },
+    {
+      "sector": "科技",
+      "market": "US",
+      "total_mentions": 54,
+      "stock_codes": [
+        "SNDK",
+        "INTU",
+        "NOW",
+        "MPWR",
+        "GLW",
+        "TER",
+        "SWKS"
+      ]
+    },
+    {
+      "sector": "AI軟體",
+      "market": "US",
+      "total_mentions": 53,
+      "stock_codes": [
+        "SNOW",
+        "AI",
+        "PATH",
+        "DDOG",
+        "MDB",
+        "CDNS",
+        "PLTR"
       ]
     },
     {
@@ -114452,17 +114527,16 @@
       ]
     },
     {
-      "sector": "科技",
+      "sector": "網路安全",
       "market": "US",
       "total_mentions": 51,
       "stock_codes": [
-        "SNDK",
-        "INTU",
-        "NOW",
-        "MPWR",
-        "TER",
-        "NTAP",
-        "SWKS"
+        "NET",
+        "ZS",
+        "CRWD",
+        "PANW",
+        "FTNT",
+        "OKTA"
       ]
     },
     {
@@ -114484,17 +114558,6 @@
       ]
     },
     {
-      "sector": "AI網路",
-      "market": "US",
-      "total_mentions": 48,
-      "stock_codes": [
-        "AVGO",
-        "CSCO",
-        "ANET",
-        "SATS"
-      ]
-    },
-    {
       "sector": "伺服器",
       "market": "US",
       "total_mentions": 48,
@@ -114503,29 +114566,6 @@
         "HPQ",
         "HPE",
         "SMCI"
-      ]
-    },
-    {
-      "sector": "光通訊",
-      "market": "US",
-      "total_mentions": 47,
-      "stock_codes": [
-        "COHR",
-        "LITE",
-        "GLW",
-        "AAOI"
-      ]
-    },
-    {
-      "sector": "AI軟體",
-      "market": "US",
-      "total_mentions": 47,
-      "stock_codes": [
-        "SNOW",
-        "AI",
-        "PATH",
-        "MDB",
-        "PLTR"
       ]
     },
     {
@@ -114554,6 +114594,16 @@
       ]
     },
     {
+      "sector": "光通訊",
+      "market": "US",
+      "total_mentions": 43,
+      "stock_codes": [
+        "COHR",
+        "LITE",
+        "AAOI"
+      ]
+    },
+    {
       "sector": "半導體設備",
       "market": "US",
       "total_mentions": 42,
@@ -114566,13 +114616,16 @@
       ]
     },
     {
-      "sector": "串流媒體",
+      "sector": "醫療",
       "market": "US",
       "total_mentions": 40,
       "stock_codes": [
-        "NFLX",
-        "DIS",
-        "EA"
+        "TECH",
+        "UNH",
+        "HUM",
+        "CVS",
+        "CI",
+        "CNC"
       ]
     },
     {
@@ -114596,16 +114649,35 @@
       ]
     },
     {
-      "sector": "醫療",
+      "sector": "消費",
       "market": "US",
       "total_mentions": 39,
       "stock_codes": [
-        "TECH",
-        "UNH",
-        "HUM",
-        "CVS",
-        "CI",
-        "CNC"
+        "CCL",
+        "GRMN",
+        "ABNB",
+        "EXPE",
+        "NKE"
+      ]
+    },
+    {
+      "sector": "串流媒體",
+      "market": "US",
+      "total_mentions": 39,
+      "stock_codes": [
+        "NFLX",
+        "DIS"
+      ]
+    },
+    {
+      "sector": "電動車",
+      "market": "US",
+      "total_mentions": 38,
+      "stock_codes": [
+        "TSLA",
+        "RIVN",
+        "NIO",
+        "F"
       ]
     },
     {
@@ -114624,16 +114696,6 @@
       ]
     },
     {
-      "sector": "企業軟體",
-      "market": "US",
-      "total_mentions": 38,
-      "stock_codes": [
-        "IBM",
-        "ADBE",
-        "CDNS"
-      ]
-    },
-    {
       "sector": "記憶體IC",
       "market": "TW",
       "total_mentions": 37,
@@ -114643,13 +114705,13 @@
       ]
     },
     {
-      "sector": "電動車",
+      "sector": "企業軟體",
       "market": "US",
       "total_mentions": 37,
       "stock_codes": [
-        "TSLA",
-        "RIVN",
-        "NIO"
+        "IBM",
+        "ADBE",
+        "NTAP"
       ]
     },
     {
@@ -114672,6 +114734,26 @@
         "6861",
         "1707",
         "6885"
+      ]
+    },
+    {
+      "sector": "其他業",
+      "market": "TW",
+      "total_mentions": 36,
+      "stock_codes": [
+        "8033",
+        "9940",
+        "6625",
+        "9927",
+        "2496",
+        "1516",
+        "6464",
+        "5871",
+        "3040",
+        "6504",
+        "9928",
+        "9945",
+        "9939"
       ]
     },
     {
@@ -114700,26 +114782,6 @@
         "1455",
         "1457",
         "1419"
-      ]
-    },
-    {
-      "sector": "其他業",
-      "market": "TW",
-      "total_mentions": 35,
-      "stock_codes": [
-        "8033",
-        "9940",
-        "6625",
-        "9927",
-        "1516",
-        "6464",
-        "5871",
-        "2496",
-        "3040",
-        "6504",
-        "9928",
-        "9945",
-        "9939"
       ]
     },
     {
@@ -114758,6 +114820,16 @@
         "2482",
         "6196",
         "3518"
+      ]
+    },
+    {
+      "sector": "消費電子",
+      "market": "US",
+      "total_mentions": 34,
+      "stock_codes": [
+        "AAPL",
+        "DECK",
+        "EA"
       ]
     },
     {
@@ -114909,23 +114981,6 @@
       ]
     },
     {
-      "sector": "工業",
-      "market": "US",
-      "total_mentions": 28,
-      "stock_codes": [
-        "FAST",
-        "UBER",
-        "MAS",
-        "CAT",
-        "EME",
-        "UPS",
-        "MMM",
-        "PNR",
-        "GNRC",
-        "LHX"
-      ]
-    },
-    {
       "sector": "半導體",
       "market": "TW",
       "total_mentions": 28,
@@ -115063,6 +115118,22 @@
       ]
     },
     {
+      "sector": "工業",
+      "market": "US",
+      "total_mentions": 20,
+      "stock_codes": [
+        "UBER",
+        "MAS",
+        "CAT",
+        "EME",
+        "UPS",
+        "MMM",
+        "PNR",
+        "GNRC",
+        "LHX"
+      ]
+    },
+    {
       "sector": "生技製藥",
       "market": "US",
       "total_mentions": 19,
@@ -115169,26 +115240,6 @@
       ]
     },
     {
-      "sector": "通訊媒體",
-      "market": "US",
-      "total_mentions": 14,
-      "stock_codes": [
-        "VZ",
-        "T",
-        "CHTR"
-      ]
-    },
-    {
-      "sector": "民生消費",
-      "market": "US",
-      "total_mentions": 13,
-      "stock_codes": [
-        "SYY",
-        "GIS",
-        "DLTR"
-      ]
-    },
-    {
       "sector": "公用事業",
       "market": "US",
       "total_mentions": 13,
@@ -115205,6 +115256,15 @@
       "total_mentions": 12,
       "stock_codes": [
         "6510"
+      ]
+    },
+    {
+      "sector": "民生消費",
+      "market": "US",
+      "total_mentions": 12,
+      "stock_codes": [
+        "SYY",
+        "GIS"
       ]
     },
     {
@@ -115321,18 +115381,6 @@
       ]
     },
     {
-      "sector": "消費",
-      "market": "US",
-      "total_mentions": 9,
-      "stock_codes": [
-        "GRMN",
-        "ABNB",
-        "EXPE",
-        "NKE",
-        "F"
-      ]
-    },
-    {
       "sector": "ETF・其他",
       "market": "TW",
       "total_mentions": 8,
@@ -115378,6 +115426,15 @@
       "total_mentions": 7,
       "stock_codes": [
         "TSM"
+      ]
+    },
+    {
+      "sector": "通訊媒體",
+      "market": "US",
+      "total_mentions": 7,
+      "stock_codes": [
+        "VZ",
+        "SATS"
       ]
     },
     {
@@ -129316,6 +129373,26 @@
         "AVGO",
         "AMD",
         "GOOGL"
+      ],
+      "analysis_source": "whisper",
+      "thumbnail_url": null
+    },
+    {
+      "video_id": "52dc3b92-2b06-49b6-ae34-821a9d632754",
+      "title": "EP714 | 🥏",
+      "channel": "股癌",
+      "date": "2026-11-14",
+      "stocks_found": [
+        "AAPL",
+        "SPCX",
+        "3443",
+        "AMD",
+        "META",
+        "TECH",
+        "GOOGL",
+        "2330",
+        "NVDA",
+        "2496"
       ],
       "analysis_source": "whisper",
       "thumbnail_url": null
