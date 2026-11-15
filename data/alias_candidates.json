@@ -1502,7 +1502,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 135,
+    "observations": 136,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1547,7 +1547,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-11-14T20:59:03"
+    "updated_at": "2026-11-15T21:22:02"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -13236,5 +13236,123 @@
       }
     ],
     "updated_at": "2026-11-13T22:27:47"
+  },
+  "蘇馬|AMD": {
+    "wrong_keyword": "蘇馬",
+    "correct_code": "AMD",
+    "correct_name": "AMD",
+    "confidence": "high",
+    "max_score": 93,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "7d4a679a-559f-4d98-a0c5-9b31c35c63b0"
+    ],
+    "evidence": [
+      {
+        "video_id": "7d4a679a-559f-4d98-a0c5-9b31c35c63b0",
+        "channel": "韭菜畢業班",
+        "date": "2026-11-15",
+        "title": "EP275 | 沒有黃仁勳的AI革命，台美供應鏈還能繼續賺嗎？",
+        "source": "full_video_validator",
+        "score": 93,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "stock_context",
+          "code_in_context",
+          "weak_sector_match"
+        ],
+        "context": "然就是研發GPU的人 或者是本身就是客製化晶片的人 那客製化晶片的 當然我們第一個想到的 就是Broadcom 也就是AVGo 那博通 他其實也會有可能受惠 好 我先講一下 這一個GPU 因為大家想到蘇馬 也就是AMD 這個是市場 最能夠去替代 輝達GPU的這個產品 但是我不認為 輝達他的GPU 他受到什麼影響 他爛了嗎 沒有 他東西還是好的到不行 所以我只是認為 他目前 因為這個管理層換一個人 所以你要去跟他 這種溝通的成本 可能會提高 因為你要重新去適配這一個人 那當然 現在換的這個人 他其實2013年就在了 也許 他很順暢的也不一定 好 另外一個 就是AVGO 我們剛剛講到的AVGO 博"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "1434",
+        "name": "福懋",
+        "score": 0.39,
+        "phonetic_similarity": 0.6,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "8435",
+        "name": "鉅邁",
+        "score": 0.39,
+        "phonetic_similarity": 0.6,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "3211",
+        "name": "順達",
+        "score": 0.325,
+        "phonetic_similarity": 0.5,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-11-15T21:30:47"
+  },
+  "聖宏科技|7714": {
+    "wrong_keyword": "聖宏科技",
+    "correct_code": "7714",
+    "correct_name": "創泓科技",
+    "confidence": "medium",
+    "max_score": 67,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "7d4a679a-559f-4d98-a0c5-9b31c35c63b0"
+    ],
+    "evidence": [
+      {
+        "video_id": "7d4a679a-559f-4d98-a0c5-9b31c35c63b0",
+        "channel": "韭菜畢業班",
+        "date": "2026-11-15",
+        "title": "EP275 | 沒有黃仁勳的AI革命，台美供應鏈還能繼續賺嗎？",
+        "source": "full_video_validator",
+        "score": 67,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "phonetic_top1",
+          "stock_context",
+          "strong_sector_mismatch"
+        ],
+        "context": "家當然 緊湊的這種時機 你不會去做太皮的事情 多多少少 你還會是收斂一點的 所以如果今天假設 您有一些我們講灰色的管道 你可以去做任何事情的話 這些可能都會被嚴格的審視 所以我們會看到 PCB場中國的聖宏科技 他其實有高度去依賴 揮打的這一塊 伺服器的訂單 NVIDIA的訂單 那他是當天就直接跌了13% 這一塊主要也是國安的一律 或者是我們看到光通訊長 中紀續創新醫生 這些東西 其實他們都是大量出貨 到美國的資料中心 這一塊其實也有受到影響 跌了大約9% 同時AI大模型的開發商 像是比較廣為人知的製浦這一家 他其實是海外的雲端諸介 但他這有一點顯得出於 灰色地帶的那一塊 其實也是要遭到的全面封",
+        "override_kind": "phonetic",
+        "override_reason": "phonetic_top1_needs_review",
+        "original_code": "6674",
+        "original_name": "鋐寶科技",
+        "phonetic_top_score": 0.686,
+        "phonetic_lead": 0.061000000000000054,
+        "needs_review": true
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "7714",
+        "name": "創泓科技",
+        "score": 0.686,
+        "phonetic_similarity": 0.786,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "6825",
+        "name": "和暢科技",
+        "score": 0.625,
+        "phonetic_similarity": 0.692,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "7768",
+        "name": "頌勝科技",
+        "score": 0.625,
+        "phonetic_similarity": 0.692,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-11-15T21:30:47"
   }
 }
