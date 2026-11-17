@@ -1502,7 +1502,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 136,
+    "observations": 137,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1547,7 +1547,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-11-15T21:22:02"
+    "updated_at": "2026-11-17T00:31:10"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -1732,10 +1732,17 @@
     "wrong_keyword": "升達科"
   },
   "升達科|3491": {
-    "confidence": "high",
+    "wrong_keyword": "升達科",
     "correct_code": "3491",
     "correct_name": "昇達科",
-    "distinct_videos": 1,
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 3,
+    "distinct_videos": 2,
+    "video_ids": [
+      "6d1e4799-6904-4211-bcdb-192153d0bbbe",
+      "7da1440e-8d1b-4454-905c-1f80b07afbb5"
+    ],
     "evidence": [
       {
         "channel": "兆華與股惑仔",
@@ -1780,38 +1787,49 @@
         "source": "full_video_validator",
         "title": "EP1119｜美伊要簽了，油價救了FED開會？今天動能、左側、觀望都有事情做，先買多題材最穩，SpaceX 掛牌，供應鏈還能漲？ft.題材獵人 林漢偉",
         "video_id": "6d1e4799-6904-4211-bcdb-192153d0bbbe"
+      },
+      {
+        "video_id": "7da1440e-8d1b-4454-905c-1f80b07afbb5",
+        "channel": "兆華與股惑仔",
+        "date": "2026-11-16",
+        "title": "EP1223｜美財政部長貝森特喊重組董事會，黃仁勳回歸受阻，Vera Rubin恐再延後？訂單遞延問題升溫，資金戰線拉長！ft.題材獵人 林漢偉",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "表說 在短線上的一個操作上面 也許大家就可以從這方向 去尋找一些 可能在盤面上相對 他這一波修正在相對低檔區 然後最近這個 籌碼跟現營轉強的股票 也許大家可以留意到標的 像你看到今天所謂的 來得光電 升達科 這些所謂的低軌位線股票 是逆勢大盤往往走高的 那更不要提到 更強的資安股票 是全面新的量能漲停 那當然我覺得資安股 比較偏主力色彩 所以不建議大家說 用追的方式去做個佈局 但台灣我覺得有一些資安股 是具備它的一個優勢存在的 比方說像今天的中華資安 那這個是中華電信旗下的子公司 我覺得這種就是 你應該知道說 他背後的一個資金的實力 跟他的客戶 都是這些大客戶 那就會有一些環踏公道 像中華資安"
       }
     ],
-    "max_score": 100,
-    "observations": 2,
     "phonetic_candidates": [
       {
         "code": "3491",
         "name": "昇達科",
-        "phonetic_similarity": 1,
         "score": 0.883,
+        "phonetic_similarity": 1.0,
         "text_similarity": 0.667
       },
       {
         "code": "3004",
         "name": "豐達科",
-        "phonetic_similarity": 0.778,
         "score": 0.739,
+        "phonetic_similarity": 0.778,
         "text_similarity": 0.667
       },
       {
         "code": "6492",
         "name": "生華科",
-        "phonetic_similarity": 0.8,
         "score": 0.637,
+        "phonetic_similarity": 0.8,
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-06-20T19:56:48",
-    "video_ids": [
-      "6d1e4799-6904-4211-bcdb-192153d0bbbe"
-    ],
-    "wrong_keyword": "升達科"
+    "updated_at": "2026-11-17T00:42:01"
   },
   "南亞可|1303": {
     "confidence": "high",
