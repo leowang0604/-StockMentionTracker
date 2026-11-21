@@ -1502,7 +1502,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 141,
+    "observations": 142,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1547,7 +1547,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-11-20T22:51:08"
+    "updated_at": "2026-11-21T21:56:33"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -13372,5 +13372,60 @@
       }
     ],
     "updated_at": "2026-11-15T21:30:47"
+  },
+  "亞利|1514": {
+    "wrong_keyword": "亞利",
+    "correct_code": "1514",
+    "correct_name": "亞力",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "9518e365-fb3b-498b-a7f7-fc1c56b33371"
+    ],
+    "evidence": [
+      {
+        "video_id": "9518e365-fb3b-498b-a7f7-fc1c56b33371",
+        "channel": "股癌",
+        "date": "2026-11-21",
+        "title": "EP716 | 🍒",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "歡迎收聽古來為深夢宮本集節目由專門幫大家解決婚界難題的Alox亞利斯贊助 雙十一剛結束不知道各位兄弟今年又貢獻了多少營收給各大店商 年底快到了聖誕節跨年接著來應該要不早兄弟正在偷偷的規劃 想趁這個機會給另外一半一個驚喜甚至直接求婚 如果已經有計劃那戒指當然要提早準備 Alox亞利斯週年慶最後倒數既然戒指本來就要買遇到優惠當然值得研究一下 亞利斯讓我覺得最值得信任的地方是他們的鑽石價格直接放官網 你自己就能夠先看 不用進門市之後才開始猜到底是多少錢資訊透明先安心一"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "1514",
+        "name": "亞力",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "1102",
+        "name": "亞泥",
+        "score": 0.663,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "6113",
+        "name": "亞矽",
+        "score": 0.663,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-11-21T22:15:34"
   }
 }
