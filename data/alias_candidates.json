@@ -1502,7 +1502,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 142,
+    "observations": 143,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1547,7 +1547,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-11-21T21:56:33"
+    "updated_at": "2026-11-22T22:10:11"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -13427,5 +13427,68 @@
       }
     ],
     "updated_at": "2026-11-21T22:15:34"
+  },
+  "meta|META": {
+    "wrong_keyword": "meta",
+    "correct_code": "META",
+    "correct_name": "Meta",
+    "confidence": "high",
+    "max_score": 90,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "b24325f0-7331-497d-abf0-7a0026b6a0d2"
+    ],
+    "evidence": [
+      {
+        "video_id": "b24325f0-7331-497d-abf0-7a0026b6a0d2",
+        "channel": "韭菜畢業班",
+        "date": "2026-11-22",
+        "title": "EP277 | 停損捨不得，攤平又害怕，一次看懂台股流動性危機",
+        "source": "full_video_validator",
+        "score": 90,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "stock_context"
+        ],
+        "context": "大多數的美股 除了Google 大致上其實都是下跌的比較多的 應該說是除了大型csp 也就是說我們那時候第一次分析 NVIDIA這次出事之後 其他的比較不受影響 可能就是一些大型csp 我們可以看到像meta 微軟或者說amazon google這些東西他其實跌幅 可能都控制在 Maybe 56%以內 這個對於當下 我們看到廢半是跌10%的狀況之下 他其實就是控制的還算是挺好的 好那再來的話 我們來聊一下台股的部分 那台股其實剛好提到 就是夜盤他這樣子的跌幅 其實就會導致目前台股 應該理論上來說 會是早一早就會直接先下跌 而且是跳空下跌 8.45分 大家就可以開獎了 那我們來講一下 目前的整體"
+      }
+    ],
+    "phonetic_candidates": [],
+    "updated_at": "2026-11-22T22:18:53"
+  },
+  "amazon|AMZN": {
+    "wrong_keyword": "amazon",
+    "correct_code": "AMZN",
+    "correct_name": "Amazon",
+    "confidence": "high",
+    "max_score": 75,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "b24325f0-7331-497d-abf0-7a0026b6a0d2"
+    ],
+    "evidence": [
+      {
+        "video_id": "b24325f0-7331-497d-abf0-7a0026b6a0d2",
+        "channel": "韭菜畢業班",
+        "date": "2026-11-22",
+        "title": "EP277 | 停損捨不得，攤平又害怕，一次看懂台股流動性危機",
+        "source": "full_video_validator",
+        "score": 75,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1"
+        ],
+        "context": "oogle 大致上其實都是下跌的比較多的 應該說是除了大型csp 也就是說我們那時候第一次分析 NVIDIA這次出事之後 其他的比較不受影響 可能就是一些大型csp 我們可以看到像meta 微軟或者說amazon google這些東西他其實跌幅 可能都控制在 Maybe 56%以內 這個對於當下 我們看到廢半是跌10%的狀況之下 他其實就是控制的還算是挺好的 好那再來的話 我們來聊一下台股的部分 那台股其實剛好提到 就是夜盤他這樣子的跌幅 其實就會導致目前台股 應該理論上來說 會是早一早就會直接先下跌 而且是跳空下跌 8.45分 大家就可以開獎了 那我們來講一下 目前的整體的狀況好了 首先可以"
+      }
+    ],
+    "phonetic_candidates": [],
+    "updated_at": "2026-11-22T22:18:53"
   }
 }
