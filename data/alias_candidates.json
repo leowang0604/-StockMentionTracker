@@ -1502,7 +1502,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 144,
+    "observations": 145,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1547,7 +1547,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-11-24T03:04:13"
+    "updated_at": "2026-11-25T01:08:19"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -13490,5 +13490,60 @@
     ],
     "phonetic_candidates": [],
     "updated_at": "2026-11-22T22:18:53"
+  },
+  "買科|6831": {
+    "wrong_keyword": "買科",
+    "correct_code": "6831",
+    "correct_name": "邁科",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "b17c088a-9c2e-4d42-b42b-1beced083d39"
+    ],
+    "evidence": [
+      {
+        "video_id": "b17c088a-9c2e-4d42-b42b-1beced083d39",
+        "channel": "兆華與股惑仔",
+        "date": "2026-11-24",
+        "title": "EP1229｜AI都不敢這樣寫，黃爸爸回家了！史上最大漲點3386點，融資、業績疑慮能完全消除嗎？買股還是買ETF？ft.AI達人 蔡明翰",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "價了 明天要校正回歸 好 先不說這麼多 所以我的意思是 很多人會覺得 那我存這個 就是買主動 是不是會怎麼樣 其實不會怎麼樣 它就是跟所有的市場的 想法是一樣 如果你真的擔心 我會比較建議 那不然你就買科技型的被動式 因為被動式還會幫你報股票 至少報一季 或報半年 它才會換股 它就比較沒有這種人為 因為壓力一定要砍東西 或什麼樣的一個問題 所以我覺得大家可以參考一下 在反攻的過程中 不是很相信各股的朋友 可以試試看 還是用ETF 對 我觀點差不多 只有我自己補充一點 就剛剛提到 是不是這個股市的這個波動 是不是ETF造成的 聽起來都很合理 可是我平常講 我自己是不太認同 我這樣講 你要記得一件"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "6831",
+        "name": "邁科",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "3402",
+        "name": "漢科",
+        "score": 0.565,
+        "phonetic_similarity": 0.6,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "6207",
+        "name": "雷科",
+        "score": 0.565,
+        "phonetic_similarity": 0.6,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-11-25T01:23:10"
   }
 }
