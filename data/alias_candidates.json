@@ -1502,7 +1502,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 145,
+    "observations": 146,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1547,7 +1547,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-11-25T01:08:19"
+    "updated_at": "2026-11-26T00:43:24"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -1945,10 +1945,17 @@
     "wrong_keyword": "南亞坑"
   },
   "台光店|2383": {
-    "confidence": "high",
+    "wrong_keyword": "台光店",
     "correct_code": "2383",
     "correct_name": "台光電",
-    "distinct_videos": 1,
+    "confidence": "high",
+    "max_score": 97,
+    "observations": 2,
+    "distinct_videos": 2,
+    "video_ids": [
+      "5c726c99-4318-4ac9-80af-cca659cf426a",
+      "cd10d5bb-a47b-4fea-bb18-3d16ce68e0ca"
+    ],
     "evidence": [
       {
         "channel": "兆華與股惑仔",
@@ -1966,38 +1973,49 @@
         "source": "full_video_validator",
         "title": "EP1144｜大跌、大漲之後，外資對被動元件、ABF、CCL、成熟製程產業看法有任何改變嗎？目標價空間更大，買賣的抉擇？ft.外資捕手 不魯",
         "video_id": "5c726c99-4318-4ac9-80af-cca659cf426a"
+      },
+      {
+        "video_id": "cd10d5bb-a47b-4fea-bb18-3d16ce68e0ca",
+        "channel": "兆華與股惑仔",
+        "date": "2026-11-25",
+        "title": "EP1230｜台美股長紅後，為何川普提關稅、晶片稅潑冷水，終究是想要漲的？心態穩下來，現在估值已合理、但情緒很脆弱！ft.型男股神 陳威良",
+        "source": "full_video_validator",
+        "score": 97,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "指數 只是要時間快或慢 這個很難說 但是我願意等 所以我把本來想要抄底 類似0050這種的想法 我確實就是 省下一半的錢拿來買正二 那其他一半的現金 我就想來 多賺一點超額報酬 因為很多千金股 真的 台光店 台達店 聯發科 星星 南店 我都覺得好便宜了 所以東買西買 不如就是用主動ETF 來超底打包 但是像昨天那種 就是整個就是 溢價不合理 我就不會想出手 但今天看到跌了 而且我發現是折價 所以我就 想要從裡面挑標的 邏輯上大概是這樣子 而且今天 因為順便呢 還有一個獲利的戰果 所以就覺得更有 去買主動式ETF的底氣 這個獲利的戰果 就來自於 其實昨天一早開盤 我就發現009828 他那時候 "
       }
     ],
-    "max_score": 97,
-    "observations": 1,
     "phonetic_candidates": [
       {
         "code": "2383",
         "name": "台光電",
-        "phonetic_similarity": 1,
         "score": 0.883,
+        "phonetic_similarity": 1.0,
         "text_similarity": 0.667
       },
       {
         "code": "4905",
         "name": "台聯電",
-        "phonetic_similarity": 0.75,
         "score": 0.604,
+        "phonetic_similarity": 0.75,
         "text_similarity": 0.333
       },
       {
         "code": "3441",
         "name": "聯一光電",
-        "phonetic_similarity": 0.733,
         "score": 0.564,
+        "phonetic_similarity": 0.733,
         "text_similarity": 0.25
       }
     ],
-    "updated_at": "2026-07-22T18:35:00",
-    "video_ids": [
-      "5c726c99-4318-4ac9-80af-cca659cf426a"
-    ],
-    "wrong_keyword": "台光店"
+    "updated_at": "2026-11-26T01:23:45"
   },
   "台大電|2308": {
     "confidence": "high",
@@ -13545,5 +13563,115 @@
       }
     ],
     "updated_at": "2026-11-25T01:23:10"
+  },
+  "糾正|6167": {
+    "wrong_keyword": "糾正",
+    "correct_code": "6167",
+    "correct_name": "久正",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "cd10d5bb-a47b-4fea-bb18-3d16ce68e0ca"
+    ],
+    "evidence": [
+      {
+        "video_id": "cd10d5bb-a47b-4fea-bb18-3d16ce68e0ca",
+        "channel": "兆華與股惑仔",
+        "date": "2026-11-25",
+        "title": "EP1230｜台美股長紅後，為何川普提關稅、晶片稅潑冷水，終究是想要漲的？心態穩下來，現在估值已合理、但情緒很脆弱！ft.型男股神 陳威良",
+        "source": "phonetic-discovery",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "的把它跟股票的價差做比較 大家就很想要極大化價差收益 所以我都講得好 就說今天是我最後一次講 因為這個東西 我覺得我要配 可是不見得你需要 可是到了下一次 我看到有人在講的時候 還是忍不住出來 要就是糾正說 不是 這觀念根本就不應該 跟股票市場比這樣子 因為大多頭的時候 大家都希望每一塊錢 都放在最會長的標籤上 但是其實我們 常常強調資產配置 是平常就要做好的事情 風險發生的時候 就已經有點來不及了 我就發現盤點上 雖然我的債券不多 而且陸續也有 本來就是有挪出來 去做超底了 但是真的蠻慶幸 因為比較以下來講的話 比如說 以剛剛講姚慈金姆這一檔 就從10月份 他的禁止的高點 到11月的禁止地點"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "6167",
+        "name": "久正",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "2302",
+        "name": "麗正",
+        "score": 0.663,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "3628",
+        "name": "盈正",
+        "score": 0.608,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-11-26T01:23:37"
+  },
+  "南店|8046": {
+    "wrong_keyword": "南店",
+    "correct_code": "8046",
+    "correct_name": "南電",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "cd10d5bb-a47b-4fea-bb18-3d16ce68e0ca"
+    ],
+    "evidence": [
+      {
+        "video_id": "cd10d5bb-a47b-4fea-bb18-3d16ce68e0ca",
+        "channel": "兆華與股惑仔",
+        "date": "2026-11-25",
+        "title": "EP1230｜台美股長紅後，為何川普提關稅、晶片稅潑冷水，終究是想要漲的？心態穩下來，現在估值已合理、但情緒很脆弱！ft.型男股神 陳威良",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "難說 但是我願意等 所以我把本來想要抄底 類似0050這種的想法 我確實就是 省下一半的錢拿來買正二 那其他一半的現金 我就想來 多賺一點超額報酬 因為很多千金股 真的 台光店 台達店 聯發科 星星 南店 我都覺得好便宜了 所以東買西買 不如就是用主動ETF 來超底打包 但是像昨天那種 就是整個就是 溢價不合理 我就不會想出手 但今天看到跌了 而且我發現是折價 所以我就 想要從裡面挑標的 邏輯上大概是這樣子 而且今天 因為順便呢 還有一個獲利的戰果 所以就覺得更有 去買主動式ETF的底氣 這個獲利的戰果 就來自於 其實昨天一早開盤 我就發現009828 他那時候 他的市價漲了29% 那他的進值"
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "8046",
+        "name": "南電",
+        "score": 0.825,
+        "phonetic_similarity": 1.0,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "5450",
+        "name": "南良",
+        "score": 0.663,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.5
+      },
+      {
+        "code": "1410",
+        "name": "南染",
+        "score": 0.639,
+        "phonetic_similarity": 0.714,
+        "text_similarity": 0.5
+      }
+    ],
+    "updated_at": "2026-11-26T01:23:47"
   }
 }
