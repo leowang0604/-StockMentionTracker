@@ -1502,7 +1502,7 @@
     "correct_name": "力積電",
     "confidence": "high",
     "max_score": 97,
-    "observations": 146,
+    "observations": 147,
     "distinct_videos": 0,
     "video_ids": [],
     "evidence": [
@@ -1547,7 +1547,7 @@
         "text_similarity": 0.333
       }
     ],
-    "updated_at": "2026-11-26T00:43:24"
+    "updated_at": "2026-11-27T00:50:54"
   },
   "創造力|3443": {
     "confidence": "high",
@@ -2713,10 +2713,19 @@
     "wrong_keyword": "國具"
   },
   "國劇|2327": {
-    "confidence": "high",
+    "wrong_keyword": "國劇",
     "correct_code": "2327",
     "correct_name": "國巨*",
-    "distinct_videos": 3,
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 4,
+    "distinct_videos": 4,
+    "video_ids": [
+      "5bd715f9-551b-49c9-a571-a4444b764ec0",
+      "db2768a4-1aac-45c3-a2ff-433784e6420a",
+      "db32f8c0-a31a-4f2e-b397-1451d7be3f0a",
+      "f167ba05-283e-480b-b8b3-a2d29287692b"
+    ],
     "evidence": [
       {
         "channel": "兆華與股惑仔",
@@ -2776,40 +2785,51 @@
         "source": "full_video_validator",
         "title": "EP251 | Google AI晶片換人做 / HBM降規後該怎麼做",
         "video_id": "db2768a4-1aac-45c3-a2ff-433784e6420a"
+      },
+      {
+        "video_id": "5bd715f9-551b-49c9-a571-a4444b764ec0",
+        "channel": "兆華與股惑仔",
+        "date": "2026-11-26",
+        "title": "EP1231｜PCE物價指數再測試，美股尾盤急拉，底部洗出來了沒？AI指標股低點反彈2成，市場情緒轉暖好現象！ft.選股教練 陳唯泰",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "phonetic_top1",
+          "stock_context",
+          "weak_sector_match",
+          "strong_sector_match"
+        ],
+        "context": "的公司 我剛剛有先提到的 就是像川湖嘛 川湖這個也有受到 因為他的出貨 有點敵類跟延遲 所以在9月還是10月的時候 營收出現比較大的下墜 然後這個下墜就讓川湖 隨著這次股災 也跌得非常的深 那像今天 國劇跟核生堂 也是大漲 我們也可以看一下 因為被動元件 應該是套了最多人在上面的 但這邊也必須提前大家 被動元件 他就是因為在AI的漲價升級裡面 他是比較末端的 那如果明年會 這個AI漲價升級的事情 大家有一點疑慮 甚至是2028年 可能疑慮會更大 明年可能還算看得到這樣子 那被動元件 就不要太期待 他們能夠回到什麼最高點 我覺得還是以這個區間操作 可能會是他一個比較好的對策啦 然後像今天看到建策"
       }
     ],
-    "max_score": 100,
-    "observations": 3,
     "phonetic_candidates": [
       {
         "code": "2327",
         "name": "國巨*",
-        "phonetic_similarity": 1,
         "score": 0.825,
+        "phonetic_similarity": 1.0,
         "text_similarity": 0.5
       },
       {
         "code": "1713",
         "name": "國化",
-        "phonetic_similarity": 0.667,
         "score": 0.608,
+        "phonetic_similarity": 0.667,
         "text_similarity": 0.5
       },
       {
         "code": "6875",
         "name": "國邑*",
-        "phonetic_similarity": 0.6,
         "score": 0.565,
+        "phonetic_similarity": 0.6,
         "text_similarity": 0.5
       }
     ],
-    "updated_at": "2026-08-16T17:12:10",
-    "video_ids": [
-      "db2768a4-1aac-45c3-a2ff-433784e6420a",
-      "db32f8c0-a31a-4f2e-b397-1451d7be3f0a",
-      "f167ba05-283e-480b-b8b3-a2d29287692b"
-    ],
-    "wrong_keyword": "國劇"
+    "updated_at": "2026-11-27T01:08:34"
   },
   "國央|2505": {
     "confidence": "high",
@@ -13625,9 +13645,10 @@
     "correct_name": "南電",
     "confidence": "high",
     "max_score": 100,
-    "observations": 1,
-    "distinct_videos": 1,
+    "observations": 2,
+    "distinct_videos": 2,
     "video_ids": [
+      "5bd715f9-551b-49c9-a571-a4444b764ec0",
       "cd10d5bb-a47b-4fea-bb18-3d16ce68e0ca"
     ],
     "evidence": [
@@ -13647,6 +13668,23 @@
           "stock_context"
         ],
         "context": "難說 但是我願意等 所以我把本來想要抄底 類似0050這種的想法 我確實就是 省下一半的錢拿來買正二 那其他一半的現金 我就想來 多賺一點超額報酬 因為很多千金股 真的 台光店 台達店 聯發科 星星 南店 我都覺得好便宜了 所以東買西買 不如就是用主動ETF 來超底打包 但是像昨天那種 就是整個就是 溢價不合理 我就不會想出手 但今天看到跌了 而且我發現是折價 所以我就 想要從裡面挑標的 邏輯上大概是這樣子 而且今天 因為順便呢 還有一個獲利的戰果 所以就覺得更有 去買主動式ETF的底氣 這個獲利的戰果 就來自於 其實昨天一早開盤 我就發現009828 他那時候 他的市價漲了29% 那他的進值"
+      },
+      {
+        "video_id": "5bd715f9-551b-49c9-a571-a4444b764ec0",
+        "channel": "兆華與股惑仔",
+        "date": "2026-11-26",
+        "title": "EP1231｜PCE物價指數再測試，美股尾盤急拉，底部洗出來了沒？AI指標股低點反彈2成，市場情緒轉暖好現象！ft.選股教練 陳唯泰",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "常非常堵定 而且很好這樣 然後我就說 可是我就算他跌下來 這個我還是高價股嗎 我不敢買這樣子 然後建策是連續漲了三天 我都大漲 那沒有買到會不會賊心不會 我喜歡看到這樣的公司在漲 今天京巷店 漲停嘛 南店漲停 為什麼說我喜歡這樣的公司在漲 因為 就代表市場上 有業績的 有前景的 大家過去 覺得很棒的一些次產業的領頭羊 他們在漲 就算我自己沒有 沒有在什麼最低點減到什麼的 但是也會為大家高興 就是這個氣氛是好的 這個氣氛是對的 而這個氣氛沒有像 這個華倫軒迴遇任那一天那麼離譜 六百多家全部鎖住買不到 那個就是極端子 就不是那麼的理想啦 好 所以我覺得今天的氣氛如果 他能夠是一種延續性 譬如說每天"
       }
     ],
     "phonetic_candidates": [
@@ -13672,6 +13710,191 @@
         "text_similarity": 0.5
       }
     ],
-    "updated_at": "2026-11-26T01:23:47"
+    "updated_at": "2026-11-27T01:08:34"
+  },
+  "京巷店|2368": {
+    "wrong_keyword": "京巷店",
+    "correct_code": "2368",
+    "correct_name": "金像電",
+    "confidence": "high",
+    "max_score": 85,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "5bd715f9-551b-49c9-a571-a4444b764ec0"
+    ],
+    "evidence": [
+      {
+        "video_id": "5bd715f9-551b-49c9-a571-a4444b764ec0",
+        "channel": "兆華與股惑仔",
+        "date": "2026-11-26",
+        "title": "EP1231｜PCE物價指數再測試，美股尾盤急拉，底部洗出來了沒？AI指標股低點反彈2成，市場情緒轉暖好現象！ft.選股教練 陳唯泰",
+        "source": "full_video_validator",
+        "score": 85,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "phonetic_top1",
+          "stock_context"
+        ],
+        "context": "年的業績 就是非常非常堵定 而且很好這樣 然後我就說 可是我就算他跌下來 這個我還是高價股嗎 我不敢買這樣子 然後建策是連續漲了三天 我都大漲 那沒有買到會不會賊心不會 我喜歡看到這樣的公司在漲 今天京巷店 漲停嘛 南店漲停 為什麼說我喜歡這樣的公司在漲 因為 就代表市場上 有業績的 有前景的 大家過去 覺得很棒的一些次產業的領頭羊 他們在漲 就算我自己沒有 沒有在什麼最低點減到什麼的 但是也會為大家高興 就是這個氣氛是好的 這個氣氛是對的 而這個氣氛沒有像 這個華倫軒迴遇任那一天那麼離譜 六百多家全部鎖住買不到 那個就是極端子 就不是那麼的理想啦 好 所以我覺得今天的氣氛如果 他能夠是一種延",
+        "override_kind": "phonetic",
+        "override_reason": "phonetic_top1_needs_review",
+        "original_code": "2449",
+        "original_name": "京元電子",
+        "phonetic_top_score": 0.6,
+        "phonetic_lead": 0.08899999999999997,
+        "needs_review": true
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2368",
+        "name": "金像電",
+        "score": 0.6,
+        "phonetic_similarity": 0.923,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "3530",
+        "name": "晶相光",
+        "score": 0.511,
+        "phonetic_similarity": 0.786,
+        "text_similarity": 0.0
+      },
+      {
+        "code": "2449",
+        "name": "京元電子",
+        "score": 0.505,
+        "phonetic_similarity": 0.643,
+        "text_similarity": 0.25
+      }
+    ],
+    "updated_at": "2026-11-27T01:08:33"
+  },
+  "廣東訊|2321": {
+    "wrong_keyword": "廣東訊",
+    "correct_code": "2321",
+    "correct_name": "東訊",
+    "confidence": "high",
+    "max_score": 95,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "5bd715f9-551b-49c9-a571-a4444b764ec0"
+    ],
+    "evidence": [
+      {
+        "video_id": "5bd715f9-551b-49c9-a571-a4444b764ec0",
+        "channel": "兆華與股惑仔",
+        "date": "2026-11-26",
+        "title": "EP1231｜PCE物價指數再測試，美股尾盤急拉，底部洗出來了沒？AI指標股低點反彈2成，市場情緒轉暖好現象！ft.選股教練 陳唯泰",
+        "source": "full_video_validator",
+        "score": 95,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance<=1",
+          "phonetic_top1"
+        ],
+        "context": "過去這個禮拜我個人的觀察 從華人遜先生離職之後 然後到他這個 正式是個複職 這段過程當中 其實台北股市有幾個次族群 跌得比較重 包括像是PCB 包括像是PCB的上游材料 包括像是CCL 甚至包括像是廣東訊 還包括了像是一個先進的風策 ABF載板 因為剛剛維泰說 有幾個族群跌得比較重 我好像腦中就塞過一坨 對 因為前幾天有一個網友就問說 想要請教造化 因為我們之前比較喜歡風策股 覺得風策股明年的業績比較妥當 他就說 為什麼風策股跌得特別重 然後我就想 風策股跌得特別重 你們要不要去看一下CPU 你們要不要去看一下PCB 載板 CCL 上游 上游其實我覺得還行 是補跌 對 你要不要去看一下散熱 電",
+        "override_kind": "phonetic",
+        "override_reason": "phonetic_top1_needs_review",
+        "original_code": "8050",
+        "original_name": "廣積",
+        "phonetic_top_score": 0.613,
+        "phonetic_lead": 0.009000000000000008,
+        "needs_review": true
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "2321",
+        "name": "東訊",
+        "score": 0.613,
+        "phonetic_similarity": 0.583,
+        "text_similarity": 0.667
+      },
+      {
+        "code": "1402",
+        "name": "遠東新",
+        "score": 0.604,
+        "phonetic_similarity": 0.75,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "1537",
+        "name": "廣隆",
+        "score": 0.55,
+        "phonetic_similarity": 0.667,
+        "text_similarity": 0.333
+      }
+    ],
+    "updated_at": "2026-11-27T01:08:34"
+  },
+  "核生堂|3026": {
+    "wrong_keyword": "核生堂",
+    "correct_code": "3026",
+    "correct_name": "禾伸堂",
+    "confidence": "high",
+    "max_score": 100,
+    "observations": 1,
+    "distinct_videos": 1,
+    "video_ids": [
+      "5bd715f9-551b-49c9-a571-a4444b764ec0"
+    ],
+    "evidence": [
+      {
+        "video_id": "5bd715f9-551b-49c9-a571-a4444b764ec0",
+        "channel": "兆華與股惑仔",
+        "date": "2026-11-26",
+        "title": "EP1231｜PCE物價指數再測試，美股尾盤急拉，底部洗出來了沒？AI指標股低點反彈2成，市場情緒轉暖好現象！ft.選股教練 陳唯泰",
+        "source": "full_video_validator",
+        "score": 100,
+        "reasons": [
+          "known_stock_code",
+          "code_name_match",
+          "original_in_context",
+          "name_distance=2",
+          "phonetic_top1",
+          "stock_context",
+          "weak_sector_match",
+          "strong_sector_match"
+        ],
+        "context": "我剛剛有先提到的 就是像川湖嘛 川湖這個也有受到 因為他的出貨 有點敵類跟延遲 所以在9月還是10月的時候 營收出現比較大的下墜 然後這個下墜就讓川湖 隨著這次股災 也跌得非常的深 那像今天 國劇跟核生堂 也是大漲 我們也可以看一下 因為被動元件 應該是套了最多人在上面的 但這邊也必須提前大家 被動元件 他就是因為在AI的漲價升級裡面 他是比較末端的 那如果明年會 這個AI漲價升級的事情 大家有一點疑慮 甚至是2028年 可能疑慮會更大 明年可能還算看得到這樣子 那被動元件 就不要太期待 他們能夠回到什麼最高點 我覺得還是以這個區間操作 可能會是他一個比較好的對策啦 然後像今天看到建策 事實上",
+        "override_kind": "phonetic",
+        "override_reason": "clear_phonetic_winner",
+        "original_code": "1618",
+        "original_name": "合機",
+        "phonetic_top_score": 0.708,
+        "phonetic_lead": 0.17799999999999994
+      }
+    ],
+    "phonetic_candidates": [
+      {
+        "code": "3026",
+        "name": "禾伸堂",
+        "score": 0.708,
+        "phonetic_similarity": 0.909,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "1777",
+        "name": "生泰",
+        "score": 0.53,
+        "phonetic_similarity": 0.636,
+        "text_similarity": 0.333
+      },
+      {
+        "code": "3266",
+        "name": "昇陽",
+        "score": 0.473,
+        "phonetic_similarity": 0.727,
+        "text_similarity": 0.0
+      }
+    ],
+    "updated_at": "2026-11-27T01:08:34"
   }
 }
